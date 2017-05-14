@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3922：Karin的弹幕</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Karin的弹幕</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Karin的弹幕</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Karin的弹幕                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Karin在战斗之余的闲暇时光里喜欢上B站看鬼畜视频，尤其喜欢发弹幕。她这天对一个视频的弹幕产生了兴趣，她记录了每个时间点的弹幕数量，并且可能对一段呈等差数列的时间的弹幕数量求最大值；她还可能修改某个时间点的弹幕数量。</div>
+<div>为了不在Yuuna面前暴露出她弱爆了的数学能力，保持她傲娇的属性，你需要帮助她。</div>
+<div>精简题意：给定一个序列，支持以下操作：①对一段下标是等差数列的子序列进行求最大值操作(参见输入格式)；②单点修改。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行是一个整数n，</div>
+<div>第二行是一个长度为n的整数序列a1...an，</div>
+<div>第三行是一个整数m，</div>
+<div>接下来m行，每行首先有一个整数op，</div>
+<div>然后，若op=0，则之后有两个整数p，v，代表将a[p]的值加上v，</div>
+<div>若op=1，则之后有两个整数x0，d，代表询问max{a[x0],a[x0+d],a[x0+2d],...,a[x0+kd]}(x0+kd&lt;=n,x0+(k+1)d&gt;n)。</div>
+<div>数据中可能有多余空格。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>对每个op=1，单独输出一行，代表该等差子序列的最大值。</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>【输入样例1】
+10
+1 6 1 4 9 4 8 2 8 5
+10
+1 3 3
+0 5 4
+0 3 8
+1 2 5
+1 4 8
+1 7 5
+1 3 6
+0 1 2
+1 5 3
+1 4 9
+
+【输入样例2】
+10
+-9 -6 2 -10 -2 -6 10 6 -4 -2
+10
+1 2 3
+1 6 3
+0 7 8
+0 4 -6
+0 10 -5
+1 10 4
+0 3 -8
+1 2 4
+0 10 -5
+1 1 2</pre><hr/><h3>样例输出</h3><pre>【输出样例1】
+8
+8
+4
+8
+9
+13
+4
+
+【输出样例2】
+6
+-4
+-7
+-6
+18</pre><hr/><h3>提示</h3><p><div>【数据范围】</div>
+<div>1&lt;=n&lt;=70000，</div>
+<div>1&lt;=m&lt;=70000，</div>
+<div>保证任何时刻abs(a[i])(1&lt;=i&lt;=n)&lt;=2147483647，</div>
+<div>0&lt;=op&lt;=1，</div>
+<div>1&lt;=p&lt;=n，</div>
+<div>abs(v)&lt;=2147483647</div>
+<div>1&lt;=x0&lt;=n,</div>
+<div>1&lt;=d&lt;=n，</div>
+<div>保证涉及的所有数在C++的int内。</div>
+<div>2015.4.2新加四组数据</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3922" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3922" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2496：Very Boring Homework</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Very Boring Homework</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Very Boring Homework</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Very Boring Homework                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium"><br />
+&nbsp;&nbsp;Prof. Z thinks his homework is very hard for most of his students to solve (do you remember the task &ldquo;Boring Homework&rdquo;?) To his surprise, many students hand in correct solutions. He thinks the reason is actually the small size of the data set he used to test students&rsquo; programs rather than the low difficulty of the homework task. He decides to give his students the same homework again, but with enormous test cases. Of course, his students think his homework becomes even more boring this time. They need your help again.<br />
+&nbsp;&nbsp;For the ones who don&rsquo;t know what homework Prof. Z. had given to his students last time:<br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;You&rsquo;re asked to draw a graph of a binary search tree (BST). <br />
+<i><br />
+&nbsp;&nbsp;A binary search tree, which may sometimes also be called ordered or sorted binary tree, is a node-based binary tree data structure which has the following properties:<br />
+&nbsp;&nbsp;The left subtree of a node contains only nodes with keys less than the node's key.<br />
+&nbsp;&nbsp;The right subtree of a node contains only nodes with keys greater than the node's key.<br />
+&nbsp;&nbsp;Both the left and right subtrees must also be binary search trees.<br />
+&nbsp;&nbsp;--from Wikipedia<br />
+</i><br />
+&nbsp;&nbsp;Given a list of integer keys that should be inserted into the BST one by one orderly, we can form a unique BST. Moreover, Prof. Z wants the students to draw the graph of this BST.<br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;The rules to draw a graph of a BST are listed below:<br />
+&nbsp;&nbsp;<br />
+1. The graph of a 1-node BST is a single 'o' (15th small Latin letter).<br />
+2. If a BST has a non-empty subtree, draw a single '|' just above the subtree's root, and a single '+' just above the previous drawn '|'. Finally, in the row of '+', use the least number (including 0) of '-'s to connect '+' (corresponding to the left or right subtree) and 'o' (denoting the parent node of the subtrees).<br />
+3. The left subtree (if exists) must be drawn on the left side of its parent. Similarly, the right subtree (if exists) must be drawn on the right side of its parent.<br />
+4. The column of the BST's root must not contain any characters belonging to left or right subtree.<br />
+5. For each node of the BST, the graph of its left subtree and the graph of its right subtree do not share common columns in the picture of the whole tree.<br />
+<br />
+&nbsp;&nbsp;After the whole BST has been drawn, we number the rows from top to bottom, counting from 1, and so do the columns from left to right, counting from 1.<br />
+&nbsp;&nbsp;Due to the large scale of the tree, the graph will become so large that it is impossible for Prof. Z to check every detail of the graph this time. So you are only asked to hand in m fragments of that graph to Prof. Z instead of the whole one.</span></p>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium">根据输入构造一棵二叉树，将二叉树转化为图形，并根据询问输出该图形的局部<br />
+<br />
+</span></p></p><hr/><h3>输入格式</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;The first line contains T, the number of test cases. T test cases follow.<br />
+&nbsp;&nbsp;For each test case:<br />
+&nbsp;&nbsp;The first line contains a positive integer N (N &lt;= 100000).<br />
+&nbsp;&nbsp;The second line contains N distinct integers, each of which can be represented by a 32-bit signed integer. These numbers should be inserted into an empty BST one by one in the given order.<br />
+&nbsp;&nbsp;The third line contains an integer M (M &lt;= 5).<br />
+&nbsp;&nbsp;M lines follow, each contains four integers, which are the row and column number of the top left corner, and the number of rows Ri and columns Ci of the required graph fragment, respectively. All the input integers will be positive and fit into a 32-bit signed integer, except Ri and Ci, which will be less than or equal to 200 and greater than 0.<br />
+</span></div></p><hr/><h3>输出格式</h3><p><div class="panel_content"><span style="font-size: medium">For each test case:<br />
+<br />
+&nbsp;&nbsp;Output the case number counting from 1 in the first line.<br />
+&nbsp;&nbsp;Then M blocks follow, each contains Ri (or less, see next) lines. Each line should contain exactly Ci characters. Use space (ASCII 32) to fill in the blank. But if a line contains only whitespaces, this line should not be outputted.<br />
+&nbsp;&nbsp;Output a blank line after each graph fragment.<br />
+</span></div>
+<div class="panel_content">
+<pre></pre>
+</div></p><hr/><h3>样例输入</h3><pre>3
+3
+3 1 2
+1
+1 1 5 3
+6 4 5 6 1 3 2
+1
+1 1 8 10
+10
+2 6 7 4 5 3 1 9 10 8
+2
+1 1 5 5
+3 6 5 5
+ 
+
+ 
+
+</pre><hr/><h3>样例输出</h3><pre>Case #1:
++-o
+|  
+o+ 
+ | 
+ o 
+
+Case #2:
++--o+     
+|   |     
+o-+ o+    
+  |  |    
+ +o  o    
+ |        
+ o        
+
+Case #3:
++o---
+|    
+o  +-
+   | 
+  +o+
+
+o+   
+ |   
+ o-+ 
+   | 
+  +o+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Acm 2011 上海</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2496" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2496" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

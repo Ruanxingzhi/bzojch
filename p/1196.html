@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1196：[HNOI2006]公路修建问题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2006]公路修建问题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2006]公路修建问题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2006]公路修建问题                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">OI island是一个非常漂亮的岛屿,自开发以来,到这儿来旅游的人很多。然而，由于该岛屿刚刚开发不久，所以那里的交通情况还是很糟糕。所以，OIER Association组织成立了，旨在建立OI island的交通系统。 OI island有n个旅游景点，不妨将它们从1到n标号。现在，OIER Association需要修公路将这些景点连接起来。一条公路连接两个景点。公路有，不妨称它们为一级公路和二级公路。一级公路上的车速快，但是修路的花费要大一些。 OIER Association打算修n-1条公路将这些景点连接起来（使得任意两个景点之间都会有一条路径）。为了保证公路系统的效率, OIER Association希望在这n-1条公路之中,至少有k条(0&le;k&le;n-1)一级公路。OIER Association也不希望为一条公路花费的钱。所以，他们希望在满足上述条件的情况下，花费最多的一条公路的花费尽可能的少。而你的任务就是，在给定一些可能修建的公路的情况下，选择n-1条公路，满足上面的条件。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">第一行有三个数n(1&le;n&le;10000),k(0&le;k&le;n-1),m(n-1&le;m&le;20000)，这些数之间用空格分开。 N和k如前所述，m表示有m对景点之间可以修公路。以下的<span style="color: #ff0000">m-1</span>行，每一行有4个正整数a,b,c1,c2 （1&le;a,b&le;n,a&ne;b,1&le;c2&le;c1&le;30000）表示在景点a与b 之间可以修公路,如果修一级公路,则需要c1的花费,如果修二级公路,则需要c2的花费。</span></p></p><hr/><h3>输出格式</h3><p><p>一个数据，表示花费最大的公路的花费。</p></p><hr/><h3>样例输入</h3><pre>10 4 20
+3 9 6 3
+1 3 4 1
+5 3 10 2
+8 9 8 7
+6 8 8 3
+7 1 3 2
+4 9 9 5
+10 8 9 1
+2 6 9 1
+6 7 9 8
+2 6 2 1
+3 8 9 5
+3 2 9 6
+1 6 10 3
+5 6 3 1
+2 7 6 1
+7 8 6 2
+10 9 2 1
+7 1 10 2</pre><hr/><h3>样例输出</h3><pre>5</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1196" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1196" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

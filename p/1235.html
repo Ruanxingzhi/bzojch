@@ -1,0 +1,199 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1235：[SDOI2009]细胞探索</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2009]细胞探索</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2009]细胞探索</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SDOI2009]细胞探索                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>生物课上，老师开始为同学们介绍细胞。为了加深同学们的印象，老师在一张N×M的矩阵中定义了一种细胞，矩阵中仅有井号“#”和点“.”：
+细胞由细胞核、细胞质及细胞膜构成。细胞核是一个4连通（上下左右相连）的全为“#”的连通块，它必须实心，即不能存在一个4连通的“.”连通块被其完全包围（所谓完全包围指的是，这个“.”连通块不能位于矩阵边界相邻，且它的4相邻格子均属于包含它的“#”连通块）。细胞膜是一个8连通（上下左右，以及4个对角方向）的全为“#”的非实心连通块。细胞膜仅包围一个4连通的区域，且这个区域内有且仅有一个细胞核，这个区域剩下的位置全为“.”。
+所有连通块必须极大化，即一个8连通块周围不能找到一个“#”与这个连通块的任意一个“#”8连通；同样，对于一个4连通块周围不能找到一个“#”与这个连通块的任意一个“#”4连通。
+现在，老师画了一幅图画，并让小E回答图画中一共有几个细胞，并把图画中不属于任何一个细胞的“#”改成“.”。
+
+</p><hr/><h3>输入格式</h3><p>第一行包含两个用空格分隔的正整数N和M，表示矩阵的高和长。
+接下来一个N行M列的矩阵，矩阵中仅含井号“#”和点“.”，保证没有多余字符。
+
+</p><hr/><h3>输出格式</h3><p>第一行包含一个整数，表示输入的矩阵中的细胞数。
+接下来一个N行M列的矩阵，矩阵中仅含井号“#”和点“.”，表示更改后的图画。
+
+
+</p><hr/><h3>样例输入</h3><pre>【样例输入1】
+12 13
+.###..#####..
+#...#.#....#.
+#.#.#.#..#.#.
+#...#..#...#.
+.###.#..###..
+....#..##...#
+..........###
+##########..#
+#...........#
+#.###...###.#
+#...........#
+#############
+
+
+
+【样例输入2】
+9 14
+#########.....
+#.......#....#
+#.#####.#...#.
+#.#...#.#..#..
+#.#.#.#.#.#..#
+#.#...#.#..#..
+#.#####.#...#.
+#.......#....#
+#########.....
+
+
+
+
+【样例输入3】
+7 15
+#######.#######
+#.....#.#.....#
+#.###.#.#.###.#
+#.#.#.#.#.#...#
+#.###.#.#.###.#
+#.....#.#.....#
+#######.#######
+
+</pre><hr/><h3>样例输出</h3><pre>【样例输出1】
+1
+......#####..
+......#....#.
+......#..#.#.
+.......#...#.
+........###..
+.......##....
+.............
+.............
+.............
+.............
+.............
+.............
+
+
+【样例输出2】
+1
+..............
+..............
+..#####.......
+..#...#.......
+..#.#.#.......
+..#...#.......
+..#####.......
+..............
+..............
+
+
+
+【样例输出3】
+1
+........#######
+........#.....#
+........#.###.#
+........#.#...#
+........#.###.#
+........#.....#
+........#######
+
+【数据规模和约定】 
+对于20%的数据，满足1 ≤ N, M ≤ 20。
+另有20%的数据，满足所有“#”都属于某一个正确的细胞。
+对于100%的数据，满足1 ≤ N, M ≤ 1,000。
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1235" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1235" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

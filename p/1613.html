@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1613：[Usaco2007 Jan]Running贝茜的晨练计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Jan]Running贝茜的晨练计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Jan]Running贝茜的晨练计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 Jan]Running贝茜的晨练计划                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">奶牛们打算通过锻炼来培养自己的运动细胞，作为其中的一员，贝茜选择的运动方式是每天进行N(1 &lt;= N &lt;= 10,000)分钟的晨跑。在每分钟的开始，贝茜会选择下一分钟是用来跑步还是休息。 贝茜的体力限制了她跑步的距离。更具体地，如果贝茜选择在第i分钟内跑步，她可以在这一分钟内跑D_i(1 &lt;= D_i &lt;= 1,000)米，并且她的疲劳度会增加 1。不过，无论何时贝茜的疲劳度都不能超过M(1 &lt;= M &lt;= 500)。如果贝茜选择休息，那么她的疲劳度就会每分钟减少1，但她必须休息到疲劳度恢复到0为止。在疲劳度为0时休息的话，疲劳度不会再变动。晨跑开始时，贝茜的疲劳度为0。 还有，在N分钟的锻炼结束时，贝茜的疲劳度也必须恢复到0，否则她将没有足够的精力来对付这一整天中剩下的事情。 请你计算一下，贝茜最多能跑多少米。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 2个用空格隔开的整数：N 和 M </span></p>
+<p><span style="font-size: medium">* 第2..N+1行: 第i+1为1个整数：D_i </span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1行: 输出1个整数，表示在满足所有限制条件的情况下，贝茜能跑的最大 距离 </span></p></p><hr/><h3>样例输入</h3><pre>5 2
+5
+3
+4
+2
+10
+
+
+</pre><hr/><h3>样例输出</h3><pre>9
+
+输出说明:
+
+    贝茜在第1分钟内选择跑步（跑了5米），在第2分钟内休息，在第3分钟内跑
+步（跑了4米），剩余的时间都用来休息。因为在晨跑结束时贝茜的疲劳度必须
+为0，所以她不能在第5分钟内选择跑步。
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1613" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1613" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

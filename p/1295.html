@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1295：[SCOI2009]最长距离</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2009]最长距离</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2009]最长距离</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SCOI2009]最长距离                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>windy有一块矩形土地，被分为 N*M 块 1*1 的小格子。 有的格子含有障碍物。 如果从格子A可以走到格子B，那么两个格子的距离就为两个格子中心的欧几里德距离。 如果从格子A不可以走到格子B，就没有距离。 如果格子X和格子Y有公共边，并且X和Y均不含有障碍物，就可以从X走到Y。 如果windy可以移走T块障碍物，求所有格子间的最大距离。 保证移走T块障碍物以后，至少有一个格子不含有障碍物。</p></p><hr/><h3>输入格式</h3><p><p>输入文件maxlength.in第一行包含三个整数，N M T。 接下来有N行，每行一个长度为M的字符串，'0'表示空格子，'1'表示该格子含有障碍物。</p></p><hr/><h3>输出格式</h3><p><p>输出文件maxlength.out包含一个浮点数，保留6位小数。</p></p><hr/><h3>样例输入</h3><pre>【输入样例一】
+3 3 0
+001
+001
+110
+
+
+【输入样例二】
+4 3 0
+001
+001
+011
+000
+
+
+【输入样例三】
+3 3 1
+001
+001
+001
+
+</pre><hr/><h3>样例输出</h3><pre>【输出样例一】
+1.414214
+
+【输出样例二】
+3.605551
+
+【输出样例三】
+2.828427
+</pre><hr/><h3>提示</h3><p><p>20%的数据，满足 1 &lt;= N,M &lt;= 30 ； 0 &lt;= T &lt;= 0 。 40%的数据，满足 1 &lt;= N,M &lt;= 30 ； 0 &lt;= T &lt;= 2 。 100%的数据，满足 1 &lt;= N,M &lt;= 30 ； 0 &lt;= T &lt;= 30 。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1295" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1295" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1952：[Sdoi2010]城市规划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]城市规划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]城市规划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2010]城市规划                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>小猪iPig来到了一个叫做pigsty的城市里，pigsty是一座专门为小猪所准备的城市，城市里面一共有n个小区给小猪们居住，并且存在许多条无向边连接着许多小区。因为这里是一个和谐的城市，所以小猪iPig准备在这个城市里面度过他的余生。 若干年之后小猪iPig当上了规划局长，这件事令他非常开心。不过与此同时pigsty城市里面出现了许多反和谐主义者，他们已经厌烦了这样和谐的生活，在城市里到处闹事。小猪iPig为了更好地控制局面，他把城市改造成了另外一个样子：iPig把道路全部摧毁之后重新修建了m条无向边，并且保证每一个小区最多存在于一个由无向边组成的环中。 iPig以为这样做就让那些反和谐主义者不敢继续猖狂下去了，谁知到在新的城市道路修建好以后反和谐主义者宣言要对城市的小区进行一次洗脑！ 这下可麻烦了，iPig赶紧收集了许多的情报。iPig给每个小区标记了一个和谐值HX_i，用它来表示第i个小区的和谐程度。 通过地下消息iPig又得知那些反和谐主义者进攻时有个规律：他们会选择若干个小区下手，这些小区都派一只猪过去，把这些小区的和谐值归零。在这个过程中，每个选择的小区所直接连接着的几个小区都派了一只猪去看守&mdash;&mdash;以防被警猪给干扰。这个计划看似完美但是还是存在一个漏洞：因为人员之间都是在网络上认识的，互相没有见过面，为了防止不必要的麻烦（认错猪之类），每个小区最多只会有一头猪存在。 iPig突然感到了莫大的压力，他想知道在最坏情况下会丢失多少和谐值。但是不懂计算机的他不知道应该怎样计算。你能帮帮他吗？</p></p><hr/><h3>输入格式</h3><p><p>输入第一行有两个整数n和m，表示pigsty城市里面有n个小区，在iPig修整城市后有m条无向边连接着n个小区。 接下来一行有n个正整数，第i个正整数HX_i表示第i个小区的和谐值为HX_i。 接下来m行，每行两个正整数a和b（1&lt;=a,b&lt;=n），表示存在一条连接着小区a和小区 b的无向边。</p></p><hr/><h3>输出格式</h3><p><p>输出只有一行一个整数，表示最坏情况下损失的和谐值为多少。</p></p><hr/><h3>样例输入</h3><pre>9 9
+2 2 3 4 1 2 3 10 11
+1 2
+2 3
+1 3
+3 5
+5 4
+5 6
+4 7
+6 7
+8 9
+
+</pre><hr/><h3>样例输出</h3><pre>17
+
+【样例解释】
+反和谐主义者选择的小区分别是小区3（看守的小区是小区1、小区2和小区5）、小区7（看守的小区是小区4和小区6）和小区9（看守的小区是小区8），这样会损失的总和谐值为3+3+11=17。
+或者选择的小区分别是小区1（看守的小区是小区2和小区3）、小区4（看守的小区是小区5和小区7）和小区9（看守的小区是小区8），这样会损失的总和谐值为2+4+11=17。
+如果同时选择小区3、小区4和小区9，虽然损失的总和谐值为18，但是小区3和小区4都要派猪来看守小区5，这不符合条件，故此方案不可行。
+
+【数据约定】
+对于20%的数据，保证每个点不存在于任何一个环中；
+对于另外30%的数据，保证图中只存在一个环；
+对于100%的数据，有N<=1000000，M<=2000000，所有的权值不超过1000。
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1952" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1952" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

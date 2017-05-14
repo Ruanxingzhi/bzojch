@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4425：[Nwerc2015]Assigning Workstations分配工作站</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015]Assigning Workstations分配工作站</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015]Assigning Workstations分配工作站</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Nwerc2015]Assigning Workstations分配工作站                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1024MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Penelope is part of the admin team of the newly built supercomputer. Her job is to assign workstations to the researchers who come here to run their computations at the supercomputer.</div>
+<div>Penelope is very lazy and hates unlocking machines for the arriving researchers. She can unlock the machines remotely from her desk, but does not feel that this menial task matches her qualifications. Should she decide to ignore the security guidelines she could simply ask the researchers not to lock their workstations when they leave, and then assign new researchers to workstations that are not used any more but that are still unlocked. That way, she only needs to unlock each workstation for the first researcher using it, which would be a huge improvement for Penelope.</div>
+<div></div>
+<div>Unfortunately, unused workstations lock themselves automatically if they are unused for more than mm minutes. After a workstation has locked itself, Penelope has to unlock it again for the next researcher using it. Given the exact schedule of arriving and leaving researchers, can you tell Penelope how many unlockings she may save by asking the researchers not to lock their workstations when they leave and assigning arriving researchers to workstations in an optimal way? You may assume that there are always enough workstations available.</div>
+<div></div>
+<div>Input</div>
+<div>The input consists of:</div>
+<div>one line with two integers n (1&le;n&le;300000), the number of researchers, and m (1&le;m&le;10^8), the number of minutes of inactivity after which a workstation locks itself;</div>
+<div>n lines each with two integers a and s (1&le;a,s&le;10^8), representing a researcher that arrives after a minutes and stays for exactly s minutes.</div>
+<div>Output</div>
+<div>Output the maximum number of unlockings Penelope may save herself.</div>
+<div></div>
+<div>佩内洛普是新建立的超级计算机的管理员中的一员。 她的工作是分配工作站给到这里来运行他们的计算研究任务的研究人员。</div>
+<div>佩内洛普非常懒惰，不喜欢为到达的研究者们解锁机器。 她可以从在她的办公桌远程解锁这些机器，但她并不觉得这卑贱的任务配得上她，所以她决定忽略安全指南偷偷懒。她可以直接地要求，研究者在他们离开时不用锁定自己的工作站，然后把未在使用且还在未锁定状态的工作站分配给新来的研究人员。 这样，她只需要为每一个工作站第一次被使用所属的研究员解锁工作站，这对佩内洛普的工作来说是一个巨大的改善。</div>
+<div></div>
+<div>不幸的是，如果一个工作站在未锁定且没被使用的状态下超过m分钟，会自动锁定自己，佩内洛普必须为使用它的下一个研究员再次打开它。 鉴于抵达和离开的研究人员的确切时间表，你可以告诉佩内洛普，要求研究者在离开时不锁定工作站最多可以使她节约多少次的解锁工作。你可以认为这儿总是有足够的可用工作站。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>一行两个整数n (1&le;n&le;300000) 研究员的数量n，以及 m (1&le;m&le;100000000) 工作站在未锁定且没被使用的状态下超过m分钟会自动锁定。</div>
+<div>下面的n行，每一行两个整数a与s (1&le;a,s&le;100000000) 表示一个研究员在第a分钟时到达以及待了s分钟后离开。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出研究者在离开时不锁定工作站最多可以使她节约多少次解锁工作。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>Sample Input 1
+3 5
+1 5
+6 3
+14 6 
+Sample Input 2
+5 10
+2 6
+1 2
+17 7
+3 9
+15 6 </pre><hr/><h3>样例输出</h3><pre>Sample Output 1
+2
+
+Sample Output 2
+3
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4425" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4425" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

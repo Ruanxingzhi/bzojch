@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2597：[Wc2007]剪刀石头布</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wc2007]剪刀石头布</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wc2007]剪刀石头布</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Wc2007]剪刀石头布                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">在一些一对一游戏的比赛（如下棋、乒乓球和羽毛球的单打）中，我们经常会遇到</span><span style="font-size: 12pt">A</span><span style="font-size: 12pt">胜过</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">胜过</span><span style="font-size: 12pt">C</span><span style="font-size: 12pt">而</span><span style="font-size: 12pt">C</span><span style="font-size: 12pt">又胜过</span><span style="font-size: 12pt">A</span><span style="font-size: 12pt">的有趣情况，不妨形象的称之为<b><u>剪刀石头布</u></b>情况。有的时候，无聊的人们会津津乐道于统计有多少这样的<b><u>剪刀石头布</u></b>情况发生，即有多少对<b><u>无序</u></b>三元组</span><span style="font-size: 12pt">(A, B, C)</span><span style="font-size: 12pt">，满足其中的一个人在比赛中赢了另一个人，另一个人赢了第三个人而第三个人又胜过了第一个人。注意这里<b><u>无序</u></b>的意思是说三元组中元素的顺序并不重要，将</span><span style="font-size: 12pt">(A, B, C)</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">(A, C, B)</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">(B, A, C)</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">(B, C, A)</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">(C, A, B)</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">(C, B, A)</span><span style="font-size: 12pt">视为相同的情况。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">有</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">个人参加一场这样的游戏的比赛，赛程规定任意两个人之间都要进行一场比赛：这样总共有</span><span style="font-size: 12pt">场比赛。比赛已经进行了一部分，我们想知道在极端情况下，比赛结束后最多会发生多少<b><u>剪刀石头布</u></b>情况。即给出已经发生的比赛结果，而你可以任意安排剩下的比赛的结果，以得到尽量多的<b><u>剪刀石头布</u></b>情况。</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">输入文件的第</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">行是一个整数</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">，表示参加比赛的人数。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">之后是一个</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">行</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">列的数字矩阵：一共</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">行，每行</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">列，数字间用空格隔开。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">在第</span><span style="font-size: 12pt">(<i>i</i>+1)</span><span style="font-size: 12pt">行的第</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">列的数字如果是</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">，则表示</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">在已经发生的比赛中赢了</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">；该数字若是</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">，则表示在已经发生的比赛中</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">败于</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">；该数字是</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">，表示</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">和</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">之间的比赛尚未发生。数字矩阵对角线上的数字，即第</span><span style="font-size: 12pt">(<i>i</i>+1)</span><span style="font-size: 12pt">行第</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">列的数字都是</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">，它们仅仅是占位符号，没有任何意义。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">输入文件保证合法，不会发生矛盾，当</span><i><span style="font-size: 12pt">i</span></i><i><span style="font-size: 12pt">&ne;</span></i><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">时，第</span><span style="font-size: 12pt">(<i>i</i>+1)</span><span style="font-size: 12pt">行第</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">列和第</span><span style="font-size: 12pt">(<i>j</i>+1)</span><span style="font-size: 12pt">行第</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">列的两个数字要么都是</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">，要么一个是</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">一个是</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">输出文件的第</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">行是一个整数，表示在你安排的比赛结果中，出现了多少<b><u>剪刀石头布</u></b>情况。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">输出文件的第</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">行开始有一个和输入文件中格式相同的</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">行</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">列的数字矩阵。第</span><span style="font-size: 12pt">(<i>i</i>+1)</span><span style="font-size: 12pt">行第</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">个数字描述了</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">和</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">之间的比赛结果，</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">表示</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">赢了</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">，</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">表示</span><i><span style="font-size: 12pt">i</span></i><span style="font-size: 12pt">负于</span><i><span style="font-size: 12pt">j</span></i><span style="font-size: 12pt">，与输入矩阵不同的是，在这个矩阵中没有表示比赛尚未进行的数字</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">；对角线上的数字都是</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">。输出矩阵要保证合法，不能发生矛盾。</span></div></p><hr/><h3>样例输入</h3><pre>3
+0 1 2
+0 0 2
+2 2 0
+</pre><hr/><h3>样例输出</h3><pre>1
+0 1 0
+0 0 1
+1 0 0</pre><hr/><h3>提示</h3><p><p><br />
+100%的数据中，N&le; 100。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2597" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2597" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

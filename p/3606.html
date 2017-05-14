@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3606：[Sdoi2014]里面还是外面</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2014]里面还是外面</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2014]里面还是外面</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2014]里面还是外面                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>Alice给出了平面上的一个简单N-多边形。所谓简单N-多边形，包括N个给定的端点，和连接相邻点的直线段，特别的，我们认为1号点与N号是相邻的。对于边界上不同的直线段，保证它们只会在公共端点处相交。</p>
+<div>有的时候Alice会指着平面上一个点，然后问Bob：&ldquo;这个点是在多边形的里面呢，还是外面呢，还是在边界上呢？&rdquo;</div>
+<div>这个时候，如果她所指的点是多边形的一个顶点或者在多边形某条边的边界上，都将被认为是在多边形的边界上。</div>
+<div>还有的时候，Alice为了加大难度，会删除连接a和b的边，并插入新的点c（新插入的点保证不与任何已有的端点重合，也不在任何边界上），然后新增a到c的边与b到c的边，从而得到一个新的简单多边形。</div>
+<div>Alice保证这样的操作得到的新图形总是简单多边形。</div>
+<div>Bob要做的，就是准确回答出Alice的提问。而实际上，Alice的每一次提问都将由Bob上一次的回答决定，虽然这个回答是唯一的，但却意味着如果Bob不能回答出前一个问题，就不能拿到Alice的下一个问题。不过，Alice对多边形的修改确实事先准备好的。</div>
+<div>详细来说：Alice的每一次修改命令可以看作是一个六元组：</div>
+<div>〈x_a，y_a，x_b，y_b，x_c，y_c〉</div>
+<div>表示删除了坐标位置（x_a，y_a），与坐标位置（x_b，y_b）的点之间的连边，并插入新的点（x_c，y_c）。这里我们保证坐标为（x_a，y_a）的点与坐标为（x_b，y_b）的点总是存在的。</div>
+<div>因为Alice保证了所有出现的点（这包括了询问点）的坐标都是非负整数，且都小于1000000000，且多边形中（这不包括询问点）任意两个点的x坐标不同，y坐标也不同。</div>
+<div>所以每一次询问Alice将给出7个非负整数：</div>
+<div>r，x_{in}，y_{in}，x_{out}，y_{out}，x_{bd}，y_{bd}</div>
+<div>而Alice这一次询问真正要询问的点（X，Y）的坐标将由上一次询问的点（x_0，y_0）与上一次询问的回答而决定。例如，若上一次询问的点在多边形外，则：</div>
+<div>X = (r * x_0 + x_{out}) mod 1000000000</div>
+<div>Y = (r * y_0 + y_{out}) mod 1000000000</div>
+<div>对于第一次讯问，我们假设x_0 = y_0 = 0，也就是说将(0,0)考虑为前一次的询问。</div></p><hr/><h3>输入格式</h3><p><p>&nbsp;输入文件的第一行有一个整数N，表示初始时多边形的点数。</p>
+<div>之后N行，每行一对非负整数x和y（0&lt;=x,y&lt;1000000000）。按照某一顺序依次描述了多边形的所有顶点的坐标，并编号为1到N。</div>
+<div>这里我们只认为，对于平面上的一点(10^100,10^100)一定是处在多边形以外的。</div>
+<div>之后一行有一个整数Q，表示总的操作次数。</div>
+<div>之后Q行，每行第一个数字p，如果p=0，则表示询问，如果p=1，则表示修改。</div>
+<div>对于询问，之后给出了7个非负整数，它们是：</div>
+<div>r，x_{in}，y_{in}，x_{out}，y_{out}，x_{bd}，y_{bd}</div>
+<div>对于修改，之后给出了6个整数，它们是：</div>
+<div>x_a，y_a，x_b，y_b，x_c，y_c</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>对于每一次询问操作，单独输出一行且只包含一个字符串，它或者是in、或者是out、或者是bd（均为小写字符），分别表示询问点在多边形的内、外或边界。</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>6
+249999999 499999998
+583333331 83333333
+83333333 333333332
+333333332 999999996
+833333330 749999997
+499999998 833333330
+12
+0 1 872826049 679758020 472526437 270998755 15447952 502239247
+1 833333330 749999997 499999998 833333330 916666663 666666664
+1 833333330 749999997 916666663 666666664 416666665 916666663
+0 1 371653715 747730364 409617871 21996163 118531999 759280767
+1 249999999 499999998 583333331 83333333 666666664 166666666
+0 1 195920917 488293591 322952040 262793733 678458193 506876149
+0 1 203963007 782710007 391614158 831643205 340800821 896322422
+0 1 498571077 461554269 765704840 973009111 152064733 114249255
+1 499999998 833333330 249999999 499999998 999999996 583333331
+0 1 159294077 702544938 787871788 619972292 941209243 950700951
+0 1 791254252 411705638 382076333 263993056 306662346 47793905
+0 1 13359599 513224793 415037020 28305143 48117026 34994422
+</pre><hr/><h3>样例输出</h3><pre>out
+out
+in
+in
+out
+out
+out
+in</pre><hr/><h3>提示</h3><p><p>&nbsp;对于100%的数据：N&lt;=50000，Q&lt;=50000，所有坐标非负且均小于1000000000，而r或者为1或者为0。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3606" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3606" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

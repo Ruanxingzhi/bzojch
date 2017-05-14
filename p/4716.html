@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4716：假摔</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">假摔</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">假摔</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                假摔                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>【题目背景】</div>
+<div>小Q最近喜欢上了一款游戏，名为《舰队connection》，在游戏中，小Q指挥强大的舰队南征北战，从而成为了一名</div>
+<div>dalao。在游戏关卡的攻略中，可能由于作战过程中某艘船受到严重损伤，为避免沉没而被迫进行返航，这种情况</div>
+<div>大家称为这艘船&ldquo;假摔&rdquo;。小Q最喜欢使用的一艘战舰代号为P01，但是最近这艘船总是用各种不同的姿势假摔，于</div>
+<div>是小Q打算研究一下原因。</div>
+<div>【题意描述】</div>
+<div>P01的装甲可以近似看作一个n*m的矩阵，每个位置上的数字代表这个位置装甲的强度。当受到炮击时，防御力为被</div>
+<div>炮击的部分的所有位置强度之和。最近小Q发现，敌方有一种船只被称为ENE，它可以发射不同形状的炮弹，以达到</div>
+<div>攻击装甲最薄弱处的目的。P01已经被连续k次用不同方式打成了严重损伤(假摔)，于是小Q打算分析一下ENE的攻击</div>
+<div>力。为了简单起见，我们作如下假设：</div>
+<div>1、ENE的炮弹形状无论如何变化，火力值都为一个定值(整数，未知)</div>
+<div>2、ENE的炮弹形状只能是长方形(ENE:呵呵)，且由于口径的限制，炮弹不能太小(具体来说，对于每一发炮弹长xi</div>
+<div>宽yi，有xmin&lt;=xi&lt;=n，ymin&lt;=yi&lt;=m)</div>
+<div>3、当ENE的炮击命中P01的某处装甲时，被命中部分的强度之和为P01的防御力，此时，ENE的火力必须严格大于P01</div>
+<div>的防御力，才能将其击穿并造成严重损伤(假摔)。</div>
+<div>然而，小Q并没有得到详细的中弹数据，只知道P01用k种不同的方式假摔过。两种假摔方式不同，当且仅当受到炮</div>
+<div>击的位置不完全相同。因此，不同形状的炮弹击穿护甲时必定可以造成不同的假摔方式，而相同形状的炮弹在不同</div>
+<div>的位置击穿护甲也能造成不同的假摔方式。现在，小Q想估计ENE的火力最低是多少。于是，这个任务被交给了你。</div>
+<div>举例而言，假设P01的护甲为3*4：</div>
+<div>0 1 3 7</div>
+<div>1 1 5 5</div>
+<div>7 6 9 6</div>
+<div>如果ENE的口径至少为2*2，那么直接使用2*2的炮弹攻击左上角2*2的装甲时，只要火力&gt;=4即可造成一种假摔。如</div>
+<div>果想造成k=3种不同的假摔方式，至少要拥有12的火力，此时可以造成如下三种假摔方式：</div>
+<div>1、2*2炮弹，攻击有数字的部分，装甲值为3</div>
+<div>0 1 - -</div>
+<div>1 1 - -</div>
+<div>- - - -</div>
+<div>2、2*2炮弹，攻击有数字的部分，装甲值为10</div>
+<div>- 1 3 -</div>
+<div>- 1 5 -</div>
+<div>- - - -</div>
+<div>3、2*3炮弹，攻击有数字的部分，装甲值为11</div>
+<div>0 1 3 -</div>
+<div>1 1 5 -</div>
+<div>- - - -</div>
+<div>可以证明，火力小于12时，无法造成3种不同的假摔方式，所以ENE的火力至少应为12。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行，五个数n, m, xmin, ymin, k，空格分隔。</div>
+<div>接下来n行，每行m个数，空格分隔，表示P01的装甲。</div>
+<div>1&lt;=n,m&lt;=1000，1&lt;=xmin&lt;=n, 1&lt;=ymin&lt;=m, 1&lt;=k&lt;=250000，装甲值为不超过2000的非负整数。</div>
+<div>保证火力为无穷大的ENE可以造成k种不同的假摔方式。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>仅一行，一个数，表示ENE的火力最低值。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 4 2 2 3
+0 1 3 7
+1 1 5 5
+7 6 9 6</pre><hr/><h3>样例输出</h3><pre>12</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4716" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4716" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

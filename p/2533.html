@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2533：[Poi2001]Nas Necklaces项链</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]Nas Necklaces项链</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]Nas Necklaces项链</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2001]Nas Necklaces项链                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p style="text-align: left"><font face="Times New Roman" size="3"><span id="1323849459956S" style="display: none">&nbsp;</span>项链 <br />
+著名珠宝商Byteman的迷人项链使得Byteland声名在外。这些项链由宝石串织而成。宝石有26个不同的种类 <br />
+我们用小写的拉丁字母a &ndash; z来表示（同一类型的宝石是不可区分的）。不生产俩条完全一样的项链是 <br />
+Byteman的一份荣誉，因而他保留有以前制造的所有项链的描述。由于有些项链确实很长，这就使得我们 <br />
+必须用简短的形式来描述它。每个描述都由下列形式的fragments构成：一个字符串（我们称之为pattern） <br />
+后面跟一整数，整数表示此pattern在项链中重复的次数。所有描述都是这样的fragments的连续。 <br />
+例如，描述： <br />
+abc 2 xyz 1 axc 3 <br />
+表示项链abcabcxyzaxcaxcaxc（这一字符串可由写&ldquo;abc&rdquo;两次，&ldquo;xyz&rdquo;一次和&ldquo;axc&rdquo;3次而得到）。 <br />
+然而，由于不能决定项链的开始（即项链能任意被转动），这个问题变得更加复杂化。一些项链可能 <br />
+有多于一种的描述形式。例如，我们上面提到的项链也可以描述为如下形式： <br />
+cabcxyzaxcaxcaxcab或者xcaxcaxcabcabcxyza。 <br />
+要求 <br />
+写一程序： <br />
+1、 从文件NAS.IN中读入俩条项链的描述； <br />
+2、证明这俩个描述是否表示同一项链； <br />
+3、结果写入文件NAS.OUT中。 <br />
+</font></p>
+<p style="text-align: left"></p></p><hr/><h3>输入格式</h3><p><p style="text-align: left"><font face="Times New Roman" size="3">输入俩行。每行都为某一项链的描述，由小写的拉丁字母和整数组成 <br />
+用单个空格隔开。每行开始为一整数n，它表示此描述中所含pattern的数量 <br />
+1&lt;=n&lt;=1 000。后面跟着是n个重复pattern的描述。第i个重复pattern由以下几部分组成： <br />
+整数li ，表示pattern的长度；由li 个小写拉丁字母构成的字符串si ； <br />
+以及整数ki表示pattern在描述中重复的次数，1&lt;=ki&lt;=100 000。整数li (for i=1,...,n)的总和不超过10 000。 <br />
+</font></p>
+<p style="text-align: left"></p></p><hr/><h3>输出格式</h3><p><p style="text-align: left"><font face="Times New Roman" size="3">如果这俩个描述表示的是同一条项链，程序应在输出文件的第一行写入一单词&quot;TAK&quot;，否则，写入单词&quot;NIE&quot;。 <br />
+</font></p>
+<p><font face="Times New Roman" size="3">
+<pre>
+		</pre>
+</font></p>
+<pre></pre></p><hr/><h3>样例输入</h3><pre>3 3 abc 2 3 xyz 1 3 axc 3
+4 4 cabc 1 4 xyza 1 3 xca 3 1 b 1
+
+
+ </pre><hr/><h3>样例输出</h3><pre>TAK
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2533" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2533" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

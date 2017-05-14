@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3640：JC的小苹果</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JC的小苹果</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JC的小苹果</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                JC的小苹果                </h1>
+                <p>时间限制：15s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 14pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">让我们继续<span lang="EN-US">JC</span>和<span lang="EN-US">DZY</span>的故事。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">&ldquo;你是我的小丫小苹果，怎么爱你都不嫌多！&rdquo;<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">&ldquo;点亮我生命的火，火火火火火！&rdquo;<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">话说<span lang="EN-US">JC</span>历经艰辛来到了城市<span lang="EN-US">B</span>，但是由于他的疏忽<span lang="EN-US">DZY</span>偷走了他的小苹果！没有小苹果怎么听歌！他发现邪恶的<span lang="EN-US">DZY</span>把他的小苹果藏在了一个迷宫里。<span lang="EN-US">JC</span>在经历了之前的战斗后他还剩下<span lang="EN-US">hp</span>点血。开始<span lang="EN-US">JC</span>在<span lang="EN-US">1</span>号点，他的小苹果在<span lang="EN-US">N</span>号点。<span lang="EN-US">DZY</span>在一些点里放了怪兽。当<span lang="EN-US">JC</span>每次遇到位置在<span lang="EN-US">i</span>的怪兽时他会损失<span lang="EN-US">Ai</span>点血。当<span lang="EN-US">JC</span>的血小于等于<span lang="EN-US">0</span>时他就会被自动弹出迷宫并且再也无法进入。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">但是<span lang="EN-US">JC</span>迷路了，他每次只能从当前所在点出发等概率的选择一条道路走。所有道路都是双向的，一共有<span lang="EN-US">m</span>条，怪兽无法被杀死。现在<span lang="EN-US">JC</span>想知道他找到他的小苹果的概率。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span>P.S.</span><span style="font-size: 12pt; font-family: 宋体">大家都知道这个系列是提高组模拟赛，所以这是一道送分题<span lang="EN-US">balabala<o:p></o:p></span></span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 宋体">第一行三个整数表示<span lang="EN-US">n</span>，<span lang="EN-US">m</span>，<span lang="EN-US">hp</span>。接下来一行整数，第<span lang="EN-US">i</span>个表示<span lang="EN-US">jc</span>到第<span lang="EN-US">i</span>个点要损失的血量。保证第<span lang="EN-US">1</span>个和<span lang="EN-US">n</span>个数为<span lang="EN-US">0</span>。接下来<span lang="EN-US">m</span>行每行两个整数<span lang="EN-US">a</span>，<span lang="EN-US">b</span>表示<span lang="EN-US">ab</span>间有一条无向边。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体"><span lang="EN-US"><o:p></o:p></span></span></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt; font-family: 宋体">仅一行，表示<span lang="EN-US">JC</span>找到他的小苹果的期望概率，保留八位小数。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体"><span lang="EN-US"><o:p></o:p></span></span></p></p><hr/><h3>样例输入</h3><pre>    3 3 2
+    0 1 0
+    1 2
+    1 3
+    2 3
+
+</pre><hr/><h3>样例输出</h3><pre>    0.87500000
+
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据 2&lt;=n&lt;=150，hp&lt;=10000，m&lt;=5000，保证图联通。<br />
+</p></p><hr/><h3>题目来源</h3><p>By JRY</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3640" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3640" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

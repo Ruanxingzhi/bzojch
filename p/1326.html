@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1326：Zju1361Holedox Moving</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zju1361Holedox Moving</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zju1361Holedox Moving</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Zju1361Holedox Moving                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>有一条蛇在它的洞里面，现在他要出来，问最少要多少步才可以移动到出口。出口的位置是(1,1)。蛇可以弯曲的，但是它的部分必须是连接的，比如：如果它有一个部位在一个坐标，连接它那个部位的坐标一定是它的上下左右。
+</p><hr/><h3>输入格式</h3><p>  有多组数据。每组数据的第一行有3个数，N,M,L（N，M）表示洞的大小N*M，L表示蛇的长度。然后下面有L行，每行两个数，表示蛇所有部位的位置。第一组是蛇的头，第L组是蛇的尾巴，也就是说是按顺序给出蛇的头至尾的位置，移动时蛇的蛇的后面一个部位要移到之前那个部位的位置。当然蛇不能走到有石头的地方且它不能走在自己身上。
+  然后给出一个K，表示洞里面有多少块石头。然后下面有K行，每行2个数，表示每块石头的坐标。
+  每个数据之间有一空行，数据以3个0表示结束。
+</p><hr/><h3>输出格式</h3><p> 如果蛇可以走出洞的话，那么输出最小步数，如果蛇不能走出洞，那么输出-1；
+</p><hr/><h3>样例输入</h3><pre>5 6 4
+4 1
+4 2
+3 2
+3 1
+3
+2 3
+3 3
+3 4
+
+4 4 4
+2 3
+1 3
+1 4
+2 4
+4
+2 1
+2 2
+3 4
+4 2
+
+0 0 0
+
+
+
+
+
+
+
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 9
+Case 2: -1
+</pre><hr/><h3>提示</h3><p>注意：出口处是没有石头的。
+
+说明：第一组数据依次按以下坐标走是最短的。           
+
+(4,1)  '(5,1)   (5,2)  '(5,3)  '(4,3)   '(4,2)   '(4,1)'   (3,1)   '(2,1)'(1,1)
+</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1326" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1326" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

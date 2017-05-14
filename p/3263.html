@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3263：经销商问题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">经销商问题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">经销商问题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                经销商问题                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 28pt"><span style="font-size: medium">CTY神犇成为了著名品牌的一个经销商，由于经营有方，他创造了商品销售上的奇迹&mdash;&mdash;就是进多少卖多少。为了可以获得更多的利润，他决定从其他经销商那里进货。进货的要遵循以下规则：</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt"><span style="font-size: medium">1.有一个顶级经销商，他有无限的库存，他的出货价总是恒定的。</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt"><span style="font-size: medium">2.其他的经销商只能间接或直接从顶级经销商进货，而且一个经销商向其他经销商进货的量应等于向其他经销商出货的量（即假设经销商都只会把商品卖给别的经销商）（顶级经销商和CTY神犇例外）。</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt"><span style="font-size: medium">3.经销商之间有单向的买卖关系，一个经销商v会向u要求进货，当且仅当存在u-&gt;v的单向买卖关系，同理，u会向v出货也是要求当且仅当存在u-&gt;v的单向买卖关系。</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt"><span style="font-size: medium">4.代理一个产品最主要的就是获利，一个经销商将商品卖个另一个经销商时会以成本价上浮x<b>%</b>的价格卖给购买方（例外的是顶级经销商有着固定的出货价，他的出货价不会随着进货价而变动，或者说因为他就是厂家，他的成本价是一定的，而且他会不加价的买给其他经销商）。由于经销商之间亲密程度不同，所以每一条单向买卖关系的加价幅度（即x<b>%</b>）不一定相同，而且对于一个单向买卖关系&lt;ui, vi&gt;而言，经销商ui最多愿意卖给vi的商品数为ci。</span></div>
+<div style="text-indent: 28pt"><span style="font-size: medium">根据以上规则，CTY神犇想知道他最多可以拿到多少的商品，而由于售价是一定的，CTY神犇想要以尽量低的总成本购进尽量多的商品。他发现经销商的关系有点小复杂，编程解决又太水了，所以他决定把这个简单的任务交给你。</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">第一行n,m,s表示共有n个经销商，m条单向买卖关系，顶级经销商的出货价格为s（其中顶级经销商的编号为1，CTY神犇的编号为n）</span></div>
+<div><span style="font-size: medium">接下来m行，每行4个正整数；u, v, c,x表示经销商u和v之间存在最多销售c和加价x<b>%</b>的单向买卖关系。</span></div>
+<div><span style="font-size: medium">根据题意，输入数据保证顶级经销商卖给其他经销商的价格总是恒定的，即xi=0。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">数据保证没有重边。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">第一行一个数sum，表示最多的进货量。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第二行一个数cost，表示获得最多进货量的最小成本。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">进货成本精确到一位小数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">无法进货时输出:</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">0</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">0.0</span></div></p><hr/><h3>样例输入</h3><pre>3 3 5
+1 2 4 0
+2 3 3 100
+1 3 3 0
+</pre><hr/><h3>样例输出</h3><pre>6
+45.0
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据n&lt;=1800,m&lt;=n * (n - 1) / 2,0&lt;=x&lt;=100</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3263" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3263" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

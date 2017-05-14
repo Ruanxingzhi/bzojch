@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2557：[Poi2011]Programming Contest</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Programming Contest</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Programming Contest</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2011]Programming Contest                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="line-height: 140%" align="left"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">Bartie and his friends compete in the Team Programming Contest. There are n contestants on each team, and each team has access to n &nbsp;computers. The contest lasts t minutes, during which the contestants are to solve m programming problems. Furthermore, penalties are imposed on the teams: solving a problem s minutes since the beginning of the contest amounts to &nbsp;s penal points. The team that solved the most problems wins the contest, with ties broken in favour of the team with smaller penalty. </span></span></div>
+<div style="line-height: 140%" align="left"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">On the contest day Bartie quickly glances over the problem statements and distributes them among his teammates. He knows his team so well that he can exactly assess who is able to solve which problem. Solving any problem takes any contestant that is able to solve it exactly r minutes of using the computer. </span></span></div>
+<div style="line-height: 140%" align="left"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">Bartie's team did not fare well in this year's contest. Bartie is obsessed with the thought that it might be his fault, due to wrong decisions regarding the distribution of problems. He asks you to write a program that, given what Bartie knew at the beginning of the contest, determines the best possible result of Bytie's team, together with the assignment of problems to team members that attains the result. </span></span></div>
+<div style="line-height: 140%" align="left"></div>
+<p><span style="font-size: medium"><!--StartFragment --></span></p>
+<div><span style="font-size: medium">n个人m个题目，每个题要r分钟完成。比赛有t分钟。给出每个人会做哪些题目，请你安排一个每个人在什么时候做什么题目，使得做出来的题目数最多。在做题数一样多的情况下，罚时尽量小。<br />
+&nbsp;<br />
+</span></div></p><hr/><h3>输入格式</h3><p><div style="line-height: 140%" align="left"><span style="font-size: 14pt; color: #444444; line-height: 140%">Five integers n,m,r,t and k(1&lt;=n,m&lt;=500,1&lt;=r,t&lt;=10^6)) are given in the first line of the standard input, separated by single spaces. These denote, respectively: the number of contestants on a team, the number of problems, the time it takes a contestant to solve a problem, the duration of the contest, and the number of contestant-problem pairs given on the input. Each of the following k lines holds two integers a and b(1&lt;=a&lt;=n,1&lt;=b&lt;=m)), separated by a single space, denoting that the contestant a is able to solve the problem b. Each such pair appears at most once in the input. </span></div>
+<div style="line-height: 140%" align="left"><span style="font-size: 14pt; color: #444444; line-height: 140%">In tests worth at least 30% of the points it additionally holds that n,m&lt;=100. </span></div>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: 14pt; color: #444444">In the first line of the standard output the best possible result of Bytie's team should be printed as two numbers separated by a single space: the number of solved problems z and the total penal points.</span></p></p><hr/><h3>样例输入</h3><pre>2 4 3 15 4
+1 1
+2 3
+1 4
+1 3
+</pre><hr/><h3>样例输出</h3><pre>3 12</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2557" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2557" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

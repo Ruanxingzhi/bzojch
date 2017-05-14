@@ -1,0 +1,140 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3046：lagoon</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">lagoon</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">lagoon</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                lagoon                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">忘川沧月的小水塘的水面是一片由以下两种图形组成的图案：<br />
+<img height="102" alt="" width="204" src="../file/3046_0.jpg" /></span></p>
+<p><span style="font-size: medium">这两种图形都由一个边长为2的正方形和两个半径为1的1/4圆组成，圆心在正方形的两个对角顶点上。<br />
+小水塘左上角坐标为(0,0)，右下角坐标为(2*n,2*m)。水面上每一个顶点坐标为偶数的2*2正方形，都是上面两个图形中的一种。如果我们往水塘中的某个位置倒一桶污水，那么这桶污水会像画图中的油漆桶一样扩散开来，占据一片连续的区域，但是在线条边界处会停止扩散。注意如果倒在了线条上，扩散面积为0。<br />
+如下图所示，就是一个由4行4列上述图形组成的、左上角坐标(0,0)、右下角坐标(8,8)、某些位置倒了污水的水塘（白色部分为线条边界，线条实际宽度认为是0，为了明显、美观，此处加粗显示）：<br />
+<img height="360" alt="" width="362" src="../file/3046_1.jpg" /></span></p>
+<p></p>
+<p><span style="font-size: medium">现在给出一个n行m列的由上述两种图形组成的水塘，起初水塘中全部为净水。给定q个往某个坐标上(x,y)倾倒污水的操作，对于每次操作，请求出在(x,y)上倾倒的污水最终会扩散多大的面积。</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">第一行两个整数n、m。<br />
+接下来n行每行m个整数，每个整数是0或者1，中间没有空格隔开。0代表此处是&lt;图lagoon-1&gt;中左侧那个2*2的图形，1代表此处是右侧那个图形。例如&lt;图lagoon-2&gt;中的第一行用&ldquo;0001&rdquo;表示。<br />
+第n+2行是一个整数q。<br />
+接下来q行每行两个用空格隔开的整数x、y，表示这一次倾倒污水的坐标。</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium"><br />
+对于每个询问，输出此次倾倒的污水最终扩散的面积，四舍五入保留4位小数。</span></p></p><hr/><h3>样例输入</h3><pre>样例输入1
+1 2
+01
+4
+0 0
+2 0
+0 1
+0 2
+
+样例输入2
+3 1
+1
+0
+1
+2
+3 1
+4 2
+
+
+</pre><hr/><h3>样例输出</h3><pre>样例输出1
+0.7854
+4.8584
+0.0000
+4.8584
+
+样例输出2
+7.2876
+1.5708
+</pre><hr/><h3>提示</h3><p><p>对于 100% 的数据，1&lt;=n,m,q&lt;=100，0&lt;=x&lt;=2*n，0&lt;=y&lt;=2*m。</p>
+<p></p></p><hr/><h3>题目来源</h3><p>Poetize8</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3046" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3046" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

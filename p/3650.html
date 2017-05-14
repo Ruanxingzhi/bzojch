@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3650：环游世界</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">环游世界</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">环游世界</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                环游世界                </h1>
+                <p>时间限制：80s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：24MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">ZTY想要环游世界！他会驾驶一架飞机沿着赤道顺时针飞行一周。现在他手头有S架飞机，每架飞机的油箱都有自己的容量限制Di，表示在飞机的油箱装满的情况下，最远可以飞行多远。赤道上有n座城市，相邻两座城市间有一定的距离。ZTY有很多钱，所以你可以不用考虑加油的问题，只需要认为降落到每座城市都可以把飞机的油箱加满。ZTY想要尽快完成环游世界的目标，所以他想要飞机降落的次数尽量少。那么ZTY就想要问你：对每架飞机，最少降落多少次才可以完成环游世界的任务？注意：ZTY可以选择任意一个城市作为他的起点。另外，最后回到起点也需要算一次降落。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><br />
+<font size="4">第一行两个整数，表示n与s。<br />
+接下来一行n个整数，第i个整数表示第i个城市与第i+1个城市间的距离（第n个整数表示第n个城市与第1个城市间的距离）。<br />
+接下来s个整数，第i个整数表示第i架飞机的容量限制Di。</font></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">对 s 架飞机每架飞机输出一行。如果 ZTY 使用这架飞机不可能完成环游世界的目标，输出&ldquo;NO&rdquo;。否则输出 ZTY最少需要降落多少次。 </span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>
+6 4 
+2 2 1 3 3 1 
+3 2 4 11 
+</pre><hr/><h3>样例输出</h3><pre>
+8 3 
+2 2 2 2 2 2 2 2 
+1 16 2 
+
+
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">样例 1 解释： <br />
+对第一架飞机，可以按 6-&gt;2-&gt;4-&gt;5-&gt;6的顺序来飞行。 <br />
+对第二架飞机，显然它不能越过 4与 5 之间3的距离。 <br />
+&nbsp;</span></p>
+<p><span style="font-size: medium">对 100%的数据 n 不超过 1000000，s 不超过 100。赤道长度（所有距离和）不超过10^9。所有输入小于2^31。&nbsp;<br />
+&nbsp;&nbsp; <br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3650" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3650" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

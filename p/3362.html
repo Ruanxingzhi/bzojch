@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3362：[Usaco2004 Feb]Navigation Nightmare 导航噩梦</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2004 Feb]Navigation Nightmare 导航噩梦</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2004 Feb]Navigation Nightmare 导航噩梦</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2004 Feb]Navigation Nightmare 导航噩梦                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;农夫约翰有N(2&le;N&le;40000)个农场，标号1到N,M(2&le;M&le;40000)条的不同的垂直或水</span></div>
+<div><span style="font-size: medium">平的道路连结着农场，道路的长度不超过1000.这些农场的分布就像下面的地图一样，</span></div>
+<div><span style="font-size: medium"><img height="250" width="231" alt="" src="../file/3362_0.jpg" /></span></div>
+<div><span style="font-size: medium">图中农场用F1..F7表示,&nbsp;每个农场最多能在东西南北四个方向连结4个不同的农场．此外，农场只处在道路的两端．道路不会交叉且每对农场间有且仅有一条路径．邻居鲍伯要约翰来导航，但约翰丢了农场的地图，他只得从电脑的备份中修复了．每一条道路的信息如下：</span></div>
+<div><span style="font-size: medium">从农场23往南经距离10到达农场17</span></div>
+<div><span style="font-size: medium">从农场1往东经距离7到达农场17</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;当约翰重新获得这些数据时，他有时被的鲍伯的问题打断：&ldquo;农场1到农场23的曼哈顿距离是多少？&rdquo;所谓在(XI，Yi)和(X2，y2)之间的&ldquo;曼哈顿距离&rdquo;，就是lxl&nbsp;-&nbsp;X21+lyl&nbsp;-&nbsp;y21．如果已经有足够的信息，约翰就会回答这样的问题（在上例中答案是17），否则他会诚恳地抱歉并回答-1.</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：两个分开的整数N和M.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到M+1行：每行包括4个分开的内容，F1，F2，三，D分别描述两个农场的编号，道路的长度，F1到F2的方向N，E，S，w．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第M+2行：一个整数，K(1&le;K&le;10000)，表示问题个数．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: medium">第M+3到M+K+2行：每行表示一个问题，由3部分组成：Fi，F2，，．其中Fi和F2表示两个被问及的农场．而/(1&le;J&le;M)表示问题提出的时刻．J为1时，表示得知信息1但未得知信息2时．</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1到K行：每行一个整数，回答问题．表示两个农场间的曼哈顿距离．不得而知则输出-1.</span></div></p><hr/><h3>样例输入</h3><pre>7 6
+1 6 13 E
+6 3 9 E
+3 5 7 S
+4 1 3 N
+2 4 20 W
+4 7 2 S
+3
+1 6 1
+1 4 3
+2 6 6</pre><hr/><h3>样例输出</h3><pre>13
+-1
+10</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在时刻</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，约翰知道</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><span lang="EN-US"><font face="Times New Roman">6</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的距离为</span><span lang="EN-US"><font face="Times New Roman">13;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在时刻</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><span lang="EN-US"><font face="Times New Roman">4</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的距离仍然不知道；在时刻</span><span lang="EN-US"><font face="Times New Roman">6</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，位置</span><span lang="EN-US"><font face="Times New Roman">6</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">向</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">北</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个距离，向西</span><span lang="EN-US"><font face="Times New Roman">7</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个距离于位置</span><span lang="EN-US"><font face="Times New Roman">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，所以距离为</span><span lang="EN-US"><font face="Times New Roman">10.</font></span></font></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Green</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3362" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3362" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

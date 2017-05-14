@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4013：[HNOI2015]实验比较</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]实验比较</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]实验比较</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2015]实验比较                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-family: 宋体;">小</span><span lang="EN-US">D </span><span style="font-family: 宋体;">被邀请到实验室，做一个跟图片质量评价相关的主观实验。实验用到的图片集一共有</span><span lang="EN-US"> N </span><span style="font-family: 宋体;">张图片，编号为</span><span lang="EN-US"> 1 </span><span style="font-family: 宋体;">到</span><span lang="EN-US"> N</span><span style="font-family: 宋体;">。实验分若干轮进行，在每轮实验中，小</span><span lang="EN-US"> D</span><span style="font-family: 宋体;">会被要求观看某两张随机选取的图片，</span> <span style="font-family: 宋体;">然后小</span><span lang="EN-US">D </span><span style="font-family: 宋体;">需要根据他自己主观上的判断确定这两张图片谁好谁坏，或者这两张图片质量差不多。</span> <span style="font-family: 宋体;">用符号&ldquo;</span><span lang="EN-US">&lt;</span><span style="font-family: 宋体;">&rdquo;、&ldquo;</span><span lang="EN-US">&gt;</span><span style="font-family: 宋体;">&rdquo;和&ldquo;</span><span lang="EN-US">=</span><span style="font-family: 宋体;">&rdquo;表示图片</span><span lang="EN-US"> x</span><span style="font-family: 宋体;">和</span><span lang="EN-US">y</span><span style="font-family: 宋体;">（</span><span lang="EN-US">x</span><span style="font-family: 宋体;">、</span><span lang="EN-US">y</span><span style="font-family: 宋体;">为图片编号）之间的比较：如果上下文中</span><span lang="EN-US"> x </span><span style="font-family: 宋体;">和</span><span lang="EN-US"> y </span><span style="font-family: 宋体;">是图片编号，则</span><span lang="EN-US"> x&lt;y </span><span style="font-family: 宋体;">表示图片</span><span lang="EN-US"> x</span><span style="font-family: 宋体;">&ldquo;质量优于&rdquo;</span><span lang="EN-US">y</span><span style="font-family: 宋体;">，</span><span lang="EN-US">x&gt;y </span><span style="font-family: 宋体;">表示图片</span><span lang="EN-US"> x</span><span style="font-family: 宋体;">&ldquo;质量差于&rdquo;</span><span lang="EN-US">y</span><span style="font-family: 宋体;">，</span><span lang="EN-US">x=y</span><span style="font-family: 宋体;">表示图片</span><span lang="EN-US"> x</span><span style="font-family: 宋体;">和</span><span lang="EN-US"> y</span><span style="font-family: 宋体;">&ldquo;质量相同&rdquo;；也就是说，这种上下文中，&ldquo;</span><span lang="EN-US">&lt;</span><span style="font-family: 宋体;">&rdquo;、&ldquo;</span><span lang="EN-US">&gt;</span><span style="font-family: 宋体;">&rdquo;、&ldquo;</span><span lang="EN-US">=</span><span style="font-family: 宋体;">&rdquo;分别是质量优于、质量差于、质量相同的意思；在其他上下文中，这三个符号分别是小于、大于、等于的含义。图片质量比较的推理规则（在</span><span lang="EN-US"> x</span><span style="font-family: 宋体;">和</span><span lang="EN-US">y</span><span style="font-family: 宋体;">是图片编号的上下文中）：（</span><span lang="EN-US">1</span><span style="font-family: 宋体;">）</span><span lang="EN-US">x &lt; y</span><span style="font-family: 宋体;">等价于</span><span lang="EN-US"> y &gt; x</span><span style="font-family: 宋体;">。（</span><span lang="EN-US">2</span><span style="font-family: 宋体;">）若</span><span lang="EN-US"> x &lt; y </span><span style="font-family: 宋体;">且</span><span lang="EN-US">y = z</span><span style="font-family: 宋体;">，则</span><span lang="EN-US">x &lt; z</span><span style="font-family: 宋体;">。（</span><span lang="EN-US">3</span><span style="font-family: 宋体;">）若</span><span lang="EN-US">x &lt; y</span><span style="font-family: 宋体;">且</span><span lang="EN-US"> x = z</span><span style="font-family: 宋体;">，则</span><span lang="EN-US"> z &lt; y</span><span style="font-family: 宋体;">。（</span><span lang="EN-US">4</span><span style="font-family: 宋体;">）</span><span lang="EN-US">x=y</span><span style="font-family: 宋体;">等价于</span><span lang="EN-US"> y=x</span><span style="font-family: 宋体;">。（</span><span lang="EN-US">5</span><span style="font-family: 宋体;">）若</span><span lang="EN-US">x=y</span><span style="font-family: 宋体;">且</span><span lang="EN-US"> y=z</span><span style="font-family: 宋体;">，则</span><span lang="EN-US">x=z</span><span style="font-family: 宋体;">。</span> <span style="font-family: 宋体;">实验中，小</span><span lang="EN-US"> D </span><span style="font-family: 宋体;">需要对一些图片对</span><span lang="EN-US">(x, y)</span><span style="font-family: 宋体;">，给出</span><span lang="EN-US"> x &lt; y </span><span style="font-family: 宋体;">或</span><span lang="EN-US"> x = y </span><span style="font-family: 宋体;">或</span><span lang="EN-US"> x &gt; y </span><span style="font-family: 宋体;">的主观判断。小</span><span lang="EN-US">D </span><span style="font-family: 宋体;">在做完实验后，</span> <span style="font-family: 宋体;">忽然对这个基于局部比较的实验的一些全局性质产生了兴趣。在主观实验数据给定的情形下，定义这</span><span lang="EN-US"> N </span><span style="font-family: 宋体;">张图片的一个合法质量序列为形如&ldquo;</span><span lang="EN-US">x1 R1 x2 R2 x3 R3 </span><span style="font-family: 宋体;">&hellip;</span><span lang="EN-US">xN-1 RN-1 xN</span><span style="font-family: 宋体;">&rdquo;的串，也可看作是集合</span><span lang="EN-US">{ xi Ri xi+1|1&lt;=i&lt;=N-1}</span><span style="font-family: 宋体;">，其中</span><span lang="EN-US"> xi</span><span style="font-family: 宋体;">为图片编号，</span><span lang="EN-US">x1,x2,</span><span style="font-family: 宋体;">&hellip;</span><span lang="EN-US">,xN</span><span style="font-family: 宋体;">两两互不相同（即不存在重复编号），</span><span lang="EN-US">Ri</span><span style="font-family: 宋体;">为</span><span lang="EN-US">&lt;</span><span style="font-family: 宋体;">或</span><span lang="EN-US">=</span><span style="font-family: 宋体;">，&ldquo;合法&rdquo;是指这个图片质量序列与任何一对主观实验给出的判断不冲突。</span> <span style="font-family: 宋体;">例如：</span> <span style="font-family: 宋体;">质量序列</span><span lang="EN-US">3 &lt; 1 = 2 </span><span style="font-family: 宋体;">与主观判断&ldquo;</span><span lang="EN-US">3 &gt; 1</span><span style="font-family: 宋体;">，</span><span lang="EN-US">3 = <st1:chmetcnv unitname="&rdquo;" sourcevalue="2" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on">2<span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US">&rdquo;</span></span></st1:chmetcnv><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">冲突（因为质量序列中</span> 3&lt;1 </span><span style="font-family: 宋体;">且</span><span lang="EN-US">1=2</span><span style="font-family: 宋体;">，从而</span><span lang="EN-US">3&lt;2</span><span style="font-family: 宋体;">，这与主观判断中的</span><span lang="EN-US"> 3=2 </span><span style="font-family: 宋体;">冲突；同时质量序列中的</span><span lang="EN-US"> 3&lt;1 </span><span style="font-family: 宋体;">与主观判断中的</span><span lang="EN-US"> 3&gt;1 </span><span style="font-family: 宋体;">冲突）</span> <span style="font-family: 宋体;">，但与主观判断&ldquo;</span><span lang="EN-US">2 = 1</span><span style="font-family: 宋体;">，</span><span lang="EN-US">3 &lt; <st1:chmetcnv unitname="&rdquo;" sourcevalue="2" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on">2<span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US">&rdquo;</span></span></st1:chmetcnv>&nbsp; </span><span style="font-family: 宋体;">不冲突；因此给定主观判断&ldquo;</span><span lang="EN-US">3&gt;1</span><span style="font-family: 宋体;">，</span><span lang="EN-US">3=<st1:chmetcnv unitname="&rdquo;" sourcevalue="2" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on">2<span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US">&rdquo;</span></span></st1:chmetcnv><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">时，</span>1&lt;3=2 </span><span style="font-family: 宋体;">和</span><span lang="EN-US">1&lt;2=3 </span><span style="font-family: 宋体;">都是合法的质量序列，</span><span lang="EN-US">3&lt;1=2 </span><span style="font-family: 宋体;">和</span><span lang="EN-US">1&lt;2&lt;3</span><span style="font-family: 宋体;">都是非法的质量序列。由于实验已经做完一段时间了，小</span><span lang="EN-US">D </span><span style="font-family: 宋体;">已经忘了一部分主观实验的数据。对每张图片</span><span lang="EN-US"> i</span><span style="font-family: 宋体;">，小</span><span lang="EN-US"> D </span><span style="font-family: 宋体;">都最多只记住了某一张质量不比</span><span lang="EN-US"> i </span><span style="font-family: 宋体;">差的另一张图片</span><span lang="EN-US"> Ki</span><span style="font-family: 宋体;">。这些小</span><span lang="EN-US"> D </span><span style="font-family: 宋体;">仍然记得的质量判断一共有</span><span lang="EN-US"> M </span><span style="font-family: 宋体;">条（</span><span lang="EN-US">0 &lt;= M &lt;= N</span><span style="font-family: 宋体;">），其中第</span><span lang="EN-US">i </span><span style="font-family: 宋体;">条涉及的图片对为</span><span lang="EN-US">(KXi, Xi)</span><span style="font-family: 宋体;">，判断要么是</span><span lang="EN-US">KXi&nbsp;&nbsp; &lt; Xi&nbsp; </span><span style="font-family: 宋体;">，要么是</span><span lang="EN-US">KXi = Xi</span><span style="font-family: 宋体;">，而且所有的</span><span lang="EN-US">Xi</span><span style="font-family: 宋体;">互不相同。小</span><span lang="EN-US">D </span><span style="font-family: 宋体;">打算就以这</span><span lang="EN-US">M </span><span style="font-family: 宋体;">条自己还记得的质量判断作为他的所有主观数据。现在，基于这些主观数据，我们希望你帮小</span><span lang="EN-US"> D </span><span style="font-family: 宋体;">求出这</span><span lang="EN-US"> N </span><span style="font-family: 宋体;">张图片一共有多少个不同的合法质量序列。我们规定：</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">如果质量序列中出现&ldquo;</span><span lang="EN-US">x = y</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&rdquo;，那么序列中交换</span><span lang="EN-US"> x</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">y</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的位置后仍是同一个序列。</span><span lang="EN-US"><o:p></o:p></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">因此：</span><span lang="EN-US"> 1&lt;2=3=4&lt;5 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">1&lt;4=2=3&lt;5 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是同一个序列，</span><span lang="EN-US"> 1 &lt; 2 = 3 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US"> 1 &lt; 3 = 2 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是同一个序列，而</span><span lang="EN-US">1 &lt; 2 &lt; 3 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">与</span><span lang="EN-US">1 &lt; 2 = 3</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是不同的序列，</span><span lang="EN-US">1&lt;2&lt;3</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">2&lt;1&lt;3 </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是不同的序列。</span><span style="font-family: 宋体;">由于合法的图片质量序列可能很多，</span> <span style="font-family: 宋体;">所以你需要输出答案对</span><span lang="EN-US">10^9 + 7 </span><span style="font-family: 宋体;">取模的结果</span></div>
+<div></div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行两个正整数N,M，分别代表图片总数和小D仍然记得的判断的条数；</div>
+<div>接下来M行，每行一条判断，每条判断形如&rdquo;x &lt; y&rdquo;或者&rdquo;x = y&rdquo;。&nbsp;</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出仅一行，包含一个正整数，表示合法质量序列的数目对 10^9+7取模的结果。</p></p><hr/><h3>样例输入</h3><pre>5 4 
+1 < 2 
+1 < 3 
+2 < 4 
+1 = 5 </pre><hr/><h3>样例输出</h3><pre>5
+</pre><hr/><h3>提示</h3><p><p>&nbsp;不同的合法序列共5个，如下所示：&nbsp;</p>
+<div>1 = 5 &lt; 2 &lt; 3 &lt; 4&nbsp;</div>
+<div>1 = 5 &lt; 2 &lt; 4 &lt; 3&nbsp;</div>
+<div>1 = 5 &lt; 2 &lt; 3 = 4&nbsp;</div>
+<div>1 = 5 &lt; 3 &lt; 2 &lt; 4&nbsp;</div>
+<div>1 = 5 &lt; 2 = 3 &lt; 4&nbsp;</div>
+<div>100%的数据满足N&lt;=100。 &nbsp;</div>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4013" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4013" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

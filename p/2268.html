@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2268：Wormly</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Wormly</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Wormly</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Wormly                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>Jonly is writing his first computer game. For the opening scene he wants to have the main character, Wormly, cross Bridgely, the bridge. Wormly is a worm made of b equal circular bubbles and L legs. At all times each leg has to be under one of the bubbles, and under each bubble there can be at most one leg. Bridgely was supposed to be composed of n planks with the width of each plank equal to the diameter of each of Wormly's bubbles. However, some of the planks are missing.</p>
+<div class="p"><!----></div>
+<p>At every moment, Wormly can do exactly one of the following:</p>
+<ul>
+    <li>Move one of its legs forward over any number of (possibly missing) planks. After the move, the leg should be on a plank and underneath one of Wormly's bubbles. A leg isn't allowed to overtake other legs.
+    <div class="p"><!----></div>
+    </li>
+    <li>Move all of its bubbles forward one plank while its legs remain on the same planks. After the move each leg must still be under one of Wormly's bubbles.
+    <div class="p"><!----></div>
+    </li>
+</ul>
+<div class="p"><!----></div>
+<div class="p"><!----></div>
+<p><img alt="" src="http://uva.onlinejudge.org/contests/267-4feed583/images/p9_1.png" /></p>
+<p></p>
+<div>Wormly 是一条虫子，它的身体有b个球和L条腿。任何时候，它的腿总是在某个球的下方，并且每个球下方至多一条腿。</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">Wormly </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">想要过桥。这个桥由本来由</span><span lang="EN-US"><font face="Calibri">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">块板子组成，但有的板子不见了。</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">每个时刻里，</span><span lang="EN-US"><font face="Calibri">wormly</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">可以做这些事：</span></font></p>
+<p class="a" style="margin: 0cm 0cm 0pt 18pt; text-indent: -18pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><span lang="EN-US" style="mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore"><font face="Calibri" size="3">1、</font><span style="font: 7pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">向前移动一个脚到一块板子，要求不能越过前面的腿（图中</span><span lang="EN-US"><font face="Calibri">c</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">），不能落在消失的板子上（图中</span><span lang="EN-US"><font face="Calibri">a</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">）；</span></font></p>
+<p class="a" style="margin: 0cm 0cm 0pt 18pt; text-indent: -18pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><span lang="EN-US" style="mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore"><font face="Calibri" size="3">2、</font><span style="font: 7pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri"><font size="3">把所有的球向前移动一格，腿不动。移完之后，每条腿必须还在某个球下。</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">一开始虫在最左的</span><span lang="EN-US"><font face="Calibri">b</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">块板子上，腿在最左的</span><span lang="EN-US"><font face="Calibri">L</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">块板子上，最后虫在最右的</span><span lang="EN-US"><font face="Calibri">b</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">块板子上，腿在最右的</span><span lang="EN-US"><font face="Calibri">L</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">块板子上。这个过程最少要多少时间？</span></font></p></p><hr/><h3>输入格式</h3><p><p>On the first line a positive integer: the number of test cases, at most 100. After that per test case:</p>
+<div class="p"><!----></div>
+<ul>
+    <li>One line with three integers L, b and n (1 &le; L &le; b &le; n &le; 1&nbsp;000&nbsp;000): the number of legs, the number of bubbles and the length of the bridge respectively.
+    <div class="p"><!----></div>
+    </li>
+    <li>One line with a string consisting of n characters, either `<tt><font face="新宋体">0</font></tt>' or `<tt><font face="新宋体">1</font></tt>', describing Bridgely. A one indicates a plank and a zero indicates a missing plank.
+    <div class="p"><!----></div>
+    </li>
+</ul>
+<div class="p"><!----></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">T </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">测试数据组数</span><span lang="EN-US"><font face="Calibri">&lt;=100</font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><font face="Calibri" size="3">&nbsp;L, b and n (1 &le; L &le; b &le; n &le; 1&nbsp;000&nbsp;000)</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">N</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">位</span><span lang="EN-US"><font face="Calibri">01</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">串，</span><span lang="EN-US"><font face="Calibri">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">代表有板子</span></font></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p>Per test case:</p>
+<ul>
+    <li>One line with an integer: the minimum number of steps it takes Wormly to cross Bridgely. If it is impossible to get across while satisfying the constraints, the line must contain &quot;<tt><font face="新宋体">IMPOSSIBLE</font></tt>&quot; instead.</li>
+</ul>
+<center>Figure 1: In this example, the only possible move for the last leg is to position b. (The plank at position a is missing, so the leg cannot move there. To get to position c, the last leg would have to overtake the first leg.) Also, in this example, moving all the bubbles forward is not allowed because Wormly's last leg would end up without a bubble over it. </center>
+<div class="p"><!----></div>
+<p>Now Jonly is wondering how long the animation takes until Wormly reaches the end of Bridgely. Initially Wormly's bubbles are directly above the leftmost b planks of the bridge and its legs are on the leftmost L planks. At the end of the animation Wormly's bubbles have to be directly above the rightmost b planks and its legs have to be on the rightmost L planks.</p>
+<div class="p"><!----></div>
+<p>The left- and rightmost L planks of Bridgely are not missing.</p>
+<div class="p"><!----></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">IMPOSSIBLE</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">或者是最小的通过时间</span><span lang="EN-US"><font face="Calibri">.</font></span></font></p></p><hr/><h3>样例输入</h3><pre>3
+1 2 2
+11
+2 3 5
+11011
+1 3 5
+11011
+</pre><hr/><h3>样例输出</h3><pre>1
+IMPOSSIBLE
+5
+</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">第</span><span lang="EN-US"><font face="Calibri">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个样例：移动腿</span><span lang="EN-US"><font face="Calibri">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">移动球</span><span lang="EN-US"><font face="Calibri">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">移动腿</span><span lang="EN-US"><font face="Calibri">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">移动球</span><span lang="EN-US"><font face="Calibri">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">移动腿</span><span lang="EN-US"><font face="Calibri"> 5</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">步</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">鸣谢SJTU YYD</span></font></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2268" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2268" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3468：滑雪</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">滑雪</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">滑雪</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                滑雪                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium;"><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--></span></p>
+<p><span style="font-size: medium;"><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]-->  </span>
+<p style="text-indent:21.25pt;mso-char-indent-count:1.77" class="MsoNormal"><span style="font-size: medium;"><span style="font-family: 宋体;">陶陶最近迷上了滑雪，这天他来到了滑雪场。滑雪场可以看做</span><span lang="EN-US">N*M </span><span style="font-family: 宋体;">的方格区域，每个格子有一个高度，陶陶可以选择任意一个格子作为起点，然后每次可以滑到相邻的某个格子，但要满足经过格子的高度严格递减，同时陶陶可以随时停下来，途中滑的次数就为这条滑雪路径的长度，例如经过了</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">3</span><span style="font-family: 宋体;">个格子，路径长度为就为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">2</span><span style="font-family: 宋体;">。有一点需要注意，陶陶不能够停在原地，也就是说路径的长度一定是正整数。</span></span></p>
+<p style="text-indent:21.25pt;mso-char-indent-count:1.77" class="MsoNormal"><span style="font-size: medium;"><span style="font-family: 宋体;">这样的话，陶陶就有很多很多种路径选择，但能发现不可能有无限种路径供陶陶选择，然后陶陶就想知道所有可能路径长度的</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">0</span><span style="font-family: 宋体;">至</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">K</span><span style="font-family: 宋体;">次方之和为多少。由于答案可能会很大，你只需要输出每个答案</span><span lang="EN-US">Mod 12345</span><span style="font-family: 宋体;">后的值。</span></span></p>
+<p align="left" style="text-align:left" class="MsoNormal"><span style="font-size: medium;"><span lang="EN-US">&nbsp;</span></span></p>
+</p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium;"><span style="font-family: 宋体;">共</span><span lang="EN-US">N+1</span><span style="font-family: 宋体;">行。</span></span></p>
+<p><span style="font-size: medium;"><span style="font-family: 宋体;">第一行包含三个正整数</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">N,M,K</span><span style="font-family: 宋体;">。</span></span></p>
+<p><span style="font-size: medium;"><span style="font-family: 宋体;">接下来有</span><span lang="EN-US">N</span><span style="font-family: 宋体;">行，每行包含</span><span lang="EN-US">M</span><span style="font-family: 宋体;">个不超过</span><span lang="EN-US">10^9</span><span style="font-family: 宋体;">的正整数，依次表示每个格子的高度。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium;"><span lang="EN-US">&nbsp;</span></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium;"><span style="font-family: 宋体;">共</span><span lang="EN-US">K+1</span><span style="font-family: 宋体;">行，每行包含一个非负整数，第</span><span lang="EN-US">i</span><span style="font-family: 宋体;">行的整数表示所有可能路径长度的</span><span lang="EN-US">i-1 </span><span style="font-family: 宋体;">次方之和</span><span lang="EN-US">Mod 12345</span><span style="font-family: 宋体;">后的值。</span></span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 4 3
+1 2 3 4
+4 3 2 1
+1 2 3 4
+</pre><hr/><h3>样例输出</h3><pre>38
+66
+136
+318
+</pre><hr/><h3>提示</h3><p><p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<p align="left" style="text-align:left;text-indent:21.25pt;
+mso-char-indent-count:1.77" class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt">N</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">，</span><span lang="EN-US" style="font-size:12.0pt">M&lt;=300,K&lt;=200</span></p>
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3468" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3468" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

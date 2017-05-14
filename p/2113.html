@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2113：Zju2599 Graduated Lexicographical Ordering</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zju2599 Graduated Lexicographical Ordering</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zju2599 Graduated Lexicographical Ordering</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Zju2599 Graduated Lexicographical Ordering                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Consider integer numbers from 1 to n. Let us call the sum of digits of an integer number its weight. Denote the weight of the number x as w(x). Now let us order the numbers using so called graduated lexicographical ordering, or shorter grlex ordering. Consider two integer numbers a and b. If w(a) &lt; w(b) then a goes before b in grlex ordering. If w(a) = w(b) then a goes before b in grlex ordering if and only if the decimal representation of a is lexicographically smaller than the decimal representation of b. Let us consider some examples. 120 &lt; grlex4 since w(120) = 1 + 2 + 0 = 3 &lt; 4 = w(4). 555 &lt; grlex78 since w(555) = 15 = w(78) and &quot;555&quot; is lexicographicaly smaller than &quot;78&quot;. 20 &lt; grlex200 since w(20) = 2 = w(200) and &quot;20&quot; is lexicographicaly smaller than &quot;200&quot;. Given n and some integer number k, find the position of the number k in grlex ordering of integer numbers from 1 to n, and the k-th number in this ordering. </span></p>
+<p></p>
+<p><span style="font-size: medium">考虑所有从1到n的整数。我们设一个整数 x 的十进制各位数字之和为 w(x)。 <br />
+让我们重新将整数排序：对于整数a 和整数b，如果w(a)&lt;w(b)，则a 在 b之前。如果<br />
+w(a)=w(b)，那么a 在b之前当且仅当a 的十进制表示在字典序中小于 b 的十进制表示。例<br />
+如： <br />
+120 &lt; grlex4 因为&nbsp; w(120) = 1 + 2 + 0 = 3 &lt; 4 = w(4)。 <br />
+555 &lt; grlex78 因为&nbsp; w(555) = 15 = w(78) 并且&nbsp; &quot;555&quot;&nbsp; 的字典序小于&nbsp; &quot;78&quot;。 <br />
+20 &lt; grlex200 因为&nbsp; w(20) = 2 = w(200) 并且&nbsp; &quot;20&quot;&nbsp; 的字典序小于&nbsp; &quot;200&quot;。 <br />
+给定整数n和k，你需要求出1-n中的数按照上述方法排序后，k是第几个数，以及第 k<br />
+个数是多少。 <br />
+输入：包含多组数据，每组数据包含两个整数 n和 k。输入的最后一行是 n=k=0。 <br />
+输出：对于每组数据，输出一行两个整数，分别表示k在 1-n中的编号，以及第 k个数<br />
+是多少。 <br />
+数据规模：1 &le; k &le; n &le; 10^18<br />
+。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">There are several lines in the input file, and each line stands two integers n and k (1 &lt;= k &lt;= n &lt;= 10^18). </span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">For each line in the input, output one line in the output file. First print the position of the number k in grlex ordering of integer numbers from 1 to n, and then the integer that occupies the k-th position in this ordering. </span></p></p><hr/><h3>样例输入</h3><pre>20 10
+
+
+</pre><hr/><h3>样例输出</h3><pre>2 14
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2113" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2113" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

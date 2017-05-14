@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2489：Random Sequence</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Random Sequence</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Random Sequence</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Random Sequence                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="panel_content"><span style="font-size: medium">There is a random sequence L whose element are all random numbers either -1 or 1 with the same possibility. Now we define MAVS, the abbreviate of Maximum Absolute Value Subsequence, to be any (if more than one) subsequences of L whose absolute value is maximum among all subsequences. Given the length of L, your task is to find the expectation of the absolute value of MAVS.</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">There is only one input file. The first line is the number of test cases T. T positive integers follow, each of which contains one positive number not greater than 1500 denoted the length of L.<br />
+</span></p>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium">给你一个数字L,代表数字串长。这个数字串每个元素为1或-1.</span></p>
+<p><span style="font-size: medium">那么就有这个数列有2^L种可能。</span></p>
+<p><span style="font-size: medium">现对每个可能的数字串，求其连续子串和，并将和取绝对值，记下最大的那个值。</span></p>
+<p><span style="font-size: medium">再求出所有这些值的总和。</span></p>
+<p><span style="font-size: medium">输入总和/2^L</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">For each test case, output the expectation you are required to calculate. Answers are rounded to 6 numbers after the decimal point.(as shown in the sample output)<br />
+</span></p></p><hr/><h3>样例输入</h3><pre>3
+1
+5
+10
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 1.000000
+Case 2: 2.750000
+Case 3: 4.167969
+</pre><hr/><h3>提示</h3><p><p>当输入2时，有</p>
+<p>1 1</p>
+<p>1 -1</p>
+<p>-1 1</p>
+<p>-1 -1</p>
+<p>这四种可能，其对应的值分别为(2+1+1+2)=6</p>
+<p>6/4=1.5</p></p><hr/><h3>题目来源</h3><p>acm 2011 福州</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2489" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2489" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

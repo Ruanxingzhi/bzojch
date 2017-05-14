@@ -1,0 +1,142 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3612：[Heoi2014]平衡</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2014]平衡</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2014]平衡</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Heoi2014]平衡                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>下课了，露露、花花和萱萱在课桌上用正三棱柱教具和尺子摆起了一个&ldquo;跷跷板&rdquo;。</div>
+<div>&nbsp; &nbsp; &nbsp;这个&ldquo;跷跷板&rdquo;的结构是这样的：底部是一个侧面平行于地平面的正三棱柱教具，</div>
+<div>上面 摆着一个尺子，尺子上摆着若干个相同的橡皮。尺子有 2n + 1 条等距的刻度线，</div>
+<div>第 n + 1 条 刻度线恰好在尺子的中心，且与正三棱柱的不在课桌上的棱完全重合。</div>
+<div>&nbsp; &nbsp; &nbsp;露露发现这个&ldquo;跷跷板&rdquo;是不平衡的（尺子不平行于地平面）。于是，她又在尺</div>
+<div>子上放 了几个橡皮，并移动了一些橡皮的位置，使得尺子的 2n + 1 条刻度线上都恰</div>
+<div>有一块相同质 量的橡皮。&ldquo;跷跷板&rdquo;平衡了，露露感到很高兴。</div>
+<div>&nbsp; &nbsp; &nbsp;花花觉得这样太没有意思，于是从尺子上随意拿走了 k 个橡皮。令她惊讶的事</div>
+<div>情发生了： 尺子依然保持着平衡！</div>
+<div>&nbsp; &nbsp; &nbsp;萱萱是一个善于思考的孩子，她当然不对尺子依然保持平衡感到吃惊，因为这</div>
+<div>只是一个 偶然的事件罢了。令她感兴趣的是，花花有多少种拿走 k 个橡皮的方法</div>
+<div>，使得尺子依然保 持平衡？</div>
+<div>当然，为了简化问题，她不得不做一些牺牲&mdash;&mdash;假设所有橡皮都是拥有相同质量的</div>
+<div>&nbsp;质点。但即使是这样，她也没能计算出这个数目。放学后，她把这个问题交给了她</div>
+<div>的哥哥/ 姐姐&mdash;&mdash;Hibarigasaki 学园学生会会长，也就是你。当然，由于这个问题</div>
+<div>的答案也许会过于 庞大，你只需要告诉她答案 mod p 的值。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>第一行，一个正整数，表示数据组数 T（萱萱向你询问的次数）。 &nbsp;&nbsp;</p>
+<div>
+<div>&nbsp; 接下来 T 行，每行 3 个正整数 n, k, p。&nbsp;</div>
+<div></div>
+</div></p><hr/><h3>输出格式</h3><p><p>共 T 行，每行一个正整数，代表你得出的对应问题的答案。&nbsp;</p>
+<div>
+<div></div>
+</div></p><hr/><h3>样例输入</h3><pre>10 
+6 5 10000 
+4 1 10000 
+9 6 10000 
+4 6 10000 
+5 1 10000 
+8318 10 9973 
+9862 9 9973 
+8234 9 9973 
+9424 9 9973 
+9324 9 9973  </pre><hr/><h3>样例输出</h3><pre>73
+1
+920
+8
+1
+4421
+2565
+0
+446
+2549</pre><hr/><h3>提示</h3><p><p>&nbsp;T &lt;= 20，1 &lt;= n &lt;= 10000，1 &lt;= k &lt;= 10，2 &lt;= p &lt;= 10000，且 k &lt;= 2n+1。&nbsp;</p></p><hr/><h3>题目来源</h3><p>鸣谢佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3612" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3612" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

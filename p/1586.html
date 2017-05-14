@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1586：路径统计path</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">路径统计path</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">路径统计path</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                路径统计path                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>
+	
+一个矩阵由r行c列共r*c个小正方形组成。行从下到上编号为1到r，列从左到右编号为1到c。所有坐标都是(row,colmn)的形式。
+给出n个特殊点的坐标，保证特殊点在矩阵内，依次编号为1到n，从(1,1)到(r,c)的包含严格k个特殊点的路径称为k型路径。
+同时路径必须遵循以下规则：
+1.	每次你只能向上或向右。即你只能从(x,y)走到(x+1,y)或(x,y+1)
+2.	特殊点在路径中出现的顺序必须与给出的顺序相同，即如果特殊点a出现在特殊点b之前，那么a必须小于b。
+请输出0型路径，1型路径…,n型路径的条数mod 1000007
+</p><hr/><h3>输入格式</h3><p>第一行两个数R,C。
+第二行描述1-n号特殊点的行号。请读到行尾。
+第二行描述1-n号特殊点的列号。
+
+</p><hr/><h3>输出格式</h3><p>N+1个用空格隔开的整数，分别表示1型路径…,n型路径的条数mod 1000007
+
+</p><hr/><h3>样例输入</h3><pre>3
+3
+2 3
+2 2
+
+</pre><hr/><h3>样例输出</h3><pre>1 3 2
+
+【样例解释】
+0型路径
+(1, 1) -> (1, 2) -> (1, 3) -> (2, 3) -> (3, 3)
+1型路径
+(1, 1) -> (2, 1) -> (2, 2) -> (2, 3) -> (3, 3)
+(1, 1) -> (1, 2) -> (2, 2) -> (2, 3) -> (3, 3)
+(1, 1) -> (2, 1) -> (3, 1) -> (3, 2) -> (3, 3)
+2型路径
+(1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3)
+(1, 1) -> (1, 2) -> (2, 2) -> (3, 2) -> (3, 3)
+
+【数据规模】
+对于100%数据
+1<=R,C<=50
+0<=N<=50
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1586" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1586" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

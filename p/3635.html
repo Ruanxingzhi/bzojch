@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3635：Neerc2006 ASCII Art</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Neerc2006 ASCII Art</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Neerc2006 ASCII Art</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Neerc2006 ASCII Art                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">ASCII图像是用ASCII字符拼出的图像。尽管有许多种ASCII图像，我们只考虑最原始的一种：用不同的ASCII字符表示格子被覆盖的百分比。</span></div>
+<div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">设OXY是一个笛卡尔坐标系，OX指向右方，OY指向上方。画布是一个(0,0)-(w,h)的矩形。一个像素是指(x,y)-(x+1,y+1)的正方形，其中0&le;x&lt;w,0&le;y&lt;h。画布上画着一个简单多边形。每一个像素可能被多边形部分地覆盖。每个像素覆盖情况与ASCII字符的对应关系如下表：</span></div>
+<div style="text-indent: 21pt; line-height: 150%"></div>
+<div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">
+<p class="Default" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%; mso-char-indent-count: 1.75"><font size="3"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">你需要编写一个程序，对于给定的多边形，画出相应的</font></span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 宋体">ASCII</span><font face="宋体"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana">图案。</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 宋体"><o:p></o:p></span></font></font></p>
+</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="Default" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%; mso-char-indent-count: 1.75"><font size="3"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">第一行包含三个整数</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">n,w,h(3</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">n</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">100,1</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">w,h</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">100)</span><font face="宋体"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana">，分别表示多边形顶点个数，画布的宽度和高度。</span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体"><o:p></o:p></span></font></font></p>
+<p class="Default" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%; mso-char-indent-count: 1.75"><font size="3"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">接下来</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">n</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">行，每行一个坐标</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">x<sub>i</sub>,y<sub>i</sub>(0</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">x<sub>i</sub></span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">w,0</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">y<sub>i</sub></span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">&le;</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">h)</span><font face="宋体"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana">，按顺时针给出多边形的各顶点坐标。</span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体"><o:p></o:p></span></font></font></p>
+<p class="Default" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%; mso-char-indent-count: 1.75"><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体"><font size="3"><o:p></o:p></font></span></p></p><hr/><h3>输出格式</h3><p><p class="Default" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%; mso-char-indent-count: 1.75"><font size="3"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">输出</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">h</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">行，每行</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">w</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: Verdana"><font face="宋体">个</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">ASCII</span><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="宋体">字符，表示给定多边形的</font></span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体">ASCII</span><font face="宋体"><span style="mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">图像。</span><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%"><span lang="EN-US" style="font-family: 'Courier New'; mso-bidi-font-family: 宋体"><font size="3"><o:p></o:p></font></span></p></p><hr/><h3>样例输入</h3><pre>6 8 7
+7 6
+1 0
+1 7
+5 5
+2 4
+2 3
+
+</pre><hr/><h3>样例输出</h3><pre>.$+.....
+.##$+...
+.#$oo+..
+.##o....
+.#o.....
+.o......
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>梯形剖分</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3635" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3635" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

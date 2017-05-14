@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2945：[Poi2000]气垫船</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2000]气垫船</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2000]气垫船</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2000]气垫船                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">在一个气垫船厂用不同高度方块建造了一个测试轨道。一条完美的轨道，被称做<b>lollobrigida</b>，是相邻两个方块的高度不同且连续的三个方块的高度既不是递减也不是递增的轨道。</span></div>
+<div><span style="font-size: medium">用更形式的表达，设<i>h<sub>1</sub>,...,h<sub>n</sub></i>是建造轨道的方块的高度。如果任意1 &lt;= <i>i</i> &lt;= <i>n</i>-2都有满足下面条件：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium"><i>h<sub>i</sub></i> &lt; <i>h<sub>i+1</sub></i> and <i>h<sub>i+1</sub></i> &gt; <i>h<sub>i+2</sub></i> or </span></li>
+    <li><span style="font-size: medium"><i>h<sub>i</sub></i> &gt; <i>h<sub>i+1</sub></i> and <i>h<sub>i+1</sub></i> &lt; <i>h<sub>i+2</sub></i>, </span></li>
+</ul>
+<div><span style="font-size: medium">这样我们便称一条轨道为<b>lollobrigida</b>。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>例子</b></span></div>
+<div><span style="font-size: medium">我们不可能用下面一组高度的方块来建造lollobrigida：3, 3, 3, 5, 2，因为两个高度为3的方块会相邻或者会出现下列情况：(2,3,5)或者(5,3,2)，这些都是不允许的。</span></div>
+<div><span style="font-size: medium">这儿有一个用另一组高度的方块建造的lollobrigida的例子(3, 2, 5, 2, 3, 1)。 我们也可以用这些方块建造其他不同的lollobrigidas。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">读入几组数据，对于每一组数据：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">读入方块的个数和每个方块的高度</span></li>
+    <li><span style="font-size: medium">检查是否能建造lollobrigida</span></li>
+</ul></p><hr/><h3>输入格式</h3><p><div style="margin: auto 0cm"><span style="font-size: medium">第一行有一个正整数d，1 &lt;= <i>d</i> &lt;= 100，表示输入数据的组数。接下来的一行是第一组数据。</span></div>
+<div><span style="font-size: medium">在每组数据的第一行有一个正整数n，3 &lt;= <i>n</i> &lt;= 1000000，表示方块的个数。</span></div>
+<div><span style="font-size: medium">接下来的<i>n</i>行中每行有一个正整数<i>h</i> 表示一个方块的高度1 &lt;= <i>h</i> &lt;= 10<sup>9</sup>。</span></div>
+<div><span style="font-size: medium">接着是下一组数据。</span></div></p><hr/><h3>输出格式</h3><p><div style="margin: auto 0cm">&nbsp;</div>
+<div><span style="font-size: medium">应该有<i>d</i>行，一个表示一组数据。每一行都有一个单词，第<i>i</i> 行的单词：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">TAK (波兰语中是的意思)，如果第<i>i</i>组数据可以建造lollobrigida</span></li>
+    <li><span style="font-size: medium">NIE (波兰语中否的意思)，不可以建造</span></li>
+</ul></p><hr/><h3>样例输入</h3><pre>2
+5
+3
+3
+3
+5
+2
+6
+3
+3
+1
+5
+2
+2
+</pre><hr/><h3>样例输出</h3><pre>NIE
+TAK
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2945" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2945" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2060：[Usaco2010 Nov]Visiting Cows 拜访奶牛</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Nov]Visiting Cows 拜访奶牛</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Nov]Visiting Cows 拜访奶牛</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2010 Nov]Visiting Cows 拜访奶牛                </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>经过了几周的辛苦工作,贝茜终于迎来了一个假期.作为奶牛群中最会社交的牛,她希望去拜访N(1<=N<=50000)个朋友.这些朋友被标号为1..N.这些奶牛有一个不同寻常的交通系统,里面有N-1条路,每条路连接了一对编号为C1和C2的奶牛(1 <= C1 <= N; 1 <= C2 <= N; C1<>C2).这样,在每一对奶牛之间都有一条唯一的通路.
+FJ希望贝茜尽快的回到农场.于是,他就指示贝茜,如果对于一条路直接相连的两个奶牛,贝茜只能拜访其中的一个.当然,贝茜希望她的假期越长越好,所以她想知道她可以拜访的奶牛的最大数目.
+</p><hr/><h3>输入格式</h3><p>第1行:单独的一个整数N
+第2..N行:每一行两个整数,代表了一条路的C1和C2.
+</p><hr/><h3>输出格式</h3><p>单独的一个整数,代表了贝茜可以拜访的奶牛的最大数目.
+</p><hr/><h3>样例输入</h3><pre>7
+6 2
+3 4
+2 3
+1 2
+7 6
+5 6
+
+
+INPUT DETAILS:
+
+Bessie knows 7 cows. Cows 6 and 2 are directly connected by a road,
+as are cows 3 and 4, cows 2 and 3, etc. The illustration below depicts the
+roads that connect the cows:
+
+                       1--2--3--4
+                          |
+                       5--6--7
+
+
+</pre><hr/><h3>样例输出</h3><pre>4
+
+OUTPUT DETAILS:
+
+Bessie can visit four cows. The best combinations include two cows
+on the top row and two on the bottom. She can't visit cow 6 since
+that would preclude visiting cows 5 and 7; thus she visits 5 and
+7. She can also visit two cows on the top row: {1,3}, {1,4}, or
+{2,4}.
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2060" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2060" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

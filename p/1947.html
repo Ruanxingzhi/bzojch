@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1947：[Ceoi2006]Queue</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2006]Queue</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2006]Queue</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2006]Queue                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>If you are an average football fan, you probably know that obtaining tickets for this year&rsquo;s World Cup in Germany was an impossible task. Greedy organizers and football federations grabbed the majority or available tickets and divided them among sponsors, friends and family members. As a result, jet setters have flooded the venues, while die-hard fans sit at home enjoying the games between advertisements featuring crappy beer and sugar-free chewing gum. A couple of tickets are left for the final game and a huge queue has formed in front of the ticker office. As fans were arriving, they were labeled with successive integers. The first person in queue was labeled with number one, the second with number two, etc. Since the fans arrived the night before, they had to wait for a long time before the ticket counter was open and, naturally, some of them had to use the restroom. Each time a person needs to use the restroom, he/she steps out of the queue and, and, after completing the task, steps back into the queue, though not necessarily at the same position as before. Since there is only one restroom available no person leaves the queue before the previous person has returned (hence, at any moment there is at most one person missing from the queue). During the course of the night, a total of N restroom visits have occurred. Each visit is described by two positive integers A and B, denoting that the person labeled A stepped out of the queue and the stepped back into the queue immediately in front of the person labeled B. Now that all the visits have completed, the officials have to answer a series of questions. Each question is either of the form &lsquo;P X&rsquo;, asking for the position lf the person labeled X, or of the form &lsquo;L X&rsquo;, asking for the label of the person at position X. The first person in queue is considered to be at position one, the second at position two, etc. Write a program that, given the description of the visits and a number of questions, answers all of the questions. 一开始将一列人按编号从1开始顺序排列，然后进行N次操作，每次将编号为A的人拿出，放在编号为B的人前面，所有操作进行完后有Q个问题，询问编号为X的人的位置，或者询问在X号位置上的人的编号。</p></p><hr/><h3>输入格式</h3><p><p>The first line of input contains an integer N(2 &le; N &le; 50 000)- the total number of restroom visits. Each of the following N lines contains two different integers A and B (1 &le; A, B &le; 109), describing one restroom visit. The nest line contains an integer Q (1 &le; Q &le; 50 000) &ndash; the total number of questions. Each of the following Q lines contains a single character (either the uppercase letter &lsquo;P&rsquo; or the uppercase letter &lsquo;L&rsquo;) and an integer X (1&le; X &le;109) , describing one question.</p></p><hr/><h3>输出格式</h3><p><p>The output should consist of a total of Q lines. The ith line or output should contain a single integer R &ndash; the answer to the ith question. If the corresponding question is of the form &lsquo;P Xi&rsquo; then R should be the final position of the person labeled Xi. If the corresponding question is of the form &lsquo;L Xi&rsquo; then R should be the label of the person at position Xi. Grading Partial credit is awarded for incorrect solutions that correctly answer all questions of one type. If all questions of the form &lsquo;P X&rsquo; are answered correctly or if all questions of the form &lsquo;L X&rsquo; are answered correctly, you will receive 50% of the corresponding test case. In order to receive partial credit, the output should be formatted according to the specifications. Therefore, even if you choose to answer only one type of questions, you should still produce output for all questions of the other type.</p></p><hr/><h3>样例输入</h3><pre>2
+6 3
+9 6
+8
+L 1
+L 2
+L 3
+L 4
+P 1
+P 2
+P 3
+P 4
+Output
+1
+2
+9
+6
+1
+2
+5
+6
+
+Input
+5
+7 2
+2 7
+9 7
+10 1
+10005 9995
+9
+L 1
+P 2
+L 2
+P 7
+L 7
+P 9
+P 10
+P 99999
+P 100000
+</pre><hr/><h3>样例输出</h3><pre>10
+3
+1
+5
+4
+4
+1
+99999 
+100000</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1947" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1947" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

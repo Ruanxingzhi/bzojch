@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4290：传送门</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">传送门</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">传送门</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                传送门                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在一个迷宫中有一个蛋糕。作为一个吃货，Luna非常想吃到这块蛋糕。现</div>
+<div>在Luna手里有这个迷宫的地图，该地图是一个r行c列的网格图，每个格子包</div>
+<div>含了下述4种字符中的一种：</div>
+<div>&ldquo;#&rdquo;表示这里是墙砖，不能通过；</div>
+<div>&ldquo;.&rdquo;表示这里是空地，可以通过；</div>
+<div>&ldquo;S&rdquo;表示Luna的初始位置；</div>
+<div>&ldquo;C&rdquo;表示蛋糕的位置。</div>
+<div>Luna只能在空地上行走，并且只能从一个格子走到与这个格子有公共边的</div>
+<div>相邻格子上。另外，整个地图的四周都是被墙砖所环绕的。</div>
+<div>为了能更快吃到蛋糕，Luna不知从哪里获得了一把次元枪，这把枪可以用</div>
+<div>来制造传送门。该枪的使用说明如下：</div>
+<div>1.在任何时候，Luna可以选择上下左右四个方向中的一个开一枪。当她向</div>
+<div>一个方向开枪之后，子弹会撞到这个方向上第一个遇到的墙砖，并在这个墙砖面</div>
+<div>向她的面上开启一个传送门。</div>
+<div>2.由于能量限制，在同一时刻最多存在两个传送门。如果已经存在两个传</div>
+<div>送门，那么当Luna再开枪时，其中一个传送门会被回收用于补充能量，回收哪</div>
+<div>一个由Luna自己决定。当Luna向某个传送门开枪时，会有一个新的传送门取代</div>
+<div>它，即在一块墙砖的一个面上同时只能存在一个传送门。</div>
+<div>3.当存在两个传送门时，Luna可以进入其中任意一个传送门，然后会从另</div>
+<div>外一个传送门走出。</div>
+<div>由于Luna枪法一流，所以开枪是不耗时的。Luna从一个格子走到任意一个</div>
+<div>相邻格子的耗时为1，穿越传送门的耗时也为1。</div>
+<div>现在Luna把地图给了你，她想知道她吃到蛋糕的最少耗时是多少，你不忍</div>
+<div>心拒绝这样一位少女的请求，所以你绞尽脑汁也要把这个问题解决。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个整数r,c。</div>
+<div>接下来r行每行c个字符，表示地图。&ldquo;S&rdquo;和&ldquo;C&rdquo;均只会出现一次。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>第一行一个整数，表示最少耗时。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 4
+.#.C
+.#.#
+....
+S...</pre><hr/><h3>样例输出</h3><pre>4</pre><hr/><h3>提示</h3><p><p>对于100%的数据，1 &le; r, c &le; 1000，Luna 一定能吃到蛋糕</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4290" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4290" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

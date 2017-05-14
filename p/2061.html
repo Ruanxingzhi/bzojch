@@ -1,0 +1,154 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2061：Country</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Country</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Country</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Country                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>背景：
+gaoxin神犇在夺得了IOI2011金牌之后，根据惯例要进行获奖感言的发表。
+gaoxin神犇深知社会主义的五大优越性和一切帝国主义都是纸老虎，下面
+截取他的发言：
+我是来自由伟大，光荣，正确的xx领导的走在伟大，光荣，正确的中国特色xx主义道路上的
+新中国的gaoxin，感谢伟大，光荣，正确的xx给我这次机会参加IOI。。。。。
+题目描述：
+gaoxin神犇频繁的在发言中表现对伟大，光荣，正确的xx的热爱，我们可以做如下定义：
+A=伟大，光荣，正确的
+B=xx
+C=引领我们向前
+赞美祖国=ABC
+拼命赞美祖国=赞美祖国*10
+gaoxin的发言=拼命赞美祖国*100
+显然这个定义必须是无环的。
+WJMZBMR感到十分的有压力，
+他好不容易数出了某个字串的出现次数。。。
+某天他打开电视，发现某人的发言有同样的结构。。他很无语。。。想知道某些字串出现的次数。。
+你能帮帮他吗？
+//----分割----//
+一些定义：
+为了简化期间，在输入中用英文表示。。
+字符串：由小写字母组成如a
+字串名：一定是大写字母如A
+那么上面的系统可以写成
+A=greatglorycorrect
+B=xx
+C=leadusgo
+D=ABC
+E=DDDDdjh
+F=EEEEEgoodbye
+同时存在一个母字串名，他就是某人的发言
+</p><hr/><h3>输入格式</h3><p>第一行一个数N表示字串名的数量。
+第二行一个字符F表示某人的发言的字串名。
+接下来N行，每行一个描述
+一个描述的左端是一个大写字母表示字串名，
+然后一个等号
+右端由一系列大写或小写字母组成。。表示该字串的内容。
+最后一行是一个字符串，表示WJMZBMR想知道出现了几次的字符串
+</p><hr/><h3>输出格式</h3><p>一行，表示次数（跟10000取余）
+</p><hr/><h3>样例输入</h3><pre>6
+F
+A=greatglorycorrect
+B=xx
+C=leadusgo
+D=ABC
+E=DDDDdjh
+F=EEEEEgoodbye
+g
+</pre><hr/><h3>样例输出</h3><pre>61
+数据范围：
+对于100%的数据
+N<=26 每条描述长度<=100
+最后一行的字符串长度<=100
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>和谐社会模拟赛</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2061" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2061" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

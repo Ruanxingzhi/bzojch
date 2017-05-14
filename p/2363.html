@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2363：Sgu395 Binary Cat Club</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Sgu395 Binary Cat Club</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Sgu395 Binary Cat Club</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Sgu395 Binary Cat Club                </h1>
+                <p>时间限制：2s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="text-indent: 20.25pt; text-align: left; "><b>学校电脑社进行了一次聚会，包了一个大厅唱<span lang="EN-US">KTV</span>。现在有关于这次聚会的<i style="mso-bidi-font-style:normal"><span lang="EN-US">N</span></i>条记录，每条记录的格式有<span lang="EN-US">+name</span>，<span lang="EN-US">-name</span>，<span lang="EN-US">=visitors</span>三种，分别表示进来一个叫&rdquo;<span lang="EN-US">name</span>&rdquo;的人，出去一个叫&rdquo;<span lang="EN-US">name</span>&rdquo;的人，当前聚会厅有<span lang="EN-US">visitors</span>个人。现在记录的一部分遗失，但剩下记录的顺序是原顺序。给出剩下的记录，请添加最少条数的记录，使之合理化。注意：可以有人进出会厅多次，可以有人聚会结束待在会厅。</b></p>
+<p class="MsoNormal" style="text-align: left; "><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0px; text-align: left; "><b><br />
+</b></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="text-indent:20.25pt"><span style="font-size:12.0pt;
+font-family:宋体">第一行一个数<span lang="EN-US">n</span>。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:20.25pt"><span style="font-size:12.0pt;
+font-family:宋体">接下来<span lang="EN-US">n</span>行，按顺序每行一条记录。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><b><br />
+</b></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal"><b><br />
+</b></p>
+<p class="MsoNormal" style="text-indent: 23.25pt; "><span style="font-size: 12pt; font-family: 宋体; ">仅一行一个数，表示最小所需的费用。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent: 23.25pt; "></p>
+<p class="MsoPlainText" style="text-indent: 23.5pt; "></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>8
+
+= 2
+
++ mt
+
+- ljw
+
+= 4
+
+- zdy
+
+- htx
+
++ sjf
+
+= 10
+
+ 
+</pre><hr/><h3>样例输出</h3><pre>19 
+
+数据范围
+
+1<=n<=200
+
+每条= visitors记录中的visitors不超过100。
+
+每个名字的长度不超过5，且都由小写字母组成；</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2363" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2363" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

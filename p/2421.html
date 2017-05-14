@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2421：Paint</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Paint</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Paint</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Paint                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: 12pt">话说今年</span><span style="font-size: 12pt">HNOI</span><span style="font-size: 12pt">省队集训在一中进行，为此，</span><span style="font-size: 12pt">fmsoi</span><span style="font-size: 12pt">特意准备了一个巨大的电子广告牌，准备在上面写着&ldquo;一中欢迎你&rdquo;。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">但是这块牌子却出现了问题，经过神一般的小</span><span style="font-size: 12pt">Y</span><span style="font-size: 12pt">的修理后，终于好了，可是却恢复到了默认状态</span><span style="font-size: 12pt">---</span><span style="font-size: 12pt">没有显示任何字了。显然我们还要让它显示出&ldquo;一中欢迎你&rdquo;。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">众所周知，这类广告牌通常由若干像素点构成，我们考虑其中的一行，最开始每一行都是不发光的。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">每一行有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个像素点，将其标号</span><span style="font-size: 12pt">1..N</span><span style="font-size: 12pt">。现在给定</span><span style="font-size: 12pt">K</span><span style="font-size: 12pt">个点，要求这</span><span style="font-size: 12pt">K</span><span style="font-size: 12pt">个点发光，其余点不能发光。而这个电子广告牌的操作方式比较畸形，它有</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">种操作方法，第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">种为</span><span style="font-size: 12pt">U&shy;&shy;<sub>i </sub></span><span style="font-size: 12pt">，即你能将任意长为</span><span style="font-size: 12pt">U&shy;&shy;<sub>i </sub></span><span style="font-size: 12pt">的连续一段的像素状态取反，即改变发光状态。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">现在你被分配了要处理好不同的</span><span style="font-size: 12pt">T</span><span style="font-size: 12pt">行，为了节省时间，对于每一行你都必须用最少的操作次数。</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第一行一个数</span><span style="font-size: 12pt">T</span><span style="font-size: 12pt">，表示数据组数</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">然后是</span><span style="font-size: 12pt">T</span><span style="font-size: 12pt">组数据描述，对于每组数据：</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第一行为</span><span style="font-size: 12pt">N,K,L</span><span style="font-size: 12pt">，即一行有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个点，要求</span><span style="font-size: 12pt">K</span><span style="font-size: 12pt">个点必须发光，有</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">种操作方式。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第二行</span><span style="font-size: 12pt">K</span><span style="font-size: 12pt">个数，表示要求发光的</span><span style="font-size: 12pt">K</span><span style="font-size: 12pt">个点。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第三行</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">个数，表示</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">种操作。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">包含</span><span style="font-size: 12pt">T</span><span style="font-size: 12pt">个数，每个一行，即对于每一组数据的最少操作次数。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">如果无法完成，请输出</span><span style="font-size: 12pt">-1</span></div></p><hr/><h3>样例输入</h3><pre>       2
+10 8 2
+1 2 3 5 6 7 8 9
+3 5
+3 2 1
+1 2
+3
+</pre><hr/><h3>样例输出</h3><pre>       2
+       -1
+【数据规模】
+       有20%较小的数据
+       对于100%的数据:
+       T<=10
+N<=10000
+K<=10,L<=100,1<=Ui<=N</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2421" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2421" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

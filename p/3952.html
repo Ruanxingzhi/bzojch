@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3952：字符串集合</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">字符串集合</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">字符串集合</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                字符串集合                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>有三个字符串集合， Pre 、 Mid 和 Suf 。我们称一个字符串的二元组 (p, q) 合法，当且仅当：</div>
+<div>1. p 属于集合 Pre ；</div>
+<div>2. q 属于集合 Suf ；</div>
+<div>3. 存在 p 的一个长度不小于 k1 的子串 p'、 q 的一个长度不小于 k2 的子串 q' ，以及集合 Mid 中的一个字符串 s ，使得 p' + q' 是 s 的一个子串。这里的 + 代表字符串的连接。</div>
+<div>你可以进行任意次操作，一次操作中，你需要选择一个合法的二元组 (p, q) ，并从集合 Pre 中删去字符串 p ，从集合 Suf 中删去字符串 q 。求最多的操作次数。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入的第一行包含三个正整数 s1 、 s2 和 s3 ，分别代表集合 Pre 、 Mid 和 Suf 中字符串的个数。</div>
+<div>第二行包含两个正整数 k1 和 k2 ，含义如问题描述中所述。</div>
+<div>接下来 s1 行，每行包含一个字符串，代表集合 Pre 中的一个字符串。</div>
+<div>接下来 s2 行，每行包含一个字符串，代表集合 Mid 中的一个字符串。</div>
+<div>接下来 s3 行，每行包含一个字符串，代表集合 Suf 中的一个字符串。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出一行，包含一个正整数，表示最多可以操作的次数。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2 1 4
+2 3
+aab
+bbb
+aabbcdd
+cdd
+bcd
+zz
+bcde</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p><div>样例中合法的二元组有 (aab, bcd) 、 (aab, bcde) 和 (bbb, ccd) 。</div>
+<div>字符串 zz 的长度小于 k2 ，因此不存在包含这个字符串的合法二元组。</div>
+<div>数据规模和约定</div>
+<div>令 len(S) 为集合 S 中所有字符串的长度和。再令 L = max{len(Pre), len(Mid), len(Suf)} 。</div>
+<div>对于 10% 的数据， s1, s2, s3 &le; 5 ， L &le; 30 。</div>
+<div>对于 20% 的数据， s1, s2, s3 &le; 30 ， L &le; 300 。</div>
+<div>对于 50% 的数据， s1, s2, s3 &le; 500 ， L &le; 10000 。</div>
+<div>对于 100% 的数据， s1, s2, s3 &le; 25000 ， L &le; 50000 ， 0 &le; k1, k2 &le; L 。字符串只含有小写英文字母。</div>
+<div>注意题目中的&ldquo;集合&rdquo;和数学中定义的集合不同，其中可以有相同的字符串。</div>
+<div>尚无数据，请不要提交！求此题数据！</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2014年国家集训队十五人互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3952" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3952" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

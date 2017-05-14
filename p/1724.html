@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1724：[Usaco2006 Nov]Fence Repair 切割木板</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Nov]Fence Repair 切割木板</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Nov]Fence Repair 切割木板</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2006 Nov]Fence Repair 切割木板                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John想修理牧场栅栏的某些小段。为此，他需要N(1&lt;=N&lt;=20,000)块特定长度的木板，第i块木板的长度为Li(1&lt;=Li&lt;=50,000)。然后，FJ去买了一块很长的木板，它的长度正好等于所有需要的木板的长度和。接下来的工作，当然是把它锯成需要的长度。FJ忽略所有切割时的损失&mdash;&mdash;你也应当忽略它。 FJ郁闷地发现，他并没有锯子来把这块长木板锯开。于是他把这块长木板带到了Farmer Don的农场，想向FD借用锯子。 作为一个有商业头脑的资本家，Farmer Don没有把锯子借给FJ，而是决定帮FJ锯好所有木板，当然FJ得为此付出一笔钱。锯开一块木板的费用，正比于木板的长度。如果这块木板的长度是21，那么锯开它的花费便是21美分。 谈妥条件后，FD让FJ决定切割木板的顺序，以及每次切割的位置。请你帮FJ写一个程序，计算为了锯出他想要的木板，他最少要花多少钱。很显然，按不同的切割顺序来切开木板，FJ的总花费可能不同，因为不同的切割顺序，会产生不同的中间结果。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 一个正整数N，表示FJ需要木板的总数 </span></p>
+<p><span style="font-size: medium">* 第2..N+1行: 每行包含一个整数，为FJ需要的某块木板的长度</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1行: 输出一个整数，即FJ完成对木板的N-1次切割的最小花费 </span></p></p><hr/><h3>样例输入</h3><pre>3
+8
+5
+8
+
+
+    FJ打算把一块长为21的木板切成长度分别为8，5，8的三段。
+</pre><hr/><h3>样例输出</h3><pre>34
+输出说明:
+
+ 起初，木板的长度为21。第一次切割木板花费21美分，把木板切成长分别为13和8的两块。然后花费1
+3美分把长为13的木板切成长为8和5的两块。这样的总花费是21+13=34美分。如果第一次把木板切成长
+为16和5的两块，那么第二次切木板的花费就是16美分，这样的总花费就是37美分，比刚才花费34美分的方案来的差。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1724" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1724" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

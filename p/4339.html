@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4339：BJOI2015 回家的路</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">BJOI2015 回家的路</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">BJOI2015 回家的路</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                BJOI2015 回家的路                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>小强和阿米巴是好朋友。连接北京和小强的家乡的是错综复杂的铁路网。一共有N个站点，站点之间有长短不一的</div>
+<div>双向的铁路。小强每次回家的时候，会从所有的最短路中随机选择一条。阿米巴门前有一条铁路。他想在不改变北</div>
+<div>京到小强的家乡的最短路的距离的前提下，给这个铁路网再添一条长度为K的单向 单向铁路，使得小强路过阿米巴</div>
+<div>家门口的那条铁路的概率最大。请输出这个最大概率。</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>
+<div>第一行是三个正整数N,M和K，表示站点的数量，铁路线的数量和新开的铁路线的长度。站点从1编号到N。北京是1</div>
+<div>号点，小强的家乡是N号。接下来M行，每行三个正整数u,v,s表示有一条连接站点u和v的铁路线长度是s。这M行中</div>
+<div>的第一行描述的是阿米巴家门口的铁路。两个点之间可能有多条铁路。也有可能u=v，即，有自环。你新修建的铁</div>
+<div>路也可以和已有线路重合，也可以是自环。1和N之间一定是连通的。</div>
+<div>3&le;N&le;100000，M&le;400000，1&le;s,K&le;10000,保证无论如何加边图中任两点之间的最短路的数量都不超过2^16000.</div>
+</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>输出一行两个正整数A,B，表示从A向B修建一条单向铁路。你的修建方案得出的小强路过的概率和标准答案之间的</div>
+<div>差距不超过10-6即可算对。</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 3 1
+1 2 1
+2 3 1
+1 3 2</pre><hr/><h3>样例输出</h3><pre>2 3
+//添加边之后，一共有3条最短路，小强会路过阿米巴门前的概率由1/2变为2/3.</pre><hr/><h3>提示</h3><p><div>尚无Spj，请谨慎提交!</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4339" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4339" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

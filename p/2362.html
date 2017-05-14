@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2362：二叉树计数</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">二叉树计数</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">二叉树计数</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                二叉树计数                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="center"><b>&nbsp;</b></div>
+<div style="text-indent: 20.25pt" align="left">在那个植树节，晚上，小L，小H，小X讨论起了一个关于树的问题：</div>
+<div style="text-indent: 20.25pt" align="left">有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">但是他们发现，答案随<i>N</i>增长的速度太快了，他们想不出什么好方法，便求助于你。</div>
+<div style="text-indent: 20.25pt" align="left">由于答案可能会很大，你只需要输出答案mod 10<i><sup>K</sup></i>后的结果即可。</div></p><hr/><h3>输入格式</h3><p><div align="left">包含两个正整数<i>N</i>，<i>K</i>。表示询问有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">&nbsp;</div>
+<div align="left"></div></p><hr/><h3>输出格式</h3><p><div align="left">包含一个非负整数，为答案mod 10<i><sup>K</sup></i>后的结果。</div>
+<div align="left">&nbsp;</div>
+<div style="text-indent: 20.25pt" align="left"></div></p><hr/><h3>样例输入</h3><pre>2 10
+ 
+</pre><hr/><h3>样例输出</h3><pre>7
+ 
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据，有N&le;200000，K&le;64；<br />
+&nbsp;<br />
+【提示】<br />
+关于二叉树：<br />
+二叉树的递归定义：二叉树要么为空，要么由根结点，左子树，右子树组成。左子树和右子树分别是一棵二叉树。<br />
+请注意，有根树和二叉树的三个主要差别：<br />
+1. 树的结点个数至少为1，而二叉树的结点个数可以为0；<br />
+2. 树中结点的最大度数没有限制，而二叉树结点的最大度数为2；<br />
+3. 树的结点无左、右之分，而二叉树的结点有左、右之分。<br />
+关于最长链：<br />
+最长链为这棵二叉树中一条最长的简单路径，即不经过重复结点的一条路径。可以容易证明，二叉树中最长链的起始、结束结点均为叶子结点。<br />
+&nbsp;</p>
+<p><br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2362" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2362" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

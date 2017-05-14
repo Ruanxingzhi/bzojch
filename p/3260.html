@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3260：跳</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">跳</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">跳</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                跳                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 12.75pt -3pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">邪教喜欢在各种各样空间内跳。</span></div>
+<div style="margin: 0cm -3pt 0pt 38.95pt; line-height: 13.75pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">现在，邪教来到了一个二维平面。在这个平面内，如果邪教当前跳到了</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (x,y)</span><span style="font-size: 12pt; color: black">&nbsp;</span><span style="font-size: 12pt; color: black">，</span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -3pt 0pt 18.05pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">那么他下一步可以选择跳到以下</span><span style="font-size: 12pt; color: black">&nbsp;4</span><span style="font-size: 12pt; color: black">个点：</span><span style="font-size: 12pt; color: black; letter-spacing: 0.35pt"> (x-1,y), (x+1,y), (x,y-1), (x,y+1)</span><span style="font-size: 12pt; color: black">。</span></div>
+<div style="margin: 0cm -3pt 0pt 38.95pt; line-height: 13.75pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">而每当邪教到达一个点，他需要耗费一些体力，假设到达</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (x,y)</span><span style="font-size: 12pt; color: black">需要耗费的体</span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -3pt 0pt 18.05pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">力用</span><span style="font-size: 12pt; color: black">&nbsp;C(x,y)</span><span style="font-size: 12pt; color: black">表示。</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp;&nbsp; </span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -3pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">对于</span><span style="font-size: 12pt; color: black">&nbsp;C(x,y)</span><span style="font-size: 12pt; color: black">，有以下几个性质：</span></div>
+<div style="margin: 0cm -1.5pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">1 </span><span style="font-size: 12pt; color: black">、若</span><span style="font-size: 12pt; color: black">x=0</span><span style="font-size: 12pt; color: black; letter-spacing: 0.35pt">或者</span><span style="font-size: 12pt; color: black"> y=0</span><span style="font-size: 12pt; color: black">，则</span><span style="font-size: 12pt; color: black"> C(x,y)=1</span><span style="font-size: 12pt; color: black">。</span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -1.5pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">2 </span><span style="font-size: 12pt; color: black">、若</span><span style="font-size: 12pt; color: black">x&gt;0</span><span style="font-size: 12pt; color: black">且</span><span style="font-size: 12pt; color: black"> y&gt;0</span><span style="font-size: 12pt; color: black; letter-spacing: 0.35pt">，则</span><span style="font-size: 12pt; color: black"> C(x,y)=C(x,y-1)+C(x-1,y)</span><span style="font-size: 12pt; color: black">。</span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -1.5pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">3 </span><span style="font-size: 12pt; color: black">、若</span><span style="font-size: 12pt; color: black">x&lt;0</span><span style="font-size: 12pt; color: black">且</span><span style="font-size: 12pt; color: black"> y&lt;0</span><span style="font-size: 12pt; color: black; letter-spacing: 0.35pt">，则</span><span style="font-size: 12pt; color: black"> C(x,y)=</span><span style="font-size: 12pt; color: black">无穷大。</span></div>
+<div style="margin: 0cm -3pt 0pt 18.05pt; line-height: 13.75pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">现在，邪教想知道从</span><span style="font-size: 12pt; color: black"> (0,0)</span><span style="font-size: 12pt; color: black">出发到</span><span style="font-size: 12pt; color: black">(N,M)</span><span style="font-size: 12pt; color: black">，最少花费多少体力（到达</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,0)</span><span style="font-size: 12pt; color: black">&nbsp;</span><span style="font-size: 12pt; color: black">点花费的</span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt" align="left"><span style="font-size: 10pt; color: black">&nbsp;</span></div>
+<div style="margin: 0cm -3pt 0pt 18.05pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">体力也需要被算入）。</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp; </span></div>
+<div style="margin: 0cm -3pt 0pt 18.05pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">由于答案可能很大，只需要输出答案对</span><span style="font-size: 12pt; color: black">&nbsp;10^9+7</span><span style="font-size: 12pt; color: black">取模的结果。</span></div></p><hr/><h3>输入格式</h3><p><div style="margin: 12.75pt -3pt 0pt 38.95pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">读入两个整数</span><span style="font-size: 12pt; color: black">&nbsp;N</span><span style="font-size: 12pt; color: black">&nbsp;</span><span style="font-size: 12pt; color: black">，</span><span style="font-size: 12pt; color: black">M</span><span style="font-size: 12pt; color: black">，表示邪教想到达的点。</span><span style="font-size: 12pt; color: black">&nbsp;</span></div>
+<div style="margin: 12.75pt -3pt 0pt 42.2pt; line-height: 14.25pt; text-align: left" align="left"></div></p><hr/><h3>输出格式</h3><p><div style="margin: 12.75pt -3pt 0pt 42.2pt; line-height: 14.25pt; text-align: left" align="left"><span style="font-size: 12pt; color: black">输出仅一个整数，表示邪教需要花费的最小体力对</span><span style="font-size: 12pt; color: black">&nbsp;10^9+7</span><span style="font-size: 12pt; color: black">取模的结果。</span><span style="font-size: 12pt; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></p><hr/><h3>样例输入</h3><pre>
+1  2
+</pre><hr/><h3>样例输出</h3><pre>6 
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">对于 100% 的数据，满足&nbsp;&nbsp;&nbsp; 0&lt;=N, M&lt;=10^12&nbsp;&nbsp; ，N*M&lt;=10^12。<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3260" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3260" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

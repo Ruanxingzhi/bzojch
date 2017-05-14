@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3443：装备合成</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">装备合成</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">装备合成</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                装备合成                </h1>
+                <p>时间限制：15s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">【背景】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; lll6924在某游戏中有n件装备。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 游戏中共有m种属性，装备有属性加成。当将A装备合成到B装备上时，A装备消失，B装备的所有小于A装备的属性更新为A装备的这个属性。然而lll6924的记性不太好，因为装备很多，所以一些属性常常记错，他在合成时会突然想起，某个装备的某个属性的初始值应该是多少（暂且认为修改后是正确的，这个属性可能会被修改多次）（请注意，这是理解题意的难点，请结合样例）。在合成过程中lll6924想知道一些装备的一些属性（根据之前给出的数据（初始属性、合成、修改），输出装备当前认为是正确的属性）。</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 输入有n+1+q行，第一行有三个用空格隔开的正整数n、m、q，q表示操作（合成操作、询问操作和修改操作）数。接下来的n行，每行有m个用空格隔开的正整数，表示这个装备的各个属性。接下来的q行，每行格式为&ldquo;k a b c&rdquo;，若k为1，则为将第a个装备合成到第b个装备，输入数据保证a、b装备存在，此时c=0。若k为2，则为询问第a个装备的第b个属性（若第a个装备已被合成掉，则输出该装备在被合成前的第b个属性是多少），此时c=0。若k为3，则为将第a个装备的第b个属性的初始值更新为c（注意，若a装备已被合成掉，该操作仍然有效，会影响他合成到的装备的属性）。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 输出如输入格式所述，每个输出占一行。</span></div></p><hr/><h3>样例输入</h3><pre>3 5 10
+1 2 3 4 3
+0 0 0 0 0
+2 0 0 0 0
+1 1 2 0
+2 2 3 0
+3 2 4 5
+1 2 3 0
+3 1 3 2
+2 3 1 0
+3 3 1 0
+2 3 1 0
+2 3 4 0
+2 2 3 0
+</pre><hr/><h3>样例输出</h3><pre>3
+2
+1
+5
+2
+【数据范围及约定】
+100%的数据，0＜n≤1500,0＜m≤400，0＜q≤200000，0≤装备属性≤50000。
+</pre><hr/><h3>提示</h3><p><p><img height="487" alt="" width="606" src="../file/3443_0.jpg" /></p>
+<p></p></p><hr/><h3>题目来源</h3><p>By lll6924 at“冬令营后竞速放松赛”</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3443" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3443" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

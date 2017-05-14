@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2175：联赛</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">联赛</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">联赛</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                联赛                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">问题描述<br />
+欧洲杯将至，欧足联在欧洲杯之前宣布了一项决定：成立一个新的联赛&mdash;&mdash;欧洲超级联赛，并将欧洲各豪门俱乐部加入该联赛。<br />
+众所周知，各联赛都将转播权卖给各电视台以盈利，欧洲超级联赛自然也不例外，可是问题也随之出现：不同的比赛激烈程度自然不同，例如国际米兰 与尤文图斯 ，曼联 与阿森纳 ，巴萨罗那 与皇家马德里 这样的比赛自然人人都愿意看，可是遇上了利物浦 与切尔西 这样的比赛球迷们就不高兴啦(至少作者会不高兴)<br />
+因此欧足联为每场比赛定了一个级别,以此来表示比赛的受欢迎程度。<br />
+然而，分级的方法却不只一种。例如，可以将所有比赛分为A，B，C共3种级别，也可以分成W（Wildness，野蛮型），T（Technic，技术型）共2种级别。<br />
+可是如果某轮联赛有多种级别的比赛，精明的电视台当然都会购买最激烈的比赛的转播权，这是欧足联的高官们所不愿看到的（因为联赛的盈利会因此减少），所以每轮联赛只能有同一种级别的比赛。<br />
+可挑剔的球迷希望：联赛不是循环的（即无法将联赛分为K（K为小于N的任意正整数）段并使这K段都相同），因为这样才不会引起他们的审美疲劳。<br />
+已知联赛共有N轮，第i种分级方法有Ri种级别的比赛，现在欧足联想知道在每种分级方法下有多少种安排联赛的方案（注：把某种方案顺移K（K&lt;=N）位后任然是同一种方案，例如,ABC和BCA，CAB为同一种方案，但ABC和ACB不是同一种方案）。为此，欧足联设下了奖品，谁能提供答案谁就能获得这份奖励。</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">&nbsp;第一行两个数N，M分别表示有N轮联赛和M种分级方法。<br />
+&nbsp;第二行M个数，第i个数为Ri，意义如题</span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">&nbsp;M行，每行一个数ansi表示第i种分级方法下的方案数。</span></p>
+<p><span style="font-size: medium"><br />
+</span></p></p><hr/><h3>样例输入</h3><pre> 3 1
+ 3
+
+
+</pre><hr/><h3>样例输出</h3><pre> 8
+
+
+</pre><hr/><h3>提示</h3><p><p>&nbsp;在样例1中，8种方案分别为AAB，AAC，BBA，BBC，CCA，CCB，ABC，ACB。<br />
+数据范围<br />
+对于20%的数据，满足M&lt;=10<br />
+&nbsp;对于所有的数据，满足<br />
+&nbsp;N&lt;=1000<br />
+M&lt;=100<br />
+Ri&lt;=256 （1&lt;=i&lt;=M）</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2175" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2175" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

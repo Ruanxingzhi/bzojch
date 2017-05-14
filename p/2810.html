@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2810：[Apio2012]kunai</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Apio2012]kunai</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Apio2012]kunai</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Apio2012]kunai                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><img alt="" src="../file/2810_0.jpg" /></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p>从标准输入读入数据。 <br />
+第一行包含两个被空格隔开的整数&nbsp;W, H，表示广场的尺寸为W列H行。 <br />
+第二行包含一个整数N，表示忍者的数量。 <br />
+接下来N行中，第&nbsp;i行有三个以空格分隔的整数&nbsp;X<br />
+i,Yi, D i, 表示第i个忍者处在从左往右的&nbsp;X<br />
+i列、从上往下的第Yi行，任何两个忍者不在同一个位置。第i个忍者面向的方向由Di</p>
+<p>Di = 0，表示忍者向右； <br />
+Di = 1，表示忍者向上； <br />
+Di = 2，表示忍者向左； <br />
+Di = 3，表示忍者向下。</p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm -3pt 0pt 42pt; line-height: 13.75pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none; tab-stops: 323.2pt 351.65pt 363.25pt"><span style="font-size: 12pt; color: black; font-family: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">输出一个整数，表示经过足够长的时间之后，在这个</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; color: black; mso-font-kerning: 0pt"><span style="mso-tab-count: 1">&nbsp; </span>W</span></i><span lang="EN-US" style="font-size: 12pt; color: black; mso-font-kerning: 0pt"> <i style="mso-bidi-font-style: normal"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span>H</i></span></font><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">的广场中被苦</span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-font-kerning: 0pt; mso-hansi-font-family: 'Times New Roman'">无经过被苦无经过的格子数量。</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>5  4
+5 
+3  3 2
+3  2 0
+4  2 2
+5  4 1
+1  1 3
+ 
+ 
+</pre><hr/><h3>样例输出</h3><pre>11 
+</pre><hr/><h3>提示</h3><p><p>1&nbsp; &le;N &le; 100,000 忍者数；<br />
+&nbsp;<br />
+1&nbsp; &le;W &le; 1,000,000,000 列数； <br />
+&nbsp;<br />
+1&nbsp; &le;H &le; 1,000,000,000 行数； <br />
+1&nbsp; &le;Xi &le; W，1 &le; Yi &le; H 坐标范围。<br />
+&nbsp;</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2810" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2810" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

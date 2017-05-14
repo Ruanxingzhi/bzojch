@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1626：[Usaco2007 Dec]Building Roads 修建道路</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Dec]Building Roads 修建道路</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Dec]Building Roads 修建道路</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 Dec]Building Roads 修建道路                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John最近得到了一些新的农场，他想新修一些道路使得他的所有农场可以经过原有的或是新修的道路互达（也就是说，从任一个农场都可以经过一些首尾相连道路到达剩下的所有农场）。有些农场之间原本就有道路相连。 所有N(1 &lt;= N &lt;= 1,000)个农场（用1..N顺次编号）在地图上都表示为坐标为(X_i, Y_i)的点(0 &lt;= X_i &lt;= 1,000,000；0 &lt;= Y_i &lt;= 1,000,000)，两个农场间道路的长度自然就是代表它们的点之间的距离。现在Farmer John也告诉了你农场间原有的M(1 &lt;= M &lt;= 1,000)条路分别连接了哪两个农场，他希望你计算一下，为了使得所有农场连通，他所需建造道路的最小总长是多少。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 2个用空格隔开的整数：N 和 M</span></p>
+<p><span style="font-size: medium">&nbsp;* 第2..N+1行: 第i+1行为2个用空格隔开的整数：X_i、Y_i * 第N+2..N+M+2行: 每行用2个以空格隔开的整数i、j描述了一条已有的道路， 这条道路连接了农场i和农场j </span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1行: 输出使所有农场连通所需建设道路的最小总长，保留2位小数，不必做 任何额外的取整操作。为了避免精度误差，计算农场间距离及答案时 请使用64位实型变量 </span></p></p><hr/><h3>样例输入</h3><pre>4 1
+1 1
+3 1
+2 3
+4 3
+1 4
+
+输入说明:
+
+    FJ一共有4个坐标分别为(1,1)，(3,1)，(2,3)，(4,3)的农场。农场1和农场
+4之间原本就有道路相连。
+
+
+</pre><hr/><h3>样例输出</h3><pre>4.00
+
+输出说明:
+
+    FJ选择在农场1和农场2间建一条长度为2.00的道路，在农场3和农场4间建一
+条长度为2.00的道路。这样，所建道路的总长为4.00，并且这是所有方案中道路
+总长最小的一种。
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1626" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1626" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

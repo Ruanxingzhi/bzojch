@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4793：[CERC2016]Hangar Hurdles</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CERC2016]Hangar Hurdles</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CERC2016]Hangar Hurdles</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CERC2016]Hangar Hurdles                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>你正在评估一些关于一个巨型飞机仓库的建设计划。飞机仓库的地面可以表示为n行n列的网格图，其中每个格子要</div>
+<div>么是空的，要么有障碍物。行从上到下依次被编号为1到n，列从左到右依次被编号为1到n。存放飞机零件的大型集</div>
+<div>装箱能在飞机仓库的地面上自由移动是很重要的。我们可以将每个集装箱看作一个以某个格子为中心的边平行于坐</div>
+<div>标轴的正方形。对于一个奇数k，一个尺寸为k的集装箱是一个包含k行k列的正方形。一个集装箱的坐标为其中心格</div>
+<div>子的坐标。集装箱可以向上下左右移动，但不能碰到障碍物，且不能移出仓库的边界。给定q对格子A_k和B_k，对</div>
+<div>于每对格子，请找到能从A_k移动到B_k的集装箱的最大尺寸，注意这个尺寸也要是一个奇数。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行包含一个正整数n(2&lt;=n&lt;=1000)，表示仓库的尺寸。</div>
+<div>接下来n行，每行n个字符，描述整个仓库，其中&ldquo;.&rdquo;表示空格子，&ldquo;#&rdquo;表示障碍物。</div>
+<div>接下来一行包含一个正整数q(1&lt;=q&lt;=300000)，表示询问的个数。</div>
+<div>接下来q行，每行4个正整数r_A,c_A,r_B,c_B(1&lt;=r_A,c_A,r_B,c_B&lt;=n)，分别表示A和B的坐标。</div>
+<div>输入数据保证A和B是不同的空格子。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>输出q行，每行一个整数，对于每个询问输出最大尺寸，如果不存在解，那么输出0。</div>
+<div>
+<div></div>
+</div></p><hr/><h3>样例输入</h3><pre>
+7
+.....#.
+...#.#.
+....#..
+....###
+....#..
+#......
+.......
+5
+2 5 5 2
+2 5 3 6
+2 2 6 3
+2 2 6 6
+1 1 7 7</pre><hr/><h3>样例输出</h3><pre>1
+0
+3
+1
+1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4793" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4793" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2914：[Poi1997]ADDON</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1997]ADDON</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1997]ADDON</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi1997]ADDON                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: 18pt">&nbsp;&nbsp; </span><span style="font-size: 15pt">科学家们发现了一种新的放射性元素&mdash;&mdash;ADDON。ADDON是已知的效率最高的核燃料，因此他们决定建立一个ADDON核反应堆。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">根据计划，一间燃料室是一根竖直的管子。燃料棒（即装有ADDON的圆筒）将一根叠一根的被放进燃料室里，搭建成一个圆柱。燃料棒具有不同的高度。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">核反应循环开始于将燃料棒放进燃料室中。接下来的步骤才是点火。麻烦的是，圆柱的高度不能是任意的&mdash;&mdash;只有某些特定的高度才能保证反应的安全。这样的高度被称作稳定高度。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">现在，反应堆的设计师们面临着两个任务：确定燃料室的高度以及选择一个用于制造ADDON的燃料棒的高度集合。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">我们说一个高度集合是安全的（对于一个特定高度的燃料室），则有：对于任意一根由高度属于这个集合的燃料棒搭建而成的，且高度不超过燃料室的高度的圆柱，它的高度一定是稳定的。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">我们说一个高度集合是完备的（对于一个特定高度的燃料室），则有：对于任意一根高度是稳定的,</span><span style="font-size: 15pt">并</span><span style="font-size: 15pt">且其高度不超过燃料室高度的圆柱，都一定能够由高度属于该集合的燃料棒搭建而成。</span></div>
+<div><b><span style="font-size: 15pt">任务</span></b></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">写一个程序</span></div>
+<div style="margin: 0cm 0cm 0pt 48pt; text-indent: -18pt"><span style="font-size: 15pt">1.&nbsp;</span><span style="font-size: 15pt">读入一个稳定高度的集合；</span></div>
+<div style="margin: 0cm 0cm 0pt 48pt; text-indent: -18pt"><span style="font-size: 15pt">2.&nbsp;</span><span style="font-size: 15pt">找出存在一个安全且完备的高度集合的核燃料室的最大可能值；</span></div>
+<div style="margin: 0cm 0cm 0pt 48pt; text-indent: -18pt"><span style="font-size: 15pt">3.&nbsp;</span><span style="font-size: 15pt">对于找到的核燃料室，找出一个元素个数最少的安全且完备的高度集合；</span></div>
+<div style="margin: 0cm 0cm 0pt 48pt; text-indent: -18pt"><span style="font-size: 15pt">4.&nbsp;</span><span style="font-size: 15pt">将结果输出</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 30pt"><span style="font-size: 15pt">第一行是一个自然数n（1&lt;=n&lt;=10000），代表所给的稳定高度的个数。</span></div>
+<div style="text-indent: 30pt"><span style="font-size: 15pt">接下来的n行，每行是一个不超过10000的正整数。这些数按照升序给出，代表了稳定高度。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 30pt"><span style="font-size: medium">第一行是找到的燃料室高度的最大可能值。</span></div>
+<div><span style="font-size: medium">接下来的每行按照升序给出你所找到的高度集合中的一个元素。</span></div></p><hr/><h3>样例输入</h3><pre>14
+5
+10
+12
+15
+17
+20
+21
+22
+24
+26
+27
+30
+31
+33
+</pre><hr/><h3>样例输出</h3><pre>24
+5
+12
+21
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2914" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2914" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

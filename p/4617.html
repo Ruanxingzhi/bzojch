@@ -1,0 +1,210 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4617：[Wf2016]Spin Doctor</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wf2016]Spin Doctor</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wf2016]Spin Doctor</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Wf2016]Spin Doctor                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>大选要到了，受候选人X的要求，你调查了n个人，并记录了每个人的3个信息：</div>
+<div>ai--他们能记忆&pi;的多少位</div>
+<div>bi--他们的头发数量</div>
+<div>ci--他们是否会给候选人X投票</div>
+<div>你需要找到某个公式使这些结果看起来有意义。你要选择2个实数S和T，将所有调查结果按ai*S+bi*T排序。如果ci</div>
+<div>为true的人聚集在了一起，你会觉得这个排序看起来不错。更准确地说，如果j和k分别是第一个和最后一个ci为tr</div>
+<div>ue的人的下标，你想要最小化k-j+1。注意有些S和T会让排序时出现相等的情况，这时你应该假设最坏情况发生，</div>
+<div>即排序使得k-j+1最大。</div></p><hr/><h3>输入格式</h3><p><div>第一行一个数n(1 &le; n &le; 250000)为被调查的人数。</div>
+<div>接下来每行描述一个人的ai(0 &le; ai &le; 2000000)、bi(0 &le; bi &le; 2000000)、ci</div>
+<div>ci是一个0/1变量。保证至少有一个人投了X的票（即至少有一个ci为true）</div></p><hr/><h3>输出格式</h3><p><div>对于所有可能的实数对(S,T)，输出最小的k-j+1。</div></p><hr/><h3>样例输入</h3><pre>100
+7487 4751 1
+7499 5064 1
+7471 5376 1
+7404 5683 1
+7300 5979 1
+7159 6260 1
+6984 6520 1
+6777 6757 1
+6543 6966 1
+6284 7144 1
+6006 7288 1
+5711 7396 1
+5405 7466 1
+5092 7498 1
+4780 7490 1
+4469 7442 1
+4167 7357 1
+3878 7234 1
+3607 7075 1
+3358 6884 1
+3135 6664 1
+2941 6417 1
+2780 6147 1
+2653 5860 1
+2564 5559 1
+2513 5249 1
+2501 4936 1
+2529 4624 1
+2596 4317 1
+2700 4021 1
+2841 3740 1
+3016 3480 1
+3223 3243 1
+3457 3034 1
+3716 2856 1
+3994 2712 1
+4289 2604 1
+4595 2534 1
+4908 2502 1
+5220 2510 1
+5531 2558 1
+5833 2643 1
+6122 2766 1
+6393 2925 1
+6642 3116 1
+6865 3336 1
+7059 3583 1
+7220 3853 1
+7347 4140 1
+7436 4441 1
+4946 8828 0
+8742 4313 0
+2126 2132 0
+9435 3372 0
+5088 584 0
+278 7609 0
+464 5305 0
+1577 509 0
+2804 8754 0
+9047 1580 0
+1558 5541 0
+3041 9135 0
+7723 9004 0
+3245 7600 0
+3274 8477 0
+7867 5690 0
+4184 9319 0
+8425 475 0
+942 6676 0
+8254 1405 0
+7168 6512 0
+2541 51 0
+3017 7811 0
+6805 39 0
+4351 8732 0
+533 9472 0
+1513 9570 0
+634 790 0
+5809 9609 0
+6536 8399 0
+5640 9504 0
+2408 9157 0
+1271 1853 0
+1976 2706 0
+9332 7001 0
+1048 3322 0
+9764 9397 0
+1901 1449 0
+3985 2122 0
+7139 9767 0
+5835 8305 0
+746 585 0
+3025 8187 0
+2301 782 0
+9741 3033 0
+3960 8756 0
+693 3827 0
+1169 7143 0
+556 8694 0
+3721 1983 0
+</pre><hr/><h3>样例输出</h3><pre>61</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Shimakaze提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4617" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4617" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

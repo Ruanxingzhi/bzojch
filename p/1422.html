@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1422：王者归来 By LiuCheng</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">王者归来 By LiuCheng</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">王者归来 By LiuCheng</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                王者归来 By LiuCheng                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>
+经过艰苦的奋斗，魔戒终于被销毁了。魔王索伦终于被打败了。人们在又将回到和平的生活。为了纪念阿拉贡对人们的功劳，雕刻家们决定合作来建造一座巨大的雕像，用以展现王者之都的辉煌。
+首先，他们需要进行一项重要的工作：搜集材料。材料来源于一些金银和铜的混合矿石。矿石来自于不同的矿山。不同的矿山中的矿石的含金、含银、和含铜量是有区别的，不过我们可以将这些矿石和在一起来炼制新的矿石。
+我们需要很多不同金属含量的矿石来进行各个不同部件的雕刻工作。以获得最好的效果。你能告诉我们哪些矿石可以由矿山中的岩石合成，哪些是不可以的吗？当然我们会告诉你各个矿的矿石的测试结果。而且矿石的量是足够的多，你不必考虑浪费的问题。
+
+</p><hr/><h3>输入格式</h3><p>输入文件第一行有一个数n，表示矿山的总数。 (1<n≤100000)
+接下来n行，每行3个实数g s c，分别代表一个矿山上送来的样品的测试结果。g代表金的含量，s代表银的含量，c代表铜的含量，单位为克(gram)。(0≤g, s, c<106)
+接下了一行一个数m，表示我们需要的矿石的总类数。(1<m≤100000)
+接下来m行，每行3个实数a b c，分别代表我们所需要的一种矿石：a代表含金量，b代表含银量，c代表含铜量。 (a>0, b>0, c>0, a+b+c=1)
+
+</p><hr/><h3>输出格式</h3><p>输出文件应包括m行，每行一个数0或1。第i行如果为0表示第i种矿石是无法合成的。为1则相反，表示可以合成（或直接取合适的）。
+	
+</p><hr/><h3>样例输入</h3><pre>2
+1 1 0
+2 1 0
+2
+0.5 0.5 0
+0.3 0.6 0.1
+
+
+</pre><hr/><h3>样例输出</h3><pre>1
+0
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1422" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1422" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2968：成长计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">成长计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">成长计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                成长计划                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">你需要为你的宠物制定一个成长计划，使得宠物得到良好的发展。</span></div>
+<div><span style="font-size: medium">宠物有三项属性：体力<i>H</i>，逻辑<i>P</i>，感受<i>F</i>。</span></div>
+<div><span style="font-size: medium">这三项分别决定了宠物的：</span></div>
+<div><span style="font-size: medium">健康与强壮程度，逻辑判断与理科思维能力，文采与艺术素养。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">初始时3项属性均为0。(中途可为负数)</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">在接下来的<i>M</i>天里，第<i>i</i>天有温度<i>T</i>[<i>i</i>]，湿度<i>W</i>[<i>i</i>]。</span></div>
+<div><span style="font-size: medium">每天你可以选择让宠物：（以下除法均为整数除法）</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>在家玩</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">H&rsquo; = H*4/5 + 3 + F/6 + P/6</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">P&rsquo; = P - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">F&rsquo; = F - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>体育课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H + T[i] &ndash; W[i]</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + W[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>科学课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |W[i]| - F/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P + 3 + T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F &ndash; 1 + W[i]/9</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">4.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>艺术课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |T[i]| - P/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; 1 + T[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + 2 + W[i]/3</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">每天活动结束后，(<i>H</i>&rsquo;, <i>P</i>&rsquo;, <i>F</i>&rsquo;) 将会成为宠物的状态。</span></div>
+<div><span style="font-size: medium">宠物的培养是需要侧重点的。</span></div>
+<div><span style="font-size: medium">一个培养目标可以用三元组(<i>x</i>,<i>y</i>,<i>z</i>)来表示，其中<i>x</i>,<i>y</i>,<i>z</i>均为非负整数。</span></div>
+<div><span style="font-size: medium">即要求<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>最大。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">第一行输入天数<i>M</i>，询问数<i>Q</i></span></div>
+<div><span style="font-size: medium">接下来一行为<i>T</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来一行为<i>W</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来<i>Q</i>行，每行是三个非负整数<i>x y z</i>表示一次询问</span></div></p><hr/><h3>输出格式</h3><p><div style="margin: 13pt 0cm">&nbsp;</div>
+<div><span style="font-size: medium">对于<i>Q</i>次询问，每次输出一行，包括一个整数：</span></div>
+<div><span style="font-size: medium">即在最优成长计划下<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>的最大值。</span></div></p><hr/><h3>样例输入</h3><pre>5 3
+10 10 -10 -10 0
+10 -10 10 -10 0
+1 0 0
+0 1 0
+0 0 1
+ 
+</pre><hr/><h3>样例输出</h3><pre>22
+17
+10
+【样例说明】
+对于第一个询问：在家玩,体育课,在家玩,在家玩,在家玩
+ 
+【范围】
+100% 1 ≤ M ≤ 50; Q ≤ 600;     T[i],W[i],x,y,z的绝对值 ≤ 20</pre><hr/><h3>提示</h3><p><p>&nbsp;题解:<a href="/JudgeOnline/upload/201604/sol(1).txt">JudgeOnline/upload/201604/sol(1).txt</a></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2968" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2968" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

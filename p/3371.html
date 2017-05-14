@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3371：[Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;Moo大学的餐厅必须为C(1&le;C&le;1000)头入学的奶牛新生定制比萨饼．比萨饼可以在比萨小屋订做．一个饼只能给一头奶牛吃．尽管比萨小屋想为每一头奶牛都做一个比萨饼，但是他们必须服从以下三个条件：</span></div>
+<div><span style="font-size: medium">&middot;比萨小屋拥有T(1&le;T&le;30)种素菜馅，每个比萨饼有且仅有K(1&le;K&le;T)种馅．</span></div>
+<div><span style="font-size: medium">&middot;任何一个比萨饼里不能有两种相同的馅（比如一个比萨饼里不能有两份洋葱）．</span></div>
+<div><span style="font-size: medium">&middot;任何两个比萨饼不能有完全相同的馅，即任何两个比萨饼至少有一种馅是不同的．当然，馅&nbsp;&nbsp;的编号是1到T.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;Moo大学的奶牛对比萨饼馅十分挑剔，有的奶牛可能什么馅都不喜欢．一头奶牛只吃那种所有的馅他都喜欢的比萨饼．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;请你计算最多能喂几头奶牛．</span></div>
+<div></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：三个整数C，T，K.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到C+1行：每行有若干个用空格分开的整数，表示这头奶牛喜欢的馅．第一个数是这头奶牛喜欢的馅的种数．接下来的几个整数是这头奶牛喜欢的馅的编号．</span></div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">一个整数，即最多能有几头牛被喂养．</span></div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">&nbsp;</span></div>
+<div></div></p><hr/><h3>样例输入</h3><pre>3 2 1
+2 2 1
+1 1
+1 2</pre><hr/><h3>样例输出</h3><pre>    2
+样例说阴
+    只能生产两种饼：一个有1号馅的比萨饼和一个有2号馅的比萨饼．第一个饼给第1号牛，第二块饼给3号牛，这样两头牛被喂饱了．同时将三头都喂饱的办法不存在
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Green</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3371" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3371" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3627：[JLOI2014]路径规划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2014]路径规划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2014]路径规划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JLOI2014]路径规划                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><font size="3" face="Tahoma">相信大家都用过地图上的路径规划功能，只要输入起点终点就能找出一条最优路线。现在告诉你一张地图的信息，请你找出最优路径（即最短路径）。考虑到实际情况，一辆车加满油能开的时间有限，所以在地图上增加了几个加油站。</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">地图由点和双向边构成，每个点代表一个路口，也有可能是加油站或起点终点。有些路口还装有红绿灯。由于经过太多的红绿灯会让人感到不爽，所以请求在经过不超过</span><span lang="EN-US">k</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个红绿灯的情况下，最少平均花费多少时间能从起点到终点。保证起点终点和加油站没有红绿灯。</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><font size="3" face="Tahoma">（题目不考虑最坏情况下能否加到油，只考虑平均花费时间的前提下，车能否到达加油站加油）。</font></span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第一行输入</span><span lang="EN-US">5</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个整数</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">k</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">limit</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">cost</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，表示有</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个点</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">条边，车能开</span><span lang="EN-US">limit</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">长的时间，及加油所花时间</span><span lang="EN-US">cost</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">。</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">接下来</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">行输入每个点信息，包括点的名称（带</span><span lang="EN-US">&ldquo;gas&rdquo;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">的为加油站，</span><span lang="EN-US">&ldquo;start&rdquo;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">为起点，</span><span lang="EN-US">&ldquo;end&rdquo;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">为终点），及该点是否有红绿灯，（</span><span lang="EN-US">a</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">b</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">表示）（若为</span><span lang="EN-US">a=0</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">则表示没有，</span><span lang="EN-US">a</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">表示红灯长，</span><span lang="EN-US">b</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">表示绿灯长）。</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">接下来</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">行输入每条边信息，包括边的起点，终点，边的名称，通过该边所花时长。</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">保证点和边名的长度不大于</span><span lang="EN-US">20</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，只有大小写字母，数字及</span><span lang="EN-US">&lsquo;_&rsquo;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">组成。</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="EN-US"><o:p></o:p></span></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><font size="3" face="Tahoma">一行输出最少平均花费时长。</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="EN-US"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>5 8 1 100 10
+start 0 0
+azhan 10 10
+xxgasxx 0 5
+bpoint 20 5
+end 0 100
+start azhan sdf 30
+azhan xxgasxx ewfg 20
+start end r3tg 200
+end azhan 1xq2 70
+azhan bpoint gg 10
+xxgasxx bpoint kk 30
+bpoint end dsg 40
+xxgasxx end t_s 100
+
+</pre><hr/><h3>样例输出</h3><pre>162.500
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium"><br />
+共14组数据：</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><span style="font-size: medium">其中3组数据，满足n&lt;10，m&lt;20，k&lt;5</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><span style="font-size: medium">另有3组没有红绿灯</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><span style="font-size: medium">所有数据满足n&lt;=10000，m&lt;=20000，k&lt;=10，加油站&lt;=50</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><span style="font-size: medium">答案保留3位小数</span></p>
+<p><span style="font-size: medium">&nbsp;<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3627" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3627" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

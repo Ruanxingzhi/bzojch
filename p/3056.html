@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3056：升降梯口</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">升降梯口</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">升降梯口</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                升降梯口                </h1>
+                <p>时间限制：2s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">一些探险家组队去探索神秘的Nescafe之塔。经过一番周折，探险队员们终于突破了塔门，来到了Nescafe之塔的一层大殿。而探险队员们想要拜访的四大护法和塔之圣主据传都住在塔的高层，因此他们迅速奔向了大殿一侧的升降梯口。不过由于Nescafe之塔乃是一年一度封印和开启&ldquo;Nescafe之杯&rdquo;的禁地，自然不能允许外来人员随意闯入，因此要想乘坐升降梯，队员们必须破解开启升降梯动力的密码。</span></p>
+<p><span style="font-size: medium">升降梯的密码盘是一个由n*n个方格组成的正方形(n为偶数)，第i行第j列的方格中标着数字(i-1)*n+j，而在密码盘的上面覆盖着一张同样由n*n个方格组成的挡光片。如果挖去挡光片上的n*n/4个格子，并从小到大记下通过挖去的格子看到的n*n/4个数；然后把挡光片顺时针旋转90&deg;、180&deg;、270&deg;，每次也同样记下看到的n*n/4个数；这样最终将得到n*n个数。如果记下的这n*n个数恰好是1~n*n的一个排列，那么我们称这片挖去n*n/4个格子后的挡光片对密码盘是&ldquo;精确覆盖&rdquo;的。不妨用一个n*n的01矩阵表示这张挡光片，其中挖去的格子为1，没有挖去的格子为0，那么如下图所示的挡光片就可以表示为：<br />
+</span><span style="font-size: medium"><img height="223" alt="" width="221" src="../file/3056_0.jpg" /></span></p>
+<p><span style="font-size: medium">0000<br />
+0000<br />
+1101<br />
+0001<br />
+定义挡光片A比挡光片B小，当且仅当A对应的01矩阵的字典序小于B对应的01矩阵的字典序（即：A和B对应的01矩阵中存在一个位置(x,y)，使得矩阵A、B中前x-1行的所有数字和第x行的前y-1个数字都相同，而A中第x行第y列的数字为0，B中第x行第y列的数字为1）。<br />
+现在升降梯口的墙上写着一个数字k，探险队员们必须迅速制作出第k小的、对密码盘&ldquo;精确覆盖&rdquo;的挡光片，用以在密码盘上获取n*n个数作为开启升降梯动力的密码。</span></p>
+<p><span style="font-size: medium"><br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">一行两个正整数n、k。</font></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出满足要求的挡光片对应的01矩阵。</span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 15
+
+</pre><hr/><h3>样例输出</h3><pre>0000
+0000
+1101
+0001
+
+</pre><hr/><h3>提示</h3><p><p><br />
+测试点编号 n k<br />
+#1 =2 &lt;=10<br />
+#2 =2 &lt;=10^3<br />
+#3 =4 &lt;=10<br />
+#4 =4 &lt;=10^9<br />
+#5 =6 &lt;=10<br />
+#6 =6 &lt;=10^18<br />
+#7 =8 &lt;=10<br />
+#8 =8 &lt;=10^18<br />
+#9 =10 &lt;=10^18<br />
+#10 =10 &lt;=10^18<br />
+数据保证有解。<br />
+</p></p><hr/><h3>题目来源</h3><p>Poetize10</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3056" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3056" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

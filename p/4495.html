@@ -1,0 +1,195 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4495：[Neerc2013 North]intellectual</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Neerc2013 North]intellectual</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Neerc2013 North]intellectual</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Neerc2013 North]intellectual                </h1>
+                <p>时间限制：200s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Erast Kopi 是著名的数独设计者。他的成功引起了一系列的模仿和剽窃。在提起诉讼</div>
+<div>之前，他决定找到更多的证据。</div>
+<div>数独是一张 9*9 的表，被划分成 3*3 的小表格，每个小表格是 3*3 的格子。每个格子可</div>
+<div>能包含 1 到 9 中的一个数字。任务就是往格子里填数字，使每行、每列和每个小表格都包含</div>
+<div>1 到 9 中的所有数字。</div>
+<div>Kopi 有一个数独的数据库，他想检查一下是否有相似的数独。如果数独 P 可以通过一</div>
+<div>系列以下操作转变得到数独 Q，则称 P 相似于 Q.</div>
+<div>1. 选两个数字 x 和 y，即把所有 x 换成 y，所有的 y 换成 x。</div>
+<div>2. 交换行中三行一组中的两大组：1，2，3 行为一组，4，5，6 列为一组，7，8，9 行为一组</div>
+<div>3. 交换两小行。</div>
+<div>4. 交换列中三列一组中的两大组：1，2，3 列为一组，4，5，6 列为一组，7，8，9 列为一组</div>
+<div>5. 交换两小列。</div>
+<div>6. 左上到右下沿斜对称轴的翻转。</div>
+<div>（如下图）</div>
+<div><img src="../file/4495_0.png" width="329" height="328" alt="" /></div>
+<div></div>
+<div>因此你需要帮助 Kopi 找到他的数据库中的相似的数独</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>一个正整数 n(N&lt;=20)，表示在数据库中的数独个数。</div>
+<div>下面包含 n 个数独：P1,P2...Pn，每个数独用一个 9*9 的方阵表示，1~9 表示有数字的</div>
+<div>格子，点.表示空格子。两个数独间会有一个空行。在数据库的数独中没有空格。</div>
+<div>这些数独不一定能被解出来。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>依 次 检 查 两 个 数 独 是 否 相 似 。 ( 先 检 查 P1 与</div>
+<div>P2,P3,..,Pn，然后 P2 与 P3,P4...Pn，然后 P3 与 P4,P5...Pn，以此类推)</div>
+<div>如果第 Pi 与 Pj 相似，那么输出&ldquo;Yes&rdquo;，否则输出&ldquo;No&rdquo;。如果相似，之后一行输出</div>
+<div>将 Pi 变成 Pj 的步数 Qij，步数不要求最少，但要求不超过 1000。之后 Qij 行每行包括一个</div>
+<div>命令。命令如下：</div>
+<div>1. D x y 交换两个数字 x,y。</div>
+<div>2. R a b 交换行中三大组中的(3a-2,3a-1,3a)三行与(3b-2,3b-1,3b)三行。</div>
+<div>3. r a b 交换行中的两行 a,b。</div>
+<div>4. C a b 交换列中三大组中的(3a-2,3a-1,3a)三列与(3b-2,3b-1,3b)三列。</div>
+<div>5. c a b 交换列中的两列 a,b。</div>
+<div>6. F 左上到右下沿斜对称轴的翻转。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4
+.....1...
+1........
+.2.....8.
+.........
+8....9...
+.........
+....7....
+...2...1.
+2...4....
+....2....
+...7.4...
+8.......9
+.8...2..1
+..2......
+.........
+.........
+..1.8....
+.........
+1........
+.........
+.........
+.........
+.........
+.........
+.........
+.........
+.........
+.....1...
+1........
+.2.....8.
+.........
+8....9...
+.........
+....7....
+...2...1.
+2...4....
+</pre><hr/><h3>样例输出</h3><pre>Yes
+7 C
+1 2
+D 5 3
+F r
+7 9
+c 6 5
+C 2 3
+D 1 8
+No
+Yes
+0
+No
+Yes
+8 R
+1 2
+C 2 3
+c 4 5
+F r
+5 6
+c 7 9
+D 1 8
+D 3 5
+No</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4495" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4495" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

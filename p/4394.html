@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4394：[Usaco2015 dec]Bessie</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2015 dec]Bessie</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2015 dec]Bessie</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2015 dec]Bessie                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>After eating too much fruit in Farmer John's kitchen, Bessie the cow is getting some very strange dreams! In her most recent dream, she is trapped in a maze in the shape of an N&times;M grid of tiles (1&le;N,M&le;1,000). She starts on the top-left tile and wants to get to the bottom-right tile. When she is standing on a tile, she can potentially move to the adjacent tiles in any of the four cardinal directions.<br />
+<br />
+But wait! Each tile has a color, and each color has a different property! Bessie's head hurts just thinking about it:<br />
+<br />
+&nbsp;&nbsp;&nbsp; If a tile is red, then it is impassable.<br />
+&nbsp;&nbsp;&nbsp; If a tile is pink, then it can be walked on normally.<br />
+&nbsp;&nbsp;&nbsp; If a tile is orange, then it can be walked on normally, but will make Bessie smell like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is blue, then it contains piranhas that will only let Bessie pass if she smells like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is purple, then Bessie will slide to the next tile in that direction (unless she is unable to cross it). If this tile is also a purple tile, then Bessie will continue to slide until she lands on a non-purple tile or hits an impassable tile. Sliding through a tile counts as a move. Purple tiles will also remove Bessie's smell. <br />
+<br />
+(If you're confused about purple tiles, the example will illustrate their use.)<br />
+<br />
+Please help Bessie get from the top-left to the bottom-right in as few moves as possible.</p>
+<p></p>
+<p>奶牛Bessie被困在了N*M的网格图迷宫中，她位于左上角(1,1)，出口在右下角(N,M)。Bessie只能上下左右行走。</p>
+<p>每块地砖都有一个颜色：</p>
+<p>如果是红色，那么不可通行。</p>
+<p>如果是粉色，那么可以通行。</p>
+<p>如果是橙色，那么可以通行，但是会给Bessie带上橘子的气味。</p>
+<p>如果是蓝色，那么当且仅当Bessie带着橘子的气味时，才可以通行。</p>
+<p>如果是紫色，那么Bessie会保持原有方向滑过去，如果之后仍然是紫色，那么会继续滑。当滑到不是紫色的地砖上或者不可通行的时候，才会停下来。并且这会消除Bessie身上的气味。每一步滑行和走路一样，都需要耗费一单位时间。</p>
+<p>请输出Bessie逃到出口所需的最短时间。</p>
+<p></p></p><hr/><h3>输入格式</h3><p><p>The first line has two integers N and M, representing the number of rows and columns of the maze.<br />
+<br />
+The next NN lines have MM integers each, representing the maze:<br />
+<br />
+&nbsp;&nbsp;&nbsp; The integer '0' is a red tile<br />
+&nbsp;&nbsp;&nbsp; The integer '1' is a pink tile<br />
+&nbsp;&nbsp;&nbsp; The integer '2' is an orange tile<br />
+&nbsp;&nbsp;&nbsp; The integer '3' is a blue tile<br />
+&nbsp;&nbsp;&nbsp; The integer '4' is a purple tile <br />
+<br />
+The top-left and bottom-right integers will always be '1'.</p></p><hr/><h3>输出格式</h3><p><p>A  single integer, representing the minimum number of moves Bessie must  use to cross the maze, or -1 if it is impossible to do so.</p></p><hr/><h3>样例输入</h3><pre>4 4
+1 0 2 1
+1 1 4 1
+1 0 4 0
+1 3 1 1</pre><hr/><h3>样例输出</h3><pre>10</pre><hr/><h3>提示</h3><p><p>In this example, Bessie walks one square down and two squares to the right (and then slides one more square to the right). She walks one square up, one square left, and one square down (sliding two more squares down) and finishes by walking one more square right. This is a total of 10 moves (DRRRULDDDR).</p></p><hr/><h3>题目来源</h3><p>Gold鸣谢Claris提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4394" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4394" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

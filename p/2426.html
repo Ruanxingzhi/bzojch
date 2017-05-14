@@ -1,0 +1,161 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2426：[HAOI2010]工厂选址</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HAOI2010]工厂选址</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HAOI2010]工厂选址</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HAOI2010]工厂选址                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:normal"><span lang="RU">某地区有m座煤矿，其中第i号矿每年产量为a<sub>i</sub>吨，现有火力发电厂一个，每年需用煤b吨，每年运行的固定费用（包括折旧费，不包括煤的运费）为h元，每吨原煤从第i号矿运到原有发电厂的运费为C<sub>i0</sub>（i=1，2，&hellip;，m）。 </span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:
+宋体;mso-fareast-language:ZH-CN"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:normal"><span lang="RU">现规划新建一个发电厂，m座煤矿每年开采的原煤将全部供给这两座发电厂。现有n个备选的厂址。若在第j号备选厂址建新厂，每年运行的固定费用为h<sub>j</sub>元。每吨原煤从第i号矿运到j号备选厂址的运费为C<sub>ij</sub>（i=1，2，&hellip;，m；j=1，2，&hellip;，n）。 </span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:
+宋体;mso-fareast-language:ZH-CN"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:normal"><span lang="RU">试问：应把新厂厂址选取在何处？m座煤矿开采的原煤应如何分配给两个发电厂，才能使每年的总费用（发电厂运行费用与原煤运费之和）为最小。&nbsp;</span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><o:p></o:p></span></b></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第1行：&nbsp; &nbsp; &nbsp; m&nbsp; b&nbsp; h&nbsp; n <o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第2行：&nbsp;&nbsp; &nbsp;&nbsp; a<sub>1</sub>&nbsp; a<sub>2</sub> &hellip;&nbsp; a<sub>m</sub> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">（</span><span lang="RU">0&lt;=a<sub>i</sub>&lt;=500, a<sub>1</sub>+a<sub>2</sub>+...+a<sub>n</sub>&gt;=b</span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">）</span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第3行： &nbsp; &nbsp;&nbsp; h<sub>1</sub>&nbsp; h<sub>2</sub> &hellip;&nbsp; h<sub>n</sub> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">（</span><span lang="RU">0&lt;=h<sub>i</sub>&lt;=100</span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">）</span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第4行：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C<sub>10</sub> C<sub>20</sub> &hellip; C<sub>m0</sub> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">（</span><span lang="RU">0&lt;=Cij&lt;=50</span></b><b style="mso-bidi-font-weight:normal"><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">）</span><span lang="RU"> <o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第5行：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C<sub>11</sub> C<sub>21</sub> &hellip; C<sub>m1</sub> <o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &hellip;&nbsp;&nbsp; &hellip; <o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第</span></b><b style="mso-bidi-font-weight:normal"><span lang="RU" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">n</span><span lang="RU">+4行：C<sub>1n</sub> C<sub>2n</sub> &hellip; C<sub>mn</sub> <o:p></o:p></span></b></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第1行：新厂址编号，如果有多个编号满足要求，输出最小的。 <o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-left:12.0pt;mso-para-margin-left:1.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">第2行：总费用&nbsp;<o:p></o:p></span></b></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 2 7 9 
+3 1 10 3 
+6 3 7 1 10 2 7 4 9 
+1 2 4 3 
+6 6 8 2 
+4 10 8 4 
+10 2 9 2 
+7 6 6 2 
+9 3 7 1 
+2 1 6 9 
+3 1 10 9 
+4 2 1 8 
+2 1 3 4 
+</pre><hr/><h3>样例输出</h3><pre>8 
+49 
+</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin-left:24.0pt;mso-para-margin-left:2.0gd;
+text-align:justify;text-justify:inter-ideograph"><b style="mso-bidi-font-weight:
+normal"><span lang="RU">对于所有数据, n&lt;=50, m&lt;=50000, b&lt;=10000&nbsp;<o:p></o:p></span></b></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2426" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2426" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1656：[Usaco2006 Jan] The Grove 树木</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Jan] The Grove 树木</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Jan] The Grove 树木</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2006 Jan] The Grove 树木                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">The pasture contains a small, contiguous grove of trees that has no 'holes' in the middle of the it. Bessie wonders: how far is it to walk around that grove and get back to my starting position? She's just sure there is a way to do it by going from her start location to successive locations by walking horizontally, vertically, or diagonally and counting each move as a single step. Just looking at it, she doesn't think you could pass 'through' the grove on a tricky diagonal. Your job is to calculate the minimum number of steps she must take. Happily, Bessie lives on a simple world where the pasture is represented by a grid with R rows and C columns (1 &lt;= R &lt;= 50, 1 &lt;= C &lt;= 50). Here's a typical example where '.' is pasture (which Bessie may traverse), 'X' is the grove of trees, '*' represents Bessie's start and end position, and '+' marks one shortest path she can walk to circumnavigate the grove (i.e., the answer): ...+... ..+X+.. .+XXX+. ..+XXX+ ..+X..+ ...+++* The path shown is not the only possible shortest path; Bessie might have taken a diagonal step from her start position and achieved a similar length solution. Bessie is happy that she's starting 'outside' the grove instead of in a sort of 'harbor' that could complicate finding the best path. </span></p>
+<div><span style="font-size: medium">牧场里有一片树林，林子里没有坑．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;贝茜很想知道，最少需要多少步能围绕树林走一圈，最后回到起点．她能上下左右走，也能走对角线格子．牧场被分成R行C列(1&le;R&le;50，1&le;C&le;50)．下面是一张样例的地图，其中&ldquo;．&rdquo;表示贝茜可以走的空地，&nbsp;&nbsp;&ldquo;X&rdquo;表示树林，&nbsp;&nbsp;&ldquo;*&rdquo;表示起点．而贝茜走的最近的路已经特别地用&ldquo;+&rdquo;表示出来．</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;<img height="209" width="252" alt="" src="../file/1656_0.jpg" /></span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div></div>
+<div><span style="font-size: medium">题目保证，最短的路径一定可以找到．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Two space-separated integers: R and C </span></p>
+<p><span style="font-size: medium">* Lines 2..R+1: Line i+1 describes row i with C characters (with no spaces between them). </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入R和C，接下来R行C列表示一张地图．地图中的符号如题干所述．</span></div></p><hr/><h3>输出格式</h3><p><p>* Line 1: The single line contains a single integer which is the smallest number of steps required to circumnavigate the grove.</p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出最少的步数．</span></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6 7
+.......
+...X...
+..XXX..
+...XXX.
+...X...
+......*
+</pre><hr/><h3>样例输出</h3><pre>13</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1656" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1656" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

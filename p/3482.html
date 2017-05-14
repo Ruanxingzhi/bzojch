@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3482：[COCI2013]hiperprostor</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[COCI2013]hiperprostor</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[COCI2013]hiperprostor</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [COCI2013]hiperprostor                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>在遥远的未来，行星之间的食品运输将依靠单向的贸易路线。每条路径直接连接两个行星，且其运输时间是已知的</div>
+<div>。贸易商协会打算利用一项最近发现的新技术&mdash;&mdash;超空间旅行，以增加一些新的航线。通过超空间旅行的航线也是</div>
+<div>单向的。由于该项技术仍处于试验阶段，超空间旅行的时间目前是未知的，但它不取决于行星之间的距离，所以每</div>
+<div>个超空间旅行的路线将花费等量的时间。下图是三个相互联通的行星及其运输时间的例子。行星使用正整数标号，</div>
+<div>超空间旅行时间记为&ldquo;x&rdquo;（图片对应第输入样例）：过境的时间以天计，并且始终是一个正整数。贸易商协会希</div>
+<div>望对引进新航线的后果进行分析：对于某两个行星A和B，他们想知道对于任意的x，从A到B的最短路径的总中转时</div>
+<div>间的所有可能的值。例如，在上述情况中，从星球2到星球1的最短路径所需时间可以取值5（如果x&ge;5），4，3，2</div>
+<div>，或1天（如果x&lt;5）</div>
+</div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "><img src="../file/3482_0.jpg" width="339" height="186" alt="" /></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span lang="EN-US">&nbsp;</span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p></p><hr/><h3>输入格式</h3><p><div>输入的第一行包含两个整数P和R，分别代表行星的数目和航线数量，1&le;P&le;500，0&le;R&le;10000。接下来的R条航线</div>
+<div>路径包含两或三个整数：行星标号C和D（1&le;C，D&le;P，C&ne;D），和T，从C到D的旅行时间。对于传统的路径，T是一</div>
+<div>个整数（1&le;T&le;1000000），超空间航线中，T是字符&ldquo;x&rdquo;。 可以存在多行有两个相同的行星。下面的行中包含的</div>
+<div>整数Q（1&le;Q&le;10），表示查询的数量。以下Q行包含两个整数星球标号（A和B，A&ne;B），为贸易商协会的查询：&ldquo;</div>
+<div>从A到B的最短路径时间的可能值是什么？</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>输出必须包含q行，每行??一个查询。每一行都必须包含两个整数：不同的可能值的数目和它们的总和。如果不同</div>
+<div>的可能值的数目是无限的，该行只输出&ldquo;inf&rdquo;。如果没有从A到B的路径，不同的可能值的数目及它们的总和都是0</div>
+<div>。</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>4 4
+1 2 x
+2 3 x
+3 4 x
+1 4 8
+3
+2 1
+1 3
+1 4
+
+</pre><hr/><h3>样例输出</h3><pre>0 0
+inf
+3 17</pre><hr/><h3>提示</h3><p><p>&nbsp;2016.6.15新加数据一组，未重测</p></p><hr/><h3>题目来源</h3><p>By Hta</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3482" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3482" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

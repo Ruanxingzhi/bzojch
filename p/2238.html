@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2238：Mst</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mst</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mst</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Mst                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 24pt" align="left"><span style="font-size: 12pt">给出一个</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">个点</span><i><span style="font-size: 12pt">M</span></i><span style="font-size: 12pt">条边的无向带权图，以及</span><i><span style="font-size: 12pt">Q</span></i><span style="font-size: 12pt">个询问，每次询问在图中删掉一条边后图的最小生成树。</span><span style="font-size: 12pt">(</span><span style="font-size: 12pt">各询问间独立，每次询问不对之后的询问产生影响，即被删掉的边在下一条询问中依然存在</span><span style="font-size: 12pt">)</span></div>
+<div style="text-indent: 21.6pt">&nbsp;</div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 24pt"><span style="font-size: 12pt">第一行两个正整数N,M(N&lt;=50000,M&lt;=100000)表示原图的顶点数和边数。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">下面M行，每行三个整数X,Y,W描述了图的一条边(X,Y)，其边权为W（W&lt;=10000）。保证两点之间至多只有一条边。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着一行一个正整数Q，表示询问数。(1&lt;=Q&lt;=100000)</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">下面Q行，每行一个询问，询问中包含一个正整数T，表示把编号为T的边删掉(边从1到M按输入顺序编号)。</span></div>
+<div style="text-indent: 24pt">&nbsp;</div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 30pt"><span style="font-size: 12pt">Q</span><span style="font-size: 12pt">行，对于每个询问输出对应最小生成树的边权和的值，如果图不连通则输出</span><span style="font-size: 12pt">&ldquo;Not connected&rdquo;</span></div></p><hr/><h3>样例输入</h3><pre>4 4
+1 2 3 
+1 3 5 
+2 3 9 
+2 4 1 
+4 
+1 
+2 
+3 
+4
+ 
+</pre><hr/><h3>样例输出</h3><pre>15 
+13 
+9 
+Not connected
+ 
+样例解释:
+无
+ 
+数据规模：
+10%的数据N,M,Q<=100。
+另外30%的数据，N<=1000
+100%的数据如题目。</pre><hr/><h3>提示</h3><p><p>&nbsp;更新数据---2015.6.9</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2238" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2238" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

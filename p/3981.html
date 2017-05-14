@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3981：[WF2012]A Safe Bet</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]A Safe Bet</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]A Safe Bet</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2012]A Safe Bet                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>安全有限公司是一家生产高品质保险箱的公司。它最新的发明是一种使用激光穿过一个有几面镜子的矩形网格的光学封闭机械。</div>
+<div><img src="../file/3981_0.jpg" width="746" height="202" alt="" /></div>
+<div>当激光被激活后，从矩形网格的最上方一行的左侧水平射入。每当激光束击中一面镜子，/和\二者之一，就会以45度角被反射。如果激光束从矩形网格底部一行的右侧水平射出（见上图左），那么安全检测成功，保险箱打开。否则保险箱依然关闭并发出警报。</div>
+<div>每个保险箱有一面镜子丢失来防止激光束成功穿过网格（见上图右）。保险箱有一个能让用户把一面镜子放到任意一个空的网格上。一个合法的用户会知道正确的放镜子的位置和放置镜子的正确方向（上图右是第4行第3列，方向是/），因此可以打开保险箱。而不知道这点的用户在有大型网格的保险箱中很难猜对。</div>
+<div>你的工作是确定一个保险箱事实上是安全的。一个安全的保险箱不会再不插入镜子的情况下打开，并至少存在一个位置和正确方向的镜子在插入后保险箱能正确打开。事实上可能有多个这样的位置和方向。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>每组数组描述了一个单独的保险箱，开头一行包含了四个整数R,C,M,N，(1&lt;=R,C&lt;=1000000,0&lt;=M,N&lt;=200000)。该机械的网格有r行c列。</div>
+<div>
+<div>接下来有M行，每行包含两个整数RI，CI，指明有一个/镜子在第Ri行，CI列。接下来N行以相同方式指明N面\镜子的位置。M+N面镜子的位置两两不同。</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每组测试数组，在测试编号后紧跟：</div>
+<div>l 0 如果不插入镜子保险箱就会被打开。</div>
+<div>l K,R,C 如果保险箱不插入一面镜子就不会被打开，K是恰好能打开保险箱的插入位置的数量，R,C是字典序最小的正确插入位置。如果一个位置插入/或\都能正确打开，只算一次。</div>
+<div>l impossible 无论插入或不插入镜子都不能打开</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 6 1 4
+2 3
+1 2
+2 5
+4 2
+5 5
+100 100 0 2
+1 77
+100 77
+100 100 0 0</pre><hr/><h3>样例输出</h3><pre>Case 1: 2 4 3
+Case 2: 0
+Case 3: impossible</pre><hr/><h3>提示</h3><p><div>对于100%的数据,1&lt;=R,C&lt;=1000000,1&lt;=N,M&lt;=200000</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3981" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3981" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

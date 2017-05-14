@@ -1,0 +1,203 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2062：素颜2</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">素颜2</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">素颜2</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                素颜2                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>引子：     if I can see you again,will I have the feeling?       All the truly happiness sadness have been buried in yesterday.       No mix of performing ,how wonderful that days.       I've missed it, why you've missed it ? Missing cant bring you back.      if I can see you again,will I have the feeling?       All the truly happiness sadness have been buried in yesterday.       No mix of performing ,how wonderful that days is.       I feel pity,why you feel that? The disappeared clean face.          (秀英语，请无视) 背景： WJMZBMR已经长大啦，不由得感到All the truly happiness sadness have been buried in yesterday. 又想起以前的一些往事，和小时候玩过的一个游戏。。 （怎么跟上次的那题背景一模一样囧） 题目描述： WJMZBMR以前跟一群小朋友一起玩游戏。 他们都有名字，为了方便就用一个字母代替，还可能有重名。 每个小朋友呢，都有一个最喜欢的同学（可以不是二分图，自己理解，他甚至可以自恋。）。 然后他们开始玩传球小游戏，每个人接到球之后，会喊出自己的名字，并把球传给自己最喜欢的同学。 然后从每个人开始做第一个接到球的人，他会记录下每次别人喊出的名字，这些名字按顺序组成的字符串就是他的结果字符串。 比如3个人名字分别是 a b c，传球关系是a传给b，b传给c，c传给b 那么a的结果字符串是abcbcbcbc。。。,b的结果字符串是bcbcbcbc。。。,c的结果字符串是 cbcbcbc 。由于环的存在，结果字符串都是无穷的。 他们想按结果字符串的字典序从小到大排序，如果某两人结果字符串一样大，编号小的在前。</p></p><hr/><h3>输入格式</h3><p><p>第一行n表示小朋友的个数。 接下来一行n个字符第i个表示第i个小朋友的名字ai。 接下来一行n个数第i个表示第i个小朋友最喜欢的同学是第几个小朋友bi</p></p><hr/><h3>输出格式</h3><p><p>n行每行第i行一个数表示第i个人的编号。。。 数据范围： 对于100%的数据,n&lt;=100000; 每个人的名字都是小写字母</p></p><hr/><h3>样例输入</h3><pre>100
+b a b b b b a a b b a b a b b a a a a a b a b b a a a b b b b a a a b b b a b a b b b b a b a a b a b a b a a b a a a b b b a b a b a b b b a b a b a b a a b a b a a a a a b b a b a a a a b a a a a b 
+17 60 91 65 83 39 36 74 90 30 4 27 13 2 16 94 53 28 56 98 11 20 23 95 49 46 96 26 100 3 48 19 59 68 8 76 89 67 87 12 73 24 54 63 61 25 57 78 85 21 1 99 79 42 70 93 75 7 51 37 72 81 82 34 97 18 71 35 40 58 77 52 33 10 88 6 62 84 41 69 22 43 38 86 55 92 47 15 64 50 31 9 66 29 32 14 5 80 45 44 
+</pre><hr/><h3>样例输出</h3><pre>13
+83
+48
+22
+38
+78
+20
+67
+52
+47
+84
+73
+65
+85
+98
+32
+27
+63
+71
+99
+57
+86
+33
+16
+58
+97
+91
+11
+25
+40
+55
+50
+26
+80
+18
+93
+19
+96
+89
+82
+77
+45
+75
+92
+2
+59
+34
+17
+54
+94
+8
+7
+5
+31
+81
+72
+87
+41
+4
+49
+95
+12
+44
+15
+70
+3
+21
+46
+69
+90
+28
+66
+56
+37
+14
+64
+1
+43
+35
+62
+61
+39
+79
+24
+100
+88
+30
+9
+60
+51
+68
+6
+53
+42
+29
+10
+76
+74
+36
+23
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>和谐社会模拟赛</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2062" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2062" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

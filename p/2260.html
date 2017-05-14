@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2260：商店购物</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">商店购物</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">商店购物</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                商店购物                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p align="center"><font face="Times New Roman" size="3">Grant是一个个体户老板，他经营的小店因为其丰富的优惠方案深受附近居民的青睐，生意红火。小店的优惠方案十分简单有趣。Grant规定：在一次消费过程中，如果您在本店购买了精制油的话，您购买香皂时就可以享受2.00元/块的优惠价；如果您在本店购买了香皂的话，您购买可乐时就可以享受1.50元/听的优惠价&hellip;&hellip;诸如此类的优惠方案就是说：如果您在本店购买了商品A的话，您就可以以P元/件的优惠价格购买商品B（购买的数量不限）。有趣的是，你需要购买同样一些商品，由于不同的购买顺序，Grant老板可能会叫你付不同数量的钱。比如你需要一块香皂（原价2.50元）、一瓶精制油（原价10.00元）、一听可乐(原价1.80元)，如果你按照可乐，精制油，香皂这样的顺序购买的话，Grant老板会问你要13.80元；而如果你按照精制油，香皂，可乐这样的顺序购买的话，您只需付13.50元。 <br />
+现在该村的居民请你编写一个程序，告诉你Grant小店商品的原价，所有优惠方案及所需的商品，计算至少需要花多少钱。不允许购买任何不需要的商品，即使这样做可能使花得钱更少。 <br />
+<br />
+</font></p></p><hr/><h3>输入格式</h3><p><div><span style="font-size: 12pt">，第一行为一个整数</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">（</span><span style="font-size: 12pt">1&lt;=n&lt;=50</span><span style="font-size: 12pt">），表示</span><span style="font-size: 12pt">Grant</span><span style="font-size: 12pt">小店的商品种数。接下来是</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">行，其中第</span><span style="font-size: 12pt">(i+1)</span><span style="font-size: 12pt">行由一个实数</span><span style="font-size: 12pt">C<sub>i </sub>(0&lt;C<sub>i</sub>&lt;=1000)</span><span style="font-size: 12pt">和一个整数</span><span style="font-size: 12pt">M<sub>i </sub>(0&lt;=M<sub>i</sub>&lt;=100)</span><span style="font-size: 12pt">组成，其间由一个空格分隔，分别表示第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">种商品的原价和所需数量。第</span><span style="font-size: 12pt">(n+2)</span><span style="font-size: 12pt">行又是一个整数</span><span style="font-size: 12pt">k</span><span style="font-size: 12pt">，表示</span><span style="font-size: 12pt">Grant</span><span style="font-size: 12pt">小店的优惠方案总数。接着</span><span style="font-size: 12pt">k</span><span style="font-size: 12pt">行，每行有二个整数</span><span style="font-size: 12pt">A</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">（</span><span style="font-size: 12pt">1&lt;=A,B&lt;=n</span><span style="font-size: 12pt">）和一个实数</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">（</span><span style="font-size: 12pt"> 0&lt;=P&lt;1000</span><span style="font-size: 12pt">），表示一种优惠方案，即如果您购买了商品</span><span style="font-size: 12pt">A</span><span style="font-size: 12pt">，您就可以以</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">元</span><span style="font-size: 12pt">/</span><span style="font-size: 12pt">件的优惠价格购买商品</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">小于商品</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">的原价。所有优惠方案的（</span><span style="font-size: 12pt">A,B</span><span style="font-size: 12pt">）都是不同的。为了方便，</span><span style="font-size: 12pt">Grant</span><span style="font-size: 12pt">不收分币，所以所有价格都不会出现分。</span></div></p><hr/><h3>输出格式</h3><p><p><font face="Times New Roman" size="3">只有一个实数，表示最少需要花多少钱。输出实数须保留两位小数。 <br />
+</font></p></p><hr/><h3>样例输入</h3><pre>4
+10.00 1
+1.80   1 
+3.00   0
+2.50   2
+2
+1 4 2.00
+4 2 1.50
+
+
+</pre><hr/><h3>样例输出</h3><pre>15.50
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2260" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2260" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

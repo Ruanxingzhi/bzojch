@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3420：Poi2013 Triumphal arch</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Triumphal arch</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Triumphal arch</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Poi2013 Triumphal arch                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">The king of Byteotia, Byteasar, is returning to his country after a victorious battle. In Byteotia, there are n towns connected with only n-1 roads. It is known that every town can be reached from every other town by a unique route, consisting of one or more (direct) roads. (In other words, the road network forms a tree).<br />
+The king has just entered the capital. Therein a triumphal arch, i.e., a gate a victorious king rides through, has been erected. Byteasar, delighted by a warm welcome by his subjects, has planned a triumphal procession to visit all the towns of Byteotia, starting with the capital he is currently in.<br />
+The other towns are not ready to greet their king just yet - the constructions of the triumphal arches in those towns did not even begin! But Byteasar's trusted advisor is seeing to the issue. He desires to hire a number of construction crews. Every crew can construct a single arch each day, in any town. Unfortunately, no one knows the order in which the king will visit the towns. The only thing that is clear is that every day the king will travel from the city he is currently in to a neighboring one. The king may visit any town an arbitrary number of times (but as he is not vain, one arch in each town will suffice).<br />
+Byteasar's advisor has to pay each crew the same flat fee, regardless of how many arches this crew builds. Thus, while he needs to ensure that every town has an arch when it is visited by the king, he wants to hire as few crews as possible. Help him out by writing a program that will determine the minimum number of crews that allow a timely delivery of the arches.<br />
+</span></p>
+<p><span style="font-size: medium"><span>Foreseeable和拿破仑的御用建筑师让&middot;夏格伦在玩游戏</span></span></p>
+<pre><span style="font-size: medium">		<br />让&middot;夏格伦会玩一个叫&ldquo;凯旋门&rdquo;的游戏：
+ 现在有一棵n个节点的树，表示一个国家 
+1号点代表这个国家的首都 这个游戏由两个人
+一起玩 一个玩家扮演视察国家的国王，
+另一个扮演建立凯旋门的建筑师 一开始只有首都
+有凯旋门 国王每次会从当前所在城市移动到一个相
+邻的城市 在国王每次移动前，建筑师可以选择国家
+内任意不超过k个城市建造出凯旋门 如果在任意一个
+时刻，国王所在的城市没有凯旋门 那么国王会很生气，
+扮演建筑师的玩家就输了 如果所有的城市都建立起了凯旋
+门而国王一直没有走到有凯旋门的城市，那么建筑师就胜利了
+ Foreseeable不会建筑，所以他扮演国王 而让&middot;夏格伦则
+&ldquo;扮演&rdquo;建筑师（他本来就是建筑师不需要扮演）  容易发现k
+的大小非常影响游戏有趣度&hellip;&hellip; 如果k太大，那么建筑师可以在
+国王行动前就在所有城市建出凯旋门，那么国王就没有胜利的希望了
+，这样Foreseeable会掀桌不玩 如果k太小，那么Foreseeable
+很有可能会发挥自己所剩无几的智商走到一个没有凯旋门的地方  
+让&middot;夏格伦想享受虐Foreseeable的快感 所以你要帮他确
+定最小的k，使得在这个游戏中，如果建筑师足够聪明的
+话，建筑师必胜  
+Input 第一行一个整数n 接下来n-1行，每行两个整数u,v，表示u,v相邻 Output 一行一个整数表示最小的k 
+Sample Input 
+7 1 2 1 3 2 5 2 6 7 2 4 1
+ Sample Output
+ 3 
+Hint 1&lt;=n&lt;=300000 
+样例解释：在foreseeable第一次行动前，让在2,3,4城市建好
+凯旋门，然后接下来无论foreseeable走到哪个城市，
+在5,6,7建好凯旋门就能保证让的胜利了  </span></pre>
+<p></p></p><hr/><h3>输入格式</h3><p><p><font size="4">The first line of the standard input contains a single integer n (1&lt;=N&lt;=300000) , the number of towns in Byteotia. The towns are numbered from 1 to n, where the number 1 corresponds to the capital.<br />
+The road network is described in n-1 lines that then follow. Each of those lines contains two integers,a,b(1&lt;=a,b&lt;=N) , separated by a single space, indicating that towns a and b are directly connected with a two way road.<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">The first and only line of the standard output is to hold a single integer, the minimum number of crews that Byteasar's advisor needs to hire.<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>7
+1 2
+1 3
+2 5
+2 6
+7 2
+4 1
+ 
+</pre><hr/><h3>样例输出</h3><pre>3
+Explanation of the example: On the first day, triumphal arches need to be erected in towns 2, 3, 4. On the second day, they should be erected in towns 5, 6, 7.
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Wcmg提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3420" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3420" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

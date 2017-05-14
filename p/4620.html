@@ -1,0 +1,140 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4620：[Wf2016]What Really Happened on Mars?</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wf2016]What Really Happened on Mars?</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wf2016]What Really Happened on Mars?</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Wf2016]What Really Happened on Mars?                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>
+<div>火星探险者的飞船上的实时软件遇到了名为&quot;优先级倒置&quot;的问题。一种解决该难题的技术是&quot;优先级置顶协议&quot;。这</div>
+<div>个问题中，你要模拟一些按照该协议执行的进程。这些进程共用一些资源，但每个资源同时只能被一个进程使用。</div>
+<div>为了确保这点，资源在用前会被锁定，用完以后才解锁。每个进程用开始时间、基础优先级（两两不同）、一系列</div>
+<div>指令来描述。执行过程中每个进程的优先级可能改变。指令分为3种：</div>
+<div>compute：进行计算，消耗一微秒。</div>
+<div>lock k：锁定资源k（不耗时）</div>
+<div>unlock k：解锁资源k（不耗时）</div>
+<div>锁定一个资源后，这个进程就拥有了这个资源，直到它解锁。每个进程只会解锁它拥有的资源中最近一次锁定的资</div>
+<div>源，不会锁定它已经拥有的资源，结束时一定没有拥有任何资源。每个资源有着固定的&quot;最高优先级&quot;，即会发出指</div>
+<div>令锁定该资源的进程中基础优先级最高的进程的基础优先级。一个处理器将处理这些进程。开始时，处理器将自身</div>
+<div>时钟设为0，然后开始无限循环以下步骤：</div>
+<div>①检测正在运行的进程。正在运行的进程是指开始时间小于等于当前处理器时间且指令未被全部执行完毕的进程。</div>
+<div>②决定所有进程的当前优先级，并决定哪些进程将被阻塞。如果进程T的下一个指令是锁定资源k，而k已经被其它</div>
+<div>进程拥有，或者至少有一个其它进程拥有某个资源l，且l的最高优先级大于或等于T当前优先级，那么T将会被阻塞</div>
+<div>。此时，我们称进程T被每一个拥有这样的k或l的进程阻塞。T的当前优先级是T的基础优先级和所有被T阻塞的进程</div>
+<div>的当前优先级中取最大值。</div>
+<div>③执行当前优先级最高且没有被阻塞的进程的下一条指令（如果有的话）。如果当前没有这样的进程，或者处理器</div>
+<div>执行了一条compute指令，则把处理器时钟增加1微秒。执行lock或unlock指令后不要增加时钟值。</div>
+<div>优先级置顶协议认定以上的操作满足以下性质：当前优先级以当前优先级和进程阻塞来定义，而进程阻塞以当前优</div>
+<div>先级定义。尽管这看起来似乎是循环的，一定存在一组唯一的当前优先级满足定义。所有进程最终会结束。第③步</div>
+<div>中，优先级最高且没有被阻塞的进程一定只有一个。</div>
+</div>
+</div></p><hr/><h3>输入格式</h3><p><div></div>
+<div>
+<div>第一行有两个数t（1&le;t&le;20）、r(1&le;r&le;20)，分别表示进程数量和资源数量</div>
+<div>接下来t行每行描述一个进程。开始有3个数：</div>
+<div>进程开始时间s（1&le;s&le;10000）、它的基础优先级b（1&le;b&le;t）、一个整数a（1&le;a&le;100）。</div>
+<div>接下来a个字符串描述指令。每个字符串为一个字母（C、L、U）加上一个整数。</div>
+<div>Cn（1&le;n&le;100）表示n个compute操作。Lk和Uk（1&le;k&le;r）分别表示锁定和解锁资源k。</div>
+<div>没有两个进程基础优先级相同。</div>
+</div></p><hr/><h3>输出格式</h3><p><div>对于每个进程，输出它执行结束时的时间，按输入顺序输出。</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>3 1
+50 2 5 C1 L1 C1 U1 C1
+1 1 5 C1 L1 C100 U1 C1
+70 3 1 C1
+</pre><hr/><h3>样例输出</h3><pre>106
+107
+71
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Shimakaze提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4620" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4620" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

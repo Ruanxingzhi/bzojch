@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1927：[Sdoi2010]星际竞速</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]星际竞速</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]星际竞速</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2010]星际竞速                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>　　10年一度的银河系赛车大赛又要开始了。作为全银河最盛大的活动之一，夺得这个项目的冠军无疑是很多人的<br />
+梦想，来自杰森座&alpha;星的悠悠也是其中之一。赛车大赛的赛场由N颗行星和M条双向星际航路构成，其中每颗行星都<br />
+有一个不同的引力值。大赛要求车手们从一颗与这N颗行星之间没有任何航路的天体出发，访问这N颗行星每颗恰好<br />
+一次，首先完成这一目标的人获得胜利。由于赛制非常开放，很多人驾驶着千奇百怪的自制赛车来参赛。这次悠悠<br />
+驾驶的赛车名为超能电驴，这是一部凝聚了全银河最尖端科技结晶的梦幻赛车。作为最高科技的产物，超能电驴有<br />
+两种移动模式：高速航行模式和能力爆发模式。在高速航行模式下，超能电驴会展开反物质引擎，以数倍于光速的<br />
+速度沿星际航路高速航行。在能力爆发模式下，超能电驴脱离时空的束缚，使用超能力进行空间跳跃&mdash;&mdash;在经过一<br />
+段时间的定位之后，它能瞬间移动到任意一个行星。天不遂人愿，在比赛的前一天，超能电驴在一场离子风暴中不<br />
+幸受损，机能出现了一些障碍：在使用高速航行模式的时候，只能由每个星球飞往引力比它大的星球，否则赛车就<br />
+会发生爆炸。尽管心爱的赛车出了问题，但是悠悠仍然坚信自己可以取得胜利。他找到了全银河最聪明的贤者&mdash;&mdash;<br />
+你，请你为他安排一条比赛的方案，使得他能够用最少的时间完成比赛。</p></p><hr/><h3>输入格式</h3><p><p>　　第一行是两个正整数N,M。第二行N个数A1~AN，其中Ai表示使用能力爆发模式到达行星i所需的定位时间。接下<br />
+来M行，每行3个正整数ui,vi,wi，表示在编号为ui和vi的行星之间存在一条需要航行wi时间的星际航路。输入数据<br />
+已经按引力值排序，也就是编号小的行星引力值一定小，且不会有两颗行星引力值相同。</p></p><hr/><h3>输出格式</h3><p><p>　　仅包含一个正整数，表示完成比赛所需的最少时间。</p></p><hr/><h3>样例输入</h3><pre>3 3 
+1 100 100 
+2 1 10 
+1 3 1 
+2 3 1 </pre><hr/><h3>样例输出</h3><pre>12</pre><hr/><h3>提示</h3><p><p>　　说明：先使用能力爆发模式到行星1，花费时间1。然后切换到高速航行模式，航行到行星2，花费时间10。之<br />
+后继续航行到行星3完成比赛，花费时间1。虽然看起来从行星1到行星3再到行星2更优，但我们却不能那样做，因<br />
+为那会导致超能电驴爆炸。N&le;800，M&le;15000。输入数据中的任何数都不会超过106。输入数据保证任意两颗行星<br />
+之间至多存在一条航道，且不会存在某颗行星到自己的航道。</p></p><hr/><h3>题目来源</h3><p>第一轮Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1927" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1927" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3949：买置换</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">买置换</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">买置换</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                买置换                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>买菜否开了一家店，号称&ldquo;一切皆可买&rdquo;，生意红火。这天crx看到店里面有一个很长的置换A，它的形式非常优美</div>
+<div>，如果把它表示成排列(a1, a2, ..., an)，对于所有i都满足ai=i%n+1。crx被深深地吸引了，但他买不起这个置</div>
+<div>换。好在仁慈的买菜否表示，只要crx能求出A的特征值，就让crx低价买下这个置换。买菜否把置换A的特征值定义</div>
+<div>为置换A能生成的所有不同置换的循环数之和。由于特征值可能很大，只需要求出它模10^9+7的余数。crx知道，置</div>
+<div>换A能生成的置换是若干个A合成的置换，置换A的循环数是将置换A分解为循环的乘积后循环的个数，如果有多种分</div>
+<div>解方法则选择最小的循环个数。于是crx马上算了起来，过了半小时终于求出了答案。但是买菜否说：&ldquo;刚才我等</div>
+<div>你算答案等得太无聊了，就交换了置换中的两个数，现在你要算新的置换的特征值。&rdquo;crx只好重新算了起来，但</div>
+<div>是他算了没多久就发现买菜否又无聊地交换了置换中的两个数。crx明白自己计算的速度根本赶不上买菜否交换的</div>
+<div>速度，他只能记录下买菜否的q次操作，请你来求出每次操作后置换的特征值。</div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>
+<div>输入的第一行包含两个整数n, q，分别表示置换的长度和操作次数。接下来q行，第i+1行包含两个整数x，y(x!=y)</div>
+<div>，表示第i次交换了数x和数y。</div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出q行，第i行包含一个整数，表示第i次操作后置换的特征值。</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 2
+4 3
+1 3</pre><hr/><h3>样例输出</h3><pre>8
+8
+</pre><hr/><h3>提示</h3><p><div>样例说明</div>
+<div>第一次交换后，置换变为2431。它能生成的置换有2431,4132和1234。</div>
+<div>2431可以分解为循环124和3，循环数为2。4132可以分解为循环142和3，循环数为2。1234可以分解为循环1,2,3和4，循环数为4。它们的循环数之和为8。</div>
+<div>N&lt;=10^8,Q&lt;=10^5</div>
+<div>尚无数据，请不要提交！求此题数据。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2014年国家集训队十五人互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3949" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3949" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

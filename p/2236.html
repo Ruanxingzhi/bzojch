@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2236：Mall</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mall</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mall</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Mall                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">XP</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">的百货商场很快就要开张啦，他希望能够确保百货商场的安全。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">商场包括<span lang="EN-US">n</span>层，从<span lang="EN-US">1</span>到<span lang="EN-US">n</span>标号，每层楼都有一些小商店供顾客选购商品。百货商场的电梯连接着相邻的两层楼的商店（我们不妨假设<span lang="EN-US">1</span>楼到<span lang="EN-US">n</span>楼也是相邻的），对于每一层楼，一共有</span><span lang="EN-US" style="font-size: 15pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">K<sub>i</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">个小商店，从<span lang="EN-US">1</span>到</span><span lang="EN-US" style="font-size: 15pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">K<sub>i</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">标号。而百货商场总共有<span lang="EN-US">N</span>个小商店。<span lang="EN-US">XP</span>希望安置一些警卫在商店里看守，但是他有两个要求：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">1.</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">一个商店最多由一个警卫看守<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">2.</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">电梯的两端不能同时放置警卫进行看守<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">在满足条件的情况下，<span lang="EN-US">XP</span>想知道最多能安置多少个警卫。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">输入第一行一个整数<span lang="EN-US">n</span>，表示百货商场有<span lang="EN-US">n</span>层。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">接下来若干行，每行若干个数，每<span lang="EN-US">3</span>个数代表一个电梯。其中<span lang="EN-US">A,B,C</span>表示由一个电梯从第<span lang="EN-US">C</span>层的<span lang="EN-US">A</span>号房连向第<span lang="EN-US">C+1</span>层的<span lang="EN-US">B</span>号房（第<span lang="EN-US">n</span>层连向第<span lang="EN-US">1</span>层）。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12"><span lang="EN-US"><o:p></o:p></span></span></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">输出一个整数，表示最多能安置的警卫个数。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">Limits<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">10</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">n</span>&le;<span lang="EN-US">50<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>n</span>&le;<span lang="EN-US">N</span>&le;<span lang="EN-US">100<o:p></o:p></span></span></p></p><hr/><h3>样例输入</h3><pre>10
+1  1  1  1  1  2  1  1  3  1  1  4  1  1  5  1  1  6  1  1  7  1  1  8  1  1  9  1  1  10
+</pre><hr/><h3>样例输出</h3><pre>5</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2236" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2236" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

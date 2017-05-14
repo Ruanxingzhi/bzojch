@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1199：[HNOI2005]汤姆的游戏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]汤姆的游戏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]汤姆的游戏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2005]汤姆的游戏                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>汤姆是个好动的孩子,今天他突然对圆规和直尺来了兴趣。于是他开始在一张很大很大的白纸上画很多很多的矩形和圆。画着画着,一不小心将他的爆米花弄撒了,于是白纸上就多了好多好多的爆米花。汤姆发现爆米花在白纸上看起来就像一个个点,有些点落在矩形或圆内部,而有些则在外面。于是汤姆开始数每个点在多少个矩形或圆内部。毕竟汤姆还只是个孩子,而且点、矩形和圆又非常多。所以汤姆数了好一会都数不清,于是就向聪明的你求助了。你的任务是：在给定平面上N个图形(矩形或圆)以及M个点后，请你求出每个点在多少个矩形或圆内部(这里假设矩形的边都平行于坐标轴)。</p></p><hr/><h3>输入格式</h3><p><p>第一行为两个正整数N和M，其中N表示有多少个图形(矩形或圆)，M表示有多少个点。接下来的N行是对每个图形的描述，具体来说，第i+1行表示第i个图形。先是一个字母,若该字母为&ldquo;r&rdquo;，则表示该图形是一个矩形,这时后面将有4个实数x1,y1,x2,y2，表示该矩形的一对对角顶点的坐标分别为(x1,y1)和(x2,y2)；若该字母为&ldquo;c&rdquo;，则表示该图形是一个圆,这时后面将有3个实数x,y,r,表示该圆以(x,y)为圆心并以r为半径。最后M行是对每个点的描述，其中每行将有两个实数x,y,表示一个坐标为(x,y)的点。</p></p><hr/><h3>输出格式</h3><p><p>包含M行,每行是一个整数,其中第i行的整数表示第i个点在多少个图形内部(当某点在一个图形的边界上时，我们认为该点不在这个图形的内部)。</p></p><hr/><h3>样例输入</h3><pre>3 4                                       
+r 1.015 0.750 5.000 4.000                 
+c 6.000 5.000 2.020                       
+r 6.500 7.200 7.800 9.200                 
+3.500 2.500
+4.995 3.990
+2.300 8.150
+6.900 8.000</pre><hr/><h3>样例输出</h3><pre>1
+2
+0
+1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1199" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1199" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

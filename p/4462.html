@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4462：[Jsoi2013]编程作业</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2013]编程作业</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2013]编程作业</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Jsoi2013]编程作业                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>考虑到如下的两段代码，很容易发现他们其实是一样的。<br />
+代码1 <br />
+int i, j; <br />
+i = 3; <br />
+j = i + 1; <br />
+代码2<br />
+int a, i; <br />
+a = 3; <br />
+i = a + 1; <br />
+这是因为这两段代码之间唯一的差异，只是他们更换了一下变量名，比如第<br />
+一段代码中的i变成了第二段的a，第一段的j变成了第二段的i。而其他的常量，<br />
+例如3，1或者其他的关键字和运算符，比如 int，+和；。都是没有发生变化的。&nbsp; <br />
+不过注意到如下的代码片段，我们并不能简单认为这是一样的，因为这不是<br />
+一个简单的替换，而是可以导致不同运算结果的。<br />
+代码3<br />
+a = 3; <br />
+b = 3; <br />
+代码4<br />
+c = 3; <br />
+c = 3;&nbsp; <br />
+为了简化问题，我们用大写字母来表示所有的关键字、常量等非变量符合。<br />
+假如我们采用如下的替换表 <br />
+<img width="612" height="92" alt="" src="../file/4462_0.png" /><br />
+那么最开始给出的两段雷同代码就可以分别写成 AiBjCiDECjDiFGC 以及<br />
+AaBiCaDECiDaFGC。或者简单的说，我们认为这两段代码是一样的。 <br />
+现在请写一个程序，处理若干这样的代码雷同检测问题：给一个完整代码以<br />
+及一个较短的代码片段，请求出，这个代码片段在完整代码中一共出现了多少次<br />
+（代码片段出现的位置可以重叠）。 <br />
+为了简单起见，我们认为程序中只会至多出现 a~z 这 26 个变量，同时也至<br />
+多只有A~Z这26个非变量符号。</p></p><hr/><h3>输入格式</h3><p><p>第一行包含一个整数 Q表示此数据中一共包含 Q个询问。 <br />
+接下来 2Q行，每两行为一个询问。 <br />
+每个询问中的第一行包含一个字符串 S，表示完整代码，第二行包含一个字符串<br />
+T，表示需要检测出现次数的代码片段。</p></p><hr/><h3>输出格式</h3><p><p>一共输出 Q行，每行一个整数，表示对应代码片段的出现次数。</p></p><hr/><h3>样例输入</h3><pre>3
+AiBjCiDECjDiFGC
+AaBiCaDECiDaFGC
+cDEcDEbDE
+aDEbDE
+ccddef
+aab</pre><hr/><h3>样例输出</h3><pre>1
+1
+2
+【样例说明】
+前两个样例均为题目中所举例的代码段。第三个样例中，在完整代码 S中与
+代码片段T 一样的片段为：ccd和dde</pre><hr/><h3>提示</h3><p><p>Q&lt;=3,|T|&lt;=100000,|S|&lt;=1000000</p></p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4462" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4462" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

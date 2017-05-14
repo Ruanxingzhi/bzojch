@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3960：[WF2011]Ancient Messages</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]Ancient Messages</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]Ancient Messages</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2011]Ancient Messages                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>为了了解早期文明，考古学家们经常会研究古代语言的书籍。有这样一种语言，它在3000多年前古老的埃及曾经被使用，是一种基于象形符号的语言。图1表示了六种象形符号以及它们的名字。在这个问题中，你需要写一个程序去辨识这6个字符。</div>
+<div><img src="../file/3960_0.jpg" width="819" height="282" alt="" /></div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入包括多组测试用例，每一组都描述了一个图像，这个图像包含一或多个从图1中选出的象形符号。这些图像以这样的方式给出：一系列黑色像素(用1表示)和白色像素(用0表示)组成的扫描线。在输入数据中，每个扫描线都是用十六进制的方法进行编码的。例如，八个像素的序列10011100(一个黑色像素，后面跟着两个白色像素，等等)可以表示为十六进制数字9c。在十六进制中，只会出现数字和小写字母a至f。每个测试用例的第一行包含两个整数，H和W：H(0&lt;H&le;200)是图像中扫描线的个数，W(0&lt;W&le;50)是每一行十六进制的字符数。接下来的H行从上到下给出了十六进制编码扫描线。输入的图像遵循以下规则：</div>
+<div>1. 图像仅包含图1所示的象形文字。</div>
+<div>2. 每个图像至少有一个有效的象形文字。</div>
+<div>3. 每个黑色像素都是一个有效象形文字的一部分。</div>
+<div>4. 每个象形文字由一个联通的黑色像素块组成，对于每个黑色像素，至少在其上下左右至少有一块黑色像素块。</div>
+<div>5. 象形文字互不接触，而且不存在一个象形文字在另一个的内部。</div>
+<div>6. 如果有两块黑色像素对角线相接处，则必然存在一块公共接触的黑色像素。</div>
+<div>7. 象形文字可能会扭曲，但是它的拓扑结构必然会和图1中所示的一个等价。(如果一个图像可以通过拉伸但不被毁坏的方式转化成另一个，则它们是拓扑等价的)</div>
+<div>最后一组测试用例后紧跟一行，包含两个0，表示输入结束。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每组测试用例，先输出它的编号，后面跟着一个字符串，表示每一个出现在图像中的象形文字，使用下面的编码：</div>
+<div>
+<div>Ankh: A</div>
+<div>Wedjat: J</div>
+<div>Djed: D</div>
+<div>Scarab: S</div>
+<div>Was: W</div>
+<div>Akhet: K</div>
+<div>对于每个输出的字符串，字符要按照字典序输出。请参照输出样例的格式。</div>
+<div>输入样例包含图2和图3所示的测试点。由于空间的限制，样例数据并没有显示完全。</div>
+<div><img src="../file/3960_0.jpg" width="165" height="201" alt="" /></div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>100 25
+0000000000000000000000000
+0000000000000000000000000
+...(省略50行)...
+00001fe0000000000007c0000
+00003fe0000000000007c0000
+...(省略44行)...
+0000000000000000000000000
+0000000000000000000000000
+150 38
+00000000000000000000000000000000000000
+00000000000000000000000000000000000000
+...(省略75行)...
+0000000003fffffffffffffffff00000000000
+0000000003fffffffffffffffff00000000000
+...(省略69行)...
+00000000000000000000000000000000000000
+00000000000000000000000000000000000000
+0 0</pre><hr/><h3>样例输出</h3><pre>Case 1: AKW
+Case 2: AAAAA</pre><hr/><h3>提示</h3><p><p>对于100%的数据 0＜H&le;200 0＜W&le;50</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3960" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3960" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

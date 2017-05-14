@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4388：JOI2012 invitation</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JOI2012 invitation</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JOI2012 invitation</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                JOI2012 invitation                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>澳洲猴举办了一场宴会，他想要邀请A个男生和B个女生参加，这A个男生从1到A编号，女生也从1到B编号。<br />
+现在澳洲猴知道n组朋友关系，这n组朋友关系是这样描述的：男生中编号为Pi到Qi的和女生中编号为Si到Ei的是好朋友，这也就是说(Qi-Pi+1)个男生之间互相是好朋♂友，(Si-Ei+1)个女生之间互相是好朋♂友，(Qi-Pi+1)个男生和(Si-Ei+1)个女生之间互相也是好朋友，总之他们互相是好友关系，并且互相的友好指数为Ti。<br />
+现在，澳洲猴只认识一个非常要好的男生C，接着他要进行一系列邀请，使得所有的人都参加这次宴会，邀请的过程是这样的：<br />
+选出现有集合中的一个人u（初始时只有C），然后利用这个人u的某个朋友关系i，邀请另一个不在现有集合中的人v进入现有集合，整个集合的幸福值增加Ti。重复直到所有人都进入现有集合，如果不存在将所有人全部邀请的方案，输出-1。<br />
+</p></p><hr/><h3>输入格式</h3><p><p>输入的第一行为A,B,C三个正整数。<br />
+接下来是n。<br />
+然后n行，每行5个正整数，Pi,Qi,Si,Ei,Ti，描述一组朋♂友关系。</p></p><hr/><h3>输出格式</h3><p><p>输出一行，最大的幸福指数。如果不存在全部邀请的方案，输出-1。</p></p><hr/><h3>样例输入</h3><pre>5 6 3 
+4 
+2 4 1 3 20 
+1 2 2 4 40 
+4 5 2 3 30 
+4 4 4 6 10
+</pre><hr/><h3>样例输出</h3><pre>280
+</pre><hr/><h3>提示</h3><p><p>样例1解释：<br />
+男3-&gt;男2 +20；<br />
+男2-&gt;男1 +40；<br />
+男2-&gt;女1 +20；<br />
+男2-&gt;女2 +40；<br />
+男2-&gt;女3 +40；<br />
+女2-&gt;女4 +40；<br />
+女3-&gt;男4 +30；<br />
+女3-&gt;男5 +30；<br />
+男4-&gt;女5 +10；<br />
+男4-&gt;女6 +10；<br />
+对于100%的数据 n&lt;=100000,1&lt;=A,B,Ti&lt;=1e9,Pi&lt;=Qi&lt;=A,Si&lt;=Ei&lt;=B,C&lt;=A。<br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4388" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4388" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

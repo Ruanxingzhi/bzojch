@@ -1,0 +1,205 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3920：Yuuna的礼物</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Yuuna的礼物</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Yuuna的礼物</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Yuuna的礼物                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：24MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>转眼就要到Karin的生日了！Yuuna她们想为她准备生日礼物！现在有许多礼物被排列成了一个一维序列，每个礼物都有一个价值。Yuuna对这个序列十分感兴趣。因此，你需要多次回答：在某个区间内出现次数第k1少的价值是多少，可能多个不同的价值出现次数均为第k1少，输出其中第k2小的，保证输入合法。注意内存限制。</div>
+<div>
+<div>例如：对于一个区间而言(当然不一定是有序的):</div>
+<div>1,2,3,4,5,5,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12</div>
+<div>权值<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数<span class="Apple-tab-span" style="white-space:pre">	</span></div>
+<div>1<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数第1少<span class="Apple-tab-span" style="white-space:pre">	</span>第1小</div>
+<div>2<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">		</span>第2小</div>
+<div>3<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">		</span>第3小</div>
+<div>4<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">		</span>第4小</div>
+<div>5<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数第2少<span class="Apple-tab-span" style="white-space:pre">	</span>第1小</div>
+<div>6<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">		</span>第2小</div>
+<div>7<span class="Apple-tab-span" style="white-space:pre">	</span>4<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数第3少<span class="Apple-tab-span" style="white-space:pre">	</span>第1小</div>
+<div>8<span class="Apple-tab-span" style="white-space:pre">	</span>4<span class="Apple-tab-span" style="white-space:pre">		</span>第2小</div>
+<div>9<span class="Apple-tab-span" style="white-space:pre">	</span>4<span class="Apple-tab-span" style="white-space:pre">		</span>第3小</div>
+<div>10<span class="Apple-tab-span" style="white-space:pre">	</span>4<span class="Apple-tab-span" style="white-space:pre">		</span>第4小</div>
+<div>11<span class="Apple-tab-span" style="white-space:pre">	</span>6<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数第4少<span class="Apple-tab-span" style="white-space:pre">	</span>第1小</div>
+<div>12<span class="Apple-tab-span" style="white-space:pre">	</span>10<span class="Apple-tab-span" style="white-space:pre">	</span>出现次数第5少<span class="Apple-tab-span" style="white-space:pre">	</span>第1小</div>
+<div>若k1=3，k2=2，代表询问这个区间里出现次数第3少的权值中第2小的，则应该输出8。</div>
+<div>若k1=5，k2=1，代表询问这个区间里出现次数第5少的权值中第1小的，则应该输出12。</div>
+<div>若k1=1，k2=3，代表询问这个区间里出现次数第1少的权值中第3小的，则应该输出3。</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包括一个整数n，代表序列的长度。</div>
+<div>第二行包括n个整数a1...an，代表该序列。</div>
+<div>第三行包括一个整数m，代表询问的次数。</div>
+<div>接下来m行，每行包括4个整数l，r，k1，k2，询问al...ar中出现次数第k1少的权值中第k2小的。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>对于每个询问，仅输出一行，包括一个整数，代表你的回答。</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>【输入样例1】
+10
+3 6 6 8 3 10 1 6 5 6
+10
+4 7 1 2
+5 7 1 1
+5 6 1 2
+2 6 2 1
+8 9 1 1
+6 9 1 2
+1 2 1 1
+1 4 2 1
+5 7 1 3
+2 6 1 3
+
+【输入样例2】
+20
+14 18 19 11 15 13 9 10 5 13 3 14 14 12 12 8 4 17 8 8
+20
+8 9 1 2
+6 19 2 2
+7 11 1 1
+8 12 1 4
+9 13 2 1
+14 15 1 1
+6 11 1 4
+5 7 1 3
+8 18 2 1
+2 4 1 3
+4 16 1 1
+5 14 1 5
+13 14 1 2
+15 15 1 1
+12 17 1 1
+3 12 2 1
+14 17 1 1
+6 13 1 4
+11 11 1 1
+2 4 1 3</pre><hr/><h3>样例输出</h3><pre>【输出样例1】
+3
+1
+10
+6
+5
+5
+3
+6
+10
+10
+
+【输出样例2】
+10
+12
+3
+13
+14
+12
+10
+15
+12
+19
+3
+12
+14
+12
+4
+13
+4
+10
+3
+19</pre><hr/><h3>提示</h3><p><div>【数据范围】</div>
+<div>1&lt;=n&lt;=40000，</div>
+<div>1&lt;=ai&lt;=n<span class="Apple-tab-span" style="white-space:pre">	</span>(1&lt;=i&lt;=n)，</div>
+<div>1&lt;=m&lt;=40000，</div>
+<div>1&lt;=l&lt;=r&lt;=n，</div>
+<div>保证k1,k2合法。</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3920" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3920" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

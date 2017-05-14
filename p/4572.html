@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4572：[Scoi2016]围棋</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2016]围棋</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2016]围棋</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Scoi2016]围棋                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>近日，谷歌研发的围棋AI&mdash;AlphaGo以4:1的比分战胜了曾经的世界冠军李世石，这是人工智能领域的又一里程碑。</div>
+<div>与传统的搜索式AI不同，AlphaGo使用了最近十分流行的卷积神经网络模型。在卷积神经网络模型中，棋盘上每一</div>
+<div>块特定大小的区域都被当做一个窗口。例如棋盘的大小为5&times;6，窗口大小为2&times;4，那么棋盘中共有12个窗口。此外</div>
+<div>，模型中预先设定了一些模板，模板的大小与窗口的大小是一样的。下图展现了一个5&times;6的棋盘和两个2&times;4的模板</div>
+<div>。对于一个模板，只要棋盘中有某个窗口与其完全匹配，我们称这个模板是被激活的，否则称这个模板没有被激活</div>
+<div>。例如图中第一个模板就是被激活的，而第二个模板就是没有被激活的。我们要研究的问题是：对于给定的模板，</div>
+<div>有多少个棋盘可以激活它。为了简化问题，我们抛开所有围棋的基本规则，只考虑一个n&times;m的棋盘，每个位置只能</div>
+<div>是黑子、白子或无子三种情况，换句话说，这样的棋盘共有3n&times;m种。此外，我们会给出q个2&times;c的模板。我们希望</div>
+<div>知道，对于每个模板，有多少种棋盘可以激活它。强调：模板一定是两行的。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>输入数据的第一行包含四个正整数n，m，c和q，分别表示棋盘的行数、列数、模板的列数和模板的数量。随后2&times;q</div>
+<div>行，每连续两行描述一个模板。其中，每行包含c个字符，字符一定是&lsquo;W&rsquo;，&lsquo;B&rsquo;或&lsquo;X&rsquo;中的一个，表示白子、</div>
+<div>黑子或无子三种情况的一种。N&lt;=100,M&lt;=12,C&lt;=6,Q&lt;=5</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出应包含q行，每行一个整数，表示符合要求的棋盘数量。由于答案可能很大，你只需要输出答案对1,000,000,007取模后的结果即可。</p></p><hr/><h3>样例输入</h3><pre>3 1 1 2 
+B 
+W 
+B 
+B</pre><hr/><h3>样例输出</h3><pre>6
+5</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4572" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4572" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

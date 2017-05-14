@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3272：Zgg吃东西</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zgg吃东西</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Zgg吃东西</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Zgg吃东西                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zgg是一个吃货。他面前有一堆的食品。不妨把它看成一个序列，序列从1~N编号，第i个位置上有美味度为A[i]的食品。Zgg有很多只手(为什么他有这么多手？我也不知道)。他的手的作用，就是抓起一段连续序列中的食物，并且不限长度。总共有M个时刻，在每个时刻，可能会有一些奇怪的人将他面前的某一个位置的食物美味度改变。或者zgg突然心血来潮，想要用他的其中k只手来抓取某段区间中的食物。这时候，他就需要你告诉他，在用不超过k只手的情况下，他能获得的最大美味度是多少。</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一行一个整数N，表示食品的个数，即序列长度。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第2行有N个数依次表示A[i]。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">第三行一个整数M，表示有M个时刻。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">接下来的M行，每行有形如0 i val</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">来表示有人将第i位置的食物的美味度改成了val</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">或者1 l r k，来表示zgg想知道，他只用k只手，在[l,r]这段区间内抓取，能获得的最大美味度。</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每次形如1 l r k的询问你都要输出一个数，表示最大美味度。</span></div></p><hr/><h3>样例输入</h3><pre>9
+9 -8 9 -1 -1 -1 9 -8 9
+5
+1 1 9 1
+1 1 9 2
+1 4 6 3
+0 3 -8
+1 1 9 1
+</pre><hr/><h3>样例输出</h3><pre>17
+25
+0
+10
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于100%的数据 N,M&lt;=100000 ,1&lt;=k&lt;=20.l&lt;=l&lt;=r&lt;=n.数值的绝对值不会超过500.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zgg是可以有手空闲的&hellip;</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3272" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3272" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

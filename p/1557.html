@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1557：GC转移</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">GC转移</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">GC转移</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                GC转移                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>撞啊撞，撞啊撞，DP终于在规定时间内撞完了所有的石头。轰的一声，一扇厚重的石门上升了，露出一个门，大家激动地冲了进去，却发现是另外一个巨大的迷宫。。。。。。
+又经过N轮天翻地覆的巨响之后，DP终究还是把头转昏了，幸好的是他撞完了最后一个迷宫。在DP昏厥之际，也正是谜题解开之际。就在最后的一个小石洞里面，记录了这里N光年前的历史。原来在那个时候，也发生了一次巨大的变动，当时的KD同样是为了维护世界的和平而战死沙场。后来它的朋友们十分的悼念它，所以其中一部分便开始进行对自然法术的研究，经过了漫长的岁月之后，复活圣地终于问世，可惜的是KD的残骸早就不知道丢哪去了。
+因为自然的力量过于强大，所以研究者不得不将它封印在地底，经历天地轮回之后，希望它在需要被用到的时候再次被召唤出来，避免悲剧的再次发生。
+当知道有复活圣地这种东西存在的时候，大伙都伴随着惊讶和兴奋，立即将KD和其他阵亡战士的GC抬出地面，此时地面早已发生了翻天覆地的变化，战争过后破烂的土地已不复存在，只能看见由光构成的网格状平台覆盖着地面，圣地中心清晰可见。但是自然的力量实在过于强大，导致根本无法靠生物做功而将盒子送至中心，爱因斯坦理论空前乏力，牛顿力学受到极大的挑战。难道只能依靠说明中介绍的控制地来操纵自然力量转移盒子了么，但是它是什么，它在哪，大伙一脸茫然。
+话说另外一处，临时组成的寻找F小队还在墓地内四处搜索，却一无所获。而在地面裂开的时候，F就已落入了墓地层下层的地下水系了。此时，F在某处被冲上了岸，碰巧的是，正好冲到了传说中的控制地。F醒来之后，发现四周死寂一片，不得不朝仅有的一处光源靠近。而光源处，除了一个奇怪的控制器以外什么都没有，别无选择，F只能一头雾水地按照控制地的说明进行操作，期望能找到回到地面的方法。
+以KD盒子所在的格子为中心，控制地的投光屏上建立了平面直角坐标系，圣地中心在X，Y处。现在的任务就是使用各种咒语，将KD的盒子移动到圣地中心。由于这个控制器年代太久远了，说明上的字被自然所磨损，所以F现在能看清楚的只有X咒语和十咒语。
+每念一次咒语，可以选择某坐标格为中心，扩展出一个长度为L的X形状或者十形状，并且顺时针或者逆时针旋转90度，每个格子上的东东会被一起旋转。详细描述如图，红色格子为中心，4个方向扩展出的格子数包括中心格子为长度，箭头表示物品的转移路径。
+为了尽快完成任务找到回地面的方法，所以F想知道，至少要念多少个咒语才能完成任务，但是似乎扳蹄子数不出来，所以只好求助于过去世界的你。
+</p><hr/><h3>输入格式</h3><p>第一行一个正整数T，表示一共有T组需要计算的坐标及长度。
+接下来T行每行3个整数X、Y、L，表示圣地中心坐标为X，Y，咒语中扩展出的X形状和十形状的长度为L，当然咒语不可能白念，所以L>1。
+</p><hr/><h3>输出格式</h3><p>对于每组输入数据输出一个整数ANS，表示至少要念ANS个咒语才能完成任务。
+如果无法完成任务，请输出“Poor F！”
+</p><hr/><h3>样例输入</h3><pre>3
+12 20 5
+14 22 5
+0 1 2
+</pre><hr/><h3>样例输出</h3><pre>4
+5
+Poor F！
+</pre><hr/><h3>提示</h3><p>对于10%的数据，X、Y、L的绝对值<=10^2，T<=5；
+    对于40%的数据，X、Y、L的绝对值<=10^16，T<=100；
+    对于100%的数据，X、Y、L的绝对值<=10^500，T<=1000；
+注意事项：
+每个数都没有前导0。
+
+</p><hr/><h3>题目来源</h3><p>HNOI2009集训Day8</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1557" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1557" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

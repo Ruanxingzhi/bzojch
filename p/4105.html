@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4105：[Thu Summer Camp 2015]平方运算</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Thu Summer Camp 2015]平方运算</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Thu Summer Camp 2015]平方运算</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Thu Summer Camp 2015]平方运算                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><img src="../file/4105_0.jpg" width="576" height="134" alt="" /></p>
+<div></div></p><hr/><h3>输入格式</h3><p><p>第一行有三个整数N，M，p，分别代表序列的长度、平方操作与询问操作的总次数以及在平方操作中所要模的数。</p>
+<div></div>
+<div>接下来一行N个数代表一开始的序列{X1,X2,...,XN}。</div>
+<div></div>
+<div>接下来M行，每行三个整数op,l,r。其中op代表本次操作的类型。若op=0，代表这是一次平方操作，平方的区间为[l,r]；如果op=1，代表这是一次询问操作，询问的区间为[l,r]。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>对于每次的询问操作，输出一行代表这段区间内数的总和。注意：答案没有对任何数取模。</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>3 3 11
+1 2 3
+1 1 3
+0 1 3
+1 1 3</pre><hr/><h3>样例输出</h3><pre>6
+14</pre><hr/><h3>提示</h3><p><p>&nbsp;对于100%的数据，&forall;i,Xi&isin;[0,p),l,r&isin;[1,n]</p>
+<div>N，M，p的范围如下：</div>
+<div></div>
+<div>编号<span class="Apple-tab-span" style="white-space:pre">	</span> N<span class="Apple-tab-span" style="white-space:pre">	</span> M<span class="Apple-tab-span" style="white-space:pre">	</span> p</div>
+<div>1<span class="Apple-tab-span" style="white-space:pre">	</span> 1000<span class="Apple-tab-span" style="white-space:pre">	</span> 1000<span class="Apple-tab-span" style="white-space:pre">	</span> 233</div>
+<div>2<span class="Apple-tab-span" style="white-space:pre">	</span> 1000<span class="Apple-tab-span" style="white-space:pre">	</span> 1000<span class="Apple-tab-span" style="white-space:pre">	</span> 2332</div>
+<div>3<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 5</div>
+<div>4<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 8192</div>
+<div>5<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 23</div>
+<div>6<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 45</div>
+<div>7<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 37</div>
+<div>8<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 4185</div>
+<div>9<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 5850</div>
+<div>10<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 2975</div>
+<div>11<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 2542</div>
+<div>12<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 55000<span class="Apple-tab-span" style="white-space:pre">	</span> 2015</div>
+<div>13<span class="Apple-tab-span" style="white-space:pre">	</span> 60000<span class="Apple-tab-span" style="white-space:pre">	</span> 60000<span class="Apple-tab-span" style="white-space:pre">	</span> 2003</div>
+<div>14<span class="Apple-tab-span" style="white-space:pre">	</span> 65000<span class="Apple-tab-span" style="white-space:pre">	</span> 65000<span class="Apple-tab-span" style="white-space:pre">	</span> 2010</div>
+<div>15<span class="Apple-tab-span" style="white-space:pre">	</span> 70000<span class="Apple-tab-span" style="white-space:pre">	</span> 70000<span class="Apple-tab-span" style="white-space:pre">	</span> 4593</div>
+<div>16<span class="Apple-tab-span" style="white-space:pre">	</span> 75000<span class="Apple-tab-span" style="white-space:pre">	</span> 75000<span class="Apple-tab-span" style="white-space:pre">	</span> 4562</div>
+<div>17<span class="Apple-tab-span" style="white-space:pre">	</span> 80000<span class="Apple-tab-span" style="white-space:pre">	</span> 80000<span class="Apple-tab-span" style="white-space:pre">	</span> 1034</div>
+<div>18<span class="Apple-tab-span" style="white-space:pre">	</span> 85000<span class="Apple-tab-span" style="white-space:pre">	</span> 85000<span class="Apple-tab-span" style="white-space:pre">	</span> 5831</div>
+<div>19<span class="Apple-tab-span" style="white-space:pre">	</span> 90000<span class="Apple-tab-span" style="white-space:pre">	</span> 90000<span class="Apple-tab-span" style="white-space:pre">	</span> 9905</div>
+<div>20<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 100000<span class="Apple-tab-span" style="white-space:pre">	</span> 9977</div></p><hr/><h3>题目来源</h3><p>鸣谢佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4105" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4105" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

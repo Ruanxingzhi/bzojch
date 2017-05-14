@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3583：杰杰的女性朋友</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">杰杰的女性朋友</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">杰杰的女性朋友</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                杰杰的女性朋友                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">　　杰杰是魔法界的一名传奇人物。他对魔法具有深刻的洞察力，惊人的领悟力，以及令人叹为观止的创造力。自从他从事魔法竞赛以来，短短几年时间，就已经成为世界公认的实力最强的魔法选手之一。更让人惊叹的是，他几乎没有借助外界力量，完全凭借自己的努力达到了普通人难以企及的高度。在最近的世界魔法奥林匹克竞赛上，他使用高超的魔法本领，一路过关斩将，在最后时刻一举击败了前冠军&ldquo;旅行者&rdquo;，获得了魔法界最高的荣耀：女神奖杯！女神奖杯可不是一个普通的奖杯，她能够帮杰杰实现一个愿望。<br />
+　　杰杰本着实事求是的态度，审时度势，向女神奖杯提出了自己的愿望：想要一个女性朋友。</span></p>
+<p><span style="font-size: medium">　　杰杰的愿望实现了，可是女性朋友却和他不在一个城市。杰杰想要知道：如果要到达女性朋友的所在城市，有多少种方案供他选择？<br />
+　　杰杰所在的世界有n个城市，从1到n进行编号。任意两个城市都通过有向道路连接。每个城市u有k个入点权：in[u][1],in[u][2]...in[u][k]，有k个出点权：ou[u][1],ou[u][2]...ou[u][k]。对于任意两个城市(u,v)（u可以等于v），u到v的道路条数为(ou[u][1]*in[v][1]+ou[u][2]*in[v][2]+...+ou[u][k]*in[v][k])条。杰杰有m次询问，每次询问由三元组(u,v,d)构成，询问从u城市通过不超过d条道路到达v城市的方案数。<br />
+　　为了温柔的杰杰和他的女性朋友的美好未来，帮助他解答这个问题吧。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">　　第一行读入两个正整数n，k，含义如题所示。</font><span style="font-size: medium">接下来n行每行2k个整数，第i行代表第i个城市，前k个整数代表i号城市的出点权，后k个整数代表i号城市的入点权：<br />
+　　ou[i][1],ou[i][2],&hellip;,ou[i][k],in[i][1],in[i][2],&hellip;,in[i][k]<br />
+　　接下来一个整数m，表示m个询问。<br />
+　　接下来m行，每行三个整数:u,v,d，询问从u城市通过不超过d条道路到达v城市的方案数。<br />
+　　将每个方案所经过的道路，按顺序写成一个序列（序列可以为空）。两个方案不同，当且仅当他们的道路序列不完全相同。<br />
+</span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><br />
+<font size="4">　　对于每个询问，输出一个方案数。由于答案可能太大，输出其除以1000000007后的余数。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>
+5 2
+2 5 4 3
+7 9 2 4
+0 1 5 2
+6 3 9 2
+2147483647 1000000001 233522 788488
+10
+1 1 0
+2 2 1
+2 4 5
+4 3 10
+3 4 50
+1 5 1000
+3 5 1000000000
+1 2 500000000
+4 5 2147483647
+3 1 2147483647
+</pre><hr/><h3>样例输出</h3><pre>1
+51
+170107227
+271772358
+34562176
+890241289
+8516097
+383966304
+432287042
+326522835
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">数据规模和约定<br />
+n&lt;=1000<br />
+k&lt;=20<br />
+m&lt;=50</span></p>
+<p><span style="font-size: medium">　　保证1&lt;=u, v&lt;=n, 其它所有读入为不超过2147483647的非负整数<br />
+</span></p></p><hr/><h3>题目来源</h3><p>By 佚名提供</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3583" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3583" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

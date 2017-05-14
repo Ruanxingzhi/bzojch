@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2814：tree</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">tree</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">tree</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                tree                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>给出一棵N 个点的树，每个点有两层，每层有权值和颜色（黑白） 。要求支持以下操作。&nbsp;</div>
+<div>1. Cover s t color 将s到t的路径上的点的两层的颜色全部置为 color(0 白1 黑)</div>
+<div>2. CVal index layer val 将index号点的 layer 层的权值修改为 val</div>
+<div>3. CColor index layer color 将 index号点的 layer 层的颜色修改为 color</div>
+<div>4. QMax s t 询问s到 t的路径上的白色最大权值和路径的权值（任意白色层为起点，每</div>
+<div>次只能往相同点不同层或者相邻点同一层上移动，每个点的每一层最多走一次，路径经</div>
+<div>过的层必须都是白色） ，若 s到 t上的路径没有白点则输出[Bad Request.]</div>
+<div>5. QLen s t 询问s到t的路径上的白色最大权值和路径的长度，若 s到 t的路径上没有白</div>
+<div>点则输出0</div>
+<div>初始树上权值均为 1，颜色均为白色。</div>
+<div>N&lt;=5W,Q&lt;=5W,1&lt;=val&lt;=1K,0&lt;=color,layer&lt;=1 所有数据不超过longint范围。 .</div>
+</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行一个数N，接下来N*2-2个数s，t，代表s与t之间有连边。第N+1行一个数Q，表示操作数。接下来Q行每行一个操作。</div></p><hr/><h3>输出格式</h3><p><div>对于每次 QMax，QLen输出对应答案，用换行符分隔。</div></p><hr/><h3>样例输入</h3><pre>6 
+1 2 2 4 2 5 1 3 3 6 
+7 
+CVal 1 0 5 
+CVal 1 1 3 
+CColor 1 0 1 
+CVal 2 0 5 
+CVal 3 0 3 
+QMax 5 6 
+QLen 5 6</pre><hr/><h3>样例输出</h3><pre>17
+9</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2814" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2814" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

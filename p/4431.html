@@ -1,0 +1,158 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4431：[Nwerc2015]Hole in One一杆进洞</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015]Hole in One一杆进洞</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015]Hole in One一杆进洞</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Nwerc2015]Hole in One一杆进洞                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1024MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Janine recently went to her local game store and bought &ldquo;Hole in One&rdquo;, a new mini-golf game for her computer. As indicated by the name, the objective of the game is to shoot a ball into a hole using just one shot. The game also borrows elements from brick breaker style games: in the playing field, several walls are placed that will be destroyed upon being hit by the ball. The score of a successful shot depends on the number of destroyed walls, so Janine wonders: what is the maximum number of walls that can be hit while performing a &ldquo;Hole in One&rdquo;?</div>
+<div></div>
+<div>For the purposes of this problem you can think of the playing field as a cartesian plane with the initial position of the ball at the origin. The walls are non-intersecting axis-parallel line segments in this plane (i.e., parallel to either the x axis or the y axis). The diameter of the ball is negligible so it is represented as a single point.</div>
+<div></div>
+<div>Figure 1: Illustration of the first sample input: The ball first bounces off two walls at points 1 and 2. When it passes point 3 the wall has already vanished.</div>
+<div>Whenever the ball hits a wall, two things happen:</div>
+<div></div>
+<div>The direction of the ball changes in the usual way: the angle of incidence equals the angle of reflection.</div>
+<div>The wall that the ball touched is destroyed. Following common video game logic, no rubble of the wall remains; it will be as though it vanished.</div>
+<div>The behaviour of the ball is also affected by the power of the shot. In particular, an optimal shot may need to first roll over the hole, then hit some more walls, and only later drop into the hole.</div>
+<div></div>
+<div></div>
+<div>The input consists of:</div>
+<div>one line with one integer n (0&le;n&le;8), the number of walls;</div>
+<div>one line with two integers x and y, the coordinates of the hole;</div>
+<div>nn lines each with four integers x1, y1, x2, and y2 (either x1=x2, or y1=y2, but not both), representing a wall with end points (x1,y1) and (x2,y2).</div>
+<div>The hole is not at the origin and not on a wall. The walls do not touch or intersect each other. No wall lies completely on the x axis or the y axis. All coordinates in the input are integers with absolute value at most 1000.</div>
+<div></div>
+<div></div>
+<div>If there is no way to shoot the ball such that it reaches the hole, print &ldquo;impossible&rdquo;. Otherwise, print the maximum number of walls that can be destroyed in a single &ldquo;Hole in One&rdquo; shot.</div>
+<div></div>
+<div>珍妮最近去当地的游戏商店买了&ldquo;一杆进洞&rdquo;，一个新的迷你高尔夫电脑游戏。正如名称所示，这个游戏的目标是，将球只用一击击进洞里。游戏还借鉴了打砖块风格的游戏元素：在场上，放置了一些墙，它们被球击中就会被摧毁。一个成功的击球的得分取决于破坏墙的数量，所以珍妮不禁要问：在一次&ldquo;一杆进洞&rdquo;中能够摧毁的最多的墙数量是多少？</div>
+<div></div>
+<div>对于这个问题的意向，你可以认为，比赛场地为笛卡尔坐标平面，球的最初位置在原点。墙壁为在该平面中互不相交且与坐标轴平行的线段（即平行于x轴或y轴）。球的直径非常小以至于把它当成一个点。</div>
+<div></div>
+<div>&nbsp;</div>
+<div>图1：第一个样例输入的插图：球首先经过1,2号点，并在3号点时穿过了被摧毁的墙。</div>
+<div><img src="../file/4431_0.png" width="467" height="241" alt="" /></div>
+<div>每当球碰到一堵墙，会发生：</div>
+<div>球的方向以通常的方式改变：入射角等于反射角。</div>
+<div>被球触碰的墙被破坏。 游戏逻辑规定，没有墙的废墟存在，认为它消失了。</div>
+<div>球的行为也受到击球的力影响。特别的是，最佳的击球可能需要将鼠标放在洞上，然后摧毁一些墙壁，并且只是延迟入洞。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>一行一个整数n（0&le;n&le;8），墙壁的数量。</div>
+<div>一行两个整数x和y，洞的坐标。</div>
+<div>n行，每行各有四个整数x1，y1，x2与y2（x1 = x2或y1 = y2，但不会满足两者），表示墙壁的两个端点。</div>
+<div>洞不会在原点也不会在墙上。墙壁不会互相接触或交叉。没有墙会完全在x轴或y轴上。输入的所有的坐标都是整数且绝对值最大1000。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>如果没有办法一击入洞，输出&ldquo;impossible&rdquo;。否则，输出在一次&ldquo;一杆进洞&rdquo;中能够摧毁的最多的墙的数量。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>Sample Input 1	
+3
+4 2
+1 1 1 2
+2 1 2 2
+3 1 3 2 
+Sample Input 2
+1
+2 0
+1 -1 1 1 
+Sample Input 3
+2
+-2 4
+2 4 2 2
+0 6 -2 6
+</pre><hr/><h3>样例输出</h3><pre>Sample Output 1
+2
+Sample Output 2
+Impossible
+Sample Output 3
+2
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4431" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4431" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

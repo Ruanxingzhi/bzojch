@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3588：fx</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">fx</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">fx</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                fx                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">　　对于一个n位的十进制数x（AnAn-1&hellip;&hellip;A1），我们定义它的权重为：<br />
+　　F(x)=An*2n-1+An-1*2n-2+&hellip;&hellip;+A1*20<br />
+　　现在，给你两个十进制数A和B，请计算出在闭区间[0, B]之中，有多少个数x的权重不大于A的权重，即F(x)&lt;=F(A)。由于答案可能很大，你只需要输出答案对1000000007（109 + 7）取模的结果即可。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">　　第一行一个正整数T，表示测例的个数。<br />
+　　随后T行，每行描述一个测例，包含两个非负整数A、B，之间用空格隔开。含义见问题描述。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">　　对于每个测例，单独输出一行&rdquo;Case #t: ans&rdquo;，其中t表示测例编号，从1开始递增，ans表示该组测例的答案（对1000000007取模后的结果）。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>3
+0 100
+1 10
+5 100
+</pre><hr/><h3>样例输出</h3><pre>Case #1: 1
+Case #2: 2
+Case #3: 13
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">样例说明<br />
+　　对于Case #3，符合条件的数有0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 20, 21, 100，共13个。</span></p>
+<p><span style="font-size: medium">　　//样例描述有修改，请注意！<br />
+数据规模及约定<br />
+　　对于20%的数据，A, B &lt;= 10^9；<br />
+　　对于30%的数据，A, B &lt;= 10^18；</span></p>
+<p><span style="font-size: medium">　　对于100%的数据，A,B &lt;= 10200，T&lt;=5。<br />
+</span></p></p><hr/><h3>题目来源</h3><p>By 佚名提供</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3588" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3588" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

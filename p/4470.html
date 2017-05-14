@@ -1,0 +1,172 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4470：[Jsoi2013]公交系统</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2013]公交系统</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2013]公交系统</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Jsoi2013]公交系统                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>【故事背景】 <br />
+几年前南京因为修地铁的缘故，很多公交车线路都被迫改变了。JYY为此很<br />
+苦恼：试想一下，当你坐上一辆公交车，却发现这辆公交车驶向了与你记忆完全<br />
+不同的方向。于是 JYY 打算开发一套可以利用手机进行实时更新的公交信息<br />
+应用， 所有安装了这款应用的手机都可以向数据库发送最新的公交线路更改情况，<br />
+同时也可以通过应用向数据库查询自己所需要的信息。 <br />
+【问题描述】 <br />
+南京一共有 N 个公交站点，分别从1到 N 编号。两个不同的站点 x和y之间<br />
+可能会有公交车直接运营（不经过别的站点直接从 x 开到 y） ，我们将这种关系<br />
+看作一条无向边（公交线路显然是双向的，我们既可以从 x坐公交车到 y，也可<br />
+以从y坐车到x） 。 <br />
+任意时刻任何公交站点都至多只会连有 2条边，并且所有这些边是不会形成<br />
+环的（公交车很少会出现环线，所以这些公交线路应该形成一些不相交的链，链<br />
+的两端分别对应两个终点站）。 <br />
+JYY 的 IOS 应用按照时间顺序一共收到了 Q 条交互信息，每一条交互信息<br />
+都是下列五种信息之一： <br />
+1)&nbsp; add x y z <br />
+表示当前时刻，站点 x 到站点 y 之间有新增了一班公交车直接运营，并<br />
+且在当前路况下，公交车所需要的运营时间为 z； <br />
+2)&nbsp; del x y <br />
+表示由于某种原因，原本在站点 x 和站点 y 之间直接运营的公交车停运<br />
+了； <br />
+3)&nbsp; change x y z <br />
+表示由于路况情况改变，站点 x 到站点 y 之间直接运营的公交车当前的<br />
+运营时间为 z； <br />
+4)&nbsp; reach x y <br />
+表示某个用户询问从站点 x坐车能不能坐到站点y； <br />
+5)&nbsp; dest x y <br />
+表示某个用户从站点 x 上车，坐上了当前正开往站点 y 的公交车。该用<br />
+户想知道，他到达 y 后继续乘坐可乘坐的线路(已经乘坐过的线路不能重<br />
+复乘坐)，最终能够到达的终点站是哪一站？从站点 x 开始需要多久才能<br />
+开到终点站？ <br />
+由于用户难免会提交错误的信息，所以 JYY希望他的软件对于错误的信息也<br />
+要能够做出合理的反应： <br />
+1)&nbsp; 对于 add 信息，如果加入边(x,y)之后，任何站点连接的边数均不超过 2<br />
+并且图中没有环，JYY 则认为这个信息是正确的，并根据这个信息更新<br />
+数据库中的公交线路数据，否则JYY会无视这个错误信息； <br />
+2)&nbsp; 对于del和change信息，如果站点x和站点y之间有公交车直接运营， JYY<br />
+则认为这条信息是正确的，并更新数据库，否则 JYY 则会无视这个错误<br />
+信息； <br />
+3)&nbsp; 对于dest 信息，如果站点x不能到达站点 y，JYY也会认为这一条询问信<br />
+息是错误的。 <br />
+JYY希望你能够帮助他完成这一个公交信息应用。</p></p><hr/><h3>输入格式</h3><p><p>输入数据的第一行包含两个整数 N 和Q。 <br />
+接下来 Q行，每行对应一个 JYY需要处理的信息。 <br />
+在收到第一条信息之前，没有任何公交车在运营。</p></p><hr/><h3>输出格式</h3><p><p>输出 Q行，每行都对应一个输入文件中的信息，具体内容如下： <br />
+1)&nbsp; 如果输入的信息是错误的，输出&ldquo;ERROR&rdquo;； <br />
+2)&nbsp; 对于一个正确的 add，del，change信息，输出&ldquo;OK&rdquo;； <br />
+3)&nbsp; 对于一个正确的 dest 信息，输出一行两个整数，分别为终点站的编号和<br />
+开到终点站所需要的时间； <br />
+4)&nbsp; 对于reach 信息，如果用户询问的两个公交站点相互可达，输出&ldquo;YES&rdquo;，<br />
+否则输出&ldquo;NO&rdquo;。 <br />
+注意：输入输出数据很大，请使用快速的输入输出方式。</p></p><hr/><h3>样例输入</h3><pre>6 10
+add 1 2 1
+add 2 1 1
+add 3 2 1
+add 4 5 2
+reach 4 6
+dest 1 5
+del 5 6
+add 1 4 2
+dest 2 3
+dest 3 2</pre><hr/><h3>样例输出</h3><pre>OK
+ERROR
+OK
+OK
+NO
+ERROR
+ERROR
+OK
+3 1
+5 6
+ </pre><hr/><h3>提示</h3><p><p>2 &lt; =&nbsp; N &lt; =&nbsp; 10^5 ,2 &lt; =&nbsp; Q &lt; =&nbsp; 2&times;10^5，任意信息均保证X&ne;Y，<br />
+1 &lt; = X,Y&lt;=N,1 &lt;=Z&lt;=10^4。</p></p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4470" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4470" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

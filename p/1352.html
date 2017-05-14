@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1352：[Baltic2006]RLE COMPRESSION</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2006]RLE COMPRESSION</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2006]RLE COMPRESSION</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Baltic2006]RLE COMPRESSION                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>有一种很简单的压缩方式，用于表示连续的若干个相同的字符，例如aaaaa可以压缩成#a5。其中#表示下面的部分是压缩的，a是重复字符，5是重复次数。在这个问题里，字符集也用整数代替，从0到n-1；#也用0到n-1中的一个数表示，初始时都用0表示，但是可以变；重复次数也在0到n-1之间。也就是说原先的一个数列压缩以后，还是由0到n-1范围内的数构成的数列。
+压缩的规定如下：
+1.
+除了#以外的所有数，都表示原本的字符。
+2.
+如果当前#用数e表示，e如果出现了，那么
+a)
+如果后面紧跟e k，那么说明编号为e的字符重复k+1次
+b)
+如果后面紧跟b 0，b不是e，说明从这里往后#用数b来表示
+c)
+如果后面紧跟b k，b不是e且k>0，则表示编号为b的字符重复k+3次
+例如当n=4时，原本的序列是1002222223333303020000，经过压缩后的一种表示方式是10010230320100302101。
+给出一个压缩后的数列，求原数列的哪个压缩数列长度最小，并输出该压缩数列。
+</p><hr/><h3>输入格式</h3><p>第一行是n，2<=n<=100000。
+第二行是m，表示压缩数列的长度，1<=m<=2000000。
+接下来的一行中有m个整数，都在0到n-1之间，表示一个压缩数列。
+</p><hr/><h3>输出格式</h3><p>第一行输出同样表示原数列的最短压缩数列的长度。
+</p><hr/><h3>样例输入</h3><pre>输入1
+4
+20
+1 0 0 1 0 2 3 0 3 2 0 1 0 0 3 0 2 1 0 1
+输入2
+14
+15
+10 10 10 0 10 0 10 10 13 10 10 13 10 10 13
+</pre><hr/><h3>样例输出</h3><pre>输出1
+19
+
+输出2
+9
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1352" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1352" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

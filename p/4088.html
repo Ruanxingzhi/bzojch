@@ -1,0 +1,207 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4088：[Sdoi2015]立体图</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2015]立体图</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2015]立体图</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2015]立体图                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>小渊是个聪明的孩子，他经常会给周围的小朋友们讲些自己认为有趣的内容。最近，他准备给小朋友们讲解彩色水</div>
+<div>平光源照射下的立体图，并请你帮他在平面上画出来。小渊有一块面积为m*n的矩形区域，上面有m*n个边长为1的</div>
+<div>格子，每个格子上堆了一些同样大小的积木（积木的长宽高都是1）。为了方便阐述，我们假设这块区域是坐北朝</div>
+<div>南的，下面我们给出一个例子。</div>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img src="../file/4088_0.png" width="740" height="520" alt="" /></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><span style="text-indent: 2em; line-height: 23px;"><font face="sans-serif" size="2">小渊想请你打印出这些格子的立体图。我们定义每个积木为如下格式，并且不会做任何翻转旋转，只会严格以这一</font></span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">种形式摆放（左侧是应该打印出来的图样，右侧为对应每一个位置符号的十进制ASCII，其中ASCII为32的符号为空</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img src="../file/4088_1.png" width="740" height="266" alt="" /></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><span style="text-indent: 2em; line-height: 23px;"><font face="sans-serif" size="2">在良好的光学环境下，小渊将T束平行光同时照射在这些积木上。这些平行光首先满足一定是红绿蓝三基色之一，</font></span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">其次入射角度满足：与x轴y轴的夹角度数均为45的倍数；且与z轴正方向的夹角或为45度，或为0度，或为315度。</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">具体来说，我们最多会考虑9个方向的不同平行光，它们的入射方向可以被描述为：</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">&nbsp; &nbsp;西北方45度仰角 &nbsp;正北方45度仰角 &nbsp;东北方45度仰角</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">&nbsp; &nbsp;正西方45度仰角 &nbsp;垂直从上入射光 &nbsp;正东方45度仰角</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">&nbsp; &nbsp;西南方45度仰角 &nbsp;正南方45度仰角 &nbsp;东南方45度仰角</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"><font face="sans-serif" size="2"><span style="line-height: 23px;">对于每一个单位积木来说，可以打印出来的三个表面被分为12个小三角形，如下图所示（下图中用符号0,1,2,。。</span></font></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-indent: 2em;"></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img src="../file/4088_2.png" width="425" height="416" alt="" /></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><span style="font-family: Arial, Verdana, sans-serif; font-size: 12px;">&nbsp;</span><span style="line-height: 23px; text-indent: 2em;">红绿蓝三基色分别用字母RGB来表示。</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">而二次叠加后的三种颜色青黄紫，分别用YCP来表示。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于三次叠加后的颜色，也就是白色，用W来表示。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"></p></p><hr/><h3>输入格式</h3><p><div>第一行有两个正整数m和n，表示区域有m行n列。之后m行，依次由远及近描述了每一行的情况。每一行给出n个正整</div>
+<div>数，表示第i行第j列中有堆放了多少积木。之后3行，每行三个字符，描述了9个对应方向（与地图描述方向相同）</div>
+<div>的光照颜色。其中每一个字符或者为RGB中之一，表示对应的颜色。或者为*，表示没有照射光。这九个方向依次是</div>
+<div>：</div>
+<div>&nbsp; &nbsp;西北方45度仰角 &nbsp;正北方45度仰角 &nbsp;东北方45度仰角</div>
+<div>&nbsp; &nbsp;正西方45度仰角 &nbsp;垂直从上入射光 &nbsp;正东方45度仰角</div>
+<div>&nbsp; &nbsp;西南方45度仰角 &nbsp;正南方45度仰角 &nbsp;东南方45度仰角</div></p><hr/><h3>输出格式</h3><p><div>输出给出了打印后的效果。其中要求输出结果不含前导空行，结尾也没有额外空行。输出的第一列不能全是空格，</div>
+<div>且每一行末尾也没有额外空格。</div></p><hr/><h3>样例输入</h3><pre>#1
+2 2
+2 1
+1 1
+R**
+***
+**G
+
+#2
+3 4
+1 1 2 1
+1 2 1 2
+2 1 2 1
+**B
+***
+R*G
+
+
+</pre><hr/><h3>样例输出</h3><pre>#1
+        +-------+
+       /Y\YYYY’/|
+      /YY.*’YY/G|
+     /.YYYY\Y/G/|
+    +-------+G.G|
+    |\GGGGG/|\:G|
+    |G\GGG/G|G*G|
+    |GG\G/GG|G:\|
+    |GGGXGGG|G’G+-------+
+    |GG/G\GG|/G/G\YYYY’/|
+    |G/GGG\G|G/GG.*’YY/G|
+    |/GGGGG\|/.GGGG\Y/G/|
+    +-------+-------+G.G|
+   /Y\GGGG’/G\GGGG’/|\:G|
+  /YY.*’GG/GG.*’GG/G|G*G|
+ /.YYYY\G/.GGGG\G/G/|G:\|
++-------+-------+G.G|G’G+
+|\GGGGG/|\GGGGG/|\:G|/G/
+|G\GGG/G|G\GGG/G|G*G|G/
+|GG\G/GG|GG\G/GG|G:\|/
+|GGGXGGG|GGGXGGG|G’G+
+|GG/G\GG|GG/G\GG|/G/
+|G/GGG\G|G/GGG\G|G/
+|/GGGGG\|/GGGGG\|/
++-------+-------+
+
+#2
+                    +-------+
+                   /W\WWWW’/|
+                  /WW.*’WW/C|
+                 /.WWWW\W/C/|
+        +-------+-------+-------+
+       /W\WWWW’/|\YYYYY/W\WWWW’/|
+      /WW.*’WW/C|G\YYY/WW.*’WW/C|
+     /.WWWW\W/C/|GG\Y/.WWWW\W/C/|
+    +-------+-------+-------+-------+C.C|---+
+   /W\WWWW’/|\YYYYY/W\WWWW’/|\YYYYY/|\:C|C’/|
+  /WW.*’WW/C|G\YYY/WW.*’WW/C|G\YYY/Y|C*C|C/C|
+ /.WWWW\W/C/|GG\Y/.WWWW\W/C/|GG\Y/YY|C:\|/C/|
++-------+C.G|GGG+-------+C.G|GGGXYYY|C’C+C.C|
+|\YYYYY/|\:G|GG/|\YYYYY/|\:G|GG/G\YY|/C/|\:C|
+|Y\YYY/Y|C*G|G/K|Y\YYY/Y|C*G|G/GGG\Y|C/C|C*C|
+|YY\Y/YY|C:\|/KK|YY\Y/YY|C:\|/GGGGG\|/C/|C:\|
+|YYYXYYY|C’G+---|YYYXYYY|C'G+-------+C.C|C’C+
+|YY/Y\YY|/G/G\KK|YY/Y\YY|/G/G\GGGG’/|\:C|/C/
+|Y/YYY\Y|G/GG.*’|Y/YYY\Y|G/GG.*’WW/C|C*C|C/
+|/YYYYY\|/.YYYY\|/YYYYY\|/.WWWW\W/C/|C:\|/
++-------+-------+-------+-------+C.C|C’C+
+|\YYYYY/|\YYYYY/|\YYYYY/|\YYYYY/|\:C|/C/
+|Y\YYY/Y|Y\YYY/Y|Y\YYY/Y|Y\YYY/Y|C*C|C/
+|YY\Y/YY|YY\Y/YY|YY\Y/YY|YY\Y/YY|C:\|/
+|YYYXYYY|YYYXYYY|YYYXYYY|YYYXYYY|C’C+
+|YY/Y\YY|YY/Y\YY|YY/Y\YY|YY/Y\YY|/C/
+|Y/YYY\Y|Y/YYY\Y|Y/YYY\Y|Y/YYY\Y|C/
+|/YYYYY\|/YYYYY\|/YYYYY\|/YYYYY\|/
++-------+-------+-------+-------+</pre><hr/><h3>提示</h3><p><p>&nbsp;</p>
+<p><img src="../file/4088_0.png" width="456" height="300" alt="" /></p>
+<p><span style="background-color: transparent; font-family: sans-serif; font-size: 14px; line-height: 23px; text-indent: 2em;">对于15%的数据，1&lt;=n,m&lt;=100,没有入射光。</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于40%的数据，1&lt;=n,m&lt;=100,入射光只有一束，且入射方向一定是东南方。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于100%的数据，1&lt;=n,m&lt;=100，每一个位置堆放的积木总数不超过100,入射光颜色可能是RGB中的任何一种颜色，最多可以有9束入射光。</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4088" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4088" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

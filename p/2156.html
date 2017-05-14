@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2156：星际探险</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">星际探险</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">星际探险</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                星际探险                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>众所周知，新世纪的科学很发达，于是Ray 和Raven 开始了星际探险，他们在宇宙中开辟了一片空间，建造了N 个空间站。这N 个空间站由一些单向的时空隧道连接，这些时空隧道都有一个穿越指数，穿过这些时空隧道，你可以走到未来或者回到过去，当然，这些都是由穿越指数决定的。有一天，Ray 和Raven 开始了一场比赛。他们要从一个空间站S 出发去另一个空间站T，先到的人获胜。Raven 一定会选一条能最快到达T 的路线。他希望Ray 输给他，所以事先在Ray 的飞船上设定了飞行路径，使得Ray 从S 到T 只能走一条特定的路径。但是，Ray 有对策，他有一台能够操纵时空隧道的机器，这台机器每次可以把某一条时空隧道的穿越指数增加或减少1，但是因为操纵机器很累，所以Ray 希望尽可能少改动，当然，如果改动后从某个空间站经过一系列的穿越可以在从这个空间站出发之前回到这个空间站，那么这样的改动是不允许的。修改之后，Raven 依然会走能最快到达终点的路线，所以Ray 是不可能赢的。但他请你帮助他确定改动时空隧道的方案，使得他能和Raven 同时到达T。</p></p><hr/><h3>输入格式</h3><p><p>输入的第一行包含两个整数N 和M，代表空间站的数目和时空隧道的数目。接下来M 行，每行三个整数u、v 和w，代表从空间站u 到空间站 v 有一条时空隧道，它的穿越指数是w。0 &lt;= w &lt;= 2000。空间站的编号是0 : : :N &minus; 1。第M + 2 行包含一个整数p，代表Raven 在Ray 的飞船上设定的那条路径的空间站数。p &lt;= N。第M + 3 行包含p 个互不相同的数，表示那条路径上的空间站的编号，第一个数是S，最后一个数是T。</p></p><hr/><h3>输出格式</h3><p><p>输出的第一行包含一个整数，表示Ray 走那条路径并且能够赢得比赛的情况下操纵时间机器的最小次数。</p></p><hr/><h3>样例输入</h3><pre>3 3
+0 1 1
+1 2 2
+0 2 1
+30
+1 2</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p><p>一共有10 个数据，对于第i (1 &lt;= i &lt;= 10) 个数据， N = i * 500， M = i * 5000。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2156" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2156" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

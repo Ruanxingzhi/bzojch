@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3700：发展城市</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">发展城市</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">发展城市</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                发展城市                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp;众所周知，Hzwer学长是一名高富帅，他打算投入巨资发展一些小城市。<br />
+&nbsp;Hzwer打算在城市中开N个宾馆，由于Hzwer非常壕，所以宾馆必须建在空中，但是这样就必须建立宾馆之间的连接通道。机智的Hzwer在宾馆中修建了N-1条隧道，也就是说，宾馆和隧道形成了一个树形结构。<br />
+&nbsp;Hzwer有时候会花一天时间去视察某个城市，当来到一个城市之后，Hzwer会分析这些宾馆的顾客情况。对于每个顾客，Hzwer用三个数值描述他：（S， T， V）表示该顾客这天想要从宾馆S走到宾馆T，他的速度是V。<br />
+&nbsp;Hzwer需要做一些收集一些数据，这样他就可以规划他接下来的投资。<br />
+&nbsp;其中有一项数据就是收集所有顾客可能的碰面次数。<br />
+&nbsp;每天清晨，顾客同时从S出发以V的速度前往T（注意S可能等于T），当到达了宾馆T的时候，顾客显然要找个房间住下，那么别的顾客再经过这里就不会碰面了。特别的，两个顾客同时到达一个宾馆是可以碰面的。同样，两个顾客同时从某宾馆出发也会碰面。</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;第一行一个正整数T(1&lt;=T&lt;=20)，表示Hzwer发展了T个城市，并且在这T个城市分别视察一次。<br />
+&nbsp;对于每个T，第一行有一个正整数N(1&lt;=N&lt;=10^5)表示Hzwer在这个城市开了N个宾馆。<br />
+&nbsp;接下来N-1行，每行三个整数X，Y，Z表示宾馆X和宾馆Y之间有一条长度为Z的隧道<br />
+&nbsp;再接下来一行M表示这天顾客的数量。<br />
+&nbsp;紧跟着M行每行三个整数（S， T， V）表示该顾客会从宾馆S走到宾馆T，速度为v</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">&nbsp;对于每个T，输出一行，表示顾客的碰面次数。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre> 1
+ 3
+ 1 2 1
+ 2 3 1
+ 3
+ 1 3 2
+ 3 1 1
+ 1 2 3
+ 1
+ 0
+</pre><hr/><h3>样例输出</h3><pre> 2
+ 0
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">【数据规模】<br />
+&nbsp;1&lt;=T&lt;=20&nbsp;&nbsp; 1&lt;=N&lt;=10^5&nbsp;&nbsp; 0&lt;=M&lt;=10^3&nbsp;&nbsp; 1&lt;=V&lt;=10^6&nbsp;&nbsp; 1&lt;=Z&lt;=10^3<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3700" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3700" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

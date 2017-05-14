@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4055：[Ctsc2015]misc</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2015]misc</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2015]misc</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ctsc2015]misc                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：233MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;小强和B君士好朋友。&nbsp;</p>
+<div>小强除了B君还有很多好朋友，比如洁妹。&nbsp;</div>
+<div>B君除了小强也还有很多好朋友，比如R君。他们还有很多共同的好朋友，比如小花，葱娘和其他3个人。&nbsp;</div>
+<div>B君发现，人与人之间的关系可以看成是一个无向图，每个人看成一个点，人与人之间的关系看成一条边。&nbsp;</div>
+<div>不同的人在社会中的号召力不一样，我们用ai来表示第i个人的号召力。&nbsp;</div>
+<div>人与人之间的关系也各不相同，可能非常友好，可能只是泛泛之交；可能天天腻在一起，可能一年才联系一次。为此，我们用长度边权bj来刻画第j条边对应的两个用户的亲密程度，长度约小，双方就越亲密；同时，我们用宽度边权cj来刻画第j条边对应的两个用户的交流频率，宽度越大，两个人沟通的频率也就越高。&nbsp;</div>
+<div>一条路径的长度指的是这条路径上的所有边的长度边权之和，一条路径的宽度指的是这条路径上的所有边的宽度边权的乘积。&nbsp;</div>
+<div>当两个人s和t想要交流的时候，他们会选择长度最短的路径来交流。由于最短路可能有多个，我们称s到t的最短路的宽度为&sigma;st，是所有s到t的长度最短的路径的宽度和。同时，我们用&sigma;st(v)表示所有从s到t，且经过v的长度最短的路径的宽度和，即v对s,t的影响力。&nbsp;</div>
+<div>一个人v在图中的传播力R(v)可以被定义为如下函数：&nbsp;</div>
+<div>&nbsp;<img src="../file/4055_0.jpg" width="276" height="85" alt="" /></div>
+<div>即对图中所有不包含v的点对，分别计算v对该点对的影响力除以该点对的最短路的宽度，再乘上这个点对中两个点的号召力，最后将所有点对的计算结果加和得到节点在图中的传播力。&nbsp;</div>
+<div>B君想快速知道所有节点在图中的传播力。当他去问小强的时候，小强说：&ldquo;我有一个绝妙的做法，可惜题面太短，写不下。&rdquo;&nbsp;</div>
+<div>你知道怎么做吗？&nbsp;</div></p><hr/><h3>输入格式</h3><p><p>第一行包含2个正整数n,m，分别表示图的点数和边数。&nbsp;</p>
+<div>接下来n行中的第i行有1个非负整数ai，表示第i个人的号召力。&nbsp;</div>
+<div>接下来m行中的第j行有3个整数xj,yj,bj和一个实数cj，表示点xj和点yj之间有一条长度边权为bj，宽度边权为cj的边。&nbsp;</div></p><hr/><h3>输出格式</h3><p><p>共n行，每行一个实数R(i)，表示第i个点在图中的传播力。&nbsp;</p></p><hr/><h3>样例输入</h3><pre>5 5
+1 2 3 4 5
+1 2 2 0.7
+3 4 2 0.9
+1 3 1 1.1
+2 4 1 1.3
+4 5 10 2</pre><hr/><h3>样例输出</h3><pre>4.762887
+8.621053
+9.378947
+67.237113
+0.000000</pre><hr/><h3>提示</h3><p><p>&nbsp;【评分标准】&nbsp;</p>
+<div>我们会将输出文件的每个数与参考答案进行比较，如果该数与参考答案的相对误差或绝对误差不超过10-6，则判定该数正确。对于参考答案为0的数，必须满足绝对误差不超过10-6才判定为正确。&nbsp;</div>
+<div>如果输出正确数的个数为q，那么你在该测试点上的得分是&nbsp;</div>
+<div><img src="../file/4055_0.jpg" width="115" height="106" alt="" /></div>
+<div>&nbsp;</div>
+<div></div>
+<div>【数据规模和约定】&nbsp;</div>
+<div>对于测试点1,2,3,4，有n&lt;=100。&nbsp;</div>
+<div>对于测试点5,6,7,6，所有bj=1。&nbsp;</div>
+<div>对于测试点9,10,11,12，有m=n-1。&nbsp;</div>
+<div>对于测试点1,3,5,7,9,11,13,15,17,19，所有ai=1。&nbsp;</div>
+<div>对于测试点1,2,5,6,9,10,13,14,17,18，所有cj=1。&nbsp;</div>
+<div>对于所有的数据，有n&lt;=1000，m&lt;=4000，0&lt;aj&lt;=255，0&lt;bj&lt;=15，0.5&lt;=cj&lt;=2，cj的小数部分最多12位。数据保证图是连通的</div>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4055" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4055" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

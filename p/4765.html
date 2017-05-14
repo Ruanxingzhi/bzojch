@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4765：普通计算姬</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">普通计算姬</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">普通计算姬</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                普通计算姬                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&quot;奋战三星期，造台计算机&quot;。小G响应号召，花了三小时造了台普通计算姬。普通计算姬比普通计算机要厉害一些</div>
+<div>。普通计算机能计算数列区间和，而普通计算姬能计算树中子树和。更具体地，小G的计算姬可以解决这么个问题</div>
+<div>：给定一棵n个节点的带权树，节点编号为1到n，以root为根，设sum[p]表示以点p为根的这棵子树中所有节点的权</div>
+<div>值和。计算姬支持下列两种操作:</div>
+<div>1 给定两个整数u,v，修改点u的权值为v。</div>
+<div>2 给定两个整数l,r，计算sum[l]+sum[l+1]+....+sum[r-1]+sum[r]</div>
+<div>尽管计算姬可以很快完成这个问题，可是小G并不知道它的答案是否正确，你能帮助他吗？</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个整数n,m，表示树的节点数与操作次数。</div>
+<div>接下来一行n个整数，第i个整数di表示点i的初始权值。</div>
+<div>接下来n行每行两个整数ai,bi，表示一条树上的边，若ai=0则说明bi是根。</div>
+<div>接下来m行每行三个整数，第一个整数op表示操作类型。</div>
+<div>若op=1则接下来两个整数u,v表示将点u的权值修改为v。</div>
+<div>若op=2则接下来两个整数l,r表示询问。</div>
+<div>N&lt;=10^5,M&lt;=10^5</div>
+<div>0&lt;=Di,V&lt;2^31,1&lt;=L&lt;=R&lt;=N,1&lt;=U&lt;=N</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对每个操作类型2输出一行一个整数表示答案。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6 4
+0 0 3 4 0 1
+0 1
+1 2
+2 3
+2 4
+3 5
+5 6
+2 1 2
+1 1 1
+2 3 6
+2 3 5</pre><hr/><h3>样例输出</h3><pre>16
+10
+9</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4765" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4765" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

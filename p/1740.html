@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1740：[Usaco2005 mar]Yogurt factory 奶酪工厂</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 mar]Yogurt factory 奶酪工厂</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 mar]Yogurt factory 奶酪工厂</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 mar]Yogurt factory 奶酪工厂                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">The cows have purchased a yogurt factory that makes world-famous Yucky Yogurt. Over the next N (1 &lt;= N &lt;= 10,000) weeks, the price of milk and labor will fluctuate weekly such that it will cost the company C_i (1 &lt;= C_i &lt;= 5,000) cents to produce one unit of yogurt in week i. Yucky's factory, being well-designed, can produce arbitrarily many units of yogurt each week. Yucky Yogurt owns a warehouse that can store unused yogurt at a constant fee of S (1 &lt;= S &lt;= 100) cents per unit of yogurt per week. Fortuitously, yogurt does not spoil. Yucky Yogurt's warehouse is enormous, so it can hold arbitrarily many units of yogurt. Yucky wants to find a way to make weekly deliveries of Y_i (0 &lt;= Y_i &lt;= 10,000) units of yogurt to its clientele (Y_i is the delivery quantity in week i). Help Yucky minimize its costs over the entire N-week period. Yogurt produced in week i, as well as any yogurt already in storage, can be used to meet Yucky's demand for that week. </span></p>
+<div><span style="font-size: medium">&nbsp;牛们收购了一个奶酪工厂,接下来的N个星期里，牛奶价格和劳力价格不断起伏．第i周，生产一个单位奶酪需要Ci(1&le;Ci&le;5000)便士．工厂有一个货栈，保存一单位奶酪，每周需要S(1&le;S&le;100)便士，这个费用不会变化．货栈十分强大，可以存无限量的奶酪，而且保证它们不变质．工厂接到订单，在第i周需要交付Yi(0&le;Yi&le;104)单位的奶酪给委托人．第i周刚生产的奶酪，以及之前的存货，都可以作为产品交付．请帮牛们计算这段时间里完成任务的最小代价．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Two space-separated integers, N and S. </span></p>
+<p><span style="font-size: medium">* Lines 2..N+1: Line i+1 contains two space-separated integers: C_i and Y_i.</span></p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入两个整数N和S．接下来N行输入Ci和Yi．</span></div>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: Line 1 contains a single integer: the minimum total cost to satisfy the yogurt schedule. Note that the total might be too large for a 32-bit integer. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出最少的代价．注意，可能超过32位长整型．</span></div></p><hr/><h3>样例输入</h3><pre>4 5
+88 200
+89 400
+97 300
+91 500
+
+</pre><hr/><h3>样例输出</h3><pre>126900
+
+第1周生产200单位奶酪并全部交付；第2周生产700单位，交付400单位，有300单位；第3周交
+付300单位存货．第4周生产并交付500单位．
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1740" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1740" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

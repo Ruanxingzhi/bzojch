@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2977：[Poi2002]滑雪胜地</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2002]滑雪胜地</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2002]滑雪胜地</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2002]滑雪胜地                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">在比特山,有一个风景胜地.它以纵横交错的滑雪轨道而出名. 而它们中的某些地区位于山顶或者很难到达的地方.因此人们使用滑雪电梯来帮助人们到达某些滑道.每个滑雪轨道和滑雪电梯的开始和结束都在一个空旷地带.而滑雪轨道都不会交叉,因此他们可以顺利的穿越. 而滑雪轨道和滑雪电梯都有一条或两条路线. </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">使用滑雪电梯必须要使用一种独特的磁卡,这个卡可以用现金购买.每个卡都含有一定数目的点数.使用滑雪电梯时必须付相应数目的点数.但留在卡上的点数并不能兑换成现金.</span></div>
+<div><span style="font-size: medium">今天是比特风景区的最后一天.他的磁卡上还拥有一定数目的点数.他想尽最大可能的消费,以使得在离开比特山时,卡上剩余的点数最少. 你可以假定卡上的点数足以使他返回. </span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输入格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第一行有两个整数<i>n</i> 和 <i>n</i>', 1 &lt;= <i>n</i>' &lt; <i>n</i> &lt;= 1000, 他们之间用一个空格分开,他们分别表示空旷地带的数量和能直接返回的空旷地带数量(编号从1 到 <i>n</i>' ). </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">在第二行有一个整整数<i>k</i>, 1 &lt;= <i>k</i> &lt;= 5000, 表示所有的滑雪轨道的数量. 接下来的k行,每行有由空格分开的两个整数, 1 &lt;= <i>p</i><sub>1</sub> &lt;&gt; <i>p</i><sub>2</sub> &lt; <i>n</i>. 分别表示开始和结束空旷地带编号.如果有上下两个轨道,则输出有两行(例如 &quot;<i>p</i><sub>1</sub> <i>p</i><sub>2</sub>&quot; 和 &quot;<i>p</i><sub>2</sub> <i>p</i><sub>1</sub>&quot;,并不一定按顺序). </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">在第<i>k</i>+3 行有一个正整数<i>m</i>, 1 &lt;= <i>m</i> &lt;= 300, 表示滑雪电梯的数量,接下来的<i>m</i> 行描述了每个滑雪电梯,每行有三个正整数<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub> 和 <i>r</i>; 分别表示起始和结束空旷地带编号和乘该电梯需要消费的点数1 &lt;= <i>q</i><sub>1</sub> &lt;&gt; <i>q</i><sub>2</sub> &lt;= <i>n</i>, 1 &lt;= <i>r</i> &lt;= 1000. 如果有上下两部电梯,则表示为&quot;<i>q</i><sub>1</sub> <i>q</i><sub>2</sub> <i>r</i><sub>1</sub>&quot; 和&quot;<i>q</i><sub>2</sub> <i>q</i><sub>1</sub> <i>r</i><sub>2</sub>&quot;,并且上下的价格可能也不同. </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">最后一行为两个正整数 <i>b</i> 和 <i>s</i>, 1 &lt;= <i>b</i> &lt;= <i>n</i>, 1 &lt;= <i>s</i> &lt;= 2000. b是当前他所处的空旷地带编号,s是他磁卡上的点数. </span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><tt>第一行写入一个整数</tt>.为返回后卡上剩余的最少点数</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>样例输入</h3><pre>5 2
+6
+3 2
+3 5
+1 5
+3 4
+1 2
+4 3
+4
+3 1 1
+4 3 5
+5 2 2
+3 4 5
+4 9
+</pre><hr/><h3>样例输出</h3><pre>1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2977" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2977" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

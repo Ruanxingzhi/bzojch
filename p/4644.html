@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4644：经典傻逼题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">经典傻逼题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">经典傻逼题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                经典傻逼题                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>这是一道经典傻逼题，对经典题很熟悉的人也不要激动，希望大家不要傻逼。</div>
+<div>考虑一张N个点的带权无向图，点的编号为1到N。 对于图中的任意一个点集</div>
+<div>（可以为空或者全集），所有恰好有一个端点在这个点集中的边组成的集合被称</div>
+<div>为割。 一个割的权值被定义为所有在这个割上的边的异或和。</div>
+<div>一开始这张图是空图， 现在，考虑给这张无向图不断的加边， 加入每条边之</div>
+<div>后，你都要求出当前权值最大的割的权值， 注意加入的边永远都不会消失。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>输入的第一行包括一个数ID表示数据编号， 如第一组数据中的ID = 1。注意</div>
+<div>样例数据中的ID = 0。</div>
+<div>接下来的第一行包括两个整数N,M表示图的点数和总共加的边。</div>
+<div>接下来M行，每行三个正整数x,y,w表示在点x和点y之间加入一条权值为w的边。&nbsp;</div>
+<div>注意x和y可能相同，两条不同的边也可能连接了同一对点。</div>
+<div>此外， w将以二进制形式从高位向低位给出，比如， 6 = 110(2)，因此如果边</div>
+<div>权为 6，那么w将会是110。</div>
+<div>&nbsp;1 &le; N&le; 500， 1 &le; M &le; 1000， 0 &le; L &lt; 1000， 1 &le; x,y&le; N</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>输出M行，按顺序输出每一条边加入之后权值最大的割的权值。</div>
+<div>同样，你也要以二进制形式输出，形式和输入格式中描述的形式一样。</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>0 3
+6
+1 2 1
+1 2 1
+3 3 111
+1 3 101101
+1 2 1011
+2 3 111011</pre><hr/><h3>样例输出</h3><pre>1 0 0
+101101
+101101
+110000
+
+前三条边加入之后的答案较为显然，考虑后三条边，加入第六条边之前， 考
+虑点集{1,2}，它对应的割只有第四条边， 因此答案就是第四条边的权值，考虑加
+入最后一条边以后的情况，此时点集{1,2}对应的割变成了第四条边和第六条边组
+成的集合，权值也发生了相应的改变。 点集{2}对应的割是第五条边和第六条边
+组成的集合， 可以证明这就是权值最大的割，权值为1011(2) ⊕ 111011(2) =110000(2)</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4644" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4644" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

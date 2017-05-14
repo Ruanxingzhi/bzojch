@@ -1,0 +1,157 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4012：[HNOI2015]开店</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]开店</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]开店</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2015]开店                </h1>
+                <p>时间限制：70s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;风见幽香有一个好朋友叫八云紫，她们经常一起看星星看月亮从诗词歌赋谈到</p>
+<div>人生哲学。最近她们灵机一动，打算在幻想乡开一家小店来做生意赚点钱。这样的</div>
+<div>想法当然非常好啦，但是她们也发现她们面临着一个问题，那就是店开在哪里，面</div>
+<div>向什么样的人群。很神奇的是，幻想乡的地图是一个树形结构，幻想乡一共有 n</div>
+<div>个地方，编号为 1 到 n，被 n-1 条带权的边连接起来。每个地方都住着一个妖怪，</div>
+<div>其中第 i 个地方的妖怪年龄是 x_i。妖怪都是些比较喜欢安静的家伙，所以它们并</div>
+<div>不希望和很多妖怪相邻。所以这个树所有顶点的度数都小于或等于 3。妖怪和人一</div>
+<div>样，兴趣点随着年龄的变化自然就会变化，比如我们的 18 岁少女幽香和八云紫就</div>
+<div>比较喜欢可爱的东西。幽香通过研究发现，基本上妖怪的兴趣只跟年龄有关，所以</div>
+<div>幽香打算选择一个地方 u（u为编号），然后在 u开一家面向年龄在 L到R 之间（即</div>
+<div>年龄大于等于 L、小于等于 R）的妖怪的店。也有可能 u这个地方离这些妖怪比较</div>
+<div>远，于是幽香就想要知道所有年龄在 L 到 R 之间的妖怪，到点 u 的距离的和是多</div>
+<div>少（妖怪到 u 的距离是该妖怪所在地方到 u 的路径上的边的权之和） ，幽香把这个</div>
+<div>称为这个开店方案的方便值。幽香她们还没有决定要把店开在哪里，八云紫倒是准</div>
+<div>备了很多方案，于是幽香想要知道，对于每个方案，方便值是多少呢。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>&nbsp;第一行三个用空格分开的数 n、Q和A，表示树的大小、开店的方案个数和妖</p>
+<div>怪的年龄上限。&nbsp;</div>
+<div>第二行n个用空格分开的数 x_1、x_2、&hellip;、x_n，x_i 表示第i 个地点妖怪的年</div>
+<div>龄，满足0&lt;=x_i&lt;A。(年龄是可以为 0的，例如刚出生的妖怪的年龄为 0。)&nbsp;</div>
+<div>接下来 n-1 行，每行三个用空格分开的数 a、b、c，表示树上的顶点 a 和 b 之</div>
+<div>间有一条权为c(1 &lt;= c &lt;= 1000)的边，a和b 是顶点编号。&nbsp;</div>
+<div>接下来Q行，每行三个用空格分开的数 u、 a、 b。对于这 Q行的每一行，用 a、</div>
+<div>b、A计算出 L和R，表示询问&ldquo;在地方 u开店，面向妖怪的年龄区间为[L,R]的方</div>
+<div>案的方便值是多少&rdquo;。对于其中第 1 行，L 和 R 的计算方法为：L=min(a%A,b%A),&nbsp;</div>
+<div>R=max(a%A,b%A)。对于第 2到第 Q行，假设前一行得到的方便值为 ans，那么当</div>
+<div>前行的 L 和 R 计算方法为： L=min((a+ans)%A,(b+ans)%A),&nbsp;</div>
+<div>R=max((a+ans)%A,(b+ans)%A)。&nbsp;</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>对于每个方案，输出一行表示方便值。&nbsp;</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>10 10 10 
+0 0 7 2 1 4 7 7 7 9  
+1 2 270 
+2 3 217 
+1 4 326 
+2 5 361 
+4 6 116 
+3 7 38 
+1 8 800 
+6 9 210 
+7 10 278 
+8 9 8 
+2 8 0 
+9 3 1 
+8 0 8 
+4 2 7 
+9 7 3 
+4 7 0 
+2 2 7 
+3 2 1 
+2 3 4 </pre><hr/><h3>样例输出</h3><pre>1603 
+957 
+7161 
+9466 
+3232 
+5223 
+1879 
+1669 
+1282 
+0 </pre><hr/><h3>提示</h3><p><p>&nbsp;满足 n&lt;=150000,Q&lt;=200000。对于所有数据，满足 A&lt;=10^9</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4012" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4012" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

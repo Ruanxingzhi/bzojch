@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3993：[SDOI2015]星际战争</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2015]星际战争</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2015]星际战争</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SDOI2015]星际战争                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;3333年，在银河系的某星球上，X军团和Y军团正在激烈地作战。在战斗的某一阶段，Y军团一共派遣了N个巨型机器人进攻X军团的阵地，其中第i个巨型机器人的装甲值为Ai。当一个巨型机器人的装甲值减少到0或者以下时，这个巨型机器人就被摧毁了。X军团有M个激光武器，其中第i个激光武器每秒可以削减一个巨型机器人Bi的装甲值。激光武器的攻击是连续的。这种激光武器非常奇怪，一个激光武器只能攻击一些特定的敌人。Y军团看到自己的巨型机器人被X军团一个一个消灭，他们急需下达更多的指令。为了这个目标，Y军团需要知道X军团最少需要用多长时间才能将Y军团的所有巨型机器人摧毁。但是他们不会计算这个问题，因此向你求助。</p></p><hr/><h3>输入格式</h3><p><p>第一行，两个整数，N、M。</p>
+<div>
+<div>第二行，N个整数，A1、A2&hellip;AN。</div>
+<div>第三行，M个整数，B1、B2&hellip;BM。</div>
+<div>接下来的M行，每行N个整数，这些整数均为0或者1。这部分中的第i行的第j个整数为0表示第i个激光武器不可以攻击第j个巨型机器人，为1表示第i个激光武器可以攻击第j个巨型机器人。</div>
+</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;一行，一个实数，表示X军团要摧毁Y军团的所有巨型机器人最少需要的时间。输出结果与标准答案的绝对误差不超过10-3即视为正确。</p></p><hr/><h3>样例输入</h3><pre>2 2
+3 10
+4 6
+0 1
+1 1</pre><hr/><h3>样例输出</h3><pre>1.300000</pre><hr/><h3>提示</h3><p><p>&nbsp;【样例说明1】</p>
+<div>战斗开始后的前0.5秒，激光武器1攻击2号巨型机器人，激光武器2攻击1号巨型机器人。1号巨型机器人被完全摧毁，2号巨型机器人还剩余8的装甲值；</div>
+<div>接下来的0.8秒，激光武器1、2同时攻击2号巨型机器人。2号巨型机器人被完全摧毁。</div>
+<div>对于全部的数据，1&lt;=N, M&lt;=50，1&lt;=Ai&lt;=105，1&lt;=Bi&lt;=1000，输入数据保证X军团一定能摧毁Y军团的所有巨型机器人</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>Round 1 感谢yts1999上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3993" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3993" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2558：[Poi2000]迷宫的墙</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2000]迷宫的墙</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2000]迷宫的墙</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2000]迷宫的墙                </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><font face="Times New Roman" size="3">神话中的Byte山上有一座迷宫。迷宫的入口坐落在山顶。迷宫由红色、绿色或蓝色的房间组成。两间相同颜色的房间看上去完全一样无法区别。每个房间内有编号为1、2、3的三堵墙，从房间到房间，只有穿过上面房间的一堵墙到下面的房间（不一定垂直地穿过）。从入口处的房间可以到达其它任一房间，所有的通道最终都通向最底层的龙穴。通过迷宫的一次旅行可用一系列在房间内选择要穿过的墙的编号来表示。这样的一个序列，称为一个行程计划。 <br />
+Byte龙就住在龙穴里。传说，如果谁能画出这个迷宫的地图，并献给龙，谁就将得到一大笔财富；但如果失败了，就会被Byte龙一脚踢下山。 <br />
+一个叫Bytezar的英雄历尽艰辛终于画出了一份地图，然而Byte龙却说，虽然所有的房间标都在地图上，但其中不少房间出现了不止一次。 <br />
+我也画了一张类似的地图。但我发现：尽管我画出的房间数较少，但旅行者按任一行程计划穿过迷宫，途中依次见到的房间和原来一样。于是我决定尽可能减少图上的房间。 <br />
+任务： <br />
+请编写一个程序，完成下列工作： <br />
+●算出Byte迷宫的真实房间数； <br />
+</font></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><font face="Times New Roman" size="3">首行是整数n（2&le;n&le;6000），代表房间总数（包括龙穴）。房间由1至n编号，编号越大，所处的位置越低（入口房间的编号为1，龙穴编号为n）。以下n-1行描述各房间（除了龙穴）以及它的墙。每行依次有一个字母、一个空格和三个用空格分开的整数。字母代表房间的颜色（C－红色，Z－绿色，N－蓝色），第i个整数（i=1、2、3）表示穿过第i堵墙到达的房间的编号。 <br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font face="Times New Roman" size="3">仅一行，包括一个整数，这是迷宫最小的房间数（包括龙穴）。 <br />
+修改后的迷宫应等价于输入文件中描述的迷宫，即旅行者按原来任一计划穿过迷宫所见到的房间颜色的序列不变。 <br />
+</font></p>
+<p></p>
+<pre>
+		</pre></p><hr/><h3>样例输入</h3><pre>11
+N 3 5 2
+Z 4 5 6
+N 7 11 9
+N 8 11 10
+C 11 9 9
+Z 11 9 10
+C 11 11 11
+C 11 11 11
+Z 11 11 11
+Z 11 11 11
+</pre><hr/><h3>样例输出</h3><pre>8</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2558" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2558" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

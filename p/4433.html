@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4433：[Cerc2015]Hovering Hornet</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2015]Hovering Hornet</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2015]Hovering Hornet</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2015]Hovering Hornet                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>你将一只大黄蜂困在一个餐桌上的盒子里。不幸的是，你的骰子也被困在其中，你无法继续玩大富翁了，除非接受大黄蜂的愤怒把骰子拿出来。你转而计算大黄蜂所能看见的点数来消磨时间。<br />
+大黄蜂、骰子和盒子都在一个标准三维座标系中，其x轴指向东方，y轴指向北方，z轴指向上方。餐桌的桌面与平面x-y重合。<br />
+<img width="659" height="364" alt="" src="../file/4433_0.png" /><br />
+骰子是一个1&times;1&times;1的立方体，放置在盒子的底部、座标系的原点上。即骰子的一组对角顶点的座标为(-0.5,-0.5,0)和(0.5,0.5,1)。骰子的顶面点数为5，北面点数为1，东面点数为3，南面点数为6，西面点数为4，底面(因为看不见所以无关紧要)点数为2。<br />
+盒子是一个5&times;5&times;5的立方体。盒子通过其底面(一个5&times;5的正方形)的座标说明。<br />
+假设大黄蜂随机地在盒子中盘旋，请计算被黄蜂看到的点数的期望值。骰子是不透明的，因此，大黄蜂能看见点数仅当其座标与点数所在的骰子表面中心的连线没有穿过骰子。</p></p><hr/><h3>输入格式</h3><p><p>输入包括4行，<br />
+第k行包括两个浮点数xk和yk(-5&lt;=xk,yk&lt;=5)&mdash;&mdash;底面第k个顶点在平面x-y内的座标。顶点的座标将以逆时针顺序给出。底面为正方形且每条边长为5。<br />
+盒子将完全包含骰子，并且除了底面，骰子与盒子不会有任何的接触或交叉。</p></p><hr/><h3>输出格式</h3><p><p>输出一个浮点数&mdash;&mdash;可见点数的期望值。答案允许小于10-6的误差。</p></p><hr/><h3>样例输入</h3><pre>Input1
+-2.5 -1.5
+2.5 -1.5
+2.5 3.5
+-2.5 3.5
+Input2
+3 0
+0 4
+-4 1
+-1 -3</pre><hr/><h3>样例输出</h3><pre>Output1
+10.6854838710
+
+
+Output2
+10.1226478495 </pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4433" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4433" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

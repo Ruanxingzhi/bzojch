@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4821：[Sdoi2017]相关分析</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2017]相关分析</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2017]相关分析</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2017]相关分析                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Frank对天文学非常感兴趣，他经常用望远镜看星星，同时记录下它们的信息，比如亮度、颜色等等，进而估算出</div>
+<div>星星的距离，半径等等。Frank不仅喜欢观测，还喜欢分析观测到的数据。他经常分析两个参数之间（比如亮度和</div>
+<div>半径）是否存在某种关系。现在Frank要分析参数X与Y之间的关系。他有n组观测数据，第i组观测数据记录了x_i和</div>
+<div>y_i。他需要一下几种操作1 L,R：用直线拟合第L组到底R组观测数据。用xx表示这些观测数据中x的平均数，用yy</div>
+<div>表示这些观测数据中y的平均数，即</div>
+<div>xx=&Sigma;x_i/(R-L+1)(L&lt;=i&lt;=R)</div>
+<div>yy=&Sigma;y_i/(R-L+1)(L&lt;=i&lt;=R)</div>
+<div>如果直线方程是y=ax+b，那么a应当这样计算：</div>
+<div>a=(&Sigma;(x_i-xx)(y_i-yy))/(&Sigma;(x_i-xx)(x_i-xx)) (L&lt;=i&lt;=R)</div>
+<div>你需要帮助Frank计算a。</div>
+<div>2 L,R,S,T：</div>
+<div>Frank发现测量数据第L组到底R组数据有误差，对每个i满足L &lt;= i &lt;= R，x_i需要加上S，y_i需要加上T。</div>
+<div>3 L,R,S,T：</div>
+<div>Frank发现第L组到第R组数据需要修改，对于每个i满足L &lt;= i &lt;= R，x_i需要修改为(S+i)，y_i需要修改为(T+i)。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行两个数n,m，表示观测数据组数和操作次数。</div>
+<div>接下来一行n个数，第i个数是x_i。</div>
+<div>接下来一行n个数，第i个数是y_i。</div>
+<div>接下来m行，表示操作，格式见题目描述。</div>
+<div>1&lt;=n,m&lt;=10^5,0&lt;=|S|,|T|,|x_i|,|y_i|&lt;=10^5</div>
+<div>保证1操作不会出现分母为0的情况。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>对于每个1操作，输出一行，表示直线斜率a。</div>
+<div>选手输出与标准输出的绝对误差不超过10^-5即为正确。</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>3 5
+1 2 3
+1 2 3
+1 1 3
+2 2 3 -3 2
+1 1 2
+3 1 2 2 1
+1 1 3</pre><hr/><h3>样例输出</h3><pre>1.0000000000
+-1.5000000000
+-0.6153846154</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢infinityedge上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4821" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4821" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

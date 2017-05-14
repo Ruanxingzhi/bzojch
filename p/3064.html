@@ -1,0 +1,159 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3064：Tyvj 1518 CPU监控</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Tyvj 1518 CPU监控</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Tyvj 1518 CPU监控</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Tyvj 1518 CPU监控                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium"><font face="Times New Roman">Bob需要一个程序来监视CPU使用率。这是一个很繁琐的过程，为了让问题更加简单，Bob会慢慢列出今天会在用计算机时做什么事。 <br />
+Bob会干很多事，除了跑暴力程序看视频之外，还会做出去玩玩和用鼠标乱点之类的事，甚至会一脚踢掉电源&hellip;&hellip;这些事有的会让做这件事的这段时间内CPU使用率增加或减少一个值；有的事还会直接让CPU使用率变为一个值。 <br />
+当然Bob会询问：在之前给出的事件影响下，CPU在某段时间内，使用率最高是多少。有时候Bob还会好奇地询问，在某段时间内CPU曾经的最高使用率是多少。 <br />
+为了使计算精确，使用率不用百分比而用一个整数表示。 <br />
+不保证Bob的事件列表出了莫名的问题，使得使用率为负&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; <br />
+</font></span></p></p><hr/><h3>输入格式</h3><p><p><font face="Times New Roman" size="4">第一行一个正整数T，表示Bob需要监视CPU的总时间。 <br />
+然后第二行给出T个数表示在你的监视程序执行之前，Bob干的事让CPU在这段时间内每个时刻的使用率达已经达到了多少。 <br />
+第三行给出一个数E，表示Bob需要做的事和询问的总数。 <br />
+接下来E行每行表示给出一个询问或者列出一条事件： <br />
+Q X Y:询问从X到Y这段时间内CPU最高使用率 <br />
+A X Y:询问从X到Y这段时间内之前列出的事件使CPU达到过的最高使用率 <br />
+P X Y Z:列出一个事件这个事件使得从X到Y这段时间内CPU使用率增加Z <br />
+C X Y Z:列出一个事件这个事件使得从X到Y这段时间内CPU使用率变为Z <br />
+时间的单位为秒，使用率没有单位。 <br />
+X和Y均为正整数（X&lt;=Y），Z为一个整数。 <br />
+从X到Y这段时间包含第X秒和第Y秒。 <br />
+保证必要运算在有符号32位整数以内。&nbsp;<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font face="Times New Roman" size="4">对于每个询问，输出一行一个整数回答。&nbsp;<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>10
+-62 -83 -9 -70 79 -78 -31 40 -18 -5 
+20
+A 2 7
+A 4 4
+Q 4 4
+P 2 2 -74
+P 7 9 -71
+P 7 10 -8
+A 10 10
+A 5 9
+C 1 8 10
+Q 6 6
+Q 8 10
+A 1 7
+P 9 9 96
+A 5 5
+P 8 10 -53
+P 6 6 5
+A 10 10
+A 4 4
+Q 1 5
+P 4 9 -69
+</pre><hr/><h3>样例输出</h3><pre>79
+-70
+-70
+-5
+79
+10
+10
+79
+79
+-5
+10
+10
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium"><font face="Times New Roman">&nbsp;数据分布如下： <br />
+第1、2个数据保证T和E均小于等于1000 <br />
+第3、4个数据保证只有Q类询问 <br />
+第5、6个数据保证只有C类事件 <br />
+第7、8个数据保证只有P类事件 <br />
+全部数据保证T和E均小于等于100000 </font><br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3064" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3064" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

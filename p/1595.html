@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1595：[Usaco2008 Jan]人工湖</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Jan]人工湖</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Jan]人工湖</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2008 Jan]人工湖                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&nbsp;&nbsp;&nbsp;&nbsp;夏日那让人喘不过气的酷热将奶牛们的烦躁情绪推到了最高点．最终，约翰决定建一个人工湖供奶牛消暑之用．为了使湖看起来更加真实，约翰决定将湖的横截面建成N(1&le;N&le;105)个连续的平台高低错落的组合状，所有的平台从左到右按1到N依次编号．当然咯，在湖中注入水后，这些平台都将被淹没．&nbsp;&nbsp;&nbsp;&nbsp;平台i在设计图上用它的宽度wi(l&le;wi&le;1000)和高度（你可以理解为该平台顶离约翰挖的地基的高度）Hi.（1&le;Hi&le;1000000）来描述的．所有平台的高度都是独一无二的．湖的边缘可以视为无限高的平台．下面给出了一张约翰的设计图：</div>
+<div><img height="361" width="285" alt="" src="../file/1595_0.jpg" /></div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;按约翰的设想，在坑挖好后，他会以1单位每分钟的速度往最低的那个平台上注水．水在离开水管后立即下落，直到撞到平台顶或是更早些时候注入的水然后，与所有常温下的水一样，它会迅速地流动、扩散．简单起见，你可以认为这些都是在瞬间完成的．约翰想知道，对于每一个平台，它的顶部是从哪个时刻开始，与水面的距离至少为1单位长度．</div>
+<p><span style="font-size: 10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 10.5pt">注意：数据不保证答案全部在</span><span style="font-size: 10.5pt">32</span><span style="font-size: 10.5pt">位整型变量的范围内</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 1个整数，N </span></p>
+<p><span style="font-size: medium">* 第2..N+1行: 第i+1行为2个用空格隔开的整数W_i、H_i，描述了第i个平台</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1..N行: 第i行为1个整数，表示平台i的顶到水面的距离从何时开始大于1 单位长度 </span></p></p><hr/><h3>样例输入</h3><pre>3
+4 2
+2 7
+6 4
+
+输入说明:
+
+    输入对应了题目中给出的例子，一共有3个平台，FJ选定的注水点在最低的
+1号平台上方。
+
+</pre><hr/><h3>样例输出</h3><pre>4
+50
+26</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入对应了题目中给出的例子，一共有</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个平台，约翰选定的注水点在最低的</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号平台上方．</span><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;4</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">分钟后乎台</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">被淹没．</span><span lang="EN-US"><font face="Times New Roman">26</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">分钟后平台</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">被淹没．</span><span lang="EN-US"><font face="Times New Roman">50</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">分钟后平台</span><span lang="EN-US"><font face="Times New Roman">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">被淹没．</span></span></p></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1595" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1595" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

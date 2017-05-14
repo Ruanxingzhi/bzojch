@@ -1,0 +1,145 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1791：[Ioi2008]Island 岛屿 
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Island 岛屿 
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Island 岛屿 
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ioi2008]Island 岛屿 
+                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>你将要游览一个有N个岛屿的公园。从每一个岛i出发，只建造一座桥。桥的长度以Li表示。公园内总共有N座桥。尽管每座桥由一个岛连到另一个岛，但每座桥均可以双向行走。同时，每一对这样的岛屿，都有一艘专用的往来两岛之间的渡船。 
+相对于乘船而言，你更喜欢步行。你希望所经过的桥的总长度尽可能的长，但受到以下的限制。 
+
+&#8226; 可以自行挑选一个岛开始游览。 
+&#8226; 任何一个岛都不能游览一次以上。 
+&#8226; 无论任何时间你都可以由你现在所在的岛S去另一个你从未到过的岛D。由S到D可以有以下方法： 
+o 步行：仅当两个岛之间有一座桥时才有可能。对于这种情况，桥的长度会累加到你步行的总距离；或者 
+o 渡船：你可以选择这种方法，仅当没有任何桥和/或以前使用过的渡船的组合可以由S走到D（当检查是否可到达时，你应该考虑所有的路径，包括经过你曾游览过的那些岛）。 
+
+注意，你不必游览所有的岛，也可能无法走完所有的桥。 
+
+任务 
+编写一个程序，给定N座桥以及它们的长度，按照上述的规则，计算你可以走过的桥的最大长度。 
+
+限制 
+2 <= N <= 1,000,000 公园内的岛屿数目。 
+1<= Li <= 100,000,000 桥i的长度。 
+
+
+</p><hr/><h3>输入格式</h3><p>&#8226; 第一行包含N个整数，即公园内岛屿的数目。岛屿由1到N编号。 
+&#8226; 随后的N行每一行用来表示一个岛。第i 行由两个以单空格分隔的整数，表示由岛i筑的桥。第一个整数表示桥另一端的岛，第二个整数表示该桥的长度Li。你可以假设对於每座桥，其端点总是位于不同的岛上。 
+
+</p><hr/><h3>输出格式</h3><p>你的程序必须向标准输出写出包含一个整数的单一行，即可能的最大步行距离。 
+注1：对某些测试，答案可能无法放进32-bit整数，你要取得这道题的满分，可能需要用Pascal的int64或C/C++的long long类型。 
+注2：在比赛环境运行Pascal程序，由标准输入读入64-bit数据比32-bit数据要慢得多，即使被读取的数据可以32-bit表示。我们建议把输入数据读入到32-bit数据类型。 
+
+评分 
+N不会超过4,000。 
+
+
+</p><hr/><h3>样例输入</h3><pre>7
+3 8
+7 2
+4 2
+1 4
+1 9
+3 4
+2 3
+
+
+</pre><hr/><h3>样例输出</h3><pre>24
+</pre><hr/><h3>提示</h3><p><img border="0" src="../file/1791_0.jpg"> </p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1791" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1791" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

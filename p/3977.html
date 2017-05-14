@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3977：[WF2012]Bus Tour</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]Bus Tour</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]Bus Tour</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2012]Bus Tour                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>想象你是一个在Warsaw的游客，而且预订了一次乘车旅行，去城镇外看一些令人惊异的景点。这辆公共汽车首先围绕城镇行驶一段时间（一段很长的时间，由于Warsaw是一个大城市），把在各自旅馆的人们带上。接着它就去了那个令人惊异的景点，几个小时后又回到城市中，再一次行驶到每一个旅馆，这一次把乘客放下。</div>
+<div>由于某种原因，每当你这样做的时候，你的旅馆总是第一个要上车的，而且是最后一个才下车的，意味着你不得不忍受两段经过所有当地旅馆的不那么愉快的旅行。这很明显不是你想要做的事（除非由于某种原因你真的要进入那些旅馆），所以让我们来做个改变。我们将开发一些软件使得那些观光公司能够把它们的乘车旅行路线安排得更公平&mdash;&mdash;尽管这有时候可能会导致每一个人的总距离更长，但公平就是公平，不是吗？</div>
+<div>对于这个问题，有一个起始位置（观光公司的总部），h个需要接送游客的旅馆和一个目的地位置（令人惊异的景点）。我们需要找到一条路径，从总部出发，经过所有的旅馆，到景点去，再回来再一次经过所有的旅馆（可能按照不同的顺序），最后返回总部。为了保证没有一个游客（特别是你）被迫忍受两个完整的旅馆旅行，我们要求在去景点的路上接游客的前个旅馆，在回来的路上也得是前个让游客下车的。受制于这些限制条件，我们想让整个公车旅行尽可能短。注意这些限制条件可能会迫使公共汽车经过某个旅馆但是不停下来（这不算做让游客下车），后来再来这里让游客下车，样例就说明了这种情况。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包含两个整数n和m满足3&le;n&le;20,2&le;m，n是位置的总数（旅馆，总部和景点），m是汽车能在两个位置之间行驶的路径条数。</div>
+<div>n个不同的位置被标号为0到n-1,0是总部，1到n-2是旅馆，而n-1是景点。假定任意一对位置之间最多只有一条直接路径，而且从任意一个位置都能到达任意另一个位置（并不一定直接到达）。</div>
+<div>接下来m行，每行包含三个整数u，v和t，满足0&le;u，v&le;n-1，u&ne;v，1&le;t&le;3600，表示公共汽车可以在t秒的时间内直接在u和v之间到达（两个方向都可以）。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>一个整数，表示可能的最短路线的总耗时。</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>8 12
+1 2 1
+2 3 1
+4 5 1
+5 6 1
+1 0 1
+3 7 1
+4 0 1
+6 7 1
+1 4 1
+2 5 1
+3 6 1
+0 7 1
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 16
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据：3&le;n&le;20，2&le;m</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3977" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3977" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2271：3-sided dice</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">3-sided dice</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">3-sided dice</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                3-sided dice                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>Just like every fall, the organizers of the Southwestern Europe Dice Simulation Contest are busy again this year. In this edition you have to simulate a 3-sided die that outputs each of three possible outcomes (which will be denoted by <span class="MATH">1, 2</span> and <span class="MATH">3</span>) with a given probability, using three dice in a given set. The simulation is performed this way: you choose one of the given dice at random, roll it, and report its outcome. You are free to choose the probabilities of rolling each of the given dice, as long as each probability is strictly greater than zero. Before distributing the materials to the contestants, the organizers have to verify that it is actually possible to solve this task.</p>
+<p><img alt="" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/p4963.jpg" /></p>
+<p>For example, in the first test case of the sample input you have to simulate a die that yields outcome <span class="MATH">1, 2</span> and <span class="MATH">3</span> with probabilities <!-- MATH
+$\frac{3}{10}, \frac{4}{10}$
+--><span class="MATH"><img height="40" alt="$ {\frac{{3}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img2.png" />,<img height="40" alt="$ {\frac{{4}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img3.png" /></span> and <!-- MATH
+$\frac{3}{10}$
+--><span class="MATH"><img height="40" alt="$ {\frac{{3}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img2.png" /></span>. We give you three dice, and in this case the <span class="MATH"><i>i</i></span>-th of them always yields outcome <span class="MATH"><i>i</i></span>, for each <!-- MATH
+$i = 1, 2, 3$
+--><span class="MATH"><i>i</i> = 1, 2, 3</span>. Then it is possible to simulate the given die in the following fashion: roll the first die with probability <!-- MATH
+$\frac{3}{10}$
+--><span class="MATH"><img height="40" alt="$ {\frac{{3}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img2.png" /></span>, the second one with probability <!-- MATH
+$\frac{4}{10}$
+--><span class="MATH"><img height="40" alt="$ {\frac{{4}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img3.png" /></span> and the last one with probability <!-- MATH
+$\frac{3}{10}$
+--><span class="MATH"><img height="40" alt="$ {\frac{{3}}{{10}}}$" width="22" align="middle" border="0" src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4963img2.png" /></span>.</p>
+<p><br />
+一个骰子有3个面，3个面(A,B,C面)上分别有3个数字。在本题中，先给出了3个骰子，每个骰子给出3个面的数字。我们保证对于每个骰子，3个面的数字和为10000。之后再给出一个我们希望得到的A,B,C面的结果，然后希望你给3个骰子分配概率， 第一个骰子分配概率 p1,第二个p2,第三个p3,满足<br />
+(1) p1 + p2 + p3 = 1<br />
+(2) 3个骰子的每个面的期望和等于给出的那个面的期望的和</p>
+<p>例如，样例1中<br />
+0 0 10000<br />
+0 10000 0<br />
+10000 0 0<br />
+骰子1: A(0), B(0), C(10000)<br />
+骰子2: A(0), B(10000), C(0)<br />
+骰子3: A(10000), B(0), C(0)<br />
+目标: A(3000) B(4000) C(3000)<br />
+于是我可以分配 p1 = 3/10, p2 = 4/10, p3 = 3/10<br />
+这样<br />
+A面期望: p1 * 0 + p2 * 0 + p3 * 10000 = 3000<br />
+B面期望: p1 * 0 + p2 * 10000 + p3 * 0 = 4000<br />
+C面期望: p1 * 10000 + p2 * 0 + p3 * 0 = 3000</p>
+<p>在本题中，保证给出的3个数对的和均为10000。</p>
+<p></p></p><hr/><h3>输入格式</h3><p><p>The input consists of several test cases, separated by single blank lines. Each test case consists of four lines: the first three of them describe the three dice you are given and the last one describes the die you have to simulate. Each of the four lines contains 3 space-separated integers between <span class="MATH">0</span> and <span class="MATH">10&nbsp;000</span> inclusive. These numbers will add up to <span class="MATH">10&nbsp;000</span>, and represent <span class="MATH">10&nbsp;000</span> times the probability that rolling the die described in that line yields outcome <span class="MATH">1</span>, <span class="MATH">2</span> and <span class="MATH">3</span>, respectively.</p>
+<p>The test cases will finish with a line containing only the number zero repeated three times (also preceded with a blank line).</p>
+<p>输入多组数据，每组数据给出3个骰子的A,B,C面的 点数，然后给出一个期望的结果。<br />
+保证给出的3个数对的和均为10000。</p>
+<p>如果遇到3个0，那么则表示数据结束</p>
+<p></p></p><hr/><h3>输出格式</h3><p><p>For each case, your program should output a line with the word `<tt><font face="新宋体">YES</font></tt>' if it is feasible to produce the desired die from the given ones, and `<tt><font face="新宋体">NO</font></tt>' otherwise.</p>
+<p><br />
+对于期望的数对，如果可以分配p1,p2,p3满足以上条件，则输出&quot;YES&quot;否则输出&quot;NO&quot;</p></p><hr/><h3>样例输入</h3><pre>0 0 10000
+0 10000 0
+10000 0 0
+3000 4000 3000
+
+0 0 10000
+0 10000 0
+3000 4000 3000
+10000 0 0
+
+0 0 0
+
+
+
+</pre><hr/><h3>样例输出</h3><pre>YES
+NO
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢 AekdyCoin</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2271" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2271" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

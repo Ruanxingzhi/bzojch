@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3207：花神的嘲讽计划Ⅰ</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">花神的嘲讽计划Ⅰ</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">花神的嘲讽计划Ⅰ</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                花神的嘲讽计划Ⅰ                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 7.5pt 0cm; line-height: 15pt">
+<div>背景</div>
+<div>花神是神，一大癖好就是嘲讽大J，举例如下：</div>
+<div>&ldquo;哎你傻不傻的！【hqz：大笨J】&rdquo;</div>
+<div>&ldquo;这道题又被J屎过了！！&rdquo;</div>
+<div>&ldquo;J这程序怎么跑这么快！J要逆袭了！&rdquo;</div>
+<div>&hellip;&hellip;</div>
+<div>描述</div>
+<div>这一天DJ在给吾等众蒟蒻讲题，花神在一边做题无聊，就跑到了一边跟吾等众蒟蒻一起听。以下是部分摘录：</div>
+<div>1.</div>
+<div>&ldquo;J你在讲什么！&rdquo;</div>
+<div>&ldquo;我在讲XXX！&rdquo;</div>
+<div>&ldquo;哎你傻不傻的！这么麻烦，直接XXX再XXX就好了！&rdquo;</div>
+<div>&ldquo;&hellip;&hellip;&rdquo;</div>
+<div>2.</div>
+<div>&ldquo;J你XXX讲过了没？&rdquo;</div>
+<div>&ldquo;&hellip;&hellip;&rdquo;</div>
+<div>&ldquo;那个都不讲你就讲这个了？哎你傻不傻的！&rdquo;</div>
+<div>&ldquo;&hellip;&hellip;&rdquo;</div>
+<div>DJ对这种情景表示非常无语，每每出现这种情况，DJ都是非常尴尬的。</div>
+<div>经过众蒟蒻研究，DJ在讲课之前会有一个长度为N方案，我们可以把它看作一个数列；</div>
+<div>同样，花神在听课之前也会有一个嘲讽方案，有M个，每次会在x到y的这段时间开始嘲讽，为了减少题目难度，每次嘲讽方案的长度是一定的，为K。</div>
+<div>花神嘲讽DJ让DJ尴尬需要的条件：</div>
+<div>在x~y的时间内DJ没有讲到花神的嘲讽方案，即J的讲课方案中的x~y没有花神的嘲讽方案【这样花神会嘲讽J不会所以不讲】。</div>
+<div>经过众蒟蒻努力，在一次讲课之前得到了花神嘲讽的各次方案，DJ得知了这个消息以后欣喜不已，DJ想知道花神的每次嘲讽是否会让DJ尴尬【说不出话来】。</div>
+<div></div>
+</div></p><hr/><h3>输入格式</h3><p><div style="margin: 0cm 0cm 7.5pt; line-height: 15pt">
+<div>第1行3个数N，M，K；</div>
+<div>第2行N个数，意义如上；</div>
+<div>第3行到第3+M-1行，每行K+2个数，前两个数为x,y,然后K个数，意义如上；</div>
+</div></p><hr/><h3>输出格式</h3><p><div style="margin: 7.5pt 0cm; line-height: 15pt"><span style="font-size: medium"><span style="color: #333333">对于每一个嘲讽做出一个回答会尴尬输出&lsquo;Yes&rsquo;，否则输出&lsquo;No&rsquo;</span></span></div></p><hr/><h3>样例输入</h3><pre>8 5 3
+1 2 3 4 5 6 7 8
+2 5 2 3 4
+1 8 3 2 1
+5 7 4 5 6
+2 5 1 2 3
+1 7 3 4 5
+</pre><hr/><h3>样例输出</h3><pre>No
+Yes
+Yes
+Yes
+No
+</pre><hr/><h3>提示</h3><p><div>题中所有数据不超过2*10^9;保证方案序列的每个数字&lt;=N</div>
+<div>2~5中有2 3 4的方案，输出No，表示DJ不会尴尬</div>
+<div>1~8中没有3 2 1的方案，输出Yes，表示DJ会尴尬</div>
+<div>5~7中没有4 5 6的方案，输出Yes，表示DJ会尴尬</div>
+<div>2~5中没有1 2 3的方案，输出Yes，表示DJ会尴尬</div>
+<div>1~7中有3 4 5的方案，输出No，表示DJ不会尴尬</div></p><hr/><h3>题目来源</h3><p>原创 Memphis
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3207" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3207" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

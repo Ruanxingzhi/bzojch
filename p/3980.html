@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3980：[WF2012]Minimum Cost Flow</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]Minimum Cost Flow</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]Minimum Cost Flow</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2012]Minimum Cost Flow                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>你已经被雇佣来 使用现有的旧管道组件以建设一个在旧厂房两点间运水的系统。旧管道系统由管道和管道接口器组成。原有管道在接口器处相交。有的旧管道已经被移除，只在接口器上留下了洞&mdash;&mdash;他们本来是连在洞上的。如果水流入某个接口器，它将流出整个洞并逐渐充满整个大楼&mdash;&mdash;这显然不能让人接受。</div>
+<div>你可以通过在一些开孔间加入新管道，或者塞子关闭其他开孔来挽回这种状况。当你用一条新的管道连接两个洞时（必须位于两个不同的节点上），这两个洞不再开放并且水可以流经个新的管道。加入一条新的管道的花费等同于两个节点中心的距离。购买塞子塞住一个洞的花费是0.5。你不需要考虑那些永远不会有水到达的节点上的洞。</div>
+<div>有两个结点是特殊的。一个叫做源，是水流入新系统的点。另一个叫做汇，是水需要到达的地方。在所有新的塞子和管道被加入系统后，水将被以一个足够达到指定高度的压力注入源点（当然是在没有渗漏的情况下）。你可以选择任意的压力。而且可以放心，在系统工作时压力不会改变。当然，压力应该足够达到源点和汇点。你的任务是找到让水从源流到汇的最小费用，同时保证水不会渗入大楼。</div>
+<div>下面的图中。黑点代表开着的洞，节点1是源点，节点7是汇点。黑点在圆上的位置没有意义，仅作说明用途）。</div>
+<div><img src="../file/3980_0.bmp" width="330" height="209" alt="" /></div>
+<div>水依照物理原理流过这个系统。如果压力足够让一个节点灌满水，那这些节点将始终充满了水。如果管道横向延伸或者从一个节点向下延伸，那么水也会从那些管道流过。水也会沿着管道向上，直到达到压力高度的限制。</div>
+<div>当然，如果水达到了一个接口器上的洞，它将会流出并充满整个大楼。</div>
+<div>在第一个样例中，你可以连接接口1和5</div>
+<div>当然，如果水流到一个节点中的开孔，那它将会流出洞并且充满整个大楼。</div>
+<div>在第一个样例中，你可以花费代价3连接节点1,5，塞上2的开孔。并且让水压恰好到达接口7。水将充满接口器1、2、5、6和7，不会流得更高了。一个不同的方案（花费更多）是塞住所有的开孔（花费5），并且让水流经所有的洞。通过连接1、6并塞住2、5的开孔不能解决问题，因此接口器6不可以连接管道。</div>
+<div>注：假设现有的管道和任何新的管道出了那些他们被连接的节点外，彼此不相交也没有其他接口。就是说，即使一条从A到B的直线经过了C，任何A到B的管道也不会碰到C。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>每个测试点的第一行包含两个正整数N和M。N (2 &le; N &le; 400)表示大楼中接口的数量，M(0 &le; M &le; 50 000)表示现有可用管道的数量。接下来的N行每行包含四个正整数xi,yi,zi和ki （&minus;10 000 &le; xi, yi, zi &le; 10 000，0 &le; ki &le; 400， i = 1, 2, ...,N）。第i行描述了结点i：(xi, yi, zi)是地i个结点在三维坐标系中的位置。Ki表示交界处洞的个数。接下来M行的每一行包含两个整数aj和bj（1 &le; aj &lt; bj &le; N）。表示第j条原有管道连接了aj和bj两个节点。每对点之间最多有一条管道。并且没有两个节点位于同一个坐标。源是节点1，汇是节点N。</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每个测试点，打出测试点编号。之后，若它存在一些新的管道和塞子可以用来建设所需的系统，打印出连接源节点带汇节点的最小代价（精确到小数点后四位）。如果不可能连接源汇，则打印出单词impossible。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>7 6
+2 0 1 1
+0 0 0 2
+1 0 4 3
+3 0 4 3
+5 0 1 1
+3 0 2 0
+5 0 3 0
+1 2
+1 3
+3 4
+4 7
+5 7
+6 7
+4 1
+2 0 0 0
+3 0 1 0
+4 1 0 1
+5 1 1 1
+1 2
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 4.0000
+Case 2: impossible</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3980" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3980" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

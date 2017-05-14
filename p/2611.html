@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2611：[Poi2003]Treasure</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2003]Treasure</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2003]Treasure</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2003]Treasure                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">Byteasar 国王把他所有的财宝都藏在了他的城堡里的一个秘密地点. 无论如何, 当他外出征战时他害怕如果战死以后财宝将会永远丢失. 因此他选择了一些可以信任的守卫然后告诉了他们每个人一点关于财宝藏匿地点的信息. 然后命令他们去守卫位于城堡地下的地下室并且不断巡逻遵守告诉他们的<i>右手原则</i>. 地下室有很多房间由走廊连接而成. 走廊互相都不交叉. 没有两条走廊连接同样的两个房间. 右手原则规定每个守卫在进入一个房间以后要由他进来的那条走廊右边的那一条离开. 每个守卫都被安排了不同的开始地点和进入走廊. 有的时候多个守卫走进同一个房间是允许的.</span></div>
+<div><span style="font-size: medium">国王知道直到他牺牲和归来之前他的守卫都会足够忠诚的执行他的命令. 但是, 他害怕当若干个守卫在同一个房间聚会时他们会分享各自知道的信息. 守卫都是很慷慨的他们会分享他们所知道的所有信息. 但是如果两个守卫在走廊里相遇, 他们不会对对方说任何东西.</span></div>
+<div><span style="font-size: medium">国王想知道当他从战场归来时他的财宝是否还能安全可靠. 他想知道可能得到所有财宝信息的守卫.</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">第一行一个整数<i>n</i>. 表示地下室的房间数, 2&nbsp;&lt;=&nbsp;<i>n</i>&nbsp;&lt;=&nbsp;100. 房间编号1 到 <i>n</i>. 接下来<i>n</i>行每行描述一个房间. 在第 (<i>i</i>&nbsp;+&nbsp;1) 行首先一个数<i>k<sub>i</sub></i>, 表示所有和第<i>i</i>个房间连接的走廊, 1&nbsp;&lt;=&nbsp;<i>k<sub>i</sub></i>&nbsp;&lt;=&nbsp;<i>n</i>&nbsp;-&nbsp;1. 接下来2<i>k<sub>i</sub></i> 个整数每两个数描述一条走廊. 第一个数为走廊另一头的房间编号, 第二个数为走廊的长度: 一个1 到 100的整数. 走廊都是双向的, 即如果有一条<i>a</i>到<i>b</i>的长度为<i>l</i>的走廊那么肯定对应的有一条从<i>b</i>到<i>a</i>的长度为<i>l</i>的走廊. 所有走廊按顺时针方向给出.</span></div>
+<div><span style="font-size: medium">接下来两个整数<i>k</i> 和 <i>l</i>, 1&nbsp;&lt;=&nbsp;<i>k</i>&nbsp;&lt;=&nbsp;100, 1&nbsp;&lt;=&nbsp;<i>l</i>&nbsp;&lt;=&nbsp;100, <i>k</i> 为守卫的个数, <i>l</i> 为所有需要找到财宝要知道的信息数目. 守卫从1 到 <i>k</i>编号. 财宝信息从1 到 <i>l</i>编号. 接下来<i>k</i> 行每行描述一个守卫. 每行前两个数表示守卫的初始位置和他第一次要走到哪一个房间去. 接下来一个整数<i>m<sub>i</sub></i>, 表示这个守卫知道的信息数目, 0&nbsp;&lt;=&nbsp;<i>m<sub>i</sub></i>&nbsp;&lt;=&nbsp;<i>l</i>. 然后接着<i>m<sub>i</sub></i> 个整数描述了他所知道的所有信息编号.</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">第一行输出一个整数, 表示知道所有财宝信息的守卫的总数.接下来每行一个数表示这些守卫的编号,从小到大输出. </span></div></p><hr/><h3>样例输入</h3><pre>4
+
+
+3 2 3 3 4 4 1
+2 1 3 3 1
+3 4 3 1 4 2 1
+2 1 1 3 3
+3 4
+1 4 2 2 3
+3 1 2 1 2
+3 4 2 3 4
+</pre><hr/><h3>样例输出</h3><pre>
+2
+2
+3
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2611" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2611" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

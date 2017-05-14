@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1721：[Usaco2006 Mar]Ski Lift 缆车支柱</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Mar]Ski Lift 缆车支柱</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2006 Mar]Ski Lift 缆车支柱</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2006 Mar]Ski Lift 缆车支柱                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium; ">Farmer Ron in Colorado is building a ski resort for his cows (though budget constraints dictate construction of just one ski lift). The lift will be constructed as a monorail and will connect a concrete support at the starting location to the support at the ending location via some number of intermediate supports, each of height 0 above its land. A straight-line segment of steel connects every pair of adjacent supports. For obvious reasons, each section of straight steel must lie above the ground at all points.  Always frugal, FR wants to minimize the number of supports that he must build. He has surveyed the N (2 &lt;= N &lt;= 5,000) equal-sized plots of land the lift will traverse and recorded the integral height H (0 &lt;= H &lt;= 1,000,000,000) of each plot. Safety regulations require FR to build adjacent supports no more than K (1 &lt;= K &lt;= N - 1) units apart. The steel between each pair of supports is rigid and forms a straight line from one support to the next.  Help FR compute the smallest number of supports required such that: each segment of steel lies entirely above (or just tangent to) each piece of ground, no two consecutive supports are more than K units apart horizontally, and a support resides both on the first plot of land and on the last plot of land.</span></p>
+<p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">科罗拉州的罗恩打算为他的奶牛们建造一个滑雪场，虽然需要的设施仅仅是一部缆车．建造一部缆车，需要从山脚到山顶立若干根柱子，并用钢丝连结它们．你可以认为相对于地面，柱子的高度可以忽略不计．每相邻两根柱子间都有钢丝直接相连．显然，所有钢丝的任何一段都不能在地面之下．</span><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体; ">为了节省建造的费用，罗恩希望在工程中修建尽可能少的柱子．他在准备修建缆车的山坡上迭定了</span><span lang="EN-US">N(2</span><span style="font-family: 宋体; ">&le;</span><span lang="EN-US">N</span><span style="font-family: 宋体; ">&le;</span><span lang="EN-US">5000)</span><span style="font-family: 宋体; ">个两两之间水平距离相等的点，并且测量了每个点的高度</span><span lang="EN-US">H(O</span><span style="font-family: 宋体; ">&le;日&le;</span><span lang="EN-US">10^9)</span><span style="font-family: 宋体; ">．并且，按照国家安全标准，相邻两根柱子间的距离不能超过</span><span lang="EN-US">K(1</span><span style="font-family: 宋体; ">&le;</span><span lang="EN-US">K</span><span style="font-family: 宋体; ">&le;</span><span lang="EN-US">N-1)</span><span style="font-family: 宋体; ">个单位长度．柱子间的钢丝都是笔直的</span><span lang="EN-US">.&nbsp;</span><span style="font-family: 宋体; ">罗恩希望你帮他计算一下，在满足下列条件的情况下，他至少要修建多少根柱子：首先，所有的柱子都必须修建在他所选定的点上，且每一段钢丝都必须高于地面或者正好跟地面相切．相邻两根柱子的距离不大于</span><span lang="EN-US">K</span><span style="font-family: 宋体; ">个单位长度．当然，在第一个点与最后一个点上一定都要修建柱子．</span></span></p>
+<p class="MsoNormal"></p>
+</p></p><hr/><h3>输入格式</h3><p><p style="text-align: left; "><span style="font-size: medium; ">* Line 1: Two space-separate integers, N and K  </span></p>
+<p style="text-align: left; "><span style="font-size: medium; ">* Lines 2..N+1: Line i+1 contains a single integer that is the height         of plot i.</span></p>
+<p>
+<div style="text-align: left; "><span style="font-size: medium; "><br />
+</span></div>
+<div>
+<p class="MsoNormal" style="text-align: left; "><span style="font-size: medium; "><span lang="EN-US">&nbsp; &nbsp;&nbsp;</span><span style="font-family: 宋体; ">第</span><span lang="EN-US">1</span><span style="font-family: 宋体; ">行：两个整数</span><span lang="EN-US">N</span><span style="font-family: 宋体; ">和</span><span lang="EN-US">K</span><span style="font-family: 宋体; ">，用空格隔开．</span></span></p>
+<p class="MsoNormal" style="text-align: left; "><span style="font-size: medium; "><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体; ">第</span><span lang="EN-US">2</span><span style="font-family: 宋体; ">到</span><span lang="EN-US">N+1</span><span style="font-family: 宋体; ">行：每行包括一个正整数，第</span><span lang="EN-US">i+l</span><span style="font-family: 宋体; ">行的数描述了第</span><span lang="EN-US">i</span><span style="font-family: 宋体; ">个点的高度．</span></span></p>
+<p class="MsoNormal" style="text-align: left; "></p>
+<p class="MsoNormal"></p>
+</div>
+</p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium; ">* Line 1: A single integer equal to the fewest number of lift towers         FR needs to  build subject to the above constraints</span></p>
+<p></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span lang="EN-US">&nbsp; &nbsp;&nbsp;</span><span style="font-family: 宋体; ">输出一个整数，即罗恩最少需要修建的柱子的数目．</span></span></p>
+<p class="MsoNormal"></p></p><hr/><h3>样例输入</h3><pre>13 4
+0
+1
+0
+2
+4
+6
+8
+6
+8
+8
+9
+11
+12</pre><hr/><h3>样例输出</h3><pre>5
+</pre><hr/><h3>提示</h3><p><p>&nbsp;<span style="font-family: 宋体; font-size: medium; ">样例说明</span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体; ">罗恩最少要修建</span><span lang="EN-US">5</span><span style="font-family: 宋体; ">根柱子（分别在第</span><span lang="EN-US">1</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">5</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">7</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">9</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">13</span><span style="font-family: 宋体; ">个山坡上的点）．钢丝在</span><span lang="EN-US">1-5</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">5-7</span><span style="font-family: 宋体; ">，</span><span lang="EN-US">7-9</span><span style="font-family: 宋体; ">以及</span><span lang="EN-US">12&nbsp;-&nbsp;13</span><span style="font-family: 宋体; ">这</span><span lang="EN-US">4</span><span style="font-family: 宋体; ">段上与地面相切．</span></span></p>
+<div><span style="font-size: medium; "><span style="font-family: 宋体; "><br />
+</span></span></div></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1721" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1721" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

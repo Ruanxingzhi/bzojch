@@ -1,0 +1,134 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1975：[Sdoi2010]魔法猪学院</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]魔法猪学院</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]魔法猪学院</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2010]魔法猪学院                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>iPig在假期来到了传说中的魔法猪学院，开始为期两个月的魔法猪训练。经过了一周理论知识和一周基本魔法的学习之后，iPig对猪世界的世界本原有了很多的了解：众所周知，世界是由元素构成的；元素与元素之间可以互相转换；能量守恒……。
+
+能量守恒……iPig 今天就在进行一个麻烦的测验。iPig 在之前的学习中已经知道了很多种元素，并学会了可以转化这些元素的魔法，每种魔法需要消耗 iPig 一定的能量。作为 PKU 的顶尖学猪，让 iPig 用最少的能量完成从一种元素转换到另一种元素……等等，iPig 的魔法导猪可没这么笨！这一次，他给 iPig 带来了很多 1 号元素的样本，要求 iPig 使用学习过的魔法将它们一个个转化为 N 号元素，为了增加难度，要求每份样本的转换过程都不相同。这个看似困难的任务实际上对 iPig 并没有挑战性，因为，他有坚实的后盾……现在的你呀！
+
+注意，两个元素之间的转化可能有多种魔法，转化是单向的。转化的过程中，可以转化到一个元素（包括开始元素）多次，但是一但转化到目标元素，则一份样本的转化过程结束。iPig 的总能量是有限的，所以最多能够转换的样本数一定是一个有限数。具体请参看样例。
+
+</p><hr/><h3>输入格式</h3><p>第一行三个数 N、M、E 表示iPig知道的元素个数（元素从 1 到 N 编号）、iPig已经学会的魔法个数和iPig的总能量。
+后跟 M 行每行三个数 si、ti、ei 表示 iPig 知道一种魔法，消耗 ei 的能量将元素 si 变换到元素 ti 。
+
+</p><hr/><h3>输出格式</h3><p>一行一个数，表示最多可以完成的方式数。输入数据保证至少可以完成一种方式。
+
+</p><hr/><h3>样例输入</h3><pre>4 6 14.9
+1 2 1.5
+2 1 1.5
+1 3 3
+2 3 1.5
+3 4 1.5
+1 4 1.5
+
+</pre><hr/><h3>样例输出</h3><pre>3
+
+</pre><hr/><h3>提示</h3><p>样例解释
+有意义的转换方式共4种：
+1->4，消耗能量 1.5
+1->2->1->4，消耗能量 4.5
+1->3->4，消耗能量 4.5
+1->2->3->4，消耗能量 4.5
+显然最多只能完成其中的3种转换方式（选第一种方式，后三种方式仍选两个），即最多可以转换3份样本。
+如果将 E=14.9 改为 E=15，则可以完成以上全部方式，答案变为 4。
+
+数据规模
+占总分不小于 10% 的数据满足 N <= 6，M<=15。
+占总分不小于 20% 的数据满足 N <= 100，M<=300，E<=100且E和所有的ei均为整数（可以直接作为整型数字读入）。
+所有数据满足 2 <= N <= 5000，1 <= M <= 200000，1<=E<=107，1<=ei<=E，E和所有的ei为实数。
+</p><hr/><h3>题目来源</h3><p>Sdoi2010 Contest2 Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1975" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1975" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

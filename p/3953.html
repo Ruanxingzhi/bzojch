@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3953：[WF2013]Self-Assembly</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2013]Self-Assembly</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2013]Self-Assembly</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2013]Self-Assembly                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>自动化学制造（Automatic Chemical Manufacturing，简称ACM）正在对一个叫自组装（self-assembly）的过程进行实验。在这个过程中，有着天然相互吸引力的分子被混合在溶液中，任由它们聚集组合成更大的结构。但是有一个问题随之出现：有时候，分子们会把自身组合成一个无限大的结构体，以至于把容器撑爆。</div>
+<div></div>
+<div>　　你需要写一个程序来判断一个给定的分子集合是否可能组合成一个无限大的结构体。为了使问题简化，你可以作以下两个假设：</div>
+<div>　　1. 问题被限制在二维平面上。</div>
+<div>　　2. 分子集合中的每个分子都被表示成一个正方形。其中正方形的四条边分别代表分子间相连接的四个表面。</div>
+<div></div>
+<div>　　你将从数据中得到每种分子的描述。每种分子有四个连接标识来分别表示每条边能与另外分子的哪种边相连。连接标识有两种：</div>
+<div>　　● 一个大写字母(A,&hellip;,Z)加上一个 &lsquo;＋&rsquo; 号或一个 &lsquo;－&rsquo; 号。两条边能并在一起当且仅当两者的字母相等且符号相反。比方说，&lsquo;A＋&rsquo; 与 &lsquo;A－&rsquo; 兼容，但与 &lsquo;A＋&rsquo; 或 &lsquo;B－&rsquo; 不兼容</div>
+<div>　　● 两个零 &lsquo;00&rsquo;。这条边将不和任意一条边兼容（包括&lsquo;00&rsquo;）。</div>
+<div></div>
+<div>　　假设每种分子都有无限个，并且每个分子都可以旋转和翻转。当分子将自身组成一个结构体时，相互贴合的边必须能够相互兼容，当然，无论边的连接标识是什么，它都可以不与另外边贴合。</div>
+<div></div>
+<div>　　图 1 是一个由三种分子组成的一个有限的结构体（它们也有可能组成另外的有限结构体）。</div>
+<div><img src="../file/3953_0.jpg" width="1681" height="961" alt="" /></div>
+<div class="probtitle" id="ptit" style="margin: 0px; padding: 0px; font-size: 24pt; text-align: left; font-weight: bold; font-family: 微软雅黑, 黑体, 'Times New Roman';">
+<div></div>
+<div></div>
+</div>
+<div id="pcont1" style="margin: 20px 0px 0px; padding: 0px; font-family: 宋体, 'Times New Roman';">
+<div class="pdcont" style="margin: 0px; padding: 0px; font-family: 'Times New Roman', 宋体; font-size: 14px; color: rgb(32, 0, 0);"></div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><p>输入第一行一个数 n，表示分子的种类。</p>
+<div>第二行包含 n 个由一个空格隔开的长度为 8 的字符串，每个串描述一种分子。</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出一行一个英文单词，如果能组成无限大的结构体，输出 unbounded，否则输出 bounded。</p></p><hr/><h3>样例输入</h3><pre>3
+A+00A+A+ 00B+D+A- B-C+00C+</pre><hr/><h3>样例输出</h3><pre>bounded</pre><hr/><h3>提示</h3><p><p>&nbsp;100%的数据 n &le; 40000。</p>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3953" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3953" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

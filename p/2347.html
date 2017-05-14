@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2347：[Baltic2011]Meetings</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2011]Meetings</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2011]Meetings</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Baltic2011]Meetings                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="center"></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">拯救地球学会召集了</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">位会员来参加一个紧急会议，目的是最终通过一个方案来拯救世界。为了在会上达成一致的决议，与会人员将按以下流程进行：</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">1.</span><span style="font-size: 12pt">每位会员都有一个方案</span><span style="font-size: 12pt">(proposal)</span><span style="font-size: 12pt">，需要花</span><i><span style="font-size: 12pt">P</span></i><span style="font-size: 12pt">分种来给其他会员进行展示</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">2.</span><span style="font-size: 12pt">当每位会员都展示完毕，他们需要投票</span><span style="font-size: 12pt">(vote)</span><span style="font-size: 12pt">选出最好的方案，这需要</span><i><span style="font-size: 12pt">V</span></i><span style="font-size: 12pt">分钟</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">例如，如果每个方案花</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">分钟展示（</span><i><span style="font-size: 12pt">P</span></i><span style="font-size: 12pt">=1</span><span style="font-size: 12pt">），投票也花</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">分钟（</span><i><span style="font-size: 12pt">V</span></i><span style="font-size: 12pt">=1</span><span style="font-size: 12pt">），一个</span><span style="font-size: 12pt">100</span><span style="font-size: 12pt">人参加的会议将在</span><span style="font-size: 12pt">101</span><span style="font-size: 12pt">分钟后得出最终结果。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">为了更快地得到最终结果，参加会议的会员们决定分组开会，同时进行。每个小组按照上面的流程选出组内最佳的方案。然后每个小组的代表再开会，并从每个小组的最佳方案中选出最终结果。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">比如，如果</span><span style="font-size: 12pt">100</span><span style="font-size: 12pt">名会员分成</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">组，一组</span><span style="font-size: 12pt">40</span><span style="font-size: 12pt">人，另一组</span><span style="font-size: 12pt">60</span><span style="font-size: 12pt">人，会议将按下面的情况进行（仍然设</span><i><span style="font-size: 12pt">P</span></i><span style="font-size: 12pt">=<i>V</i>=1</span><span style="font-size: 12pt">）：</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -21pt"><span style="font-size: 12pt">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">人多的小组花</span><span style="font-size: 12pt">61</span><span style="font-size: 12pt">分钟选出组内最佳方案；</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -21pt"><span style="font-size: 12pt">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">人少的小组花</span><span style="font-size: 12pt">41</span><span style="font-size: 12pt">分钟选出组内最佳方案，然后得等人多的小组的会议结束；</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -21pt"><span style="font-size: 12pt">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">个小组的</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">位代表开会，花</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">分钟时间互相展示各自的方案，然后花</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">分钟投票。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">这样，会议进行的总时间为</span><span style="font-size: 12pt">61+2+1=64</span><span style="font-size: 12pt">分钟。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">但是小组可以再细分成更小的组</span><span style="font-size: 12pt">(subgroup)</span><span style="font-size: 12pt">，而且有时候分成</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">组以上会更快。比如在特殊情况下，</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">个的小小组</span><span style="font-size: 12pt">(subgroup)</span><span style="font-size: 12pt">不需要给自己做展示，也不用做选择。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">给定</span><i><span style="font-size: 12pt">P</span></i><span style="font-size: 12pt">和</span><i><span style="font-size: 12pt">V</span></i><span style="font-size: 12pt">，编写程度，计算</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">名会员参加会议并得到最终结果所需要的最短时间，假设他们最优化地安排会议和分组。</span></div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">第</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">行，也是唯一的一行，有</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">个整数</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">, <i>P</i></span><span style="font-size: 12pt">和</span><i><span style="font-size: 12pt">V</span></i><span style="font-size: 12pt">：</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">是参加会议的会员人数，</span><i><span style="font-size: 12pt">P</span></i><span style="font-size: 12pt">是展示用的时间（单位为分钟），</span><i><span style="font-size: 12pt">V</span></i><span style="font-size: 12pt">是投票用的时间（单位为分钟）。</span></div>
+<div style="text-indent: 24pt"></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 24pt"><span style="font-size: 12pt">第</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">行，也是唯一的一行，应给出整数</span><i><span style="font-size: 12pt">M</span></i><span style="font-size: 12pt">，即整个会议得到最终结果所需要的最短时间。</span></div>
+<div><b><span style="font-size: 14pt">数据范围</span></b></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">1&le;<i>N</i>&le;10<sup>15</sup></span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">1&le;<i>P</i>, <i>V</i>&le;1 000</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">有</span><span style="font-size: 12pt">70</span><span style="font-size: 12pt">分的测试点中，</span><span style="font-size: 12pt">1&le;<i>N</i>&le;50 000</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">有</span><span style="font-size: 12pt">40</span><span style="font-size: 12pt">分的测试点中，</span><span style="font-size: 12pt">1&le;<i>N</i>&le;5 000</span></div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>9 1 1 
+6 1 2 
+6 2 1</pre><hr/><h3>样例输出</h3><pre>8
+8
+12
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: 12pt">在第一个样例中，会员们可以分成</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">组，每组</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">人，每组需要</span><span style="font-size: 12pt">4</span><span style="font-size: 12pt">分钟，这</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">组的</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">名代表再花</span><span style="font-size: 12pt">4</span><span style="font-size: 12pt">分钟即可得到最终结果。</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2347" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2347" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

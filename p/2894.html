@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2894：世界线</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">世界线</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">世界线</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                世界线                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">由于春希对于第二世代操作的不熟练，所以刚使用完invasion process便掉落到了世界线之外，错综复杂的平行世界信息涌入到春希的意识中。春希明白了事件的真相。</span></div>
+<div><span style="font-size: medium">在一个冬马与雪菜同时存在的世界里，傲娇的冬马最终还是博得了春希的内心。然而看着好友雪菜的消瘦，内心愧疚的冬马启动了第二世代操作，想找到一个雪菜最终成功的世界，却发现哪里都没有。绝望的冬马决定耗尽自己全部的第二世代操作点数，自创一个没有自己只有雪菜与春希的世界。</span></div>
+<div><span style="font-size: medium">虽然这个世界一开始效果很好，春希与雪菜很快的被命运撮合在了一起，然而没有了冬马的雪菜，如没有了大海的沙滩，失去了傍依。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">虽然世界里没有冬马的存在，但是由于冬马创造时的疏忽，这个世界里的雪菜依然存在着因独占春希而产生的对冬马的愧疚感，这种愧疚感折磨着雪菜，最终雪菜选择了自毁忘记春希。</span></div>
+<div><span style="font-size: medium">看着这一切的春希深知不管是三个人一起的快乐，还是两个人独处的甜蜜，都无法消除冬马与雪菜内心的自责，无论如何修改世界，三人都只会更加痛苦，于是春希使用了自己剩余的全部操作点数，念出了key world:WhiteAlbum2，开始了initialization process.</span></div>
+<div><span style="font-size: medium">在initialization process中，春希需要整理世界线，才能回归原本的世界。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">世界线是一棵根节点为1的树，每个节点为1个字符。规定树上的子串为从某个节点（不一定是1号节点）出发往其子节点走所形成的字符串。每一个子串相当于一个平行世界，要想重构世界，就需要知道两个信息：</span></div>
+<div style="margin: 0cm 0cm 0pt 30pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp; </span>不同子串的个数</span></div>
+<div style="margin: 0cm 0cm 0pt 30pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp; </span>将不同的子串排序后，字典序第k-1小的子串。</span></div>
+<div><span style="font-size: medium">如图所示为一个世界线的样例，从4-&gt;5的子串为bb,1-&gt;5的为abb</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 12pt"><span style="font-size: medium">第一行两个整数n，q表示节点个数以及询问个数</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">第二行n个字符，表示编号为i的字符是什么。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来n-1行表示一棵树。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来q行，每行一个整数k</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 12pt"><span style="font-size: medium">第一行为不同支付串个数。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来q行为q个询问的答案(注意输出的是第k-1小的子串，如果K=1请直接换行)，如果不存在（不包括k=1）输出-1.</span></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>8 1
+abcbbaca
+1 2
+2 3
+1 4
+4 5
+4 6
+4 7
+1 8 
+5
+</pre><hr/><h3>样例输出</h3><pre>12
+aba
+【数据规模和约定】
+12%：n<=10
+另有48%为一条链;
+100%: n<=250000,q<=50000.	
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2894" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2894" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

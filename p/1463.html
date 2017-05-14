@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1463：IPSC2003 Got Root?
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">IPSC2003 Got Root?
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">IPSC2003 Got Root?
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                IPSC2003 Got Root?
+                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>Famous biologist Herbert Greenstuff recently discovered a new kind of a plant, the graphius vulgaris, which is apparently endemic to the Pezinska Baba National Wilderness in western Slovakia. This plant is quite peculiar. On the first sight it looks just like a normal bush. However, on the second sight you may notice that its structure is far more complicated. When two branches of the bush touch each other they are able to grow together. In fact, they often do. The result is a bush that is incredibly twisted and dense. (If Herbert were not a biologist but a computer scientist instead, he would notice that when you consider the plant as a graph, it is no longer a tree but a general undirected connected graph.) 
+A few days later the bushes were discovered for the second time by two computer science students, Alice and Bob. You probably know them, they are famous for playing games (and executing cryptographic protocols) day and night. They were in the middle of a simple game of NIM when Alice noticed the bushes. Immediately the simple NIM was forgotten. These bushes were an ideal opportunity to play a far more interesting game. 
+Given is a connected graph (the bush) on N vertices. The vertices are numbered from 1 to N. Edges represent branches of the bush, vertex 1 represents the ground. Players alternate in making moves, Alice moves first. A move consists of two steps. In the first step the player selects an edge and removes it from the graph. In the second step he/she removes all the edges that are no longer connected to the ground. (The player cuts a branch of the bush and removes the part of the bush he cut away.) The first player who has no legal move (nothing to cut) loses. You may assume that both Alice and Bob play optimally. 
+Your task is so simple you probably expect it already. You have to save the bushes before Alice and Bob destroy them. For each of the bushes you have to find out who will win if they play their game on it. After you tell them the results you will spoil them all the fun and they'll leave the bushes alone. Please hurry, the bushes are really rare! 
+Alice & Bob有一天发现了一株奇怪的灌木、他的枝分叉之后又可以汇合、更奇特的是来自不同的不仅是同一点的分叉可以汇合、即使分叉点相差很远、两根枝条仍然可以生长到一起(组织连在一块儿了)。在我们看来他可以抽象为一个无向图。其中有唯一结点是根。 
+他们认为这是用来玩游戏的绝佳材料。于是他们打算在这棵树上玩伐木游戏，规则如下： 
+1.两人轮流从灌木上截下枝条(图上的边)，每截下一根枝条就将与根不再相连的部分去掉。 
+2.截去最后一根枝条的人获胜 
+Alice 先手。 
+对于给出的无向图输出输出胜利的人的名字。 
+</p><hr/><h3>输入格式</h3><p>On the first line of the input file is the number B of bushes. B blocks of data follow, each of them describes one bush. 
+Each block begins with two numbers N, M separated by whitespaces, where N is the number of vertices and M the number of edges of the respective bush. Descriptions of M edges follow. For each edge the input file contains the numbers of the vertices it connects. All these numbers are separated by whitespaces. 
+
+</p><hr/><h3>输出格式</h3><p>For each block in the input file, output a single line containing the name of the player who will win the game on the given bush (e.g. either Alice or Bob). 
+
+</p><hr/><h3>样例输入</h3><pre>2
+  
+8 7
+
+1 2
+1 3
+3 4
+1 5
+5 6
+6 7
+7 8
+
+5 6
+
+1 2
+1 3
+3 2
+1 4
+5 1
+4 5
+
+
+
+</pre><hr/><h3>样例输出</h3><pre>Alice
+Bob
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1463" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1463" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

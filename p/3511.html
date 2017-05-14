@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3511：土地划分</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">土地划分</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">土地划分</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                土地划分                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p style="text-align: left"><span style="font-size: medium"><font face="Times New Roman">Y国有N座城市，并且有M条双向公路将这些城市连接起来，并且任意两个城市至少有一条路径可以互达。 <br />
+Y国的国王去世之后，他的两个儿子A和B都想成为新的国王，但他们都想让这个国家更加安定，不会用武力解决问题。 <br />
+于是他们想将这个国家分成两个小国家A国和B国。现在，A拥有1号城市，B拥有N号城市，其他的城市还尚未确定归属哪边（划分之后的国家内部城市可以不连通）。 <br />
+由于大家都想让国家变得更好，而某些城市的人民愿意国王的A儿子作为他们的领袖，而某些城市更看好B，而为了交通的便捷，如果划分后的公路连接两个同一个国家的城市，那么更利于城市之间的交流。于是大臣们设计了一种对土地划分的评分机制，具体如下： <br />
+1. 对于城市i，如果它划分给A国，将得到VA[i]的得分；划分给B国，将得到VB[i]的得分。 <br />
+2. 对于一条公路i，如果它连接两个A国的城市，将得到EA[i]的得分；连接两个B国的城市，将得到EB[i]的得分；否则，这条公路将失去意义，将扣除EC[i]的得分。 <br />
+现请你找到最优的土地划分，使得这种它的评分最高。 <br />
+</font></span></p></p><hr/><h3>输入格式</h3><p><p><br />
+<font face="Times New Roman" size="4">第一行包含两个整数N，M，含义如问题描述所示。 <br />
+接下来一行N-2个非负整数，表示VA[2..N-1]。 <br />
+接下来一行N-2个非负整数，表示VB[2..N-1]。 <br />
+接下来M行，每行五个非负整数描述一条公路：X Y EA[i] EB[i] EC[i]，含义如问题描述所示。 <br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font face="Times New Roman" size="4">输出有且仅有一个整数，表示最高评分。 <br />
+</font></p></p><hr/><h3>样例输入</h3><pre>3 3 
+8 
+9 
+1 2 2 6 2 
+2 3 8 5 7 
+1 3 9 4 1 
+</pre><hr/><h3>样例输出</h3><pre>11 
+【样例说明】 
+A国仅有1号点，B国有2号和3号点。 
+评分=VB[2]+EB[2]-EC[1]-EC[3]=9+5-2-1=11。 
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">【数据说明】 <br />
+数据点 N M 备注 <br />
+1-2 &lt;=20 &lt;=200 无 <br />
+3-4 &lt;=5000 &lt;=10000 VA、VB、EA、EB均为0 <br />
+5-6 &lt;=5000 &lt;=10000 EC均为0 <br />
+7-10 &lt;=10000 &lt;=40000 无 <br />
+</span></p>
+<p>保证运算过程中及最终结果不超过32位带符号整数类型的表示范围</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3511" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3511" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

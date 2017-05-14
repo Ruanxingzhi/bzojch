@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3875：[Ahoi2014]骑士游戏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2014]骑士游戏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2014]骑士游戏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ahoi2014]骑士游戏                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&nbsp;【故事背景】</div>
+<div>长期的宅男生活中，JYY又挖掘出了一款RPG游戏。在这个游戏中JYY会</div>
+<div>扮演一个英勇的骑士，用他手中的长剑去杀死入侵村庄的怪兽。</div>
+<div>【问题描述】</div>
+<div>在这个游戏中，JYY一共有两种攻击方式，一种是普通攻击，一种是法术攻</div>
+<div>击。两种攻击方式都会消耗JYY一些体力。采用普通攻击进攻怪兽并不能把怪兽彻底杀死，怪兽的尸体可以变出其他一些新的怪兽，注意一个怪兽可能经过若干次普通攻击后变回一个或更多同样的怪兽；而采用法术攻击则可以彻底将一个怪兽杀死。当然了，一般来说，相比普通攻击，法术攻击会消耗更多的体力值（但由于游戏系统bug，并不保证这一点）。</div>
+<div>游戏世界中一共有N种不同的怪兽，分别由1到N编号，现在1号怪兽入</div>
+<div>侵村庄了，JYY想知道，最少花费多少体力值才能将所有村庄中的怪兽全部杀死呢？</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p></p>
+<div>第一行包含一个整数N。</div>
+<div>接下来N行，每行描述一个怪兽的信息；</div>
+<div>其中第i行包含若干个整数，前三个整数为Si，Ki和Ri，表示对于i号怪兽，</div>
+<div>普通攻击需要消耗Si的体力，法术攻击需要消耗Ki的体力，同时i号怪兽死亡后会产生Ri个新的怪兽。表示一个新出现的怪兽编号。同一编号的怪兽可以出现多个。</div>
+<div>
+<div></div>
+</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出一行一个整数，表示最少需要的体力值。</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>4
+4 27 3 2 3 2
+3 5 1 2
+1 13 2 4 2
+5 6 1 2</pre><hr/><h3>样例输出</h3><pre>26</pre><hr/><h3>提示</h3><p><div>【样例说明】</div>
+<div>首先用消耗4点体力用普通攻击，然后出现的怪兽编号是2，2和3。花费</div>
+<div>10点体力用法术攻击杀死两个编号为2的怪兽。剩下3号怪兽花费1点体力进</div>
+<div>行普通攻击。此时村庄里的怪兽编号是2和4。最后花费11点体力用法术攻击</div>
+<div>将这两只怪兽彻底杀死。一共花费的体力是4+5+5+1+5+6=26。</div>
+<div>【数据范围】</div>
+<div>2&lt;=N&lt;=2*10^5,1&lt;=Ri,Sigma(Ri)&lt;=10^6,1&lt;=Ki,Si&lt;=5*10^14</div></p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3875" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3875" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1162：[CTSC2004]网络改造network</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2004]网络改造network</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2004]网络改造network</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CTSC2004]网络改造network                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>从前，HURRICANE小组承担了一项重要的工作&mdash;&mdash;把校园内的计算机接入到Internet上面去。他们首先把每个人的计算机编组并把同一组的连在一台基层础交换机上，然后设立了一个对外的顶级网关交换机，再用其他的一些中间交换机把这些交换机一层一层的连接起来接到顶级网关交换机上。而且交换机都是严格的按照一层一层的连接起来的，低一层的交换机只会连接到一台高一层的交换机上面，但一台高层的交换机可能同时和几台低一层的交换机相连。但最近，由于原来架设的网络服务有限，需要把网络中的一些交换机升级为核心交换机并对整个网络提供更多的服务。不过由于改造的时间所限，只来得及把不超过p台交换机升级为核心交换机，而所有剩下的交换机则需要通过改造网络的方法和这几台核心交换机直接连接。但是无论是升级交换机还是改造网络都需要花费一定的资金。现在请你给出一个改造网络的方案。使得按照该方案升级后每一个交换机要么是核心交换机，要么直接和核心交换机相连。并且要求提供的方案使改造所用的总费用最小。【任务描述】你的程序必须根据给出的输入，提供符合题意的输出： 输入包括网络的拓扑结构，升级网络中每台交换机的费用，以及改造网络的费用，还有可以升级的交换机的最大数目； 你必须根据输入，找出一个升级的方案，满足升级后的核心交换机的数目不超过给定的可升级交换机最大值p，且使得总费用最少； 其中总费用的计算包括两个部分： 一部分是升级交换机为核心交换机所需要的费用，该部分的费用按照所有的需要升级的交换机所需的费用之和来计算； 另一部分是改造网络所需要的费用，该部分的费用按照所有未升级的交换机到最近的核心交换机的距离之和来计算； 如果两台交换机直接相连，那么该距离即为他们之间的网络距离； 如果两台交换机是通过其他的交换机间接连接在一起的，那么它们之间的距离定义为它们之间的唯一一条路径上相邻的交换机之间网络长度之和； 注意：当网络中没有任何交换机升级到核心交换机的时候，由于也没有交换机可以连接到核心交换机，所以我们定义此时的总费用为无穷大。</p></p><hr/><h3>输入格式</h3><p><p>第一行为两个整数n（n &le; 400）和p，分别表示网络中交换机的数目和可升级交换机的最大值。接下来的n行每行一个正整数ci，表示把标号为i的交换机升级为核心交换机所需要的费用。接下来的n-1行每行三个整数i、j、di,j，表示编号为i的交换机为编号为j的交换机的上层交换机，而di,j表示两台交换机之间的网络长度。</p></p><hr/><h3>输出格式</h3><p><p>你的输出第一行为一个整数M，表示你的方案的最小总费用。接下来一行包括一个整数p0，表示你的方案所需要升级为核心交换机的交换机数目。</p></p><hr/><h3>样例输入</h3><pre>4 2
+20
+20
+20
+20
+1 3 1
+1 2 1
+1 4 1</pre><hr/><h3>样例输出</h3><pre>23
+1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1162" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1162" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

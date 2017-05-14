@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2356：不等式</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">不等式</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">不等式</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                不等式                </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 24.1pt"><span style="font-size: 12pt">数学中有很多不等式，比如，当</span><span style="font-size: 12pt">x,y&gt;0</span><span style="font-size: 12pt">时：</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">x<sup>2</sup>+y<sup>2</sup>&ge;2xy</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">x<sup>3</sup>+y<sup>3</sup>&ge;x<sup>2</sup>y+xy<sup>2</sup></span></div>
+<div style="text-indent: 24.1pt"><span style="font-size: 12pt">输入两个分别齐次且系数非负的二元多项式</span><span style="font-size: 12pt">f(x,y)</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">g(x,y)</span><span style="font-size: 12pt">，判断是否存在</span><span style="font-size: 12pt">A,r&gt;0</span><span style="font-size: 12pt">，满足对于任意</span><span style="font-size: 12pt">x,y&gt;0</span><span style="font-size: 12pt">，都有：</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">f(x,y)&ge;A*[g(x,y)]<sup>r</sup></span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">包含多组数据，相邻两组数据之间用一个空行隔开。</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">每组数据包含两行</span><span style="font-size: 12pt; line-height: 200%">.</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">第一行包括</span><span style="font-size: 12pt; line-height: 200%">n+2</span><span style="font-size: 12pt; line-height: 200%">个非负整数，</span><span style="font-size: 12pt; line-height: 200%">n,a<sub>0</sub>,a<sub>1</sub>,&hellip;,a<sub>n</sub></span><span style="font-size: 12pt; line-height: 200%">，</span><span style="font-size: 12pt; line-height: 200%">a<sub>i</sub></span><span style="font-size: 12pt; line-height: 200%">不全是</span><span style="font-size: 12pt; line-height: 200%">0.</span><span style="font-size: 12pt; line-height: 200%">表示</span><span style="font-size: 12pt; line-height: 200%">f(x,y)=a<sub>0</sub>x<sup>n</sup>+a<sub>1</sub>x<sup>n-1</sup>y+&hellip;&hellip;+a<sub>n</sub>y<sup>n</sup>.</span></div>
+<div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">第二行包括</span><span style="font-size: 12pt; line-height: 200%">m+2</span><span style="font-size: 12pt; line-height: 200%">个非负整数</span><span style="font-size: 12pt; line-height: 200%">，</span><span style="font-size: 12pt; line-height: 200%">m,b<sub>0</sub>,b<sub>1</sub>,&hellip;,b<sub>m</sub></span><span style="font-size: 12pt; line-height: 200%">，</span><span style="font-size: 12pt; line-height: 200%">b<sub>i</sub></span><span style="font-size: 12pt; line-height: 200%">不全是</span><span style="font-size: 12pt; line-height: 200%">0.</span><span style="font-size: 12pt; line-height: 200%">表示</span><span style="font-size: 12pt; line-height: 200%">g(x,y)=b<sub>0</sub>x<sup>m</sup>+b<sub>1</sub>x<sup>m-1</sup>y+&hellip;&hellip;+b<sub>m</sub>y<sup>m</sup>.</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 24.1pt; line-height: 200%"><span style="font-size: 12pt; line-height: 200%">对于每组数据，输出一行，若存在则输出</span><span style="font-size: 12pt; line-height: 200%">&rdquo;YES&rdquo;</span><span style="font-size: 12pt; line-height: 200%">，否则输出</span><span style="font-size: 12pt; line-height: 200%">&rdquo;NO&rdquo;.</span></div></p><hr/><h3>样例输入</h3><pre>1 1 1
+2 0 1 0
+ 
+2 1 1 1
+3 1 0 0 1
+ 
+5 1 0 0 1 0 0
+5 0 0 1 0 0 1
+</pre><hr/><h3>样例输出</h3><pre>YES
+YES
+NO
+</pre><hr/><h3>提示</h3><p><p>【样例说明】<br />
+数据1：x+y&ge;2[(xy)1/2]；<br />
+数据2：x2+xy+y2&ge;(x3+y3)2/3，展开易证；<br />
+数据3：反设x5+x2y3&ge;A*(x3y2+y5)r，对于所有正数x,y成立.取x=y，得：2x5&ge;A(2x5)r，若r&gt;1,则x取足够大时不等式不成立，若r&lt;1,则x取足够小时不等式不成立，所以r=1；<br />
+再取x=1，得：1+y3&ge;A*(y2+y5)，即：1&ge;Ay2，不可能对所有正数y成立，故不存在A,r.<br />
+【数据规模】<br />
+最多包含100组数据，且1&lt;=n,m&lt;=100，系数大小不超过10000.</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2356" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2356" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

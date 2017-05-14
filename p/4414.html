@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4414：数量积</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数量积</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数量积</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                数量积                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>神犇heheda最近得到了UOJ抱枕，蒟蒻yts1999想要玩。于是heheda给yts1999出了一道题：</div>
+<div>一个长度为2n+2的整数数列 按照下式定义：</div>
+<div>A0=0</div>
+<div>A1=C</div>
+<div>Ai+2=(Ai+1+Ai) Mod M (0&lt;=i&lt;=2*N)</div>
+<div>现有n个平面向量v1&hellip;vn：</div>
+<div>V1=(A2,A3),V2=(A4,A5)...Vn=(A2n,A2n+1)</div>
+<div>集合S的定义如下：</div>
+<div>&nbsp;<img width="380" height="48" alt="" src="../file/4414_0.png" /></div>
+<div>其中&quot;vi&bull;vj&quot;表示向量vi和vj的数量积。</div>
+<div>求S集合中不同元素的个数是多少。答案对M取模。</div>
+<div>heheda告诉yts1999，只要他做出了这道题，她就可以把抱枕借给他玩一会。然而yts1999实在是太弱了不会做，于是向你求助。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入数据包含一行三个整数C,M和n，分别表示a1的值，模数和平面向量的个数，每两个数之间用一个空格隔开。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出一行一个整数表示答案对M取模后的值。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 5 3</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p><div>数列为{0,4,4,3,2,0,2,2}，v1=(4,3),v2=(2,0),v3=(2,2)。</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif; font-size: 18px; line-height: normal; background-color: rgb(228, 240, 248);">v1&bull;v2 mod M=3</span>, v2&bull;v3 mod M=4, v1&bull;v3 mod M=4。</div>
+<div>对于100%的数据，1&le;C&le;10^9,1&le;M&le;10^9,1&le;n&le;3*10^5</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>By yts1999</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4414" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4414" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

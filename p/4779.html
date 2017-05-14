@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4779：[Usaco2017 Open]Bovine Genomics</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2017 Open]Bovine Genomics</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2017 Open]Bovine Genomics</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2017 Open]Bovine Genomics                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Farmer John owns Ncows with spots and N cows without spots. Having just completed a course in bovine</div>
+<div>&nbsp;genetics, he is convinced that the spots on his cows are caused by mutations in the bovine genome.A</div>
+<div>t great expense, Farmer John sequences the genomes of his cows. Each genome is a string of length Mb</div>
+<div>uilt from the four characters A, C, G, and T. When he lines up the genomes of his cows, he gets a ta</div>
+<div>ble like the following, shown here for N=3 and M=8:</div>
+<div>Positions: &nbsp; &nbsp;1 2 3 4 5 6 7 8</div>
+<div></div>
+<div>Spotty Cow 1: A A T C C C A T</div>
+<div>Spotty Cow 2: A C T T G C A A</div>
+<div>Spotty Cow 3: G G T C G C A A</div>
+<div></div>
+<div>Plain Cow 1: &nbsp;A C T C C C A G</div>
+<div>Plain Cow 2: &nbsp;A C T C G C A T</div>
+<div>Plain Cow 3: &nbsp;A C T T C C A T</div>
+<div>Looking carefully at this table, he surmises that the sequence from position 2 through position 5 is</div>
+<div>&nbsp;sufficient to explain spottiness. That is, by looking at the characters in just these these positio</div>
+<div>ns (that is, positions 2&hellip;5), Farmer John can predict which of his cows are spotty and which are not</div>
+<div>. For example, if he sees the characters GTCG in these locations, he knows the cow must be spotty.Pl</div>
+<div>ease help FJ find the length of the shortest sequence of positions that can explain spottiness.</div>
+<div>
+<div>给定n个A串和n个B串，长度均为m，求一个最短的区间[l,r]</div>
+<div>使得不存在一个A串a和一个B串b，使得a[l,r]=b[l,r]&nbsp;</div>
+<div>n,m&le;500</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The first line of input contains N(1&le;N&le;500) and M (3&le;M&le;500). The next N lines each contain a str</div>
+<div>ing of M characters; these describe the genomes of the spotty cows. The final Nlines describe the ge</div>
+<div>nomes of the plain cows. No spotty cow has the same exact genome as a plain cow.</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>Please print the length of the shortest sequence of positions that is sufficient to explain spottine</div>
+<div>ss. A sequence of positions explains spottiness if the spottiness trait can be predicted with perfec</div>
+<div>t accuracy among Farmer John's population of cows by looking at just those locations in the genome.</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 8
+AATCCCAT
+ACTTGCAA
+GGTCGCAA
+ACTCCCAG
+ACTCGCAT
+ACTTCCAT
+</pre><hr/><h3>样例输出</h3><pre>4</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4779" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4779" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

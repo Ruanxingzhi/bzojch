@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1039：[ZJOI2008]无序运动Movement</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[ZJOI2008]无序运动Movement</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[ZJOI2008]无序运动Movement</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [ZJOI2008]无序运动Movement                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>　　D博士对物理有着深入的研究，经典物理、天体物理、量子物理都有着以他的名字命名的定理。最近D博士着迷<br />
+于研究粒子运动的无规则性。对圣经深信不疑的他相信，上帝创造的任何事物必然是有序的、有理可循的，而不是<br />
+无规则的、混沌的。 经过长时间的研究，D博士找到了很多出现相当频繁的轨迹片断，他把这些轨迹片断储存在一<br />
+个很大的数据库内。他需要你帮助他写一个程序，对于一个给出的粒子运动轨迹，统计数据库中每个轨迹片断的出<br />
+现的次数。 为清楚起见，我们定义一个粒子的轨迹为二维平面上的一个点列（P1, P2, &hellip; PN）。点列P的一个子<br />
+列[i, j]定义为P中一段连续的子序列（Pi, Pi+1, &hellip; Pj）。点列P的一个子列[u, v]被称为点列Q = (Q1, Q2 &hellip; <br />
+Qv-u+1)在P中的一次出现，当且仅当Q经过有限次的平移、旋转、翻转、放缩之后得到Q&rsquo;满足Q&rsquo;k = Pu+k-1（k =<br />
+&nbsp;1 &hellip; u &ndash; v + 1）。 对平面X-Y进行四种操作的解释平移 设平移向量为(dx, dy)，则任意点(x,y)平移后的结果<br />
+为(x+dx, y+dy) 旋转 设旋转角为t，则任意点(x,y)旋转后的结果为 (x cos t &ndash; y sin t, x sin t + y cos t)<br />
+&nbsp;翻转 任意点(x,y) 翻转后的结果为(x, -y) 放缩 设放缩比例为p (p &ne; 0)，则任意点(x,y)放缩后的结果为(px,<br />
+&nbsp;py)</p></p><hr/><h3>输入格式</h3><p><p>　　第一行两个整数N、M，分别描述待处理的粒子运动轨迹的点列大小与数据库内的轨迹片断个数。接下来M行依<br />
+次给出每个轨迹片断。每行先是一个正整数K，表示该轨迹片断点列的长度。然后2K个整数，依次描述点列中的K个<br />
+点的横坐标与纵坐标。接下来一行2N个整数，依次描述待处理的粒子运动轨迹的点列中N个点的横坐标与纵坐标。<br />
+注：输入中的每条轨迹中任意相邻两点不会相同。</p></p><hr/><h3>输出格式</h3><p><p>　　应包含M行，依次给出每个片段在待处理运动轨迹中的出现次数。</p></p><hr/><h3>样例输入</h3><pre>3 2
+2 17 0 10 1
+3 0 0 1 0 1 -1
+0 0 1 0 1 1</pre><hr/><h3>样例输出</h3><pre>2
+1</pre><hr/><h3>提示</h3><p><p>N, K &le; 200 000，<span style="color: rgb(255, 0, 0);">片段总长度 &le; 1600000</span>，输入中给出所有点坐标绝对值均不大于10 000。</p></p><hr/><h3>题目来源</h3><p>鸣谢tangjz重新制作数据</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1039" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1039" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

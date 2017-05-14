@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1018：[SHOI2008]堵塞的交通traffic</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SHOI2008]堵塞的交通traffic</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SHOI2008]堵塞的交通traffic</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SHOI2008]堵塞的交通traffic                </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>　　有一天，由于某种穿越现象作用，你来到了传说中的小人国。小人国的布局非常奇特，整个国家的交通系统可<br />
+以被看成是一个2行C列的矩形网格，网格上的每个点代表一个城市，相邻的城市之间有一条道路，所以总共有2C个<br />
+城市和3C-2条道路。 小人国的交通状况非常槽糕。有的时候由于交通堵塞，两座城市之间的道路会变得不连通，<br />
+直到拥堵解决，道路才会恢复畅通。初来咋到的你决心毛遂自荐到交通部某份差事，部长听说你来自一个科技高度<br />
+发达的世界，喜出望外地要求你编写一个查询应答系统，以挽救已经病入膏肓的小人国交通系统。 小人国的交通<br />
+部将提供一些交通信息给你，你的任务是根据当前的交通情况回答查询的问题。交通信息可以分为以下几种格式：<br />
+Close r1 c1 r2 c2：相邻的两座城市(r1,c1)和(r2,c2)之间的道路被堵塞了；Open r1 c1 r2 c2：相邻的两座城<br />
+市(r1,c1)和(r2,c2)之间的道路被疏通了；Ask r1 c1 r2 c2：询问城市(r1,c1)和(r2,c2)是否连通。如果存在一<br />
+条路径使得这两条城市连通，则返回Y，否则返回N；</p></p><hr/><h3>输入格式</h3><p><p>　　第一行只有一个整数C，表示网格的列数。接下来若干行，每行为一条交通信息，以单独的一行&ldquo;Exit&rdquo;作为<br />
+结束。我们假设在一开始所有的道路都是堵塞的。我们保证 C小于等于100000，信息条数小于等于100000。</p></p><hr/><h3>输出格式</h3><p><p>　　对于每个查询，输出一个&ldquo;Y&rdquo;或&ldquo;N&rdquo;。</p></p><hr/><h3>样例输入</h3><pre>2
+Open 1 1 1 2
+Open 1 2 2 2
+Ask 1 1 2 2
+Ask 2 1 2 2
+Exit</pre><hr/><h3>样例输出</h3><pre>Y
+N</pre><hr/><h3>提示</h3><p><p>&nbsp;题解：<a href="/JudgeOnline/upload/201604/sol(4).rar">JudgeOnline/upload/201604/sol(4).rar</a></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1018" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1018" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

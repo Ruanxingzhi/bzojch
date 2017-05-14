@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2926：[Poi1999]空立方体问题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1999]空立方体问题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1999]空立方体问题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi1999]空立方体问题                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">如果满足下面条件我们称这个立方体是规则的: </span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">它的顶点中的一个是坐标为(0,0,0)的点， </span></li>
+    <li><span style="font-size: medium">开始于这个顶点的位于坐标系统的正半轴， </span></li>
+    <li><span style="font-size: medium">边不长于10<sup>6</sup> </span></li>
+</ul>
+<div><span style="font-size: medium">有一个给定的空间点的集合A，坐标为间隔为[1..10<sup>6</sup>]的整数。我们试着找出最大体积的规则立方体，它不包括集合A的任何点。如果一个点属于一个立方体之内，那么这个点属于这个立方体，它是这个立方体的点，但它的墙不是。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">写一个程序:&nbsp;</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">读取来自集合A的点的坐标， </span></li>
+    <li><span style="font-size: medium">找出一个最大体积的规则立方体，它不包括来自集合A的任何点， </span></li>
+    <li><span style="font-size: medium">把结果输出 </span></li>
+</ul></p><hr/><h3>输入格式</h3><p><div style="margin: auto 0cm"><span style="font-size: medium">首行，一个非零的整数n被写出来（<i>n</i> &lt;= <i>5000</i>）。它是集合A的元素数。在文件PUS.IN接下来的n行中有三个一组的整数，其范围在[1..10<sup>6</sup>]，它们是来自集合A的点的坐标（分别为x，y，z）。每一行的数字被单空格号隔开。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">一行应该有三个被单空格号分隔的整数。这些是最大体积的规则立方体的顶点的坐标（分别为x，y，z）。我们要求坐标为正数。</span></div></p><hr/><h3>样例输入</h3><pre>4
+3 3 300000
+2 200000 5
+90000 3 2000
+2 2 1000
+</pre><hr/><h3>样例输出</h3><pre> 
+1000000 200000 1000
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2926" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2926" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2555：SubString</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">SubString</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">SubString</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                SubString                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;懒得写背景了，给你一个字符串init，要求你支持两个操作<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;(1):在当前字符串的后面插入一个字符串<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;(2):询问字符串s在当前字符串中出现了几次？(作为连续子串)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;你必须在线支持这些操作。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;第一行一个数Q表示操作个数<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;第二行一个字符串表示初始字符串init<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;接下来Q行，每行2个字符串Type,Str <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Type是ADD的话表示在后面插入字符串。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Type是QUERY的话表示询问某字符串在当前字符串中出现了几次。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;为了体现在线操作，你需要维护一个变量mask，初始值为0<br />
+&nbsp;&nbsp;&nbsp;<br />
+<img height="266" alt="" width="568" src="../file/2555_0.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;读入串Str之后，使用这个过程将之解码成真正询问的串TrueStr。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;询问的时候，对TrueStr询问后输出一行答案Result<br />
+&nbsp;&nbsp;&nbsp;&nbsp;然后mask = mask xor Result&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;插入的时候，将TrueStr插到当前字符串后面即可。</font></p>
+<p></p>
+<p><font size="4">HINT:ADD和QUERY操作的字符串都需要解压<br />
+&nbsp;&nbsp;&nbsp;</font></p></p><hr/><h3>输出格式</h3><p></p><hr/><h3>样例输入</h3><pre>    2
+
+    A
+ 
+    QUERY B
+
+    ADD BBABBBBAAB
+
+</pre><hr/><h3>样例输出</h3><pre>   
+    0
+</pre><hr/><h3>提示</h3><p><p><font size="4">&nbsp;40 % 的数据字符串最终长度 &lt;= 20000，询问次数&lt;= 1000，询问总长度&lt;= 10000<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+100 % 的数据字符串最终长度 &lt;= 600000，询问次数&lt;= 10000,询问总长度&lt;= 3000000</font></p>
+<p><font size="4">新加数据一组--2015.05.20<br />
+&nbsp;&nbsp;&nbsp;<br />
+</font></p></p><hr/><h3>题目来源</h3><p>Ctsc模拟赛By 洁妹</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2555" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2555" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

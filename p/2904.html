@@ -1,0 +1,315 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2904：平方和</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">平方和</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">平方和</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                平方和                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">给定一个整数N，求N最少可以拆成多少个完全平方数的和。&nbsp;<br />
+&nbsp;</span></p></p><hr/><h3>输入格式</h3><p><p><br />
+<font size="4">第一行一个整数TEST，表示数据组数。 <br />
+接下来TEST行，每行一个整数N。&nbsp;<br />
+&nbsp;<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">TEST行，每行一个正整数，表示N最少可以拆成多少个完全平方数的和。 <br />
+数据规模 <br />
+30.的数据N&le;10^6&nbsp; <br />
+60.的数据N&le;10^9 <br />
+100.的数据0&le;N&le;10^18 ,TEST&lt;=1000&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;</font></p></p><hr/><h3>样例输入</h3><pre>100
+413357
+567226
+766291
+597007
+289611
+215529
+447134
+752252
+909135
+417563
+670529
+352031
+701607
+572137
+496749
+255907
+378796
+230963
+494529
+161665
+666286
+452501
+151438
+159400
+219949
+734385
+710191
+511396
+301481
+551313
+66085
+521105
+689271
+434686
+847795
+170279
+440002
+65045
+412023
+869097
+267979
+676069
+804733
+763105
+109680
+363401
+342369
+946171
+854070
+118270
+140876
+418701
+188885
+244835
+546031
+951915
+43116
+371241
+662373
+405770
+860997
+804541
+370429
+727579
+524737
+152311
+534711
+304961
+133376
+218042
+129476
+205601
+255901
+187633
+276681
+950717
+818885
+643601
+533551
+600877
+97499
+63961
+556358
+335433
+781818
+981445
+331701
+772401
+985669
+452851
+908701
+213201
+214483
+817710
+757033
+605386
+442987
+315634
+599486
+221667
+</pre><hr/><h3>样例输出</h3><pre>3
+3
+3
+4
+3
+3
+3
+4
+4
+3
+3
+4
+4
+2
+3
+3
+3
+3
+3
+3
+3
+3
+3
+2
+3
+3
+4
+2
+3
+3
+2
+2
+4
+3
+3
+4
+3
+2
+4
+3
+3
+2
+3
+3
+4
+2
+2
+3
+3
+3
+3
+3
+2
+3
+4
+3
+3
+3
+2
+2
+3
+2
+3
+3
+3
+4
+4
+2
+2
+2
+2
+3
+2
+2
+3
+2
+3
+3
+4
+2
+3
+3
+3
+3
+3
+3
+3
+3
+2
+3
+2
+2
+3
+3
+3
+2
+3
+3
+3
+3
+</pre><hr/><h3>提示</h3><p><p>&nbsp;题解:<a href="/JudgeOnline/upload/201604/sol.doc">JudgeOnline/upload/201604/sol.doc</a></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2904" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2904" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

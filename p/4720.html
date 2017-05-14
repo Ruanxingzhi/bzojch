@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4720：[Noip2016]换教室</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noip2016]换教室</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noip2016]换教室</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noip2016]换教室                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>对于刚上大学的牛牛来说,他面临的第一个问题是如何根据实际情况申请合适的课程。在可以选择的课程中,有2n节</div>
+<div>课程安排在n个时间段上。在第i(1&le;i&le;n)个时间段上,两节内容相同的课程同时在不同的地点进行,其中,牛牛预先</div>
+<div>被安排在教室ci上课,而另一节课程在教室di进行。在不提交任何申请的情况下,学生们需要按时间段的顺序依次完</div>
+<div>成所有的n节安排好的课程。如果学生想更换第i节课程的教室,则需要提出申请。若申请通过,学生就可以在第i个</div>
+<div>时间段去教室di上课,否则仍然在教室ci上课。由于更换教室的需求太多,申请不一定能获得通过。通过计算,牛牛</div>
+<div>发现申请更换第i节课程的教室时,申请被通过的概率是一个已知的实数ki,并且对于不同课程的申请,被通过的概率</div>
+<div>是互相独立的。学校规定,所有的申请只能在学期开始前一次性提交,并且每个人只能选择至多m节课程进行申请。</div>
+<div>这意味着牛牛必须一次性决定是否申请更换每节课的教室,而不能根据某些课程的申请结果来决定其他课程是否申</div>
+<div>请;牛牛可以申请自己最希望更换教室的m门课程,也可以不用完这m个申请的机会,甚至可以一门课程都不申请。因</div>
+<div>为不同的课程可能会被安排在不同的教室进行,所以牛牛需要利用课间时间从一间教室赶到另一间教室。牛牛所在</div>
+<div>的大学有v个教室,有e条道路。每条道路连接两间教室,并且是可以双向通行的。由于道路的长度和拥堵程度不同,</div>
+<div>通过不同的道路耗费的体力可能会有所不同。当第i(1&le;i&le;n-1)节课结束后,牛牛就会从这节课的教室出发,选择一</div>
+<div>条耗费体力最少的路径前往下一节课的教室。现在牛牛想知道,申请哪几门课程可以使他因在教室间移动耗费的体</div>
+<div>力值的总和的期望值最小,请你帮他求出这个最小值。</div></p><hr/><h3>输入格式</h3><p><div>第一行四个整数n,m,v,e。n表示这个学期内的时间段的数量;m表示牛牛最多可以申请更换多少节课程的教室;</div>
+<div>v表示牛牛学校里教室的数量;e表示牛牛的学校里道路的数量。</div>
+<div>第二行n个正整数,第i(1&le;i&le;n)个正整数表示c,,即第i个时间段牛牛被安排上课的教室;保证1&le;ci&le;v。</div>
+<div>第三行n个正整数,第i(1&le;i&le;n)个正整数表示di,即第i个时间段另一间上同样课程的教室;保证1&le;di&le;v。</div>
+<div>第四行n个实数,第i(1&le;i&le;n)个实数表示ki,即牛牛申请在第i个时间段更换教室获得通过的概率。保证0&le;ki&le;1。</div>
+<div>接下来e行,每行三个正整数aj,bj,wj,表示有一条双向道路连接教室aj,bj,通过这条道路需要耗费的体力值是Wj;</div>
+<div>保证1&le;aj,bj&le;v,1&le;wj&le;100。</div>
+<div>保证1&le;n&le;2000,0&le;m&le;2000,1&le;v&le;300,0&le;e&le;90000。</div>
+<div>保证通过学校里的道路,从任何一间教室出发,都能到达其他所有的教室。</div>
+<div>保证输入的实数最多包含3位小数。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>输出一行,包含一个实数,四舎五入精确到小数点后恰好2位,表示答案。你的</div>
+<div>输出必须和标准输出完全一样才算正确。</div>
+<div>测试数据保证四舎五入后的答案和准确答案的差的绝对值不大于4*10^-3。(如果你不知道什么是浮点误差,这段话</div>
+<div>可以理解为:对于大多数的算法,你可以正常地使用浮点数类型而不用对它进行特殊的处理)</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>3 2 3 3
+2 1 2
+1 2 1
+0.8 0.2 0.5 
+1 2 5
+1 3 3
+2 3 1</pre><hr/><h3>样例输出</h3><pre>2.80</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4720" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4720" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

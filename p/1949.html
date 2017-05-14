@@ -1,0 +1,180 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1949：[Ceoi2006]Walk</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2006]Walk</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2006]Walk</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2006]Walk                </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>考虑X-Y平面上满足X≥0的整数结点
+
+给定若干个矩形及一个目标点，紧靠每个矩形外部的一周范围内没有其它矩形的点，所有矩形中的所有点满足X≥0
+
+求一条以(0,0)点为起点，以目标点为终点、不与任何矩形相交的最短路径</p><hr/><h3>输入格式</h3><p>第一行输入为两个整数X与Y(1≤X≤106,-106≤Y≤106)表示目标点坐标
+
+第二行为一个整数N(0≤N≤105)，表示矩形的数目
+
+接下来的N行每行包括4个整数：
+X1,Y1,X2,Y2(0≤X1,X2≤106,0≤Y1,Y2≤106)
+即N个矩形的某对对角顶点。</p><hr/><h3>输出格式</h3><p>第一行包括一个整数L，表示最短路径长度
+</p><hr/><h3>样例输入</h3><pre>42 33
+66
+35 37 37 37
+13 -41 13 6
+40 -2 42 -1
+27 -2 28 -2
+15 -4 16 2
+29 16 29 16
+38 -34 38 -11
+22 -5 22 -5
+34 27 34 35
+28 12 29 12
+10 11 11 13
+11 25 11 25
+24 4 25 40
+27 9 27 10
+27 -4 27 -4
+29 7 29 10
+3 -13 5 -13
+16 17 16 17
+18 6 18 48
+4 7 4 14
+5 2 5 5
+40 22 44 32
+21 13 21 13
+34 3 34 25
+41 11 42 20
+15 -15 16 -9
+24 -46 25 -6
+5 -4 5 -3
+10 17 11 17
+28 14 29 14
+3 -15 4 -15
+10 15 10 15
+16 8 16 9
+2 2 2 2
+1 -4 3 -3
+10 21 10 21
+22 8 22 8
+20 -3 21 2
+10 19 11 19
+7 -47 8 3
+28 -11 28 -6
+20 4 20 9
+11 23 11 23
+15 -17 16 -17
+27 0 27 3
+43 5 43 8
+15 -7 16 -6
+16 -19 16 -19
+11 -10 11 -10
+21 11 22 11
+4 0 4 0
+15 5 16 6
+3 -11 5 -7
+11 -8 11 -1
+28 -13 28 -13
+21 15 22 15
+40 -30 43 -5
+41 34 43 35
+15 14 16 15
+21 -16 22 -13
+1 -1 2 -1
+10 1 11 9
+22 17 22 17
+31 -50 32 -1
+22 -8 22 -7
+16 -21 16 -21
+</pre><hr/><h3>样例输出</h3><pre>89
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1949" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1949" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

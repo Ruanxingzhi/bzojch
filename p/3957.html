@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3957：[WF2011]To Add or to Multiply</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]To Add or to Multiply</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]To Add or to Multiply</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2011]To Add or to Multiply                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>工业计算机处理器公司为顾客量身定做了非常快速、用于专门目的的处理单元。a-C-m系列的处理器（比如1-C-2和5-C-3）的指令集只有两种操作：</div>
+<div>　　&bull;<span class="Apple-tab-span" style="white-space:pre">	</span>A 数值加a</div>
+<div>　　&bull;<span class="Apple-tab-span" style="white-space:pre">	</span>M 数值乘m</div>
+<div>　　处理器接收一个整数，执行一个A和M的指令序列（即程序）来修改输入，然后输出结果。举个例子，1-C-2处理器执行程序AAAM处理输入2返回输出10（计算过程是2&rarr;3&rarr;4&rarr;5&rarr;10）,然而5-C-3处理器用相同的程序和输入返回51（2&rarr;7&rarr;12&rarr;17&rarr;51）。</div>
+<div>　　你是一个被指定做一个顶级秘密项目的a-C-m程序员。这意味着你不会被告知你的程序执行的精确输入。但会得到四个特别的值p，q，r，s，以及下列条件</div>
+<div>　　1、输入保证是一个在p、q之间的数</div>
+<div>　　2、输出必须是一个在r，s之间的数。</div>
+<div>　　给你一个a-C-m处理器和p，q，r，s这四个数。你的工作是构想最短的a-C-m程序，使得任意任意x保证p&le;x&le;q，返回一个输出y使得r&le;y&le;s。如果有多个最短的程序，选择字典序最小的，而一个程序即是由A和M组成的字符串。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>
+<div>输入包含多组数据。每组数据在一行中给你6个整数a，m，p，q，r，s，每个就像上面描述的一样。</div>
+<div>末行输入6个0作为结束。</div>
+<div></div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每组数据，在你的程序前输出数据的编号，程序即像上面描述的一样。输出单词&ldquo;empty&rdquo;，如果最好的程序没有操作。输出单词&ldquo;impossible&rdquo;如果没有程序满足具体要求。</div>
+<div>
+<div>输出一个用空格分隔的字符串序列，任两个相邻的字符串形式分别为&ldquo;nA&rdquo;和&ldquo;nM&rdquo;，n&gt;0。前者表示n个连续的操作A，后者表示n个连续的操作M。</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>1 2 2 3 10 20
+1 3 2 3 22 33
+3 2 2 3 4 5
+5 3 2 3 2 3
+0 0 0 0 0 0</pre><hr/><h3>样例输出</h3><pre>Case 1: 1A 2M
+Case 2: 1M 2A 1M
+Case 3: impossible
+Case 4: empty</pre><hr/><h3>提示</h3><p><div>所有的的a,m,p,q,r,s&isin;[1,1000000000]，且p&le;q,r&le;s。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3957" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3957" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

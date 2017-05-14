@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1733：[Usaco2005 feb]Secret Milking Machine 神秘的挤奶机</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 feb]Secret Milking Machine 神秘的挤奶机</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 feb]Secret Milking Machine 神秘的挤奶机</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 feb]Secret Milking Machine 神秘的挤奶机                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John is constructing a new milking machine and wishes to keep it secret as long as possible. He has hidden in it deep within his farm and needs to be able to get to the machine without being detected. He must make a total of T (1 &lt;= T &lt;= 200) trips to the machine during its construction. He has a secret tunnel that he uses only for the return trips. The farm comprises N (2 &lt;= N &lt;= 200) landmarks (numbered 1..N) connected by P (1 &lt;= P &lt;= 40,000) bidirectional trails (numbered 1..P) and with a positive length that does not exceed 1,000,000. Multiple trails might join a pair of landmarks. To minimize his chances of detection, FJ knows he cannot use any trail on the farm more than once and that he should try to use the shortest trails. Help FJ get from the barn (landmark 1) to the secret milking machine (landmark N) a total of T times. Find the minimum possible length of the longest single trail that he will have to use, subject to the constraint that he use no trail more than once. (Note well: The goal is to minimize the length of the longest trail, not the sum of the trail lengths.) It is guaranteed that FJ can make all T trips without reusing a trail. </span></p>
+<div><span style="font-size: medium">约翰正在制造一台新型的挤奶机，但他不希望别人知道．他希望尽可能久地隐藏这个秘密．</span><span style="font-size: medium">他把挤奶机藏在他的农场里，使它不被发现．在挤奶机制造的过程中，他需要去挤奶机所在的地方T(1&le;T&le;200)次．他的农场里有秘密的地道，但约翰只在返回的时候用它．</span><span style="font-size: medium">农场被划分成N(2&le;N&le;200)块区域，用1到200标号．这些区域被P(1&le;P&le;40000)条道路连接，每条路有一个小于10^6的长度L．两块区域之间可能有多条道路连接．</span><span style="font-size: medium">为了减少被发现的可能，约翰不会两次经过农场上的任何一条道路．当然了，他希望走最短的路．&nbsp;请帮助约翰寻找这T次从仓库走到挤奶机所在地的路线．仓库是区域1，挤奶机所在地是区域N．我们现在要求的是约翰经过的这些道路中最长的路的长度最小是多少，当然他不能重复走某一条路．请注意，我们要求的不是最短的总路程长度，而是所经过的直揍连接两个区域的道路中最长的道路的最小长度．&nbsp;数据保证约翰可以找到T条没有重复的从仓库到挤奶机所在区域的路．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Three space-separated integers: N, P, and T * Lines 2..P+1: Line i+1 contains three space-separated integers, A_i, B_i, and L_i, indicating that a trail connects landmark A_i to landmark B_i with length L_i. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行是3个整数N、P和T，用空格隔开．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到P+1行，每行包括3个整数，Ai，Bi，Li．表示区域Ai、Bi之间有一条长度为Li的道路．</span></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: A single integer that is the minimum possible length of the longest segment of Farmer John's route. </span></p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出只有一行，包含一个整数，即约翰经过的这些道路中最长的路的最小长度．</span></div></p><hr/><h3>样例输入</h3><pre>7 9 2
+1 2 2
+2 3 5
+3 7 5
+1 4 1
+4 3 1
+4 5 7
+5 7 1
+1 6 3
+6 7 3
+</pre><hr/><h3>样例输出</h3><pre>5
+
+约翰选择1-2-3-7和1-6-7两条路线．这些路线中最长路的最小长度是5</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1733" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1733" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

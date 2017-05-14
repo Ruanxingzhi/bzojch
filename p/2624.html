@@ -1,0 +1,409 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2624：[JSOI2007] 群的计数</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2007] 群的计数</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2007] 群的计数</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JSOI2007] 群的计数                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium"><b>&nbsp;</b><b>&nbsp;&nbsp;</b>代数学研究的基本对象之一群是一些元素的集合。这些元素之间有一种代数运算，称之为乘法。两个群元素的乘积是一个群元素。一个大家习以为常的群是有理数乘法群，例如，等等，都是这个群中乘法的例子。需要注意的是，如果仅仅考虑有理数的乘法群，另外的一些运算比如加法是不被讨论的。数学家们把乘法抽象出来，就成为了群。群需要满足以下三条性质：</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">结合律：对群中的任意元素a,b,c 有 a(bc)=(ab)c</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">单位元：在群中存在唯一的元素e，它对群中任意的元素a有ea=a，ae=a</span></div>
+<div style="text-indent: 57.75pt"><span style="font-size: medium">有理数乘法群的单位元是1</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">逆&nbsp;元：对群中任意元素a,都存在群中唯一的元素b,使得ab=ba=e</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">比如有理数乘法群中，23的逆元就为。从这里可以看出，整数乘法不能构成一个群</span></div>
+<div><span style="font-size: medium">需要注意的是，群的定义中并没有交换律，就是说ab不一定等于ba，有理数乘法群作为一个特例，其交换性是没有普遍的意义的</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">现在的问题是，给定群的元素的个数（群的阶数），需要知道这样的群有多少种。只要满足上述三条性质，就是群，应该算上。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp; </span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">下面用四阶群的例子来说明这个问题。抽象地记群元素为e,a,b,c 只要列出一个乘法表，就可以代表一个群。下面给出推导乘法表的步骤：</span></div>
+<p>
+<table cellspacing="0" cellpadding="0" width="360" border="0" style="width: 270pt; border-collapse: collapse">
+    <tbody>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">群1</span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (2)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (3)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (4)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (5)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (5)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (5)</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">有单位元素的性质，可以填上</span></div>
+<div><span style="font-size: medium">a*a可能为e,b,c，但不可能为a,否则a*a=a两边乘以a的逆元，得到a=e；</span></div>
+<div><span style="font-size: medium">a*a=b和a*a=c的情况是一样的，只是乘法表中元素的位置进行了一个变换，本质没有改变，称为一个群同构；此时可以把a*a得到的元素称为b；</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">所以只要讨论a*a=e和a*a=b的情况；下面先讨论a*a=e的情况</span></div>
+<div><span style="font-size: medium">a*b不能为a或e，a*b为b的话，a=e，也矛盾，所以a*b=c；同理可填上所有的(3)</span></div>
+<div><span style="font-size: medium">b*b=e时，b*c=c*b=a，c*c=e，得到群1</span></div>
+<div><span style="font-size: medium">b*b=a时，b*c=c*b=e，c*c=a，得到群2</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<p>
+<table cellspacing="0" cellpadding="0" width="360" border="0" style="width: 270pt; border-collapse: collapse">
+    <tbody>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">群2</span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (2)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (3)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (4)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (5)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (5)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (5)</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">当a*a=b时，按照标号顺序可填出下列的群：</span></div>
+<p>
+<table cellspacing="0" cellpadding="0" width="360" border="0" style="width: 270pt; border-collapse: collapse">
+    <tbody>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">群 2&rsquo;</span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" width="72" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; width: 54pt; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>e</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>a</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (2)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (4)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (3)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>b</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (4)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (6)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (5)</span></div>
+            </td>
+        </tr>
+        <tr style="height: 14.25pt">
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium"><b>c</b></span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">c (1)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">e (3)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">a (5)</span></div>
+            </td>
+            <td nowrap="nowrap" style="border-right: #ece9d8; padding-right: 0.75pt; border-top: #ece9d8; padding-left: 0.75pt; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0.75pt; border-bottom: #ece9d8; height: 14.25pt; background-color: transparent">
+            <div><span style="font-size: medium">b (6)</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">但需要注意的是，这并没有得到一个新的群，把群2中的a,b调换位置，就得到了群2&rsquo;。群2&rsquo;只是群2的一个同构而已。</span></div>
+<div><span style="font-size: medium">综上所述，四阶群一共有2种。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">虽然4阶群一定有交换律，但这里再次提醒，这并非一个普遍现象。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 15.75pt"><span style="font-size: medium">输入群的阶数n(4&lt;=n&lt;=3000)。 </span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 15.75pt"><span style="font-size: medium">输出n阶群的种类数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>样例输入</h3><pre>4
+ 
+</pre><hr/><h3>样例输出</h3><pre>2
+ </pre><hr/><h3>提示</h3><p><p><br />
+Hint<br />
+注意并灵活运用群的三条性质</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2624" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2624" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

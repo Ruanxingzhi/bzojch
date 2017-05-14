@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2766：[JLOI2010]世界杯租房</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2010]世界杯租房</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2010]世界杯租房</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JLOI2010]世界杯租房                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 165pt; line-height: 23pt"><span style="font-size: medium">　<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><b>　&nbsp;&nbsp;&nbsp;&nbsp; 　&nbsp;&nbsp; </b></span></div>
+<div><span style="font-size: medium"><b>&nbsp;</b></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">南非世界杯组委会指定了在此期间可提供的一些旅馆供球迷租赁，名为阿凡达的即是其中一所。因为阿凡达旅馆房子的数目不超过26，所以它们可以用26个大写字母表示。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 有一天，刘经理的电话响了，他接到了一个租赁房屋的请求，要求从6月12日晚起租到6月19日中午。于是他察看了预定表，但是并没有发现一间房屋能够直接满足要求。比如房主可能因为一些私人原因需要留在自己的房子中，所以这个游客不得不在其中的一间先住上几天再搬到另一间住上几天。他详细检查了预定表后，对旅客说：&ldquo;我将你先在B安置3天，再将你安排到F去度过剩余的旅途。&rdquo;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">你的目标是使得游客从一间房屋搬到另一间房屋的次数最少。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">注意在旅馆的计费中，总是将某一天的晚上到第二天的中午视作一天。　　　</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">　　输入文件包括多组数据。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每组数据输入文件第一行包括两个整数M和N。M表示日程表上的天数，N表示公寓的数目。天数不超过100天，从1开始计数，公寓不超过26个，从A开始计数。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接下来M行，每行包括N个字母，表示从第i天晚到次日中午，该公寓是否已经被出租，X代表被出租，O代表未被出租。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最后一行包括两个整数s,t，代表旅客从第s天晚入住到第(t+1)天中午结束旅行。1&lt;=s&lt;t&lt;=M+1。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M=N=0标志着文件的结束。</span></div></p><hr/><h3>输出格式</h3><p><div style="line-height: 22pt">&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">对于每一组数据，首先打印测试数据的编号，冒号和一个空行。接下来输出换房次数最少的方案，每一行使用如下格式：</span></div>
+<div><span style="font-size: medium">&lt;unit&gt;: &lt;start date&gt;-&lt;end date&gt;</span></div>
+<div><span style="font-size: medium">其中unit为房屋编号，&lt;start data&gt;和&lt;end data&gt;分别为该旅客入住和离开该房屋时间。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注意，如果存在多种方案满足换房次数最少，输出其中字典序最小的方案。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如不存在这样的方案，输出一行&rdquo;Not available&rdquo;。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每两组输出之间以一个空行隔开。输出文件的末尾不要加空行。</span></div></p><hr/><h3>样例输入</h3><pre>10 7
+XXXXXXX
+XOXXXXO
+XOXXXXO
+XOXXXOX
+OXXOXOX
+XOXOXOX
+OXXOXOX
+OXXXXOX
+XXXXXXX
+XXXXXXX
+2 9
+0 0
+</pre><hr/><h3>样例输出</h3><pre>Case 1:
+
+B: 2-5
+F: 5-9
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2766" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2766" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

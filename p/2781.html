@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2781：机器人走步</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">机器人走步</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">机器人走步</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                机器人走步                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&nbsp;定义<span>r(s)为一个0/1序列S的补充翻转序列（例如：r(100011)=001110）</span></div>
+<div>&nbsp;现在有一种方法生成一种序列即：<span>sn=sn-1+&rsquo;1&rsquo;+r(sn-1)</span></div>
+<div>&nbsp;S0=1</div>
+<div>&nbsp;S1=110</div>
+<div>&nbsp;S2=1101100</div>
+<div>&nbsp;S3=110110011100100</div>
+<div>&nbsp;&hellip;&hellip;</div>
+<div>&nbsp;此题所需的序列来自<span>S30</span></div>
+<div>&nbsp;现在有一个机器人放在（<span>0，0）这个点且面朝东方（上北下南左西右东）</span></div>
+<div>&nbsp;它每秒走一步，然后读<span>0/1序列的一个数，如果是1则向左转否则向右转</span></div>
+<div>&nbsp;求经过<span>X步后机器人到了哪里</span></div>
+<div>&nbsp;</div></p><hr/><h3>输入格式</h3><p><div>&nbsp;若干组数据，每行一个正整数（<span>X&lt;=10<sup>9</sup>）</span></div>
+<div>&nbsp;数据组数<span>&lt;=200</span></div>
+<div>&nbsp;-1结尾</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;</p>
+<div>&nbsp;坐标，用括号围起来</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div></p><hr/><h3>样例输入</h3><pre>
+ 1
+ 2
+ 3
+ -1
+ 
+ </pre><hr/><h3>样例输出</h3><pre>
+ （1，0）
+ （1，1）
+ （0，1）
+  
+ </pre><hr/><h3>提示</h3><p><p>&nbsp;对于100%的数据 x&lt;=1000000000</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2781" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2781" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

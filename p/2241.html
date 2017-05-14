@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2241：[SDOI2011]打地鼠</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2011]打地鼠</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2011]打地鼠</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SDOI2011]打地鼠                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="NOI1" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">打地鼠是这样的一个游戏：地面上有一些地鼠洞，地鼠们会不时从洞里探出头来很短时间后又缩回洞中。玩家的目标是在地鼠伸出头时，用锤子砸其头部，砸到的地鼠越多分数也就越高。</font></span></p>
+<p class="NOI1" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">游戏中的锤子每次只能打一只地鼠，如果多只地鼠同时探出头，玩家只能通过多次挥舞锤子的方式打掉所有的地鼠。你认为这锤子太没用了，所以你改装了锤子，增加了锤子与地面的接触面积，使其每次可以击打一片区域。如果我们把地面看做</span><span lang="EN-US"><font face="Times New Roman">M*N</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的方阵，其每个元素都代表一个地鼠洞，那么锤子可以覆盖</span><span lang="EN-US"><font face="Times New Roman">R*C</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">区域内的所有地鼠洞。但是改装后的锤子有一个缺点：每次挥舞锤子时，对于这</span><span lang="EN-US"><font face="Times New Roman">R*C</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的区域中的所有地洞，锤子会打掉恰好一只地鼠。也就是说锤子覆盖的区域中，每个地洞必须至少有</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只地鼠，且如果某个地洞中地鼠的个数大于</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，那么这个地洞只会有</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只地鼠被打掉，因此每次挥舞锤子时，恰好有</span><span lang="EN-US"><font face="Times New Roman">R*C</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只地鼠被打掉。由于锤子的内部结构过于精密，因此在游戏过程中你不能旋转锤子（即不能互换</span><span lang="EN-US"><font face="Times New Roman">R</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">C</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</span></font></p>
+<p class="NOI1" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你可以任意更改锤子的规格（即你可以任意规定</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">R</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">C</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的大小），但是改装锤子的工作只能在打地鼠前进行（即你不可以打掉一部分地鼠后，再改变锤子的规格）。你的任务是求出要想打掉所有的地鼠，至少需要挥舞锤子的次数。</span></font></p>
+<p class="NOI1" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Times New Roman">Hint</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：由于你可以把锤子的大小设置为</span><span lang="EN-US"><font face="Times New Roman">1*1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，因此本题总是有解的。</span></font></p>
+<p class="NOI0" style="margin: 13pt 0cm"></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="NOI0" style="margin: 13pt 0cm">&nbsp;<font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行包含两个正整数</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">M</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">N</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">；</span></font></p>
+<p class="NOI1" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下面</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">M</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行每行</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">N</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数描述地图，每个数字表示相应位置的地洞中地鼠的数量。</span></font></p>
+<p class="NOI1" style="margin: 0cm 0cm 0pt"></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="NOI1" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">输出一个整数，表示最少的挥舞次数。</font></span></p>
+<p class="NOI2" style="margin: 0cm 0cm 0pt"></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 3
+
+1 2 1
+
+2 4 2
+
+1 2 1
+
+</pre><hr/><h3>样例输出</h3><pre>
+4
+
+【样例说明】
+
+使用2*2的锤子，分别在左上、左下、右上、右下挥舞一次。
+
+【数据规模和约定】
+
+
+对于100%的数据，1<=M,N<=100，其他数据不小于0，不大于10^5
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>第一轮Day1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2241" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2241" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

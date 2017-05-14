@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4209：西瓜王</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">西瓜王</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">西瓜王</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                西瓜王                </h1>
+                <p>时间限制：80s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1024MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>西瓜王xgw最近喜欢上了玩星际争霸，很神的他尤其喜欢玩神族。有一天他生产了非常多的高阶圣堂和黑暗圣堂，并把他们排成了一条直线。</div>
+<div>但是他觉得这些东西奇形怪状的很不好看，于是他想把他们全都变成末日执政官和黑暗执政官那样的圆圆的像西瓜一样的东西。但是他的人口上限不够了&hellip;&hellip;他只能从中选出一些来变成执政官。</div>
+<div>但是他玩的星际争霸有点特别，每一个圣堂有一个x值x_i，若x_i为奇数则他为高阶圣堂，否则为黑暗圣堂。而x值越大会使得合成以后的执政官更圆（TAT实在没啥好说的了）。xgw自然是想使得x值的和最大啦。</div>
+<div>xgw毕竟也是一个王，所以他很任性。他每次会在屏幕上随便框一下（也就是搞一个区间），然后问你这个区间要合成k个执政官选出的圣堂的x值之和最大值是多少。</div>
+<div>p.s.两个高阶圣堂可以合成一个末日执政官，两个黑暗圣堂可以合成一个黑暗执政官<span class="Apple-tab-span" style="white-space:pre">		</span></div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行一个整数n表示圣堂的个数。</div>
+<div>第二行n个整数表示每个圣堂的x值。</div>
+<div>第三行一个整数T表示xgw框了多少次。</div>
+<div>接下来T行每行三个整数l,r,k代表要从[l, r]这段区间里选出k个圣堂去合成k/2个执政官，保证k是偶数。<span class="Apple-tab-span" style="white-space: pre;">		</span></div>
+<p></p></p><hr/><h3>输出格式</h3><p><p>输出T行，对于xgw每框一次输出选出的圣堂的x值之和最大值。<span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">若没有可行的选择方案则输出-1</span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>5
+7 5 3 4 2
+1
+1 5 4</pre><hr/><h3>样例输出</h3><pre>18</pre><hr/><h3>提示</h3><p><p>N,M&lt;=3*10^5,Xi&lt;=10^9</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4209" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4209" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2521：[Shoi2010]最小生成树</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2010]最小生成树</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2010]最小生成树</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Shoi2010]最小生成树                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%">Secsa最近对最小生成树问题特别感兴趣。他已经知道如果要去求出一个n个点、m条边的无向图的最小生成树有一个Krustal算法和另一个Prim的算法。另外，他还知道，某一个图可能有多种不同的最小生成树。例如，下面<span><span><span>图</span><span> 3</span></span></span>中所示的都是<span><span><span>图</span><span> 2</span></span></span>中的无向图的最小生成树：</div>
+<p><img alt="" src="../file/2521_0.jpg" /></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">当然啦，这些都不是今天需要你解决的问题。</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">Secsa</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">想知道对于某一条无向图中的边</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">AB</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">，至少需要多少代价可以保证</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">AB</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">边在这个无向图的最小生成树中。为了使得</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">AB</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">边一定在最小生成树中，你可以对这个无向图进行操作，一次单独的操作是指：先选择一条图中的边</font></span></font><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><span style="position: relative; top: 5pt; mso-text-raise: -5.0pt"><v:shapetype id="_x0000_t75" stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><font size="3"> P1P2<v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></font></v:shapetype></span></span><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">，再把图中除了这条边以外的边，每一条的权值都减少</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">。如</span>图 <span lang="EN-US" style="mso-no-proof: yes">4</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">所示就是一次这样的操作：</span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><img alt="" src="../file/2521_1.jpg" /></span></font></font></p></p><hr/><h3>输入格式</h3><p><div style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%"><span style="font-size: medium">输入文件的第一行有3个正整数n、m、Lab分别表示无向图中的点数、边数、必须要在最小生成树中出现的AB边的标号。</span></div>
+<div style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%"><span style="font-size: medium">接下来m行依次描述标号为1,2,3&hellip;m的无向边，每行描述一条边。每个描述包含3个整数x、y、d，表示这条边连接着标号为x、y的点，且这条边的权值为d。</span></div>
+<div style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%"><span style="font-size: medium">输入文件保证1&lt;=x,y&lt;=N,x不等于y,且输入数据保证这个无向图一定是一个连通图。</span></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出文件只有一行，这行只有一个整数，即，使得标号为Lab边一定出现最小生成树中的最少操作次数。</span></p></p><hr/><h3>样例输入</h3><pre>4 6 1
+1 2 2
+1 3 2
+1 4 3
+2 3 2
+2 4 4
+3 4 5
+</pre><hr/><h3>样例输出</h3><pre>1</pre><hr/><h3>提示</h3><p><p class="MsoPlainText" style="margin: 6pt 0cm; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: .5gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="font-size: medium"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">个样例就是问题描述中的例子。</font></span></span></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: .5gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="font-size: medium"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">1&lt;=n&lt;=500,1&lt;=M&lt;=800,1&lt;=D&lt;10^6</span></font></span></span></p></p><hr/><h3>题目来源</h3><p>day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2521" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2521" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

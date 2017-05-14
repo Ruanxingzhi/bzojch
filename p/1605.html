@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1605：[Usaco2008 Open]Crisis on the Farm 牧场危机</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Open]Crisis on the Farm 牧场危机</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Open]Crisis on the Farm 牧场危机</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2008 Open]Crisis on the Farm 牧场危机                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">约翰和他的奶牛组建了一只乐队&ldquo;后街奶牛&rdquo;，现在他们正在牧场里排练．奶牛们分成一堆一堆，共N(1&le;N&le;1000)堆．每一堆里，30只奶牛一只踩在另一只的背上，叠成一座牛塔．牧场里还有M(1&le;M&le;1000)个高高的草垛．&nbsp;作为出色的指挥家，约翰可以通过口哨指挥奶牛们移动．他的口哨有四个音，分别能使所有的牛塔向东南西北四个方向移动一格．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;每一次，当一个牛塔到达了一个草垛所在的格子，牛塔最上方的奶牛就会跳到草垛上，而且不再下来，而其他奶牛仍然呈塔状站在草垛所在的格子里．当牛塔只剩一只奶牛时，这只奶牛也会跳到草垛上．&nbsp;突然，约翰大惊失色：原来邻家的奶缸爆炸了！滚滚而下的牛奶正朝着约翰的牧场冲来，不久就要将牧场淹没．约翰必须马上行动，用口哨声挽救奶牛们的生命．他要指挥奶牛尽量多地跳上草垛，草垛上的奶牛将不会被淹死．&nbsp;&nbsp;&nbsp;&nbsp;约翰还有K次吹口哨的机会．那他最多还能救多少奶牛呢？请计算最多能挽救的奶牛数，以及达到这个数目约翰需要吹的口哨调子序列．序列用E，W，S，N表示东西南北．如果有多种序列能达到</span></div>
+<div><span style="font-size: medium">要求，输出作为字符串最小的．</span></div></p><hr/><h3>输入格式</h3><p><div></div>
+<div></div>
+<div></div>
+<div>
+<div>第1行输入三个整数N，M，K，之后N行每行输入一对整数(Xi，Yi)表示一座牛塔所在的位置，1&lt;=K&lt;=30</div>
+<div>之后M行每行输入一对整数(Xi，Yi)表示一个草垛所在的位置．1&le;Xi&le;1000;1&le;Yi&le;1000.</div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输出最多能挽救的奶牛数．第2行输出口哨调子序列．</span></div></p><hr/><h3>样例输入</h3><pre>3 6 3 
+3 4 
+6 2 
+5 7 
+8 2 
+9 2 
+6 4 
+5 4 
+6 7 
+8 7 
+
+
+</pre><hr/><h3>样例输出</h3><pre>Use the 'east' whistle three times, at which point the milk floods
+the area.  Each haystack ends up saving 1 cow.
+
+6 
+EEE 
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1605" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1605" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

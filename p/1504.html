@@ -1,0 +1,106 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1504：[NOI2004]Rainfall</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI2004]Rainfall</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI2004]Rainfall</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [NOI2004]Rainfall                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>M国是个多雨的国家，尤其是P城，频繁的降雨给人们的出行带来了不少麻烦。为了方便行人雨天过马路，有关部门在每处人行横道的上空都安装了一种名为&ldquo;自动伞&rdquo;的装置。（如图1所示）   <img border="0" src="../file/1504_0.jpg" alt="" />  图1 每把自动伞都可以近似地看作一块长方形的板，厚度不计。这种伞有相当出色的吸水能力，落到上面的雨水都会完全被伞顶的小孔吸入，并通过管道运走。不下雨时，这些伞闲置着。一旦下雨，它们便立刻开始作匀速率直线往返运动：从马路的一边以固定的速率移动到另一边，再从另一边以相同的速率返回，如此往复，直到雨停为止。任何时刻自动伞都不会越过马路的边界。有了自动伞，下雨天没带伞的行人只要躲在伞下行走，就不会被雨淋着了。 由于自动伞的大小有限，当需要使用自动伞过马路的人比较多时，一把自动伞显然是不够的，所以有关部门在几处主要的人行横道上空安装了多把自动伞。每把自动伞的宽度都等于人行横道的宽度，高度各不相同，长度不一定相同，移动速率也不一定相同。 现在已知一处人行横道的详细情况，请你计算从开始下雨到T秒钟后的这段时间内，一共有多少体积的雨水降落到人行横道上。</p></p><hr/><h3>输入格式</h3><p><p>第一行有四个整数N，W，T，V。N表示自动伞的数目，W表示马路的宽度，T表示需要统计从开始下雨到多长时间后的降雨情况，V表示单位面积单位时间内的降雨体积。 为了描述方便，我们画出了一个如图2所示的天空中五把伞的剖面图，取马路左边界为原点，取向右为x轴正方向，取向上为y轴正方向，建立平面直角坐标系。这样，每把自动伞都可以看作平面上的一条线段。  <img border="0" src="../file/1504_0.jpg" alt="" />  图2 接下来的N行，每行用三个整数描述一把自动伞。第一个数x是伞的初始位置，用它左端点的横坐标表示。第二个数l是伞的长度，即x方向上的尺寸。第三个数v是伞的速度，v的大小表示移动的速率。如果v&gt;0，表示开始时伞向右移动；如果v&lt;0，表示开始时伞向左移动；如果v=0，表示伞不动。</p></p><hr/><h3>输出格式</h3><p><p>输出文件只包含一个实数，表示从开始下雨到T秒钟后，一共有多少体积的水降落到人行横道上。输出结果精确到小数点后第二位。  【约定】 雨点均匀地匀速竖直下落 自动伞和马路两者都是水平的 自动伞的宽度和人行横道的宽度相等，都等于1 所有自动伞的往返次数之和不超过250，一来一回算一个往返。</p></p><hr/><h3>样例输入</h3><pre>2 4 3 10
+0 1 1
+3 1 -1
+
+
+</pre><hr/><h3>样例输出</h3><pre>65.00
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢刘汝佳先生授权使用</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1504" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1504" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

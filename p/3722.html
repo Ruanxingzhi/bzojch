@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3722：PA2014 Final Budowa</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">PA2014 Final Budowa</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">PA2014 Final Budowa</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                PA2014 Final Budowa                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>Fancy爷宣布XJOI群将要选举下一任群主。候选人有两名，分别是XYW和吉丽。<br />
+共有n个人（从1~n编号）参加这次投票。他们之间形成了一个树结构，根结点（1号结点）为Fancy。树上的结点有两种身份：专家（叶子结点）或领导（非叶子结点）。每位专家都有自己的选择&mdash;&mdash;支持XYW和吉丽之中的一个；每位领导都有若干个下属（儿子结点），领导的选择决定于下属中人数较多的那一方，下属的数目保证为奇数，从而不会出现平局状况。最后，Fancy的选择即为选举结果。<br />
+吉丽和XYW知道，目前仍有一些专家处于犹豫未决的状态，只要前去游说，就可获得他的支持。但是由于精力不够，每人每天只能选择游说1名专家；XYW起床更早，他比吉丽先进行游说。这样两人交替进行，直到每位专家都有了确定的选择。请问XYW是否有策略保证自己赢得选举胜利？<br />
+</p></p><hr/><h3>输入格式</h3><p><p>第一行一个整数n(2&lt;=n&lt;=1000)，表示人数。<br />
+接下来有n行。第i行中，第一个数为c[i](-2&lt;=c[i]&lt;=n0)。如果c[i]&lt;=0，则i是专家，-2表示其支持XYW，-1表示支持吉丽，0表示仍在犹豫；如果c[i]&gt;0，则c[i]为奇数，表示i是领导，其后c[i]个整数为i的下属。<br />
+（数据保证为树结构，即除了根节点1以外每个结点有且仅有一个上级）</p></p><hr/><h3>输出格式</h3><p><p>若XYW无法保证胜利，仅输出一行NIE。<br />
+否则，输出第一行包含TAK和一个非负整数d；输出第二行包含d个整数，按升序排列，表示XYW在必胜策略下，第一天可以选择游说的专家的编号。（如果不存在犹豫不决的专家，且XYW获得胜利的情况下，则d=0，第二行为空行）</p></p><hr/><h3>样例输入</h3><pre>4
+3 2 3 4
+-2
+0
+-1</pre><hr/><h3>样例输出</h3><pre>TAK 1
+3
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Jcvb</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3722" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3722" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

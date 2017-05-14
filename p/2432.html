@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2432：[Noi2011]兔农</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2011]兔农</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2011]兔农</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi2011]兔农                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;农夫栋栋近年收入不景气，正在他发愁如何能多赚点钱时，他听到隔壁的小朋友在讨论兔子繁殖的问题。<br />
+<br />
+问题是这样的：第一个月初有一对刚出生的小兔子，经过两个月长大后，这对兔子从第三个月开始，每个月初生一对小兔子。新出生的小兔子生长两个月后又能每个月生出一对小兔子。问第n个月有多少只兔子？<br />
+<br />
+聪明的你可能已经发现，第n个月的兔子数正好是第n个Fibonacci(斐波那契)数。栋栋不懂什么是Fibonacci数，但他也发现了规律：第i+2个月的兔子数等于第i个月的兔子数加上第i+1个月的兔子数。前几个月的兔子数依次为：<br />
+<br />
+1 1 2 3 5 8 13 21 34 &hellip;<br />
+<br />
+栋栋发现越到后面兔子数增长的越快，期待养兔子一定能赚大钱，于是栋栋在第一个月初买了一对小兔子开始饲养。<br />
+<br />
+每天，栋栋都要给兔子们喂食，兔子们吃食时非常特别，总是每k对兔子围成一圈，最后剩下的不足k对的围成一圈，由于兔子特别害怕孤独，从第三个月开始，如果吃食时围成某一个圈的只有一对兔子，这对兔子就会很快死掉。<br />
+<br />
+我们假设死去的总是刚出生的兔子，那么每个月的兔子数仍然是可以计算的。例如，当k=7时，前几个月的兔子数依次为：<br />
+<br />
+1 1 2 3 5 7 12 19 31 49 80 &hellip;<br />
+<br />
+给定n，你能帮助栋栋计算第n个月他有多少对兔子么？由于答案可能非常大，你只需要告诉栋栋第n个月的兔子对数除p的余数即可。</p></p><hr/><h3>输入格式</h3><p><p><br />
+<br />
+输入一行，包含三个正整数n, k, p。</p></p><hr/><h3>输出格式</h3><p><p>&nbsp;<br />
+<br />
+输出一行，包含一个整数，表示栋栋第n个月的兔子对数除p的余数。<br />
+</p></p><hr/><h3>样例输入</h3><pre>
+
+6 7 100
+
+</pre><hr/><h3>样例输出</h3><pre>
+
+7</pre><hr/><h3>提示</h3><p><p>&nbsp;1&lt;=N&lt;=10^18</p>
+<div>2&lt;=K&lt;=10^6</div>
+<div>2&lt;=P&lt;=10^9</div></p><hr/><h3>题目来源</h3><p>Day1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2432" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2432" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

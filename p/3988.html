@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3988：胡策的数列</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">胡策的数列</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">胡策的数列</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                胡策的数列                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在OI界，有一个无人不知无人不晓，OI水平前无古人后无来者的胡策，江湖人称一眼秒题胡大爷！</div>
+<div>今天胡策正在研究一个远古传下来的数列：a[0]=... , a[1]=... ,对i&gt;1，有 25a[i]+20a[i-1]=12a[i-2]。因为流传的时间太过久远，a[0]和a[1]的值都已经看不清了，但是在最后还记载着，这个数列有一个特别的性质：对于任意的i&gt;=0，都有a[i]&gt;=0。</div>
+<div>然而胡大爷已经看穿了一切：对于任意一个正数a[0]，这个数列都是唯一的！但是，他想拿这个问题考一考拜胡大爷为师的你。</div>
+<div>具体来说，胡大爷会给你一个长度为n的表格，一开始每个格子都写着0。有时他会让你将a[0]=t 时数列从第p项开始的一段写入表格中第 l 到第 r 格（覆盖原有的值），有时他会询问表格中某一段连续的格子中的数的和。</div>
+<div>当然，作为胡大爷的弟子，你必须在胡大爷提出一个询问的时候马上作出回应。</div>
+<div></div>
+<div>因为这是一个远古的问题，胡大爷只给了你一台远古的计算机，它只有64MB的内存。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个整数n,m。分别表示表格的长度和操作个数。</div>
+<div>接下来m行，每行描述一个操作。每行的第一个整数type描述了操作的类型，type=1表示是修改操作，type=2表示是询问操作。</div>
+<div>如果是修改操作，接下来有四个整数l,r,t,p，意义如上所述。</div>
+<div>如果是询问操作，接下来有两个整数l,r，意义如上所述。</div>
+<div>为了体现在线，实际的l,r为输入的l,r对lastans取异或后的答案。lastans表示上一次询问操作的答案，初始为0。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对每个询问操作输出一行，表示询问的答案。</div>
+<div>为了避免实数，输出对10^9+9取模。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 3
+1 1 3 2 3
+1 2 2 4 5
+2 1 3</pre><hr/><h3>样例输出</h3><pre>867840008</pre><hr/><h3>提示</h3><p><p>对于100%的数据，1&lt;=n&lt;=10^9，1&lt;=m&lt;=10^5，1&lt;=t&lt;=10^9，1&lt;=p&lt;=10^9，1&lt;=l&lt;=r&lt;=n。</p>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年集训队互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3988" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3988" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

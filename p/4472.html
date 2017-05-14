@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4472：[Jsoi2015]salesman </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2015]salesman </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2015]salesman </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Jsoi2015]salesman                 </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>某售货员小T要到若干城镇去推销商品,由于该地区是交通不便的山区，任意两个城镇<br />
+之间都只有唯一的可能经过其它城镇的路线。 小T 可以准确地估计出在每个城镇停留的净收<br />
+益。这些净收益可能是负数，即推销商品的利润抵不上花费。由于交通不便，小T经过每个<br />
+城镇都需要停留，在每个城镇的停留次数与在该地的净收益无关，因为很多费用不是计次收<br />
+取的，而每个城镇对小T的商品需求也是相对固定的，停留一次后就饱和了。每个城镇为了<br />
+强化治安，对外地人的最多停留次数有严格的规定。请你帮小T 设计一个收益最大的巡回方<br />
+案,即从家乡出发，在经过的每个城镇停留，最后回到家乡的旅行方案。你的程序只需输出<br />
+最大收益，以及最优方案是否唯一。方案并不包括路线的细节，方案相同的标准是选择经过<br />
+并停留的城镇是否相同。因为取消巡回也是一种方案，因此最大收益不会是负数。小T 在家<br />
+乡净收益是零，因为在家乡是本地人，家乡对小 T当然没有停留次数的限制。</p></p><hr/><h3>输入格式</h3><p><p>输入的第一行是一个正整数ｎ(5&lt;=n&lt;=100000)，表示城镇数目。城镇以１到ｎ的数命名。小T 的家乡命<br />
+名为１。第二行和第三行都包含以空格隔开的ｎ－１个整数，第二行的第ｉ个数表示在城镇<br />
+ｉ＋１停留的净收益。第三行的第ｉ个数表示城镇ｉ＋１规定的最大停留次数。所有的最大<br />
+停留次数都不小于２。接下来的ｎ－１行每行两个１到ｎ的正整数ｘ，ｙ，之间以一个空格<br />
+隔开，表示ｘ，ｙ之间有一条不经过其它城镇的双向道路。输入数据保证所有城镇是连通的。&nbsp;</p></p><hr/><h3>输出格式</h3><p><p>输出有两行，第一行包含一个自然数，表示巡回旅行的最大收益。如果该方案唯一，在<br />
+第二行输出&ldquo;solution is unique&rdquo;，否则在第二行输出&ldquo;solution is not unique&rdquo;。</p></p><hr/><h3>样例输入</h3><pre>9
+-3 -4 2 4 -2 3 4 6
+4 4 2 2 2 2 2 2 
+1 2
+1 3
+1 4
+2 5
+2 6
+3 7
+4 8 
+4 9</pre><hr/><h3>样例输出</h3><pre>9
+solution is unique
+//最佳路线包括城镇 1，2， 4， 5， 9。
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4472" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4472" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

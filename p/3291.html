@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3291：Alice与能源计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Alice与能源计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Alice与能源计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Alice与能源计划                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">在梦境中，Alice来到了火星。不知为何，转眼间Alice被任命为火星能源部长，并立刻面临着一个严峻的考验。</span></p>
+<p><span style="font-size: medium">&nbsp;为了方便，我们可以将火星抽象成平面，并建立平面直角坐标系。<br />
+火星上一共有N个居民点。每个居民点认为是平面上的一个点。第i个居民点的坐标为(Xi, Yi），对能源的需求量为Poweri。每个居民点消耗的能源由它附近的发电站提供。由于技术原因，一个居民点消耗的所有能源必须来自同一座发电站。<br />
+自人类移民火星之初，政府就有一个规模宏大的发电站建设计划。<br />
+按照这个计划，政府将在火星上建立M座发电站，这M座发电站将是火星居民的全部能量来源。其中，第i座发电站的坐标为(xi, yi)，产生能量的上限值为Limiti，建设费用为Pricei。同样由于技术原因，第i座发电站只能为与它的距离不超过Ri的居民点提供能源。<br />
+然而，由于政府的财政状况一直十分紧张，截至目前，这M座发电站中只有少量建成并投入使用，多数的发电站尚未开始建设。</span></p>
+<p><span style="font-size: medium">Alice的任务是修改这个计划，使得它更符合实际情况。根据新的规定，一座发电站产生的所有能源必须提供给同一个居民点。Alice知道这个规定意味着N个居民点消耗的能源将分别由N座不同的发电站提供，而且为第i个居民点提供能源的那座发电站的Limit值一定不小于Poweri。</span></p>
+<p><span style="font-size: medium">Alice需要在原计划的M座发电站中选择恰好N座发电站，并完全放弃剩余的M - N座发电站，使得这N座发电站能够满足N个居民点的需要。<br />
+对于一个可行的方案，设方案中选择的N座发电站构成集合S，而已经建成的发电站构成集合T，那么定义这个方案的代价为</span></p>
+<p><span style="font-size: medium">即，一个方案的代价等于被选择的且尚未建成的发电站的建设费用之和加上没有被选择的且已经建成的发电站的建设费用之和。</span></p>
+<p><span style="font-size: medium">在所有可行方案中，你必须帮助Alice找到代价最小的方案，并将选择的N座发电站按编号从小到大的顺序输出。<br />
+如果代价最小的方案不唯一，则输出其中字典序最小的方案。</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 注意，输入文件包含多组测试数据。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">　第一行包含一个正整数T，表示有T组测试数据。接下来依次是T组测试数据。<br />
+　　每组测试数据的第一行包含两个整数N、M。<br />
+　　接下来N行，每行3个整数：X<sub>i</sub>、Y<sub>i</sub>、Power<sub>i</sub>。<br />
+　　再接下来M行，每行6个整数：x<sub>i</sub>、 y<sub>i</sub>、Limit<sub>i</sub>、Price<sub>i</sub>、R<sub>i</sub>、Finished<sub>i</sub>。若Finished<sub>i </sub>= 1，表示第i座发电站已经建成；否则Finished<sub>i</sub> = 0，表示第i座发电站尚未开始建设。<br />
+</span></p></p><hr/><h3>输出格式</h3><p><div class="pdcont"><span style="font-size: medium">　　对于每组测试数据：<br />
+　　若存在可行方案则输出两行。第一行为一个整数，表示最小代价；第二行是若干个递增的整数，表示字典序最小的最优方案选择的发电站的编号。<br />
+　　若不存在可行方案，则仅输出一行为一个整数-1。<br />
+</span></div></p><hr/><h3>样例输入</h3><pre>4
+1 1
+4 4 1
+8 7 1 2 5 1
+2 3
+0 0 3
+2 0 2
+1 1 5 1 3 0
+1 0 5 1 1 1
+3 0 5 1 3 0
+2 3
+0 0 3
+2 0 2
+1 1 2 0 3 0
+1 0 1 0 1 1
+3 0 3 0 2 0
+2 3
+0 0 3
+2 0 2
+1 1 4 2 2 0
+1 0 2 9 1 1
+3 0 5 4 2 1
+
+</pre><hr/><h3>样例输出</h3><pre>0
+1
+1
+1 2
+-1
+6
+1 2
+
+样例说明
+　　第1组测试数据：
+　　只有一个居民点，其坐标为(4, 4)，能源需求量Power1 = 1；仅一座发电站，其坐标为(8, 7)，产生的能量上限Limit1 = 1，建设费用Price1 = 2，服务范围半径R1 = 5，Finished1 = 1表示已经建成。
+　　两个点之间的距离等于5不超过R1，并且Power1 ≤ Limit1。因此唯一的可行方案是花费0的代价保留1号发电站，使它为1号居民点提供能源。
+　　第2组测试数据：任意选择两个发电站都是一个可行方案。最小代价是1，对应的方案有两种：选择1号和2号发电站；选择2号和3号发电站。而前者的字典序更小。
+　　第3组测试数据：不存在可行方案。
+　　第4组测试数据：代价最小的方案唯一：选择1号和2号发电站，代价为6。
+
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">　　对于100%的数据：1 &le; N &le; 400，1 &le; M &le; 500，1 &le; T &le; 10，0 &le; xi, yi , Xi , Yi, Pricei &le; 10 000，1 &le; Ri, Poweri, Limiti &le; 10 000。不同的居民点或发电站的坐标有可能重合。</span></p>
+<p><span style="font-size: medium">附注<br />
+　　关于方案的字典序的大小关系的说明：<br />
+　　设方案A选择的N座发电站的编号从小到大依次为A1, A2, &hellip;, AN；设方案B选择的N座发电站的编号从小到大依次为B1, B2, &hellip;, BN。<br />
+　　我们称方案A比方案B字典序更小，当且仅当存在正整数i，满足1&le;i&le;N，使得对任意1&le;k&le;i-1有Ak = Bk，且Ai &lt; Bi。<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3291" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3291" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

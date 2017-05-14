@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4370：[IOI2015]horses马</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[IOI2015]horses马</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[IOI2015]horses马</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [IOI2015]horses马                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1500MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>像他的祖先一样，Mansur喜欢繁殖马匹。目前，他拥有哈萨克斯坦最大的马场。以前情况可不是这样，N年前Mansur年轻时，他只拥有一匹马，但他一直梦想着成为富豪，最终,他美梦成真。<br />
+按照时间的先后顺序将年份编号为0到N-1（即N-1年是最近的一年）。每年的天气会影响马匹的繁殖。Mansur用一个正整数X[i]记录第i年的繁殖系数，如果第i年开始时有h匹马，那么这一年结束时会有h&bull;X[i]匹马。<br />
+每年，只有年底的时候可以出售马匹。Mansur用一个正整数Y[i]记录第i年末卖出一匹马的售价。Mansur可以卖出任意多匹马，每匹售价均为Y[i]。<br />
+现在，Mansur想知道如果在N年中，他总能在最佳时间出售马匹，他能获得的最⼤收益是多少？你正好在Mansur家做客，所以他想请你帮他回答这个问题。<br />
+Mansur对记录下的X和Y做了M次更新，每次更新，Mansur要么改变一个X[i] ，要么改变一个Y[i]。每次更新后，他都会问你出售马匹能获得的最大收益。Mansur的更新是累加的，即你的每个回答时都应该考虑之前的所有更新。注意：某个X[i]或者Y[i]可能会被更新多次。<br />
+对于Mansur的问题，实际的答案可能是一个非常大的数字，你只要给出实际答案模10^9+7后的结果即可。</p></p><hr/><h3>输入格式</h3><p><p>第1行: N<br />
+第2行: X[0] &hellip; X[N - 1]<br />
+第3行: Y[0] &hellip; Y[N - 1]<br />
+第4行: M<br />
+第5,&hellip;,M+4行: 每行3个数字type pos val (type=1表示updateX，type=2 表<br />
+示updateY)。<br />
+N: 表示总共有N年。<br />
+X: 长度为N的数组，对0&le;i&le;N-1,X[i]表示i年的繁殖系数。<br />
+Y: 长度为N的数组，对0&le;i&le;N-1,Y[i]表示i年末出售一匹马的价格。<br />
+注意：X、Y均为Mansur给定的初值（更新前的值）。<br />
+pos: 一个整数，范围是0，&hellip;,N-1。<br />
+val: X[pos]或Y[pos]更新后的值。</p></p><hr/><h3>输出格式</h3><p><p>共M+1行<br />
+第1行：一个整数表示初始状态下，Mansur获得的最大收益模10^9+7后的值。<br />
+第2,&hellip;,M+1行：每行一个整数，表示这次更新后Mansur获得的最大收益模10^9+7后的值。</p></p><hr/><h3>样例输入</h3><pre>3
+2 1 3
+3 4 1
+1
+2 1 2</pre><hr/><h3>样例输出</h3><pre>8
+6</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢yts1999上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4370" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4370" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

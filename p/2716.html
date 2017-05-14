@@ -1,0 +1,348 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2716：[Violet 3]天使玩偶</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Violet 3]天使玩偶</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Violet 3]天使玩偶</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Violet 3]天使玩偶                </h1>
+                <p>时间限制：80s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><img height="287" width="656" alt="" src="../file/2716_0.gif" /></p></p><hr/><h3>输入格式</h3><p><p><img height="326" width="663" alt="" src="../file/2716_0.gif" /></p></p><hr/><h3>输出格式</h3><p><p><img height="87" width="489" alt="" src="../file/2716_0.gif" /></p></p><hr/><h3>样例输入</h3><pre>100 100
+81 23
+27 16
+52 58
+44 24
+25 95
+34 2
+96 25
+8 14
+97 50
+97 18
+64 3
+47 22
+55 28
+89 37
+75 45
+67 22
+90 8
+65 45
+68 93
+87 8
+61 45
+69 72
+38 57
+58 76
+45 34
+88 54
+27 8
+35 34
+70 81
+25 24
+97 97
+4 43
+39 38
+82 68
+27 58
+2 21
+92 88
+96 70
+97 29
+14 53
+6 42
+1 2
+35 84
+64 88
+63 57
+53 40
+82 59
+49 56
+75 72
+29 30
+50 1
+40 83
+52 94
+22 35
+39 1
+94 88
+89 96
+79 46
+33 75
+31 42
+33 95
+6 83
+90 66
+37 54
+35 64
+17 66
+48 37
+30 8
+95 51
+3 51
+90 33
+29 48
+94 78
+53 7
+1 26
+73 35
+18 33
+99 78
+83 59
+23 87
+4 17
+53 91
+98 3
+54 82
+85 92
+77 8
+56 74
+4 5
+63 1
+26 8
+42 15
+48 98
+27 11
+70 98
+36 9
+78 92
+34 40
+42 82
+64 83
+75 47
+2 51 55
+1 7 62
+2 21 62
+1 36 39
+1 35 89
+1 84 15
+2 19 24
+1 58 53
+2 52 34
+1 98 49
+1 4 100
+1 17 25
+1 30 56
+1 69 43
+2 57 23
+2 23 13
+1 98 25
+2 50 27
+1 84 63
+2 84 81
+2 84 77
+1 60 23
+2 15 27
+1 9 51
+1 31 11
+1 96 56
+2 20 85
+1 46 32
+1 60 88
+2 92 48
+1 68 5
+2 90 17
+1 16 46
+2 67 5
+2 29 83
+1 84 70
+2 68 27
+1 99 33
+2 39 89
+2 38 28
+1 42 3
+1 10 60
+2 56 29
+2 12 60
+2 46 51
+2 15 73
+1 93 42
+1 78 82
+1 66 20
+1 46 17
+2 48 5
+1 59 61
+1 87 59
+2 98 72
+1 49 3
+2 21 10
+1 15 4
+1 48 14
+2 67 75
+2 83 77
+1 88 65
+2 100 93
+2 58 83
+1 29 80
+2 31 88
+2 92 94
+1 96 66
+1 61 82
+2 87 24
+1 64 83
+1 28 87
+2 72 90
+2 7 3
+1 86 3
+2 26 53
+2 71 2
+2 88 24
+1 69 60
+1 92 44
+2 74 94
+1 12 78
+2 1 2
+1 4 73
+1 58 5
+1 62 14
+2 64 58
+2 39 45
+1 99 27
+1 42 21
+1 87 2
+2 16 98
+2 17 21
+2 41 20
+1 46 72
+1 11 62
+2 68 29
+1 64 66
+2 90 42
+2 63 35
+1 64 71
+</pre><hr/><h3>样例输出</h3><pre>3
+8
+6
+7
+7
+6
+6
+12
+11
+4
+5
+6
+8
+1
+7
+6
+4
+9
+2
+2
+8
+9
+6
+4
+7
+5
+8
+7
+5
+5
+5
+7
+7
+5
+6
+6
+8
+6
+0
+2
+7
+12
+4
+2
+8
+3
+10
+</pre><hr/><h3>提示</h3><p><p><img height="706" width="621" alt="" src="../file/2716_0.gif" /></p></p><hr/><h3>题目来源</h3><p>Vani原创 欢迎移步 OJ2648</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2716" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2716" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

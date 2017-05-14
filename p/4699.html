@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4699：树上的最短路</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">树上的最短路</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">树上的最短路</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                树上的最短路                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>下水道的主干路由n个节点和n-l条边组成，每条边有一个通过它所需的时间Ti。换言之，这是一棵n个节点的带权</div>
+<div>树。现在，要用最快的速度赶往目标节点k。下水道有一些塌陷，这导致主干路的某一段路径可以通过该塌陷到另</div>
+<div>一条路径。对于一个塌陷，我们用(L1，ri，L2，R2，c)来描述，即对于主干路上L1到R1路径上的任意节点x，L2到</div>
+<div>r2路径上的任意节点y，都可以在c的时间内从x走到y。因为不知道自己所在的到底是哪个节点，所以要求出每个节</div>
+<div>点到目标节点K的最短距离。注意边是单向的</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>
+<div style="font-size: 11.8181819915771px;">第一行两个数n，m，k，表示节点数、塌陷数和目标节点编号，空格分隔。</div>
+<div style="font-size: 11.8181819915771px;">接下来n-l行，每行3个数x,y,t，表示主干路的一条边连接点x,y，通过的时间为t。</div>
+<div style="font-size: 11.8181819915771px;">接下来m行，每行5个数L1，r1，L2，r2，c，表示一个塌陷。</div>
+<div style="font-size: 11.8181819915771px;">N&lt;=250000 &nbsp;</div>
+<div style="font-size: 11.8181819915771px;">m&lt;=100000</div>
+<div style="font-size: 11.8181819915771px;">1 &lt; = L1,L2, R1, R2,x,y &lt; = N</div>
+<div style="font-size: 11.8181819915771px;">1&lt; = t,c&lt; = 2^31-1。</div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>n行，每行一个数，表示第i个节点到第k个节点的最短路径长度。</div>
+<div>特别的，在第k行你应当输出0。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 3 5
+1 2 100
+2 3 100
+3 4 100
+4 5 100
+1 2 4 5 200
+2 2 4 4 90
+3 3 2 2 5</pre><hr/><h3>样例输出</h3><pre>200
+190
+195
+100
+0</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4699" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4699" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

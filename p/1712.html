@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1712：[Usaco2007 China]Summing Sums 加密</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 China]Summing Sums 加密</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 China]Summing Sums 加密</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 China]Summing Sums 加密                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;那N只可爱的奶牛刚刚学习了有关密码的许多算法，终于，她们创造出了属于奶牛的加密方法．由于她们并不是经验十足，她们的加密方法非常简单：</span><span style="font-size: medium">第i只奶牛掌握着密码的第i个数字，起始的时候是Ci(0&le;Ci&lt;90000000).加密的时候，</span><span style="font-size: medium">第i只奶牛会计算其他所有奶牛的数字和，并将这个数字和除以98765431取余．在所有奶牛计算完毕之后，每一只奶牛会用自己算得的数字代替原有的数字．也就是说，</span></div>
+<div><span style="font-size: medium"><img height="103" width="173" alt="" src="../file/1712_0.jpg" /></span></div>
+<div><span style="font-size: medium">这样，她们就完成了一次加密．&nbsp;&nbsp;&nbsp;&nbsp;在十一月，奶牛们把这个加密法则告诉了驼鹿卡门，卡门惊呆了．之后，在一个浓雾弥漫的平安夜，卡门与奶牛们：&ldquo;你们的算法十分原始，很容易就被人破解．所以你们要重复这个加密过程T(1&le;T&le;1414213562)次，才能达到加密效果．&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;这回轮到奶牛们惊呆了．很显然，奶牛们特别讨厌做同样的无聊的事情很多次．经过了漫长的争论，卡门和奶牛们终于找到的解决办法：你被刚来加密这些数字．</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入N和T，之后N行每行一个整数表示初始的Ci．</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;共N行，每行一个整数，表示T次加密之后的Ci．</span></div></p><hr/><h3>样例输入</h3><pre>3 4
+1
+0
+4
+
+INPUT DETAILS:
+
+Three cows, with starting numbers 1, 0, and 4; four repetitions of the
+encryption algorithm.
+</pre><hr/><h3>样例输出</h3><pre>26
+25
+29
+
+OUTPUT DETAILS:
+
+The following is a table of the cows' numbers for each turn:
+
+          Cows' numbers
+Turn    Cow1  Cow2  Cow3
+ 0        1     0     4
+ 1        4     5     1
+ 2        6     5     9
+ 3       14    15    11
+ 4       26    25    29
+</pre><hr/><h3>提示</h3><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">N&lt;=50000</span></p></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1712" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1712" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

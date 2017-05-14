@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2879：[Noi2012]美食节</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2012]美食节</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2012]美食节</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi2012]美食节                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">CZ市为了欢迎全国各地的同学，特地举办了一场盛大的美食节。作为一个喜欢尝鲜的美食客，小M自然不愿意错过这场盛宴。他很快就尝遍了美食节所有的美食。然而，尝鲜的欲望是难以满足的。尽管所有的菜品都很可口，厨师做菜的速度也很快，小M仍然觉得自己桌上没有已经摆在别人餐桌上的美食是一件无法忍受的事情。于是小M开始研究起了做菜顺序的问题，即安排一个做菜的顺序使得同学们的等待时间最短。小M发现，美食节共有n种不同的菜品。每次点餐，每个同学可以选择其中的一个菜品。总共有m个厨师来制作这些菜品。当所有的同学点餐结束后，菜品的制作任务就会分配给每个厨师。然后每个厨师就会同时开始做菜。厨师们会按照要求的顺序进行制作，并且每次只能制作一人份。此外，小M还发现了另一件有意思的事情: 虽然这m个厨师都会制作全部的n种菜品，但对于同一菜品，不同厨师的制作时间未必相同。他将菜品用1, 2, ..., n依次编号，厨师用1, 2, ..., m依次编号，将第j个厨师制作第i种菜品的时间记为 ti,j 。小M认为：每个同学的等待时间为所有厨师开始做菜起，到自己那份菜品完成为止的时间总长度。换句话说，如果一个同学点的菜是某个厨师做的第k道菜，则他的等待时间就是这个厨师制作前k道菜的时间之和。而总等待时间为所有同学的等待时间之和。现在，小M找到了所有同学的点菜信息: 有 pi 个同学点了第i种菜品（i=1, 2, ..., n）。他想知道的是最小的总等待时间是多少。<br />
+<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><br />
+<font size="4">&nbsp;输入文件的第1行包含两个正整数n和m，表示菜品的种数和厨师的数量。 第2行包含n个正整数，其中第i个数为pi，表示点第i种菜品的人数。 接下来有n行，每行包含m个非负整数，这n行中的第i行的第j个数为ti,j，表示第j个厨师制作第i种菜品所需的时间。 输入文件中每行相邻的两个数之间均由一个空格隔开，行末均没有多余空格。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><br />
+<font size="4">&nbsp;输出仅一行包含一个整数，为总等待时间的最小值。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>
+3 2 
+3 1 1 
+5 7 
+3 6 
+8 9
+</pre><hr/><h3>样例输出</h3><pre>
+47
+
+【样例说明】
+厨师1先制作1份菜品2，再制作2份菜品1。点这3道菜的3个同学的等待时间分别为3，3+5=8，3+5+5=13。
+厨师2先制作1份菜品1，再制作1份菜品3。点这2道菜的2个同学的等待时间分别为7，7+9=16。
+总等待时间为3+8+13+7+16=47。
+虽然菜品1和菜品3由厨师1制作更快，如果这些菜品都由厨师1制作，总等待时间反而更长。如果按上述的做法，将1份菜品1和1份菜品3调整到厨师2制作，这样厨师2不会闲着，总等待时间更短。
+可以证明，没有更优的点餐方案。
+
+
+【数据规模及约定】
+对于100%的数据，n <= 40, m <= 100, p <= 800, ti,j <= 1000（其中p = ∑pi，即点菜同学的总人数）。
+每组数据的n、m和p值如下：
+测试点编号 n m p 
+1 n = 5 m = 5 p = 10 
+2 n = 40 m = 1 p = 400 
+3 n = 40 m = 2 p = 300 
+4 n = 40 m = 40 p = 40 
+5 n = 5 m = 40 p = 100 
+6 n = 10 m = 50 p = 200 
+7 n = 20 m = 60 p = 400 
+8 n = 40 m = 80 p = 600 
+9 n = 40 m = 100 p = 800 
+10 n = 40 m = 100 p = 800 
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2879" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2879" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

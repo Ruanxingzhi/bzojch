@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3023：[Balkan2012]Fan Groups</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Balkan2012]Fan Groups</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Balkan2012]Fan Groups</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Balkan2012]Fan Groups                </h1>
+                <p>时间限制：2s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">给定一个有向图，每个节点关联于一群人。这N群人按照某个特定的顺序进行以下操作：<br />
+到达并占领他们关联的节点；<br />
+从他们占领的某个节点u出发，走到与其相邻的每个点v。如果点v已经被人占领，他们会边(u,v)上发生冲突，并不再在这个方向上前进；否则，他们会占领点v，并重复这一步，直到没有能到达的点为止。<br />
+如果他们关联的节点在此前被别的人群占领，他们不会与那群人发生冲突。在这种情况下，他们什么都不做。<br />
+给定该图，以及发生冲突的边集。求一种人群的行动顺序，使得发生冲突的边集与输入相符。<br />
+以样例为例。关联于点8的人群首先行动，占领点8；接下来关联于点5的人群行动，占领点4,5,6（与4相连的点集）；关联于点6的人群出动，因为点6已经被占领，他们什么都不做；人群2占领点2,3；人群3什么都不做；人群1占领点1，并在边&lt;1,4&gt;和&lt;1,8&gt;上引发冲突；人群7占领点7并在边&lt;7,1&gt;和&lt;7,4&gt;上引发冲突；人群4什么都不做。<br />
+注意合法的顺序可能不止一种；样例中，(2, 3, 8, 4, 1, 7, 5, 6)也是一种合法的方案。注意(8, 5, 6, 3, 2, 1, 7, 4)不是合法的方案，因为按照这个方案，&lt;2,3&gt;上也会发生冲突，与输入不符。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">输入的第一行包含两个整数N,M，含义是点数和边数。<br />
+接下来M行，每行三个整数A,B,C，表示有向边A-&gt;B，如果C=1，则这条边上发生了冲突。<br />
+N&lt;=20000,M&lt;=200000。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">输出一个排列，表示人群的行动顺序。<br />
+如果没有任何顺序满足题意，输出-1。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>8 9
+1 4 1
+1 8 1
+2 3 0
+5 6 0
+6 5 0
+7 4 1
+6 4 0
+7 1 1
+4 5 0
+
+</pre><hr/><h3>样例输出</h3><pre>8 5 6 2 3 1 7 4
+</pre><hr/><h3>提示</h3><p><p><a href="http://61.187.179.132/JudgeOnline/userinfo.php?user=Dragonite"><font color="#0000ff">Dragonite</font></a>提供SPJ</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3023" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3023" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3487：[Poi2013]Maze</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2013]Maze</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2013]Maze</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2013]Maze                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="background: white"><span style="font-size: medium"><span style="background: white; color: #444444">Byteasar read an interesting story recently. Its protagonist was some Greek crown prince who defeated a monster with a wool yarn, or something like that. But something else fascinated Byteasar about the story. What he liked most was the fact that the climax took place in a maze. From then on Byteasar is crazy about mazes.</span></span></div>
+<div style="background: white"><span style="font-size: medium"><span style="background: white; color: #444444">Byteasar sketches mazes on a squared sheet of paper. Each sketch is a polygon with sides (representing the walls of the maze) parallel to either of the sheet's edges (i.e., the axes of the Carthesian coordinate system), and every two successive sides are perpendicular. Byteasar observed that if the entrance is placed on one of the sides of such a maze, then one can traverse the whole maze and return to the entrance by always keeping the right hand to the wall as one goes.</span></span></div>
+<div style="background: white"><span style="font-size: medium"><span style="background: white; color: #444444">Moreover, throughout the maze traversal we can note the turns we take. We shall write the letter L if we turn left when we move along one wall to another, and P if we turn right in such case. Byteasar wonders for which words composed of the letters L and P there exists a maze whose traversal results in writing this very word.</span></span></div>
+<p><span style="font-size: medium">构造一个n个顶点的多边形，按照它的边缘走，如果右转就是P，左转就是L。输出每个点的顶点</span></p>
+<div><span style="font-size: medium">多边形不能自交，坐标绝对值要求在10^9以内</span></div></p><hr/><h3>输入格式</h3><p><div style="background: white"><span style="font-size: medium"><span style="background: white; color: #444444">The first line of the standard input gives a single </span><span style="background: white; color: #444444">-letter word (1&lt;=N&lt;=100000) composed of the letters L and P, describing the sequence of successive turns made during the maze's traversal.</span></span></div></p><hr/><h3>输出格式</h3><p><div style="background: white; margin: 8.7pt 0cm">&nbsp;</div>
+<div style="background: white"><span style="font-size: medium"><span style="background: white; color: #444444">If no maze corresponds to the description given as input, then the word NIE (Polish for <i>no</i>) is to be printed on the standard output. Otherwise, exactly </span><span style="background: white; color: #444444">&nbsp;lines should be printed, specifying any maze (consistent with the input) as follows. The -th of these lines is to hold two integers, </span>xi <span style="background: white; color: #444444">and </span>yi</span><span style="font-size: medium">(-10^9&lt;=xi,yi&lt;=10^9)<span style="background: white; color: #444444">, separated by a single space, that are the coordinates of the </span>i<span style="background: white; color: #444444">-th vertex of the maze's sketch. The vertices are to be printed in their counterclockwise order on the polygon's perimeter; an arbitrary vertex can be chosen as the first one, and the position of the entrance need not be indicated.</span></span></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>LLLLPPLL</pre><hr/><h3>样例输出</h3><pre>0 0
+2 0
+2 2
+-1 2
+-1 -2
+1 -2
+1 -1
+0 -1
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3487" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3487" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

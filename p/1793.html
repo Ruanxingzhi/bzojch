@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1793：[Ioi2008]Fish 鱼
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Fish 鱼
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Fish 鱼
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ioi2008]Fish 鱼
+                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>据Scheherazade说，在很远的沙漠中有一个湖。湖中起初有N条鱼。选择最值钱的K种宝石，对F条鱼的每一条只喂给它一块宝石。注意，因为K可能小于F，两条或更多的鱼可能会吞下同一种宝石。
+随着时间的流逝，有些鱼吃掉了别的鱼。一条鱼能够吃掉另一条鱼，当且仅当它的长度是被吃掉的鱼的两倍(A 能吃掉B 当且仅当LA >= 2 * LB)。没有规则说明一条鱼何时会吃掉另一条鱼。有的鱼可能会一条接一条地吃掉几条小鱼，而有的鱼可能不吃别的鱼，即使它们有能力吃。当一条鱼吃掉一条小鱼时，它的身长并不改变，但是小鱼腹中的宝石会完好无损地进到大鱼腹中。
+据Scheherazade说，如果你能够找到那个湖，你会被准许捕捉一条鱼，并且得到鱼腹中的宝石。你很想试试运气，但是在出发前很想知道捉到一条鱼可能会有多少种不同的宝石组合。
+
+任务
+写一个程序，给定每条鱼的长度以及其最初吞食的宝石的种类，找出鱼腹中宝石不同组合的数量对给定整数M取模的值。组合由每种宝石的数量定义，与宝石的排列顺序无关。同一类宝石中任意两块是没有区别的。
+
+限制
+1 <= F <= 500,000		湖中最初鱼的数量
+1 <= K <= F			宝石的种类
+2 <=M <= 30,000	
+1 <= LX <= 1,000,000,000	鱼X的长度
+
+</p><hr/><h3>输入格式</h3><p>你的程序需要从标准输入上读入下列数据：
+&#8226;	
+&#8226;	第一行是整数F, 即湖中最初鱼的数量。
+&#8226;	第二行是整数K, 即宝石的种类数。
+不同类型的宝石分别用从 1 到 K的整数表示。
+&#8226;	第三行是整数M。
+&#8226;	以后 F 行中的每一行用由一个空格分隔的两个整数描述一条鱼：按顺序分别是鱼的长度以及鱼腹中的宝石的类型。
+注意: 在所有的测试用例中，K 种宝石中的每一种都会至少有一块。
+ 
+</p><hr/><h3>输出格式</h3><p>输出
+你的程序需要在标准输出上输出一个介于0和M-1(包含)的整数，即宝石所有可能的不同组合数量模M，占一行。
+注意，在问题求解中，数值 M 除了简化计算外没有其他的作用。
+评分
+有总计 70 分的测试用例，其中K 不超过 7,000。在这些测试用例中，有总计25 分的测试用例的 K 不超过 20。
+
+反馈细节
+在竞赛中, 你提交的程序将用一些正式的数据进行测试，并向你显示测试结果的概要。
+</p><hr/><h3>样例输入</h3><pre>
+5
+3
+7
+2 2
+5 1
+8 3
+4 1
+2 3	
+
+</pre><hr/><h3>样例输出</h3><pre>4
+
+
+</pre><hr/><h3>提示</h3><p>有 11 种可能的组合，所以你需要输出4，也就是11 模 7。
+
+这些可能的组合是: [1] [1,2] [1,2,3] [1,2,3,3] [1,3] [1,3,3] [2] [2,3] [2,3,3] [3] 和 [3,3]。 
+(对每一种组合, 我们列出其所包含的宝石。 例如，[2,3,3] 包含一块2型宝石和两块3型宝石)
+这些组合可以由下述方式获得:
+&#8226;	[1]: 如果你在第二条鱼 (或第四条) 吃掉任何其它鱼之前捕捉到它。 
+&#8226;	[1,2]: 如果第二条鱼吃掉第一条鱼, 它就会有一块 1 型宝石(它在初始时刻吞下的) 和一块2型宝石 (从第一条鱼腹中得到的)。
+&#8226;	[1,2,3]: 一种可能的途径是: 第四条鱼吃掉第一条鱼，然后第三条鱼又吃掉它。如果你此时捉到了第三条鱼，那它腹中就会有这三种宝石一样一块。
+&#8226;	[1,2,3,3]: 第四条鱼吃掉第一条鱼，第三条鱼吃掉第四条鱼，第三条鱼吃掉第五条鱼，你捉到了第三条鱼。
+&#8226;	[1,3]: 第三条鱼吃掉第四条鱼，你捉到了第三条鱼。
+&#8226;	[1,3,3]: 第三条鱼吃掉第五条鱼，第三条鱼吃掉第四条鱼，你捉到了第三条鱼。
+&#8226;	[2]: 你捉到了第一条鱼。
+&#8226;	[2,3]: 第三条鱼吃掉第一条鱼，你捉到了第三条鱼。
+&#8226;	[2,3,3]: 第三条鱼吃掉第一条鱼，第三条鱼吃掉第五条鱼，你捉到了第三条鱼。
+&#8226;	[3]: 你捉到了第三条鱼。
+&#8226;	[3,3]: 第三条鱼吃掉第五条鱼，你捉到了第三条鱼。
+
+</p><hr/><h3>题目来源</h3><p>Day1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1793" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1793" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

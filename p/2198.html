@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2198：[Usaco2011 Jan]瓶颈</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2011 Jan]瓶颈</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2011 Jan]瓶颈</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2011 Jan]瓶颈                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>Farmer John有一张N个农场构成的网络(1 <= N <= 100,000) ，我们将农场标记为1N。
+农场被N-1条单向道路连接，保证从任何一个农场可以到达1号农场。FJ想让奶牛到1号农场集中
+（P.S. 至于要做什么我也不知道）。
+
+对于每个农场i > 1都有一条单独的单向道路通往P_i，并且这个农场里有C_i只奶牛
+（1 <= C_i <= 1,000,000,000）。在每个单位时间里，这条道路允许不超过M_i
+ (0 <= M_i <= 1,000,000,000)只奶牛从农场i走到农场P_i (1 <= P_i <= N)。
+
+Farmer John 想让所有的奶牛都集中在1号农场（农场容纳奶牛的数量是没有限制的）。
+下面是奶牛集中到1号农场过程的规则：
+
+    * 我们认为时间是离散的
+
+    * 任何奶牛都可以在一个单位时间里走过任意多条道路。但是，必须满足每条道路的上限M_i。
+
+    * 奶牛从来不会离开1号农场。
+
+换句话说，每一个单位时间，每只奶牛可以选择下面行动之一：
+
+    a) 留在当前的农场
+
+    b) 经过一条或者多条道路，向1号农场移动。同样，需要满足每条道路的上限M_i。
+
+FJ想知道有多少奶牛可以在某个特定的时刻到达1号农场。特别的，他有一张列着K (1 <= K <= 10,000)
+个时间T_i (1 <= T_i <= 1,000,000,000)的单子，他想知道对于每个T_i，如果采用最优
+的策略在这个时刻结束时最多能有多少奶牛到达1号农场。
+
+考虑如下一个样例（树退化成链），列表里只有T_1=5一个时刻，奶牛如下分布：
+ <img border="0" src="../file/2198_0.jpg"> 
+</p><hr/><h3>输入格式</h3><p>* 第1行：两个空格隔开的整数N和K
+
+* 第2到N行：第i行包含三个空格隔开的整数，表示农场i（不是i+1）的P_i，C_i，M_i
+
+* 第N+1到N+K行：第N+i行包含一个整数T_i
+
+</p><hr/><h3>输出格式</h3><p>* 第1K行：第i行包含一个整数，表示到T_i个单位时间为止能够到达1号农场奶牛的最多数量。
+</p><hr/><h3>样例输入</h3><pre>4 1
+1 1 5
+2 12 7
+3 12 3
+5
+
+</pre><hr/><h3>样例输出</h3><pre>25
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2198" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2198" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

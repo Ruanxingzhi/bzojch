@@ -1,0 +1,175 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2021：[Usaco2010 Jan]Cheese Towers </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Jan]Cheese Towers </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Jan]Cheese Towers </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2010 Jan]Cheese Towers                 </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>Farmer John wants to save some blocks of his cows' delicious Wisconsin
+cheese varieties in his cellar for the coming winter. He has room
+for one tower of cheese in his cellar, and that tower's height can
+be at most T (1 <= T <= 1,000). The cows have provided him with a
+virtually unlimited number of blocks of each kind of N (1 <= N <=
+100) different types of cheese (conveniently numbered 1..N). He'd
+like to store (subject to the constraints of height) the most
+valuable set of blocks he possibly can. The cows will sell the rest
+to support the orphan calves association.
+
+Each block of the i-th type of cheese has some value V_i (1 <= V_i
+<= 1,000,000) and some height H_i (5 <= H_i <= T), which is always
+a multiple of 5.
+
+Cheese compresses. A block of cheese that has height greater than
+or equal to K (1 <= K <= T) is considered "large" and will crush
+any and all of the cheese blocks (even other large ones) located
+below it in the tower. A crushed block of cheese doesn't lose any
+value, but its height reduces to just 4/5 of its old height. Because
+the height of a block of cheese is always a multiple of 5, the
+height of a crushed block of cheese will always be an integer. A
+block of cheese is either crushed or not crushed; having multiple
+large blocks above it does not crush it more. Only tall blocks of
+cheese crush other blocks; aggregate height of a tower does not
+affect whether a block is crushed or not.
+
+What is the total value of the best cheese tower FJ can construct?
+
+Consider, for example, a cheese tower whose maximum height can be
+53 to be build from three types of cheese blocks. Large blocks are
+those that are greater than or equal to 25. Below is a chart of the
+values and heights of the various cheese blocks he stacks:
+
+           Type    Value      Height
+             1      100         25
+             2       20          5
+             3       40         10
+
+FJ constructs the following tower:
+
+            Type Height Value
+      top -> [1]   25    100
+             [2]    4     20   <- crushed by [1] above
+             [3]    8     40   <- crushed by [1] above
+             [3]    8     40   <- crushed by [1] above
+   bottom -> [3]    8     40   <- crushed by [1] above
+
+The topmost cheese block is so large that the blocks below it are
+crushed. The total height is:
+
+        25 + 4 + 8 + 8 + 8 = 53
+
+The total height does not exceed 53 and thus is 'legal'. The total
+value is:
+
+       100 + 20 + 40 + 40 + 40 = 240.
+
+This is the best tower for this particular set of cheese blocks.
+
+John要建一个奶酪塔，高度最大为T。他有N块奶酪。第i块高度为Hi（一定是5的倍数），价值为Vi。一块高度>=K的奶酪被称为大奶酪，一个奶酪如果在它上方有大奶酪（多块只算一次），它的高度就会变成原来的4/5.。。
+很显然John想让他的奶酪他价值和最大。。
+求这个最大值。。
+</p><hr/><h3>输入格式</h3><p>第一行分别是 N T K
+接下来N行分别是
+Vi Hi
+</p><hr/><h3>输出格式</h3><p>一行最大值
+
+</p><hr/><h3>样例输入</h3><pre>3 53 25
+100 25
+20 5
+40 10
+
+
+
+</pre><hr/><h3>样例输出</h3><pre>240
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2021" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2021" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

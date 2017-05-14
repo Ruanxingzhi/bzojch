@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3063：[Usaco2013]Route Designing</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2013]Route Designing</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2013]Route Designing</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2013]Route Designing                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">After escaping from the farm, Bessie has decided to start a travel agency along the Amoozon river. There are several tourist sites located on both sides of the river, each with an integer value indicating how interesting the tourist site is. Tourist sites are connected by routes that cross the river (i.e., there are no routes connecting a site with a site on the same side of the river). Bessie wants to design a tour for her customers and needs your help. A tour is a sequence of tourist sites with adjacent sites connected by a route. In order to best serve her customers she wants to find the route that maximizes the sum of the values associated with each visited site. However, Bessie may be running several of these tours at the same time. Therefore it's important that no two routes on a tour intersect. Two routes (a &lt;-&gt; x) and (b &lt;-&gt; y) intersect if and only if (a &lt; b and y &lt; x) or (b &lt; a and x &lt; y) or (a = b and x = y). Help Bessie find the best tour for her agency. Bessie may start and end at any site on either side of the Amoozon.</span></p>
+<p></p>
+<div><span style="font-size: 12pt">&nbsp; </span><span style="font-size: 12pt">在一条蛋疼的河两旁有一些景点。河左边有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个景点，河右边有</span><span style="font-size: 12pt">M</span><span style="font-size: 12pt">个景点。在河上搭着一些桥沟通两岸的景点（桥是无向的），但是在河的同一边的景点之间都有参天的大树阻拦着，无法通行。我们从河的上游往下游按顺序把景点编上号。目前我们要设计</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">条路线，可以从河岸任意一边的任意一个景点开始到河岸任意一边的任意一个景点结束。这条路线必须要满足其中没有桥交叉。我们对于交叉的定义如下：对于</span><span style="font-size: 12pt">a&lt;-&gt;x</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">b&lt;-&gt;y</span><span style="font-size: 12pt">两座桥，若</span><span style="font-size: 12pt">(a&lt;b &amp;&amp; x&gt;y) || (a&gt;b &amp;&amp; x&lt;y) || (a=b &amp;&amp; x=y)</span><span style="font-size: 12pt">，则这两座桥交叉。满足上面的条件之后，开始提问了：已知每个景点都有一个美丽值，你设计的路线必须满足其美丽值最大。那么最大的美丽值是多少？</span></div></p><hr/><h3>输入格式</h3><p><p><font size="4">* Line 1: Three space separated integers N (1 &lt;= N &lt;= 40,000), M (1 &lt;= M &lt;= 40,000), and R (0 &lt;= R &lt;= 100,000) indicating respectively the number of sites on the left side of the river, the number of sites on the right side of the river, and the number of routes. </font></p>
+<p><font size="4">* Lines 2..N+1: The (i+1)th line has a single integer, L_i (0 &lt;= L_i &lt;= 40,000), indicating the value of the ith tourist site on the left side of the river. </font></p>
+<p><font size="4">* Lines N+2..N+M+1: The (i+N+1)th line has a single integer, R_i (0 &lt;= R_i &lt;= 40,000), indicating the value of the ith tourist site on the right side of the river.</font></p>
+<p><font size="4">* Lines N+M+2..N+M+R+1: Each line contains two space separated integers I (1 &lt;= I &lt;= N) and J (1 &lt;= J &lt;= M) indicating there is a bidirectional route between site I on the left side of the river and site J on the right side of the river. </font></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">Line 1: A single integer indicating the maximum sum of values attainable on a tour. </span></p></p><hr/><h3>样例输入</h3><pre>3 2 4
+1
+1
+5
+2
+2
+1 1
+2 1
+3 1
+2 2
+
+INPUT DETAILS: There are three sites on the left side of the Amoozon with values 1, 1, and 5. There are two sites on the right side of the Amoozon with values 2 and 2. There are four routes connecting sites on both sides of the river. </pre><hr/><h3>样例输出</h3><pre> 8 
+OUTPUT DETAILS: The optimal tour goes from site 1 on the left, site 1 on the right, and ends at site 3 on the left. These respectively have values 1, 2, and 5 giving a total value of the trip of 8.
+
+ </pre><hr/><h3>提示</h3><p><p>&nbsp;Left No.1 -&gt; Right No.1 -&gt; Left No.3，答案是1+2+5=8.</p>
+<p></p></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3063" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3063" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

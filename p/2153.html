@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2153：设计铁路</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">设计铁路</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">设计铁路</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                设计铁路                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>A省有一条东西向的公路经常堵车，为解决这一问题，省政府对此展开了调查。调查后得知，这条公路两侧有很多村落，每个村落里都住着很多个信仰c教的教徒，每周日都会开着自家的车沿公路到B地去&ldquo;膜拜&rdquo;他们的教主，这便是堵车的原因。详细调查显示：这里总共有N个村落，并且它们都在B地的东边。编号为i的村落住有Ri个信仰c教的教徒，距离B地的距离为Ti（单位：公里）。为解决这一问题，A省政府决定在这条公路下修建一条地下快速铁路来缓解交通，并沿线修建若干个车站（B地会修建终点站，不算车站）。每名教徒都会先往B地方向开车（如果他所在村庄处恰好有车站就不必开车了），到最近的一个快速铁路车站时换乘（如果直接开到B地就不用换乘了），再通过快速铁路到B地。但A政府遇到一个难题：修建多少个车站以及在哪修建车站。一个修建车站的方案中，如果修建过多的车站则会花费过多的钱，但修建的车站少了或者修建的位置不对又会导致公路的拥堵。A政府为了协调这两方面，采用评分的方式来衡量一个方案的好坏（分数越大方案越坏）：每修建一个车站会增加m的分数，在某一次&ldquo;膜拜&rdquo;中（只考虑去，不考虑返回），每导致1个教徒开车行驶1公里会增加1分。现请你设计一个修建车站的方案，使得分数最小。请输出这个最小的分数。</p></p><hr/><h3>输入格式</h3><p><p>输入的第一行包含两个正整数n、m。之后n行每行两个正整数Ti、Ri。</p></p><hr/><h3>输出格式</h3><p><p>输出一个整数，表示最小的分数。</p></p><hr/><h3>样例输入</h3><pre>【样例输入1】
+4 20
+25 3
+5 3
+25 2
+20 5
+【样例输入2】
+4 30
+25 3
+5 3
+25 2
+20 5
+
+</pre><hr/><h3>样例输出</h3><pre>【样例输出1】
+55
+
+【样例输出2】
+70
+【样例说明】
+样例1中，在距B地20km处和距B地25km处修建车站，1、3、4号村落里的教徒就不必开车了，得分20*2=40分。2号村落里的教徒直接开车到B地，得分3*5=15分。总共得分55分。
+样例2中，在距B地20km处修建车站，4号村落里的教徒就不必开车了，得分30分。1号和3号村落里的教徒先开车到距B地20km处的车站，得分3*5+2*5=25分。2号村落里的教徒直接开车到B地，得分3*5=15分。总共得分70分。
+【数据规模】
+对于100%的数据，n<=40000，m<=2000000000，Ti<=1000000，Ri<=1000。
+提示：请注意使用64位整型存储某些数据和结果。
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2153" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2153" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

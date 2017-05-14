@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3168：[Heoi2013]钙铁锌硒维生素</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2013]钙铁锌硒维生素</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2013]钙铁锌硒维生素</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Heoi2013]钙铁锌硒维生素                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>银河队选手名单出来了！小林，作为特聘的营养师，将负责银河队选手参加宇宙比赛的饮食。众所周知，前往宇宙</div>
+<div>的某个星球，通常要花费好长好长的时间，人体情况在这之间会发生变化，因此，需要根据每天的情况搭配伙食，</div>
+<div>来保证营养。小林把人体需要的营养分成了n种，这些营养包括但不限于铁，钙。他准备了2套厨师机器人，一套厨</div>
+<div>师机器人有n个，每个厨师机器人只会做一道菜，这道菜一斤能提供第i种营养xi微克。想要吃这道菜的时候，只要</div>
+<div>输入一个数，就能吃到对应数量的这道菜了。为防止摄入过量对身体造成的伤害，每个机器人还有防过量摄入药，</div>
+<div>只要输入一个数，就能生成一定剂量的药，吃了这些药，就能减少相当于食用对应数目的这道菜提供的营养。小林</div>
+<div>之所以准备2套厨师机器人，正是因为旅途漫漫，难以预计，也许某一个厨师机器人在途中坏掉，要是影响了银河</div>
+<div>队选手的身体，就不好了。因此，第2套厨师机器人被用来做第1套的备用。小林需要为每一个第1套厨师机器人选</div>
+<div>一个第2套厨师机器人作备份，使得当这个机器人坏掉时，用备份顶替，整套厨师机器人仍然能搭配出任何营养需</div>
+<div>求，而且，每个第2套厨师机器人只能当一个第1套厨师机器人的备份。</div></p><hr/><h3>输入格式</h3><p><div>第一行包含一个正整数n。</div>
+<div>接下来n行，每行n个整数，表示第1套厨师机器人做的菜每一斤提供的每种营养。</div>
+<div>再接下来n行，每行n个整数，表示第2套厨师机器人做的菜每一斤提供的每种营养。</div>
+<div>1&le;n&le;300，所有出现的整数均非负，且不超过10,000。</div></p><hr/><h3>输出格式</h3><p><div>第一行是一个字符串，如果无法完成任务，输出&ldquo;NIE&rdquo;，否则输出&ldquo;TAK&rdquo;</div>
+<div>并跟着n行，第i行表示第i个第1套机器人的备份是哪一个第2套机器人。</div>
+<div>为了避免麻烦，如果有多种可能的答案，请给出字典序最小的那一组。</div></p><hr/><h3>样例输入</h3><pre>3
+1 0 0
+0 1 0
+0 0 1
+2 3 0
+0 7 8
+0 0 9</pre><hr/><h3>样例输出</h3><pre>TAK
+1
+2
+3</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3168" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3168" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

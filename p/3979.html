@@ -1,0 +1,179 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3979：[WF2012]infiltration</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]infiltration</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2012]infiltration</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2012]infiltration                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>早上好，特工W-12，你需要完成的以下的任务。</div>
+<div>我们已经渗透到一个叫混乱与祸害的组织中，希望能掌握该组织的管理权。不幸的是，它们似乎已经准备好应对这样的事件了，它们使用了一个很复杂的设计分配管理权力，这使得我们的渗透工作非常艰难。</div>
+<div>那家组织的管理系统被分成若干个单位，对于任意两个单位A和B，要么A管理B要么B管理A，同时这个管理关系可以形成环，因此可以出现A管理B、B管理C、C管理A的情况。</div>
+<div>我们可以安排特工去渗透到任意一个单位，那将使得我们控制该单位和那个单位直接管理的单位，但是不包括间接管理的单位。比如之前的样例，渗透到A单位会让我们控制A和B，但不能控制C。</div>
+<div>对于一个成功的渗透工作来说，我们必须要控制所有的单位才行，否则其他单位会发现我们，同时破坏我们的计划。而你也知道，我们现在从更高的部门那里拿到的经费十分紧缺，我们必须最高效地完成任务。你的任务就是要找出控制单位最少的可行方案。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包含一个整数n，表示该组织的单位数。接下来n行每行n个二进制位。在其中的第i行第j列位置，若为1表示i单位控制j单位，否则j单位控制i单位</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>共一行，第一个整数ans表示最少的控制单位数量</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+00
+10
+3
+010
+001
+100
+5
+01000
+00011
+11001
+10100
+10010
+4
+0100
+0000
+1100
+1110
+4
+0011
+1011
+0001
+0000
+4
+0101
+0010
+1001
+0100
+6
+001110
+100001
+010010
+011010
+010001
+101100
+4
+0000
+1001
+1100
+1010
+7
+0100011
+0000100
+1100001
+1110111
+1010011
+0110000
+0100010
+7
+0010001
+1011111
+0001111
+1000110
+1000000
+1000100
+0001110
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 1
+Case 2: 2
+Case 3: 2
+Case 4: 1
+Case 5: 1
+Case 6: 2
+Case 7: 2
+Case 8: 2
+Case 9: 1
+Case 10: 1
+</pre><hr/><h3>提示</h3><p><div>100%的数据n&lt;=75。</div>
+<div>保证n*n的01矩阵中所有的i行i列位置为0，i行j列和j行i列两个位置恰好一个为1一个为0（i&ne;j）。</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3979" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3979" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

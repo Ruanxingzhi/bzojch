@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2029：[Ctsc2002]月亮森林</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2002]月亮森林</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2002]月亮森林</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ctsc2002]月亮森林                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>一天早晨，一个小女孩在森林里玩耍时看到一颗神奇的种子，光芒四射，还散发着一股淡淡的清香。女孩很喜欢这</div>
+<div>颗种子，便把它捧在手里带回了家。 那天晚上，女孩做了一个梦，梦到一个面目慈祥的白胡子老爷爷。老爷爷对</div>
+<div>她说，她手里的种子来自一棵月亮之树，原本只有在月亮上才能见到它，但是机缘巧合，种子悄悄的落在了地球上</div>
+<div>，无法再回到月亮上了。老爷爷发现女孩儿很喜欢这颗种子，就问她是否愿意借助自己的勤劳和智慧，用这颗小小</div>
+<div>的种子种出一片茂密的月亮森林，让月亮树在地球上有一个温暖的新家。女孩兴奋地点点头，忙问老爷爷具体应该</div>
+<div>怎么做。 老人解释说，这颗种子非同寻常，种下去的第二天上午就会长成一棵高度为1(一个单位)的小树苗。月亮</div>
+<div>树的生命力极强，以后还会每天上午长高一个单位。由于月亮树不同于地球上的生物，女孩必须使用一种特殊的肥</div>
+<div>料才能对它施肥，而这种肥料老爷爷每天会送给女孩儿一个单位。每天晚上，她必须给一棵树或者下午刚种下去的</div>
+<div>种子施肥，但不能多施肥，也不能不施肥。被施肥的树或者种子在第二天上午将比一般情况下多长高一个单位，即</div>
+<div>两个单位。月亮树在成长的过程中有两个称为&ldquo;收获点&rdquo;的特殊高度，分别为HP1和HP2。当月亮之树的高度第一次</div>
+<div>达到或者超过HP1的那天中午，树上就会结出一个果实。同样，当高度第一次达到或者超过HP2的那天中午，树上也</div>
+<div>会结出一个果实。果实里面有一颗种子, 和女孩当初捡到的一模一样。每天下午，女孩都可以选择一些种子种下去</div>
+<div>，当然也可以不种。当女孩种了恰好M棵树，且它们的高度都相同时，这些树才能真正的适应地球的环境，永远的</div>
+<div>活下去。 醒来后的那天下午，女孩儿就按照老爷爷的吩咐把种子种下去了。她把完成老爷爷交付给她的任务作为</div>
+<div>一生中最大的心愿，日复一日，年复一年辛勤的劳动着。她每天傍晚一坐在门槛上望着远方，眼前就会浮现出一片</div>
+<div>美丽而宽广的月亮森林。她坚信自己一定能成功，需要再长的时间也不怕。但是这一天何时才会来到呢？</div></p><hr/><h3>输入格式</h3><p><div>三个整数HP1,HP2,M（2 &lt; = HP1 &lt; HP2 &lt; = 20, 2 &lt; = M &nbsp;&lt;= 100）</div>
+<div>代表两个收获点的高度和所需月亮树的棵数</div>
+<p></p></p><hr/><h3>输出格式</h3><p><p>仅包含一个整数T，即最少需要的天数。</p></p><hr/><h3>样例输入</h3><pre>input 1
+4   9   3
+
+input 2
+10   15   6</pre><hr/><h3>样例输出</h3><pre>output 1 
+12
+
+output 2
+84</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢刘汝佳先生授权使用</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2029" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2029" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

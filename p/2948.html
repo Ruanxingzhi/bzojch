@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2948：[Poi2001]绿色游戏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]绿色游戏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]绿色游戏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2001]绿色游戏                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="center"></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">绿色游戏是一种两人游戏，双方分别称Ann和Billy。游戏的内容主要是轮流在棋盘上移动一颗棋子。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">棋盘上的点一部分是绿色的，其余是白色的；全部从1至a+b编号。编号1至a的点属于Ann，编号(a+1)至(a+b)的点属于Billy。每个点都有一些后继点，均可一步到达。属于Ann的点的后继点一定属于Billy，反之亦然。所有的点都至少有一个后继点，这样总可以往下走一步。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">游戏开始时把棋子放在任意的一点P上，然后双方轮流移动棋子至当前所在点（属于移动方）的一个后继点上（属于对手）。游戏由点P的拥有者开始，结束时棋子第二次到达了某一点，称点Q。如果在从点Q至点Q的一连串移动中，棋子至少一次被放到绿色点上，则Ann赢。若从点P开始，不管Billy如何移动，Ann总能保证赢得这次游戏，则称Ann对起始点P有必胜的策略。</span></div>
+<div><span style="font-size: medium"><b>任务：</b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 编写一个程序，完成下列工作：</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">1、&nbsp;读入对棋盘的描述；</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">2、&nbsp;算出Ann有必胜策略的起始点；</span></div></p><hr/><h3>输入格式</h3><p><div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">首行有两个整数a和b，两个整数之间用一个空格分开，分别表示属于Ann和Billy的点数(1&le;a，b&le;3000)。以下a+b行是对各点的描述，先描述Ann的点，再描述Billy的点。第i+1行（1&le;i&le;a+b）以整数z，k开始：z表示点i的颜色(O－白色，I－绿色)，k表示后继点的数目。然后是K个整数（1&le;k＜a+b），写在同一行，代表点i后继点的编号，这些整数均用一个空格分开。绿点的个数不超过100，所有点的后继点的个数之和不超过30000。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">首行仅一个整数L，代表Ann有L个有必胜策略的起始点。以下L行按升序顺序依次给出这些点的编号。</span></div></p><hr/><h3>样例输入</h3><pre>5 3
+0 2 6 7
+0 3 6 7 8
+0 1 8
+1 1 7
+1 1 8
+1 2 1 2
+0 2 1 2
+0 2 3 4 
+</pre><hr/><h3>样例输出</h3><pre>5
+1
+2
+4
+6
+7</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2948" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2948" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

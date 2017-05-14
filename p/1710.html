@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1710：[Usaco2007 Open]Cheappal 廉价回文</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Open]Cheappal 廉价回文</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Open]Cheappal 廉价回文</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 Open]Cheappal 廉价回文                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">为了跟踪所有的牛,农夫JOHN在农场上装了一套自动系统. 他给了每一个头牛一个电子牌号 当牛走过这个系统时,牛的名字将被自动读入. 每一头牛的电子名字是一个长度为M (1 &lt;= M &lt;= 2,000) 由N (1 &lt;= N &lt;= 26) 个不同字母构成的字符串.很快,淘气的牛找到了系统的漏洞:它们可以倒着走过读 码器. 一头名字为&quot;abcba&quot;不会导致任何问题,但是名为&quot;abcb&quot;的牛会变成两头牛(&quot;abcb&quot; 和 &quot;bcba&quot;).农 夫JOHN想改变牛的名字,使得牛的名字正读和反读都一样.例如,&quot;abcb&quot;可以由在尾部添加&quot;a&quot;.别的方法包 括在头上添加&quot;bcb&quot;,得到&quot;bcbabcb&quot;或去掉&quot;a&quot;,得到&quot;bcb&quot;.JOHN可以在任意位置添加或删除字母.因为名字 是电子的,添加和删除字母都会有一定费用.添加和删除每一个字母都有一定的费用(0 &lt;= 费用 &lt;= 10,000). 对与一个牛的名字和所有添加或删除字母的费用,找出修改名字的最小的费用.空字符串也是一个合法的名字. </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第一行: 两个用空格分开的数, N 和 M. </span></p>
+<p><span style="font-size: medium">* 第二行: M个自符,初始的牛的名字. </span></p>
+<p><span style="font-size: medium">* 第3...N+2行: 每行含有一个字母和两个整数,分别是添加和删除这个字母的费用.</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">一个整数, 改变现有名字的最小费用. </span></p></p><hr/><h3>样例输入</h3><pre>
+3 4
+abcb
+a 1000 1100
+b 350 700
+c 200 800
+输入解释:
+名字是 "abcb", 操作费用如下:
+
+    添加   删除
+a  1000   1100
+b   350    700
+c   200    800
+
+</pre><hr/><h3>样例输出</h3><pre>
+900
+输出解释:
+在尾部添加"a"得到"abcba"的费用为1000. 删除头上的"a",得到"bcb"的费用为1100.在头上添加"bcb"可以得到最小费用,350+200+350=900.
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1710" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1710" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

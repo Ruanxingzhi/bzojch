@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1692：[Usaco2007 Dec]队列变换</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Dec]队列变换</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Dec]队列变换</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 Dec]队列变换                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">FJ打算带他的N(1 &lt;= N &lt;= 30,000)头奶牛去参加一年一度的&ldquo;全美农场主大奖赛&rdquo;。在这场比赛中，每个参赛者都必须让他的奶牛排成一列，然后领她们从裁判席前依次走过。 今年，竞赛委员会在接受队伍报名时，采用了一种新的登记规则：他们把所有队伍中奶牛名字的首字母取出，按它们对应奶牛在队伍中的次序排成一列（比如说，如果FJ带去的奶牛依次为Bessie、Sylvia、Dora，登记人员就把这支队伍登记为BSD）。登记结束后，组委会将所有队伍的登记名称按字典序升序排列，就得到了他们的出场顺序。 FJ最近有一大堆事情，因此他不打算在这个比赛上浪费过多的时间，也就是说，他想尽可能早地出场。于是，他打算把奶牛们预先设计好的队型重新调整一下。 FJ的调整方法是这样的：每次，他在原来队列的首端或是尾端牵出一头奶牛，把她安排到新队列的尾部，然后对剩余的奶牛队列重复以上的操作，直到所有奶牛都被插到了新的队列里。这样得到的队列，就是FJ拉去登记的最终的奶牛队列。 接下来的事情就交给你了：对于给定的奶牛们的初始位置，计算出按照FJ的调整规则所可能得到的字典序最小的队列。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 一个整数：N </span></p>
+<p><span style="font-size: medium">* 第2..N+1行: 第i+1行仅有1个'A'..'Z'中的字母，表示队列中从前往后数第i 头奶牛名字的首字母</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1..??行: 输出FJ所能得到的字典序最小的队列。每行（除了最后一行）输 出恰好80个'A'..'Z'中的字母，表示新队列中每头奶牛姓名的首 字母 </span></p></p><hr/><h3>样例输入</h3><pre>6
+A
+C
+D
+B
+C
+B
+
+输入说明:
+
+    FJ有6头顺次排好队的奶牛：ACDBCB
+
+</pre><hr/><h3>样例输出</h3><pre>ABCBCD
+
+输出说明:
+
+ 操作数   原队列     新队列
+   #1     ACDBCB
+   #2      CDBCB     A
+   #3      CDBC      AB
+   #4      CDB       ABC
+   #5      CD        ABCB
+   #6       D        ABCBC
+   #7                ABCBCD
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1692" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1692" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

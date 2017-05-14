@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2132：圈地计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">圈地计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">圈地计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                圈地计划                </h1>
+                <p>时间限制：2s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>最近房地产商GDOI(Group of Dumbbells Or Idiots)从NOI(Nuts Old Idiots)手中得到了一块开发土地。据了解，这块土地是一块矩形的区域，可以纵横划分为N&times;M块小区域。GDOI要求将这些区域分为商业区和工业区来开发。根据不同的地形环境，每块小区域建造商业区和工业区能取得不同的经济价值。更具体点，对于第i行第j列的区域，建造商业区将得到Aij收益，建造工业区将得到Bij收益。另外不同的区域连在一起可以得到额外的收益，即如果区域(I,j)相邻（相邻是指两个格子有公共边）有K块（显然K不超过4）类型不同于(I,j)的区域，则这块区域能增加k&times;Cij收益。经过Tiger.S教授的勘察，收益矩阵A,B,C都已经知道了。你能帮GDOI求出一个收益最大的方案么？</p></p><hr/><h3>输入格式</h3><p><p>输入第一行为两个整数，分别为正整数N和M，分别表示区域的行数和列数；第2到N+1列，每行M个整数，表示商业区收益矩阵A；第N+2到2N+1列，每行M个整数，表示工业区收益矩阵B；第2N+2到3N+1行，每行M个整数，表示相邻额外收益矩阵C。第一行，两个整数，分别是n和m（1&le;n，m&le;100）；</p>
+<p><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">任何数字不超过1000&rdquo;的限制</span></p></p><hr/><h3>输出格式</h3><p><p>输出只有一行，包含一个整数，为最大收益值。</p></p><hr/><h3>样例输入</h3><pre>3 3
+1 2 3
+4 5 6
+7 8 9
+9 8 7
+6 5 4
+3 2 1
+1 1 1
+1 3 1
+1 1 1
+</pre><hr/><h3>样例输出</h3><pre>81
+【数据规模】
+对于100%的数据有N,M≤100
+</pre><hr/><h3>提示</h3><p><p>&nbsp;数据已加强，并重测--2015.5.15</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2132" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2132" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

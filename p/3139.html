@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3139：[Hnoi2013]比赛</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2013]比赛</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2013]比赛</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Hnoi2013]比赛                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">沫沫非常喜欢看足球赛，但因为沉迷于射箭游戏，错过了最近的一次足球联赛。此次联 赛共N支球队参加，比赛规则如下： <br />
+(1) 每两支球队之间踢一场比赛。 (2) 若平局，两支球队各得1分。 <br />
+(3) 否则胜利的球队得3分，败者不得分。 <br />
+尽管非常遗憾没有观赏到精彩的比赛，但沫沫通过新闻知道了每只球队的最后总得分， 然后聪明的她想计算出有多少种可能的比赛过程。 <br />
+譬如有3支球队，每支球队最后均积3分，那么有两种可能的情况：<br />
+&nbsp;可能性1&nbsp;&nbsp;&nbsp; 可能性2 <br />
+球队&nbsp; A&nbsp; B&nbsp; C&nbsp; 得分&nbsp; &nbsp;球队 A&nbsp; B&nbsp; C&nbsp; 得分 <br />
+A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp; 3&nbsp; 0&nbsp; 3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; 0&nbsp; 3&nbsp; 3 <br />
+B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; -&nbsp; 3&nbsp; 3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp; 3&nbsp; -&nbsp; 0&nbsp; 3 <br />
+C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;3&nbsp; 0&nbsp; -&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp; 3&nbsp; -&nbsp; 3 <br />
+但沫沫发现当球队较多时，计算工作量将非常大，所以这个任务就交给你了。请你计算 出可能的比赛过程的数目，由于答案可能很大，你只需要输出答案对109+7取模的结果</span></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" align="left" style="margin: 0.25pt 53.05pt 0pt 18pt; line-height: 16pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">第一行是一个正整数</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">，表示一共有</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">支球队。</span><span style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman"> </font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">接下来一行</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">个非负整数，依次表示各队的最后总得分。</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p>
+<p class="MsoNormal" align="left" style="margin: 0.25pt 53.05pt 0pt 18pt; line-height: 16pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">输入保证</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">20%</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">的数据满足</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N&le;4</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">，</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">40%</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">的数据满足</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N&le;6</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">，</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">60%</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">的数据满足</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">N&le;8</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">，</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">100%</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">的数据</span><span style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman"> </font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">满足</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">3&le;N&le;10</font></span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">且至少存在一组解。</span><span lang="EN-US" style="font-size: 11pt; color: black; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-family: 'Times New Roman'">仅包含一个整数，表示答案对</span><span lang="EN-US" style="font-size: 11pt; color: black; font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体">10^9+7</span><span style="font-size: 11pt; color: black; font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-family: 'Times New Roman'">取模的结果</span></p></p><hr/><h3>样例输入</h3><pre>4
+4 3 6 4 </pre><hr/><h3>样例输出</h3><pre>3</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3139" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3139" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

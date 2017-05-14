@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2876：[Noi2012]骑行川藏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2012]骑行川藏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2012]骑行川藏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi2012]骑行川藏                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">蛋蛋非常热衷于挑战自我，今年暑假他准备沿川藏线骑着自行车从成都前往拉萨。川藏线的沿途有着非常美丽的风景，但在这一路上也有着很多的艰难险阻，路况变化多端，而蛋蛋的体力十分有限，因此在每天的骑行前设定好目的地、同时合理分配好自己的体力是一件非常重要的事情。<br />
+由于蛋蛋装备了一辆非常好的自行车，因此在骑行过程中可以认为他仅在克服风阻做功（不受自行车本身摩擦力以及自行车与地面的摩擦力影响）。某一天他打算骑N段路，每一段内的路况可视为相同：对于第i段路，我们给出有关这段路况的3个参数 si , ki , vi' ，其中 si 表示这段路的长度， ki 表示这段路的风阻系数， vi' 表示这段路上的风速（表示在这段路上他遇到了顺风，反之则意味着他将受逆风影响）。若某一时刻在这段路上骑车速度为v，则他受到的风阻大小为 F = ki ( v - vi' )2（这样若在长度为s的路程内保持骑行速度v不变，则他消耗能量（做功）E = ki ( v - vi' )2 s）。<br />
+设蛋蛋在这天开始时的体能值是 Eu ，请帮助他设计一种行车方案，使他在有限的体力内用最短的时间到达目的地。请告诉他最短的时间T是多少。<br />
+<br />
+【评分方法】<br />
+本题没有部分分，你程序的输出只有和标准答案的差距不超过0.000001时，才能获得该测试点的满分，否则不得分。<br />
+<br />
+【数据规模与约定】<br />
+对于10%的数据，N=1；<br />
+对于40%的数据，N&lt;=2；<br />
+对于60%的数据，N&lt;=100；<br />
+对于80%的数据，N&lt;=1000； <br />
+对于所有数据，N &lt;= 10000，0 &lt;= Eu &lt;= 108，0 &lt; si &lt;= 100000，0 &lt; ki &lt;= 1，-100 &lt; vi' &lt; 100。数据保证最终的答案不会超过105。<br />
+<br />
+【提示】<br />
+必然存在一种最优的体力方案满足：蛋蛋在每段路上都采用匀速骑行的方式。<br />
+<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">第一行包含一个正整数N和一个实数Eu，分别表示路段的数量以及蛋蛋的体能值。 接下来N行分别描述N个路段，每行有3个实数 si , ki , vi' ，分别表示第 i 段路的长度，风阻系数以及风速。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">输出一个实数T，表示蛋蛋到达目的地消耗的最短时间，要求至少保留到小数点后6位。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>
+3 10000
+10000 10 5
+20000 15 8
+50000 5 6
+
+</pre><hr/><h3>样例输出</h3><pre>12531.34496464 
+【样例说明】 一种可能的方案是：蛋蛋在三段路上都采用匀速骑行的方式，其速度依次为5.12939919, 8.03515481, 6.17837967。
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2876" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2876" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

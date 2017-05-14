@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1673：[Usaco2005 Dec]Scales 天平</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Dec]Scales 天平</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Dec]Scales 天平</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 Dec]Scales 天平                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John has a balance for weighing the cows. He also has a set of N (1 &lt;= N &lt;= 1000) weights with known masses (all of which fit in 31 bits) for use on one side of the balance. He places a cow on one side of the balance and then adds weights to the other side until they balance. (FJ cannot put weights on the same side of the balance as the cow, because cows tend to kick weights in his face whenever they can.) The balance has a maximum mass rating and will break if FJ uses more than a certain total mass C (1 &lt;= C &lt; 2^30) on one side. The weights have the curious property that when lined up from smallest to biggest, each weight (from the third one on) has at least as much mass as the previous two combined. FJ wants to determine the maximum mass that he can use his weights to measure exactly. Since the total mass must be no larger than C, he might not be able to put all the weights onto the scale. Write a program that, given a list of weights and the maximum mass the balance can take, will determine the maximum legal mass that he can weigh exactly. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰有一架用来称牛的体重的天平．与之配套的是N(1&le;N&le;1000)个已知质量的砝码（所</span><span style="font-size: medium">有砝码质量的数值都在31位二进制内）．每次称牛时，他都把某头奶牛安置在天平的某一边，</span><span style="font-size: medium">然后往天平另一边加砝码，直到天平平衡，于是此时砝码的总质量就是牛的质量（约翰不能把砝码放到奶牛的那边，因为奶牛不喜欢称体重，每当约翰把砝码放到她的蹄子底下，她就会尝试把砝码踢到约翰脸上）．天平能承受的物体的质量不是无限的，当天平某一边物体的质量大于C(1&le;C&lt;230)时，天平就会被损坏．&nbsp;&nbsp;&nbsp;&nbsp;砝码按照它们质量的大小被排成一行．并且，这一行中从第3个砝码开始，每个砝码的质量至少等于前面两个砝码（也就是质量比它小的砝码中质量最大的两个）的质量的和．&nbsp;&nbsp;&nbsp;&nbsp;约翰想知道，用他所拥有的这些砝码以及这架天平，能称出的质量最大是多少．由于天平的最大承重能力为C．他不能把所有砝码都放到天平上．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;现在约翰告诉你每个砝码的质量，以及天平能承受的最大质量．你的任务是选出一些砝码，</span></div>
+<div><span style="font-size: medium">使它们的质量和在不压坏天平的前提下是所有组合中最大的．</span></div>
+<div></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Two space-separated positive integers, N and C. </span></p>
+<p><span style="font-size: medium">* Lines 2..N+1: Each line contains a single positive integer that is the mass of one weight. The masses are guaranteed to be in non-decreasing order. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：两个用空格隔开的正整数N和C.</span></div>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到N+1行：每一行仅包含一个正整数，即某个砝码的质量．保证这些砝码的质量是一个不下降序列</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: A single integer that is the largest mass that can be accurately and safely measured. </span></p>
+<p><span style="font-size: medium"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-family: 'Times New Roman'">一个正整数，表示用所给的砝码能称出的不压坏天平的最大质量．</span></span></p></p><hr/><h3>样例输入</h3><pre>3 15//  三个物品,你的"包包"体积为15，下面再给出三个数字，从第三个数字开始，它都大于前面的二个数字之和，这个条件太重要
+1
+10
+20
+
+INPUT DETAILS:
+
+FJ has 3 weights, with masses of 1, 10, and 20 units. He can put at most 15
+units on one side of his balance.
+
+</pre><hr/><h3>样例输出</h3><pre>11 </pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">约翰有</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个砝码，质量分别为</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">10</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">20</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个单位．他的天平最多只能承受质量为</span><span lang="EN-US"><font face="Times New Roman">15</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个单位的物体．</span></span><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">用质量为</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">10</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的两个砝码可以称出质量为</span><span lang="EN-US"><font face="Times New Roman">11</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的牛．这</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个砝码所能组成的其他的质量不是</span></span><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-family: 'Times New Roman'">比</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">11</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-family: 'Times New Roman'">小就是会压坏天平</span></span></p></p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1673" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1673" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

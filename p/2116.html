@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2116：[Wc2011]Joy</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wc2011]Joy</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Wc2011]Joy</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Wc2011]Joy                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><img border="0" alt="" src="../file/2116_0.jpg" /></p></p><hr/><h3>输入格式</h3><p><p>第一行包含一个正整数 T，表示测试数据的组数。接下来为 T组数据。 每一组数据的第一行包含两个整数 n 和 q， 分别表示 U中的元素个数和事件个数。 接下来的一行，包含n 个用一个空格隔开的正整数，第 i 个整数为初始的序列中第 i 个元素 ui。 接下来 q 行，每行代表一个事件（按事件发生顺序输入） 。每行的第一个数非 0 即 1，表示这个事件的类型。 若为 0 ：在 0 之后还有三个整数 l，r 和 c（这四个数之间均有一个空格） ，表示小 W将Ul,Ul+1,....Ur௥增加 c； 若为 1 ：表示两人进行了一次&ldquo;拼点游戏&rdquo; ，你需要输出相应的结果。 输入数据保证序列 U中的所有元素总是正整数。</p></p><hr/><h3>输出格式</h3><p><p>对于每一组测试数据，依次对每一次&ldquo;拼点游戏&rdquo;输出一行包含两个由一个空格隔开的整数 Dmax 和 X，其中 Dmax 为对于当前序列 U，小 W所能选出的最优下标序列所对应的点数； X 表示小 Y 最少需要进行几次修改操作才能获胜。如果小 Y 不论多少次操作都无法获胜，则输出-1。 数据保证最优下标序列总是唯一的。</p></p><hr/><h3>样例输入</h3><pre>2 
+5 9 
+9 10 7 6 8 
+1 
+0 4 5 2 
+0 3 5 4 
+1 
+0 2 5 -2 
+0 3 5 -3 
+0 4 5 -2 
+0 5 5 -4 
+1 
+4 3 
+2 4 3 5 
+1 
+0 3 3 3 
+1 </pre><hr/><h3>样例输出</h3><pre>3 1 
+5 -1 
+0 0 
+4 -1 
+4 -1 </pre><hr/><h3>提示</h3><p><p>输入数据包含两组测试数据。 在第一组测试数据中： 第一次&ldquo;拼点游戏&rdquo;时，最优下标序列为(1,2,4,5)，小 Y只需要进行一次修改操作：选择 k=1，以及非负整数 z1=1，z2=0。这样经过修改操作之后下标序列将变为(1,3,4,5)，小 Y获胜。 第三次&ldquo;拼点游戏&rdquo;时，序列 U为(9,8,6,5,3)，小 W所选择的最优下标序列为空序列，所产生的点数为 0。在这种情况下，小Y无法进行任何修改操作（也无需进行任何修改操作） ，此时小 Y已经直接获胜。 对于10%的数据满足 n，q &le; 13； 对于30%的数据满足 n，q &le; 1000； 对于另外20%的数据满足 T=1 且 n &le; 40000； 对于100%的数据满足 T &le; 3 且 n， q &le; 10^5 同时初始序列 U满足 0</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2116" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2116" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2276：[Poi2011]Temperature</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Temperature</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Temperature</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2011]Temperature                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：32MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">The Byteotian Institute of Meteorology (BIM) measures the air temperature daily. The measurement is done automatically, and its result immediately printed. Unfortunately, the ink in the printer has long dried out... The employees of BIM however realised the fact only recently, when the Byteotian Organisation for Meteorology (BOM) requested access to that data. <o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">An eager intern by the name of Byteasar saved the day, as he systematically noted down the temperatures reported by two domestic alcohol thermometers placed on the north and south outside wall of the BIM building. It was established decades ago by various BIM employees that the temperature reported by the thermometer on the south wall of the building is never lower than the actual temperature, while that reported by the thermometer on the north wall of the building is never higher than the actual temperature. Thus even though the exact temperatures for each day remain somewhat of a mystery, the range they were in is known at least. <o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">Fortunately for everyone involved (except Byteasar and you, perhaps), BOM does not require exact temperatures. They only want to know the longest period in which the temperature was not dropping (i.e. on each successive day it was no smaller than on the day before). In fact, the veteran head of BIM knows very well that BOM would like this period as long as possible. To whitewash the negligence he insists that Byteasar determines, based on his valuable notes, the longest period in which the temperature <b>could have been</b> not dropping. Now this is a task that Byteasar did not quite expect on his BIM internship, and he honestly has no idea how to tackle it. He asks you for help in writing a program that determines the longest such period. <o:p></o:p></span></p>
+<p>某国进行了连续n天的温度测量，测量存在误差，测量结果是第i天温度在[l_i,r_i]范围内。<br />
+求最长的连续的一段，满足该段内可能温度不降。</p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">In the first line of the standard input there is one integer n(1&lt;=N&lt;=1000000) that denotes the number of days for which Byteasar took notes on the temperature. The measurements from day <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"></v:path><o:lock v:ext="edit" aspectratio="t"></o:lock></v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" alt="" style="width: 3pt; height: 8.25pt"><v:imagedata src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image001.gif" o:href="http://main.edu.pl/images/OI18/tem-en-tex.3.png"></v:imagedata></v:shape>are given in the line no.i+1 Each of those lines holds two integers, x and y (-10^9&lt;=x&lt;=y&lt;=10^9). These denote, respectively, the minimum and maximum possible temperature on that particular day, as reported by the two thermometers. <o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">In some of the tests, worth 50 points in total, the temperatures never drop below -50 degrees (Celsius, in case you wonder!) and never exceeds 50 degrees (-50&lt;=x&lt;=y&lt;=50) <span style="mso-spacerun: yes">&nbsp;</span><o:p></o:p></span></p>
+<p><span lang="EN-US" style="font-size: 12pt; color: #444444; line-height: 140%; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体"><o:p></o:p></span>
+<p></p>
+</p>
+<p>第一行n<br />
+下面n行，每行l_i，r_i<br />
+1&lt;=n&lt;=1000000</p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 10pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">In the first and only line of the standard output your program should print a single integer, namely the maximum number of days for which the temperature in Byteotia could have been not dropping. <o:p></o:p></span></p>
+<p><span lang="EN-US" style="font-size: 12pt; color: #444444; line-height: 140%; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体"><o:p></o:p></span>
+<p></p>
+</p>
+<p>一行，表示该段的长度</p></p><hr/><h3>样例输入</h3><pre>6
+
+6 10
+
+1 5
+
+4 8
+
+2 5
+
+6 8
+
+3 5
+
+</pre><hr/><h3>样例输出</h3><pre>4
+</pre><hr/><h3>提示</h3><p><p><a href="http://main.edu.pl/images/OI18/tem.gif"><img alt="" src="http://main.edu.pl/images/OI18/tem.gif" /></a></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2276" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2276" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

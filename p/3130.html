@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3130：[Sdoi2013]费用流</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2013]费用流</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2013]费用流</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2013]费用流                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp;Alice和Bob在图论课程上学习了最大流和最小费用最大流的相关知识。<br />
+&nbsp;&nbsp;&nbsp; 最大流问题：给定一张有向图表示运输网络，一个源点S和一个汇点T，每条边都有最大流量。一个合法的网络流方案必须满足：(1)每条边的实际流量都不超过其最大流量且非负；(2)除了源点S和汇点T之外，对于其余所有点，都满足该点总流入流量等于该点总流出流量；而S点的净流出流量等于T点的净流入流量，这个值也即该网络流方案的总运输量。最大流问题就是对于给定的运输网络，求总运输量最大的网络流方案。</span></p>
+<p><span style="font-size: medium"><br />
+&nbsp; 上图表示了一个最大流问题。对于每条边，右边的数代表该边的最大流量，左边的数代表在最优解中，该边的实际流量。需要注意到，一个最大流问题的解可能不是唯一的。&nbsp;&nbsp;&nbsp; 对于一张给定的运输网络，Alice先确定一个最大流，如果有多种解，Alice可以任选一种；之后Bob在每条边上分配单位花费（单位花费必须是非负实数），要求所有边的单位花费之和等于P。总费用等于每一条边的实际流量乘以该边的单位花费。需要注意到，Bob在分配单位花费之前，已经知道Alice所给出的最大流方案。现茌Alice希望总费用尽量小，而Bob希望总费用尽量大。我们想知道，如果两个人都执行最优策略，最大流的值和总费用分别为多少。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行三个整数N，M，P。N表示给定运输网络中节点的数量，M表示有向边的数量，P的含义见问题描述部分。为了简化问题，我们假设源点S是点1，汇点T是点N。<br />
+&nbsp;&nbsp;&nbsp; 接下来M行，每行三个整数A，B，C，表示有一条从点A到点B的有向边，其最大流量是C。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">第一行一个整数，表示最大流的值。<br />
+第二行一个实数，表示总费用。建议选手输出四位以上小数。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>3 2 1
+1 2 10
+2 3 15</pre><hr/><h3>样例输出</h3><pre>10
+10.0000
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">【样例说明】<br />
+&nbsp;&nbsp;&nbsp; 对于Alice，最大流的方案是固定的。两条边的实际流量都为10。<br />
+&nbsp;&nbsp;&nbsp; 对于Bob，给第一条边分配0.5的费用，第二条边分配0.5的费用。总费用<br />
+为：10*0.5+10*0.5=10。可以证明不存在总费用更大的分配方案。<br />
+【数据规模和约定】<br />
+&nbsp;&nbsp;&nbsp; 对于20%的测试数据：所有有向边的最大流量都是1。<br />
+&nbsp;&nbsp;&nbsp; 对于100%的测试数据：N &lt; = 100，M &lt; = 1000。<br />
+&nbsp;&nbsp;&nbsp; 对于l00%的测试数据：所有点的编号在I..N范围内。1 &lt; = 每条边的最大流<br />
+量 &lt; = 50000。1 &lt; = P &lt; = 10。给定运输网络中不会有起点和终点相同的边。<br />
+&nbsp; </span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3130" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3130" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

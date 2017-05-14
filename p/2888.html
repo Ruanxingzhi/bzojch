@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2888：资源运输</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">资源运输</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">资源运输</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                资源运输                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小Y盯上了最近发行的即时战略游戏&mdash;&mdash;ResourceTransport。但在前往通关之路的道路上，一个小游戏挡住了小Y的步伐。&ldquo;国家的本质是生产与收集资源&rdquo;是整款游戏的核心理念，这个小游戏也不例外。简单的说，用户需要管理一个国家，使其繁荣富强。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个国家含有N个城市，游戏开始时城市间没有任何道路。城市可以通过高速公路连接。为了减少建设费用，每对城市间最多存在一条路径。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小Y拥有极强的游戏天赋，很快就把所有城市的生产能力提到了满级，把高速公路的建设费用修改成了0。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">悲剧的是，对于每个连通的城市群，都要把该城市群中的某个城市设立成资源集合处，小Y把这件事忘了；更悲剧的是，建造高速公路这件事，小Y也忘了。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">可小Y是个完美主义者，他请来了你帮他设立资源集合处，自己负责建造高速公路。<b>假设连通城市群中的某个城市</b><b>i</b><b>到该城市群的资源集合处最少需要经过Di</b><b>条高速公路，那么总运输费用为Sigma(Di)</b>。<b>你需要在每个连通城市群中设立一个资源集合处，使得总费用最小。小</b><b>Y</b><b>有时会向你询问此时最小的总费用</b>。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">问题很简单，麻烦的是小Y会在你好不容易算出最小总费用时建造一条新的高速公路。由于每个连通的城市群只能有一个资源集合处，所以最小总费用又得重新计算，这可真是个苦差事&hellip;&hellip;</span></div></p><hr/><h3>输入格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第一行两个整数N，M分别表示国家中的城市数与小Y的操作数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来M行，每行可能为：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.A x y：表示在城市x和城市y间建造一条高速公路，保证此操作出现N-1次；</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.Q：表示小Y询问此时的最小总费用。</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每个Q操作，单独输出一行一个整数Ans，表示所求的答案。</span></div></p><hr/><h3>样例输入</h3><pre>
+8 10
+Q
+A 1 2
+A 4 5
+A 6 7
+A 3 4
+Q
+A 2 5
+A 6 8
+A 4 6
+Q
+</pre><hr/><h3>样例输出</h3><pre>
+0
+4
+12
+【样例解释】
+       1.开始所有城市互不联通，每个城市都是资源集合处，费用为0；
+2.后来分别把城市1、城市4、城市7、城市8设立为资源集合处，费用为4；
+3.最后把城市4设立为资源集合处，费用为12。</pre><hr/><h3>提示</h3><p><p>N<span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&lt;=40000,M<span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&lt;=80000</span></span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2888" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2888" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

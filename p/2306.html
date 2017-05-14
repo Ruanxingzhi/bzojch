@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2306：[Ctsc2011]幸福路径</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2011]幸福路径</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2011]幸福路径</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ctsc2011]幸福路径                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>有向图 G有n个顶点 1,&nbsp; 2, &hellip;,&nbsp; n，点i 的权值为 w(i)。现在有一只蚂蚁，从<br />
+给定的起点 v0出发，沿着图 G 的边爬行。开始时，它的体力为 1。每爬过一条<br />
+边，它的体力都会下降为原来的 &rho; 倍，其中&rho; 是一个给定的小于1的正常数。而<br />
+蚂蚁爬到某个顶点时的幸福度，是它当时的体力与该点权值的乘积。 <br />
+我们把蚂蚁在爬行路径上幸福度的总和记为 H。很显然，对于不同的爬行路<br />
+径，H 的值也可能不同。小 Z 对 H 值的最大可能值很感兴趣，你能帮助他计算<br />
+吗？注意，蚂蚁爬行的路径长度可能是无穷的。</p></p><hr/><h3>输入格式</h3><p><p>每一行中两个数之间用一个空格隔开。 <br />
+输入文件第一行包含两个正整数 n,&nbsp; m，分别表示 G 中顶点的个数和边的条<br />
+数。 <br />
+第二行包含 n个非负实数，依次表示 n个顶点权值 w(1), w(2), &hellip;, w(n)。 <br />
+第三行包含一个正整数 v0，表示给定的起点。 <br />
+第四行包含一个实数 &rho;，表示给定的小于 1的正常数。 <br />
+接下来 m行，每行两个正整数 x, y，表示&lt;x, y&gt;是G的一条有向边。可能有<br />
+自环，但不会有重边。</p></p><hr/><h3>输出格式</h3><p><p>仅包含一个实数，即 H值的最大可能值，四舍五入到小数点后一位。</p></p><hr/><h3>样例输入</h3><pre>5 5 
+10.0 8.0 8.0 8.0 15.0 
+1 
+0.5 
+1 2 
+2 3 
+3 4 
+4 2 
+4 5 
+</pre><hr/><h3>样例输出</h3><pre>18.0 </pre><hr/><h3>提示</h3><p><p>对于 100%的数据， n &le; 100， m &le; 1000， &rho; &le; 1 &ndash; 10^-6<br />
+， w(i) &le; 100 (i = 1, 2, &hellip;, n)。</p></p><hr/><h3>题目来源</h3><p>Day1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2306" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2306" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

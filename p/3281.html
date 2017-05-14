@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3281：小P的烦恼</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小P的烦恼</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小P的烦恼</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                小P的烦恼                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">小P最近遇上了大麻烦，他的高等代数挂科了。于是他只好找高代老师求情。善良的高代老师答应不挂他，但是要求小P帮助他一起解决一个难题。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">问题是这样的，高代老师近期要组织班上同学一起去漂流，漂流可以看做是在一张n个点m条边的有向无环图上进行的，点编号从0到n-1，表示景点；边是连接各景点的一定长度的河道。同时，定义编号为s是起点而t是终点。我们不妨把从s点到t点不论走什么样的路径都需要经过的边称为桥，这些桥由于地势险要所以是危险的。现在高代老师有两条长度为l的安全绳，他希望用这两条安全绳覆盖尽可能长的桥，使得他们通过的桥的长度之和尽量短。</span></div>
+<div style="text-indent: 21pt"></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">本题包含多组数据，第一行是一个数T(T&lt;=5)表示数据组数，对于每组数据，第一行是5个数，n,m,s,t,l。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">以下m行，每行包括三个数si,ti,pi,表示从si到ti有一条长度为pi的单向边。</span></div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">对于每组数据，输出一行，包括一个整数，为最优情况下通过的桥的长度之和。如果不存在从s到t的路径，请输出-1。</span></div>
+<div></div></p><hr/><h3>样例输入</h3><pre>
+1
+
+
+8 9 0 7 7
+0 4 1
+0 1 10
+1 2 9
+4 2 2
+2 5 8
+4 3 3
+5 6 6
+5 6 7
+6 7 5
+</pre><hr/><h3>样例输出</h3><pre>1
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">对于100%的数据,n&lt;=100000,m&lt;=200000,0&lt;=s,t,si,ti&lt;n, l&lt;=10^9,pi&lt;=100<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3281" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3281" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

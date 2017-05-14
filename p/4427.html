@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4427：[Nwerc2015] Cleaning Pipes清理管道</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015] Cleaning Pipes清理管道</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015] Cleaning Pipes清理管道</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Nwerc2015] Cleaning Pipes清理管道                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1024MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Link&ouml;ping has a quite complex water transport system. Around Link&ouml;ping there are several wells from which water is drawn. The water is then transported to other locations using pipes. Each pipe is a straight canal from one of the wells to some location in the city.</div>
+<div>All the pipes are at the same depth under ground. Therefore, whenever two pipes cross, they form an intersection. Luckily the pipe system was constructed in such a way that exactly two pipes meet at each such intersection. The wells do not count as intersections. Any number of pipes (including zero or more than two) may originate at each well.</div>
+<div>The intersections pose a problem, since dirt (a mixture of lime and other &ldquo;remains&rdquo;) tends to get stuck there. This dirt causes the pipes to degrade and collapse, leading to the formation of large sink holes. Such sink holes have a mesmerising effect on the students in Link&ouml;ping, causing them to neglect their studies and remain uneducated, which in the long run will lead to a collapse of not just the pipe system but of the very fabric of society. Therefore it is imperative that the pipes are regularly cleaned. The Nordic Water Extraction and Redistribution Company (NWERC) &ndash; which is in charge of Link&ouml;ping&rsquo;s waterpipes &ndash; has an ample fleet of robots to perform this task. A robot can be inserted into a pipe at the well where the pipe begins. The robot then goes through the pipe all the way to its end and cleans all intersections along the way. After reaching the end, the robot turns around and returns back to the well where it started. In order to prevent robot collisions, government regulations stipulate that whenever two pipes intersect, at most one of them may contain a robot.</div>
+<div>Since the whole water system has to be shut down while it is being cleaned (another government regulation), the NWERC would like to do the cleaning quickly, by using a single batch of cleaning robots, all started at the same time.</div>
+<div>Your task is to verify whether this can be done &ndash; i.e., whether we can simultaneously insert robots into a subset of the pipes in such a way that the robots will clean all intersections and there will be no risk of two robots colliding.</div>
+<div></div>
+<div>Link&ouml;ping有一个相当复杂的水资源运输系统。在Link&ouml;ping周围的出水点有一些水井。这些水通过管道输送到其它地点。每条管道是从某一个水井到城市的某个位置的直线管道。</div>
+<div>所有管道在地下的深度相同。因此，无论何时，两个管道相交时，它们会形成交点。幸运的是，管道系统正好是以满足两个管道有交点的方式建造。井不计入交点。任何数量的管道（包括零个与超过两个）都可以来源于每一个水井。</div>
+<div></div>
+<div>这些交点导致了一个问题，因为污垢（石灰和其它东西的混合物）往往会卡住交点，导致管道崩溃和坍塌，导致大型水槽孔的形成。这样的水槽孔对Link&ouml;ping的学生有吸引的效果，使他们荒废学业，不受教育，这从长远来看将不只是导致管道系统的崩溃，还有社会的结构。因此，当务之急是管道定期清理。北欧提水再分配公司（NWERC） -负责Link&ouml;ping的水管的 &ndash; 拥有充足的机器人车队才可以完成此任务。一个机器人可以在一条管道的开始位置被插入。然后，机器人通过管道一直到结束，并清除沿途所有交点。到达终点后，机器人转身并返回它开始的井。为了防止机器人互相碰撞，政府法规规定每当两个管相交，它们中的至多一个可以包含一个机器人。</div>
+<div></div>
+<div>由于整个水系统在被清洁时必须关闭（另一政府法规），则NWERC想迅速完成清洗，使用一批次清洁机器人，都必须在同一时间开始。</div>
+<div></div>
+<div>你的任务是验证是否可以做到这一点 - 即，是否能够把机器人同时插入管道中的一些，在不会有两个机器人相撞的危险下清洁所有交点。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The input consists of:</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>one line with two integers ww (1&le;w&le;10001&le;w&le;1000), the number of wells, and pp (1&le;p&le;10001&le;p&le;1000), the number of pipes;</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>ww lines, the iith of which contains two integers xixi and yiyi (&minus;10000&le;x,y&le;10000&minus;10000&le;x,y&le;10000), the position of well number ii (the wells are numbered from 11 to ww);</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>pp lines each with three integers ss (1&le;s&le;w1&le;s&le;w), the well at which the pipe starts, and xx and yy (&minus;10000&le;x,y&le;10000&minus;10000&le;x,y&le;10000), the position at which the pipe ends.</div>
+<div>Each pipe will contain exactly one well, the one at which it starts. Any point shared by more than two pipes will be a well. Any two pipes share at most one common point. The common point of two pipes may be the endpoint of one or both of them. All pipes have positive length.</div>
+<div></div>
+<div>输入包括：</div>
+<div>第一行两个整数w(1&lt;=w&lt;=1000)和p(1&lt;=p&lt;=1000)，分别表示井的数量和管道的数量。</div>
+<div>接下来w行，每行两个整数xi和yi（-10000&lt;=x,y&lt;=10000），表示i号井的位置（井从1到w编号）。</div>
+<div>接下来p行，每行3个整数s（1&lt;=s&lt;=w）表示管道从s号井开始，x和y（-10000&lt;=x,y&lt;=10000）表示管道在位置为x，y的点结束。</div>
+<div>每条管道都有一个井，就是它开始的那个。被两个或多个管道共享的点是一口井。任两条管道至多会有一个交点。两条管道的公共点可以是他们其中之一或两者的端点。所有管道的长度为正数。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>If it is possible to clean all intersections as described above, output &ldquo;possible&rdquo;. Otherwise, output &ldquo;impossible&rdquo;.</div>
+<div>如果在上述情况下可以清理所有交点，输出&ldquo;possible&rdquo;，否则输出&ldquo;impossible&rdquo;。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>Sample input 1
+3 3
+0 0
+0 2
+2 0
+1 2 3
+2 2 2
+3 0 3
+Sample input 2
+2 3
+0 0
+0 10
+1 5 15
+1 2 15
+2 10 10</pre><hr/><h3>样例输出</h3><pre>Sample output 1
+impossible
+
+Sample output 2
+possible
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4427" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4427" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

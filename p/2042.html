@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2042：[2009国家集训队]Will的烦恼</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[2009国家集训队]Will的烦恼</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[2009国家集训队]Will的烦恼</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [2009国家集训队]Will的烦恼                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>大家小时候应该都喜欢自己动手做一些小制作，Will也是这样的。Will还记得他小时候喜欢用色卡纸剪剪贴贴弄出一些看起来很奇怪的东西，而自己却好像做出了件艺术品似的满心的欢喜。说真的，偶尔翻翻自己小时候的东西，想想小时候的事，真是一件非常温馨的事。 这几天，Will决定重温一下小时候的记忆。色卡纸显然缺乏立体感，于是Will找来了一大摞的彩绳和一些绳环（用来系绳子），准备用这些彩绳和绳环做一个大大的艺术品。 一共有N个绳环和M根彩绳，方便起见，绳环从1到N分别编号，彩绳则从1到M分别编号。编号为i的彩绳有一个长度Ci和一个美丽程度Di，并且只能连接两个特定的绳环：绳环Xi和绳环Yi。 Will会按照一定的次序将彩绳依次系到绳环上。由于Will希望制作一个大大的艺术品，所以当一条彩绳连接特定的绳环之后，Will会找出所有包含这条彩绳的彩绳圈，然后将每个彩绳圈中长度最短的那条彩绳，从绳环上取下来放到一边。如果有多条最短的彩绳，喜欢新事物的Will会将其中（指那些长度最短的彩绳）最早系到绳环上的那条彩绳取下来。 最后，连在绳环上的彩绳就与绳环一起，组成了一个大大的艺术品咯！ Will保证，所有绳环最后都会连在一起。 艺术品上所有绳子美丽程度的和，就是这件大大的艺术品的美丽程度。 Will当然希望他的艺术品显得更漂亮些了，所以他希望艺术品的美丽程度能够最大化。 显然，按不同的顺序系彩绳，会制作出不同的艺术品。这里不妨把系彩绳的顺序称为一个制作艺术品的方案，不难发现，一个方案可以简单的用一个1到M的排列来表示。 Will记得，他小时候总是会按照方案的字典序，从字典序最小的方案开始，一个方案接着一个方案的尝试，最后找出能做出最美丽艺术品的方案。不过，现在Will长大了，他望着面前一大摞的彩绳，猛然意识到，这回他似乎需要尝试很久很久&hellip;&hellip; Will需要你的帮助。请你帮Will找出，他将最早尝试的，并且能够做出最美丽艺术品的方案。【说明】一个绳环可以系上任意数量的彩绳。 所谓彩绳圈，指的是一个长度不小于2的彩绳编号的序列(A1,A2,&hellip;,An)，满足任意元素均不相同，且对应存在一个同样长度为n，元素互不相同的绳环编号的序列(B1,B2,&hellip;,Bn)，满足对于任意整数i&isin;[1,n)，彩绳Ai连接绳环Bi和Bi+1，特别的，彩绳An连接绳环Bn和B1。 对于一个方案P，即一个1到M的排列(P1,P2,&hellip;,PM)，表示第i个系到绳环上的彩绳，就是编号为Pi的彩绳。 对于两个方案P和Q，如果P的字典序小于Q，则一定存在一个i，使得Pi</p></p><hr/><h3>输入格式</h3><p><p>共有M+1行。第1行两个正整数N和M，分别表示绳环和彩绳的数量。第2到M+1行，每行四个正整数。第i+1行描述编号为i的彩绳的信息，四个整数依次为Xi，Yi，Ci，Di。保证Xi和Yi不会相同。</p></p><hr/><h3>输出格式</h3><p><p>共一行M个整数。 M个整数用M-1个空格隔开，表示一个方案。输出信息应该是一个1到M的排列。</p></p><hr/><h3>样例输入</h3><pre>3 4
+3 1 2 2
+2 3 2 2
+1 2 3 3
+1 2 3 1
+</pre><hr/><h3>样例输出</h3><pre>1 2 4 3
+【样例解释】
+Will首先会尝试方案(1,2,3,4)，但是这个方案制作出的艺术品的美丽程度是3，并不是最优的。
+在样例给出的方案中，最后留下的彩绳是2号彩绳和3号彩绳，美丽程度是2+3=5。
+样例给出的答案经过评分能够得到10分。
+【数据规模和约定】
+对于10%的数据满足 N = 5，M = 8；
+	对于30%的数据满足N ≤ 30，M ≤ 60；
+	对于60%的数据满足N ≤ 200，M ≤ 300；
+	对于70%的数据满足N ≤ 1500，M ≤ 3000；
+	对于100%的数据满足 N ≤ 50000，M ≤ 100000；
+	对于100%的数据满足1 ≤ Xi, Yi ≤ N，1 ≤ Ci ≤ 10^9，1 ≤ Di ≤ 10^5。
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>版权所有者：吴翼</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2042" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2042" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

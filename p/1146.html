@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1146：[CTSC2008]网络管理Network</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]网络管理Network</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]网络管理Network</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CTSC2008]网络管理Network                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>　　M公司是一个非常庞大的跨国公司，在许多国家都设有它的下属分支机构或部门。为了让分布在世界各地的N个</div>
+<div>部门之间协同工作，公司搭建了一个连接整个公司的通信网络。该网络的结构由N个路由器和N-1条高速光缆组成。</div>
+<div>每个部门都有一个专属的路由器，部门局域网内的所有机器都联向这个路由器，然后再通过这个通信子网与其他部</div>
+<div>门进行通信联络。该网络结构保证网络中的任意两个路由器之间都存在一条直接或间接路径以进行通信。 高速光</div>
+<div>缆的数据传输速度非常快，以至于利用光缆传输的延迟时间可以忽略。但是由于路由器老化，在这些路由器上进行</div>
+<div>数据交换会带来很大的延迟。而两个路由器之间的通信延迟时间则与这两个路由器通信路径上所有路由器中最大的</div>
+<div>交换延迟时间有关。作为M公司网络部门的一名实习员工，现在要求你编写一个简单的程序来监视公司的网络状况</div>
+<div>。该程序能够随时更新网络状况的变化信息（路由器数据交换延迟时间的变化），并且根据询问给出两个路由器通</div>
+<div>信路径上延迟第k大的路由器的延迟时间。【任务】 你的程序从输入文件中读入N个路由器和N-1条光缆的连接信息</div>
+<div>，每个路由器初始的数据交换延迟时间Ti，以及Q条询问（或状态改变）的信息。并依次处理这Q条询问信息，它们</div>
+<div>可能是： 1. 由于更新了设备，或者设备出现新的故障，使得某个路由器的数据交换延迟时间发生了变化。 2. 查</div>
+<div>询某两个路由器a和b之间的路径上延迟第k大的路由器的延迟时间。</div></p><hr/><h3>输入格式</h3><p><div>
+<div>　　第一行为两个整数N和Q，分别表示路由器总数和询问的总数。第二行有N个整数，第i个数表示编号为i的路由</div>
+<div>器初始的数据延迟时间Ti。紧接着N-1行，每行包含两个整数x和y。表示有一条光缆连接路由器x和路由器y。紧接</div>
+<div>着是Q行，每行三个整数k、a、b。如果k=0，则表示路由器a的状态发生了变化，它的数据交换延迟时间由Ta变为b</div>
+<div>。如果k&gt;0，则表示询问a到b的路径上所经过的所有路由器（包括a和b）中延迟第k大的路由器的延迟时间。注意N</div>
+<div>,Q&lt;=80000,任意一个路由器在任何时刻都满足延迟时间小于10^8。对于所有询问满足0&lt;=K&lt;=N</div>
+</div></p><hr/><h3>输出格式</h3><p><div>　　对于每一个第二种询问（k&gt;0），输出一行。包含一个整数为相应的延迟时间。如果路径上的路由器不足k个，</div>
+<div>则输出信息&ldquo;invalid request!&rdquo;（全部小写不包含引号，两个单词之间有一个空格）。</div></p><hr/><h3>样例输入</h3><pre>5 5
+5 1 2 3 4
+3 1
+2 1
+4 3
+5 3
+2 4 5
+0 1 2
+2 2 3
+2 1 4
+3 3 5
+</pre><hr/><h3>样例输出</h3><pre>3
+2
+2
+invalid request!</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1146" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1146" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

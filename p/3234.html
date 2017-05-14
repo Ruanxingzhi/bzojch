@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3234：[Ahoi2013]立方体</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2013]立方体</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2013]立方体</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ahoi2013]立方体                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 6pt 44.9pt 0pt 18pt; line-height: 19.5pt" align="left"><span style="font-size: medium"><span style="color: black">在一个三维空间中有</span><span style="color: black">N</span><span style="color: black">个立方体，第</span><span style="color: black">i</span><span style="color: black">个立方体占据</span><span style="color: black">x_i1</span><span style="color: black">，</span><span style="color: black">y_i1, z_i1 --- x_i2, y_i2, z_i2</span><span style="color: black">的位置。这</span><span style="color: black">N</span><span style="color: black">个立方体可能有相交，也可能重叠。这</span><span style="color: black">N</span><span style="color: black">个立方体构</span><span style="color: black">成一个大的几何图形。现在求这个几何图形的外表面积</span></span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt" align="left"><span style="font-size: medium"><span style="color: black">&nbsp;</span></span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt" align="left"><span style="font-size: medium"><span style="color: black">&nbsp;</span></span></div></p><hr/><h3>输入格式</h3><p><div style="margin: 5pt -3pt 0pt 18pt; line-height: 12pt" align="left"><span style="font-size: medium"><span style="color: black">第一行，一个整数</span><span style="color: black">N</span><span style="color: black">，表示立方体的个数。</span></span></div>
+<div style="margin: 6pt 44.9pt 0pt 18pt; line-height: 39pt"><span style="font-size: medium"><span style="color: black">第二行至第</span><span style="color: black">N+1</span><span style="color: black">行，每行</span><span style="color: black">6</span><span style="color: black">个用空格隔开的整数，分别表示</span><span style="color: black">x1,y1,z1,x2,y2,z2. </span></span></div></p><hr/><h3>输出格式</h3><p><p>&nbsp;</p>
+<div style="margin: 5pt -3pt 0pt 18pt; line-height: 12pt" align="left"><span style="font-size: medium"><span style="color: black">一行，一个整数，表示外表面积的大小。</span></span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt" align="left"><span style="font-size: medium"><span style="color: black">&nbsp;</span></span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt" align="left"><span style="font-size: medium"><span style="color: black">&nbsp;</span></span></div>
+<div style="margin: 0cm -1.1pt 0pt 0cm; line-height: 6pt" align="left"><span style="font-size: medium"><span style="color: black">&nbsp;</span></span></div></p><hr/><h3>样例输入</h3><pre>input 1
+1 
+0  0 0 1 1 1
+ 
+ 
+
+input 2
+2 
+0  1 0 3 2 1
+1  0 0 2 3 1
+
+ 
+ </pre><hr/><h3>样例输出</h3><pre>output 1
+6 
+
+
+output 2
+22</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: &quot;Arial Unicode MS&quot;; mso-font-kerning: 0pt"><font face="Times New Roman">对于第一个样例</font></span></p>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: &quot;Arial Unicode MS&quot;; mso-font-kerning: 0pt"><font face="Times New Roman"><img height="156" alt="" width="134" src="../file/3234_0.jpg" /></font></span></p>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: &quot;Arial Unicode MS&quot;; mso-font-kerning: 0pt"><font face="Times New Roman">对于第二个样例</font></span></p>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: &quot;Arial Unicode MS&quot;; mso-font-kerning: 0pt"><font face="Times New Roman"><img height="207" alt="" width="193" src="../file/3234_1.jpg" /></font></span></p>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: &quot;Arial Unicode MS&quot;; mso-font-kerning: 0pt"><font face="Times New Roman">1&lt;=N&lt;=200,0&lt;=x_i1,y_i1,z_i1,x_i2,y_i2,z_i2&lt;=200,x_i1&lt;x_i2,y_i1&lt;y_i2,z _i1&lt;z_i2 <o:p></o:p></font></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 10pt; color: black; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;</font></span><o:p></o:p></span></p>
+<p></p></p><hr/><h3>题目来源</h3><p>鸣谢zhonghaoxi提供数据，原数据似有误</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3234" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3234" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

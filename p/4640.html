@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4640：决斗</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">决斗</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">决斗</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                决斗                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&quot;现在的我虽然很强了，但是还不够，距离那高高在上的人类智慧巅峰还有很远很远。&quot;&nbsp;</div>
+<div>--TB</div>
+<div></div>
+<div>TB正走在通向人类智慧巅峰的路上。</div>
+<div></div>
+<div>可是她发现自己居然不会玩C国杀...虽说是颓物，但是毕竟也是人类智慧的结晶啊...</div>
+<div>于是她找来了机房一只颓狗，开始学习C国杀。</div>
+<div>颓狗说：&quot;C国杀里面只有一种牌【杀】，但是每个人有n副牌堆。&quot;</div>
+<div>TB：&quot;这么无聊的游戏你都玩？&quot;</div>
+<div>颓狗被怒D...无语三秒。</div>
+<div>颓狗说：&quot;但是你可以选择一个牌堆，对别人打出决斗，然后对方也选择一个牌堆，并和你依次打出【杀】（对方</div>
+<div>先出），先不能出者输。不过决斗完大家都要把刚才选择的牌堆扔掉，所以总共可以进行n次决斗。&quot;</div>
+<div>TB：&quot;还是无聊啊...每次不就是比谁的牌堆大么...不过一张一张的打好像可以打一天啊...&quot;</div>
+<div>颓狗再次被怒D...无语五秒。</div>
+<div>颓狗说：&quot;其实真正刺激的是，你们俩都是随机选择牌堆的。&quot;</div>
+<div>TB很惊讶，没想到人类智慧结晶中也有随机这个东西，她开始感觉到C国杀的乐趣。</div>
+<div>现在她知道了她和对手的每副牌堆的【杀】的数量，想知道她期望赢的场数。</div>
+<div>不过这个貌似太简单了。经过各种一番决斗，TB发现她赢x场可以增加x^k点智商，所以她想知道她增加智商的期望。</div>
+<div></div>
+<div>C国杀一番，她又感觉自己的智慧得到了升华。</div>
+<div></div>
+<div>&quot;或许永远都到不了，或许明天就到了。&quot;</div>
+<div>TB看着远方渐渐扬起的红霞，喃喃道。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>
+<div>输入文件的第一行包含两个正整数n，k，分别表示牌堆个数和赢x盘增加智商的指数。</div>
+<div>接下来两行：第一行n个非负整数，表示TB的每副牌堆中【杀】的个数；</div>
+<div>第二行n个非负整数，表示颓狗的每副牌堆中【杀】的个数。</div>
+<div>数据保证除第二行和第三行的n个非负整数按照对于所有数据数据，所有牌堆的【杀】的数量不会超过10^9。</div>
+<div>N&lt;=2000,K&lt;=10^9从小到大的顺序给出。</div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>一行，表示TB期望增加的智商点数。</div>
+<div>要求输出期望在对10^9+7取模意义下的值。</div></p><hr/><h3>样例输入</h3><pre>3 1
+2 3 4
+1 3 5</pre><hr/><h3>样例输出</h3><pre>666666673</pre><hr/><h3>提示</h3><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">k=1或者2，n的范围是1000000</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">k=10^9，n的范围是2000</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4640" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4640" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

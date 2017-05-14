@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3132：上帝造题的七分钟</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">上帝造题的七分钟</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">上帝造题的七分钟</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                上帝造题的七分钟                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&ldquo;第一分钟，X说，要有矩阵，于是便有了一个里面写满了0的n&times;m矩阵。</span></p>
+<p><span style="font-size: medium">第二分钟，L说，要能修改，于是便有了将左上角为(a,b)，右下角为(c,d)的一个矩形区域内的全部数字加上一个值的操作。</span></p>
+<p><span style="font-size: medium">第三分钟，k说，要能查询，于是便有了求给定矩形区域内的全部数字和的操作。</span></p>
+<p><span style="font-size: medium">第四分钟，彩虹喵说，要基于二叉树的数据结构，于是便有了数据范围。</span></p>
+<p><span style="font-size: medium">第五分钟，和雪说，要有耐心，于是便有了时间限制。</span></p>
+<p><span style="font-size: medium">第六分钟，吃钢琴男说，要省点事，于是便有了保证运算过程中及最终结果均不超过32位有符号整数类型的表示范围的限制。</span></p>
+<p><span style="font-size: medium">第七分钟，这道题终于造完了，然而，造题的神牛们再也不想写这道题的程序了。&rdquo;</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&mdash;《上帝造裸题的七分钟》</span></p>
+<p><span style="font-size: medium">所以这个神圣的任务就交给你了。</span></p>
+<p></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">&nbsp;输入数据的第一行为X n m，代表矩阵大小为n&times;m。</span></p>
+<p><span style="font-size: medium">从输入数据的第二行开始到文件尾的每一行会出现以下两种操作：</span></p>
+<p><span style="font-size: medium">　　L a b c d delta&nbsp;&mdash;&mdash; 代表将(a,b),(c,d)为顶点的矩形区域内的所有数字加上delta。</span></p>
+<p><span style="font-size: medium">　　k a b c d　　&nbsp;&mdash;&mdash; 代表求(a,b),(c,d)为顶点的矩形区域内所有数字的和。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: medium">请注意，k为小写。</span></p>
+<p><span style="font-size: medium"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">针对每个k操作，在单独的一行输出答案。</span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>X 4 4
+L 1 1 3 3 2
+L 2 2 4 4 1
+k 2 2 3 3
+
+</pre><hr/><h3>样例输出</h3><pre>12
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">对于100%的数据，1 &le; n &le; 2048, 1 &le; m &le; 2048, 1 &le; abs(delta) &le; 500,操作不超过200000个,保证运算过程中及最终结果均不超过32位带符号整数类型的表示范围。</span></p></p><hr/><h3>题目来源</h3><p>tyvj</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3132" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3132" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

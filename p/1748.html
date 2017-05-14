@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1748：[Usaco2005 open]Around the world 环球飞行 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 open]Around the world 环球飞行 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 open]Around the world 环球飞行 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 open]Around the world 环球飞行                 </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Over the years, FJ has made a huge number of farmer friends all around the world. Since he hasn't visited 'Farmer Ted' from England and 'Boer Harms' from Holland for a while, he'd like to visit them. He knows the longitude of the farm where each of his worldwide friends resides. This longitude is an angle (an integer in the range 0..359) describing the farm's location on the Earth, which we will consider to be a circle instead of the more complex and traditional spherical representation. Except for the obvious discontinuity, longitudes increase when traveling clockwise on this circle. FJ plans to travel by airplane to visit his N (1 &lt;= N &lt;= 5,000) friends (whose farms are uniquely numbered 1..N). He knows the schedules for M (1 &lt;= M &lt;= 25,000) bidirectional flights connecting the different farms. Airplanes always travel shortest paths on the Earth's surface (i.e., on the shortest arc of a circle). There will always be a unique shortest path between two farms that are directly connected. No pair of antipodal farms (exactly opposite each other on the circle) is ever directly connected. Each airplane flight can be described as traveling in clockwise or counterclockwise direction around the Earth's surface. For example, a flight from longitude 30 to longitude 35 would be clockwise, as would be a flight from longitude 350 to longitude 10. However, a flight from longitude 350 to longitude 200 follows a shortest path counterclockwise around the circle. FJ would find it very cool if he could make a trip around the world, visiting some of his friends along the way. He'd like to know if this is possible and if so, what is the minimum number of flights he can take to do so. He wants to start and finish his journey at the location of his best friend (the one listed first in the input below). In order to make sure he actually circles the Earth, he wants to ensure that the clockwise distance he travels is different from the counterclockwise distance he travels. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;这些年，农夫约翰在国际上交了一大批开农场的朋友．由于他有一段时间没有去见过英国的农夫泰德和荷兰的农夫波尔，所以他想去访问他们,&nbsp;他知道每个朋友的农场的经度．经度（从0到359）是一种角度描述农场在地球上位置的方法，我们把地球看成一个圆，正如我们所熟知的，经度在地球上沿着顺时针方向增长,&nbsp;农夫约翰打算乘飞机去访问他的N(1&le;N&le;5000)个朋友（用1到N来表示）．他知道在这些农场之间有M(1&le;M&le;25000)条双向的航线，当然飞机总是沿着地面上最短的路径飞行的（就是圆上的最短弧长）．两个农场之间的航线一定是最短的，也就是说如果育两个农场在直径两端，那么他们之间一定不存在航线．所以任何一次航行都可以被描述成顺时针或是逆时针的．比如说，经度30到经度35是顺时针的，经度350到经度10也是顺时针的，而经度350到经度200是逆时针的．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;农夫约翰为了耍酷，决定要经过几个朋友的农场做到环球旅行，他想知道这是否可能，如果可能最少要乘几次飞机．&nbsp;&nbsp;&nbsp;&nbsp;他想在他最好的朋友（也就是列表中的第一个）的农场上开始和完成这次旅行．为了保证这是一次环球航行，回到终点时，顺时针经过的路程不能等于逆时针经过的路程．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Two space-separated integers: N and M * Lines 2..N+1: Line i+1 contains one integer: the longitude of the i-th farm. Line 2 contains the location of the farm of his best friend. * Lines N+2..N+M+1: Line i+N+1 contains two integers giving the indices of two farms that are connected by a flight.</span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：两个用空格隔开的整数N和M.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到N+1行：第i+l行有一个整数，表示第i个农场的经度．第2行是他的最好的朋友的地址．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第N+2过程N+M+I行：第i+N+1行有两个整数，表示这两个农场之间有航线．</span></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: A single integer specifying the minimum number of flights FJ needs to visit to make a trip around the world. Every time FJ moves from one farm to another counts as one flight. If it is impossible to make such a trip, output the integer -1.</span></p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个整数即农夫约翰至少要乘几次飞机才能完成环球旅行．每次农夫约翰从一个农场前往另一个农场算作乘一次飞机．如果不可能做到环球旅行则输出-1.</span></div></p><hr/><h3>样例输入</h3><pre>3 3
+0
+120
+240
+1 2
+2 3
+1 3
+
+INPUT DETAILS:
+
+Farmer John has three friends at longitudes 0, 120, and 240.  There are
+three flights: 0<->120, 120<->240, and 0<->240.  The journey must start and
+finish at longitude 0.
+
+</pre><hr/><h3>样例输出</h3><pre>3
+
+OUTPUT DETAILS:
+
+FJ must visit all 3 friends to make a full trip around the world.
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1748" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1748" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

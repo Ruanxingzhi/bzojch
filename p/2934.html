@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2934：[Poi1999]祭坛问题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1999]祭坛问题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1999]祭坛问题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi1999]祭坛问题                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">在中国民间，人们相信鬼只能沿直线移动。在修建寺庙时，那是非常重要的。寺庙要修建在四边分别平行于南北西东的矩形位置之上。两个矩形不能有公共交点。入口位于四堵墙中一堵的中间，门的宽度等于墙长度的一半。祭坛出现在寺庙的中间，矩形的对角线在那里相交。如果鬼魂在这个点出现，那么寺庙将被亵渎。仅当存在从祭坛射出的一束光线，通过入口到外面而且不与其他寺庙（位于建筑区域平行的地带）的墙壁相交或接触，这种情形才可能发生，也就是能在建筑区域从祭坛到无穷远处画一条直线而不碰到任何墙。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">写一个程序:&nbsp; </span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">读取寺庙的描述， </span></li>
+    <li><span style="font-size: medium">检验哪个寺庙可能被亵渎， </span></li>
+    <li><span style="font-size: medium">输出结果&nbsp;</span></li>
+</ul></p><hr/><h3>输入格式</h3><p><div style="margin: auto 0cm">&nbsp;<span style="font-size: medium">首行有一个整数n被列出（<i>1 &lt;= n &lt;= 1000</i>）。</span></div>
+<div><span style="font-size: medium">在接下来的n行的每一行有一个寺庙的描述（在第I行有第I个寺庙的描述）。寺庙的描述由四个非负的不大于8000的整数和字母E,W,S和N组成。头两个数字是寺庙的西北角的坐标，接下来的两个是相对的东南角的坐标。为了指定一个点的坐标，我们给出了它的地理精度，从西往东增加，纬度从南往北增加。描述的第五个元素代表入口的墙（E-东，W-西，S-南，N-北）。寺庙的描述元素由单空格隔开。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">接下来的几行，你的程序应该按升序写下可能被鬼魂亵渎的寺庙编号。每一个编号占一行。如果没有编号，在文件OLT.OUT中，你应该写一个字符串：BRAK(波兰语中意思为&ldquo;没有&rdquo;)。</span></div></p><hr/><h3>样例输入</h3><pre>6
+1 7 4 1 E
+3 9 11 8 S
+6 7 10 4 N
+8 3 10 1 N
+11 4 13 1 E
+14 8 20 7 W
+</pre><hr/><h3>样例输出</h3><pre> 
+1
+2
+5
+6
+</pre><hr/><h3>提示</h3><p><p><img height="292" width="606" alt="" src="../file/2934_0.jpg" /></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2934" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2934" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

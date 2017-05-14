@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4301：HDU 5300 Angry Trees</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">HDU 5300 Angry Trees</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">HDU 5300 Angry Trees</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                HDU 5300 Angry Trees                </h1>
+                <p>时间限制：12s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>JRY is so rich that he bought too many trees and planted them in his yard. Because of his personal preference, all these trees have the same shape. At first, these trees were small and peaceful, but after growing for several years, they become huge and compete for the limited water and nutrition. Therefore, they become angry, and their common enemy is JRY, because it is JRY who planted them in such a &quot;small&quot; place (although his yard is the biggest in the world).&nbsp;</div>
+<div></div>
+<div>There are m angry trees, and each angry tree has n nodes and n&minus;1 branches. All the angry trees decide to combine together, and they made extra m&minus;1 branches so that they can be one. Moreover, they select the first node of the first tree to be the root of the whole huge tree. Now, there is a terribly enormous tree with nm nodes and nm&minus;1 branches.&nbsp;</div>
+<div></div>
+<div>The trees come up with an idea to revenge. When JRY is sleeping, they drag JRY onto one of the nodes, and steal all JRY's money and put it onto one node too (the two nodes can be either same or different). When JRY wakes up, he definitely will go for these money. Every time JRY moves down along a branch (moving towards the root), he will spend 1 unit time, and when he moves up along a branch (moving away from the root), he will spend 2 unit time. Additionally, smart JRY will always move along the shortest path on the tree between him and his money.&nbsp;</div>
+<div></div>
+<div>One nightmare of the trees is to find the longest time that JRY need to find his money, and they also need to know how many different ways there are to get this longest time (two ways are considered different if and only if JRY's initial position is different or the money's position is different). Can you help them?</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The first line of the input is a single integer T, indicating the number of testcases.&nbsp;</div>
+<div>For each testcase, the first line is two integers n and m (1n,m50000). Each of the next n&minus;1 lines contains two integers x and y, which represent one branch (x,y) in every tree. Each of the following m&minus;1 lines contains four integers x,a,y,b, which means there is an additional branch connecting the a-th node of the x-th tree and the b-th node of the y-th tree. It is guaranteed that either every small tree or the whole tree is an acyclic connected undirected graph. Please be aware that the first node (the node numbered 1) of the first tree (the tree numbered 1) is the root of the whole tree.&nbsp;</div>
+<div>It is guaranteed that for all the testcases, Siga(n)+Sigma(m)&lt;=1000000.</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>For each testcase, print two space-separated integers indicating the longest time JRY need to find his money and the ways of position to reach this upper bound.</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+3 3
+3 1
+2 1
+3 1 2 2
+1 3 2 1
+3 8
+3 1
+2 3
+4 3 3 1
+3 1 2 3
+6 2 1 3
+8 3 7 3
+5 3 7 3
+6 3 7 2
+8 3 2 2</pre><hr/><h3>样例输出</h3><pre>11 2
+22 3
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4301" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4301" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

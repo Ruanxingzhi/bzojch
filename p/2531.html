@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2531：Vijos 1478 囧囧的作业</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Vijos 1478 囧囧的作业</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Vijos 1478 囧囧的作业</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Vijos 1478 囧囧的作业                </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><font face="Times New Roman" size="3">窘窘因为玩电脑，所以没有做作业。老师很生气，后果很严重。 <br />
+作为惩罚，窘窘收到k1本完全相同的语文作业；k2本完全相同的数学作业；k3本完全相同的英语作业。 <br />
+窘窘认为作业肯定做不完，于是，他就准备将作业分给他的小弟们去做。 <br />
+现在假设窘窘（或他的小弟），总之就是某一个人，收到了a1本完全相同的语文作业；a2本完全相同的数学作业；a3本完全相同的英语作业，他会用如下方法处理： <br />
+当没有语文作业：a1=0时: <br />
+如果只有数学作业a2本，即a3=0，将有f(a2)种方法将作业做完。 <br />
+其中f(0)=1;f(1)=1;其他情况，f(i)=f(i-1)+f(i-1) <br />
+如果只有英语作业a3本，即a2=0，将有g(a3)种方法将作业做完。 <br />
+其中g(0)=1;g(1)=1;其他情况，g(i)=g(i-1)+g(i-2) <br />
+如果同时有数学作业和英语作业，即a2&gt;0,a3&gt;0，则认为这种作业分配方式非法，有0种方法将作业做完。 <br />
+如果没有数学作业或英语作业，即a2=0,a3=0，有1种方法将作业做完。（就是不做啦！） <br />
+当有语文作业：a1&gt;0时： <br />
+只做一本语文作业，将剩下的作业任意分配给他的两个小弟（允许某个小弟一本作业都没有）。注意：这里面，两个小弟是不同的，但任意一门学科的所有作业是相同的。 <br />
+现在假设窘窘收到了k1本完全相同的语文作业；k2本完全相同的数学作业；k3本完全相同的英语作业。他会用如上的方法分配作业。而且保证每个收到作业的人，都有两个小弟（作业一定可以分下去）。对于任意一个小弟，有且仅有一个老大（每个人最多收到作业一次）。现在问：有多少种本质不同的作业划分方案？ <br />
+</font></p></p><hr/><h3>输入格式</h3><p><p align="left"><font face="Times New Roman" size="3"><br />
+第一行3个正整数分别为k1,k2,k3。 <br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font face="Times New Roman" size="3">一个数，即本质不同的作业划分方案数。 <br />
+考虑到大家（还有我自己）不喜欢写高精度，将答案mod 23137 后输出。 <br />
+</font></p></p><hr/><h3>样例输入</h3><pre>10 9 8
+
+
+</pre><hr/><h3>样例输出</h3><pre>
+13974
+100%的数据中，k1，k2，k3≤2000。
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2531" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2531" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

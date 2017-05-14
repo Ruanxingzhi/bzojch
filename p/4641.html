@@ -1,0 +1,134 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4641：基因改造</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">基因改造</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">基因改造</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                基因改造                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>&quot;人类智慧的冰峰，只有萌萌哒的我寂寞地守望。&quot;</div>
+<div>--TB</div>
+<div></div>
+<div>TB正走在改造人类智慧基因的路上。TB发现人类智慧基因一点也不萌萌哒，导致人类普遍智商过低，为了拯救低智</div>
+<div>商人群，博爱的TB开始改造人类智慧基因。人类智慧DNA由C种人类智慧脱氧核苷酸构成（这是一种十分特殊的DNA</div>
+<div>）。TB智慧DNA片段T长度为M，她可以把另一段长度为M的人类智慧DNA片段S改造成T。改造过程中，TB可以充分发</div>
+<div>挥智慧，将任意两种人类智慧脱氧核苷酸交换（比如对于片段S=12321，交换1和2变成S=21312，交换1和4变成4232</div>
+<div>4），可以无限次交换。如果S可以通过若干次交换变成T，那么就称S为&quot;萌萌哒人类基因片段&quot;。TB想知道对于一个</div>
+<div>长度为N的人类智慧DNA片段S[1~N]，有多少个长度为M的连续子片段S[i~i+M-1]，是&quot;萌萌哒人类基因片段&quot;，并且</div>
+<div>这些&quot;萌萌哒人类基因片段&quot;在哪里。</div></p><hr/><h3>输入格式</h3><p><div>输入文件的第一行包含两个正整数case和C，分别表示数据组数和人类智慧脱氧核苷酸的种数。</div>
+<div>接下来3*case行，每三行表示一组数据：</div>
+<div>第一行一个正整数N和M，表示人类智慧DNA片段S和TB智慧DNA片段T的长度。</div>
+<div>第二行N个正整数，表示人类智慧DNA片段S。</div>
+<div>第三行M个正整数，表示TB智慧DNA片段T。</div>
+<div>对于所有数据数据，case=3, n,m,C&lt;=1000000</div></p><hr/><h3>输出格式</h3><p><div>对于每组数据：</div>
+<div>第一行一个正整数tot，表示&quot;萌萌哒人类基因片段&quot;的个数。</div>
+<div>接下来一行tot个用空格隔开的正整数pos，表示&quot;萌萌哒人类基因片段&quot;开头所在的位置。要求从小到大输出每个pos。</div></p><hr/><h3>样例输入</h3><pre>3 3
+6 3
+1 2 1 2 3 2
+3 1 3
+6 3
+1 2 1 2 1 2
+3 1 3
+6 3
+1 1 2 1 2 1
+3 1 3</pre><hr/><h3>样例输出</h3><pre>3
+1 2 4
+4
+1 2 3 4
+3
+2 3 4
+对于第一组数据：
+S[1~3]=121，可以先将1和2交换变成212，再将2和3交换变成313。
+S[2~4]=212，可以将2和3交换变成313。
+S[4~6]=232，可以先将2和3交换变成323，再将1和2交换变成313。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4641" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4641" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

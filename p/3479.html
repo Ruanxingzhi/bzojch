@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3479：[Usaco2014 Mar]Watering the Fields</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2014 Mar]Watering the Fields</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2014 Mar]Watering the Fields</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2014 Mar]Watering the Fields                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp;Due to a lack of rain, Farmer John wants to build an irrigation system to send water between his N fields (1 &lt;= N &lt;= 2000). Each field i is described by a distinct point (xi, yi) in the 2D plane, with 0 &lt;= xi, yi &lt;= 1000. The cost of building a water pipe between two fields i and j is equal to the squared Euclidean distance between them: (xi - xj)^2 + (yi - yj)^2 FJ would like to build a minimum-cost system of pipes so that all of his fields are linked together -- so that water in any field can follow a sequence of pipes to reach any other field. Unfortunately, the contractor who is helping FJ install his irrigation system refuses to install any pipe unless its cost (squared Euclidean length) is at least C (1 &lt;= C &lt;= 1,000,000). Please help FJ compute the minimum amount he will need pay to connect all his fields with a network of pipes.</span></p>
+<p><span style="font-family: arial, verdana, helvetica, sans-serif; font-size: medium; ">草坪上有N个水龙头，位于（xi,yi）</span></p>
+<pre style="font-family: arial, verdana, helvetica, sans-serif; font-size: medium; ">
+求将n个水龙头连通的最小费用。<br />任意两个水龙头可以修剪水管，费用为欧几里得距离的平方。
+修水管的人只愿意修费用大于等于c的水管。
+</pre>
+<p></p></p><hr/><h3>输入格式</h3><p><p><font size="4">* Line 1: The integers N and C. </font></p>
+<p><font size="4">* Lines 2..1+N: Line i+1 contains the integers xi and yi. </font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">* Line 1: The minimum cost of a network of pipes connecting the fields, or -1 if no such network can be built.&nbsp;</font></p></p><hr/><h3>样例输入</h3><pre>3 11
+0 2
+5 0
+4 3
+
+ INPUT DETAILS: There are 3 fields, at locations (0,2), (5,0), and (4,3). The contractor will only install pipes of cost at least 11. 
+</pre><hr/><h3>样例输出</h3><pre> 46 
+OUTPUT DETAILS: FJ cannot build a pipe between the fields at (4,3) and (5,0), since its cost would be only 10. He therefore builds a pipe between (0,2) and (5,0) at cost 29, and a pipe between (0,2) and (4,3) at cost 17. </pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver 译文By Hta</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3479" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3479" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

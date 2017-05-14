@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2341：山中的湖</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">山中的湖</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">山中的湖</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                山中的湖                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><img alt="" src="../file/2341_0.jpg" /></p></p><hr/><h3>输入格式</h3><p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">第一行两个正整数，<font face="Times New Roman">N</font><font face="宋体">表示山的折线上的拐点数（包括端点在内），</font><font face="Times New Roman">M</font><font face="宋体">则是你收到的消息数。</font><font face="Times New Roman">3&nbsp;&lt;=&nbsp;N&nbsp;&lt;=&nbsp;100000</font><font face="宋体">，</font><font face="Times New Roman">0&nbsp;&lt;=&nbsp;M&nbsp;&lt;=&nbsp;100000</font><font face="宋体">。</font></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">后面<font face="Times New Roman">N</font><font face="宋体">行，第</font><font face="Times New Roman">i</font><font face="宋体">行有两个非负整数</font><font face="Times New Roman">Xi</font><font face="宋体">和</font><font face="Times New Roman">Yi</font><font face="宋体">，表示折线上第</font><font face="Times New Roman">i</font><font face="宋体">个拐点的坐标。</font></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">后面<font face="Times New Roman">M</font><font face="宋体">行，每行是以下两种情况之一：</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p>
+<table style="padding-right: 5.4pt; padding-left: 5.4pt; padding-bottom: 0pt; padding-top: 0pt; border-collapse: collapse; mso-table-layout-alt: fixed">
+    <tbody>
+        <tr>
+            <td valign="top" width="92" style="border-right: rgb(0,0,0) 0.5pt solid; padding-right: 5.4pt; border-top: rgb(0,0,0) 0.5pt solid; padding-left: 5.4pt; padding-bottom: 0pt; border-left: rgb(0,0,0) 0.5pt solid; width: 69.2pt; padding-top: 0pt; border-bottom: rgb(0,0,0) 0.5pt solid; mso-border-left-alt: 0.5000pt solid rgb(0,0,0); mso-border-right-alt: 0.5000pt solid rgb(0,0,0); mso-border-top-alt: 0.5000pt solid rgb(0,0,0); mso-border-bottom-alt: 0.5000pt solid rgb(0,0,0)">
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">Survey</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">&nbsp;x&nbsp;</span><span style="font-size: 10.5pt; font-family: '宋体'"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="476" style="border-right: rgb(0,0,0) 0.5pt solid; padding-right: 5.4pt; border-top: rgb(0,0,0) 0.5pt solid; padding-left: 5.4pt; padding-bottom: 0pt; border-left: medium none; width: 357.2pt; padding-top: 0pt; border-bottom: rgb(0,0,0) 0.5pt solid; mso-border-left-alt: none; mso-border-right-alt: 0.5000pt solid rgb(0,0,0); mso-border-top-alt: 0.5000pt solid rgb(0,0,0); mso-border-bottom-alt: 0.5000pt solid rgb(0,0,0)">
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 9pt; font-family: '宋体'; mso-spacerun: 'yes'">表示测量<font face="Times New Roman">x</font><font face="宋体">位置的水深和水平面的海拔高度。</font><font face="Times New Roman">x</font><font face="宋体">是一个实数，保证</font><font face="Times New Roman">X1&nbsp;&lt;=&nbsp;x&nbsp;&lt;=&nbsp;Xn</font><font face="宋体">。</font></span><span style="font-size: 9pt; font-family: '宋体'"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="page-break-inside: TableInfo">
+            <td valign="top" width="92" style="border-right: rgb(0,0,0) 0.5pt solid; padding-right: 5.4pt; border-top: medium none; padding-left: 5.4pt; padding-bottom: 0pt; border-left: rgb(0,0,0) 0.5pt solid; width: 69.2pt; padding-top: 0pt; border-bottom: rgb(0,0,0) 0.5pt solid; mso-border-left-alt: 0.5000pt solid rgb(0,0,0); mso-border-right-alt: 0.5000pt solid rgb(0,0,0); mso-border-top-alt: 0.5000pt solid rgb(0,0,0); mso-border-bottom-alt: 0.5000pt solid rgb(0,0,0)">
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">Descend</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">&nbsp;x&nbsp;y&nbsp;</span><span style="font-size: 10.5pt; font-family: '宋体'"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="476" style="border-right: rgb(0,0,0) 0.5pt solid; padding-right: 5.4pt; border-top: medium none; padding-left: 5.4pt; padding-bottom: 0pt; border-left: medium none; width: 357.2pt; padding-top: 0pt; border-bottom: rgb(0,0,0) 0.5pt solid; mso-border-left-alt: none; mso-border-right-alt: 0.5000pt solid rgb(0,0,0); mso-border-top-alt: 0.5000pt solid rgb(0,0,0); mso-border-bottom-alt: 0.5000pt solid rgb(0,0,0)">
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 9pt; font-family: '宋体'; mso-spacerun: 'yes'">表示输入中的第<font face="Times New Roman">x</font><font face="宋体">个点的地面的海拔高度降低到了</font><font face="Times New Roman">y</font><font face="宋体">。</font></span><span style="font-size: 9pt; font-family: '宋体'"><o:p></o:p></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">题中所有坐标（包括<font face="Times New Roman">Descend</font><font face="宋体">中的）都是</font><font face="Times New Roman">0</font><font face="宋体">到</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">1000000</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">之间的整数。</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></p><hr/><h3>输出格式</h3><p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">输出格式：</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">首先输出一开始的山上的储水量。</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每个<font face="Times New Roman">Survey</font><font face="宋体">，输出一行</font><font face="Times New Roman">a&nbsp;b</font><font face="宋体">。</font><font face="Times New Roman">a</font><font face="宋体">表示该位置的水深（如果没有水则为</font><font face="Times New Roman">0</font><font face="宋体">），</font><font face="Times New Roman">b</font><font face="宋体">表示该位置的水面的海拔高度（如果没有水，则为该位置的土地的高度）。</font></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每个<font face="Times New Roman">Descend</font><font face="宋体">，输出新的储水量。</font></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21.3pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">输出中的所有数字保留<font face="Times New Roman">2</font><font face="宋体">位小数。</font></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></p><hr/><h3>样例输入</h3><pre>7 3
+0 0
+1 4
+2 2
+3 6
+4 4
+6 5
+8 0
+Survey 5.5
+Descend 3 2
+Survey 5.5
+</pre><hr/><h3>样例输出</h3><pre>2.75
+0.25 5.00
+4.00
+0.00 4.75</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2341" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2341" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

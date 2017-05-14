@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4068：[Ctsc2015]app</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2015]app</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2015]app</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ctsc2015]app                </h1>
+                <p>时间限制：200s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：233MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>幽香是幻想乡中一个非常有地位的人。她日理万机，事务繁多，反倒自己已经快管理不过来了。于是他决定开发一个日程管理软件来帮助自己管理任务。&nbsp;</p>
+<div>对于每个任务i有一个对应的截止日期ti以及收益pi，表示若幽香能在不晚于第ti天完成这个任务，便可以得到pi的收益。幽香办事的能力非常强，任何任务都可以用恰好一天的时间做完。但由于任务实在太多了，有时候并不能完成所有任务，于是幽香会想知道这个情况下，完成任务可以给她带来的最大的累积收益是多少。&nbsp;</div>
+<div>由于幻想乡的人们十分善变，任务总是不断发生着变化。幽香希望这个管理软件还能够支持插入一个任务，和删除一个任务的操作。&nbsp;</div>
+<div>具体的说，幽香希望支持以下2个操作：&nbsp;</div>
+<div>1.ADD t p：表示新添一个截止日期为t，收益为p的任务。&nbsp;</div>
+<div>2.DEL t p：表示删除一个截止日期为t，收益为p的任务。如果有多个这样的任务，只删除一个。数据保证这样的任务一定存在。&nbsp;</div>
+<div>在每次操作执行完毕后，你都需要输出能够完成的任务的最大收益和。&nbsp;</div>
+<div>幽香一共有T天需要安排，从第1天到第T天。你能帮助他写出这个高效率的软件吗？&nbsp;</div></p><hr/><h3>输入格式</h3><p><p>第一行有两个证书T和Q，表示天数和操作的个数。&nbsp;</p>
+<div>接下来Q行，其中第i行表示第i个操作，形式为ADD t p或DEL t p，其具体意义如题面所述。&nbsp;</div></p><hr/><h3>输出格式</h3><p><p>对每一次操作，输出一个整数在执行完该操作后幽香能够获得的最大收益和。&nbsp;</p></p><hr/><h3>样例输入</h3><pre>5 10
+ADD 1 5811
+ADD 3 5032
+DEL 3 5032
+ADD 3 5550
+ADD 5 3486
+DEL 1 5811
+DEL 3 5550
+ADD 4 5116
+ADD 3 9563
+ADD 5 94</pre><hr/><h3>样例输出</h3><pre>5811
+10843
+5811
+11361
+14847
+9036
+3486
+8602
+18165
+18259</pre><hr/><h3>提示</h3><p><p><span style="font-family: 幼圆; line-height: 24px; background-color: rgb(205, 237, 226);">T&lt;=300000，Q&lt;=300000</span></p>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4068" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4068" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

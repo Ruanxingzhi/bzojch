@@ -1,0 +1,163 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4685：Cubic Colonies</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Cubic Colonies</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Cubic Colonies</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Cubic Colonies                </h1>
+                <p>时间限制：90s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>公元3456年，表面积过小的地球再也不足以使得千亿人和平的生活在一起了。Interstellar Colonization Project with Cubes (ICPC)是一个试图将人类转移到太空殖民地来缓解人口压力的项目。ICPC获得了政府的支持，并很快利用低成本的标准立方块零件建立起太空殖民地。</div>
+<div>最大的殖民地看起来像一个魔方，它由 3&times;3&times;3 个标准立方块组成（如图A）。小的殖民地（如图B）与最大的殖民地相比则缺失了一些标准立方块。</div>
+<div>当我们开始用标准立方块建造殖民地时，我们会从一个简单的标准立方块开始，然后反复地将下一个立方块与已经存在的立方块完美地粘合，每个相贴合的面都会紧紧粘合。</div>
+<div>&nbsp;<img src="../file/4685_0.png" width="348" height="192" alt="" /></div>
+<div>然而，就在第一次发射前，我们发现了殖民地的一个设计缺陷。为此对于每个殖民地我们需要添加一根电缆连接殖民地上存在于表面的某两个点，但是短时间内我们无法改变每个标准立方块的内部。因此我们决定在殖民地的表面添加电缆。如果电缆的某一部分不在表面上，则这部分有可能会在发射中被剪断，因此我们必须使电缆完全在表面上。在上图B的虚线就是一个很好的例子。你需要写一个程序，通过给定的殖民地形状和一对在其表面上的点，计算出最短的可能的电缆长度。</div>
+<div>第三、四、五组样例如下图A、B、C所示。注意，如果两个表面有公共的交点，则你可以通过这个交点设置电缆。为了便于说明，一些块被部分透明地显示。</div>
+<div><img src="../file/4685_1.png" width="520" height="187" alt="" /></div></p><hr/><h3>输入格式</h3><p><div style="font-size: 11.8181819915771px;">输入包含多组测试数据。每组数据的第一行包含六个整数，前三个整数表示一个在殖民地表面的点，后三个整数表示另一个在殖民地表面的点。保证两个点互不相同，且坐标在0到3之间。</div>
+<div style="font-size: 11.8181819915771px;">接下来九行，每行三个字符。对于 0&le;i,j,k&lt;3 ，以 (i,j,k) &nbsp;和 (i+1,j+1,k+1) &nbsp;为体对角线的标准立方块如果存在，则第 1+j+3k 行的第1+i 个字符是&lsquo;#&rsquo;，否则是&lsquo;.&rsquo;表示这个位置不存在标准立方块。</div>
+<div style="font-size: 11.8181819915771px;">你可以认为不存在一个不含中心块但含其他块的殖民地，即你不需要考虑内表面的问题。输入以六个零作为结尾。</div></p><hr/><h3>输出格式</h3><p><div style="font-size: 11.8181819915771px;">对于每组数据，输出一行一个实数表示最短的可能的电缆长度，你的输出与答案的绝对误差不超过0.001时被认为是正确的。你可以认为给定的两个点之间一定可以连接电缆。</div></p><hr/><h3>样例输入</h3><pre>0 0 0 3 3 3
+###
+###
+###
+###
+###
+###
+###
+###
+###
+3 3 0 0 0 3
+#..
+###
+###
+###
+###
+###
+#.#
+###
+###
+0 0 2 2 2 2
+...
+...
+...
+.#.
+#..
+...
+##.
+##.
+...
+0 1 2 2 1 1
+...
+...
+...
+.#.
+#..
+...
+##.
+##.
+...
+3 2 0 2 3 2
+###
+..#
+...
+..#
+...
+.#.
+..#
+..#
+.##
+0 0 0 0 0 0</pre><hr/><h3>样例输出</h3><pre>6.70820393249936941515
+6.47870866461907457534
+2.82842712474619029095
+2.23606797749978980505
+2.82842712474619029095 
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Tangjz提供试题及SPJ 2012 ACM-ICPC Asia Tokyo Regional Contest</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4685" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4685" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

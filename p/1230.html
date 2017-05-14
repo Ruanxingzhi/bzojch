@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1230：[Usaco2008 Nov]lites 开关灯</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Nov]lites 开关灯</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2008 Nov]lites 开关灯</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2008 Nov]lites 开关灯                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John尝试通过和奶牛们玩益智玩具来保持他的奶牛们思维敏捷. 其中一个大型玩具是牛栏中的灯. N (2 &lt;= N &lt;= 100,000) 头奶牛中的每一头被连续的编号为1..N, 站在一个彩色的灯下面.刚到傍晚的时候, 所有的灯都是关闭的. 奶牛们通过N个按钮来控制灯的开关; 按第i个按钮可以改变第i个灯的状态.奶牛们执行M (1 &lt;= M &lt;= 100,000)条指令, 每个指令都是两个整数中的一个(0 &lt;= 指令号 &lt;= 1). 第1种指令(用0表示)包含两个数字S_i和E_i (1 &lt;= S_i &lt;= E_i &lt;= N), 它们表示起始开关和终止开关. 奶牛们只需要把从S_i到E_i之间的按钮都按一次, 就可以完成这个指令. 第2种指令(用1表示)同样包含两个数字S_i和E_i (1 &lt;= S_i &lt;= E_i &lt;= N), 不过这种指令是询问从S_i到E_i之间的灯有多少是亮着的. 帮助FJ确保他的奶牛们可以得到正确的答案. </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第 1 行: 用空格隔开的两个整数N和M</span></p>
+<p><span style="font-size: medium">&nbsp;* 第 2..M+1 行: 每行表示一个操作, 有三个用空格分开的整数: 指令号, S_i 和 E_i </span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">第 1..询问的次数 行: 对于每一次询问, 输出询问的结果. </span></p></p><hr/><h3>样例输入</h3><pre>4 5
+0 1 2
+0 2 4
+1 2 3
+0 2 4
+1 1 4
+
+输入解释:
+一共有4盏灯; 5个指令. 下面是执行的情况:
+	        灯
+            1 2 3 4
+  Init:     O O O O   O = 关  * = 开
+  0 1 2 ->  * * O O  改变灯 1 和 2 的状态
+  0 2 4 ->  * O * *
+  1 2 3 ->  1        输出在2..3的范围内有多少灯是亮的
+  0 2 4 ->  * * O O  改变灯 2 ,3 和 4 的状态
+  1 1 4 ->  2        输出在1..4的范围内有多少灯是亮的
+
+
+
+
+</pre><hr/><h3>样例输出</h3><pre>1
+2
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1230" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1230" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

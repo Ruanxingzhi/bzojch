@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1823：[JSOI2010]满汉全席</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2010]满汉全席</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2010]满汉全席</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JSOI2010]满汉全席                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>满汉全席是中国最丰盛的宴客菜肴，有许多种不同的材料透过满族或是汉族的料理方式，呈现在數量繁多的菜色之中。由于菜色众多而繁杂，只有极少數博学多闻技艺高超的厨师能够做出满汉全席，而能够烹饪出经过专家认证的满汉全席，也是中国厨师最大的荣誉之一。 世界满汉全席协会是由能够料理满汉全席的专家厨师们所组成，而他们之间还细分为许多不同等级的厨师。为了招收新进的厨师进入世界满汉全席协会，将于近日举办满汉全席大赛，协会派遣许多会员当作评审员，为的就是要在參赛的厨师之中，找到满汉料理界的明日之星。 大会的规则如下：每位參赛的选手可以得到n 种材料，选手可以自由选择用满式或是汉式料理将材料当成菜肴。大会的评审制度是：共有m 位评审员分别把关。每一位评审员对于满汉全席有各自独特的見解，但基本见解是，要有兩样菜色作为满汉全席的标志。如某评审认为，如果没有汉式东坡肉跟满式的涮羊肉锅，就不能算是满汉全席。但避免过于有主見的审核，大会规定一个评审员除非是在认为必备的两样菜色都没有做出來的狀况下，才能淘汰一位选手，否则不能淘汰一位參赛者。换句话說，只要參赛者能在这兩种材料的做法中，其中一个符合评审的喜好即可通过该评审的审查。如材料有猪肉，羊肉和牛肉时，有四位评审员的喜好如下表： 评审一	评审二	评审三	评审四 满式牛肉	满式猪肉	汉式牛肉	汉式牛肉 汉式猪肉	满式羊肉	汉式猪肉	满式羊肉 如參赛者甲做出满式猪肉，满式羊肉和满式牛肉料理，他将无法满足评审三的要求，无法通过评审。而參赛者乙做出汉式猪肉，满式羊肉和满式牛肉料理，就可以满足所有评审的要求。 但大会后來发现，在这样的制度下如果材料选择跟派出的评审员没有特别安排好的话，所有的參赛者最多只能通过部分评审员的审查而不是全部，所以可能会发生没有人通过考核的情形。如有四个评审员喜好如下表时，则不論參赛者采取什么样的做法，都不可能通过所有评审的考核： 评审一	评审二	评审三	评审四 满式羊肉	满式猪肉	汉式羊肉	汉式羊肉 汉式猪肉	满式羊肉	汉式猪肉	满式猪肉 所以大会希望有人能写一个程序來判断，所选出的m 位评审，会不会发生 没有人能通过考核的窘境，以便协会组织合适的评审团。</p></p><hr/><h3>输入格式</h3><p><p>第一行包含一个数字 K，代表测试文件包含了K 组资料。每一组测试资料的第一行包含兩个数字n 跟m（n&le;100，m&le;1000），代表有n 种材料，m 位评审员。为方便起見，材料舍弃中文名称而给予编号，编号分别从1 到n。接下來的m 行，每行都代表对应的评审员所拥有的兩个喜好，每个喜好由一个英文字母跟一个数字代表，如m1 代表这个评审喜欢第1 个材料透过满式料理做出來的菜，而h2 代表这个评审员喜欢第2 个材料透过汉式料理做出來的菜。每个测试文件不会有超过50 组测试资料</p></p><hr/><h3>输出格式</h3><p><p>每笔测试资料输出一行，如果不会发生没有人能通过考核的窘境，输出GOOD；否则输出BAD（大写字母）。</p></p><hr/><h3>样例输入</h3><pre>2
+3 4
+m3 h1
+m1 m2
+h1 h3
+h3 m2
+2 4
+h1 m2
+m2 m1
+h1 h2
+m1 h2
+
+</pre><hr/><h3>样例输出</h3><pre>GOOD
+BAD
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>JSOI2010第二轮Contest2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1823" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1823" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

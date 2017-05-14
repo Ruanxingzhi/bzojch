@@ -1,0 +1,161 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2827：千山鸟飞绝 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">千山鸟飞绝 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">千山鸟飞绝 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                千山鸟飞绝                 </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium; "><br />
+</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>话说有一天doyouloveme和vfleaking到山里玩。谁知doyouloveme刚刚进山，所有的鸟儿竟被他的神犇气场给惊得全部飞走了。vfleaking顿时膜拜不已。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>这时鸟王用鸟语说道：&ldquo;!@#$%&hellip;&hellip;?&rdquo;安抚了一下众鸟的情绪。鸟王生性好斗，作出了一个决定&mdash;&mdash;要排鸟布阵把刚才吓到它们的人类赶出山去。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>每只鸟都有一个编号，都有一个威武值。每秒钟鸟王都会发一个命令，编号为v的鸟飞到(x,y)去（坐标系原点是山顶，坐标单位为鸟爪）。鸟飞得很快，一秒之内就飞到了，可以看作是瞬间移动。如果编号为v的鸟和编号为u的鸟某一时刻处在同一位置，它们就会互相鼓励，增加各自的士气值和团结值。一只鸟的士气值等于此刻与它处在同一位置的鸟中的威武值的最大值，团结值等于此刻与它处在同一位置的鸟的只数。如果每一时刻都没有鸟与它处在同一位置，则士气值和团结值都为0。要注意自己不能鼓励自己，计算士气值和团结值时不能算上自己。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>t秒钟后，doyouloveme目测出了现在每只鸟的战斗力，于是感叹了一句：&ldquo;不妙，我们得走了。&rdquo;</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>正所谓团结的鸟儿一个顶俩，所以doyouloveme这样描述战斗力：一只鸟战斗力值等于它在0到t秒中士气值的最大值与团结值的最大值的乘积。注意不是乘积的最大值，而是最大值的乘积。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>vfleaking很想知道现在每只鸟的战斗力，但是他当然不会啦，于是他把这个任务交给了你来完成。</span></div>
+<div><span style="font-size: medium; "><br />
+</span></div>
+<div><font size="3"><br />
+</font></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p></p>
+<div></div>
+<div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>第一行一个数n，代表鸟的只数。（鸟王那家伙你可以完全忽视掉）</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来n行，每行三个整数w,x,y描述每只鸟的威武值和初始坐标。第i+1行描述编号为i的鸟。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来一行有一个数t，代表经过时间ts。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来t行，每行三个整数v,x,y描述鸟王每秒的命令。</span></div>
+<div></div>
+</div></p><hr/><h3>输出格式</h3><p><div>
+<div><span class="Apple-tab-span" style="font-size: medium; white-space: pre; ">	</span><span style="font-size: medium; ">一共n行，每行一个数，代表每只鸟的战斗力。</span></div>
+<div><span style="font-size: medium; "><br />
+</span></div>
+<div><font size="3"><br />
+</font></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5
+1 1 1
+3 1 2
+4 4 4
+2 0 1
+2 2 3
+5
+1 1 2
+2 4 4
+2 4 3
+3 0 1
+5 0 1
+</pre><hr/><h3>样例输出</h3><pre>3
+4
+6
+8
+8
+</pre><hr/><h3>提示</h3><p><div>对于样例的解释：</div>
+<div>首先5只鸟的位置为(1,1),(1,2),(4,4),(0,1),(2,3)，士气和团结值都是0。</div>
+<div>鸟1飞到了(1,2)，于是鸟1和鸟2互相鼓励，鸟1士气变为3，鸟2士气变为1。鸟1鸟2的团结值变为1。</div>
+<div>然后鸟2飞到(4,4)，与鸟3互相鼓励，鸟2士气变为4，鸟3士气变为3。鸟2与鸟3的团结值变为1。</div>
+<div>鸟2然后飞到了(4,3)，一个没有鸟的地方。于是士气和团结值都变为了0。</div>
+<div>接下来鸟3和鸟5都飞到了鸟4的位置，于是三只鸟互相鼓励，鸟4、鸟5士气变为4，鸟3士气仍为3。鸟3、鸟4、鸟5的团结值都变为2。</div>
+<div>于是大家的战斗力：</div>
+<div>鸟1：3 * 1 = 3</div>
+<div>鸟2：4 * 1 = 4</div>
+<div>鸟3：3 * 2 = 6</div>
+<div>鸟4：4 * 2 = 8</div>
+<div>鸟5：4 * 2 = 8</div>
+<div></div>
+<div>1&le;n&le;30000 &nbsp; 0&le;t&le;300000 &nbsp; 坐标范围为整数，且不超过INT_MIN~INT_MAX</div>
+<div>威武值为不超过INT_MAX的非负整数。</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>湖北省队互测
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2827" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2827" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

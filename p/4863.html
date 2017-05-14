@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4863：[BeiJing 2017 Wc]星际穿越</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing 2017 Wc]星际穿越</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing 2017 Wc]星际穿越</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [BeiJing 2017 Wc]星际穿越                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>21YY年，夏。</div>
+<div>时过境迁，小诚已是星际联邦（FederationofPlanets）太空防御理事会的技术顾问。去年联邦举行大选，新总统</div>
+<div>刚刚宣誓就任。新政府的主要政策之一是对行政区域进行重新规划，将各个星球之间原有的行政关系精简。联邦有</div>
+<div>N个星球，新的行政体系结构形如一个二叉树。联邦的行政中心为首都，其他所有星球分成至多两个区域，每个区</div>
+<div>域内部又是同样的结构。在此番行政改革之前，每个星球驻扎着一支太空舰队。其中，第i个星球驻扎舰队的战斗</div>
+<div>力是Fi。在行政改革的同时，太空防御理事会负责调整各个舰队的驻地，以符合军事条例中要求每个行政区域中心</div>
+<div>驻扎的舰队是区域内战斗力最强舰队的规定。此外，根据军事条例，舰队调整驻地的方式只有一种，就是两个星球</div>
+<div>的舰队交换驻防。现在，所有星球之间共有M条双向的星际航道。只有存在星际航道的两个星球才能进行舰队换防</div>
+<div>。为了节省开支，理事会希望总的换防次数尽量少。早在年初，理事会就委托了小诚制定换防计划，但是小诚至今</div>
+<div>还未完成任务。你能否帮助小诚，使他免于被解职的命运呢？</div></p><hr/><h3>输入格式</h3><p><div>第一行，两个整数N,M。</div>
+<div>第二行，N个整数R1,R2,&hellip;,RN，由空格隔开。Ri表示星球i的直属上级星球编号。对于联邦首都，Ri用0表示。</div>
+<div>第三行，N个互不相同的整数F1,F2,&hellip;,FN，由空格隔开。其中Fi表示当前驻扎在星球i的舰队的战斗力。</div>
+<div>接下来M行，每行两个整数Xi,Yi，表示在星球Xi和星球Yi之间存在一条星际航道。</div>
+<div>N&lt;=12,M&lt;=20</div>
+<div>1 &le; Fi &le; 100。 输入数据保证星球之间的行政关系形成一个二叉</div>
+<div>树， 任何两个星球之间至多有一条星际航道， 且星际航道不会出现自环。 数据保证有解。</div></p><hr/><h3>输出格式</h3><p><div>仅一行，一个整数，表示总换防次数的最小值。</div></p><hr/><h3>样例输入</h3><pre>4 4
+0 1 2 3
+1 2 3 4
+1 2
+1 4
+2 3
+1 3
+</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4863" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4863" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

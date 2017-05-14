@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3666：physics</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">physics</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">physics</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                physics                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">现在有一条直线，直线上有n个原子核，每个原子核都有其各自的位置,原子序数和速度。经过一段时间之后，可能存在两个原子核互相碰撞。对于碰撞有两种可能，如果两个原子核的序数分别为a，b 且 M<sub>a</sub>+M<sub>b</sub>&gt;=M<sub>a+b</sub>[M<sub>i</sub>表示i号原子的质量]，则他们两个就会发生核聚变(只满足动量守恒且两原子核先达到共同速度再进行聚变)，聚变时会放出能量，放出的能量就是质量亏损的能量，我们假设所有的能量都转化为了动能，聚变后速度的方向与原来两个原子核的共同速度方向相同。但是如果M<sub>a</sub>+M<sub>b</sub>&lt;M<sub>a+b</sub>则他们就会发生弹性碰撞（动量和动能守恒）。[公式见注意事项]</span></div></p><hr/><h3>输入格式</h3><p><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">第一行一个整数m表示（1..m的原子的质量已知）</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来m个实数 表示M<sub>1..m</sub></span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来一个数c表示光速。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来两个数n，T表示该直线上有n个原子核，由T次询问。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来n行每行3个数 表示原子核的序数，位置，和初速度。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来T行表示T个询问</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">1 a b v 表示在b位置新建一个原子核序数为a的原子速度为v</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">2 a&nbsp;k删除位置第k小的原子序数为a的原子核</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">3 询问并进行下一次碰撞同时输出碰撞后的两个或一个原子核的三个信息</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">4 a b 删除位置最小的原子序数从a到b的原子核</span></div></p><hr/><h3>输出格式</h3><p><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来k行每行六或三个实数表示原子核的序数，位置和速度。</span></div></p><hr/><h3>样例输入</h3><pre>10
+2 3 4 5 6 7 8 13 15 20
+3
+3 2
+6 1 0
+1 2 0
+1 3 -3
+3
+3
+</pre><hr/><h3>样例输出</h3><pre>2 2.00000000 -3.00000000
+6 1.00000000 -1.80000000 2 1.00000000 1.20000000 
+</pre><hr/><h3>提示</h3><p><p><img height="1047" width="561" alt="" src="../file/3666_0.jpg" /></p>
+<p class="a" style="margin: 0cm 0cm 10pt; mso-line-height-alt: 11.0pt"><span lang="EN-US" style="font-size: 16pt; font-family: 宋体">T&lt;=2*10^5,N&lt;=100000,</span><span style="font-size: 16pt; font-family: 宋体">所有的数据满足<span lang="EN-US">m&lt;=10<sup>5</sup> </span>其余的数据属于<span lang="EN-US">[-10<sup>9</sup>..10<sup>9</sup>],</span>误差小于<span lang="EN-US">1e-5</span>则答案正确。<span lang="EN-US"><o:p></o:p></span></span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3666" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3666" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

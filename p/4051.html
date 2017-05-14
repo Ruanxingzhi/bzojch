@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4051：[Cerc2013] History course</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2013] History course</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2013] History course</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2013] History course                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>你被给定一系列关于重要的历史事件的演讲，每件事一场演讲，它们不按顺序排列。每件历史事件持续一个时间段[ai，bi]。如果两件事的时间有共同区间，我们说它们是有关联的。把关于有关联的历史事件的演讲排的彼此靠近能使课程更便于理解。此外，不相关的演讲必须按历史事件的发生时间排序（如果A在B之前发生，且AB不相关，那么关于A的演讲必须在B之前进行）&nbsp;</div>
+<div>找出最小的整数k&gt;=0和一个演讲的顺序，使得排序后任意两场相关的演讲之间的间隔不超过k（第i场演讲和第j场演讲之间的间隔是|i-j|）。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包括数据组数T。每组数据包含以下内容：&nbsp;</div>
+<div>每组数据的第一行是一个数n，1&lt;=n&lt;=50000。接下来n行包括两个整数ai和bi，-10^9&lt;=ai&lt;=bi&lt;=10^9。区间两两不相同。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>每组数据答案的第一行是一个最小值k，接下来n行按顺序列举排列后的演讲的历史事件的区间（与输入中的格式一样），使得任意两个相关的演讲相隔不超过k。切记将不相关的演讲按时间顺序排列！&nbsp;</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>1 
+3 
+1 6 
+2 3 
+4 5 </pre><hr/><h3>样例输出</h3><pre>1 
+2 3 
+1 6 
+4 5 </pre><hr/><h3>提示</h3><p><p>共有三个历史事件，其中1,2；1,3是相关的，2,3不相关，且2在3之前发生，所以2应该排在3的前面。对于相关的历史事件，1与2在排列后的位置是2和1，间隔为1,1与3在排列后的位置为2与3，间隔为1,所以此时k最小为1，该排法最优。&nbsp;</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4051" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4051" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

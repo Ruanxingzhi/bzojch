@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3951：RDWAD</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">RDWAD</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">RDWAD</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                RDWAD                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>队(dou)友(bi)翻译了一道题，题面是这样的：</div>
+<div>&middot;给定一个长度为n的整数序列a[i]，其中|a[i]|&lt;=1。</div>
+<div>&middot;操作：选择一个1&lt;=i&lt;n，令a[i+1]增加a[i]，这个过程中允许|a[i]|&gt;1。</div>
+<div>&middot;目标：用最少的操作使得a不降，输出操作数。如果不可行，输出-1。</div>
+<div>龙泉寺法师：这么简单？你是看错题了吧？</div>
+<div>队(dou)友(bi)：啊&hellip;&hellip;说不定是吧&hellip;&hellip;</div>
+<div>龙泉寺法师：这题一定是这样的~(balabala)</div>
+<div>&middot;给定一个长度为n的整数序列a[i]，其中|a[i]|&lt;=1</div>
+<div>&middot;有m个要求</div>
+<div>&middot;第一种要求是将某一个a[i]修改成x(|x|&lt;=1)</div>
+<div>&middot;第二种要求是询问[l,r]这一段用最少的操作数使它变得不降。如果不可行，输出-1。</div>
+<div>于是，龙泉寺法师迅速把龙泉寺敌法从电脑前踹开，自己开始编写这题的AC算法&hellip;&hellip;</div>
+<div>队(dou)友(bi)：这题我不会啊。。</div>
+<div>现在请你帮助队(dou)友(bi)解决这道题。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个数n,m，空格分隔，表示序列长度和操作数。</div>
+<div>
+<div>第二行n个数，表示序列a，满足|a[i]|&lt;=1</div>
+<div>接下来m行，每行3个数</div>
+<div>如果是第一种要求，四个数0 wi xi，空格分隔，表示把a[wi]修改成xi。</div>
+<div>如果是第二种要求，三个数1 li ri，空格分隔，表示询问[li,ri]这一段至少要多少次操作才能不降。如果不可行，输出-1。</div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>对于每个第二种要求，输出一行，包含一个数，表示询问的答案。</div>
+<div>为了避免可能的空输出问题，最后输出一行，表示额外的一个询问1 1 n的答案。</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6 6
+1 1 0 -1 0 1
+1 1 4
+0 1 -1
+0 2 -1
+1 1 4
+1 3 5
+0 2 1</pre><hr/><h3>样例输出</h3><pre>3
+1
+-1
+3
+样例说明
+1、询问1 1 0 -1，操作3次变成1 1 1 1，输出3
+2、修改a[1]为-1，序列为-1 1 0 -1 0 1
+3、修改a[2]为-1，序列为-1 -1 0 -1 0 1
+4、询问 -1 -1 0 -1，操作1次变成-1 -1 -1 -1，输出1
+5、询问0 -1 0，前两个位置不可能非递减，无解，输出-1
+6、修改a[2]为1，序列为-1 1 0 -1 0 1
+最后输出整体的答案：操作3次变为-1 -1 -1 -1 0 1，输出3</pre><hr/><h3>提示</h3><p><div>n,m&lt;=1000000</div>
+<div>建议使用读入优化</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>2014年国家集训队十五人互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3951" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3951" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4020：未来程序·改</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">未来程序·改</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">未来程序·改</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                未来程序·改                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>在 2111 年，第 128 届全国青少年信息学奥林匹克冬令营前夕，Z君找到了 2015 年，第 32 届冬令营的题目来练习。</div>
+<div>他打开了第三题 &ldquo;未来程序&rdquo; 这道题目：</div>
+<div>&ldquo;本题是一道提交答案题，一共 10 个测试点。</div>
+<div>对于每个测试点，你会得到一段程序的源代码和这段程序的输入。你要运行这个程序，并保存这个程序的输出。</div>
+<div>遗憾的是这些程序都效率极其低下，无法在比赛的 5 个小时内得到输出。&rdquo;</div>
+<div>Z君想了一下，决定用 2111 年的计算机来试着运行这个题目，但是问题来了，Z君已经找不到96年前的那次比赛的测试数据了&hellip;&hellip;</div>
+<div>没有给出输入数据的提交答案题就不成其&ldquo;提交答案题&rdquo;之名，为了解决这个问题，Z君决定将这个题目改造成传统题。</div>
+<div>Z君知道96年前的计算机的性能比现在差多了，所以这道题的测试数据中，输入数据的规模被设计成很小，从而，做这道题的选手只需要暴力模拟源代码的工作流程就可以通过它。</div>
+<div>现在这道题摆到了你的面前。</div>
+<div>本题是一道传统题，一共有 10 个测试点。</div>
+<div>对于每个测试点，你的程序会得到一段程序的源代码和这段程序的输入。你的程序需要运行这段程序，并输出这段程序的输出。</div>
+<div>关于给出的源代码的约定</div>
+<div>Z君是一名C++选手。为了简化这个问题，Z君在给出的源代码中去掉了C++语言的大量特性。从而这个源代码具有以下特点：</div>
+<div>第一行必定为 #include&lt;iostream&gt;</div>
+<div>&gt;&gt; 这个库中只会调用到对象cin, cout、endl，cin的&gt;&gt;(int)方法和cout的&lt;&lt;(int)方法。这两个方法的返回值为cin和cout。</div>
+<div>第二行必定为 #include&lt;cstdio&gt;</div>
+<div>&gt;&gt; 这个库中只会调用到putchar方法。putchar方法的返回值为其唯一参数。</div>
+<div>第三行必定为 using namespace std;</div>
+<div>&gt;&gt; 对象cin的调用不再需要透过std::cin进行，cout和endl同理。</div>
+<div>int main() 没有任何参数</div>
+<div>所有的变量都是int或int数组（含高维数组）类型</div>
+<div>&gt;&gt; 对象cin, cout,endl是例外，注意putchar的参数也是int类型的。我们保证在运行时这个参数的值在0~127中。</div>
+<div>&gt;&gt; 在运行时，不会出现数组越界问题。</div>
+<div>&gt;&gt; 没有维度的范围为1。也即，不会出现int a[1][1][1][1][1]...这样的情况。</div>
+<div>&gt;&gt; 维度的范围直接由十进制常量给出。也即，不会出现int a[(100+100)*2]这样的情况。</div>
+<div>所有的函数都是int类型，函数的参数只可能是int类型</div>
+<div>&gt;&gt; 注意函数的返回值可以被丢弃。</div>
+<div>&gt;&gt; 当没有显式地返回值时，返回0。</div>
+<div>bool型被认为是一种特殊的int型</div>
+<div>&gt;&gt; ==在两个参数相同时返回1，否则返回0。</div>
+<div>&gt;&gt; !=在两个参数相同时返回0，否则返回1。</div>
+<div>&gt;&gt; &lt;在第一个参数小于第二个参数时返回1，否则返回0。</div>
+<div>&gt;&gt; &lt;=在第一个参数小于等于第二个参数时返回1，否则返回0。</div>
+<div>&gt;&gt; &gt;在第一个参数大于第二个参数时返回1，否则返回0。</div>
+<div>&gt;&gt; &gt;=在第一个参数大于等于第二个参数时返回1，否则返回0。</div>
+<div>&gt;&gt; &amp;&amp;在两个参数都不为0时返回1，否则返回0。</div>
+<div>&gt;&gt; ||在两个参数都为0时返回0，否则返回1。</div>
+<div>&gt;&gt; ^在两个参数中只有一个为0时返回1，其他时候返回0。</div>
+<div>&gt;&gt; !在参数为0时返回1，否则返回0。</div>
+<div>&gt;&gt; 由于bool型被int型取代了，因此所有的表达式都应该被完全计算：例如在表达式(a &amp;&amp; (b = c))中，即使a已经被确定是0，仍然需要计算(b = c)的值，尽管无论(b = c)的值如何，整个表达式的值都是0。</div>
+<div>可能用到的运算符及其优先级如下：</div>
+<div>&gt;&gt; （最高）(), []；</div>
+<div>&gt;&gt; !, [单目]+, [单目]-；</div>
+<div>&gt;&gt; *, /, %；</div>
+<div>&gt;&gt; +, -；</div>
+<div>&gt;&gt; &lt;=, &gt;=, &lt;, &gt;；</div>
+<div>&gt;&gt; ==, !=；</div>
+<div>&gt;&gt; ^；</div>
+<div>&gt;&gt; &amp;&amp;；</div>
+<div>&gt;&gt; ||；</div>
+<div>&gt;&gt; =；（只有这级运算符是右结合的）</div>
+<div>&gt;&gt; （最低）cout的&lt;&lt;与cin的&gt;&gt;。</div>
+<div>所有int常量以十进制形式给出</div>
+<div>Z君没有对源代码进行混淆，所以源代码是可读的，你不必担心出现大量嵌套的花括号或此类的&ldquo;垃圾代码&rdquo;</div>
+<div>运行时使用的变量占用的空间的峰值不超过8MB。也即，2^21个int</div>
+<div>调用函数的深度不会超过10^3层</div>
+<div>可能出现连续赋值，例如a = (b = (c = 3) + 2) % c</div>
+<div>&gt;&gt; 之前对c的赋值将会反映到之后对c的引用上</div>
+<div>&gt;&gt; 赋值的返回值为赋值以后的值。</div>
+<div>可能出现的程序流程控制语句：</div>
+<div>&gt;&gt; if (statement) statement [else statement]</div>
+<div>&gt;&gt; while (statement) statement</div>
+<div>&gt;&gt; for ([statement]; [statement]; [statement]) statement</div>
+<div>&gt;&gt; 那些作为条件的statement的返回值应当被视为bool型的。具体的来说，若返回值为0，则为false，若返回值非0，则为true。在for循环中，当第二个[statement]取空时，视为true。</div>
+<div>空白字符只有新行符（包括\n和\r）和空格</div>
+<div>声明变量时默认初始值为0，声明变量的同时不会进行赋值。</div>
+<div>没有注释</div>
+<div>所有的右花括号后没有分号</div>
+<div>没有用来连接语句的逗号</div>
+<div>没有函数和变量重名</div>
+<div></div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入文件分为两个部分。</div>
+<div>第一行，有一个整数N。它描述了源代码对应的输入文件program.in中包含的整数数目。</div>
+<div>以下的N个整数构成了源代码对应的输入文件program.in。</div>
+<div>这之后的部分构成了源代码program.cpp。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出文件是将program.cpp编译后输入program.in后所得到的输出。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+1 2
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{int a, b; cin >> a >> b; cout << a + b << endl;}
+</pre><hr/><h3>样例输出</h3><pre>3</pre><hr/><h3>提示</h3><p><div>输入的所有program.cpp都是手打的，同时本题的std是出题人手打过的最长的程序。</div>
+<div>测试点#1的program.cpp在附加文件中给出。</div>
+<div>测试点#2到#4的program.cpp符合以下格式：</div>
+<div>#include&lt;iostream&gt;</div>
+<div>#include&lt;cstdio&gt;</div>
+<div>using namespace std;</div>
+<div>int main()</div>
+<div>{</div>
+<div>cout &lt;&lt; &lt;1&gt; &lt;&lt; endl;</div>
+<div>}</div>
+<div>在#2中：&lt;1&gt;处是一个仅包含加、减、乘、除、模运算和自然数常数的没有括号的表达式。</div>
+<div>在#3和#4中：&lt;1&gt;处是一个不保证以上性质的表达式。</div>
+<div>测试点#5中：没有除main以外的函数，并且整个程序中只有顺序结构。</div>
+<div>测试点#6和#7中：没有除main以外的函数。</div>
+<div>测试点#8中：所有的变量都是全局变量。</div>
+<div>测试点#9和#10不保证任何特别的性质。</div>
+<div></div>
+<div></div>
+<div>所有program.cpp都可以用MinGW GCC 4.7.2编译运行。这就是说，所有的program.cpp中都没有语法错误。然而由于编译命令的不同，直接编译得到的program.exe在运行时会因未为声明的变量和未设置返回值的函数设置0的缺省值而与标程产生不同的输出。</div>
+<div></div>
+<div></div>
+<div>为了更准确地说明程序可能出现的要素，也作为提示，下面给出了一个上下文无关文法，其初始符号为PROGRAM。保证每个program.cpp都可被下面的文法生成，但是并非每个可被生成的程序都是合法的程序。</div>
+<div>PROGRAM ::=</div>
+<div>&gt;&gt; # include &lt; iostream &gt; # include &lt; cstdio &gt; using namespace std ; FUNC_AND_VAR</div>
+<div>FUNC_AND_VAR ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; int NAME ( OPTPARAMS ) { STATEMENTS } FUNC_AND_VAR</div>
+<div>&gt;&gt; int NAME NAMES ; FUNC_AND_VAR</div>
+<div>OPTPARAMS ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; int NAME PARAMS ::=</div>
+<div>PARAMS</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; , int NAME PARAMS ::=</div>
+<div>STATEMENTS</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; STATEMENT STATEMENTS ::=</div>
+<div>STATEMENT ::=</div>
+<div>&gt;&gt; EXPRESSION ;</div>
+<div>&gt;&gt; { STATEMENTS }</div>
+<div>&gt;&gt; int DEFINEVAR DEFINEVARS ;</div>
+<div>&gt;&gt; if ( EXPRESSION ) STATEMENT</div>
+<div>&gt;&gt; if ( EXPRESSION ) STATEMENT else STATEMENT</div>
+<div>&gt;&gt; for ( STATEMENT_IN_FOR ; OPTEXPRESSION ; STATEMENT_IN_FOR ) STATEMENT</div>
+<div>&gt;&gt; while ( EXPRESSION ) STATEMENT</div>
+<div>&gt;&gt; return EXPRESSION ;</div>
+<div>STATEMENT_IN_FOR ::=</div>
+<div>&gt;&gt; EXPRESSION</div>
+<div>&gt;&gt; int DEFINEVAR DEFINEVARS</div>
+<div>OPTEXPRESSION ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; EXPRESSION</div>
+<div>EXPRESSION ::=</div>
+<div>&gt;&gt; UNIT9</div>
+<div>&gt;&gt; EXPRESSION &lt;&lt; UNIT9</div>
+<div>&gt;&gt; EXPRESSION &gt;&gt; UNIT9</div>
+<div>UNIT0 ::=</div>
+<div>&gt;&gt; INT_CONSTANT</div>
+<div>&gt;&gt; UNIT0 [ EXPRESSION ]</div>
+<div>&gt;&gt; ( EXPRESSION )</div>
+<div>&gt;&gt; NAME ( OPTARGUS )</div>
+<div>&gt;&gt; &gt;&gt; 此处的NAME是一个函数名</div>
+<div>&gt;&gt; NAME</div>
+<div>&gt;&gt; &gt;&gt; 此处的NAME是一个变量名</div>
+<div>&gt;&gt; cin</div>
+<div>&gt;&gt; cout</div>
+<div>&gt;&gt; endl</div>
+<div>UNIT1 ::=</div>
+<div>&gt;&gt; UNIT0</div>
+<div>&gt;&gt; + UNIT1</div>
+<div>&gt;&gt; - UNIT1</div>
+<div>&gt;&gt; ! UNIT1</div>
+<div>UNIT2 ::=</div>
+<div>&gt;&gt; UNIT1</div>
+<div>&gt;&gt; UNIT2 * UNIT1</div>
+<div>&gt;&gt; UNIT2 / UNIT1</div>
+<div>&gt;&gt; UNIT2 % UNIT1</div>
+<div>UNIT3 ::=</div>
+<div>&gt;&gt; UNIT2</div>
+<div>&gt;&gt; UNIT3 + UNIT2</div>
+<div>&gt;&gt; UNIT3 - UNIT2</div>
+<div>UNIT4 ::=</div>
+<div>&gt;&gt; UNIT3</div>
+<div>&gt;&gt; UNIT4 &lt; UNIT3</div>
+<div>&gt;&gt; UNIT4 &lt;= UNIT3</div>
+<div>&gt;&gt; UNIT4 &gt; UNIT3</div>
+<div>&gt;&gt; UNIT4 &gt;= UNIT3</div>
+<div>UNIT5 ::=</div>
+<div>&gt;&gt; UNIT4</div>
+<div>&gt;&gt; UNIT5 == UNIT4</div>
+<div>&gt;&gt; UNIT5 != UNIT4</div>
+<div>UNIT6 ::=</div>
+<div>&gt;&gt; UNIT5</div>
+<div>&gt;&gt; UNIT6 ^ UNIT5</div>
+<div>UNIT7 ::=</div>
+<div>&gt;&gt; UNIT6</div>
+<div>&gt;&gt; UNIT7 &amp;&amp; UNIT6</div>
+<div>UNIT8 ::=</div>
+<div>&gt;&gt; UNIT7</div>
+<div>&gt;&gt; UNIT8 || UNIT7</div>
+<div>UNIT9 ::=</div>
+<div>&gt;&gt; UNIT8</div>
+<div>&gt;&gt; UNIT8 = UNIT9</div>
+<div>OPTARGUS ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; EXPRESSION ARGUS</div>
+<div>ARGUS ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; , EXPRESSION ARGUS</div>
+<div>DEFINEVARS ::=</div>
+<div>&gt;&gt; &epsilon;</div>
+<div>&gt;&gt; , DEFINEVAR DEFINEVARS</div>
+<div>DEFINEVAR ::=</div>
+<div>&gt;&gt; NAME</div>
+<div>&gt;&gt; DEFINEVAR [ INT_CONSTANT ]</div>
+<div>NAME</div>
+<div>&gt;&gt; 一个[A-Za-z_]中的元素加零或一或多个[0-9A-Za-z_]中的元素。</div>
+<div>INT_CONSTANT</div>
+<div>&gt;&gt; 一个[1-9]中的元素加零或一或多个[0-9]中的元素。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年集训队互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4020" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4020" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

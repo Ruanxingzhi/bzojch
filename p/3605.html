@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3605：[Sdoi2014]括号序列计数</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2014]括号序列计数</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2014]括号序列计数</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2014]括号序列计数                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;Alice和Bob知道，一个由空格、左括号、右括号组成的序列被称为括号序列。有一类特殊的括号序列被称为&ldquo;合法括号序列&rdquo;。已经知道：</p>
+<div>（1）&ldquo;（）&rdquo;是合法的括号序列，空串是合法的括号序列。</div>
+<div>（2）如果S1是合法的括号序列，S2是合法的括号序列，则S1与S2拼接起来的序列S1＋S2也是合法的括号序列。</div>
+<div>（3）如果S是合法的括号序列，在其左右分别插入一个左括号和一个右括号所得到的字符串&ldquo;（&rdquo;＋S1＋&ldquo;）&rdquo;也是合法的括号序列。</div>
+<div>（4）如果S是合法的括号序列，在S的任何位置（包括头尾位置）插入一个空格，得到的序列也是合法的括号序列。</div>
+<div>现在，Alice希望知道：对于某个已知的有限状态自动机中的状态s与t，存在多少以s为起点，t为终点的长度为k的合法括号序列。</div>
+<div>所谓有限状态自动机，又可以被认为是一个有向图G，由n个结点组成，每一个结点表示一个状态，且存在三类以此为起点出去的有向边，对于每一个状态（或结点）来说其出去的同一类有向边将指向同样的状态（或结点）。三类有向边分别代表三种符号：左括号&ldquo;（&rdquo;，右括号&ldquo;）&rdquo;和空格。</div>
+<div>这里，我们将状态（或结点）从0开始编号。对于第i个状态，用dfa[i][0]，dfa[i][1]，dfa[i][2]分别表示从i出发，代表了左括号、右括号和空格的那一类边指向的状态（或结点），再用dfa2[i][0]，dfa2[i][1]，dfa2[i][2]表示每一类边的个数。</div>
+<div>对于一条从s出发到t结束的路径，满足长度为k且路径经过的边对应的符号组成了一组合法的括号匹配，则称作&ldquo;满足[G,s,t,k]的合法括号序列&rdquo;。</div>
+<div>现在，Alice为Bob提供了自动机G，并提出Q组询问。对于每一组询问，Alice会给出s、t和k，她希望Bob可以告诉她满足[G,s,t,k]的合法括号序列有多少组。她只需要知道答案除以47后的余数。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>&nbsp;第一行一个整数n，表示状态数（或结点数）。</p>
+<div>之后n行，对于其中的第i行，有6个32位整数，依次为dfa[i-1][0]，dfa2[i-1][0]，dfa[i-1][1]，dfa2[i-1][1]，dfa[i-1][2]，dfa2[i-1][2]。</div>
+<div>之后一行有一个整数Q，表示Alice的询问次数。</div>
+<div>之后Q行，每一行有3个32位的整数，依次为s，t，k。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出文件有Q行。</p>
+<div>其中第i行对应了第i个询问，只有一个整数，表示满足[G,s,t,k]的合法括号序列的个数，答案只需要除以47后的余数。</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>1
+0 1 0 2 0 3
+6
+0 0 3
+0 0 4
+0 0 5
+0 0 6
+0 0 7
+0 0 8</pre><hr/><h3>样例输出</h3><pre>45
+9
+10
+2
+19
+25</pre><hr/><h3>提示</h3><p><p>&nbsp;样例说明：</p>
+<div>对于第一组询问，长度为3的合法括号序列依次有：</div>
+<div>（1）三个空格&ldquo; &nbsp; &rdquo;，则在自动机中的合法方案数为：3&times;3&times;3＝27。</div>
+<div>（2）对于&ldquo;（ ）&rdquo;、&ldquo;（） &rdquo;和&ldquo; （）&rdquo;，则在自动机中的合法方案数为：1&times;3&times;2＝6。</div>
+<div>所以总的可行方案数为：27＋3&times;6＝27＋18＝45。</div>
+<div></div>
+<div></div>
+<div>对于100％的数据，n &lt;= 2，k &lt;= 100000，Q &lt;= 10。</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3605" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3605" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

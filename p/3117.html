@@ -1,0 +1,487 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3117：[Noi1999]内存分配</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi1999]内存分配</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi1999]内存分配</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi1999]内存分配                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">内存是计算机重要的资源之一，程序运行的过程中必须对内存进行分配。 <br />
+经典的内存分配过程是这样进行的： <br />
+1. 内存以内存单元为基本单位，每个内存单元用一个固定的整数作为标识，称为地址。地址从0开始连续排列，地址相邻的内存单元被认为是逻辑上连续的。我们把从地址i开始的s个连续的内存单元称为首地址为i长度为s的地址片。 <br />
+2. 运行过程中有若干进程需要占用内存，对于每个进程有一个申请时刻T，需要内存单元数M及运行时间P。在运行时间P内（即T时刻开始，T+P时刻结束），这M个被占用的内存单元不能再被其他进程使用。 <br />
+3、假设在T时刻有一个进程申请M个单元，且运行时间为P，则： <br />
+1. 若T时刻内存中存在长度为M的空闲地址片，则系统将这M个空闲单元分配给该进程。若存在多个长度为M个空闲地址片，则系统将首地址最小的那个空闲地址片分配给该进程。 <br />
+2. 如果T时刻不存在长度为M的空闲地址片，则该进程被放入一个等待队列。对于处于等待队列队头的进程，只要在任一时刻，存在长度为M的空闲地址片，系统马上将该进程取出队列，并为它分配内存单元。注意，在进行内存分配处理过程中，处于等待队列队头的进程的处理优先级最高，队列中的其它进程不能先于队头进程被处理。 <br />
+现在给出一系列描述进程的数据，请编写一程序模拟系统分配内存的过程。 <br />
+</span></div></p><hr/><h3>输入格式</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">第一行是一个数N，表示总内存单元数（即地址范围从0到N-1）。从第二行开始每行描述一个进程的三个整数T、M、P（M &lt;= N）。最后一行用三个0表示结束。 <br />
+数据已按T从小到大排序。 <br />
+输入文件最多10000行，且所有数据都小于109。 <br />
+输入文件中同一行相邻两项之间用一个或多个空格隔开。</span></div></p><hr/><h3>输出格式</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">包括2行。 <br />
+第一行是全部进程都运行完毕的时刻。 <br />
+第二行是被放入过等待队列的进程总数。</span></div></p><hr/><h3>样例输入</h3><pre>10
+1 3 10
+2 4 3
+3 4 4
+4 1 4
+5 3 4
+0 0 0
+</pre><hr/><h3>样例输出</h3><pre>
+12
+2
+</pre><hr/><h3>提示</h3><p><div>
+<div align="center">
+<table id="table1" cellspacing="1" cellpadding="0" width="669" border="1" style="background: white; width: 501.7pt">
+    <tbody>
+        <tr style="height: 14.6pt; page-break-inside: avoid">
+            <td width="4%" rowspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 14.6pt">
+            <div align="center"><span style="font-size: medium">时</span></div>
+            <div align="center"><span style="font-size: medium">刻</span></div>
+            <div align="center"><span style="font-size: medium">T</span></div>
+            </td>
+            <td width="41%" colspan="12" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 41.24%; padding-top: 5.25pt; br: 14.6pt">
+            <div align="center"><span style="font-size: medium">内存占用情况</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 14.6pt">
+            <div align="center"><span style="font-size: medium">进程事件</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">0</span></div>
+            </td>
+            <td width="3%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">1</span></div>
+            </td>
+            <td width="4%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.8%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">2</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">3</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">4</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">5</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">6</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">7</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">8</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">9</span></div>
+            </td>
+            <td width="53%" rowspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程A申请空间（M=3, P=10）&lt;成功&gt;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>1</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>2</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: black; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b><span style="color: white">B</span></b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程B申请空间（M=4, P=3）&lt;成功&gt;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>3</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: black; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b><span style="color: white">B</span></b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程C申请空间（M=4, P=4）&lt;失败进入等待队列&gt;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>4</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: black; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b><span style="color: white">B</span></b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #cccccc; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium">D</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程D申请空间（M=1, P=4）&lt;成功&gt;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>5</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #e0e0e0; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>C</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #cccccc; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium">D</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程B结束，释放空间</span></div>
+            <div align="center"><span style="font-size: medium">进程C从等待队列取出，分配空间</span></div>
+            <div align="center"><span style="font-size: medium">进程E申请空间（M=3, P=4）&lt;失败进入等待队列&gt;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>6</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #e0e0e0; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>C</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #cccccc; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium">D</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>7</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #e0e0e0; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>C</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #cccccc; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium">D</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>8</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="15%" colspan="4" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #e0e0e0; padding-bottom: 5.25pt; width: 15.92%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>C</b></span></div>
+            </td>
+            <td width="12%" colspan="3" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #a6a6a6; padding-bottom: 5.25pt; width: 12.8%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>E</b></span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程D结束，释放空间</span></div>
+            <div align="center"><span style="font-size: medium">进程E从等待队列取出，分配空间</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>9</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="12%" colspan="3" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #a6a6a6; padding-bottom: 5.25pt; width: 12.8%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>E</b></span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程C结束，释放空间</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>10</b></span></div>
+            </td>
+            <td width="12%" colspan="5" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #f3f3f3; padding-bottom: 5.25pt; width: 12.24%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>A</b></span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="12%" colspan="3" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #a6a6a6; padding-bottom: 5.25pt; width: 12.8%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>E</b></span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+        </tr>
+        <tr style="height: 13.5pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium"><b>11</b></span></div>
+            </td>
+            <td width="5%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.3%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.24%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 13.5pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="12%" colspan="3" style="padding-right: 5.25pt; padding-left: 5.25pt; background: #a6a6a6; padding-bottom: 5.25pt; width: 12.8%; padding-top: 5.25pt; height: 13.5pt">
+            <div align="center"><span style="font-size: medium"><b>E</b></span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 13.5pt">
+            <div align="center"><span style="font-size: medium">进程A结束，释放空间</span></div>
+            </td>
+        </tr>
+        <tr style="height: 21.35pt; page-break-inside: avoid">
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.78%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium"><b>12</b></span></div>
+            </td>
+            <td width="5%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.42%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" colspan="2" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.3%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.24%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="4%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 4.74%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="3%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 3.58%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="5%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 5.34%; padding-top: 5.25pt; br: 21.35pt">
+            <div><span style="font-size: medium">&nbsp;</span></div>
+            </td>
+            <td width="53%" style="padding-right: 5.25pt; padding-left: 5.25pt; padding-bottom: 5.25pt; width: 53.42%; padding-top: 5.25pt; br: 21.35pt">
+            <div align="center"><span style="font-size: medium">进程E结束，释放空间</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3117" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3117" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

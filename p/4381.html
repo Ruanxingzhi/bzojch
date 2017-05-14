@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4381：[POI2015]Odwiedziny</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2015]Odwiedziny</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2015]Odwiedziny</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [POI2015]Odwiedziny                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>给定一棵n个点的树，树上每条边的长度都为1，第i个点的权值为a[i]。<br />
+Byteasar想要走遍这整棵树，他会按照某个1到n的全排列b走n-1次，第i次他会从b[i]点走到b[i+1]点，并且这一次的步伐大小为c[i]。<br />
+对于一次行走，假设起点为x，终点为y，步伐为k，那么Byteasar会从x开始，每步往前走k步，如果最后不足k步就能到达y，那么他会一步走到y。<br />
+请帮助Byteasar统计出每一次行走时经过的所有点的权值和。</p></p><hr/><h3>输入格式</h3><p><p>第一行包含一个正整数n(2&lt;=n&lt;=50000)。表示节点的个数。<br />
+第二行包含n个正整数，其中第i个数为a[i](1&lt;=a[i]&lt;=10000)，分别表示每个点的权值。<br />
+接下来n-1行，每行包含两个正整数u,v(1&lt;=u,v&lt;=n)，表示u与v之间有一条边。<br />
+接下来一行包含n个互不相同的正整数，其中第i个数为b[i](1&lt;=b[i]&lt;=n)，表示行走路线。<br />
+接下来一行包含n-1个正整数，其中第i个数为c[i](1&lt;=c[i]&lt;n)，表示每次行走的步伐大小。</p></p><hr/><h3>输出格式</h3><p><p>包含n-1行，每行一个正整数，依次输出每次行走时经过的所有点的权值和</p></p><hr/><h3>样例输入</h3><pre>5
+1 2 3 4 5
+1 2
+2 3
+3 4
+3 5
+4 1 5 2 3
+1 3 1 1</pre><hr/><h3>样例输出</h3><pre>10
+6
+10
+5</pre><hr/><h3>提示</h3><p><p>鸣谢Claris</p></p><hr/><h3>题目来源</h3><p>鸣谢Claris</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4381" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4381" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

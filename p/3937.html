@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3937：Marketing network</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Marketing network</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Marketing network</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Marketing network                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;&ldquo;世界充满着各种if，我们存在着的这个世界也不过是为数众多的if的结果中的一个，而未来则更是由于无限的if而混沌流动着的世界。&rdquo;</p>
+<div>在某一条世界线中，你可能正在经营一个跨国公司，想想是不是有点激动呢。在那一个世界中，你正被营销网络的设计问题所困扰。</div>
+<div>你的跨国公司在n个国家设立了销售网点，国家由1到n编号，这n个国家由m条双向航线连接。如果把国家看作结点把航线看作边，可以抽象成一个无向图。</div>
+<div>你已经在其中的S个国家设立了分公司。你会买下一些航线的VIP以加速你的商品运输。</div>
+<div>无论这条世界线出了什么偏差，你是OIer这个事实是不会改变的，所以你对VIP航线购买方案有着苛刻的要求：</div>
+<div>以任意一个国家作为出发点，都无法只经过VIP航线且不经过重复的国家回到出发点。即购买的VIP航线形成原图的一个生成森林。</div>
+<div>从任意一个分公司出发都可以只经过VIP航线到达另一个分公司。</div>
+<div>每条航线都有一个权值，表示购买该航线的VIP的费用。敏锐的你一定一眼发现了完成目标的最小总花费。但是这样不够任性不够土豪，这势必会影响公司未来的发展。于是机智的你决定求出总费用前k小的VIP航线购买方案。</div>
+<div>两个VIP航线购买方案被认为是不同的，当且仅当存在至少一条航线只在其中一个购买方案中被买为VIP。</div>
+<div>&ldquo;if只是单纯的if罢了。就算有这样一个存在着goodif的平行世界，人类也不是能简单地跨过世界线，去到那里的。&rdquo;</div>
+<div>但是小小地遐想一下还是很美好的，所以就请你解决这个问题吧。</div>
+<div>简要题意：求出前k小的生成森林，要求给定的S个点在森林中两两可达。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>第一行，四个正整数n,m,S,k。</p>
+<div>第二行，S个正整数，表示分公司所在的国家，保证读入的国家编号互不相同。</div>
+<div>接下来m行，每行三个正整数ui，vi，ci，表示国家ui与vi之间有一条费用为ci的航线。保证1&le;ui,vi&le;n，且ui&ne;vi。</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;输出k行，每行一个正整数，第i行的正整数表示总费用第i小的VIP航线购买方案的总费用。</p></p><hr/><h3>样例输入</h3><pre>6 9 3 6
+3 1 5
+1 2 1
+1 3 2
+3 2 2
+2 4 5
+3 4 5
+3 5 2
+3 6 2
+6 4 4
+5 6 1</pre><hr/><h3>样例输出</h3><pre>4
+5
+5
+5
+5
+6</pre><hr/><h3>提示</h3><p><p>&nbsp;除题面样例外的，航线和分公司所在国家均是在n,m,S固定的情况下均匀随机生成的。对于所有航线，ci是从1到100的整数中均匀随机选取的。</p>
+<div>保证一定存在至少k种不同的VIP航线购买方案。</div>
+<div>N&lt;=50,M&lt;=100,S&lt;=15,K&lt;=50</div>
+<div></div></p><hr/><h3>题目来源</h3><p>2015年集训队互测 By Stilwell</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3937" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3937" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

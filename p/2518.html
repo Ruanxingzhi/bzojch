@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2518：[Shoi2010]滚动的正四面体</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2010]滚动的正四面体</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2010]滚动的正四面体</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Shoi2010]滚动的正四面体                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">正四面体总共有</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">4</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">个面，每个面都是一个正三角形。现在把它的一个面标记上字母</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">，如</span>图 <span lang="EN-US" style="mso-no-proof: yes">3</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">中所示，</span></font><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">标记在底面上：</font></span></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体"><img height="129" alt="" width="129" src="../file/2518_0.jpg" /></font></span></font></p>
+<p></p>
+<p></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">于是，这个正四面体的滚动过程就可以用一个只包含&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">B</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;的字符串来描述。初始时，正四面体的</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">面朝下，现在</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">将给这个正四面体一串滚动指令&mdash;&mdash;当然就是一个这样的字符串&mdash;&mdash;让这个正四面体每秒滚动一下。也就是说，第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">秒内正四面体</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">面朝下，第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">秒末执行第一条指令，第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">2</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">秒末执行第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">2</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">条指令，依次类推，直至将整个指令串执行完毕。</font></span></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"></p>
+<p></p>
+<p></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><img alt="" src="../file/2518_1.jpg" /></p>
+<p></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">你的任务就是当</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">询问你的时候告诉他：这个正四面体在第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒到第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒内</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">面有多少秒朝着地面。当然，</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">可能因为对这个正四面体的滚动路径不满意，他随时会修改他的某一条指令。因此你的程序应该能执行下面两个操作：</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt 64.5pt; text-indent: -36pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 64.5pt; mso-list: l0 level1 lfo1; tab-stops: list 64.5pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore">(1)<span style="font: 7pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">接受</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">修个第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">i</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">条指令的信息</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+<p class="MsoPlainText" style="margin: 0cm 0cm 0pt 64.5pt; text-indent: -36pt; line-height: 150%; mso-list: l0 level1 lfo1; tab-stops: list 64.5pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore">(2)<span style="font: 7pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">回答</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">的&ldquo;在第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒到第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒内</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">面有多少秒朝着地面&rdquo;的询问</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">例如，假如原指令串为&ldquo;</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">LLLLB</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;，那么第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">、</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">4</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">、</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">6</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒内</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">面是朝下的。此时，如果</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">向你询问第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">3</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒到第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">6</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒的情况，你就应该回答&ldquo;</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">2</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;。而</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">SECSA</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">将第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">3</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">条指令修改为&ldquo;</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;的话，指令串就变成了&ldquo;</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">LLRLB</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;，那么正四面体就只有在第</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">、</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">5</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">秒内</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">面朝下了。如</span>图 <span lang="EN-US" style="mso-no-proof: yes">5</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">所示：</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"></p>
+<p></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">一个正四面体的一次滚动显然有</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">3</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">个方向可以选择：向左（</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">）、向</span><v:shapetype id="_x0000_t202" path="m,l,21600r21600,l21600,xe" o:spt="202" coordsize="21600,21600"> <v:stroke joinstyle="miter"></v:stroke><v:path o:connecttype="rect" gradientshapeok="t"></v:path></v:shapetype></font><v:shape id="_x0000_s1026" stroked="f" type="#_x0000_t202" style="margin-top: 61143.9pt; z-index: 1; left: 0px; margin-left: 134217.727pt; width: 1in; text-indent: 0px; position: absolute; height: 12pt; text-align: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text"><v:textbox inset="0,0,0,0" style="mso-next-textbox: #_x0000_s1026; mso-fit-shape-to-text: t">
+<table cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td style="border-right: #ece9d8; border-top: #ece9d8; border-left: #ece9d8; border-bottom: #ece9d8; background-color: transparent">
+            <div>
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</v:textbox><w:wrap type="" side=""></w:wrap></v:shape><v:shape id="_x0000_s1027" stroked="f" type="#_x0000_t202" style="margin-top: 61143.9pt; z-index: 2; left: 0px; margin-left: 134217.727pt; width: 1in; text-indent: 0px; position: absolute; height: 12pt; text-align: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text"><v:textbox inset="0,0,0,0" style="mso-next-textbox: #_x0000_s1027; mso-fit-shape-to-text: t">
+<table cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td style="border-right: #ece9d8; border-top: #ece9d8; border-left: #ece9d8; border-bottom: #ece9d8; background-color: transparent">
+            <div>
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</v:textbox><w:wrap type="" side=""></w:wrap></v:shape><v:shape id="_x0000_s1028" stroked="f" type="#_x0000_t202" style="margin-top: 61143.9pt; z-index: 3; left: 0px; margin-left: 134217.727pt; width: 1in; text-indent: 0px; position: absolute; height: 12pt; text-align: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text"><v:textbox inset="0,0,0,0" style="mso-next-textbox: #_x0000_s1028; mso-fit-shape-to-text: t">
+<table cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td style="border-right: #ece9d8; border-top: #ece9d8; border-left: #ece9d8; border-bottom: #ece9d8; background-color: transparent">
+            <div>
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</v:textbox><w:wrap type="" side=""></w:wrap></v:shape><v:shape id="_x0000_s1029" stroked="f" type="#_x0000_t202" style="margin-top: 61143.9pt; z-index: 4; left: 0px; margin-left: 134217.727pt; width: 1in; text-indent: 0px; position: absolute; height: 12pt; text-align: left; mso-position-horizontal-relative: text; mso-position-vertical-relative: text"><v:textbox inset="0,0,0,0" style="mso-next-textbox: #_x0000_s1029; mso-fit-shape-to-text: t">
+<table cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td style="border-right: #ece9d8; border-top: #ece9d8; border-left: #ece9d8; border-bottom: #ece9d8; background-color: transparent">
+            <div>
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</v:textbox><w:wrap type="" side=""></w:wrap></v:shape><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">右（</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">）、向后（</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">B</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">）。如</span>图 <span lang="EN-US" style="mso-no-proof: yes">4</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">所示：</span></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><img alt="" src="../file/2518_2.jpg" /></span></font></p></p><hr/><h3>输入格式</h3><p><p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">输入文件的第一行是一个整数</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">n</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">，表示指令串中包含的指令条数。</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">输入文件的第二行是一个字符串，共包含</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">n</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">个字符，每个字符是&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">B</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;之一，表示初始的指令串。</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">输入文件的第三行是一个整数</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">m</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">，表示你的程序需要处理的操作总数。</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">接下去</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">m</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">行，每行描述一个操作，为以下两种格式之一：</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt 64.5pt; text-indent: -36pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 64.5pt; mso-list: l0 level1 lfo1; tab-stops: list 64.5pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore"><font size="3">(1)</font><span style="font: 7pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><font size="3"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">0 i c</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">：表示把第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">i</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">个操作改成</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">c</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">，</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">c</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">为&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">&rdquo;&ldquo;</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">B</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">&rdquo;之一</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt 64.5pt; text-indent: -36pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 64.5pt; mso-list: l0 level1 lfo1; tab-stops: list 64.5pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore"><font size="3">(2)</font><span style="font: 7pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><font size="3"><st1:chmetcnv w:st="on" unitname="l" sourcevalue="1" hasspace="True" negative="False" numbertype="1" tcsc="0"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1 L</span></st1:chmetcnv><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"> R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">：表示询问第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">L</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">秒到第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">R</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">秒内，</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><font face="宋体"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">面有多少秒朝下</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></font></p>
+<p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体" size="3">输入文件保证：<span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 宋体; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">1&lt;=i&lt;=N,1&lt;=L&lt;=R&lt;=N+1</span></font></span></p></p><hr/><h3>输出格式</h3><p><p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体" size="3">输出文件对于每一个询问操作依次输出你的程序给出的回答，每个回答为一个整数，占一行。</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>5
+LLLLB
+3
+1 3 6
+0 3 R
+1 3 6
+</pre><hr/><h3>样例输出</h3><pre>2
+1
+</pre><hr/><h3>提示</h3><p><p class="MsoPlainText" style="margin: 6pt 0cm 12pt; text-indent: 21pt; line-height: 150%; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: 1.0gd; mso-para-margin-left: 0cm; mso-char-indent-count: 2.0"><font size="3"><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">第</font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'"><font face="宋体">个样例就是问题描述中的例子</font></span></font></p>
+<p></p>
+<p></p>
+<p></p>
+<p class="MsoPlainText" style="margin: 0cm 0cm 0pt; text-indent: 28.5pt; line-height: 150%"><span lang="EN-US">1&lt;=N&lt;=60000,1&lt;=m&lt;=150000</span></p></p><hr/><h3>题目来源</h3><p>Day1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2518" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2518" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

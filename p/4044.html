@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4044：[Cerc2014] Virus synthesis</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] Virus synthesis</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] Virus synthesis</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2014] Virus synthesis                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Viruses are usually bad for your health. How about fighting them with... other viruses? In&nbsp;</div>
+<div>this problem, you need to find out how to synthesize such good viruses.&nbsp;</div>
+<div>We have prepared for you a set of strings of the letters A, G, T and C. They correspond to the&nbsp;</div>
+<div>DNA nucleotide sequences of viruses that we want to svnthesize, using the following operations:&nbsp;</div>
+<div>* Adding a nucleotide either to the beginning or the end of the existing sequence&nbsp;</div>
+<div>* Replicating the sequence, reversing the copied piece, and gluing it either to the beginmng or&nbsp;</div>
+<div>to the end of the original (so that e.g., AGTC can become AGTCCTGA or CTGAAGTC).&nbsp;</div>
+<div>We're concerned about efficiency, since we have very many such sequences, some of them verv&nbsp;</div>
+<div>long. Find a wav to svnthesize them in a mmimum number of operations.&nbsp;</div>
+<div>你要用ATGC四个字母用两种操作拼出给定的串：&nbsp;</div>
+<div>1.将其中一个字符放在已有串开头或者结尾&nbsp;</div>
+<div>2.将已有串复制，然后reverse，再接在已有串的头部或者尾部&nbsp;</div>
+<div>一开始已有串为空。求最少操作次数。&nbsp;</div>
+<div>len&lt;=100000&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The first line of input contains the number of test cases T. The descriptions of the test cases&nbsp;</div>
+<div>follow:&nbsp;</div>
+<div>Each test case consists of a single line containing a non-empty string. The string uses only&nbsp;</div>
+<div>the capital letters A, C, G and T and is not longer than 100 000 characters.&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>For each test case, output a single line containing the minimum total number of operations&nbsp;</div>
+<div>
+<div>necessary to construct the given sequence.</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4
+AAAA
+AGCTTGCA
+AAGGGGAAGGGGAA
+AAACAGTCCTGACAAAAAAAAAAAAC</pre><hr/><h3>样例输出</h3><pre>3
+8
+6
+18</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4044" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4044" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

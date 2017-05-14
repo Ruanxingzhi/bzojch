@@ -1,0 +1,307 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2290：【POJ Challenge】翻版玛丽</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">【POJ Challenge】翻版玛丽</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">【POJ Challenge】翻版玛丽</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                【POJ Challenge】翻版玛丽                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：1024MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p></p>
+<p>
+<dd>
+<div>
+<p>lqp18_31和1tthinking虽然是两个性格完全不同的人, 但是他们都喜欢玩 'Super Mario Bros'.</p>
+<p>一天lqp18_31和1tthinking正玩得高兴，突然发现他们的Mac坏掉了。于是他们求助ftiasch，想借他的电脑。但是由于ftiasch使用的是Ubuntu，没有super mario bros这个游戏，ftiasch打算写一个mario给两个可怜的小朋友玩。</p>
+<p>不过写着写着，ftiasch就觉得不好玩了，跑去找她的姐妹们玩了。你能不能帮助ftiasch写这个游戏？</p>
+<p><img alt="" src="http://media.openjudge.cn/images/g3200_1.png" /></p>
+</div>
+<p></p>
+</dd>
+</p></p><hr/><h3>输入格式</h3><p><p></p>
+<p>
+<dt>&nbsp; </dt>
+<dd>
+<div>
+<p>第一行两个整数 <em>R</em> and <em>C</em>, 表示游戏地图的大小 (1 &le; <em>R</em>, <em>C</em> &le; 300)。</p>
+<p>第二行两个整数 <em>x<sub>mario</sub></em> and <em>y<sub>mario</sub></em>, t表示small mario所在的坐标 (0 &le; <em>x<sub>mario</sub></em> &lt; <em>R</em>, 0 &le; <em>y<sub>mario</sub></em> &lt; <em>C</em>).</p>
+<p>第三行两个整数 <em>x<sub>mush</sub></em> and <em>y<sub>mush</sub></em>, 表示唯一一个蘑菇的坐标 (如果 <em>x<sub>mush</sub></em> or <em>y<sub>mush</sub></em> 等于 -1, 表示不存在)。</p>
+<p>第四行四个整数 <em>x<sub>tube1</sub></em>, <em>y<sub>tube1</sub></em>, <em>x<sub>tube2</sub></em>, <em>y<sub>tube2</sub></em>, 表示两个水管的坐标。 (if <em>x<sub>tube1</sub></em> or <em>y<sub>tube1</sub></em> or <em>x<sub>tube2</sub></em> or <em>y<sub>tube2</sub></em> 等于 -1, 表示不存在).</p>
+<p>第五行一个整数 <em>n</em>, 表示block的数量，然后是 <em>n</em> 对整数， 表示block[i]的坐标。</p>
+<p>第六行一个整数 <em>m</em>, 表示coin的数量，然后是 <em>m</em> 对整数， 表示coin[i]的坐标。</p>
+<p>第七行一个字符串，表示动作序列。</p>
+<p>下面给出所有物体的像素图形：</p>
+<table>
+    <tbody>
+        <tr>
+            <td>Small mario</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br />     ********        <br />    ************     <br />    ####....#.       <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*#######       <br /> ####*******######   <br />...#***.****.*###....<br />....**********##.....<br />....****    *****....<br />  ####        ####   <br />######        ###### <br /></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Big mario</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br />     ********        <br />    **************   <br />    ####....#.       <br />  #..##.....#.....   <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*######        <br />  ####*#####*#####   <br />######*******####### <br />...#***.****.*###....<br />....**********##.....<br />...**************....<br />    ****    ****     <br />  ####        ####   <br />######        ###### <br /></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Mushroom</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br />   ########   <br /> ##.******.## <br />##...****...##<br />#............#	<br />#..########..#<br />###..#..#..###<br />  #..#..#..#  <br />  #........#  <br />   ########   <br /></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Tube</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br />####################<br />#------------------#<br />#------------------#<br />####################<br />    #----------#    <br />    #----------#    <br />    #----------#    <br />    #----------#        <br />    ############    <br /></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Coin</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br /> ### <br />#...#<br />#.#.#<br />#.#.#<br />#...#<br /> ### <br /></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Block</td>
+            <td>
+            <pre style="font-family: monospace; white-space: pre"><br />##############<br />#...#......#.#<br />##############<br />#..#....#....#<br />##############<br />#.....#......#<br />##############<br />#.#..#....#..#<br />##############<br /></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>保证输入不会重叠，且mario一开始脚下一定有砖块。 重叠指有非空格重叠。</p>
+<p>下面是重叠：</p>
+<br />
+<br />
+<pre style="font-family: monospace; white-space: pre"><br />##############<br />#...#......#.#<br />##############<br />#..#....#....#<br />##############<br />#.....#......#<br />##############<br />#.#..#....#..#<br />##############**     <br />    ####....#.       <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*#######       <br /> ####*******######   <br />...#***.****.*###....<br />....**********##.....<br />....****    *****....<br />  ####        ####   <br />######        ###### <br /></pre>
+<p>下面不是重叠：</p>
+<pre style="font-family: monospace; white-space: pre"><br />                 ##############<br />                 #...#......#.#<br />                 ##############<br />                 #..#....#....#<br />                 ##############<br />                 #.....#......#<br />     ********    ##############    <br />    ************ #.#..#....#..#    <br />    ####....#.   ##############    <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*#######       <br /> ####*******######   <br />...#***.****.*###....<br />....**********##.....<br />....****    *****....<br />  ####        ####   <br />######        ###### <br /></pre>
+<p>字符串包含 'D','L','R','P'.</p>
+<p>R：如果向右不会导致mario和某个block、tube重叠，mario向右。</p>
+<p>L：如果向左不会导致mario和某个block、tube重叠，mario向左。</p>
+<p>D：如果mario脚下是某个tube，mario到达另一个tube的正上方。</p>
+<p>Mario 在水管上方：</p>
+<pre style="font-family: monospace; white-space: pre"><br />     ********        <br />    ************     <br />    ####....#.       <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*#######       <br /> ####*******######   <br />...#***.****.*###....<br />....**********##.....<br />....****    *****....<br />  ####        ####   <br />######        ###### <br />####################<br />#------------------#<br />#------------------#<br />####################<br />    #----------#    <br />    #----------#    <br />    #----------#    <br />    #----------#        <br />    ############    <br /></pre>
+<p>水管不在 mario 的脚下:</p>
+<pre style="font-family: monospace; white-space: pre"><br />     ********        <br />    ************     <br />    ####....#.       <br />  #..###.....##....  <br />  ###.......######   <br />     ...........     <br />    ##*#######       <br /> ####*******######   <br />...#***.****.*###....<br />....**********##.....<br />....****    *****....<br />  ####        ####   <br />######        ###### <br /> ####################<br /> #------------------#<br /> #------------------#<br /> ####################<br />     #----------#    <br />     #----------#    <br />     #----------#    <br />     #----------#        <br />     ############    <br /></pre>
+<p>当mario和mushroom重叠，mario会变大。且mushroom消失。</p>
+<p>当mario和金币重叠，mario会获得100分。且coin消失。</p>
+<p>如果mario脚下没有砖块或者水管，它会不断往下掉。</p>
+<p>如果当前mario到达了地图的底部，且还是没有block和tube，mario就输了。必须输出：</p>
+<br />
+<br />
+<pre style="font-family: monospace; white-space: pre"><br />....#####.......#........#...#..#####.........###...#.....#..#####.......#####.....<br />...#...........#.#......##..##..#............#...#..#....#...#..........#.....#...<br />...#..........#..#.....#.#.#.#..#####........#...#..#...#....#####.....#######...<br />...#..###... #####....#..##..#..#............#...#..#..#.....#........#..#......<br />...#....#...#....#...#...#...#..#............#...#..#.#......#.......#....#....<br />....###.#..#.....#..#........#..#####.........###...##.......#####..#......#..<br /></pre>
+</div>
+</dd>
+<dd>
+<p></p>
+</dd>
+</p></p><hr/><h3>输出格式</h3><p><p></p>
+<p>
+<dd>
+<p>对于每个P，输出当前的地图以及一行得分情况 &quot;Mario : ? points&quot;。P与P之间输出一个空行</p>
+</dd>
+<dd>
+<p></p>
+</dd>
+</p></p><hr/><h3>样例输入</h3><pre>100 150
+9 0
+-1 -1
+0 42 0 90
+4 0 0 0 14 0 28 0 76
+5 12 28 12 62 12 76 12 90 12 42
+RRRRRRRRRRRP
+</pre><hr/><h3>样例输出</h3><pre>                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                ********                                                                                                                              
+               ************                                                                                                                           
+               ####....#.                                                                                                                             
+             #..###.....##....                                                                                                                        
+             ###.......######              ###                 ###           ###           ###                                                        
+                ...........               #...#               #...#         #...#         #...#                                                       
+               ##*#######                 #.#.#               #.#.#         #.#.#         #.#.#                                                       
+            ####*******######             #.#.#               #.#.#         #.#.#         #.#.#                                                       
+           ...#***.****.*###....          #...#               #...#         #...#         #...#                                                       
+           ....**********##.....           ###                 ###           ###           ###                                                        
+           ....****    *****....                                                                                                                      
+             ####        ####                                                                                                                         
+           ######        ######                                                                                                                       
+##############################################################              ##################################                                        
+#...#......#.##...#......#.##...#......#.##------------------#              #...#......#.##------------------#                                        
+###########################################------------------#              ###############------------------#                                        
+#..#....#....##..#....#....##..#....#....#####################              #..#....#....#####################                                        
+##########################################    #----------#                  ##############    #----------#                                            
+#.....#......##.....#......##.....#......#    #----------#                  #.....#......#    #----------#                                            
+##########################################    #----------#                  ##############    #----------#                                            
+#.#..#....#..##.#..#....#..##.#..#....#..#    #----------#                  #.#..#....#..#    #----------#                                            
+##########################################    ############                  ##############    ############                                            
+Mario : 100 points
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2290" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2290" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

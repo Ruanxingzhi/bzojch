@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4334：JSOI2012 铁拳</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JSOI2012 铁拳</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JSOI2012 铁拳</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                JSOI2012 铁拳                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>经过了可怕的第三次世界大战后，国家政府崩溃，各大财团趁机夺取掌控世界。长年战争后，八大财团幸存并割据一方，其中最强的当属掌控北美的铁拳。&nbsp;</div>
+<div>在铁拳财团所维护的文明区域中，有一项最为光荣、重要的赛事&mdash;&mdash;Iron Fist，也就是铁拳大赛。IF中云集了世界各地各财团鼎力资助的世外高手，只为了赢得IF Champion，得到无上的荣耀，当然还有随之而来的权力。本来一切秩序井然，但一个来自贫民窟的少年风间仁意外地在海选中赢了IF正式选手，获得了决赛资格，从此格局被打乱&hellip;&hellip;&nbsp;</div>
+<div>为了应对这突如其来的变数，IF管理层决定先对联盟中所有的选手进行评估，以更好地掌握大局。&nbsp;</div>
+<div></div>
+<div>已知最近m届比赛出现过的n位选手，背后都有着各自财团的资助，并且签下了合同。由于这是各财团的高度机密，合同的具体细节无从得知，但铁拳财团的间谍们通过各种渠道得知了每个选手的薪金范围（显然薪金是非负数）。&nbsp;</div>
+<div>对于最近m届的IF比赛（从1开始编号），每一届联盟都会进行清算，通过国际金融手段准确计算出这一届联盟选手身价总和的变化。每一届中，会有一些新选手加入，也会有部分选手在比赛中丧失了战斗能力，而被踢出联盟，流放到贫民窟。&nbsp;</div>
+<div>现在给出联盟中n位选手的身价范围，以及他们 进入联盟的届数（0表示在m+1届以前就已经是联盟选手） 和 离开联盟的届数（0表示是现役选手）。同时给出最近m届中，每一届联盟选手身价总和减去上一届的值。&nbsp;</div>
+<div>请你根据现有信息，尽可能准确地给出每个选手可能的薪金范围。各选手之间的薪金范围可以不同时成立，但对于一位选手的范围中的每一个数，都必须至少存在一种合法方案使该选手能得到相应薪金，而且这个范围跨度要尽可能大。&nbsp;</div>
+<div>如果输入信息有误，请输出-1，表示无解。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行一个正整数m，意义见上（下同）。&nbsp;</div>
+<div>第二行包含m个整数，第i个表示第i届中 选手身价总和 的变化情况。&nbsp;</div>
+<div>第三行一个正整数n。&nbsp;</div>
+<div>接下来n行，每行包含四个整数，分别表示 身价下限 、 身价上限 、 出道届数 、 退役届数，细节请参照上文。&nbsp;</div>
+<div>保证出道时间严格比退役时间小（0除外）。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>如果输入信息有误，仅输出一行一个整数&ldquo;-1&rdquo;（不含双引号）。&nbsp;</div>
+<div>否则输出n行，每行两个实数，第i行表示第i个选手实际身价的准确范围。&nbsp;</div>
+<div>保留两位小数，需要与标准答案完全相同才得分。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+5 -1
+3
+1 4 1 0
+2 3 1 0
+1 5 1 2</pre><hr/><h3>样例输出</h3><pre>1.00 2.00
+2.00 3.00
+1.00 1.00</pre><hr/><h3>提示</h3><p><div>第二届只有3号离开了，可以锁定3号的薪金是1。&nbsp;</div>
+<div>如此一来，1号和2号薪金之和为4，那么1号最少能拿1，最多能拿2；2号最少能拿到2，最多能拿到3。&nbsp;</div>
+<div></div>
+<div>对于100%的数据，n&le;200，m&le;100，给定薪金范围不超过20000。&nbsp;</div>
+<div></div>
+<div>应上传者要求，此题不公开，如有异议，请提出.</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4334" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4334" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

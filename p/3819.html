@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3819：Breaking Bomber</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Breaking Bomber</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Breaking Bomber</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Breaking Bomber                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>药剂师 Luo 是液态爆炸物方面的专家，在他的实验室里有 n 类液态药剂，每一类液态药剂都有很多副，这些药剂由四种化学元素组成, 这里依次称之为 alpha, beta, gamma, delta, 每一类药剂都只由这四种液态化学元素组成，这里我们认为第 i 类药剂依次含有的这四种元素 ai，bi，ci，di 克.</div>
+<div>药剂师 Luo 经常收到两类客户要求:</div>
+<div>第一类是要求混合一副药剂, 依次含有 A, B, C, D 克的 alpha, beta, gamma, delta 元素。</div>
+<div>第二类是要求配制出能在特定环境下爆炸的药剂，环境参数为 A, B, C, D，如果一副药剂含有 a, b, c, d 克指定元素，那么当 A&sdot;a+B&sdot;b+C&sdot;c+D&sdot;d&ge;0 时，该药剂可以在此环境下引爆。</div>
+<div>当药剂师 Luo 在混合两副药剂的时候，他可以从两副药剂中称出任意克然后进行混合。</div>
+<div>显然有一些要求药剂师 Luo 是不可能完成的，Luo 需要你来帮忙计算这个要求是否可以完成。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行一个数 N, 表示 Luo 有的药剂种类。</div>
+<div>接下来 N 行, 每行 4 个数 ai, bi, ci, di，代表了这个药剂四种元素的含量。</div>
+<div>接下来一行一个数 M, 代表客户请求数。</div>
+<div>接下来 M 行每行五个数 q,A,B,C,D。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>一共 M 行，依次代表每个请求是否可以完成，如果可以完成则输出 &ldquo;Y&rdquo;，否则输出 &ldquo;N&rdquo;。 (不包含引号)</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4
+1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1
+4
+1 1 2 3 4
+1 2 1 3 4
+2 1 1 1 1
+2 -1 -1 -1 -1</pre><hr/><h3>样例输出</h3><pre>Y
+Y
+Y
+N</pre><hr/><h3>提示</h3><p><div>对于 100% 的数据 4&le;N&le;50000,M&le;100000。</div>
+<div></div>
+<div>ai,bi,ci,di,A,B,C,D 的绝对值小于 10^9。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年国家集训队测试</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3819" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3819" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

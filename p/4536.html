@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4536：最大异或和II</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">最大异或和II</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">最大异或和II</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                最大异或和II                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>　　我有一个数列a[1],a[2],&hellip;,a[n]，每个a[i]是小于2^m的正整数。显然正整数的二进制表示下至少有一个1，<br />
+现在，我希望您能把每个数仅保留二进制下其中的某一位1，并最大化这个数列中所有数的异或和。例如，5的二进<br />
+制表示为101，那么5就只能变为4（保留从左往右第一个1，即变为100），或者1（保留另一个1，即变为001），11<br />
+的二进制表示为1011，那么它可以变为8（1000）、2（0010）、1（0001）中的某一个。</p></p><hr/><h3>输入格式</h3><p><p>　　第一行一个正整数T，表示数据组数。对于每组数据：第一行一个正整数n。接下来一行n个正整数，表示a数组<br />
+1 &le; T &le; 5, 1 &le; n &le; 100, 1 &le; m &le; 60, 对所有i，有1 &le; a[i] &le; 2^m - 1</p></p><hr/><h3>输出格式</h3><p><p>　　对于每组数据输出一行一个数，表示最大的异或和</p></p><hr/><h3>样例输入</h3><pre>5
+7
+1 2 32 64 1024 2147483648 2147483648
+4
+15 15 15 1515 15 15 15
+5
+13 9 38 99 4413 9 38 99 44
+10
+656 546 64 72 512 256 768 384 450 512
+50
+12591291 3364543 629743 169925631 172761087 328110 1301503 178655 5898239 8900607 2195167 21010431 5529071 99775 68719477090 1074130671 6592 67133439 35 65711 34143 137439085183 327 268442559 87262719 8198 9843197 67292 135852031 8656895 44671 9645055 376319 131 403201023 360706 331111 1064823 2173855 318839 1148243967 139998 16777216 1086201855 16 33556783 2687 2 84033 105655</pre><hr/><h3>样例输出</h3><pre>1123
+15
+110
+1018
+207769042943
+　　样例说明:对于第一组数据，每个数二进制下都只有一个位是1，所以唯一的一个方案就是全部保持原样，答案
+这七个数的异或和，即1123。对于第二组数据，可以变为1 2 4 8或者它的任意排列。对于第三组数据，一种最优
+方案是变为4,8,2,64,32。对于第四组数据，一种最优方案是变为16,32,64,8,512,256,512,128,2,512。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>By matthew99</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4536" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4536" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

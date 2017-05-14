@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1705：[Usaco2007 Nov]Telephone Wire 架设电话线</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Nov]Telephone Wire 架设电话线</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2007 Nov]Telephone Wire 架设电话线</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2007 Nov]Telephone Wire 架设电话线                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">最近，Farmer John的奶牛们越来越不满于牛棚里一塌糊涂的电话服务 于是，她们要求FJ把那些老旧的电话线换成性能更好的新电话线。 新的电话线架设在已有的N(2 &lt;= N &lt;= 100,000)根电话线杆上， 第i根电话线杆的高度为height_i米(1 &lt;= height_i &lt;= 100)。 电话线总是从一根电话线杆的顶端被引到相邻的那根的顶端 如果这两根电话线杆的高度不同，那么FJ就必须为此支付 C*电话线杆高度差(1 &lt;= C &lt;= 100)的费用。当然，你不能移动电话线杆， 只能按原有的顺序在相邻杆间架设电话线。Farmer John认为 加高某些电话线杆能减少架设电话线的总花费，尽管这项工作也需要支出一定的费用。 更准确地，如果他把一根电话线杆加高X米的话，他得为此付出X^2的费用。 请你帮Farmer John计算一下，如果合理地进行这两种工作，他最少要在这个电话线改造工程上花多少钱。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* 第1行: 2个用空格隔开的整数：N和C </span></p>
+<p><span style="font-size: medium">* 第2..N+1行: 第i+1行仅有一个整数：height_i</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* 第1行: 输出Farmer John完成电话线改造工程所需要的最小花费 </span></p></p><hr/><h3>样例输入</h3><pre>5 2
+2
+3
+5
+1
+4
+输入说明:
+ 一共有5根电话线杆，在杆间拉电话线的费用是每米高度差$2。
+在改造之前，电话线杆的高度依次为2，3，5，1，4米。
+
+
+</pre><hr/><h3>样例输出</h3><pre>15
+输出说明:
+最好的改造方法是：Farmer John把第一根电话线杆加高1米，把第四根加高2米，
+使得它们的高度依次为3，3，5，3，4米。这样花在加高电线杆上的钱是$5。
+此时，拉电话线的费用为$2*(0+2+2+1) = $10，总花费为$15。
+
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1705" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1705" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

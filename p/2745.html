@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2745：[HEOI2012]Bridge</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HEOI2012]Bridge</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HEOI2012]Bridge</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HEOI2012]Bridge                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">fyg背着他的电脑来到河北省来，就是为了见一眼古老的赵州桥。 <br />
+终于，他来到了赵州桥，放下了电脑，正准备休息。一阵风吹来，从中闪现出一人影。fyg只觉天昏地暗，待得再次睁开眼时，发觉自己已经到了一神奇的国度，置身于一巨大的圆盘之上。放眼看去，四周都是奇形怪状的桥，不远处有一老头盘膝而坐。 fyg还沉浸在惊奇之中，老头（难道就是传说中走过赵州桥的张老头！！）便开口了：凡人，你现在在我的世界中，想要出去就要回答我的问题。fyg只得点头，老头继续道：你现在要去闯关，我给你m种颜色，总共有n关（神仙也懂数学，表示压力巨大。。==）。每一关中有一座桥，在第i关中，桥长度有i个单位，每个单位长度上有2个格子（也就是说这座桥有2i个格子），现在你要计算出：在这座桥上涂色使得桥上相邻格子的颜色不一样总方案数，然后再乘上（2*i）^m。如在第1关，若你手上有2种颜色，分别为蓝色和绿色。则总方案数为2*2*2 =8种，涂色方案数为2（如下图，旋转、翻转相同算不同的方案），然后还要再乘2个2，最后你出来之后我会问你所有关中计算出来的数的和。如果你能答对，我就可以让你出去了，否则就无限轮回吧。 <br />
+fyg表示这个问题太水了，完全不想算。。。于是， 他马上打开电脑上了QQ找到了喜欢计算的你，求你 帮他直接把最终 答案算出来，让他回到赵州桥上。这两个数都有可能很大，fyg&nbsp;不想为难你，所以你只要告诉他其除以p的余数。 </span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">只有一行，其中包含四个正数n、m、p，分别由一个空格分开。n、m、p含义和题目描 述一致。 <br />
+</span></p></p><hr/><h3>输出格式</h3><p><p><font size="4">一行，表示方案数的和除以p的余数。 <br />
+</font></p></p><hr/><h3>样例输入</h3><pre>2  5 50
+</pre><hr/><h3>样例输出</h3><pre>30 
+【样例说明】 
+总共有2关。 
+第一关的桥长度为1，总共有2个格子，涂色方案数为20，再乘上2 ^ 5，第一关中 计算出的数为640。 
+第二关的桥长度为2，总共有4个格子，涂色方案数为260，再乘上4 ^ 5，第二关中 计算出的数为266240。 
+两个数字加起来除以50余30，故输出为30。 
+</pre><hr/><h3>提示</h3><p><p>【数据范围】 <br />
+对于其中25%的数据，满足 n &lt;= 10^6，m &lt;= 200，p &lt;= 10^9； 对于其中40%的数据，满足 n &lt;= 10^9，m &lt;= 120，p &lt;= 10^9； 对于其中15%的数据，满足 n &lt;= 10^9，m &lt;= 200，p &lt;= 10^9； 对于最后20%的数据，满足 n&lt;= 10^9，m &lt;= 3000，p &lt;= 3000；</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2745" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2745" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

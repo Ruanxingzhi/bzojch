@@ -1,0 +1,158 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4873：[Shoi2017]寿司餐厅</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2017]寿司餐厅</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2017]寿司餐厅</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Shoi2017]寿司餐厅                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Kiana最近喜欢到一家非常美味的寿司餐厅用餐。每天晚上，这家餐厅都会按顺序提供n种寿司，第i种寿司有一个</div>
+<div>代号ai和美味度di,i，不同种类的寿司有可能使用相同的代号。每种寿司的份数都是无限的，Kiana也可以无限次</div>
+<div>取寿司来吃，但每种寿司每次只能取一份，且每次取走的寿司必须是按餐厅提供寿司的顺序连续的一段，即Kiana</div>
+<div>可以一次取走第1,2种寿司各一份，也可以一次取走第2,3种寿司各一份，但不可以一次取走第1,3种寿司。由于餐</div>
+<div>厅提供的寿司种类繁多，而不同种类的寿司之间相互会有影响：三文鱼寿司和鱿鱼寿司一起吃或许会很棒，但和水</div>
+<div>果寿司一起吃就可能会肚子痛。因此，Kiana定义了一个综合美味度di,j(i&lt;j)，表示在一次取的寿司中，如果包含</div>
+<div>了餐厅提供的从第i份到第j份的所有寿司，吃掉这次取的所有寿司后将获得的额外美味度。由于取寿司需要花费一</div>
+<div>些时间，所以我们认为分两次取来的寿司之间相互不会影响。注意在吃一次取的寿司时，不止一个综合美味度会被</div>
+<div>累加，比如若Kiana一次取走了第1,2,3种寿司各一份，除了d1,3以外，d1,2,d2,3也会被累加进总美味度中。神奇</div>
+<div>的是，Kiana的美食评判标准是有记忆性的，无论是单种寿司的美味度，还是多种寿司组合起来的综合美味度，在</div>
+<div>计入Kiana的总美味度时都只会被累加一次。比如，若Kiana某一次取走了第1,2种寿司各一份，另一次取走了第2,3</div>
+<div>种寿司各一份，那么这两次取寿司的总美味度为d1,1+d2,2+d3,3+d1,2+d2,3，其中d2,2只会计算一次。奇怪的是，</div>
+<div>这家寿司餐厅的收费标准很不同寻常。具体来说，如果Kiana一共吃过了c(c&gt;0)种代号为x的寿司，则她需要为这些</div>
+<div>寿司付出mx^2+cx元钱，其中m是餐厅给出的一个常数。现在Kiana想知道，在这家餐厅吃寿司，自己能获得的总美</div>
+<div>味度（包括所有吃掉的单种寿司的美味度和所有被累加的综合美味度）减去花费的总钱数的最大值是多少。由于她</div>
+<div>不会算，所以希望由你告诉她</div></p><hr/><h3>输入格式</h3><p><div>第一行包含两个正整数n,m，分别表示这家餐厅提供的寿司总数和计算寿司价格中使用的常数。</div>
+<div>
+<div>第二行包含n个正整数，其中第k个数ak表示第k份寿司的代号。</div>
+<div>接下来n行，第i行包含n-i+1个整数，其中第j个数di,i+j-1表示吃掉寿司能</div>
+<div>获得的相应的美味度，具体含义见问题描述。</div>
+<div>N&lt;=100,Ai&lt;=1000</div>
+<div></div>
+</div></p><hr/><h3>输出格式</h3><p><p>输出共一行包含一个正整数，表示Kiana能获得的总美味度减去花费的总钱数的最大值。</p></p><hr/><h3>样例输入</h3><pre>3 1
+2 3 2
+5 -10 15
+-10 15
+15</pre><hr/><h3>样例输出</h3><pre>12
+【样例1说明】
+在这组样例中，餐厅一共提供了3份寿司，它们的代号依次为a1=2，a2=3，a3=2，计算价格时的常数m=1。在保证每
+次取寿司都能获得新的美味度的前提下，Kiana一共有14种不同的吃寿司方案：
+1.Kiana一个寿司也不吃，这样她获得的总美味度和花费的总钱数都是0，两者相减也是0；
+2.Kiana只取1次寿司，且只取第1个寿司，即她取寿司的情况为{[1,1]}，这样获得的总美味度为5，花费的总钱数
+为1-2^2+1*2=6，两者相减为-1；
+3.Kiana只取1次寿司，且只取第2个寿司，即她取寿司的情况为{[2,2]}，这样获得的总美味度为-10，花费的总钱
+数为1-3^2+1*3=12，两者相减为-22；
+4.Kiana只取1次寿司，且只取第3个寿司，即她取寿司的情况为{[3,3]}，这样获得的总美味度为15，花费的总钱数
+为1*2^2+1*2=6，两者相减为9；
+5.Kiana只取1次寿司，且取第1,2个寿司，即她取寿司的情况为{[1,2]}，这样获得的总美味度为5+(-10)+(-10)=-1
+5，花费的总钱数为(1-2^2+1*2)+(1-3^2+1*3)=18，两者相减为-33；
+6.Kiana只取1次寿司，且取第2,3个寿司，即她取寿司的情况为{[2,3]}，这样获得的总美味度为(-10)+15+15=20，
+花费的总钱数为(1-2^2+1*2)+(1*3^2+1*3)=18，两者相减为2；
+7.Kiana只取1次寿司，且取第1,2,3个寿司，即她取寿司的情况为{[1,3]}，这样获得的总美味度为5+(-10)+15+(-1
+0)+15+15=30，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为10。
+8.Kiana取2次寿司，第一次取第1个寿司，第二次取第2个寿司，即她取寿司的情况为{[1,1],[2,2]}，这样获得的
+总美味度为5+(-10)=-5，花费的总钱数为(1*2^2+1*2)+(1*3^2+1*3)=18，两者相减为-23；
+9.Kiana取2次寿司，第一次取第1个寿司，第二次取第3个寿司，即她取寿司的情况为{[1,1],[3,3]}，这样获得的
+总美味度为5+15=20，花费的总钱数为1*2^2+2*2=8，两者相减为12；
+10.Kiana取2次寿司，第一次取第2个寿司，第二次取第3个寿司，即她取寿司的情况为{[2,2],[3,3]}，这样获得的
+总美味度为(-10)+15=5，花费的总钱数为(1*2^2+1*2)+(1*3^2+1*3)=18，两者相减为-13；
+11.Kiana取2次寿司，第一次取第1,2个寿司，第二次取第3个寿司，即她取寿司的情况为{[1,2],[3,3]}，这样获得
+的总美味度为5+(-10)+(-10)+15=0，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为-20；
+12.Kiana取2次寿司，第一次取第1个寿司，第二次取第2,3个寿司，即她取寿司的情况为{[1,1],[2,3]}，这样获得
+的总美味度为5+(-10)+15+15=25，花费的总钱数为(1-22+2-2)+(1-32+1-3)=20，两者相减为5；
+13.Kiana取2次寿司，第一次取第1,2个寿司，第二次取第2,3个寿司，即她取寿司的情况为{[1,2],[2,3]}，这样获
+得的总美味度为5+(-10)+15+(-10)+15=15，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为-5；
+14.Kiana取3次寿司，第一次取第1个寿司，第二次取第2个寿司，第三次取第3个寿司，即她取寿司的情况为{[1,1]
+,[2,2],[3,3]}，这样获得的总美味度为5+(-10)+15=10，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减
+为-10。
+所以Kiana会选择方案9，这时她获得的总美味度减去花费的总钱数的值最大为12。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>黑吉辽沪冀晋六省联考</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4873" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4873" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2233：[Ncpc2009]Beacons</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ncpc2009]Beacons</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ncpc2009]Beacons</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ncpc2009]Beacons                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: 12pt">&nbsp;&nbsp;</span></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在远古时代，信息的交流没有我们现在这么便利。一个国家在战争时期，可能花好几个月的时间来集合军队。但是在作战区用上烽火台，就有可能快速地传递军事信号。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当第一个烽火台被点燃，所有能看到这个烽火台的其他烽火台也将被点燃，所有能看到这些烽火台的其他烽火台也将被点燃，如此继续直到所有烽火台都被点燃</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">---</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">自然所有的烽火台都在彼此的视野范围内，直接地或间接地。如果不是这样，则紧急的信息必须由骑手们在一些烽火台间传递。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">给出这个国家所有烽火台的位置，同时还给出山峰的位置和大小，写一个程序来决定多少信息要被骑手们传递，使得在敌人入侵这个国家时，所有的烽火台都要被点燃。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">简单来说，我们这样来定义一个国家的模型：一个烽火台就用</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">XY</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">平面上的一个点来表示，一座山峰就用一个圆来表示。如果两个烽火台的连接直线上没有山峰座落，则认为这两个烽火台是在相互的视野内。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入是这样构造的：任何一对烽火台的连线不会与山峰的圆周相切，除非这个连接线通过了别的山峰的内部。山峰不会重叠或相切，任何一个烽火台也不会在山峰内或它的圆周上。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><font size="3"> <span style="font-size: 12pt">第一行有两个整数</span></font><span style="font-size: 12pt">n (1&lt;=n &lt;=1000) and m (0 &lt;=m &lt;=1000),n</span><span style="font-size: 12pt">表示烽火台的数量，</span><span style="font-size: 12pt">M</span><span style="font-size: 12pt">表示山峰的数量。接下来的</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">行定义了烽火台的位置。每个烽火台的位置用一对整数</span><span style="font-size: 12pt">X</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">Y</span><span style="font-size: 12pt">来表示</span><span style="font-size: 12pt">(0 &lt;= x; y &lt;= 10000).</span><span style="font-size: 12pt">接下来的</span><span style="font-size: 12pt">M</span><span style="font-size: 12pt">行描述了所有的山峰。每个山峰用三个数来表示：</span><span style="font-size: 12pt">X Y R.&nbsp;X Y</span><span style="font-size: 12pt">为整数</span><span style="font-size: 12pt">(0 &lt;= x; y &lt;= 10000)</span><span style="font-size: 12pt">定义了山峰的位置，</span><span style="font-size: 12pt">R</span><span style="font-size: 12pt">定义了半径</span><span style="font-size: 12pt">(1 &lt;= r &lt;= 5000)</span></p></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21.75pt"><span style="font-size: 12pt">输出一个整数：为使所有烽火台点燃，骑手们必须传递的信息数量</span></div></p><hr/><h3>样例输入</h3><pre>6  3
+1  8
+5  4
+7  7
+9  2
+16  6
+17  10
+4  7  2
+6  3  1
+12  6  3
+</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2233" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2233" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

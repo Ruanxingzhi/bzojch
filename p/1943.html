@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1943：[Ceoi2007]Nasty Calculations
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2007]Nasty Calculations
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2007]Nasty Calculations
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2007]Nasty Calculations
+                </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>你的朋友Joe忘记做数学作业了。他的老师非常生气（你猜是为什么），他命令Joe放学后留下来计算一个巨长的表达式。可是该老师十分懒，以致想不出许多不同的表达式，因此他给Joe一个带有变量x的公式f，并且x可能是个巨大的数（显然你明白这是多么容易的一件事情），Joe的任务就是对于每个给出的x值，计算该表达式f(x)的结果。
+实际上，Joe不需要计算出f(x)的精确值，因为可能结果十分巨大，他只要写出f(x)的最后一个数字即可（Joe想当然认为老师能计算的上限为100，但是……，只有天知道！）。
+因为上次课的内容是讲数制字系统，因此实际上老师给出的是基于B进制的数值表达式f(x)。
+
+任务
+
+对于x的给出包含x的巨大公司，Joe希望寻求你的帮助，因为他知道你是一个优秀的程序设计员，他认为你可以使用计算机来解决该问题，为了帮助你完成任务，他重写了该公式，将f变成了一个后缀表达式（下面会解释），这有利于计算机的计算，你的任务就是在B进制系统下，计算这个巨大公式的数值。
+
+后缀表达式
+
+后缀表达式（也称之为逆波兰表达式RPN）是一个二元数学表达式的方式。当然使用最多的是中缀表达式，操作符放在操作数的中间，例如，1+2,1+2*3，or （1+2）*3。通常不喜欢后缀表达式，操作符放在操作数的后面，例如上面的表达式形式为1 2+，1 2 3 * +，和1 2 + 3 * 。
+这种RNP表达式尽管人们看起来十分不习惯，但计算机写程序计算起来方便，因为它没有括号，容易编程。
+
+B进制数值系统
+
+一个数通常使用十进制数值系统，在这个系统中，一个数字序列dkdk-1&not;……d1d0表示数dk10k+dk-110k-1+……+d.1101+d0100。如果数值10用整数B，B≥2，and 0≤di≤B-1，我们称之为B进制数字系统。B进制数值系统可以写成dkdk-1&not;……d1d0形式，表示dkBk+dk-1Bk-1+……+d.1B1+d0B0。当然因为我们只有10个数字，因此大于9的数字不许用字母表示：A表示10，B表示11，等等，例如十进制数29用6进制系统表示为45，用16进制系统表示为1D。
+
+</p><hr/><h3>输入格式</h3><p>
+第一行包含两个整数B和N，B（2≤B≤36），N（1≤N≤100 000）
+第二行为后缀表达式。数据元素之间用一个空格分开。这些元素为：
+&#8226;一个基于B进制数值系统下的数字和大写字母的竖列，最大数值不超过2 000 000 000。
+&#8226;小写字母 x，表示表达式中的变量。
+&#8226;操作符号 +。
+&#8226;操作符号 -。
+&#8226;操作符号 *。
+接下来有N行，每行一个包含数字和大写字母的序列，表示基于B进制数值系统下的变量x的数值，x不超过2 000 000 000。
+假设表达式对于所有的输入数据都正确，第二行的表达式的长度不超过100 000个字符。
+
+</p><hr/><h3>输出格式</h3><p>
+输出包括N行，第i行为输入的第i+2个数据对应的表达式结果的最后一个数字（基于B进制数值系统下）。你可以假设对所有的x,f(x)的结果非负。
+
+</p><hr/><h3>样例输入</h3><pre>
+15 4
+2 x * 123A +
+1
+2
+3
+4
+
+</pre><hr/><h3>样例输出</h3><pre>
+C
+E
+1
+3
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1943" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1943" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

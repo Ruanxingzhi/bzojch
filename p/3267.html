@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3267：KC采花</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">KC采花</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">KC采花</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                KC采花                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">KC在公园里种了一排花，一共有n朵，游手好闲的KC常常在公园里采花。他对每朵花都有一个美丽度鉴赏。由于对花的喜好不同，有的花分数很高，有的花分数很低，甚至会是负数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">KC很忙，每次采花的时候，不可能从第一朵花，走到第n朵。所以他会先选定一个区间[l,r](1&lt;=l&lt;=r&lt;=n)，作为当天的采花范围。同时为了方便采花，他总是从[l,r]中最多选出k个互不相交的子区间，将这些子区间的花全部采光。当然，他希望美丽度总和最大。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">KC对花的鉴赏随着他对世界观人生观的改变而改变，他会不时地对每朵花的美丽度进行修改，可能改低，也可能提高。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">KC的行为持续m天，每天的行为要么是采花，要么是改变花的美丽度。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">注：(1)[l,r]的最多k个互不相同子区间可以表示成：[x1,y1],[x2,y2],...,[xt,yt]，满足l&lt;=x1&lt;=y1&lt;x2&lt;=y2&lt;...&lt;xt&lt;=yt&lt;=r，且0&lt;=t&lt;=k。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">(2)由于是KC种的花，一朵花采掉第二天会立刻生出来。</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">第一行一个正整数n,n&lt;=100000。</span></div>
+<div><span style="font-size: medium">第二行n个整数a1,a2...an，表示n朵花的美丽度。|ai|&lt;=500。</span></div>
+<div><span style="font-size: medium">第三行一个正整数m,m&lt;=100000。</span></div>
+<div><span style="font-size: medium">第四行开始，接下来m行，每行表示该天KC的行为。</span></div>
+<div><span style="font-size: medium">修改美丽度的行为用0 i val描述，表示将ai修改为val,|val|&lt;=500。</span></div>
+<div><span style="font-size: medium">采花行为用1 l r k描述,k&lt;=20意义如题面。</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">对于每个采花行为，每行一个整数表示最大的美丽度总和。</span></div></p><hr/><h3>样例输入</h3><pre>9
+9 -8 9 -1 -1 -1 9 -8 9
+3
+1 1 9 1
+1 1 9 2
+1 4 6 3
+</pre><hr/><h3>样例输出</h3><pre>17
+25
+0
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">100%的数据，满足n,m&lt;=50000,k&lt;=20,ai以及修改的val的绝对值不超过500。</span></p></p><hr/><h3>题目来源</h3><p>最大费用最大流</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3267" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3267" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

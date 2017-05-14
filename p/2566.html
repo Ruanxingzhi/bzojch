@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2566：xmastree</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">xmastree</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">xmastree</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                xmastree                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　有一棵含</span><span style="color: #200000">N</span><span style="color: #200000">个结点的树，树上每条边</span><span style="color: #200000">(ai,bi)</span><span style="color: #200000">都有一个权值</span><span style="color: #200000">wi</span><span style="color: #200000">。树上每个结点涂有一个初始颜色</span><span style="color: #200000">ci</span><span style="color: #200000">。现在有很多次修改操作，第</span><span style="color: #200000">i</span><span style="color: #200000">次修改会将结点</span><span style="color: #200000">xi</span><span style="color: #200000">的颜色修改成</span><span style="color: #200000">yi</span><span style="color: #200000">。请在所有修改前和每次修改之后输出一个数，表示对应时刻最近的同色结点对的距离。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　其中，距离定义为树上两点的最短路的距离。最短路按边的权值</span><span style="color: #200000">wi</span><span style="color: #200000">计算。</span></span></div></p><hr/><h3>输入格式</h3><p><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　第一行一个数</span><span style="color: #200000">N</span><span style="color: #200000">。第二行</span><span style="color: #200000">N</span><span style="color: #200000">个数依次给出每个结点的初始颜色</span><span style="color: #200000">ci</span><span style="color: #200000">。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　下面</span><span style="color: #200000">N-1</span><span style="color: #200000">行每行三个数</span><span style="color: #200000">ai,bi,wi</span><span style="color: #200000">，表示一条权值为</span><span style="color: #200000">wi</span><span style="color: #200000">的树边</span><span style="color: #200000">(ai,bi)</span><span style="color: #200000">。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　下面一个数</span><span style="color: #200000">M</span><span style="color: #200000">表示修改次数。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　下面</span><span style="color: #200000">M</span><span style="color: #200000">行每行两个数</span><span style="color: #200000">xi,yi</span><span style="color: #200000">，表示将结点</span><span style="color: #200000">xi</span><span style="color: #200000">的颜色修改为</span><span style="color: #200000">yi</span><span style="color: #200000">。</span></span></div></p><hr/><h3>输出格式</h3><p><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　输出包含</span><span style="color: #200000">M+1</span><span style="color: #200000">行，第一行表示初始局面的最近同色结点对距离，下面</span><span style="color: #200000">M</span><span style="color: #200000">行依次表示每次修改后的最近同色结点对距离。如果某时刻没有同色点对，则在对应行输出</span><span style="color: #200000">-1</span><span style="color: #200000">。</span></span></div></p><hr/><h3>样例输入</h3><pre>5
+2 2 3 2 3
+3 5 9
+1 3 1
+2 1 2
+4 1 8
+4
+2 3
+2 1
+1 1
+2 2
+</pre><hr/><h3>样例输出</h3><pre>2
+3
+8
+2
+9
+</pre><hr/><h3>提示</h3><p><p>样例说明<br />
+　　每行输出对应的解释为：<br />
+　　2 -&gt; 最近的是1和2，颜色均为2，距离为2<br />
+　　3 -&gt; 最近的是2和3，颜色均为3，距离为3<br />
+　　8 -&gt; 最近的是1和4，颜色均为2，距离为8<br />
+　　2 -&gt; 最近的是1和2，颜色均为1，距离为2<br />
+　　9 -&gt; 最近的是3和5，颜色均为3，距离为9<br />
+数据规模和约定<br />
+　　本题有十个测试点。十个测试点的数据规模如下：<br />
+编号 N M 出现过的颜色的总数 <br />
+1 1000 0 &lt;=10 <br />
+2 2000 0 &lt;=2000 <br />
+3 5000 0 &lt;=5000 <br />
+4 7000 5 &lt;=7000 <br />
+5 9000 10 &lt;=9000 <br />
+6 10000 100 &lt;=10000 <br />
+7 10000 10000 &lt;=50 <br />
+8 12000 10000 &lt;=12000 <br />
+9 12000 12000 &lt;=12000 <br />
+10 12000 12000 &lt;=12000</p>
+<p>　　另外，对于所有数据，有：<br />
+　　1 &lt;= ai &lt;= N, 1 &lt;= bi &lt;= N, 1 &lt;= xi &lt;= N;<br />
+　　1&lt;=wi&lt;=10000<br />
+　　1 &lt;= ci &lt;= 10^9, 1 &lt;= yi &lt;= 10^9<br />
+&nbsp;</p></p><hr/><h3>题目来源</h3><p>2012国家集训队Round 1 day3</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2566" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2566" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

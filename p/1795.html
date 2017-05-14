@@ -1,0 +1,163 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1795：[Ioi2008]Pyramid Base 金字塔地基
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Pyramid Base 金字塔地基
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ioi2008]Pyramid Base 金字塔地基
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ioi2008]Pyramid Base 金字塔地基
+                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>你要在自己财力许可的范围内寻找一个尽可能大的地方，以便兴建一个新的金字塔。为帮助你作出决定，为你提供了土地测绘图。为方便起见，该地块被划分为由M乘N个小正方形构成的网格。金字塔的地基部份必须是正方形，而且各边要与这些方格平行。
+
+测绘图中标出了P个有可能重叠的障碍物，这些障碍物是上述网格上的长方形，其各边与方格平行。为了建造金字塔，任何塔基所占方格中的障碍物必须被移走。移除障碍物i需要付出成本Ci。当移除一个障碍物时，需要将障碍物整个地移除，即不能只移除障碍物的一部份。同时，移除一个障碍物对与其重叠的其他障碍物无任何影响。
+
+任务
+已知测绘图中M和N的大小，对P个障碍物的描述，移走每个障碍物的成本以及你的预算B。编写程序，找出在移走障碍物总成本不超过B的前提下金字塔地基的最大边长。
+
+限制及评分
+程序用三组不相交的数据进行评测。以下限制适用于所有的测试数据：
+1 <= M, N <= 1,000,000		网格的尺寸。
+1 <= Ci <= 7,000			移除障碍物i的成本。
+对每个障碍物i均有 1 <= Xi1 <= Xi2 <= M 并且 1 <= Yi1 <= Yi2<= N。
+
+第一组测试总分值35分：
+B = 0					可以付出的最大成本。（不可移除任何障碍物）
+1<= P <= 1,000			网格中障碍物的数目。
+
+第二组测试总分值35分：
+0 < B <= 2,000,000,000		你的预算。
+1<= P <= 30,000			网格中障碍物的数目。
+
+第三组测试值30分：
+B = 0					你的预算。（不可以移除任何障碍物）
+1<= P <= 400,000			网格中障碍物的数目。
+</p><hr/><h3>输入格式</h3><p>你的程序需要从标准输入上读入以下数据：
+&#8226;	第一行包含两个以单个空格分隔的整数，分别表示M及N。
+&#8226;	第二行包含整数B，是你可付出的最大成本（即你的预算）。
+&#8226;	第三行包含整数P，是测绘图中标出的障碍物数量。
+&#8226;	以下P行的每一行表示一个障碍物。其中第i 行表示第i个障碍物。每一行包含5个以单个空格分隔的整数Xi1, Yi1, Xi2, Yi2和Ci，分别表示障碍物左下角小正方形的座标，右上角小正方形的座标，以及移除这个障碍物的成本。网格左下角的小正方形座标为（1, 1）而其右上角小正方形为（M, N）。
+
+
+</p><hr/><h3>输出格式</h3><p>你的程序必须向标准输出写出一行，该行只含一个整数，即金字塔基可能的最大边长。如果无法建造任何金字塔，程序应输出0。
+</p><hr/><h3>样例输入</h3><pre>input 1
+6 9
+42
+5
+4 1 6 3 12
+3 6 5 6 9
+1 3 3 8 24
+3 8 6 9 21
+5 1 6 2 20
+
+input 2
+13 5
+0
+8
+8 4 10 4 1
+4 3 4 4 1
+10 2 12 2 2
+8 2 8 4 3
+2 4 6 4 5
+10 3 10 4 8
+12 3 12 4 13
+2 2 4 2 21
+</pre><hr/><h3>样例输出</h3><pre>output 1
+4
+
+output 2
+3
+</pre><hr/><h3>提示</h3><p><img border="0" src="../file/1795_0.jpg"> </p><hr/><h3>题目来源</h3><p>Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1795" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1795" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

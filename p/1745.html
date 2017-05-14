@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1745：[Usaco2005 oct]Flying Right 飞行航班</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 oct]Flying Right 飞行航班</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 oct]Flying Right 飞行航班</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 oct]Flying Right 飞行航班                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Figuring that they cannot do worse than the humans have, Farmer John's cows have decided to start an airline. Being cows, they decide to cater to the heretofore-untapped market of cows as passengers. They plan to serve the cows who live along the western coast of Lake Michigan. Each morning, they will fly from the northern-most point of the coast southward towards Chicowgo, making many stops along the way. Each evening, they will fly back north to the northern-most point. They need your help to decide which passengers to carry each day. Each of N (1 &lt;= N &lt;= 10,000) farms numbered 1..N along the coast contains an airport (Farm 1 is northern-most; farm N is southern-most). On this day, K (1 &lt;= K &lt;= 50,000) groups of cows wish to travel. Each group of cows wants to fly from a particular farm to another particular farm. The airline, if it wishes, is allowed to stop and pick up only part of a group. Cows that start a flight, however, must stay on the plane until they reach their destination. Given the capacity C (1 &lt;= C &lt;= 100) of the airplane and the groups of cows that want to travel, determine the maximum number of cows that the airline can fly to their destination. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;为了表示不能输给人类，农场的奶牛们决定成立一家航空公司．她们计划每天早晨，从密歇根湖湖岸的最北端飞向最南端，晚上从最南端飞往最北端．在旅途中，航空公司可以安排飞机停在某些机场．他们需要你帮助来决定每天携带哪些旅客．沿着湖岸，有N(1&le;N&le;10000)个由北至南编号为1到N的农场．每个农场都有一个机场．这天，有k(l&le;七&le;50000)群牛想要乘坐飞机旅行．每一群牛想要从一个农场飞往另一个农场．航班可以在某些农场停下带上部分或全体的牛．奶牛们登机后会一直停留直至达到目的地&nbsp;&nbsp;&nbsp;&nbsp;提供给你飞机的容量C(1&le;C&le;100)，同时提供给你想要旅行的奶牛的信息，请你计算出这一天的航班最多能够满足几只奶牛的愿望．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: Three space-separated integers: K, N, and C * Lines 2..K+1: Each line contains three space-separated integers S, E, and M that specify a group of cows that wishes to travel. The M (1 &lt;= M &lt;= C) cows are currently at farm S and want to travel to farm E (S != E). </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：3个用空格隔开的整数K，N和C.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到K+1行：每一行有3个用空格隔开的整数S，E，M.表示有M只奶牛想从农场S乘飞机到农场E．</span></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: The maximum number of cows that can be flown to their destination. This is the sum of the number of cows flown to their destination on the flight southward in the morning plus the number of cows flown to their destination on the flight northward in the evening. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;可以完成旅行的奶牛人数的最大值．</span></div></p><hr/><h3>样例输入</h3><pre>4 8 3
+1 3 2
+2 8 3
+4 7 1
+8 3 2
+
+INPUT DETAILS:
+
+Four groups of cows, eight farms, and three seats on the
+plane.
+
+</pre><hr/><h3>样例输出</h3><pre>6
+</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">群想要旅行的奶牛，</span><span lang="EN-US"><font face="Times New Roman">8</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个农场，飞机上有</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个座位．早晨，飞机把</span><span lang="EN-US"><font face="Times New Roman">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只牛从</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">带到</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只牛</span></span><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">从</span><span lang="EN-US"><font face="Times New Roman">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">带到</span><span lang="EN-US"><font face="Times New Roman">8</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只牛从</span><span lang="EN-US"><font face="Times New Roman">4</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">带到</span><span lang="EN-US"><font face="Times New Roman">7</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">．晚上，航班把</span><span lang="EN-US"><font face="Times New Roman">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">尺牛从</span><span lang="EN-US"><font face="Times New Roman">8</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">带到</span><span lang="EN-US"><font face="Times New Roman">3</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">．</span></span></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1745" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1745" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

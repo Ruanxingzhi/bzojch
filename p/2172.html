@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2172：Mario填格子</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mario填格子</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Mario填格子</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Mario填格子                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>《超级马里奥兄弟》是任天堂于1985年出品的著名横版过关游戏，作为1983年游戏《马里奥兄弟》的续作在FC红白机上推出。在游戏《超级马里奥兄弟》中，玩家控制马里奥从库巴手上设法营救Peach公主。今年是《超级马里奥兄弟》发行25周年了，任天堂推出了25周年纪念合集。lqp也想来凑热闹，他开发了一个小游戏，叫做&ldquo;Mario填格子&rdquo;。游戏是这样的，Boss Wario给出了一个3*3的小格子，在左上角填上了M，右下角填上了N。现在开始倒计时了，你必须给剩余的几个格子填上一些正整数，对于每个格子（格子里的数是X）满足：如果它左边相邻有一个数Y，那么Y|X（表示Y整除X）。如果它上面相邻有一个数Z，那么Z|X。不存在和它填有相同数字的格子。比如下面就是一个M=1, N=36的满足条件的填法： 1 2 4 3 6 12 9 18 36</p></p><hr/><h3>输入格式</h3><p><p>输入包含若干行，以EOF结束。每行包含两个正整数M和N，分别是左上角的数字和右下角的数字。</p></p><hr/><h3>输出格式</h3><p><p>如果Mario能够获胜，输出&ldquo;Mario_wins!&rdquo;，输出&ldquo; Wario_wins!&rdquo;。每个数据输出一个空行。</p></p><hr/><h3>样例输入</h3><pre>1 36
+4 36 </pre><hr/><h3>样例输出</h3><pre>Mario_wins!
+
+Wario_wins!</pre><hr/><h3>提示</h3><p><p>10%数据满足：1&le;M, N&le;9 30%数据满足：1&le;M, N&le;100 50%数据满足：1&le;M, N&le;100000 100%数据满足：最多10组测试数据，1&le;M, N&le;1017 其中有10%数据N=M*pT（p的t次方）。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2172" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2172" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

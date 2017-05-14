@@ -1,0 +1,177 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3818：Router</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Router</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Router</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Router                </h1>
+                <p>时间限制：200s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在进行 Web 后端开发时，很重要的一个组件是 router。通常来说，后端的代码由许多 action 组成，router 的作用就是将发来的请求按照 URL 对应到相应的 action 上。</div>
+<div>请求到达后端 Web 服务器时，已经不需要考虑域名和端口了，因此一个请求有如下形式：</div>
+<div>&ldquo;/{something_1}/{something_2}/.../{something_k}&rdquo; 或 &ldquo;/{something_1}/{something_2}/.../{something_k}?{parameter_list}&rdquo;</div>
+<div>其中 parameter_list 的组成为：&ldquo;{name_1}={value_1}&amp;{name_2}={value_2}&amp;...&amp;{name_n}={value_n}&rdquo;。（第一种情况中的 parameter_list 为空）</div>
+<div>例如 &ldquo;/user/list/show?gender=male&amp;birthyear=1990&rdquo; 就是一个合法的请求，其中包含了两个参数 gender 和 birthyear，对应的 value 分别是 male 和 1990。</div>
+<div>router 由许多条 path 组成，每一个 path 会对应到一个 action 上。router 在匹配 URL 到 path 时只看 parameter_list 之前的部分，例如之前的请求就只看 &ldquo;/user/list/show&rdquo; 这部分。parameter_list 内的参数会被直接送到 action 中。因此一个 path 总是具有如下形式：</div>
+<div>&ldquo;/{something_1}/{something_2}/.../{something_k}&rdquo;</div>
+<div>为了使得 router 更灵活，每一段中的 something 除了可以用具体的字符串外，还可以用一个正则表达式去匹配，并且提取出这部分的内容作为参数送到 action 去。这种情况下，something 的内容为&ldquo;:{regexp_name}&rdquo;，其中 regexp_name 对应一个正则表达式，会在后面给出具体的表达式。例如 router 中的一个 path 为 &ldquo;/user/:handle/show&rdquo;，其中&ldquo;:handle&rdquo; 对应了一个正则表达式，假设它可以匹配所有由小写英文字母组成的非空串。此时请求 &ldquo;/user/testuser/show&rdquo; 就能匹配这个 path，并且送往 action 多了一个 name 为 handle、value 为 testuser 的参数。再例如请求为 &ldquo;/user/testuser/show?avatar=true&amp;message=hello&rdquo; 的话，不仅能匹配之前的 path，送到 action 的参数就会有三个：handle、avatar、message，对应的 value 分别为 testuser、true 和 hello。</div>
+<div>但是使用带正则表达式的 path 时也受到一些限制。具体来说，如果有 router 中有两个 path，他们前面 i 个 something 段的内容完全相同（这 i 段里面可以含正则表达式项，此时就要求是名称相同的正则表达式），然后第 i+1 个 something 段的内容不同。下面分两种情况：</div>
+<div>一个 path 这一段的内容是普通字符串，另一个 path 这一段的内容对应了正则表达式，那么这个正则表达式一定无法匹配前一个 path 第 i+1 段的字符串。例如一个 path 是 &ldquo;/foo/:tmp/bar/pop&rdquo;，另一个 path 是 &ldquo;/foo/:tmp/:exp/push&rdquo;，那么 exp 对应的正则表达式一定不会匹配 bar。</div>
+<div>两个 path 这一段的内容都是正则表达式，那么这两个正则表达式匹配的字符串一定没有交集。例如一个 path 是 &ldquo;/foo/:tmp/:aaa/push&rdquo;，另一个 path 是 &ldquo;/foo/:tmp/:bbb/pop&rdquo;，那么不存在一个字符串能同时被 aaa 对应的正则表达式和 bbb 对应的正则表达式匹配。</div>
+<div>最后介绍正则表达式。为了让情况简单一些，本题中的正则表达式规则相比于实际使用的有所简化。正则表达式的文法中有 Atom、Quantifier、Term、Alternative 这几个概念。用 Regexp 表示正则表达式，则每种概念具体为：</div>
+<div>Regexp 可以由单个 Alternative 组成，或者由一个 Alternative 和一个 Regexp 组成，中间用字符 &ldquo;|&rdquo; 连接。对于前一种情况，该正则表达式匹配所有 Alternative 能匹配的东西。对于后一种情况，一个字符串要能被该正则表达式匹配，要么能被 &ldquo;|&rdquo; 前面的 Alternative 能匹配，要么能被 &ldquo;|&rdquo; 后面的 Regexp所匹配。</div>
+<div>Alternative 由单个 Term 或多个 Term 连接组成，它能匹配这些 Term 所匹配的字符串的连接。换言之，一个字符串要被这个 Alternative 匹配，这个字符串能够拆成若干段（段数和 Alternative 的 Term 个数一样多），每段依次被 Alternative 的每个 Term 匹配。</div>
+<div>Term 由一个 Atom 或一个 Atom 附带一个 Quantifier 组成。后面会了解到，Quantifier 对应了允许重复次数的区间。若 Term 由单个 Atom 组成，则 Term 能匹配的内容与 Atom 相同。如果 Atom 后带了 Quantifier，则如果一个字符串能划分为若干段（划分的段数在 Quantifier 指定的区间内），使得每段都能被 Atom 匹配，那么这个字符串就能被这个 Term 匹配。</div>
+<div>Quantifier 的形式为 &ldquo;{lower_bound,upper_bound}&rdquo;，其中 lower_bound 和 upper_bound 各对应一个不超过 20 的非负整数，并且 upper_bound&ge;lower_bound，Quantifier 对应的区间为闭区间 [lower_bound,upper_bound]。注意 upper_bound 可以为空（此时中间的逗号还是有的），upper_bound 为空表示上界为无穷大。{1,3},{0,1},{2,2},{3,}均为合法的Quantifier，但 {3,2},{,1}就不合法。</div>
+<div>Atom 有三种形式：第一种为单个字符，这里字符约定只能是英文字符（包括大写和小写）和数字，这种形式下的 Atom 所能匹配的内容就是该字符。第二种形式为字符区间，具体形式为 &ldquo;[lower-upper]&rdquo;，这里 lower 和 upper 各为单个字符，满足要么同时为小写英文字母、要么同时为大写字母、要么同时为数字，并且 lower 的ASCII码不小于 upper 的ASCII码，这种情况下的 Atom 所能匹配的内容就是这个区间内的字符（包括 lower 和 upper）。第三种形式是 &ldquo;(Regexp)&rdquo;，即一个合法的正则表达式套上一对括号，这种情况下该 Atom 能匹配的内容和括号内的正则表达式相同。</div>
+<div>根据以上文法，&ldquo;[0-9]{1,3}&rdquo; 为合法的正则表达式，它能匹配长度为 1&sim;3 且由数字组成的字符串。&ldquo;([a-z]|[0-9]){3,10}&rdquo; 也为合法的正则表达式，它能匹配长度为 3&sim;10 且由小写英文字母和数字组成的字符串。更复杂的一个例子为 &ldquo;01[0-1]{0,}|10[0-1]{0,}&rdquo;，它能匹配所有 01 或 10 开头的 01 字符串。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一个一个正整数 T，表示数据的组数。下面依次给出每组数据。</div>
+<div>每组数据的第一行包含一个正整数 N，表示 router 中有 N 个 path。下面 2N 行，每两行描述一个 path，第一行为 path 匹配的 URL，形式为</div>
+<div>&ldquo;/{something_1}/{something_2}/.../{something_k}&rdquo;</div>
+<div>每段 something 要么为具体的字符串（由大写英文字母、小写英文字母和数字组成且长度在 [1,50] 内），要么为 &ldquo;:{regexp_name}&rdquo;，其中 regexp_name 由大写和小写英文字母组成且长度不超过 30。具体的正则表达式会在之后的输入中给出。描述该 path 的第二行为对应的 action 名称（由大写和小写英文字母组成，长度在 [1,30] 内）。</div>
+<div>下面若干行描述前面 path 中出现的所有正则表达式，每行描述一个正则表达式，每行内包含两个非空字符串（由一个空格隔开），前面的字符串表示 regexp_name，后面的字符串表示对应正则表达式（长度不超过 50）。注意同一个 regexp_name 可能在前面给出的 path 中出现多次（一个 path 中出现多次或在不同 path 中出现），这种情况下他们对应的正则表达式是相同的，并且输入中只会描述一次。数据同时保证这里给出的 regexp_name 都至少在一个 path 中出现过。</div>
+<div>下面一行包含一个正整数 M，表示有 M 个请求发了过来。下面 M 行，每行描述一个请求的 URL。URL 为 /{something_1}/{something_2}/.../{something_k}&rdquo; 或 &ldquo;/{something_1}/{something_2}/.../{something_k}?{name_1}={value_1}&amp;{name_2}={value_2}&amp;...&amp;{name_n}={value_n}&rdquo; 的形式，其中所有 something 和 value 都由大写英文字母、小写英文字母和数字组成且长度在 [1,50] 内，所有 name 都由大写和小写英文字母组成且长度在 [1,30] 内。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每组数据，先单独一行输出 &ldquo;Case #{case_no}:&rdquo;（不含引号），其中 case_no 表示当前是第几组数据（从 1 开始编号）。</div>
+<div>每行输出依次对应每个请求。如果没有 path 能够匹配该请求的 URL，输出 &ldquo;404 Not Found&rdquo;。</div>
+<div>如果有 path 能够匹配改请求，输出 &ldquo;Request matches action &quot;{action_name}&quot; with parameters {parameter_list}&rdquo;，其中 action_name 为匹配 path 对应 action 的名称，parameter_list 为所有的参数。</div>
+<div>其中 parameter_list 用一个字典的方式输出。例如有三个参数，他们的 name 为 avatar、message 和 page，对应的 value 分别为 true、hello 和 2，那么输出的 parameter_list 为 &ldquo;{&quot;avatar&quot;:&quot;true&quot;,&quot;message&quot;:&quot;hello&quot;,&quot;page&quot;:&quot;2&quot;}&rdquo;（所有参数按照 name 的字典序排列）。</div>
+<div>注意一个请求中，拥有相同 name 的参数可能出现多次，例如请求的 URL 为 &ldquo;/user/me/show?name=you&amp;name=he&rdquo;，匹配的 path 为 &ldquo;/user/:name/show&rdquo;，此时的 parameter_list 为 &ldquo;{&quot;name&quot;:[&quot;me&quot;,&quot;you&quot;,&quot;he&quot;]}&rdquo;。方括号里面按照参数在请求 URL 中出现的次序给出。</div>
+<div>更多具体的例子请参考样例。数据能够保证一个请求不会被多个 path 匹配。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3
+3
+/user/:id/show
+userShow
+/message/list
+messageList
+/message/:id/show
+messageShow
+id [0-9]{2,4}
+3
+/message/list
+/user/123/show?avatar=true
+/message/5312/show?page=1
+1
+/foo/:id/:bar/:bar
+fun
+id [0-9]{2,4}
+bar [a-z]{1,3}
+1
+/foo/777/az/bc?bar=xyz&bar=zzz
+2
+/user/:handle/show
+userShow
+/user/:id/show
+userShow
+id [0-9]{2,4}
+handle ([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]){4,10}
+4
+/user/259/show
+/user/wjmzbmr/show?like=true
+/user/0xxx/show
+/user/WJMZBMR/show?love=true</pre><hr/><h3>样例输出</h3><pre>Case #1:
+Request matches action "messageList" with parameters {}
+Request matches action "userShow" with parameters {"avatar":"true","id":"123"}
+Request matches action "messageShow" with parameters {"id":"5312","page":"1"}
+Case #2:
+Request matches action "fun" with parameters {"bar":["az","bc","xyz","zzz"],"id":"777"}
+Case #3:
+Request matches action "userShow" with parameters {"id":"259"}
+Request matches action "userShow" with parameters {"handle":"wjmzbmr","like":"true"}
+404 Not Found
+Request matches action "userShow" with parameters {"handle":"WJMZBMR","love":"true"}
+
+</pre><hr/><h3>提示</h3><p><div>对于 100% 的数据，N,M&le;20000，T&le;5，输入文件大小不超过 10MB。不同名称的正则表达式最多有 50 个。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年国家集训队测试</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3818" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3818" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

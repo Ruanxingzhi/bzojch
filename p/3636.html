@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3636：教义问答手册</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">教义问答手册</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">教义问答手册</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                教义问答手册                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&ldquo;汉中沃野如关中，四五百里烟蒙蒙。黄云连天夏麦熟，水稻漠漠吹秋风。&rdquo;&mdash;&mdash;摘自 黄裳《汉中行》<br />
+&ldquo;泉岭精神不朽，汉中诸球永生。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;把神犇烤一烤，味道会更好。&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;秀恩爱有利于身心健康！&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+&ldquo;楼上说的对！&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;不会做积分，怎么找妹子！&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;切实保护耕地以放置更多的哨戒炮。&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;就算两个包子一起吃掉，也不能阻止我修筑梯田。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;我来自泉岭，他来自汉中，我们半道而逢。&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+【问题描述】<br />
+&nbsp;&nbsp;&nbsp; 作为泉岭精神的缔造者、信奉者、捍卫者、传承者，Pear决定印制一些教义问答手册，以满足泉岭精神日益增多的信徒。Pear收集了一些有关的诗选、语录，其中部分内容摘录在了【题目背景】里。这些语录是按出现的时间排好序的&mdash;&mdash;Pear很喜欢这样的作风，于是决定在按时间排好序的基础上，选择部分语录，制作成若干本教义问答手册。<br />
+&nbsp;&nbsp;&nbsp; 一共有N条语录。Pear决定从中选出某一段时间内的所有语录，在此基础上印制大小为L的若干本教义问答手册。Pear对印制的手册有如下要求：<br />
+&nbsp;&nbsp;&nbsp; 1.每本手册必须包含这个区间内连续的恰好L条语录。<br />
+&nbsp;&nbsp;&nbsp; 2.不同手册包含的语录不能相同。<br />
+&nbsp;&nbsp;&nbsp; 3.每条语录有一个&ldquo;主题相关程度&rdquo;，这个数可正可负。Pear希望所有手册的语录的&ldquo;主题相关程度&rdquo;之和尽可能大。<br />
+&nbsp;&nbsp;&nbsp; 例如，对于区间[3,15]和L=3，一种选择方法是：[4,6]+[9,11]+[12,14]。这三个区间长度都恰好为L，且互不重叠。<br />
+&nbsp;&nbsp;&nbsp; Pear并没有决定选哪段时间的语录，因此他有Q次询问。每次询问，给出两个数[l,r]表示候选语录的范围是第l条到第r条。你能回答出每个询问的最大&ldquo;主题相关程度&rdquo;之和么？<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行两个正整数N，L，含义如上所述。注意对于所有询问，L都是一样的。<br />
+&nbsp;&nbsp;&nbsp; 第二行N个整数，绝对值&lt;=10000。第i个数表示第i条语录的&ldquo;主题相关程度&rdquo;。<br />
+&nbsp;&nbsp;&nbsp; 接下来Q行，每行两个正整数l和r，表示询问区间。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp; 输出Q行，每行表示这组询问的答案。注意，这个答案可以是0，如果区间负数过于多的话。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>    15 3
+    3 1 5 -2 3 -2 -2 2 2 2 0 3 2 -1 0 
+    9
+    8 10
+    10 10
+    9 11
+    2 14
+    5 14
+    5 13
+    12 13
+    7 13
+    2 10
+
+  </pre><hr/><h3>样例输出</h3><pre>6
+    0
+    4
+    17
+    11
+    11
+    0
+    11
+    12
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">【数据范围】<br />
+&nbsp;&nbsp;&nbsp; 对于10%的数据，N=1000,Q=1000,L&lt;=50<br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=5<br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=10<br />
+&nbsp;&nbsp;&nbsp; 对于100%的数据，N=100000,Q=100000,L&lt;=50</span></p></p><hr/><h3>题目来源</h3><p>2014年国家集训队十五人互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3636" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3636" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

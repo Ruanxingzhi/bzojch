@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1820：[JSOI2010]Express Service 快递服务
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2010]Express Service 快递服务
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JSOI2010]Express Service 快递服务
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JSOI2010]Express Service 快递服务
+                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>「飞奔」快递公司成&#63991;之后，已经分别与市内许多中小企业公司签订邮件收送服务&#63753;约。由于有些公司是在同一栋大楼内，所以「飞奔」公司收件的地点（收件点）最多只有m点 (1, 2, …, m)，因此「飞奔」仅先&#64008;采购&#63930;三辆货&#63746;并聘用&#63930;三名司机，每天早上分别从收件地点 「1」, 「2」 及 「3」出发。而在与客户的服务&#63753;约中有明确订约：「飞奔」必须在客户提出邮件寄送要求的隔天派人至该公司（地点）收件。
+为&#63930;能&#63745;有效&#63841;的服务客户并节&#63853;收件时间，该公司设&#63991;&#63930;收件服务登记网站，客户如有邮件需要寄送，必须在需要收件的前一天就先上网登记。为了节省油量，「飞奔」就&#63965;用晚上先&#64008;安排三位司机隔天的收件&#63799;线。每位司机至各地点收件的顺序应与各公司上网登记的顺序相符且必须能在最&#63853;油的情况下完成当天所有的收件服务。因此每位司机有可能需要在&#63847;同时间重复到同一地点收件，或&#63847;同的司机有可能需在&#63847;同的时间点前往同一地点收件。
+如下面范&#63925;二(收件公司地点依序为： 4 2 4 1 5 4 3 2 1)所示，虽然司机1一开始就已经在收件地点「1」&#63930;，但是他却&#63847;能先把后面第四个登记的公司（地点「1」）邮件先收&#63930;再前往第一、第二、或第三个登记收件地点（地点「4」,「2」,「4」）收件。但是如果前三个登记收件的服务是由司机2或3&#63789;负责，则司机1就可以在地点「1」收&#63930;第四个登记的邮件后再前往后面所登记的地点收件。此外，在某些情况下，&#63847;一定每辆车都要收到货，也就是&#63855;，最佳收件方式也有可能是只需出动一或&#63864;辆车去收货。请写一个程序&#63789;帮「飞奔」公司计算每天依预约顺序至各收件地点收件的最少总耗油&#63870;。 
+
+</p><hr/><h3>输入格式</h3><p>输入文件第一&#64008;有一个整数 m（3 < = m < = 200），代表「飞奔」公司收件的地点数，以1至m之间的整数代号&#63789;表示每个地点。
+接下&#63789;的m&#64008;（第2到第m+1&#64008;），每&#64008;有m个整数，代表一个矩阵D。第 i +1&#64008;的第 j 个整数是D(i, j)，D(i, j) 代表司机开车从收件点 i 到收件点 j 所需耗油&#63870;。最后有一&#64008;数&#63749;，数&#63749;之数字依序为前一天上网登记要求收件的公司地点代号，最多会有1000个收件请求。输入文件中任&#63864;个相邻的整数都以一个空白隔开。 //D(i,j)<=maxint
+注意：油&#63870;矩阵D满足三角&#63847;等式，也就是&#63855; D(i, j) < = D(i, k) + D(k, j)，1 < = i, j, k < = m。因此，每辆车前往下一个收件地点时一定是直接前往，&#63847;必先绕道至其它地点再抵达下个收件地点。 
+
+</p><hr/><h3>输出格式</h3><p>输出一个整数，代表收件所需最少总耗油&#63870;。 
+
+</p><hr/><h3>样例输入</h3><pre>4 
+0 5 0 6 
+6 0 5 6 
+1 6 0 6 
+1 1 1 0 
+1 1 1 1 4 4 2 2 2 3 
+
+</pre><hr/><h3>样例输出</h3><pre>6   
+
+样例说明：到每个请求收件地点的司机分别为1 1 1 1 3 3 2 2 2 1，因此司机1只需从起使点1移动到地点3，司机2只需停&#63949;在地点2，司机3从起始点3移动到地点4。 
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>JSOI2010第二轮Contest1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1820" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1820" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

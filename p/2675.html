@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2675：Bomb</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Bomb</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Bomb</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Bomb                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div id="psrc" style="margin-top: 20px; display: block">
+<div class="pdsec"><span style="font-size: medium">　　A国和B国是两个超级大国，长期处于冷战状态；<br />
+　　A国在B国中设有N个情报站，编号为1,2,3,&hellip;&hellip;,N，每个情报站有一个坐标(Xi,Yi)。<br />
+　　但是，A国的工作人员发现，每个情报站里都被埋上了炸弹！<br />
+　　这些炸弹非常特殊，只要同时拆除其中的三个炸弹，所有炸弹就都不会爆炸了。<br />
+　　由于各个情报站联络需要代价，拆除炸弹需要花费的总代价为这些炸弹两两之间的曼哈顿距离和。<br />
+　　现在A国的指挥部门找到了你，希望知道可能需要的最大代价和最小代价。<br />
+</span></div>
+</div>
+<div id="pcont1" style="margin-top: 20px; display: block"></div></p><hr/><h3>输入格式</h3><p><div id="pcont1" style="margin-top: 20px; display: block">
+<div class="pdcont"><span style="font-size: medium">　　输入的第一行包含一个整数N。接下来N行，第i+1行两个整数Xi,Yi，表示第i个情报站的坐标。<br />
+</span></div>
+</div></p><hr/><h3>输出格式</h3><p><div class="pdcont"><span style="font-size: medium">　　输出两行，每行包含一个整数，第一行表示可能的最大代价，第二行表示可能的最小代价。<br />
+</span></div></p><hr/><h3>样例输入</h3><pre>4
+1 1
+1 2
+2 1
+2 3
+
+</pre><hr/><h3>样例输出</h3><pre>6
+4
+
+数据规模和约定
+　　对于30%的数据，N<=500
+　　对于另外10%的数据，每个点出现至少两遍
+　　对于50%的数据，N<=1000
+　　对于60%的数据，N<=8000
+　　对于70%的数据，N<=15000
+　　对于80%的数据，N<=50000
+　　对于100%的数据，N<=100000，0<=Xi,Yi<=10^8
+
+</pre><hr/><h3>提示</h3><p><p>注释<br />
+　　对于两个点(X0,Y0),(X1,Y1)，<br />
+　　它们之间的曼哈顿距离为abs(X0-X1)+abs(Y0-Y1)。<br />
+　　其中abs(x)表示x的绝对值。<br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2675" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2675" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

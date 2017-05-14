@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3062：[Usaco2013 Feb]Taxi</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2013 Feb]Taxi</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2013 Feb]Taxi</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2013 Feb]Taxi                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp;Bessie is running a taxi service for the other cows on the farm. The cows have been gathering at different locations along a fence of length M (1 &lt;= M &lt;= 1,000,000,000). Unfortunately, they have grown bored with their current locations and each wish to go somewhere else along the fence. Bessie must pick up each of her friends at their starting positions and drive them to their destinations. Bessie's car is small so she can only transport one cow in her car at a time. Cows can enter and exit the car instantaneously. To save gas, Bessie would like to minimize the amount she has to drive. Given the starting and ending positions of each of the N cows (1 &lt;= N &lt;= 100,000), determine the least amount of driving Bessie has to do. Bessie realizes that to save the most gas she may need to occasionally drop a cow off at a position other than her destination. Bessie starts at the leftmost point of the fence, position 0, and must finish her journey at the rightmost point on the fence, position M.&nbsp;</span></p>
+<p></p>
+<p></p>
+<div style="text-indent: 12pt"><span style="text-indent: 12pt;">Bessie在农场上为其他奶牛提供出租车服务。这些奶牛已经在沿着长度为M（1&lt;= M &lt;= 1,000,000,000）的栅栏上不同的地点聚集等候。不幸的是，他们已经厌倦了他们当前所在的位置并且每只奶牛都想要沿着栅栏去别的地方走走。 Bessie必须赶到这些奶牛的起始位置，并把他们带到它们的目的地。Bessie的车很小，所以她只能一次只能搭载一头奶牛。奶牛可以在同一时刻完成上车和下车。</span></div>
+<div style="text-indent: 12pt">为了节省燃气，Bessie想以尽可能少的燃料完成这次任务。N只奶牛的起始位置和结束为止都是已知的（1 &lt;= N &lt;=100000），请确定Bessie的最少行程。Bessie意识到，要使所得到的行程最短，Bessie可能将在沿途中让奶牛上车或下车而并不一定将一头奶牛从起点直接送到中点。</div>
+<div style="text-indent: 12pt">Bessie的起点是围栏的最左端，位置记为0。终点在篱笆的最右边，位置记为M。</div>
+<div style="text-indent: 12pt"></div></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;* Line 1: N and M separated by a space. </font></p>
+<p><font size="4">* Lines 2..1+N: The (i+1)th line contains two space separated integers, s_i and t_i (0 &lt;= s_i, t_i &lt;= M), indicating the starting position and destination position of the ith cow. </font></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">&nbsp;Line 1: A single integer indicating the total amount of driving Bessie must do. Note that the result may not fit into a 32 bit integer.&nbsp;</span></p></p><hr/><h3>样例输入</h3><pre>2 10
+0 9
+6 5
+ INPUT DETAILS: There are two cows waiting to be transported along a fence of length 10. The first cow wants to go from position 0 (where Bessie starts) to position 9. The second cow wishes to go from position 6 to position 5.</pre><hr/><h3>样例输出</h3><pre> 12
+
+ OUTPUT DETAILS: Bessie picks up the first cow at position 0 and drives to position 6. There she drops off the first cow, delivers the second cow to her destination and returns to pick up the first cow. She drops off the first cow and then drives the remainder of the way to the right side of the fence. </pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Calibri">&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">在</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">0</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号站接第</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个客户，从</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">0</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号站出发到</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">6</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号站（</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">7</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">站），放下第</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个客户，接第</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个客户，送到</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">5</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号站再回来（</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">站），再接第</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个客户，送到</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">9</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号点（</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">3</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">站），共</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">12</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">站。（因为送完所有客户之后</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">Bessie</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">已在终点，故无需再走）</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p></p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3062" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3062" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4826：[Hnoi2017]影魔</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2017]影魔</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2017]影魔</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Hnoi2017]影魔                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>影魔,奈文摩尔,据说有着一个诗人的灵魂。事实上,他吞噬的诗人灵魂早已成千上万。千百年来,他收集了各式各样</div>
+<div>的灵魂,包括诗人、牧师、帝王、乞丐、奴隶、罪人,当然,还有英雄。每一个灵魂,都有着自己的战斗力,而影魔,靠</div>
+<div>这些战斗力提升自己的攻击。奈文摩尔有 n 个灵魂,他们在影魔宽广的体内可以排成一排,从左至右标号 1 到 n。</div>
+<div>第 i个灵魂的战斗力为 k[i],灵魂们以点对的形式为影魔提供攻击力,对于灵魂对 i,j(i&lt;j)来说,若不存在 k[s](i</div>
+<div>&lt;s&lt;j)大于 k[i]或者 k[j],则会为影魔提供 p1 的攻击力(可理解为:当 j=i+1 时,因为不存在满足 i&lt;s&lt;j 的 s,从</div>
+<div>而 k[s]不存在,这时提供 p1 的攻击力;当 j&gt;i+1 时,若max{k[s]|i&lt;s&lt;j}&lt;=min{k[i],k[j]} , 则 提 供 p1 的 攻</div>
+<div>&nbsp;击 力 ); 另 一 种 情 况 , 令 c 为k[i+1],k[i+2],k[i+3]......k[j-1]的最大值,若 c 满足:k[i]&lt;c&lt;k[j],或</div>
+<div>者 k[j]&lt;c&lt;k[i],则会为影魔提供 p2 的攻击力,当这样的 c 不存在时,自然不会提供这 p2 的攻击力;其他情况的</div>
+<div>点对,均不会为影魔提供攻击力。影魔的挚友噬魂鬼在一天造访影魔体内时被这些灵魂吸引住了,他想知道,对于任</div>
+<div>意一段区间[a,b],1&lt;=a&lt;b&lt;=n,位于这些区间中的灵魂对会为影魔提供多少攻击力,即考虑 所有满足a&lt;=i&lt;j&lt;=b 的灵</div>
+<div>魂对 i,j 提供的攻击力之和。顺带一提,灵魂的战斗力组成一个 1 到 n 的排列:k[1],k[2],...,k[n]。</div></p><hr/><h3>输入格式</h3><p><div>第一行 n,m,p1,p2</div>
+<div>第二行 n 个数:k[1],k[2],...,k[n]</div>
+<div>接下来 m 行,每行两个数 a,b,表示询问区间[a,b]中的灵魂对会为影魔提供多少攻击力。</div>
+<div>1 &lt;= n,m &lt;= 200000;1 &lt;= p1,p2 &lt;= 1000</div></p><hr/><h3>输出格式</h3><p><div>共输出 m 行,每行一个答案,依次对应 m 个询问。</div></p><hr/><h3>样例输入</h3><pre>10 5 2 3 
+7 9 5 1 3 10 6 8 2 4 
+1 7 
+1 9 
+1 3 
+5 9
+1 5</pre><hr/><h3>样例输出</h3><pre>30
+39
+4
+13
+16
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4826" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4826" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

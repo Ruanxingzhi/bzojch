@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2652：三角板</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">三角板</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">三角板</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                三角板                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div id="psrc" style="margin-top: 20px; display: none">
+<div class="pdcont"></div>
+<div id="pcont1" style="margin-top: 20px; display: block"></div>
+</div>
+<p><span style="font-size: medium">　　zz有一副神奇的三角板，三角板有两种形状：宽的(Wide)和窄的(Narrow)。三角板都是等腰三角形，宽的三角板底边为高的两倍，窄的三角板底边和高相等。<br />
+zz要把n个三角板依次放在桌面上。桌面可以抽象为一根数轴，zz把第i个三角板的底边置于数轴上(y坐标为0)，它的顶点坐标为(xi,yi)，那么，根据三角板的形状，就可以得到另外两个点的坐标了。<br />
+每放完一个三角板，zz就会数一遍，目前看得到几个三角板的顶点，如果顶点在其他三角板内(包括边界)，zz是看不见的。并且，当摆放第i个三角板时，如果(xi,yi)已经位于某三角板内，zz认为，这个三角板是放不下的，他便不会放入该三角板。<br />
+然而zz的三角板实在太多了，你能帮帮他吗？<br />
+</span></p></p><hr/><h3>输入格式</h3><p><div id="pcont1" style="margin-top: 20px; display: block">
+<div class="pdcont"><span style="font-size: medium">　　输入的第一行包含一个整数n。接下来n行表述每个三角板，第i行包含两个整数xi,yi和一个字符&rsquo;W&rsquo;(代表宽的三角板)或&rsquo;N&rsquo;(代表窄的三角板)(不包含引号)。<br />
+</span></div>
+</div></p><hr/><h3>输出格式</h3><p><div class="pdcont"><span style="font-size: medium">　　输出n行。若是第i个三角板能放得下，则输出一个整数，代表放入第i个三角板后看得见几个顶点；否则输出字符串&rdquo;FAIL&rdquo;(都为大写字母，不包含引号)<br />
+</span></div></p><hr/><h3>样例输入</h3><pre>3
+0 1 W
+0 2 N
+0 1 W
+
+</pre><hr/><h3>样例输出</h3><pre>1
+1
+FAIL
+
+</pre><hr/><h3>提示</h3><p><p>数据规模和约定<br />
+30%的数据满足：n&le;1000<br />
+70%的数据满足：n&le;40000<br />
+100%的数据满足：1&le;n&le;100000、-10^9&le;xi&le;10^9、1&le;yi&le;10^9</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2652" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2652" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

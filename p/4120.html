@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4120：[Baltic2015]Editor</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2015]Editor</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2015]Editor</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Baltic2015]Editor                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;Byteasar is a programmer who works on a revolutionary text editor. In the editor there are two types of operations: one type allows to edit text in the editor, and the other type allows to undopreviously performed operations. One of the innovative features of this editor is a multilevel undo operation. It works as follows. We say that a text editing operation is an operation of level 0. Anundo operation of level I (for i=1,2&hellip;) undoes the last operation of level at most i-1 which is not undone. For instance, an undo operation of level 1 can undo only editing operations, and an undo operation of level 2 can undo editing operations as well as undo operations of level 1 (but no undo operations of greater levels).</p>
+<div>More formally, each of the already performed operations can be in two states: active or undone. Let x be one of the operations. Just after performing the operation x, it is in the state active. If x is an undo operation of level i, we find the most recent operation in state active of level at most i-1 (denote it by x1) and change the state of the operation x1 to undone. If x1 is also an undo operation, we must change to active the state of the operation which x1 had undone (say x2). We continue in the same manner: whenever the state of an undo operation xj which had previously undone some operation x(j+1) changes, we must also change the state of the operation x(j+1) (which, of course, may result in changing states of further operations). The whole chain of state modifications finishes when an editing operation is reached.</div>
+<div>For simplicity, the current contents of text in the editor will be specified by a single integer s, called the editor state (equal to 0 at the beginning). Each editing operation specifies the editor state that it produces. The editor state depends on the last editing operation in the state active. Help Byteasar and write a program which keeps track of the editor state.</div>
+<div>Let us see this in action: the following table shows some operations performed by Byteasar and the editor state after performing each of them. The symbol Es denotes an editing operation which changes the editor state to s, whereas the symbol Ui denotes an undo operation of level i.</div>
+<div>Operation<span class="Apple-tab-span" style="white-space:pre">		</span>&nbsp; &nbsp; &nbsp; &nbsp;E1<span class="Apple-tab-span" style="white-space:pre">	</span>E2<span class="Apple-tab-span" style="white-space:pre">	</span>E5<span class="Apple-tab-span" style="white-space:pre">	</span>U1<span class="Apple-tab-span" style="white-space:pre">	</span>U1<span class="Apple-tab-span" style="white-space:pre">	</span>U3<span class="Apple-tab-span" style="white-space:pre">	</span>E4<span class="Apple-tab-span" style="white-space:pre">	</span>U2<span class="Apple-tab-span" style="white-space:pre">	</span>U1<span class="Apple-tab-span" style="white-space:pre">	</span>U1<span class="Apple-tab-span" style="white-space:pre">	</span>E1</div>
+<div>Editor state<span class="Apple-tab-span" style="white-space:pre">	</span>0<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">	</span>5<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">	</span>4<span class="Apple-tab-span" style="white-space:pre">	</span>2<span class="Apple-tab-span" style="white-space:pre">	</span>1<span class="Apple-tab-span" style="white-space:pre">	</span>0<span class="Apple-tab-span" style="white-space:pre">	</span>1</div>
+<div>First, Byteasar performed three editing operations. The editor state changed from 0 to 1, then to 2, and finally to 5. Next, he performed two undo operations of level 1, which undid the operations E5 and E2 (changing their state to undone). Thus the editor state was restored to 1. The following undo operation of level 3 undid the last operation U1 (changing its state to undone), consequently restoring the operation E2 (changing its state back to active). As a result the editor state changed once again to 2. Operation U2 undid the operation E4, operation U1 once again undid the restored operation E2, the last operation U1 undid the operation E1, and the final operation is E1.</div></p><hr/><h3>输入格式</h3><p><p>The first line of the input contains a positive integer n, specifying the number of operations performed by Byteasar. The next n lines contain descriptions of operations, one per line, each being an integer Ai(-n&lt;=Ai&lt;=N,Ai&lt;&gt;0) ). If Ai&gt;0, then it specifies an editing operation which modifies the editor state to Ai. If Ai&lt;0, then it specifies an undo operation of level -Ai. You can assume that for every undo operation there will be some operation in the state active of smaller level to undo.</p></p><hr/><h3>输出格式</h3><p><p>Your program should output n lines. The i-th line should contain one integer specifying the editor state after performing the first i operations from the input.</p></p><hr/><h3>样例输入</h3><pre>11
+1
+2
+5
+-1
+-1
+-3
+4
+-2
+-1
+-1
+1</pre><hr/><h3>样例输出</h3><pre>1
+2
+5
+2
+1
+2
+4
+2
+1
+0
+1</pre><hr/><h3>提示</h3><p><p>&nbsp;N&lt;=300 000</p>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4120" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4120" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

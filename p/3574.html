@@ -1,0 +1,151 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3574：[Hnoi2014]抄卡组</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2014]抄卡组</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2014]抄卡组</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Hnoi2014]抄卡组                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">一天闲着无聊的小L找来了当前正火爆的游戏《炉石传说》来玩，但是怎么打怎么输，于是他大喊一声&ldquo;我要抄卡组！&rdquo;就找来了游戏传说组第一名的游戏高手小H的直播来看。<br />
+&nbsp;&nbsp;&nbsp; 但是小L家的网络技术还停留在拨号，看着直播画面又是卡顿又是花屏，他不给力的网络让他完全无法记录小H展示的给力的卡组。小L周围都是学霸没有人玩游戏想去帮他这个忙，但是学霸们热衷于讨论各种信息学问题。&nbsp;&nbsp;&nbsp; 于是他想到了一个方法：由于每次花屏的屏幕位置不一样，于是小H每次总能记录下卡组的一些部分，如果这样记录多次，不就有可能还原出小L想要的一个卡组么？但是存在的一个问题是，小H每次展示的卡组有可能不一样，所以他想知道他每次看直播抄下来几次的卡组碎片是否一致。&nbsp;&nbsp;&nbsp; 这样一来小H将他遇到的游戏问题抽象成这样一个学术问题让学霸（你）解决：</span><span style="font-size: medium;">'*'</span><span style="font-size: medium;">可以匹配任意长度个的字符</span></p>
+<p><span style="font-size: medium"> （包含0个），问所有字符串是否两两匹配。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行包含一个正整数T，表示了数据组数。<br />
+&nbsp;&nbsp;&nbsp; 接下来包含T组数据：<br />
+&nbsp;&nbsp;&nbsp; 每组数据的第一行是一个正整数N，表示该组数据酌字符串个数。<br />
+&nbsp;&nbsp;&nbsp; 接下来N行，每行一个字符串，字符串仅包含小写字母、数字、通配符术。<br />
+</font></p>
+<p><span style="font-family: Arial; font-size: 14px; line-height: 23.796875px;">注意:数据为UNIX格式，中间包含空行,你可以采用</span><span style="font-family: Arial; font-size: 14px; line-height: 23px;">逐字符读入的方式</span></p></p><hr/><h3>输出格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp; 输出包含T行，每行一个字母Y或者N，Y表示这组数据中所有字符串两两匹配，N表示这组数据中至少有一对字符串不匹配。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>10
+2
+1234567890*1234567890
+1234567890a1234567890
+2
+1234567890*1234567890
+1234567890*1234567890
+2
+1234*67890a1234567890
+1234567890*1234567890
+2
+1234567890*1234567890
+1234567890a12345*7890
+2
+1234567890*1234567890
+*12345
+2
+12345*67890
+1234567890*1234567890
+2
+1234567890*1234567890
+12345*
+2
+1234567890*1234567890
+*67890
+2
+67890*
+1234567890*1234567890
+2
+1234567890*a*1234567890
+1234567890*1234567890
+</pre><hr/><h3>样例输出</h3><pre>Y
+Y
+Y
+Y
+N
+Y
+Y
+Y
+N
+Y
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 对于100%的数据，满足N&lt;= 100000，T= 10，输入文件不超过10M，N&times;最长字符串长度不超过2x10^8<br />
+</span></p></p><hr/><h3>题目来源</h3><p>鸣谢NanoApe重新制作数据</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3574" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3574" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

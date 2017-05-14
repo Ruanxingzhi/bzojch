@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3044：足球比赛</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">足球比赛</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">足球比赛</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                足球比赛                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">SJZEZ和TSYZ正在进行一轮足球联谊赛，根据规则，这轮比赛有两场，一场在SJZEZ的主场进行，一场在TSYZ的主场进行。胜负判断标准如下：<br />
+1.在两场比赛中进球总数较多的一方赢得比赛。<br />
+2.如果双方进球总数相同，在对方主场进球更多的一方赢得比赛。<br />
+3.如果1、2都相同，胜利者将会随机产生= =<br />
+双方已经进行了一场比赛，作为SJZEZ的队长，忘川沧月童鞋想知道：<br />
+(1)第二场sjzez最少需要进多少球，才有可能赢得比赛。<br />
+(2)第二场sjzez进不超过多少个球，tsyz才有可能赢得比赛。<br />
+已知在一场比赛中，一方的进球数不可能多于30个。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">第一行一个整数t，表示该测试点中数据的组数。<br />
+接下来t行，每行一个字符串，描述该组数据中第一场比赛的情况，形式如下：<br />
+wccy's team played where game, scored x goals, and conceded y goals.<br />
+其中where是'home'或者'away'中的一个，home表示第一场比赛是在sjzez的主场进行，away表示第一场比赛是在tsyz的主场进行。<br />
+x，y是整数，分别表示忘川沧月的队伍的进球数，和对方的进球数。</font></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出t行，每行包含两个用空格隔开的整数，分别是两个问题的答案。</span></p></p><hr/><h3>样例输入</h3><pre>2
+wccy's team played home game, scored 28 goals, and conceded 0 goals.
+wccy's team played home game, scored 1 goals, and conceded 1 goals.
+</pre><hr/><h3>样例输出</h3><pre>
+0 1
+1 29
+
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据，1&lt;=t&lt;=500，0&lt;=x,y&lt;=30.<br />
+</p></p><hr/><h3>题目来源</h3><p>Poetize7</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3044" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3044" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

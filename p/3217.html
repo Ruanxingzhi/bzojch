@@ -1,0 +1,169 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3217：ALOEXT</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">ALOEXT</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">ALOEXT</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                ALOEXT                </h1>
+                <p>时间限制：25s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal"><font color="#ff0000" size="3"><b><br />
+</b></font></p>
+<p class="MsoNormal"><span style="font-size: medium"><span lang="EN-US">taorunz</span><span style="font-family: 宋体">平时最喜欢的东西就是可移动存储器了&hellip;&hellip;只要看到别人的可移动存储器，他总是用尽一切办法把它里面的东西弄到手。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">突然有一天，</span><span lang="EN-US">taorunz</span><span style="font-family: 宋体">来到了一个密室，里面放着一排可移动存储器，存储器里有非常珍贵的</span><span lang="EN-US">OI</span><span style="font-family: 宋体">资料&hellip;&hellip;不过比较特殊的是，每个存储器上都写着一个非负整数。</span><span lang="EN-US">taorunz</span><span style="font-family: 宋体">很高兴，要把所有的存储器都拿走（</span><span lang="EN-US">taorunz</span><span style="font-family: 宋体">的智商高达</span><span lang="EN-US">500</span><span style="font-family: 宋体">，他一旦弄走了这里的所有存储器，在不久到来的</span><span lang="EN-US">AHOI</span><span style="font-family: 宋体">和</span><span lang="EN-US">NOI</span><span style="font-family: 宋体">中&hellip;&hellip;你懂的）。不过这时有一个声音传来：&ldquo;你只能拿走这里的一个存储器，而且还不能直接拿，你需要指定一段区间</span><span lang="EN-US">[l, r]</span><span style="font-family: 宋体">，满足</span><span lang="EN-US">l&lt;r</span><span style="font-family: 宋体">，然后在第</span><span lang="EN-US">l</span><span style="font-family: 宋体">个和第</span><span lang="EN-US">r</span><span style="font-family: 宋体">个存储器之间选一个拿走，你能获得的知识增加量等于区间</span><span lang="EN-US">[l, r]</span><span style="font-family: 宋体">中所有存储器上写的整数的次大值与你拿走的这个存储器上写的整数作按位异或运算的结果。&rdquo;</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">问题是，这里的可移动存储器数量太多，而且，它们还在不断地发生变化，有时候天上会掉下来一个新的存储器，并插入到这一排存储器中，有时候某个存储器会不明原因消失，有时候某个存储器上写的整数变化了。</span><span lang="EN-US">taorunz</span><span style="font-family: 宋体">虽然智商很高，但也无法应对如此快的变化，他指定了许多段区间，让你帮他找出如果在这个区间中拿走存储器，他能获得的最多的知识是多少。</span></span></p>
+<p class="MsoNormal"><font face="宋体" size="3"><br />
+</font></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal"><span style="font-size: medium; font-family: 宋体; ">第一行两个整数</span><span lang="EN-US" style="font-size: medium; ">N</span><span style="font-size: medium; font-family: 宋体; ">、</span><span lang="EN-US" style="font-size: medium; ">M</span><span style="font-size: medium; font-family: 宋体; ">，表示一开始的存储器数和后面发生的事件数。</span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">第二行</span><span lang="EN-US">N</span><span style="font-family: 宋体; ">个非负整数，表示一开始从左到右每个存储器上写的数字。注意，存储器从</span><span lang="EN-US">0</span><span style="font-family: 宋体; ">开始编号，也就是最左边的存储器是第</span><span lang="EN-US">0</span><span style="font-family: 宋体; ">个。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">接下来</span><span lang="EN-US">M</span><span style="font-family: 宋体; ">行，每行描述一个事件，有</span><span lang="EN-US">4</span><span style="font-family: 宋体; ">种可能的事件。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">（</span><span lang="EN-US">1</span><span style="font-family: 宋体; ">）</span><span lang="EN-US">I x y</span><span style="font-family: 宋体; ">：表示天上掉下来一个写着数字</span><span lang="EN-US">y</span><span style="font-family: 宋体; ">的存储器，并插入到原来的第</span><span lang="EN-US">x</span><span style="font-family: 宋体; ">个存储器之前，如果</span><span lang="EN-US">x</span><span style="font-family: 宋体; ">等于原来存储器的个数，则插入到末尾；</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">（</span><span lang="EN-US">2</span><span style="font-family: 宋体; ">）</span><span lang="EN-US">D x</span><span style="font-family: 宋体; ">：表示第</span><span lang="EN-US">x</span><span style="font-family: 宋体; ">个存储器消失；</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">（</span><span lang="EN-US">3</span><span style="font-family: 宋体; ">）</span><span lang="EN-US">C x y</span><span style="font-family: 宋体; ">：表示第</span><span lang="EN-US">x</span><span style="font-family: 宋体; ">个存储器上写的数字变为</span><span lang="EN-US">y</span><span style="font-family: 宋体; ">；</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">（</span><span lang="EN-US">4</span><span style="font-family: 宋体; ">）</span><span lang="EN-US">F l r</span><span style="font-family: 宋体; ">：表示</span><span lang="EN-US">taorunz</span><span style="font-family: 宋体; ">指定区间</span><span lang="EN-US">[l, r]</span><span style="font-family: 宋体; ">，让你告诉他最多能获得多少知识。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">注意，本题强制在线，也就是事件中出现的所有数字都进行了加密，数字</span><span lang="EN-US">s</span><span style="font-family: 宋体; ">表示的真实值是</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">对于</span><span lang="EN-US">I</span><span style="font-family: 宋体; ">、</span><span lang="EN-US">D</span><span style="font-family: 宋体; ">、</span><span lang="EN-US">C</span><span style="font-family: 宋体; ">事件中的</span><span lang="EN-US">x</span><span style="font-family: 宋体; ">及</span><span lang="EN-US">F</span><span style="font-family: 宋体; ">事件中的</span><span lang="EN-US">l</span><span style="font-family: 宋体; ">、</span><span lang="EN-US">r</span><span style="font-family: 宋体; ">：</span><span lang="EN-US">(s+last_ans) mod n0</span><span style="font-family: 宋体; ">；</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">对于</span><span lang="EN-US">I</span><span style="font-family: 宋体; ">、</span><span lang="EN-US">C</span><span style="font-family: 宋体; ">事件中的</span><span lang="EN-US">y</span><span style="font-family: 宋体; ">：</span><span lang="EN-US">(s+last_ans) mod 1048576</span><span style="font-family: 宋体; ">。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span style="font-family: 宋体; ">其中</span><span lang="EN-US">n0</span><span style="font-family: 宋体; ">为目前存储器个数，</span><span lang="EN-US">last_ans</span><span style="font-family: 宋体; ">为上一个</span><span lang="EN-US">F</span><span style="font-family: 宋体; ">事件的结果，如果前面尚未发生</span><span lang="EN-US">F</span><span style="font-family: 宋体; ">事件，则</span><span lang="EN-US">last_ans=0</span><span style="font-family: 宋体; ">。</span></span></p>
+<p class="MsoNormal"><font face="宋体" size="3"><br />
+</font></p>
+<p class="MsoNormal"></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p></p>
+<div></div>
+<div>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">对于每个</span><span lang="EN-US">F</span><span style="font-family: 宋体">事件，输出结果。</span></span></p>
+<p class="MsoNormal"><font face="宋体" size="3"><br />
+</font></p>
+<p class="MsoNormal"></p>
+</div></p><hr/><h3>样例输入</h3><pre>5 10
+
+2 6 3 8 7
+
+F 1 4
+
+I 2 1048565
+
+I 0 1048566
+
+D 3
+
+F 3 0
+
+I 3 1048569
+
+D 5
+
+C 1 1048570
+
+F 1 2
+
+F 2 1
+
+</pre><hr/><h3>样例输出</h3><pre>
+15
+
+7
+
+4
+
+7
+</pre><hr/><h3>提示</h3><p><div><span style="font-size: medium; "><br />
+</span></div>
+<div><span style="font-size: medium; "><br />
+</span></div>
+<div><span style="font-size: medium; ">1&lt;=N, M&lt;=100000。所有F事件满足l&lt;r。</span></div>
+<div><span style="font-size: medium; "><br />
+</span></div>
+<div><span style="font-size: medium; ">本题共有5组数据，除1组为随机数据外，其它数据均为人工构造。</span></div>
+<p></p></p><hr/><h3>题目来源</h3><p>By mato_no1
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3217" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3217" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

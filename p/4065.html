@@ -1,0 +1,140 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4065：[Cerc2012]Graphic Madness</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2012]Graphic Madness</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2012]Graphic Madness</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2012]Graphic Madness                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;在Byteland有两家领导显卡行业的制作商：Bitotronics和3D-Bytes。他们顶级的显卡十分相像。每一个都包含一些电线连接节点，用来维护电信号传播。产品包括两种节点：插座和处理器。这种有线网络满足以下条件：</p>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>每个插座都恰好和一个处理器相连，不和任何其他插座相连。</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>每个处理器都和至少两个其他的节点相连。</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>任意两个在网络中的节点，都只存在唯一的电线路径链接他们。换句话说，这些节点之间的连通图可以被看成是一棵树。</div>
+<div>Bitthew喜欢焊接计算机的硬件设备。他拿出了来自两个不同厂家的显卡，两个显卡拥有相同数量的插座，他决定将每个Bitotronics卡上的插座与3D-Bytes卡上的插座用电缆一一相连。他得到的装置如图：</div>
+<div>&nbsp;</div>
+<div>Bitthew想要从装置中获得出最大的性能。为了实现这个目标，他想要找到一条由电线和电缆组成的路径来维护电信号。这条路径应该访问每个节点恰好一次，且这条路径的起始节点和终止节点应该在同一个节点。请你帮助Bitthew检查一下现在的装置是否能找到这样的路径。</div>
+<div><img src="../file/4065_0.jpg" width="244" height="221" alt="" /></div></p><hr/><h3>输入格式</h3><p><p>第一行一个正整数T，表示有T组数据。</p>
+<div>
+<div>每组数据第一行三个整数k, n, m，表示每个卡有k个插座，Bitotronics卡有n个处理器，3D-Bytes卡有m个处理器，2 &lt;= k &lt;= 1000, 1 &lt;= n, m &lt;= 1000。卡上的节点按照以下形式命名：</div>
+<div><span class="Apple-tab-span" style="white-space: pre;">	</span>Bitotronics卡的插座：AS1, AS2, ..., Ask</div>
+<div><span class="Apple-tab-span" style="white-space: pre;">	</span>Bitotronics卡的处理器：AP1, AP2, ..., APn</div>
+<div><span class="Apple-tab-span" style="white-space: pre;">	</span>3D-Bytes卡的插座：BS1, BS2, ..., BSk</div>
+<div><span class="Apple-tab-span" style="white-space: pre;">	</span>3D-Bytes卡的处理器：BP1, BP2, ..., BPm</div>
+<div>接下来n+k-1行描述Bitotronics卡的情况，每行两个节点的名字，表示这两个节点之间有电线相连。接下来一行为空行。</div>
+<div>接下来m+k-1行描述3D-Bytes卡的情况，每行两个节点的名字，表示这两个节点之间有电线相连。接下来一行为空行。</div>
+<div>接下来k行描述两卡之间的情况，每行两个节点的名字，表示这两个节点之间有电缆相连，保证每个插座在这k行里均只出现一次。</div>
+<div>每组数据之间会有一个空行。</div>
+</div></p><hr/><h3>输出格式</h3><p><p>对于每组数据，如果不存在这样的路径，输出一行&quot;NO&quot;，否则先输出一行&quot;YES&quot;，再在其后按照路径上的顺序输出n+m+2k个节点，相邻的节点必须通过电线或电缆直接相连，而且第一个点必须和最后一个点也直接相连，按照任意顺序输出，节点名称和&rdquo;YES&rdquo;之间空格隔开。（不含引号）</p></p><hr/><h3>样例输入</h3><pre>1
+2 1 11
+AS1 AP1
+AS2 AP1
+BS1 BP1
+
+BS2 BP11
+BP1 BP2
+BP2 BP3
+BP3 BP4
+BP4 BP5
+BP5 BP6
+BP6 BP7
+BP7 BP8
+BP8 BP9
+BP9 BP10
+BP10 BP11
+
+AS1 BS2
+BS1 AS2
+
+</pre><hr/><h3>样例输出</h3><pre>YES BP11 BP10 BP9 BP8 BP7 BP6 BP5 BP4 BP3 BP2 BP1 BS1 AS2 AP1 AS1 BS2
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Tjz</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4065" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4065" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

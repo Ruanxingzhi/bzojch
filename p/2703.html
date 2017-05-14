@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2703：玩具厂</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">玩具厂</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">玩具厂</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                玩具厂                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个城市，被公路依次连成了一个环，小月想在这些城市中建一个玩具厂。城市和公路都被编号为</span><span style="font-size: 12pt">1..N</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号公路连接</span><span style="font-size: 12pt">i-1</span><span style="font-size: 12pt">号城市与</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号城市（</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">号公路连接</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">号城市与</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">号城市），每个城市对玩具的需求为</span><span style="font-size: 12pt">wi</span><span style="font-size: 12pt">，每条公路的长度为</span><span style="font-size: 12pt">di</span><span style="font-size: 12pt">。当我们在第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号城市建玩具厂时，我们需要将玩具运输到其他城市（当然</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">城市除外）。设第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号城市到第</span><span style="font-size: 12pt">j</span><span style="font-size: 12pt">号城市的两条路径长度分别为</span><span style="font-size: 12pt">l1</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">l2</span><span style="font-size: 12pt">，则将玩具运输到第</span><span style="font-size: 12pt">j</span><span style="font-size: 12pt">号城市的费用为</span><span style="font-size: 12pt">l1*l2*wj</span><span style="font-size: 12pt">。总的运输费用为将玩具运到所有城市的运输费用的总和。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">小月当然想要总的运输费用最少，所以他会选最优的城市建玩具厂，如果有多个最优的城市，小月会等概率的选取其中一个建玩具厂。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">由于小月的调查工作没做好，我们只知道</span><span style="font-size: 12pt">1..N-1</span><span style="font-size: 12pt">号城市的</span><span style="font-size: 12pt">wi</span><span style="font-size: 12pt">，而</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">号城市的</span><span style="font-size: 12pt">wi</span><span style="font-size: 12pt">我们只知道它的取值范围</span><span style="font-size: 12pt">[a,b]</span><span style="font-size: 12pt">，我们假设</span><span style="font-size: 12pt">wi</span><span style="font-size: 12pt">的值在实数区间</span><span style="font-size: 12pt">[a,b]</span><span style="font-size: 12pt">上的概率是均匀分布的。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">没办法，现在小月只好去进行第二次调查，于是我们想知道每个城市建玩具厂的概率是多少。</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">第一行有三个正整数</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">a</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">b</span><span style="font-size: 12pt">。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">接下来</span><span style="font-size: 12pt">N-1</span><span style="font-size: 12pt">行每行一个正实数，为</span><span style="font-size: 12pt">w[1]</span><span style="font-size: 12pt">到</span><span style="font-size: 12pt">w[N-1]</span><span style="font-size: 12pt">。</span></div>
+<div style="text-indent: 20.5pt"><span style="font-size: 12pt">接下来</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">行每行一个正实数，为</span><span style="font-size: 12pt">d[1]</span><span style="font-size: 12pt">到</span><span style="font-size: 12pt">d[N]</span><span style="font-size: 12pt">。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 20.5pt"><span style="font-size: 12pt">一共有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">行，每行一个实数，表示</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">到</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">号城市建玩具厂的概率，保留</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">位小数。</span></div></p><hr/><h3>样例输入</h3><pre>5 1 100
+50
+25
+25
+50
+1
+2
+3
+2
+1
+</pre><hr/><h3>样例输出</h3><pre>0.090
+0.000
+0.000
+0.090
+0.821
+</pre><hr/><h3>提示</h3><p><p>【样例说明】<br />
+当w[5]&lt;18.75时，将在1或4号城市建玩具厂，当w[5]&gt;18.75时，将在5号城市建玩具厂，当w[5]=18.75时，将在1或4或5建玩具厂。<br />
+【数据规模和约定】<br />
+30%的数据中：N&lt;=1000。<br />
+30%的数据中：a=b。<br />
+100%的数据中：N&lt;=100000,a&lt;=b&lt;=10000,w[i]&lt;=10000,d[i]&lt;=10。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2703" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2703" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

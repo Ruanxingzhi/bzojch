@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1145：[CTSC2008]图腾totem</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]图腾totem</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]图腾totem</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CTSC2008]图腾totem                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>　　在完成了古越州圆盘密码的研究之后，考古学家小布来到了南美大陆的西部。相传很久以前在这片土地上生活</div>
+<div>着两个部落，一个部落崇拜闪电，另一个部落崇拜高山，他们分别用闪电和山峰的形状作为各自部落的图腾。小布</div>
+<div>的团队在山洞里发现了一幅巨大的壁画，壁画上被标记出了N个点，经测量发现这N个点的水平位置和竖直位置是两</div>
+<div>两不同的。小布认为这幅壁画所包含的信息仅与这N个点的相对位置有关，因此不妨设坐标分别为(1, y1) , (2, y</div>
+<div>2), ..., (n, yn)，其中y1~yn是1~N的一个排列。小布的团队打算研究在这幅壁画中包含着多少个图腾，其中闪电</div>
+<div>图腾的定义图示如下（图腾的形式只与4个纵坐标值的相对大小排列顺序有关）：</div>
+<p>&nbsp;<img alt="" border="0" src="../file/1145_0.jpg" /></p>
+<div>　　崇拜高山的部落有两个氏族，因而山峰图腾有如下两种形式，左边为A类，右边为B类（同样，图腾的形式也都</div>
+<div>只与4个纵坐标值的大小排列顺序有关）：</div>
+<p></p>
+<p><img alt="" border="0" src="../file/1145_1.jpg" />&nbsp;</p>
+<div>　　小布的团队希望知道，这N个点中两个部落图腾数目的差值。因此在本题中，你需要帮助小布的团队编写一个</div>
+<div>程序，计算闪电图腾数目减去山峰图腾数目的值，由于该值可能绝对值较大，本题中只需输出该值对16777216的余</div>
+<div>数（注意余数必为正值，例如-1对16777216的余数为16777215）。</div></p><hr/><h3>输入格式</h3><p><div>　　第一行包含一个整数N，为点的数目。接下来一行包含N个整数，分别为y1, y2, &hellip;, yn。保证y1, y2, &hellip;, yn</div>
+<div>是1~N的一个排列。<span style="font-size: 11.8181819915771px;">N &le; 200000</span></div></p><hr/><h3>输出格式</h3><p><p>　　仅包含一个数，表示闪电图腾数目与山峰图腾数目的差值对16777216的余数。</p></p><hr/><h3>样例输入</h3><pre>【样例输入一】
+ 5
+  1 5 3 2 4
+【样例输入二】
+ 4
+  1 2 4 3
+</pre><hr/><h3>样例输出</h3><pre>【样例输出一】
+0
+【样例输出二】
+16777215
+</pre><hr/><h3>提示</h3><p><p>样例一中共有1个闪电图腾（1324）和1个B类山峰图腾（1532）。样例二中仅有一个A类山峰图腾（1243），故差值为-1，答案为16777215。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1145" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1145" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

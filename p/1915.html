@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1915：[Usaco2010 Open]奶牛的跳格子游戏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Open]奶牛的跳格子游戏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Open]奶牛的跳格子游戏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2010 Open]奶牛的跳格子游戏                </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>奶牛们正在回味童年，玩一个类似跳格子的游戏，在这个游戏里，奶牛们在草地上画了一行N个格子，(3 <=N <= 250,000)，编号为1..N。就像任何一个好游戏一样，这样的跳格子游戏也有奖励！第i个格子标有一个数字V_i(-2,000,000,000 <=V_i <= 2,000,000,000)表示这个格子的钱。奶牛们想看看最后谁能得到最多的钱。规则很简单：
+    * 每个奶牛从0号格子出发。(0号格子在1号之前，那里没钱)
+    * 她向N号格子进行一系列的跳跃(也可以不跳)，每次她跳到的格子最多可以和前一
+      个落脚的格子差K格(1 <= K <= N)(比方说，当前在1号格，K=2, 可以跳到2号和3号格子)
+   *在任何时候，她都可以选择回头往0号格子跳，直到跳到0号格子。另外，除了以上规则之外，回头跳的时候还有两条规则：
+   *不可以跳到之前停留的格子。
+   *除了0号格子之外，她在回来的时候，停留的格子必须是恰巧过去的时候停留的某个格子的前一格(当然，也可以跳过某些过去时候停留的格子)。简单点说，如果i号格子是回来
+停留的格子，i+1号就必须是过去停留的格子，如果i+1号格子是过去停留的格子，i号格子不一定要是回来停留的格子。(如果这里不太清楚的可以去看英文原文)她得到的钱就是所有停留过的格子中的数字的和，请你求出最多奶牛可以得到的钱数。
+    在样例中，K=2，一行5个格子。
+   <img border="0" src="../file/1915_0.jpg"> 
+
+
+
+    一个合法的序列Bessie可以选择的是0[0], 1[0], 3[2], 2[1], 0[0]。(括号里的数表示钱数)
+这样，可以得到的钱数为0+0+2+1+0 = 3。
+    如果Bessie选择一个序列开头为0, 1, 2, 3, ...，那么她就没办法跳回去了，因为她没办法再跳到一个之前没跳过的格子。序列0[0], 2[1], 4[-3], 5[4], 3[2], 1[0], 0[0]是最大化钱数的序列之一，最后的钱数为(0+1-3+4+2+0 = 4)。
+
+</p><hr/><h3>输入格式</h3><p>* 第1行 1: 两个用空格隔开的整数: N 和 K
+* 第2到N+1行: 第i+1行有一个整数: V_i
+</p><hr/><h3>输出格式</h3><p>* 第一行: 一个单个的整数表示最大的钱数是多少。
+
+</p><hr/><h3>样例输入</h3><pre>5 2
+0
+1
+2
+-3
+4
+
+</pre><hr/><h3>样例输出</h3><pre>4
+
+OUTPUT DETAILS:
+
+还有一种可能的最大化钱数的序列是: 0 2 4 5 3 1 0
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1915" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1915" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2774：来留去送</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">来留去送</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">来留去送</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                来留去送                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">面对生存的巨大压力，KD终于忍住寂寞，在自己出神入化的WS技巧和广阔无垠的HX知识的鼎立相助下，成功的找出了这些打入我派内部的违法犯罪人员（因为KD相信你目前还没有写完上道题）。但是这些S-ghost对情报的掌握确实是精细入微，正当KD准备下令逮捕并且用小皮鞭拷打它们的同时（好孩子千万不要模仿学习），基地地下的拖拉机停放平台就遭到了S-ghost的入侵，并且不少拖拉机已经进入了飞行轨道准备逃离基地。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">想要追捕已经太迟，想必是不可能的了。正在大家一筹莫展的时候，英明神武光芒万丈的LG，的崇拜者KD脑海中MM一闪，顿时想出了一个将计就计的妙策&mdash;&mdash;既然S-ghost要逃跑，不妨就让他们逃的干脆吧，哼哼哼哼哼哼（Y笑中）。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">没有错，KD正是准备利用飞行轨道中的一个高科技武器&mdash;&mdash;全手动化定时炸弹来打击敌人。飞行轨道可以抽象成一个圆形，为了方便计算距离，KD把轨道均分成L等份，并从某个等分点开始按X时针方向从0开始依次标号到L-1。现在有N个拖拉机正在飞行轨道上准备出发，同时也有N个定时炸弹在飞行轨道上，KD正是要手动让这N个拖拉机都被安放上定时炸弹。所以每个定时炸弹都会被指定一个目标，然后超光速依附到那个目标上去。当然，为了遵循牛顿力学、爱因斯坦相对论等超越人类极限的理论，炸弹要依附到目标上去是必须要消耗自身的能量的，消耗的能量越多，炸弹爆炸的威力就越小，假定炸弹每移动一个单位距离，威力就减少一单位，那么剩下的问题就是，该如何为这些炸弹指定目标，才能使得总威力减少的最少。显然，拖拉机只能在轨道上飞行，定时炸弹同样也只能在轨道上移动，不然可能会意外碰撞爆炸让轨道受损。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">由于KD还需要留下大量的精力去YYMM，所以它给你一个将功赎罪的机会，请你计算出在最优方案中，总威力减少的最小值是多少。</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21.75pt"><span style="font-size: medium">第一行有两个正整数L和N，表示轨道的长度和拖拉机的数量。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">接下来N行每行一个整数PI表示每个拖拉机的位置。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">接下来N行每行一个整数QI表示每个炸弹的位置。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21.75pt"><span style="font-size: medium">输出一个整数ANS，表示你计算出的最小值。如果无法计算，请输出&ldquo;Uncountable&rdquo;，同样KD会以该测试点0分来惩罚你的失败。</span></div></p><hr/><h3>样例输入</h3><pre>10 4
+0
+1
+2
+3
+8
+9
+4
+5</pre><hr/><h3>样例输出</h3><pre>8</pre><hr/><h3>提示</h3><p><p>对于100%的数据，N&lt;=100000；L&lt;=100000000。<br />
+注意事项：<br />
+答案或者运算过程中的值可能会很大。</p>
+<p>题解:<a href="/JudgeOnline/upload/201604/sol(1).rar">JudgeOnline/upload/201604/sol(1).rar</a></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2774" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2774" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

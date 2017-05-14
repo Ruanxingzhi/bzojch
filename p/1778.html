@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1778：[Usaco2010 Hol]Dotp 驱逐猪猡</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Hol]Dotp 驱逐猪猡</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010 Hol]Dotp 驱逐猪猡</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2010 Hol]Dotp 驱逐猪猡                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>奶牛们建立了一个随机化的臭气炸弹来驱逐猪猡。猪猡的文明包含1到N (2 <= N <= 300)一共N个猪城。这些城市由M (1 <= M <= 44,850)条由两个不同端点A_j和B_j (1 <= A_j<= N; 1 <= B_j <= N)表示的双向道路连接。保证城市1至少连接一个其它的城市。一开始臭气弹会被放在城市1。每个小时（包括第一个小时），它有P/Q (1 <= P <=1,000,000; 1 <= Q <= 1,000,000)的概率污染它所在的城市。如果这个小时内它没有污染它所在的城市，那麽它随机地选择一条道路，在这个小时内沿着这条道路走到一个新的城市。可以离开这个城市的所有道路被选择的概率均等。因为这个臭气弹的随机的性质，奶牛们很困惑哪个城市最有可能被污染。给定一个猪猡文明的地图和臭气弹在每个小时内爆炸的概率。计算每个城市最终被污染的概率。如下例，假设这个猪猡文明有两个连接在一起的城市。臭气炸弹从城市1出发，每到一个城市，它都有1/2的概率爆炸。
+                            1--2
+可知下面这些路径是炸弹可能经过的路径（最后一个城市是臭气弹爆炸的城市）：
+1: 1
+2: 1-2
+3: 1-2-1
+4: 1-2-1-2
+5: 1-2-1-2-1
+...
+要得到炸弹在城市1终止的概率，我们可以把上面的第1，第3，第5……条路径的概率加起来，（也就是上表奇数编号的路径）。上表中第k条路径的概率正好是(1/2)^k，也就是必须在前k-1个回合离开所在城市（每次的概率为1 - 1/2 = 1/2）并且留在最后一个城市（概率为1/2）。所以在城市1结束的概率可以表示为1/2 + (1/2)^3 + (1/2)^5 + ...。当我们无限地计算把这些项一个个加起来，我们最后会恰好得到2/3，也就是我们要求的概率，大约是0.666666667。这意味着最终停留在城市2的概率为1/3，大约为0.333333333。
+</p><hr/><h3>输入格式</h3><p>* 第1行: 四个由空格隔开的整数: N, M, P, 和 Q
+* 第2到第M+1行: 第i+1行用两个由空格隔开的整数A_j和B_j表示一条道路。
+</p><hr/><h3>输出格式</h3><p>* 第1到第N行: 在第i行，用一个浮点数输出城市i被摧毁的概率。误差不超过10^-6的答桉会
+	被接受（注意这就是说你需要至少输出6位有效数字使得答桉有效）。
+</p><hr/><h3>样例输入</h3><pre>2 1 1 2
+1 2
+
+
+</pre><hr/><h3>样例输出</h3><pre>
+0.666666667
+0.333333333
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1778" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1778" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4600：[Sdoi2016]硬币游戏</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2016]硬币游戏</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2016]硬币游戏</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2016]硬币游戏                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Alice和Bob现在在玩的游戏，主角是依次编号为1到n的n枚硬币。每一枚硬币都有两面，我们分别称之为正面和反</div>
+<div>面。一开始的时候，有些硬币是正面向上的，有些是反面朝上的。Alice和Bob将轮流对这些硬币进行翻转操作，且</div>
+<div>Alice总是先手。具体来说每次玩家可以选择一枚编号为x，要求这枚硬币此刻是反面朝上的。对于编号x来说，我</div>
+<div>们总可以将x写成x=c*2^a*3^b，其中a和b是非负整数，c是与2,3都互质的非负整数，然后有两种选择第一种，选择</div>
+<div>整数p,q满足a&gt;=p*q,p&gt;=1且1&lt;=q&lt;=MAXQ,然后同时翻转所有编号为c*2^(a-p*j)*3^b的硬币，其中j=0,1,2,..,q。第</div>
+<div>二种，选择整数p,q满足b&gt;=p*q,p&gt;=1且1&lt;=q&lt;=MAXQ,然后同时翻转所有编号为c*2^a*3^(b-p*j)的硬币，其中j=0,1,</div>
+<div>2,..,q。可以发现这个游戏不能不先进行下去，当某位玩家无法继续操作上述操作时，便输掉了游戏。作为先手的</div>
+<div>Alice，总是希望可以在比赛开始之前就知道自己能否获胜。她知道自己和Bob都是充分聪明的，所以在游戏过程中</div>
+<div>两人都会最优化自己的策略并尽量保证自己处于不败的情形中</div></p><hr/><h3>输入格式</h3><p><div style="font-size: 11.8181819915771px;">本题有多组测试数据，第一行输入一个整数T，表示总的数据组数。之后给出T组数据</div>
+<div style="font-size: 11.8181819915771px;">每组数据第一行输入两个整数n,MAXQ</div>
+<div style="font-size: 11.8181819915771px;">第二行输入n个整数，第i个数表示第i个硬币的初始状态，0表示反面朝上，1表示正面朝上</div>
+<div style="font-size: 11.8181819915771px;">对于100%的数据1&lt;=n&lt;=30000,1&lt;=MAXQ&lt;=20,t&lt;=100。</div></p><hr/><h3>输出格式</h3><p><div style="font-size: 11.8181819915771px;">输出共有t行。对于每一组数据来说，如果Alice先手必胜，则输出&quot;win&quot;（不包括引号），否则输出&quot;lose&quot;</div></p><hr/><h3>样例输入</h3><pre>6
+16 14
+1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1
+16 14
+0 1 0 0 0 1 1 1 1 1 1 0 1 0 0 1
+16 11
+0 1 0 0 0 1 1 1 0 1 0 0 0 1 0 1
+16 12
+1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 0
+16 4
+1 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0
+16 20
+0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0</pre><hr/><h3>样例输出</h3><pre>win
+lose
+win
+lose
+win
+win
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>By AHdoc命题 鸣谢Loi_DQS上传xiaoyimi提供题面</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4600" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4600" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

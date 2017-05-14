@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2023：[Usaco2005 Nov]Ant Counting 数蚂蚁</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Nov]Ant Counting 数蚂蚁</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Nov]Ant Counting 数蚂蚁</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 Nov]Ant Counting 数蚂蚁                </h1>
+                <p>时间限制：4s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;有一天，贝茜无聊地坐在蚂蚁洞前看蚂蚁们进进出出地搬运食物．很快贝茜发现有些蚂蚁长得几乎一模一样，于是她认为那些蚂蚁是兄弟，也就是说它们是同一个家族里的成员．她也发现整个蚂蚁群里有时只有一只出来觅食，有时是几只，有时干脆整个蚁群一起出来．这样一来，蚂蚁们出行觅食时的组队方案就有很多种．作为一头有数学头脑的奶牛，贝茜注意到整个蚂蚁群由T(1&le;T&le;1000)个家族组成，她将这些家族按1到T依次编号．编号为i的家族里有Ni(1&le;Ni&le;100)只蚂蚁．同一个家族里的蚂蚁可以认为是完全相同的．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;如果一共有S，S+1&hellip;．，B(1&le;S&le;B&le;A)只蚂蚁一起出去觅食，它们一共能组成多少种不同的队伍呢？注意：只要两支队伍中所包含某个家族的蚂蚁数不同，我们就认为这两支队伍不同．由于贝茜无法分辨出同一家族的蚂蚁，所以当两支队伍中所包含的所有家族的蚂蚁数都相同时，即使有某个家族换了几只蚂蚁出来，贝茜也会因为看不出不同而把它们认为是同一支队伍．&nbsp;&nbsp;&nbsp;&nbsp;比如说，有个由3个家族组成的蚂蚁群里一共有5只蚂蚁，它们所属的家族分别为1，1，2，2，3．于是出去觅食时它们有以下几种组队方案：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&middot;1只蚂蚁出去有三种组合：(1)(2)(3)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&middot;2只蚂蚁出去有五种组合：(1，1)(1，2)(1，3)(2，2)(2，3)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&middot;3只蚂蚁出去有五种组合：(1，1，2)(1，1，3)(1，2，2)(1，2，3)(2，2，3)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&middot;4只蚂蚁出去有三种组合：(1，2，2，3)(1，1，2，2)(1，1，2，3)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&middot;5只蚂蚁出去有一种组合：(1，1，2，2，3)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;你的任务就是根据给出的数据，计算蚂蚁们组队方案的总数．</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：4个用空格隔开的整数T，A，S，B.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到A+1行：每行是一个正整数，为某只蚂蚁所在的家族的编号．</span></div></p><hr/><h3>输出格式</h3><p><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示当S到B（包括S和B）只蚂蚁出去觅食时，不同的组队方案数．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;注意：组合是无序的，也就是说组合1，2和组合2，1是同一种组队方式．最后的答案可能很大，</span><span style="font-size: medium">你只需要输出答案的最后6位数字．注意不要输出前导0以及多余的空格．</span></div></p><hr/><h3>样例输入</h3><pre>5  2  3
+</pre><hr/><h3>样例输出</h3><pre>    10
+样例说明
+    2只蚂蚁外出有5种组合，3只蚂蚁外出有5种组合．共有10种组合</pre><hr/><h3>提示</h3><p><p></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2023" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2023" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

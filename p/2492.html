@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2492：Revenge of Fibonacci</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Revenge of Fibonacci</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Revenge of Fibonacci</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Revenge of Fibonacci                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="panel_content"><span style="font-size: medium">The well-known Fibonacci sequence is defined as following:<br />
+<br />
+<br />
+&nbsp;&nbsp;Here we regard n as the index of the Fibonacci number F(n).<br />
+&nbsp;&nbsp;This sequence has been studied since the publication of Fibonacci's book Liber Abaci. So far, many properties of this sequence have been introduced.<br />
+&nbsp;&nbsp;You had been interested in this sequence, while after reading lots of papers about it. You think there&rsquo;s no need to research in it anymore because of the lack of its unrevealed properties. Yesterday, you decided to study some other sequences like Lucas sequence instead.<br />
+&nbsp;&nbsp;Fibonacci came into your dream last night. &ldquo;Stupid human beings. Lots of important properties of Fibonacci sequence have not been studied by anyone, for example, from the Fibonacci number 347746739&hellip;&rdquo;<br />
+&nbsp;&nbsp;You woke up and couldn&rsquo;t remember the whole number except the first few digits Fibonacci told you. You decided to write a program to find this number out in order to continue your research on Fibonacci sequence.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;输入一串数字，判断为第几个fib数的前缀，如有多个输出最前面的，不存在或者大于等于100000输出-1</span></div></p><hr/><h3>输入格式</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases. The first line of input contains a single integer T denoting the number of test cases (T&lt;=50000).<br />
+&nbsp;&nbsp;For each test case, there is a single line containing one non-empty string made up of at most 40 digits. And there won&rsquo;t be any unnecessary leading zeroes.</span></div></p><hr/><h3>输出格式</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;For each test case, output the smallest index of the smallest Fibonacci number whose decimal notation begins with the given digits. If no Fibonacci number with index smaller than 100000 satisfy that condition, output -1 instead &ndash; you think what Fibonacci wants to told you beyonds your ability.</span></div>
+<div class="panel_content">
+<pre></pre>
+</div></p><hr/><h3>样例输入</h3><pre>15
+1
+12
+123
+1234
+12345
+9
+98
+987
+9876
+98765
+89
+32
+51075176167176176176
+347746739
+5610
+ 
+
+ 
+
+</pre><hr/><h3>样例输出</h3><pre>Case #1: 0
+Case #2: 25
+Case #3: 226
+Case #4: 1628
+Case #5: 49516
+Case #6: 15
+Case #7: 15
+Case #8: 15
+Case #9: 43764
+Case #10: 49750
+Case #11: 10
+Case #12: 51
+Case #13: -1
+Case #14: 1233
+Case #15: 22374
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Acm 2011 上海</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2492" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2492" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

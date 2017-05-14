@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3787：Gty的文艺妹子序列</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Gty的文艺妹子序列</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Gty的文艺妹子序列</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Gty的文艺妹子序列                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Autumn终于会求区间逆序对了!Bakser神犇决定再考验一下他，他说道：</div>
+<div></div>
+<div>&ldquo;在Gty的妹子序列里，某个妹子的美丽度可也是会变化的呢。你还能求出某个区间</div>
+<div></div>
+<div>中妹子们美丽度的逆序对数吗？当然，为了方便，这次我们规定妹子们的美丽度在</div>
+<div></div>
+<div>[1,n]中。仍然强制在线。&rdquo;</div>
+<div></div>
+<div>Autumn需要你的帮助。</div>
+<div></div>
+<div>给定一个正整数序列a(1&lt;=ai&lt;=n)，支持单点修改，对于每次询问，输出al...ar中</div>
+<div></div>
+<div>的逆序对数，强制在线。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包括一个整数n(1&lt;=n&lt;=50000),表示数列a中的元素数。</div>
+<div></div>
+<div>第二行包括n个整数a1...an(1&lt;=ai&lt;=n)。</div>
+<div></div>
+<div>接下来一行包括一个整数m(1&lt;=m&lt;=50000),表示操作的个数。</div>
+<div></div>
+<div>接下来m行,每行包括3个整数。</div>
+<div></div>
+<div>0 L R (1&lt;=L&lt;=R&lt;=n) 询问[L,R]中的逆序对数。</div>
+<div></div>
+<div>1 p v (1&lt;=p&lt;=n,1&lt;=v&lt;=n) 将p位置的数修改为v。</div>
+<div></div>
+<div>L,R,p,v 都需要异或上一次的答案，保证异或之后的值是合法的。</div>
+<div></div>
+<div>保证涉及的所有数在int内。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><p>对每个询问，单独输出一行，表示al...ar中的逆序对数。对每个询问，单独输出一行，表示al...ar中的逆序对数。</p>
+<p></p></p><hr/><h3>样例输入</h3><pre>10
+1 7 5 6 9 4 9 4 4 7
+10
+0 4 6
+0 5 8
+0 1 10
+1 25 19
+0 19 25
+1 14 4
+0 12 12
+0 2 5
+1 8 7
+1 1 10
+</pre><hr/><h3>样例输出</h3><pre>2
+3
+16
+13
+0
+2
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>By Autumn</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3787" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3787" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

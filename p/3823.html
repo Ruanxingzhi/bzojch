@@ -1,0 +1,154 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3823：定情信物</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">定情信物</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">定情信物</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                定情信物                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoPlainText">都说程序员找不到妹子<span lang="EN-US">,</span>可是无人知晓<span lang="EN-US">,</span>三生石上竟然还刻着属于小<span lang="EN-US"> E </span>的一笔。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">那一天<span lang="EN-US">,</span>小<span lang="EN-US"> E </span>穷尽毕生的积蓄<span lang="EN-US">,</span>赠与了妹子一个非同寻常的定情信物。那是一个小<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">小的正方体<span lang="EN-US">,</span>但透过它<span lang="EN-US">,</span>可以看到过去<span lang="EN-US">,</span>可以洞彻天机。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">这份信物仿佛一只深邃的眼。当看透它看似简单的外表后<span lang="EN-US">,</span>深邃的内心却最是可以<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">叩击人的灵魂的。不出所料<span lang="EN-US">,</span>妹子果然被这个信物超越空间的美所吸引。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText"><span lang="EN-US">&ldquo;</span>易有太极<span lang="EN-US">,</span>是生两仪<span lang="EN-US">,</span>两仪生四象<span lang="EN-US">,</span>四象生八卦。<span lang="EN-US">,</span>八卦定吉凶<span lang="EN-US">,</span>吉凶生大业。<span lang="EN-US">&rdquo;<o:p></o:p></span></p>
+<p class="MsoPlainText">这句箴言在其上得到了完美的诠释。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">是的<span lang="EN-US">,</span>这正是一个超正方体。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">小<span lang="EN-US"> E </span>告诉妹子<span lang="EN-US">,</span>他的情意也如这份信物一样深厚。现在妹子想知道<span lang="EN-US">,</span>小<span lang="EN-US"> E </span>对她的情<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">意究竟有几分<span lang="EN-US">?<o:p></o:p></span></p>
+<p class="MsoPlainText">我们知道<span lang="EN-US">,</span>点动成线<span lang="EN-US">,</span>线动成面<span lang="EN-US">,</span>面动成体<span lang="EN-US">......</span>即<span lang="EN-US"> n </span>维超立方体可看作由<span lang="EN-US"> n-1 </span>维超<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">立方体沿垂直于它的所有的棱的方向平移得到的立体图形。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">我们可以将点看作<span lang="EN-US"> 0 </span>维超立方体<span lang="EN-US">,</span>将直线看作<span lang="EN-US"> 1 </span>维超立方体<span lang="EN-US">,</span>将正方形看作<span lang="EN-US"> 2 </span>维超<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">立方体<span lang="EN-US">......</span>依此类推。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">任何一个<span lang="EN-US"> n </span>维超立方体<span lang="EN-US">(n&gt;0)</span>都是由低维的超立方体元素组成的<span lang="EN-US">:</span>它的<span lang="EN-US"> n-1 </span>维表面<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">是<span lang="EN-US"> n-1 </span>维的超立方体<span lang="EN-US">,</span>它的<span lang="EN-US"> n-2 </span>维边缘是<span lang="EN-US"> n-2 </span>维的超立方体<span lang="EN-US">,</span>它的<span lang="EN-US"> n-3 </span>维元素是<span lang="EN-US"> n-3 </span>维的<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">超立方体<span lang="EN-US">......<o:p></o:p></span></p>
+<p class="MsoPlainText">小<span lang="EN-US"> E </span>对妹子的情意即为在他的定情信物<span lang="EN-US">&mdash;&mdash;K </span>维超立方体中<span lang="EN-US">,</span>含有每一维的元素个<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">数。由于元素个数可能较大<span lang="EN-US">,</span>只需要输出它所包含的每一维元素个数模<span lang="EN-US"> P </span>后的异或和。<span lang="EN-US"><br />
+</span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoPlainText">两个整数<span lang="EN-US">&nbsp;K</span>、<span lang="EN-US">P,</span>详见题目叙述。</p>
+<p class="MsoPlainText"></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoPlainText">一个非负整数<span lang="EN-US">,</span>表示小<span lang="EN-US">&nbsp;E&nbsp;</span>的定情信物所包含的每一维元素个数模<span lang="EN-US">&nbsp;P&nbsp;</span>后的异或和。注</p>
+<p class="MsoPlainText">意<span lang="EN-US">:</span>异或和可能会大于<span lang="EN-US">&nbsp;P</span>。<span lang="EN-US"><br />
+</span></p>
+<p class="MsoPlainText"></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>input 1
+3 7
+
+Input 2
+
+4 2333
+
+Input 3
+
+12 7723</pre><hr/><h3>样例输出</h3><pre>Output1
+
+3
+
+Output 2
+
+33
+
+Output 3
+
+360
+
+Hint
+对于样例2的解释:
+一个三维超立方体含有 8 个零维元素、12 个一维元素、6 个二维元素、1 个三维
+
+元素,模 7 后分别为 1,5,6,1,异或和为 1^5^6^1=3。</pre><hr/><h3>提示</h3><p><div>对于 100%的数据,N&le;10^7,P 为 10^9 内的素数。</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>By EOLV 数据加强by mhy12345 & jason_yu
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3823" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3823" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

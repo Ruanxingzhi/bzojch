@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4722：由乃</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">由乃</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">由乃</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                由乃                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>由于一周目的由乃穿越到了三周目，并带来了巨大的影响，改变了三周目所有未来日记所有者的命运所以三周目的</div>
+<div>神Deus准备不利用未来日记来决定把神的位置交给谁Deus特别崇拜某知名社会主义国家领导人，因为他的寿命比神</div>
+<div>还长，所以他想钦定下一个卡密，而不通过选举他决定钦定三周目的由乃成为卡密，去和一周目的雪辉重逢（终于</div>
+<div>做了一件好事了）但是，既然是钦定，那么肯定还是要做做样子的，以防某些来自香港的记者造个大新闻，导致被</div>
+<div>批判一番所以Deus决定，出一道OI题来考察由乃有没有当神的能力如果你没有看过这个番，以上内容可以无视</div>
+<div></div>
+<div>给一个长为n的序列a，每个数在0到v - 1之间，有m次操作。</div>
+<div>操作1：每次询问一个区间中是否可以选出两个下标的集合X，Y，满足：</div>
+<div>1.X和Y没有交集</div>
+<div>2.设集合X中有一个元素是i，则其对集合X的贡献是a[i] + 1，要求集合X的元素的总贡献和集合Y的元素的总贡献</div>
+<div>相等如果可以选出这两个集合，输出 Yuno否则输出 Yuki</div>
+<div>操作2：修改一个区间l,r之间的数，使得所有l &lt;= i &lt;= r，a[i] = a[i] * a[i] * a[i] % v ，即区间立方</div>
+<div></div>
+<div>如果你没有看过这个番，或者你已经是国家队队员，以下内容可以无视</div>
+<div>可以去和雪辉重逢，由乃肯定非常高兴然而可爱的由乃虽然很机智但是并不会OI呀，特别不会数据结构这种神奇的</div>
+<div>东西（会数据结构和成为卡密有什么关系吗233333）所以她请您&mdash;&mdash;未来的国家队队员来帮助她啦</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行三个数n , m , v，意义如题所述</div>
+<div>之后一行n个数，表示序列a</div>
+<div>之后m行每行三个数opt , l , r，表示操作类型是1还是2，操作的区间是[l , r]</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>m行，每行一个字符串 Yuno 或者 Yuki 表示能否选出这两个集合</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>20 20 152
+3 26 133 54 79 81 72 109 66 91 82 100 35 23 104 17 51 114 12 58
+2 1 17
+2 6 12
+1 1 12
+2 3 5
+2 11 11
+2 7 19
+2 6 15
+1 5 12
+1 1 9
+1 10 19
+2 3 19
+2 6 20
+2 1 13
+2 1 15
+2 1 9
+1 1 1
+2 1 7
+2 7 19
+2 6 19
+2 3 6</pre><hr/><h3>样例输出</h3><pre>Yuno
+Yuno
+Yuno
+Yuno
+Yuki</pre><hr/><h3>提示</h3><p><div>总算在bzoj上出题了呀</div>
+<div>这下可以安心退役了~</div>
+<div>总共有10组数据</div>
+<div>对于100%的数据，n , m &lt;= 100000 , v &lt;= 1000,数据没有梯度</div>
+<p></p></p><hr/><h3>题目来源</h3><p>By nzhtl1477
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4722" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4722" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

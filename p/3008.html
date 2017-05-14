@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3008：象棋</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">象棋</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">象棋</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                象棋                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 18.2pt"><span style="font-size: medium">小云和小南两姐妹从小喜欢下象棋，现在作为象棋高手的她们，已经不屑于玩平常的象棋了，于是她们便开始用棋盘和棋子玩各种各样的新游戏。</span></div>
+<div style="text-indent: 18.2pt"><span style="font-size: medium">今天天气晴朗，阳光明媚，她们将在n * m的棋盘上进行游戏。</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">棋盘上有k颗棋子和若干有障碍格子，令棋盘左上角格子坐标为(1, 1)，右下角格子坐标为(n, m)，参数a、b规定了所有棋子的走法：在(x, y)的棋子下一步能走到(x + a, y + b), (x + a, y - b), (x &ndash; a, y + b), (x &ndash; a, y &ndash; b), (x + b, y + a), (x + b, y - a), (x &ndash; b, y + a), (x &ndash; b, y &ndash; a)这八个格子中的一个，棋子任何时候不能跃出棋盘或走到有障碍的格子上。</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">这k颗棋子是相同的，小云和小南的目标是用最少步数把所有棋子移动到特定格子，要求移动过程中不能出现多颗棋子同时在某一格的情况。</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">她们已经想出步数较少方案，但无法确定这是否为最少步数，所以向作为程序员的你求助。</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21.2pt"><span style="font-size: medium">第一行五个空格隔开的整数n、m、k、a以及b；</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">接下来n行，每行为长度m的字符串，描述棋盘，&lsquo;.&rsquo;表示没有障碍的格子，&lsquo;*&rsquo;表示有障碍的格子；</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">接下来k行，每行两个整数x和y，分别表示k颗棋子的初始位置；</span></div>
+<div style="text-indent: 21.2pt"><span style="font-size: medium">接下来k行，每行两个整数x和y，分别表示k颗棋子的目标位置。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">一个整数，为把所有棋子移动到&rsquo;t&rsquo;位置的最少步数，数据保证有解。</span></div></p><hr/><h3>样例输入</h3><pre>1 8 2 2 0
+.......*
+1 1
+1 3
+1 5
+1 7
+ 
+</pre><hr/><h3>样例输出</h3><pre>4
+ 
+样例说明
+一可行方案如下：第二颗棋子向右跳两步，随后第一颗棋子向右跳两步，共4步。值得注意的是，第一颗棋子向右跳三步，随后第二颗棋子向右跳一步的方案尽管能把棋子都移动到目标位置，但途中两颗棋子曾经同时在(1, 3)，违反了规则，所以不能选用此方案。
+ 
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据，n、m &le; 100，k &le; 500。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3008" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3008" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

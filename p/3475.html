@@ -1,0 +1,138 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3475：除草</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">除草</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">除草</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                除草                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Logic_IU和Lao5是T国的花匠，平时的一大爱好是除草。<br />
+清晨天气晴朗，阳光明媚，Logic_IU和Lao5奉命给皇宫新建的花园除草。由于技术捉鸡，被去花园采花的公主Freda训斥。郁闷的Logic_IU听说Hengzo星人非常擅长花匠工艺，于是决定踏上寻找Hengzo星的道路。<br />
+Logic_IU来到了HE星系，这个星系共有N座星球，以及M条规划好的飞行路线（是的，Logic_IU自己会飞！）。星系管理局规划飞行路线时遵守一个准则：只有在某两颗星球间尚不存在可以直接或间接到达的路径时，他们才会在这两颗星球间直接设置一条路线。他们允许在飞行路线上进行双向飞行。星系管理局保证所有星球间都是可以互相到达的。<br />
+最近，为了方便人们的出行，星系管理局开通了一系列单向传送通道。为了鼓励人们使用，现在每位游客在经过某条单向传送通道时均可获得该通道限定版的人偶一个。显然，Logic_IU非常喜欢人偶，她希望收集全部的限定版人偶。<br />
+不幸的是，这个星系的人非常讨厌来自异世界的客人，如果有人在离开某座星球之后又回到了那座星球，他就会被 吃☆掉 。<br />
+Logic_IU现在位于编号为s的星球，根据来自Lao5的可靠情报，Hengzo星是编号为t的星球。她想知道有没有一种方案可以从s星出发，经过每座星球最多一次，并且收集齐所有的限定版人偶（即使用过全部的单向传送通道），最终到达t星。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">第一行包含一个正整数T，表示有T组测试数据。<br />
+每组测试数据的第一行包含三个整数N,M,K，分别表示星球的数量，飞行路线的数量和单向传送通道的数量。<br />
+第二行包含两个整数s,t，表示出发星球和目标星球。<br />
+接下来的M行每行包含两个整数a,b，表示a星球和b星球之间有一条飞行路线。<br />
+之后有K行每行包括两个整数a,b，表示存在一条从a星球到b星球的单向传送通道。注意：从a星球到b星球可能存在多条单向传送通道，经过时赠送的限定版人偶并不同。<br />
+在学习了现代科技的基本知识之后，Logic_IU认为从0开始给星球编号有利于解决此问题，因此她这么做了。她还保证了输入数据中没有重复的飞行路线。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">对于每组测试数据，在单独的一行内输出一个字符串，若存在符合要求的方案，则输出TAK，否则输出NIE。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>3
+3 2 1
+1 0
+0 1
+0 2
+1 2
+3 2 1
+1 0
+0 1
+0 2
+2 1
+3 2 2
+0 1
+0 2
+2 1
+0 1
+1 0
+</pre><hr/><h3>样例输出</h3><pre>TAK
+NIE
+NIE
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">对于100%的数据，保证1 &le; N &le; 100000,1 &le; M &le; 100000,0 &le; K &le; 100000，每条飞行路线和单向传送通道中a&ne;b。<br />
+测试数据组数T可能很大，请注意相关操作。保证测试数据有一定梯度。<br />
+样例解释<br />
+在第一组样例中，Logic_IU可以先经过从1到2的传送门，再通过从2到0的飞行路线，最终到达1。<br />
+注意到不能重复经过某座星球，因此第二组样例的答案是NIE。<br />
+第三组样例中，我们可以注意到出发星球和目标星球也是不能重复经过的。</span></p></p><hr/><h3>题目来源</h3><p>Adera 3 杯省选模拟赛</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3475" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3475" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

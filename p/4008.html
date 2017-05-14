@@ -1,0 +1,166 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4008：[HNOI2015]亚瑟王</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]亚瑟王</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2015]亚瑟王</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2015]亚瑟王                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>小 K 不慎被 LL 邪教洗脑了，洗脑程度深到他甚至想要从亚瑟王邪教中脱坑。</p>
+<div>他决定，在脱坑之前，最后再来打一盘亚瑟王。既然是最后一战，就一定要打得漂</div>
+<div>亮。众所周知，亚瑟王是一个看脸的游戏，技能的发动都是看概率的。作为一个非</div>
+<div>洲人，同时作为一个前 OIer，小 K 自然是希望最大化造成伤害的期望值。但他已</div>
+<div>经多年没写过代码，连 Spaly都敲不对了，因此，希望你能帮帮小 K，让他感受一</div>
+<div>下当欧洲人是怎样的体验。&nbsp;</div>
+<div>本题中我们将考虑游戏的一个简化版模型。&nbsp;</div>
+<div>玩家有一套卡牌，共 n张。游戏时，玩家将 n 张卡牌排列成某种顺序，排列后</div>
+<div>将卡牌按从前往后依次编号为 1 ~ &nbsp;n。本题中，顺序已经确定，即为输入的顺序。</div>
+<div>每张卡牌都有一个技能。第 i 张卡牌的技能发动概率为 pi，如果成功发动，则会对</div>
+<div>敌方造成di点伤害。也只有通过发动技能，卡牌才能对敌方造成伤害。基于现实因</div>
+<div>素以及小K非洲血统的考虑，pi不会为 0，也不会为 1，即 0 &lt; pi &lt; 1。&nbsp;</div>
+<div>一局游戏一共有 r 轮。在每一轮中，系统将从第一张卡牌开始，按照顺序依次</div>
+<div>考虑每张卡牌。在一轮中，对于依次考虑的每一张卡牌：&nbsp;</div>
+<div>1如果这张卡牌在这一局游戏中已经发动过技能，则&nbsp;</div>
+<div>1.1 如果这张卡牌不是最后一张，则跳过之（考虑下一张卡牌）；&nbsp;</div>
+<div>否则（是最后一张），结束这一轮游戏。&nbsp;</div>
+<div>2否则（这张卡牌在这一局游戏中没有发动过技能），设这张卡牌为第 i 张&nbsp;</div>
+<div>2.1将其以 pi的概率发动技能。&nbsp;</div>
+<div>2.2如果技能发动，则对敌方造成 di点伤害，并结束这一轮。&nbsp;</div>
+<div>2.3如果这张卡牌已经是最后一张（即 i 等于n），则结束这一轮；否则，</div>
+<div>考虑下一张卡牌。&nbsp;</div>
+<div>请帮助小 K 求出这一套卡牌在一局游戏中能造成的伤害的期望值。&nbsp;</div></p><hr/><h3>输入格式</h3><p><p>输入文件的第一行包含一个整数 T，代表测试数据组数。&nbsp;</p>
+<div>接下来一共 T 组数据。&nbsp;</div>
+<div>每组数据的第一行包含两个用空格分开的整数 n和r，分别代表卡牌的张数和</div>
+<div>游戏的轮数。&nbsp;</div>
+<div>接下来 n行，每行包含一个实数和一个整数，由空格隔开，描述一张卡牌。第</div>
+<div>i 行的两个数为 pi和 di，分别代表第 i 张卡牌技能发动的概率（实数）和技能发动</div>
+<div>造成的伤害（整数）。保证 pi最多包含 4位小数，且为一个合法的概率。&nbsp;</div></p><hr/><h3>输出格式</h3><p><p>&nbsp;对于每组数据，输出一行，包含一个实数，为这套卡牌在这一局游戏中造成的</p>
+<div>伤害的期望值。对于每一行输出，只有当你的输出和标准答案的相对误差不超过</div>
+<div>10^-8时&mdash;&mdash;即|a-o|/a&lt;=10-8时(其中a是标准答案，o是输出)，你的输出才会被判为正确。</div>
+<div>建议输出10 位小数。&nbsp;</div></p><hr/><h3>样例输入</h3><pre>1 
+3 2 
+0.5000 2 
+0.3000 3 
+0.9000 1 </pre><hr/><h3>样例输出</h3><pre>3.2660250000 </pre><hr/><h3>提示</h3><p><p>&nbsp;一共有 13 种可能的情况：&nbsp;</p>
+<div>1. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.15，伤害为5。&nbsp;</div>
+<div>2. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.315，伤害为3。&nbsp;</div>
+<div>3. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮不发动技能；&nbsp;</div>
+<div>概率为 0.035，伤害为2。&nbsp;</div>
+<div>4. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.075，伤害为5。&nbsp;</div>
+<div>5. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.0675，伤害为4。&nbsp;</div>
+<div>6. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮不发动技能；&nbsp;</div>
+<div>概率为 0.0075，伤害为3。&nbsp;</div>
+<div>7. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.1575，伤害为3。&nbsp;</div>
+<div>8. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.04725，伤害为4。&nbsp;</div>
+<div>9. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮不发动技能；&nbsp;</div>
+<div>概率为 0.11025，伤害为1。&nbsp;</div>
+<div>10. &nbsp;第一轮不发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.0175，伤害为2。&nbsp;</div>
+<div>11. &nbsp;第一轮不发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.00525，伤害为3。&nbsp;</div>
+<div>12. &nbsp;第一轮不发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div>
+<div>概率为 0.011025，伤害为1。&nbsp;</div>
+<div>13. &nbsp;第一轮不发动技能；第二轮亦不发动技能；&nbsp;</div>
+<div>概率为 0.001225，伤害为0。&nbsp;</div>
+<div>造成伤害的期望值为概率与对应伤害乘积之和，为 3.266025。&nbsp;</div>
+<div></div>
+<div>对于所有测试数据， 1 &lt;= T &lt;= 444， 1 &lt;= n &lt;= 220， 0 &lt;= r &lt;= 132， 0 &lt; pi &lt; 1， 0 &lt;= di &lt;= 1000。 &nbsp;</div>
+<div>除非备注中有特殊说明，数据中 pi与di均为随机生成。&nbsp;</div>
+<div>请注意可能存在的实数精度问题，并采取适当措施。&nbsp;</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4008" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4008" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

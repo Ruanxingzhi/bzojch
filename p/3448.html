@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3448：[Usaco2014 Feb]Auto-complete</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2014 Feb]Auto-complete</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2014 Feb]Auto-complete</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2014 Feb]Auto-complete                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Bessie the cow has a new cell phone and enjoys sending text messages, although she keeps making spelling errors since she has trouble typing on such a small screen with her large hooves. Farmer John has agreed to help her by writing an auto-completion app that takes a partial word and suggests how to complete it. The auto-completion app has access to a dictionary of W words, each consisting of lowercase letters in the range a..z, where the total number of letters among all words is at most 1,000,000. The app is given as input a list of N partial words (1 &lt;= N &lt;= 1000), each containing at most 1000 lowercase letters. Along with each partial word i, an integer K_i is also provided, such that the app must find the (K_i)th word in alphabetical order that has partial word i as a prefix. That is, if one ordered all of the valid completions of the ith partial word, the app should output the completion that is (K_i)th in this sequence. </span></p>
+<p>XYW在和他的男人聊天的时候经常会因为打字速度太慢而被鄙视，于是他想开发一种自动补全软件。开始他有一个包含了w个词的字典（总长度不大于10^6）。接下来他想知道在字典中可以由给定的字符串s加上若干个字母得到的字符串字典序第k大的编号是多少？有n组询问（n&lt;=10^3，s长度&lt;=10^3)</p></p><hr/><h3>输入格式</h3><p><p><font size="4">* Line 1: Two integers: W and N.</font></p>
+<p><font size="4">&nbsp;* Lines 2..W+1: Line i+1: The ith word in the dictionary. </font></p>
+<p><font size="4">* Lines W+2..W+N+1: Line W+i+1: A single integer K_i followed by a partial word.&nbsp;</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">&nbsp;* Lines 1..N: Line i should contain the index within the dictionary (an integer in the range 1..W) of the (K_i)th completion (in alphabetical order) of the ith partial word, or -1 if there are less than K_i completions.</font></p></p><hr/><h3>样例输入</h3><pre>10 3
+dab
+ba
+ab
+daa
+aa
+aaa
+aab
+abc
+ac
+dadba
+4 a
+2 da
+4 da
+</pre><hr/><h3>样例输出</h3><pre>3
+1
+-1
+
+ OUTPUT DETAILS: The completions of a are {aa,aaa,aab,ab,abc,ac}. The 4th is ab, which is listed on line 3 of the dictionary. The completions of da are {daa,dab,dadba}. The 2nd is dab, listed on line 1 of the dictionary. There is no 4th completion of da. </pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3448" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3448" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

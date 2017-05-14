@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3753：Wall</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Wall</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Wall</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Wall                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>众所周知，GFW的出现促进了社会的和谐。Wayne于是想研究一下GFW。</div>
+<div>Wayne喜欢网格，所以他把一些网站排成了N_ M的网格，每个格子代表一个网站。每个网</div>
+<div>站有一个评分，当然评分可正可负。现在Wayne想用一堵&ldquo;墙&rdquo;围住一些网站，使得评分和最大。</div>
+<div>所谓&ldquo;墙&rdquo;，就是一个由网格的边组成的简单多边形，不能自交，也不能有空洞。</div>
+<div>过了一会儿Wayne发现这个模型太一般了。出于一些原因，有些网站必须在&ldquo;墙&rdquo;外，我们称之</div>
+<div>为&ldquo;坏网站&rdquo;；而有些网站必须在&ldquo;墙&rdquo;内，我们称之为&ldquo;好网站&rdquo;。当然了，&ldquo;坏网站&rdquo;的评分不一定</div>
+<div>低，&ldquo;好网站&rdquo;的评分不一定高。Wayne又想知道，这种情况下，能够得到的最大评分和。注意，并</div>
+<div>不总是存在合法的方案，所以当无法实现时，输出&ldquo;Can not establish GFW.&rdquo;。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div></div>
+<div>第一行两个正整数N和M。</div>
+<div>接下来N行，每行M个用空格隔开的整数，表示网站的权值。</div>
+<div>最后N行，每行M个用空格隔开的整数，1 表示坏网站，2 表示好网站，0 表示其他网站。</div>
+<div>
+<p></p>
+</div></p><hr/><h3>输出格式</h3><p><div>输出两行，第一行一个整数表示一堵&ldquo;墙&rdquo;能围住的最大评分和，第二行表示有限制时的答案。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3 3
+2 -1 2
+-3 100 -3
+-3 20 -3
+2 0 2
+0 1 0
+0 0 0</pre><hr/><h3>样例输出</h3><pre>123
+17 
+ 
+ </pre><hr/><h3>提示</h3><p><div>对于 100% 的数据，N&lt;=10，M&lt;=10，权值的绝对值不超过 10^6 ，且至少一个权值非负，至少一个好网站。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3753" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3753" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1092：[SCOI2003]蜘蛛难题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2003]蜘蛛难题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2003]蜘蛛难题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SCOI2003]蜘蛛难题                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium;">有一堆管道，还有一个蜘蛛Willy，如下图所示。所有管道的是上端开口，下端封底，直径都是1cm，连接两个管道的连接容量无限，但体积可以忽略不计。</span></p>
+<p><span style="font-size: medium;"> <img alt="" border="0" src="../file/1092_0.jpg" /> </span></p>
+<p><span style="font-size: medium;">在第一个管道上方有一个水源，从中有水不断往下流，速度为每秒0.25 cm3。由于管道横截面积为0.25 cm3，所以单给一个管道注水时水面每秒上升1cm。根据物理知识，在前2秒中，水注如左边的管道底部，第3~5秒时注入右边的管道，第6~9秒同时注入两个管道（虽然流量不变，但是由于同时给两个管道注水，因此水面上升的速度仅为每秒0.5cm），接触到蜘蛛。 给出管道和管道之间连接的位置，以及蜘蛛Willy的位置，求水面接触到Willy的时间。假设蜘蛛的实际位置比给出的略高一点，因此如果蜘蛛在左边管道的n=4的位置，答案应该是5秒。因为前两秒后水面虽然看起来接触到了Willy，但实际上比Willy略低一点。</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium;">所有位置都用有序数对(x, y)表示，其中y坐标从上到下逐渐增大；x坐标从左到右逐渐增大，因此左上角的坐标为(0,0)，其他所有坐标值为0到100之间的整数。输入第一行为一个整数p(1&lt;=p&lt;=20)，表示管道的数目；以下p行，每行用x, y, h三个整数描述一根管道。(x,y)为管道左上角坐标；h为管道高度(1&lt;=h&lt;=20)。以下一行为一个整数L(0&lt;=L&lt;=50)，为连接的个数。以下L行每行用三个整数x, y, d描述一个连接，(x,y)为左端点的坐标，d为连接的长度(1&lt;=d&lt;=20)。最后一行为两个整数a, b，表示Willy在管道a的y坐标为b的位置。管道按照在文件中出现的顺序编号为1,2,3&hellip;p 以下为一些假设： 水源总是在第一根管道的正上方 连接不会穿越管道 任意两个连接的y坐标都不相同 任意两个管道的左上角的x坐标都不相同 任意连接的两个端点都在管道上（不会出现悬空的情形）</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium;">仅一个整数，为水面接触到Willy的时间。如果水面无法接触到Willy，输出-1。</span></p></p><hr/><h3>样例输入</h3><pre>2
+2 0 6
+5 1 6
+1
+3 4 2
+2 2</pre><hr/><h3>样例输出</h3><pre>9</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium;">该样例对应题目中的例子。</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1092" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1092" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

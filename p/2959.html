@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2959：长跑</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">长跑</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">长跑</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                长跑                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">　　某校开展了同学们喜闻乐见的阳光长跑活动。为了能&ldquo;为祖国健康工作五十年&rdquo;，同学们纷纷离开寝室，离开教室，离开实验室，到操场参加3000米长跑运动。一时间操场上熙熙攘攘，摩肩接踵，盛况空前。<br />
+　　为了让同学们更好地监督自己，学校推行了刷卡机制。<br />
+　　学校中有n个地点，用1到n的整数表示，每个地点设有若干个刷卡机。<br />
+　　有以下三类事件：<br />
+　　1、修建了一条连接A地点和B地点的跑道。<br />
+　　2、A点的刷卡机台数变为了B。<br />
+　　3、进行了一次长跑。问一个同学从A出发，最后到达B最多可以刷卡多少次。具体的要求如下：<br />
+　　当同学到达一个地点时，他可以在这里的每一台刷卡机上都刷卡。但每台刷卡机只能刷卡一次，即使多次到达同一地点也不能多次刷卡。<br />
+　　为了安全起见，每条跑道都需要设定一个方向，这条跑道只能按照这个方向单向通行。最多的刷卡次数即为在任意设定跑道方向，按照任意路径从A地点到B地点能刷卡的最多次数。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">　　输入的第一行包含两个正整数n,m，表示地点的个数和操作的个数。<br />
+　　第二行包含n个非负整数，其中第i个数为第个地点最开始刷卡机的台数。<br />
+　　接下来有m行，每行包含三个非负整数P,A,B，P为事件类型，A,B为事件的两个参数。<br />
+　　最初所有地点之间都没有跑道。<br />
+　　每行相邻的两个数之间均用一个空格隔开。表示地点编号的数均在1到n之间，每个地点的刷卡机台数始终不超过10000，P=1,2,3。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><br />
+<font size="4">　　输出的行数等于第3类事件的个数，每行表示一个第3类事件。如果该情况下存在一种设定跑道方向的方案和路径的方案，可以到达，则输出最多可以刷卡的次数。如果A不能到达B，则输出-1。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>9 31
+10 20 30 40 50 60 70 80 90
+3 1 2
+1 1 3
+1 1 2
+1 8 9
+1 2 4
+1 2 5
+1 4 6
+1 4 7
+3 1 8
+3 8 8
+1 8 9
+3 8 8
+3 7 5
+3 7 3
+1 4 1
+3 7 5
+3 7 3
+1 5 7
+3 6 5
+3 3 6
+1 2 4
+1 5 5
+3 3 6
+2 8 180
+3 8 8
+2 9 190
+3 9 9
+2 5 150
+3 3 6
+2 1 210
+3 3 6
+</pre><hr/><h3>样例输出</h3><pre>
+-1
+-1
+80
+170
+180
+170
+190
+170
+250
+280
+280
+270
+370
+380
+580
+</pre><hr/><h3>提示</h3><p><p>数据规模及约定<br />
+　　对于100%的数据，m&lt;=5n，任意时刻，每个地点的刷卡机台数不超过10000。N&lt;=<span style="display: inline! important; float: none; word-spacing: 0px; font: 14px 'Times New Roman', ����; text-transform: none; color: rgb(32,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; background-color: rgb(255,255,255); orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">1.5&times;10</span><sup style="font-weight: normal; word-spacing: 0px; text-transform: none; color: rgb(32,0,0); text-indent: 0px; line-height: normal; font-style: normal; font-family: 'Times New Roman', ����; white-space: normal; letter-spacing: normal; background-color: rgb(255,255,255); font-variant: normal; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">5</sup></p></p><hr/><h3>题目来源</h3><p>中国国家队清华集训 2012-2013 第二天
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2959" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2959" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

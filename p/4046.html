@@ -1,0 +1,165 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4046：[Cerc2014] Pork barre</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] Pork barre</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] Pork barre</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2014] Pork barre                </h1>
+                <p>时间限制：15s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Winning the election was simpler than you expected: it was enough to promise to finally build&nbsp;</div>
+<div>a good quality, country-wide road infrastructure, of course without crippling the budget_ Your&nbsp;</div>
+<div>happiness did not last long, however: it seems, that the citizens have found a way to actually&nbsp;</div>
+<div>hold you accountable for your promise!&nbsp;</div>
+<div>There are n major cities in your country. The Ministry of Transport has prepared a detailed&nbsp;</div>
+<div>map, outlining m possible highway connections, together with their costs. The Quality Assurance&nbsp;</div>
+<div>Committee will not let you build a highway cheaper than l, and the National Spendings&nbsp;</div>
+<div>Regulatory Committee will not let you build a highway more expensive than h. To claim a&nbsp;</div>
+<div>&quot;country-wide&quot; network, you have to connect (possibly indirectly) as many pairs of cities, as it is&nbsp;</div>
+<div>possible within these two constraints. You have to find the cheapest way to do it, and you have&nbsp;</div>
+<div>to find it quickly! Of all networks that meet the constraints and connect the most pairs of cities,&nbsp;</div>
+<div>compute the cost of the cheapest one.&nbsp;</div>
+<div>To make things worse, both committees are heavily influenced by your angry competitors:&nbsp;</div>
+<div>each time you publish your hard-prepared plan, they immediatelv change their rulings l and矗，&nbsp;</div>
+<div>and vou are forced to start from scratch.&nbsp;</div>
+<div>有N个点，M条无向虚边（边还未连接上去），Q组询问，询问格式如下：&nbsp;</div>
+<div>对于第一个询问输入2个数L1,H1,表示你要用满足权值L1&lt;=Ai&lt;=H1的所有边来连接点使得能互相通达的点的数量最多。在此条件下，输出最小的权值和C1.&nbsp;对于第i个询问(1&nbsp;</div>
+<div>N&lt;=1000, M&lt;=100000, Q&lt;=1000000&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The first line of input contains the number of test cases T. The descriptions of the test cases&nbsp;</div>
+<div>
+<div>follow:&nbsp;</div>
+<div>The first line of each test case contains integers n and m (1&le; n&le; 1000; 0&le; rn&le; 100 000) -&nbsp;</div>
+<div>the number of cities in the country, and of possible direct connections, respectively.&nbsp;</div>
+<div>Each of the following m lines contains three integers x,y,w (1 &lt; x&ne; y &lt; n; I&le; w&le;&nbsp;</div>
+<div>1000 000), denoting that the cities x and y can be connected by a bidirectional highway at cost&nbsp;</div>
+<div>w. There might be many ways to connect a single pair of cities.&nbsp;</div>
+<div>The following line contains an integer q (1《 q &lt; 1 000 000) - the number of rulings of the&nbsp;</div>
+<div>committees. Each of the following q lines contains two integers. The first of the lines contains&nbsp;</div>
+<div>the initial rulings 21, hi, given directly. The rest of the rulings are encoded. The numbers in the&nbsp;</div>
+<div>j-th of the lines for j &gt; I are lj + Cj_i and hj + cj_i, where lj and hj are the actual rulings and&nbsp;</div>
+<div>cj-l is the correct answer for the preceding rulings /j_i and hj_i.&nbsp;</div>
+<div>All rulings satisfv I&le; tj&le; hj &lt; 1000 000.&nbsp;</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>For each test case, output q lines, one for&nbsp;</div>
+<div>cost cj of building a highway network which&nbsp;</div>
+<div>the maximum number of connected pairs of&nbsp;</div>
+<div>each ruling. In the j-th of them, output the minimal&nbsp;</div>
+<div>adheres to the committees7 constraints, and creates&nbsp;</div>
+<div>cities.</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>1
+5 7
+1 2 2
+2 3 4
+3 4 3
+4 5 1
+5 1 3
+2 5 4
+1 4 5
+5
+1 2
+4 7
+11 12
+11 13
+18 19
+</pre><hr/><h3>样例输出</h3><pre>3
+9
+8
+14
+13</pre><hr/><h3>提示</h3><p><div>样例解释：&nbsp;</div>
+<div>第一组询问1 2，连接1 2 2和4 5 1两条边，总权值为3.因为没有其他边的权值范围在[1,2]了&nbsp;</div>
+<div>第二组询问4 7，实际询问为4-3=1和7-3=4，即[1,4]，最终连接1 2 2, 3 4 3, 4 5 1, 5 1 3, 其余满足条件的边都是冗余的，总权值为9.&nbsp;</div>
+<div>以下同理。&nbsp;</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4046" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4046" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

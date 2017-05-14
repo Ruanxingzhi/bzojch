@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1942：[Ceoi2007]Ministry</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2007]Ministry</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2007]Ministry</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2007]Ministry                </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>在很久很久以前，某国政府成立了一个精简机构部，你可以认为它是个最大的部，公务员的数量的确很多，然后，他们的结构却相当简单，部长最多有3个下属，这些下属也最多只能有3个下属，等等。最近，心选了一个部长，他年轻、英俊兵充满了才华，他决定从他的部门开始实行机构精简，他发现部门分级结构的许多部分是一样，因此，他们肯定是在做相同的工作，无论什么时候，两个相同的部分作同一项工作，必然有一个部门没事干。因此，该部门所有的这些都是多余的。你的任务就是找出多少个完全不相同的部门实现该次精简任务。 任务 给你一个部的组织结构图，每个公务员只有一个上级，最多有3个下级（包括0个），注意部长没有上限，但也最多只有3个下级，下级之间都是平等的，没有级别大小之分。一个部门包含一个官员和他的下级，他下级的下级等等，有两种特殊情况：由部长开始的所有人构成的部门和只有1个人没有任何下属的部门。部门的深度是由部门官员连接起来的一个链X1,&hellip;&hellip;,Xd,其中，对每个1&le;i&le;d，Xi是Xi+1的上级，只有一个人的部深度为1。两个部门A和B的结构完全相同是指对于部门A的每个官员X有部门B的官员X&rsquo;与之对应，反之，对于部门B的每个官员X&rsquo;有部门A的官员X与之对应。特别地，对于所有的官员X和Y：X是Y的上级当且仅当X&rsquo;（相对于官员X）是Y&rsquo;（相对于官员Y）的上级。如果部门A和部门B结构相同，那么两部门的领导相对应，深度相同，人数相等。在下面的图中，部门A和部门B结构相同，而部门C的结构与A、B不同。你的任务是决定对于所有的深度不同结构部门的数目，换句话说，你必须提供这样一个序列，n1,&hellip;&hellip;,nd,d是部的深度，对每个i，包含深度位i的完全不同结构部门的数目。 <img border="0" alt="" src="../file/1942_0.jpg" /></p></p><hr/><h3>输入格式</h3><p>输入仅包括一行，用下面的符号描述组织结构，每个部门形如（x1,……,xk），1≤k≤3，表示领导的下属个数，xi代表了他们的部门，只有一个人部门形如（），所有的代码描述了该部。
+该部最多有1 000 000个公务员。
+
+</p><hr/><h3>输出格式</h3><p>输出应该包括d行，d是该部精简后的深度，第i行包含深度i的不同部门数目。
+
+</p><hr/><h3>样例输入</h3><pre>(((())())((()())(()()()))(()(())))
+
+</pre><hr/><h3>样例输出</h3><pre>1
+3
+2
+1
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1942" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1942" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

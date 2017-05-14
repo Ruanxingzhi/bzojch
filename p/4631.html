@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4631：踩气球</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">踩气球</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">踩气球</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                踩气球                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>
+<div>六一儿童节到了， SHUXK 被迫陪着M个熊孩子玩一个无聊的游戏：有N个盒子从左到右排成一排，第i个盒子里装着Ai个气球。</div>
+<div>SHUXK 要进行Q次操作，每次从某一个盒子里拿出一个没被踩爆的气球，然后熊孩子们就会立刻把它踩爆。</div>
+<div>这M个熊孩子每个人都指定了一个盒子区间[Li, Ri]。 如果某一个时刻，一个熊孩子发现自己选定的盒子区间[Li, Ri]中的所</div>
+<div>有气球都已经被踩爆了，他就会非常高兴（显然之后他一直会很高兴）。</div>
+<div>为了不辜负将自己的任务强行塞给 SHUXK 的那个人的期望， SHUXK 想向你询问：&nbsp;</div>
+<div>他每次操作过后会有多少个熊孩子很高兴。</div>
+</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包含两个正整数N和M，分别表示盒子和熊孩子的个数。</div>
+<div>第二行包含N个正整数Ai（ 1 &lt; = Ai &lt; = 10^5），表示每个盒子里气球的数量。</div>
+<div>以下M行每行包含两个正整数Li, Ri（ 1 &lt; = Li &lt; = Ri &lt; = N），分别表示每一个熊孩子指定的区间。</div>
+<div>以下一行包含一个正整数Q，表示 SHUXK 操作的次数。</div>
+<div>以下Q行每行包含一个正整数X，表示这次操作是从第X个盒子里拿气球。为</div>
+<div>了体现在线，我们对输入的X进行了加密。</div>
+<div>假设输入的正整数是x'，那么真正的X = (x' + Lastans &minus; 1)Mod N + 1。其</div>
+<div>中Lastans为上一次询问的答案。对于第一个询问， Lastans = 0。</div>
+<div>输入数据保证1 &lt; = x' &lt; = 10^9， 且第X个盒子中有尚未被踩爆的气球。</div>
+<div>N &lt; = 10^5 ,M &lt; = 10^5 �,Q &lt; = 10^5</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>包含Q行，每行输出一个整数，表示 SHUXK 一次操作后询问的</div>
+<div>答案。答案的顺序应与输入数据的顺序保持一致。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 3
+1 1 1 1 1
+5 5
+2 2
+1 3
+5 
+4 
+2 
+5 
+2 
+3</pre><hr/><h3>样例输出</h3><pre>0 
+1 
+1 
+2 
+3
+【样例说明】
+实际上每次操作的盒子是： 4 2 1 3 5
+在第二次操作后，第二个熊孩子会高兴 （区间[2,2]中的气球已经全部被踩爆）。
+在第四次操作后，第三个熊孩子会高兴（区间[1,3]中的气球已经全部被踩爆）。
+在第五次操作后，第一个熊孩子会高兴（区间[5,5]中的气球已经全部被踩爆）。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4631" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4631" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

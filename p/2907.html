@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2907：拜访神犇</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">拜访神犇</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">拜访神犇</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                拜访神犇                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 27pt"><span style="font-size: 12pt">某蒟蒻被虐爆太多于是去拜访神犇，有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个神犇生活在一维世界，住在数轴上某点，每个神犇都有个互不相同的坐标值</span><span style="font-size: 12pt">Xi</span><span style="font-size: 12pt">，神犇有神力，可以在一维世界任意移动，但是蒟蒻不行，蒟蒻一开始在某个神犇处，神犇借了他一点神力用，蒟蒻可以借助神力向左（数轴负方向）移动任意距离</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">次，向右（数轴正方向）移动任意距离</span><span style="font-size: 12pt">N-L-1</span><span style="font-size: 12pt">次，移动耗时为两点之间的距离差的绝对值。他移动完毕后到达一个神犇的位置时就视作他拜访了这个神犇，当他成功拜访完</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个神犇后他就可以从蒟蒻进化成弱菜。他希望快点成为弱菜，所以希望你能告诉他他最快需要多少时间成为弱菜？由于今天是最后一天就不需要给出方案了。</span></div>
+<div>&nbsp;</div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 20.25pt"><span style="font-size: 12pt">第一行</span><span style="font-size: 12pt">3</span><span style="font-size: 12pt">个数字</span><span style="font-size: 12pt">N,L,S</span><span style="font-size: 12pt">表示神犇数，蒟蒻可以向左移动的次数和蒟蒻所在位置的神犇编号。</span></div>
+<div style="margin: 0cm 0cm 0pt 10.5pt; text-indent: 12pt"><span style="font-size: 12pt">第二行</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个升序排列的数字，第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">个数字表示第</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">个神犇所在的坐标大小</span><span style="font-size: 12pt">X<sub>i</sub></span><span style="font-size: 12pt">（</span><span style="font-size: 12pt">0=X<sub>1</sub></span><span style="font-size: 12pt">＜</span><span style="font-size: 12pt">X<sub>2</sub></span><span style="font-size: 12pt">＜&hellip;＜</span><span style="font-size: 12pt">X<sub>n-1</sub></span><span style="font-size: 12pt">＜</span><span style="font-size: 12pt">X<sub>n</sub></span><span style="font-size: 12pt">&le;</span><span style="font-size: 12pt">10<sup>9</sup></span><span style="font-size: 12pt">）</span></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 20.25pt"><span style="font-size: 12pt">一个数，蒟蒻成为弱菜的最短耗时。如果蒟蒻无法成为弱菜是天命就输出</span><span style="font-size: 12pt">&rsquo;-1&rsquo;(</span><span style="font-size: 12pt">不带引号</span><span style="font-size: 12pt">)</span></div></p><hr/><h3>样例输入</h3><pre>5 2 2
+0 10 11 21 22
+</pre><hr/><h3>样例输出</h3><pre>33</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">【样例解释】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">蒟蒻可以向左移动</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">次，向右移动</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">次。现在在</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号神犇处坐标为</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">10</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，他先向左移动一次，访问</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号神犇，移动耗时</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">10</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，然后向右移动访问</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">3</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号神犇，移动耗时</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">11</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，向右移动访问</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">5</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号神犇，移动耗时</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">11</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，然后向左移动访问</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">4</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">号神犇，移动耗时</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，总耗时</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">33</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，总公共向左移动</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">次，向右移动</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">次。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">【数据范围】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font face="Calibri"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;</span></span></b></font><span lang="EN-US" style="font-size: 12pt"><font face="Calibri"><span style="mso-spacerun: yes">&nbsp; </span>100%</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的数据</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri"><span style="mso-spacerun: yes">&nbsp;&nbsp; </span>1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">N</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US" style="font-size: 12pt"><font face="Calibri">100000<o:p></o:p></font></span></p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2907" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2907" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2333：[SCOI2011]棘手的操作</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2011]棘手的操作</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SCOI2011]棘手的操作</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SCOI2011]棘手的操作                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">有<font face="Times New Roman">N</font><font face="宋体">个节点，标号从</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">N</font><font face="宋体">，这</font><font face="Times New Roman">N</font><font face="宋体">个节点一开始相互不连通。第</font><font face="Times New Roman">i</font><font face="宋体">个节点的初始权值为</font><font face="Times New Roman">a[i]</font><font face="宋体">，接下来有如下一些操作：</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">U&nbsp;x&nbsp;y:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">加一条边，连接第<font face="Times New Roman">x</font><font face="宋体">个节点和第</font><font face="Times New Roman">y</font><font face="宋体">个节点</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A1&nbsp;x&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点的权值增加</font><font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A2&nbsp;x&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点所在的</font>连通块的所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A3&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F1&nbsp;x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点当前的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F2&nbsp;x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点所在的连通块中，权值最大的节点的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F3:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出所有节点中，权值最大的节点的权值</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></p><hr/><h3>输入格式</h3><p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span>&nbsp;</p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输入的第一行是一个整数<font face="Times New Roman">N</font><font face="宋体">，代表节点个数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">接下来一行输入<font face="Times New Roman">N</font><font face="宋体">个整数，</font><font face="Times New Roman">a[1],&nbsp;a[2],&nbsp;&hellip;,&nbsp;a[N]</font><font face="宋体">，代表</font><font face="Times New Roman">N</font><font face="宋体">个节点的初始权值。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">再下一行输入一个整数<font face="Times New Roman">Q</font><font face="宋体">，代表接下来的操作数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">最后输入<font face="Times New Roman">Q</font><font face="宋体">行，每行的格式如题目描述所示。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></p><hr/><h3>输出格式</h3><p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">对于操作<font face="Times New Roman">F1,&nbsp;F2,&nbsp;F3</font><font face="宋体">，输出对应的结果，每个结果占一行。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>3
+
+0 0 0
+
+8
+
+A1 3 -20
+
+A1 2 20
+
+U 1 3
+
+A2 1 10
+
+F1 3
+
+F2 3
+
+A3 -10
+
+F3
+
+</pre><hr/><h3>样例输出</h3><pre>
+-10
+
+10
+
+10
+
+</pre><hr/><h3>提示</h3><p><p><br />
+&nbsp;对于30%的数据，保证 N&lt;=100，Q&lt;=10000</p>
+<p>对于80%的数据，保证 N&lt;=100000，Q&lt;=100000</p>
+<p>对于100%的数据，保证 N&lt;=300000，Q&lt;=300000</p>
+<p>对于所有的数据，保证输入合法，并且 -1000&lt;=v, a[1], a[2], &hellip;, a[N]&lt;=1000<br />
+</p></p><hr/><h3>题目来源</h3><p>Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2333" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2333" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

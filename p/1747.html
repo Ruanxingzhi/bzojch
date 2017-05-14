@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1747：[Usaco2005 open]Expedition 探险</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 open]Expedition 探险</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 open]Expedition 探险</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 open]Expedition 探险                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">A group of cows grabbed a truck and ventured on an expedition deep into the jungle. Being rather poor drivers, the cows unfortunately managed to run over a rock and puncture the truck's fuel tank. The truck now leaks one unit of fuel every unit of distance it travels. To repair the truck, the cows need to drive to the nearest town (no more than 1,000,000 units distant) down a long, winding road. On this road, between the town and the current location of the truck, there are N (1 &lt;= N &lt;= 10,000) fuel stops where the cows can stop to acquire additional fuel (1..100 units at each stop). The jungle is a dangerous place for humans and is especially dangerous for cows. Therefore, the cows want to make the minimum possible number of stops for fuel on the way to the town. Fortunately, the capacity of the fuel tank on their truck is so large that there is effectively no limit to the amount of fuel it can hold. The truck is currently L units away from the town and has P units of fuel (1 &lt;= P &lt;= 1,000,000). Determine the minimum number of stops needed to reach the town, or if the cows cannot reach the town at all. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一群奶牛抢了一辆卡车决定前往树林里探险．但是由于它们的驾驶技术太糟，油箱在路上给弄破了，所以它们每前进一个单位的路程就会漏掉一个单位的油,为了修好油箱，奶牛们必须前往最近的城市（不会超过1000000单位路程）．在当前位置和城市之间有N(1&le;N&le;10000)个加油站．奶牛可以在加油站加1到100单位的油．对于人来说，树林是个危险的地方，对奶牛来说，更是这样．所以，奶牛要尽可能的少停站加油．幸运的是，这辆卡车的油箱非常大，你可以认为它的容量是无穷大的．卡车在离城P(1&le;P&le;1000000)个单位时还有L个单位的油．&nbsp;你要算出奶牛们至少要停几站才能到城市，或者奶牛们根本到不了城市．</span></div></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">* Line 1: A single integer, N * Lines 2..N+1: Each line contains two space-separated integers describing a fuel stop: The first integer is the distance from the town to the stop; the second is the amount of fuel available at that stop. * Line N+2: Two space-separated integers, L and P </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：一个整数N.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到N+1行：每行有两个用空格隔开的整数，描述一个加油站．第一个数表示这个加油站离城市的距离，第二个数表示在这个加油站最多可以加多少油．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第N+1行：两个用空格分开的整数L和P．</span></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">* Line 1: A single integer giving the minimum number of fuel stops necessary to reach the town. If it is not possible to reach the town, output -1. </span></p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个表示卡车到城市最少要停的次数，如果无法到达输出-1.</span></div></p><hr/><h3>样例输入</h3><pre>4
+4 4
+5 2
+11 5
+15 10
+25 10
+
+INPUT DETAILS:
+
+The truck is 25 units away from the town; the truck has 10 units
+of fuel.  Along the road, there are 4 fuel stops at distances 4,
+5, 11, and 15 from the town (so these are initially at distances
+21, 20, 14, and 10 from the truck).  These fuel stops can supply
+up to 4, 2, 5, and 10 units of fuel, respectively.
+
+</pre><hr/><h3>样例输出</h3><pre>2
+
+现在卡车离城市25个单位，卡车里有10个单位的油．在路上，有4个加油站，分别距离城市4，5，11，15，分别距离卡车则为21，20，14，10.这些加油站分别最多可加油4，2，5，10个单位．开10个单位，加满油10单位油，在开4个单位，加满5单位的油，接着直接开到城市
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Gold</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1747" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1747" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

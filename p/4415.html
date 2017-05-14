@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4415：[Shoi2013]发牌</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2013]发牌</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2013]发牌</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Shoi2013]发牌                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="NOI"></p>
+<p class="NOI">假设一开始，荷官拿出了一副新牌，这副牌有N张不同的牌，编号依次为1到N。由于是新牌，所以牌是按照顺序排好的，从牌库顶开始，依次为1, 2,&hellip;&hellip;直到N，N号牌在牌库底。为了发完所有的牌，荷官会进行N次发牌操作，在第i次发牌之前，他会连续进行R_i次销牌操作，R_i由输入给定。请问最后玩家拿到这副牌的顺序是什么样的？</p>
+<p class="NOI">举个例子，假设N = 4，则一开始的时候，牌库中牌的构成顺序为{1, 2, 3, 4}。</p>
+<p class="NOI">假设R1=2，则荷官应该连销两次牌，将1和2放入牌库底，再将3发给玩家。目前牌库中的牌顺序为{4, 1, 2}。</p>
+<p class="NOI">假设R2=0，荷官不需要销牌，直接将4发给玩家，目前牌库中的牌顺序为{1,2}。</p>
+<p class="NOI">假设R3=3，则荷官依次销去了1, 2, 1，再将2发给了玩家。目前牌库仅剩下一张牌1。</p>
+<p class="NOI">假设R4=2，荷官在重复销去两次1之后，还是将1发给了玩家，这是因为1是牌库中唯一的一张牌。</p>
+<p class="NOI2"></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="NOI">第1行，一个整数N，表示牌的数量。第2行到第N + 1行，在第i + 1行，有一个整数R_i， 0&le;R_i&lt;N</p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="NOI">第1行到第N行：第i行只有一个整数，表示玩家收到的第i张牌的编号。</p>
+<p></p></p><hr/><h3>样例输入</h3><pre>4
+2
+0
+3
+2</pre><hr/><h3>样例输出</h3><pre>3
+4
+2
+1
+</pre><hr/><h3>提示</h3><p><p>N&lt;=70万</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4415" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4415" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

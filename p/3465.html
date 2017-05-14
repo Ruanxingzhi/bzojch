@@ -1,0 +1,332 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3465：动态仙人掌 II</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">动态仙人掌 II</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">动态仙人掌 II</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                动态仙人掌 II                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">有一天，VFleaKing到森林里游玩，回来之后跟pyx1997说，我发现好多棵会动的树耶！<br />
+pyx1997说，这有什么好稀奇的，我用手指头就能维护每棵树的形态。<br />
+于是又过了几天VFleaKing到沙漠里游玩，回来之后跟pyx1997说，我发现好多棵会动的仙人掌耶！<br />
+pyx1997说，这有什么好稀奇的，我用脚丫子就能维护每棵仙人掌的形态。<br />
+于是VFleaKing很郁闷，他向你求助，请帮帮他吧。</span></p>
+<p><span style="font-size: medium">如果一个无向连通图的任意一条边最多属于一个简单环，我们就称之为仙人掌。<br />
+如果一个无向图的每个连通块都是个仙人掌，且不存在自环，我们就称之为沙漠。</span></p>
+<p><span style="font-size: medium">为了证明你确实能够维护仙人掌，我们给你n个结点，从1到n标号。初始时没有任何边。每次进行如下操作之一：<br />
+1. link v u w<br />
+&nbsp;&nbsp;&nbsp; 在结点v, u间连一条权值为w的边。1 &lt;= v, u &lt;= n且w为正整数。<br />
+&nbsp;&nbsp;&nbsp; 如果连边完成后图仍为沙漠，则输出&quot;ok&quot;（不含引号）。<br />
+&nbsp;&nbsp;&nbsp; 否则操作非法，撤销此次操作并输出&quot;failed&quot;（不含引号）。<br />
+2. cut v u w 在结点v, u间删掉权值为w的边。1 &lt;= v, u &lt;= n且w为正整数。<br />
+&nbsp;&nbsp;&nbsp; 如果存在这样的边则输出&quot;ok&quot;（不含引号）（如果有多条权值为w的边删去任意一条）。<br />
+&nbsp;&nbsp;&nbsp; 否则操作非法，不进行操作并输出&quot;failed&quot;（不含引号）。<br />
+3. distance? v u 查询结点v到结点u的最短路信息。1 &lt;= v, u &lt;= n。<br />
+&nbsp;&nbsp;&nbsp; 输出两个用空格隔开的整数Lm, Wm。<br />
+&nbsp;&nbsp;&nbsp; Lm代表最短路的长度，Wm代表最短路上的边权的最小值。<br />
+&nbsp;&nbsp;&nbsp; 如果v = u则Lm = 0, Wm = 2147483647。<br />
+&nbsp;&nbsp;&nbsp; 如果没有路可到达则Lm = -1, Wm = -1。<br />
+&nbsp;&nbsp;&nbsp; 如果最短路不唯一则Wm = -1。</span></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体"><br />
+</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">第一行两个用空格隔开的正整数</span><span lang="EN-US">n, m</span><span style="font-family: 宋体">表示一共有</span><span lang="EN-US">n</span><span style="font-family: 宋体">个结点，</span><span lang="EN-US">m</span><span style="font-family: 宋体">个操作。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">接下来</span><span lang="EN-US">m</span><span style="font-family: 宋体">行，每行代表一个操作。</span></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium"><span style="font-family: 宋体">对于每个操作，输出相应的结果。</span></span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>6 49
+
+link 1 2 1
+
+link 1 2 2
+
+distance? 1 2
+
+cut 1 2 1
+
+link 1 2 2
+
+distance? 1 2
+
+cut 1 2 2
+
+cut 1 2 2
+
+link 3 3 2
+
+cut 4 4 2
+
+link 1 2 2
+
+link 1 3 3
+
+link 2 3 4
+
+distance? 1 2
+
+distance? 1 3
+
+distance? 2 4
+
+link 2 4 3
+
+link 3 5 3
+
+link 4 5 1
+
+distance? 4 5
+
+cut 1 2 2
+
+link 4 5 5
+
+distance? 1 5
+
+cut 2 3 4
+
+link 2 5 5
+
+link 1 5 2
+
+distance? 1 2
+
+cut 4 5 5
+
+distance? 1 2
+
+cut 3 5 3
+
+distance? 1 2
+
+cut 2 5 5
+
+distance? 1 2
+
+distance? 4 5
+
+link 3 5 2
+
+distance? 1 3
+
+distance? 4 3
+
+link 4 6 3
+
+link 2 6 1
+
+distance? 2 6
+
+distance? 2 5
+
+link 5 6 2
+
+distance? 1 6
+
+distance? 2 3
+
+cut 2 4 3
+
+link 2 5 4
+
+distance? 4 1
+
+cut 4 6 3
+
+distance? 4 1
+
+</pre><hr/><h3>样例输出</h3><pre>ok
+
+ok
+
+1 1
+
+ok
+
+ok
+
+2 -1
+
+ok
+
+ok
+
+failed
+
+failed
+
+ok
+
+ok
+
+ok
+
+2 2
+
+3 3
+
+-1 -1
+
+ok
+
+ok
+
+failed
+
+10 3
+
+ok
+
+ok
+
+6 3
+
+ok
+
+ok
+
+ok
+
+7 2
+
+ok
+
+7 2
+
+ok
+
+7 2
+
+ok
+
+-1 -1
+
+-1 -1
+
+ok
+
+3 3
+
+-1 -1
+
+ok
+
+ok
+
+1 1
+
+-1 -1
+
+ok
+
+4 2
+
+5 1
+
+ok
+
+ok
+
+7 2
+
+ok
+
+-1 -1
+</pre><hr/><h3>提示</h3><p><p><br />
+<br />
+1 &lt;= n &lt;= 100000<br />
+<br />
+1 &lt;= m &lt;= 400000<br />
+<br />
+保证中间有关边权的计算不会超过int范围。（祝pascal选手早日转C++，其实我在说longint）<br />
+<br />
+<br />
+<br />
+</p></p><hr/><h3>题目来源</h3><p>By VFleaKing</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3465" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3465" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

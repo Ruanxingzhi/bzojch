@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2762：[JLOI2011]不等式组</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2011]不等式组</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2011]不等式组</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JLOI2011]不等式组                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">旺汪与旺喵最近在做一些不等式的练习。这些不等式都是形如ax+b&gt;c 的一元不等式。当然，解这些不等式对旺汪来说太简单了，所以旺喵想挑战旺汪。旺喵给出一组一元不等式，并给出一个数值 。旺汪需要回答的是x=k 时成立的不等式的数量。聪明的旺汪每次都很快就给出了答案。你的任务是快速的验证旺汪的答案是不是正确的。</span></div>
+<div style="layout-grid-mode: char"><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">输入第一行为一个正整数 ，代表接下来有N 行。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来每一行可能有3种形式：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">1.&ldquo;Add a b c&rdquo;，表明要往不等式组添加一条不等式ax+b&gt;c ；</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">2.&ldquo;Del i&rdquo;，代表删除第i 条添加的不等式（最先添加的是第1条）。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">3.&ldquo;Query k&rdquo;，代表一个询问，即当x=k 时，在当前不等式组内成立的不等式的数量。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">注意一开始不等式组为空，a,b,c,i,k 均为整数，且保证所有操作均合法，不会出现要求删除尚未添加的不等式的情况。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>输出格式</h3><p><div style="layout-grid-mode: char">&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">对于每一个询问&ldquo;Query k&rdquo;，输出一行，为一个整数，代表询问的答案。</span></div></p><hr/><h3>样例输入</h3><pre>9
+Add 1 1 1
+Add -2 4 3
+Query 0
+Del 1
+Query 0
+Del 2
+Query 0
+Add 8 9 100
+Query 10
+</pre><hr/><h3>样例输出</h3><pre>1
+1
+0
+0
+</pre><hr/><h3>提示</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条添加到不等式组的不等式为</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">x+1&gt;1 </span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">，第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条为</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">-2x+4&gt;3 </span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">，所以第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">个询问的时候只有第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条不等式可以成立，故输出</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">。</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">然后删除第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条不等式，再询问的时候依然是只有第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条不等式可以成立，故输出</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">。</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">再删除第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条不等式后，因为不等式组里面没有不等式了，所以没有不等式可以被满足，故输出</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">0</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">。</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">继续加入第</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">3</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">条不等式</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">8x+9&gt;100 </span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">，当</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">x=k=10</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">时有</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">8*10+9=89&lt;100</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">，故也没有不等式可以被满足，依然输出</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">0</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">。</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">数据范围</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">:<o:p></o:p></span></b></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">20%</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">的数据，</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"> N&lt;=1000</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">；</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">40%</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">的数据，</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"> N&lt;=10000</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">；</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">100%</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">的数据，</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">N&lt;=100000</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">，</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt"><font size="3"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">a,b,c</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">的范围为</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">[-10^8,10^8],k</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">的范围为</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">[-10^6,10^6]</span><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">。</span></font><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt"><o:p></o:p></span></p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2762" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2762" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

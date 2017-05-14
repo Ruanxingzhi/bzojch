@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3829：[Poi2014]FarmCraft</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2014]FarmCraft</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2014]FarmCraft</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2014]FarmCraft                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>In a village called Byteville, there are &nbsp; houses connected with N-1 roads. For each pair of houses, there is a unique way to get from one to another. The houses are numbered from 1 to &nbsp;. The house no. 1 belongs to the village administrator Byteasar. As part of enabling modern technologies for rural areas framework, &nbsp; computers have been delivered to Byteasar's house. Every house is to be supplied with a computer, and it is Byteasar's task to distribute them. The citizens of Byteville have already agreed to play the most recent version of FarmCraft (the game) as soon as they have their computers.</div>
+<div>Byteasar has loaded all the computers on his pickup truck and is about to set out to deliver the goods. He has just the right amount of gasoline to drive each road twice. In each house, Byteasar leaves one computer, and immediately continues on his route. In each house, as soon as house dwellers get their computer, they turn it on and install FarmCraft. The time it takes to install and set up the game very much depends on one's tech savviness, which is fortunately known for each household. After he delivers all the computers, Byteasar will come back to his house and install the game on his computer. The travel time along each road linking two houses is exactly 1 minute, and (due to citizens' eagerness to play) the time to unload a computer is negligible.</div>
+<div>Help Byteasar in determining a delivery order that allows all Byteville's citizens (including Byteasar) to start playing together as soon as possible. In other words, find an order that minimizes the time when everyone has FarmCraft installed.</div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">mhy住在一棵有n个点的树的1号结点上，每个结点上都有一个妹子。</span></div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">
+<div>mhy从自己家出发，去给每一个妹子都送一台电脑，每个妹子拿到电脑后就会开始安装zhx牌杀毒软件，第i个妹子安装时间为Ci。</div>
+<div>树上的每条边mhy能且仅能走两次，每次耗费1单位时间。mhy送完所有电脑后会回自己家里然后开始装zhx牌杀毒软件。</div>
+<div>卸货和装电脑是不需要时间的。</div>
+<div>求所有妹子和mhy都装好zhx牌杀毒软件的最短时间。</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The first line of the standard input contains a single integer N(2&lt;=N&lt;=5 00 000) &nbsp;that gives the number of houses in Byteville. The second line contains N integers C1,C2&hellip;Cn(1&lt;=Ci&lt;=10^9), separated by single spaces; Ci is the installation time (in minutes) for the dwellers of house no. i.</div>
+<div>
+<div>The next N-1 &nbsp;lines specify the roads linking the houses. Each such line contains two positive integers a and b(1&lt;=a&lt;b&lt;=N) , separated by a single space. These indicate that there is a direct road between the houses no. a and b.</div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>The first and only line of the standard output should contain a single integer: the (minimum) number of minutes after which all citizens will be able to play FarmCraft together.</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6
+1 8 9 6 3 2
+1 3
+2 3
+3 4
+4 5
+4 6</pre><hr/><h3>样例输出</h3><pre>11
+</pre><hr/><h3>提示</h3><p><div>Explanation: Byteasar should deliver the computers to the houses in the following order: 3, 2, 4, 5, 6, and 1. The game will be installed after 11, 10, 10, 10, 8, and 9 minutes respectively, in the house number order. Thus everyone can play after 11 minutes.</div>
+<div>If Byteasar delivered the game in the following order: 3, 4, 5, 6, 2, and 1, then the game would be installed after: 11, 16, 10, 8, 6, and 7 minutes respectively. Hence, everyone could play only after 16 minutes,</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>鸣谢zhonghaoxi</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3829" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3829" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3258：秘密任务</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">秘密任务</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">秘密任务</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                秘密任务                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Alice听说在一片神奇的大陆MagicLand，有一个古老的传说&hellip;&hellip; <br />
+&nbsp;很久很久以前，那个时候&nbsp;MagicStates共和国刚刚成立。 反对新政府的势力虽已被镇压，但仍然在暗地活动。这一次，情报局得到了一个令人震惊的消息，被软禁在首都府邸中的Frank&nbsp;&mdash;&mdash;著名的反对派领袖，秘密逃出首都，去往反对派的大本营。根据相关的情报，Frank计划通过城市之间 发达的高速公路，经过最短的路程抵达目的地。不妨将&nbsp;MagicStates共和国简化为由N个城市,M条高速公路构成的连通的无向图，首都为城市1，反对派的大本营为城市N。 <br />
+每条高速公路连接两个不同的城市，且路程是已知的。而Frank选择了一条从城市1到城市N的最短路径作为他的逃跑路线。为了阻止Frank，共和国总统决定在某些城市的高速公路的出入口设立检查 点，在Frank经过检查点时将他逮捕。 <br />
+举例来说，如果有一条高速公路连接城市u和城市v，在这条公路的城市u或城市v的出入口设立检查点，那么Frank经过高速公路时就会被发现。特别的是，由于城市N实际上处在反对派的控制下，所以不能在城市N设立检查点。 </span></p>
+<p><span style="font-size: medium">然而在任何城市设立检查点都需要一定的费用。更具体的，若在城市&nbsp;u设立k个检查点，就要花费&nbsp;Au乘以k的代价，其中Au是城市u的相关参数。值得注意的是，这个代价与这k个检查点具体设在哪些公路的出入口无关,于是，总统责令情报局拟定一个方案，花费最小的代价使得无论Frank选择哪条最短路线，都会在（除城市N以外）某个城市的高速公路出入口被发现。读到这里，Alice很想知道阻止Frank所需要花费的最小代价，并且她还希 望知道最优方案是否是唯一的。只好再请你帮助她了。 <br />
+注意，我们称两个方案不同当且仅当存在某城市k，两种方案中在城市&nbsp;k的检查点的设置（而不仅是数目）是不同的。 <br />
+注意，输入文件包含多组测试数据。</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">第一行包含一个正整数T，表示有T组测试数据。接下来依次是T组测试数据。&nbsp;<br />
+&nbsp;每组测试数据的第一行包含两个整数&nbsp;N、M。 <br />
+第二行包含N - 1个正整数，依次表示A1，A2， &hellip;，An-1。<br />
+接下来M行，每行三个整数Ui,Vi,Ci,表示一条连接城市Ui和城市Vi的路程等于Ci的高速公路 </span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出T行，依次表示每组测试数据的答案。若最优方案唯一则输出&nbsp;&rdquo;Yes&rdquo;&nbsp;和<br />
+最小代价，否则输出&rdquo;No&rdquo;和最小代价。字符串和整数之间请用一个空格隔开。<br />
+</span></p></p><hr/><h3>样例输入</h3><pre>3 
+3  3
+2  4
+1  3 23
+3  2 12
+2  1 11
+4  4
+3  2 2
+1  2 1
+2  3 1
+3  4 1
+4  1 1
+3  4
+3  2
+1  2 1
+2  3 2
+2  3 19
+3  1 4
+
+ </pre><hr/><h3>样例输出</h3><pre>
+Yes 4 
+Yes 3 
+No 2 
+ 
+ </pre><hr/><h3>提示</h3><p><p><span style="font-size: medium"><br />
+第1组测试数据：最优方案是在城市1 设立两个检查点。 <br />
+&nbsp;<br />
+第2组测试数据：最优方案是城市1的高速公路( 1, 4)的出入口设立检查点。&nbsp; <br />
+&nbsp;<br />
+第3组测试数据：最优方案是在城市2设立一个检查点，不过既可以设置在<br />
+高速公路(1, 2)的出入口，也可以设置在高速公路(2, 3)的出入口。 <br />
+</span></p>
+<p></p>
+<p><span style="font-size: medium">对于100%的数据：2 &le; N &le; 400&nbsp;, 1&le; M &nbsp;&le; 4 000&nbsp;，1 &le; T &le; 5&nbsp;， <br />
+&nbsp;<br />
+1 &le; Ai,&nbsp;c &le; 10^9。无向图可能有重边。&nbsp;<br />
+&nbsp;<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3258" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3258" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

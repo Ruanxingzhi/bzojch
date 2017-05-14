@@ -1,0 +1,184 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2016：[Usaco2010]Chocolate Eating</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010]Chocolate Eating</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2010]Chocolate Eating</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2010]Chocolate Eating                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">贝西从大牛那里收到了</span><span lang="EN-US">N</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">块巧克力。她不想把它们马上吃完，而是打算制定一个计划，</span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使得在接下来的</span><span lang="EN-US">D</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">天里，她能够尽量地快乐。贝西的快乐指数可以用一个整数来衡量，一开始的时候是</span><span lang="EN-US">0</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，当她每天晚上睡觉的时候，快乐指数会减半（奇数时向下取整）。贝西把她的巧克力按照收到的时间排序，并坚持按照这个顺序来吃巧克力。当她吃掉第</span><span lang="EN-US">i</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">块巧克力的时候，她的快乐指数会增加</span><span lang="EN-US">Hj</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。每天可以吃任意多块巧克力，如何帮助贝西合理安排，使得</span><span lang="EN-US">D</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">天内她的最小快乐指数最大呢？</span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">举个例子：假设一共有五块巧克力，贝西打算在五天时间内将它们吃完，每块巧克力提</span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">供的快乐指数分别为</span><span lang="EN-US">10</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US">40</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US">13</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US">22</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US">7</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。则最好的方案如</span><span lang="EN-US">F</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：</span></span></p>
+<p>
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="1" style="mso-cellspacing: 0cm; mso-padding-alt: 0cm 0cm 0cm 0cm">
+    <tbody>
+        <tr style="height: 16.5pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td nowrap="nowrap" width="50" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 37.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 16.5pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">天数</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="144" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 108pt; padding-top: 0cm; border-bottom: #ece9d8; height: 16.5pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">起床时快乐指数</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="126" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 94.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 16.5pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">食用的巧克力</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="142" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 106.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 16.5pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">就寝时快乐指数</span></span></p>
+            </td>
+        </tr>
+        <tr style="height: 101.25pt; mso-yfti-irow: 1">
+            <td nowrap="nowrap" width="50" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 37.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 101.25pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;1<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;2<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;3<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;4<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;5</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="144" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 108pt; padding-top: 0cm; border-bottom: #ece9d8; height: 101.25pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;0<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;25<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;12<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;12<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;17</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="126" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 94.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 101.25pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;10+&nbsp;40<br />
+            &nbsp;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;13<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;22<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;7</span></span></p>
+            </td>
+            <td nowrap="nowrap" width="142" style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 106.5pt; padding-top: 0cm; border-bottom: #ece9d8; height: 101.25pt; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;50<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;25<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;25<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;34<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;24</span></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+            <td style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0cm; border-bottom: #ece9d8; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p>&nbsp;</o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+            <td style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0cm; border-bottom: #ece9d8; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p>&nbsp;</o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+            <td style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0cm; border-bottom: #ece9d8; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p>&nbsp;</o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+            <td style="border-right: #ece9d8; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; padding-top: 0cm; border-bottom: #ece9d8; background-color: transparent">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p>&nbsp;</o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">五天内的最小快乐指数为</span><span lang="EN-US">24</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，这是所有吃法中的最大值。</span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;第一行：两个用空格分开的整数：N和D，1&le;N．D&le;50000</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;第二行到第N+1行：第1+1行表示第i块巧克力提供的快乐指数Hj，1&le;Hi&le;1000000</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;第一行：单个整数，表示贝西在接下来D天内的最小快乐指数的最大值</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;第二行到第N+1:在第i+l行有一个整数，代表贝西应该在哪一天吃掉第i块巧克力。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;如果有多种吃法，则输出按照词典序排序后最靠后的方案</span></div></p><hr/><h3>样例输入</h3><pre>55
+10
+40
+13
+22
+7
+</pre><hr/><h3>样例输出</h3><pre>24
+ 1
+ 1
+ 3
+ 4
+ 5
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2016" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2016" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

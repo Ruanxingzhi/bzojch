@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3786：星系探索</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">星系探索</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">星系探索</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                星系探索                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoPlainText">物理学家小<span lang="EN-US">C</span>的研究正遇到某个瓶颈。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">他正在研究的是一个星系，这个星系中有<span lang="EN-US">n</span>个星球，其中有一个主星球<span lang="EN-US">(</span>方便起见我们默认其为<span lang="EN-US">1</span>号星球<span lang="EN-US">)</span>，其余的所有星球均有且仅有一个依赖星球。主星球没有依赖星球。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">我们定义依赖关系如下：若星球<span lang="EN-US">a</span>的依赖星球是<span lang="EN-US">b,</span>则有星球<span lang="EN-US">a</span>依赖星球<span lang="EN-US">b.</span>此外，依赖关系具有传递性，即若星球<span lang="EN-US">a</span>依赖星球<span lang="EN-US">b,</span>星球<span lang="EN-US">b</span>依赖星球<span lang="EN-US">c,</span>则有星球<span lang="EN-US">a</span>依赖星球<span lang="EN-US">c.<o:p></o:p></span></p>
+<p class="MsoPlainText">对于这个神秘的星系中，小<span lang="EN-US">C</span>初步探究了它的性质，发现星球之间的依赖关系是无环的。并且从星球<span lang="EN-US">a</span>出发只能直接到达它的依赖星球<span lang="EN-US">b.<o:p></o:p></span></p>
+<p class="MsoPlainText">每个星球<span lang="EN-US">i</span>都有一个能量系数<span lang="EN-US">wi.</span>小<span lang="EN-US">C</span>想进行若干次实验，第<span lang="EN-US">i</span>次实验，他将从飞船上向星球<span lang="EN-US">di</span>发射一个初始能量为<span lang="EN-US">0</span>的能量收集器，能量收集器会从星球<span lang="EN-US">di</span>开始前往主星球，并收集沿途每个星球的部分能量，收集能量的多少等于这个星球的能量系数。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">但是星系的构成并不是一成不变的，某些时刻，星系可能由于某些复杂的原因发生变化。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">有些时刻，某个星球能量激发，将使得所有依赖于它的星球以及他自己的能量系数均增加一个定值。还有可能在某些时刻，某个星球的依赖星球会发生变化，但变化后依然满足依赖关系是无环的。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">现在小<span lang="EN-US">C</span>已经测定了时刻<span lang="EN-US">0</span>时每个星球的能量系数<span lang="EN-US">,</span>以及每个星球<span lang="EN-US">(</span>除了主星球之外<span lang="EN-US">)</span>的依赖星球。接下来的<span lang="EN-US">m</span>个时刻，每个时刻都会发生一些事件。其中小<span lang="EN-US">C</span>可能会进行若干次实验，对于他的每一次实验，请你告诉他这一次实验能量收集器的最终能量是多少。<span lang="EN-US"><o:p></o:p></span></p></p><hr/><h3>输入格式</h3><p><p class="MsoPlainText">第一行一个整数<span lang="EN-US">n,</span>表示星系的星球数。</p>
+<p class="MsoPlainText">接下来<span lang="EN-US">n-1</span>行每行一个整数<span lang="EN-US">,</span>分别表示星球<span lang="EN-US">2-n</span>的依赖星球编号。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">接下来一行<span lang="EN-US">n</span>个整数，表示每个星球在时刻<span lang="EN-US">0</span>时的初始能量系数<span lang="EN-US">wi.<o:p></o:p></span></p>
+<p class="MsoPlainText">接下来一行一个整数<span lang="EN-US">m,</span>表示事件的总数。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText">事件分为以下三种类型。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText"><span lang="EN-US">(1)&quot;Q di&quot;</span>表示小<span lang="EN-US">C</span>要开始一次实验<span lang="EN-US">,</span>收集器的初始位置在星球<span lang="EN-US">di.<o:p></o:p></span></p>
+<p class="MsoPlainText"><span lang="EN-US">(2)&quot;C xi yi&quot;</span>表示星球<span lang="EN-US">xi</span>的依赖星球变为了星球<span lang="EN-US">yi.<o:p></o:p></span></p>
+<p class="MsoPlainText"><span lang="EN-US">(3)&quot;F pi qi&quot;</span>表示星球<span lang="EN-US">pi</span>能量激发，常数为<span lang="EN-US">qi.<o:p></o:p></span></p>
+<p class="MsoPlainText"></p>
+<p class="MsoPlainText"></p>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<p class="MsoPlainText">对于每一个事件类型为<span lang="EN-US">Q</span>的事件，输出一行一个整数，表示此次实验的收集器最终能量。<span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText"></p>
+</div>
+<div>
+<p></p>
+</div></p><hr/><h3>样例输入</h3><pre>3
+1
+1
+4 5 7
+5
+Q 2
+F 1 3
+Q 2
+C 2 3
+Q 2
+</pre><hr/><h3>样例输出</h3><pre>9
+15
+25</pre><hr/><h3>提示</h3><p><p>n&lt;=100000,m&lt;=300000,1&lt;di,xi&lt;=n,wi,qi&lt;=100000.保证操作合法。</p>
+<p></p></p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3786" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3786" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

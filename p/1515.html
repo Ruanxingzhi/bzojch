@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1515：[POI2006]Lis-The Postman</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2006]Lis-The Postman</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2006]Lis-The Postman</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [POI2006]Lis-The Postman                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>每天早上邮递员都要走过每条街道来递送邮件. 所有的道路都是单向的. 两个岔路口间最多有两条边并且方向不同. 岔路口从1 到 编号. 邮递员从Byteotian邮政总部出发并且最终回到总部, 他可以自由选择自己喜欢的线路.最近他的上司给了他新的任务. 他被分派了一些路径的片段- 即一些需要依次经过的岔路口序列. 邮递员要选择一条路径使得:&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>经过每条街道一次,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>包含所有给定的路径片段,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>从第一个路口出发并回到第一个路口.&nbsp;</div>
+<div>很不幸,很可能这样的路径不一定存在. 请你帮邮递员找出一条可行的路径.</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行两个整数N和M,2&lt;=N&lt;=50000,1&lt;=M&lt;=200000 表示岔路口数目以及街道的数目. 接下来M行每行两个数字a, b,</div>
+<div>1&lt;=a,b&lt;=N,a&lt;&gt;b,, 表示一条单向道路. 每一队 a,b在数据中最多出现一次. 接下来一行一个整数t,0&lt;=t&lt;=10000&nbsp;</div>
+<div>表示给定的路径片段数目. 接下来t行用来描述这些路径片段. 每行开始一个整数 k,2&lt;=K&lt;=200000, 并且一个序列</div>
+<div>&nbsp;v1,v2&hellip;vk表示需要经过的路口总数以及这些路口的编号. 所有路径片段的总长不超过1000000.</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>第一行输出:&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>TAK - 如果存在一条满足条件的路径,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>NIE &ndash; 如果路径不存在.</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>6 10
+1 5
+1 3
+4 1
+6 4
+3 6
+3 4
+4 3
+5 6
+6 2
+2 1
+4
+3 1 5 6
+3 3 4 3
+4 4 3 6 4
+3 5 6 2
+</pre><hr/><h3>样例输出</h3><pre>TAK
+</pre><hr/><h3>提示</h3><p><p><img border="0" src="../file/1515_0.jpg" alt="" /></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1515" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1515" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3325：[Scoi2013]密码 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2013]密码 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2013]密码 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Scoi2013]密码                 </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="left"><span style="font-size: 12pt">Fish</span><span style="font-size: 12pt">是一条生活在海里的鱼。有一天他很无聊，就到处去寻宝。他找到了位于海底深处的宫殿，但是一扇带有密码锁的大门却阻止了他的前进。通过翻阅古籍，Fish 得知了这个密码的相关信息：</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">1. </span><span style="font-size: 12pt">该密码的长度为N。</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">2. </span><span style="font-size: 12pt">密码仅含小写字母。</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">3. </span><span style="font-size: 12pt">以每一个字符为中心的最长回文串长度。</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">4. </span><span style="font-size: 12pt">以每两个相邻字符的间隙为中心的最长回文串长度。</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">很快Fish 发现可能有无数种满足条件的密码。经过分析，他觉得这些密码中字典序最小的一个最有可能是答案，你能帮他找到这个密码么？</span></div>
+<div align="left"><span style="font-size: 12pt">注意：对于两个串A和B，如果它们的前i个字符都相同，而A的第i+1个字符比B的第i+1个字符小，那么认为是则称密码A 的字典序小于密码B 的字典序，例如字符串abc 字典序小于字符串acb。如果密码A的字典序比其他所有满足条件的密码的字典序都小，则密码A是这些密码中字典序最小的一个。</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输入由三行组成。<span lang="EN-US"><br />
+</span>第一行仅含一个整数<span lang="EN-US">N</span>，表示密码的长度。<span lang="EN-US"><br />
+</span>第二行包含<span lang="EN-US">N </span>个整数，表示以每个字符为中心的最长回文串长度。<span lang="EN-US"><br />
+</span>第三行包含<span lang="EN-US">N - 1 </span>个整数，表示每两个相邻字符的间隙为中心的最长回文串长度。<span lang="EN-US"><br />
+<br />
+</span>对于<span lang="EN-US">20% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 100</span>。<span lang="EN-US"><br />
+</span>另有<span lang="EN-US">30% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 1000</span>。<span lang="EN-US"><br />
+</span>最后<span lang="EN-US">50% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 10^5</span>。<span lang="EN-US"> <o:p></o:p></span></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输出仅一行。输出满足条件的最小字典序密码。古籍中的信息是一定正确的，故一定存在满足条件的密码。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>Sample #1
+3
+1 1 1
+0 0
+
+Sample #2
+3
+1 3 1
+0 0
+
+Sample #3
+3
+1 3 1
+2 2
+
+</pre><hr/><h3>样例输出</h3><pre>Sample #1
+abc
+
+Sample #2
+aba
+
+Sample #3
+aaa
+</pre><hr/><h3>提示</h3><p><p><img height="462" alt="" width="656" src="../file/3325_0.jpg" /></p>
+<p></p>
+<p></p>
+<p>应上传者要求，此系列试题不公开,如有异议，本站将删除之。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3325" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3325" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

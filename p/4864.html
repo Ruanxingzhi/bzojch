@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4864：[BeiJing 2017 Wc]神秘物质</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing 2017 Wc]神秘物质</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing 2017 Wc]神秘物质</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [BeiJing 2017 Wc]神秘物质                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>21ZZ 年，冬。</div>
+<div>小诚退休以后， 不知为何重新燃起了对物理学的兴趣。 他从研究所借了些实验仪器，整天研究各种微观粒子。这</div>
+<div>一天， 小诚刚从研究所得到了一块奇异的陨石样本， 便迫不及待地开始观测。 在精密仪器的视野下，构成陨石</div>
+<div>的每个原子都无比清晰。 小诚发现， 这些原子排成若干列， 每一列的结构具有高度相似性。于是，他决定对单</div>
+<div>独一列原子进行测量和测试。被选中的这列共有 N 个顺序排列的原子。 最初， 第 i 个原子具有能量 Ei。 随着</div>
+<div>时间推移和人为测试， 这列原子在观测上会产生两种变化：</div>
+<div>merge x e 当前第 x 个原子和第 x+1 个原子合并，得到能量为 e 的新原子；</div>
+<div>insert x e 在当前第 x 个原子和第 x+1 个原子之间插入一个能量为 e 的新原子。</div>
+<div>对于一列原子，小诚关心的是相邻一段中能量最大和能量最小的两个原子的能量差值，</div>
+<div>称为区间极差。 因此， 除了观测变化外，小诚还要经常统计这列原子的两类数据：</div>
+<div>max x y 当前第 x 到第 y 个原子之间的任意子区间中区间极差的最大值；</div>
+<div>min x y 当前第 x 到第 y 个原子之间的任意子区间中区间极差的最小值。</div>
+<div>其中， 子区间指的是长度至少是 2 的子区间。</div>
+<div>小诚坚信这项研究可以获得诺贝尔物理学奖。为了让小诚早日了结心愿，你能否帮助他实现上述的观测和测量呢？</div></p><hr/><h3>输入格式</h3><p><div>第一行， 两个整数 N， M， 分别表示最初的原子数目和事件总数。</div>
+<div>第二行， N 个整数 E1, E2, &hellip;, EN， 由空格隔开。依次表示每个原子的能量。</div>
+<div>接下来 M 行， 每行为一个字符串和两个整数， 描述一次事件，格式见题目描述。</div>
+<div>N&lt;=100,000,M&lt;=100,000</div>
+<div>1 &le; e, Ei &le; 109。 设 N&rsquo; 为当前时刻原子数目。</div>
+<div>对于 merge 类事件， 1 &le; x &le; N&rsquo;-1；</div>
+<div>对于 insert 类事件， 1 &le; x &le; N&rsquo;；</div>
+<div>对于 max 和 min 类事件， 1 &le; x &lt; y &le; N&rsquo;。</div>
+<div>任何时刻，保证 N&rsquo; &ge; 2。</div></p><hr/><h3>输出格式</h3><p><div>输出若干行， 按顺序依次表示每次 max 和 min 类事件的测量结果。</div></p><hr/><h3>样例输入</h3><pre>4 3
+5 8 10 2
+max 1 3
+min 1 3
+max 2 4
+</pre><hr/><h3>样例输出</h3><pre>5 2 8</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4864" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4864" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2593：PKU205 Kid</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">PKU205 Kid</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">PKU205 Kid</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                PKU205 Kid                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">Kid is a famous thief and he is known for his unique habit. Before his attempt, he will always inform the person who he is going to rob beforehand. Though the people have paid much attention to him, he has never failed. This time Kid informed a billionaire, Jack, that he is going to enter Jack's home to take away his expensive treasure. Jack is very afraid and he asked a brilliant boy, Conan, to help him. Conan designed a special lock for Jack&rsquo;s home. However, Kid is very tricky and he stole the structure map and the password of the lock. <br />
+</span><center><span style="font-size: medium"><img alt="" src="http://poj.org/images/2055_1.jpg" /></span></center><span style="font-size: medium"><br />
+From the structure map (see Figure-1), Kid knows that the lock contains K dial plates and K gears, and every dial plate controls several gears. There are N teeth on each gear, which is numbered counter-clockwise from 1 to N. When a certain dial plate is dialed, the gears that refer to the plate will rotate counter-clockwise by several teeth (different gears may rotate different numbers of teeth). A dial plate can be dialed more than once. At the beginning, the numbers of the top teeth of the gears are all &quot;1&quot;. To open the lock, the number of the top tooth of every gear must be a certain number. These K numbers form the password. Take Figure-1 for an example where N=8, K=4; if the password is 1-2-8-1, the lock will open. <br />
+<br />
+With the password in hand, Kid wants to know whether he can open the lock; and if he can, he wants to know the least number of dials he has to use to open the lock. You may assume that the lock is always locked at the beginning, which means that the password cannot be K &quot;1&quot;s. <br />
+</span></div>
+<p><span style="font-size: medium">题目是说有k个旋钮，k个齿轮，每个旋钮控制若干个齿轮，问能否使齿轮到给定的值，若能给出一个最小总步数</span></p></p><hr/><h3>输入格式</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">There are several test cases. In the first line of each case there are two integers K (1 &lt;= K &lt;= 20) and N (2 &lt;= N &lt;= 10). Then follows a line with K integers expressing the password. Each number in the password is between 1 and N. Then come K lines, the i-th of which describes how the i-th dial plate controls the referred gears. These K lines have the following format: <br />
+<br />
+p a1 b1 a2 b2 ... ap bp <br />
+<br />
+Integer p (0 &lt;= p &lt;= K) expresses the number of gears that are referred to the dial plate. ai (1 &lt;= i &lt;= p) is an integer between 1 and K which tells that the ai-th gear is under the control of this dial plate. bi is an integer between 1 and N-1 which tells that when the dial plate is dialed once, the ai-th gear will rotate across by bi gears. <br />
+<br />
+A test case of K = 0 and N = 0 indicates the end of input, and should not be processed. <br />
+</span></div></p><hr/><h3>输出格式</h3><p><div class="ptx" lang="en-US"><span style="font-size: medium">For each test case, there is a single line. If the lock can be opened, the line contains the least number of times Kid should dial the dial plates; otherwise, output &quot;No solution&quot;.</span></div></p><hr/><h3>样例输入</h3><pre>1 4
+2
+1 1 2
+4 8
+8 8 8 8
+4 1 1 2 2 4 1 3 1
+2 4 7 3 2
+2 1 5 3 5
+1 2 7
+0 0
+
+
+</pre><hr/><h3>样例输出</h3><pre>No solution
+2
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Acm BeiJing 2004</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2593" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2593" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

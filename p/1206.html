@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1206：[HNOI2005]虚拟内存</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]虚拟内存</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]虚拟内存</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2005]虚拟内存                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>操作系统中一种重要的存储管理技术就是虚拟内存技术。操作系统中允许进程同时运行，也就是并行。每个进程都有其相对独立的数据块（进程运行的过程中将对其进行读写操作）。理想的情况下，这些数据块都应该存放在内存中，这样才能实现高效的读写操作。但事实上，内存的容量有限，每个进程只能把一部分数据放在内存中，为了解决这个矛盾，提出了虚拟内存技术。虚拟内存技术的基本原理是：对进程而言，内存空间是无限大的，进程可以随意地读写数据，而对操作系统内部而言，利用外存来模拟扩充的内存空间，进程要求访问某个内存单元时，交由操作系统处理，操作系统首先在内存中查找该单元是否存在，如果存在，查找成功，否则转入外存查找（一定存在于外存中）。就存储介质的物理性质而言，内存的访问速度相对于外存要快得多，因此对于每个进程来说操作系统应该把那些访问次数较多的数据存放在内存中，而把那些访问次数很少的数据放在外存中。如何选择内存中暂留的数据是一个很值得研究的问题，下面介绍一个内存管理中比较常用的算法：内存中的数据以页为基本存储单位，进程的读写操作都针对页来进行。实际内存空间被分割成n页，虚拟内存空间的页数往往要多得多。某一时刻，进程需要访问虚存编号为P的页，该算法的执行步骤如下： a. 首先在内存中查找，如果该页位于内存中，查找成功，转d，否则继续下面的操作； b. 寻找内存中是否存在空页（即没有装载任何数据页的页面），若有，则从外存中读入要查找页，并将该页送至内存中的空页进行存储，然后转d，否则继续下面的操作； c. 在内存中寻找一个访问次数最少的页面（如果存在多个页面的访问次数同时为最少，则选取最早读入数据进入内存的那个页面），从外存中读入要查找页，替换该页。 d. 结束所谓访问次数是指从当前页面进入内存到该时刻被访问的次数，如果该页面以前进入过内存并被其它页面替换，那么前面的访问次数不应计入这个时刻的访问次数中。你的任务是设计一个程序实现上述算法。测试数据将会提供m条读写内存的命令，每条命题提供要求访问的虚拟内存页的编号P。你的程序要求能够模拟整个m条命令的全部执行过程，所有的命令是按照输入的先后执行的，最开始的时候内存中的n页全为空。</p></p><hr/><h3>输入格式</h3><p><p>第1行为n&lt;10000和m&lt;1000000，分别表示内存页数和读写内存命令条数。接下来有m行，其中第i+1行有一个正整数Pi&lt;=10^9，表示第i条读写内存命令需要访问的虚拟内存页的编号。</p></p><hr/><h3>输出格式</h3><p><p>仅包含一个正整数，表示在整个模拟过程中，在内存中直接查找成功的次数（即上面的算法只执行步骤a的次数）。</p></p><hr/><h3>样例输入</h3><pre>3 8                                      
+1
+1
+2
+3
+4
+2
+5
+4
+</pre><hr/><h3>样例输出</h3><pre>1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1206" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1206" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

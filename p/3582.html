@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3582：存不下</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">存不下</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">存不下</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                存不下                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：8MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">　　I never said &ldquo;640K should be enough for anybody!&rdquo;.<br />
+　　Bill Gates<br />
+　　阿米巴是小强的好朋友。他经常和小强通过即时通讯工具聊天。但是，小强还是喜欢和阿米巴面对面的在一起的感觉，于是他想说服阿米巴放弃即时通讯工具。小强提出的一个理由是，别人可能偷看到他们两个人之间的相互说的&ldquo;那些话&rdquo;从而造出&ldquo;大新闻&rdquo;。阿米巴认为他们可以通过加密聊天来解决这个问题。小强和阿米巴都知道，只有一次一密这种真正安全的加密算法才能保护住他们的信息。这种加密方法虽然很安全，但是需要在事前约定很长的一个随机串。于是，小强又提出，他的u盘太小，根本存不下太多东西，一次无法从阿米巴那里拷贝足够长的随机串。为了减少事前约定的串的长度，阿米巴提出了一个&ldquo;随机倍增器&rdquo;。这个&ldquo;随机倍增器&rdquo;可以将一个N位的随机串变成一个2*N位的看起来也很随机的串。具体的，对于一个长度为N的01串，选取参数M，C，阿米巴用下面的方法把它变成一个长度为2N的串：<br />
+　　首先，令H为Mod(1371,2M)，s=0<br />
+　　对于每个i从1到N，设输入的第i位是Xi，做下面几个事情：<br />
+　　s=Mod(RotL(Mod(3432918353*s+C,232),32)*461845907,232)<br />
+　　H=Xor(H,Xor(Mod(s,2M),Xi))<br />
+　　H=RotL(H,M)<br />
+　　H=Mod(H*5+3864292196,2M)<br />
+　　输出H的二进制位从低到高的第M位、第M-1位（例如，如果H=13（二进制是1101），M=4，那么就是1和1）</span></p>
+<p><span style="font-size: medium">　　在这里，Mod表示取模，即，Mod(a,b)为一个0~b-1之间的整数，表示a模b的余数。RotL(a,b)表示从一次b位的循环左移，即，将a的所有二进制位向更高位移动一位，原来的第b位移动回第1位。（比如，RotL(13,4)=11，因为13的二进制是1101，循环左移变成1011，就是11）<br />
+　　小强从这个算法的常数中一下就看出了这个算法改造自著名的MurmurHash3。不过，小强认为阿米巴连NOIP都没有考过，他改造出来的算法一定是有缺陷的。阿米巴偏偏不信这点。为了向阿米巴说明这个算法的&ldquo;随机性&rdquo;不是特别强，小强想精心构造一个输入串，使得输出串中0的个数特别多。我们知道，如果这个算法真的很随机，因为输入只有N位，所以输出中应该是不会有太多的0的。曾经获得过NOIP普及组二等奖的小强还是有一定的算法能力的，他很快就想出了一个构造的算法。但是，问题在于小强没有带笔记本，他只能用自己的手机上的浏览器运行javascript来进行计算。但是手机上的内存非常紧张，需要用的数组根本存不下！<br />
+　　为了小强和阿米巴在一起的美好时光，你要利用非常紧缺的内存来完成输入串的构造。<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">　　输入一行，N，M，C<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">　　第一行一个整数，表示输出串中1的个数的最小值。<br />
+　　然后，输出一行N个01，表示输入串。如果有多种可能的输入，你可以任选一个。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>3 3 5
+</pre><hr/><h3>样例输出</h3><pre>0
+101
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">　　对于100%的数据，1&lt;=N&lt;=5000，3&lt;=M&lt;=20，N*2M&lt;=50000000，0&lt;=C&lt;2^31</span></p></p><hr/><h3>题目来源</h3><p>By 佚名提供</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3582" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3582" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

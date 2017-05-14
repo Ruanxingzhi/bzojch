@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3644：陶陶的旅行计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">陶陶的旅行计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">陶陶的旅行计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                陶陶的旅行计划                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp; A国有N座城市，它们用正整数1&hellip;N进行编号。这些城市之间通过N-1条双向道路连接，使得任意两座城市间都有且仅有一条路径相连。定义两个城市间的距离为连接这两个城市路径上的边数。<br />
+&nbsp; 陶陶要在A国进行若干趟旅行，每次他会选择一个起点城市s和终点城市t，他从城市s开始，沿着s到亡的路径旅行，当他到达第i个城市时，可以选择坐火车到达与城市i距离不超过Ai的另一座城市，但这座城市必须要在S到t的路径上，你的任务是求出陶陶每趟旅<br />
+行最少需要坐多少次火车。<br />
+&nbsp;&nbsp;&nbsp; 除此之外，某些城市的火车车次中途会有改变，也就是说陶陶的每趟旅行之间可能夹杂了一些城市Ai值的改变。</span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">共N+M+2行。<br />
+第一行包含一个正整数Ⅳ，表示A国城市的数目。<br />
+第二行包含N个正整数，第i个正整数表示Ai (Ai&le;20)。<br />
+&nbsp;接下来有N-1行，每行包含两个正整数U，V(U,V&le;N），表示城市u和V之间有一条双向道路相连。<br />
+&nbsp; 第N+2行包含一个正整数M，表示操作次数。<br />
+&nbsp; 下面M行，每行先给出一个字符，Q表示询问操作、C表禾修改操作。假如是询问操作，后面会有两个正整数s，t(s，t&le;N，s&ne;t)，分别表示起点城市和终点城市。假如是修改操作，后面会有两个正整数i，x(i&le;N，x&le;20)，表示将Ai修改为x。</span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">包含若干行，对于每次询问输出对应的答案。<br />
+</span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>
+8                        
+2 1 1 2 2 1 1 1                 
+1 2                       
+1 3                       
+2 8                        
+3 4                        
+3 5                        
+4 6                        
+4 7                        
+5                         
+Q 5 8                       
+Q 6 7                       
+C 6 2                       
+Q 6 7                       
+Q 8 5                       
+
+</pre><hr/><h3>样例输出</h3><pre>2
+2
+1
+3
+</pre><hr/><h3>提示</h3><p><p>【样例说明】<br />
+&nbsp; 第一次询问的路线为5--&gt;1--&gt;8；<br />
+&nbsp; 第二次询问的路线为6--&gt;4--&gt;7；<br />
+&nbsp; 第三次询问的路线为6 --&gt;7；<br />
+&nbsp; 第四次询问的路线为8--&gt;2--&gt;1--&gt;5。</p>
+<p>&nbsp; 对于100%的数据满足N&le;100，000，M&le;100，000。对于包含修改操作的数据，修改操作约占操作总数的三分之一。<br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3644" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3644" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

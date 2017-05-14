@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4708：[Jsoi2011]Apple 的美食</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2011]Apple 的美食</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Jsoi2011]Apple 的美食</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Jsoi2011]Apple 的美食                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Apple很喜欢吃巧克力，但它是一头挑剔的猪，有的品种的巧克力并不能满足它的胃口。如果主人给它的巧克力它</div>
+<div>不喜欢吃，它就会很不开心。主人并不知道，什么样的巧克力Apple喜欢吃，但她知道巧克力的可可含量是巧克力</div>
+<div>口感的重要因素，因此她决定根据巧克力的可可含量来判断什么样的巧克力拿给Apple吃，什么样的巧克力不拿给A</div>
+<div>pple吃。假设一块巧克力的可可含量有1-N种不同的计量，则她认为可可含量在[a，b]的范围内的巧克力是好吃的</div>
+<div>。不过她不知道的这个范围到底是多少，需要你来帮忙确定这个范围，使得她可以让Apple吃到最多的喜欢吃的巧</div>
+<div>克力。设posi是可可脂含量为i，且Apple认为是好吃的巧克力的数量，negi是可可脂含量为i，且apple认为是不好</div>
+<div>吃的巧克力的数量。这两个序列由以下方法生成：posi=a[i*2-1]negi=a[i*2]其中a[i]=(a[i-1]*p1+p2)modM(i&gt;1)</div>
+<div>a[1]=a0设</div>
+<div>TP(truepositive)是Apple认为好吃的、且被主人认为是好吃的巧克力数量。</div>
+<div>TN(truenegative)是Apple认为不好吃的、且被主人认为是不好吃的巧克力数量。</div>
+<div>FP(falsepositive)是Apple认为不好吃的、且被主人认为是好吃的巧克力数量。</div>
+<div>FN(falsenegative)是Apple认为好吃的、且被主人认为是不好吃的巧克力数量。</div>
+<div>设r为被正确判断为好吃的巧克力数占所有好吃的巧克力的比率，p为被正确判断为好吃的巧克力占所有被判定为好</div>
+<div>吃的巧克力数的比率。则r=TP/(TP+FN)p=TP/(TP+FP)请你帮助Apple求出一个范围，使得f=2pr/(p+r)最大。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入由若干行组成，每行是一组数据：N，a0，p1，p2，M，中间用空格分开。</div>
+<div>(1&lt;=N&lt;=1000000，a0，p1，p2&lt;M&lt;=20)输入以一个0结束，数据组数不超过1000。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>每组数据输出一行，为f的最大值（四舍五入保留6位小数），输入保证至少有一块Apple</div>
+<div>认为好吃的巧克力。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 4 4 1 5
+12 9 6 6 11
+0</pre><hr/><h3>样例输出</h3><pre>0.800000
+0.683938</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4708" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4708" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

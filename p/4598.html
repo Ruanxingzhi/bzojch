@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4598：[Sdoi2016]模式字符串</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2016]模式字符串</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2016]模式字符串</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2016]模式字符串                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>给出n个结点的树结构T，其中每一个结点上有一个字符，这里我们所说的字符只考虑大写字母A到Z,再给出长度为m</div>
+<div>的模式串s，其中每一位仍然是A到z的大写字母。Alice希望知道，有多少对结点&lt;u，v&gt;满足T上从u到V的最短路径</div>
+<div>形成的字符串可以由模式串S重复若干次得到？这里结点对&lt;u，v&gt;是有序的，也就是说&lt;u，v&gt;和&lt;v，u&gt;需要被区分.</div>
+<div>所谓模式串的重复，是将若干个模式串S依次相接（不能重叠).例如当S=PLUS的时候，重复两次会得到PLUSPLUS，</div>
+<div>重复三次会得到PLUSPLUSPLUS,同时要注恿，重复必须是整数次的。例如当S=XYXY时，因为必须重复整数次，所以X</div>
+<div>YXYXY不能看作是S重复若干次得到的。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>每一个数据有多组测试，</div>
+<div>第一行输入一个整数C，表示总的测试个数。</div>
+<div>对于每一组测试来说：</div>
+<div>第一行输入两个整数，分别表示树T的结点个数n与模式长度m。结点被依次编号为1到n，</div>
+<div>之后一行，依次给出了n个大写字母（以一个长度为n的字符串的形式给出），依次对应树上每一个结点上的字符（</div>
+<div>第i个字符对应了第i个结点).</div>
+<div>之后n-1行，每行有两个整数u和v表示树上的一条无向边，之后一行给定一个长度为m的由大写字母组成的字符串，</div>
+<div>为模式串S。</div>
+<div>1&lt;=C&lt;=10,3&lt;=N&lt;=10000003&lt;=M&lt;=1000000</div>
+<div style="font-size: 12.222222328186px;"></div></p><hr/><h3>输出格式</h3><p><div>给出C行，对应C组测试。每一行输出一个整数，表示有多少对节点&lt;u,v&gt;满足从u到v的路径形成的字符串恰好是模</div>
+<div>式串的若干次重复.</div>
+<div></div>
+<div></div></p><hr/><h3>样例输入</h3><pre>1
+11 4
+IODSSDSOIOI
+1 2
+2 3
+3 4
+1 5
+5 6
+6 7
+3 8
+8 9
+6 10
+10 11
+SDOI </pre><hr/><h3>样例输出</h3><pre>5</pre><hr/><h3>提示</h3><p><p>&nbsp;数据文件太过巨大，仅提供前三组数据测试.</p></p><hr/><h3>题目来源</h3><p>By AHdoc命题 鸣谢Loi_DQS上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4598" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4598" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

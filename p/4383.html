@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4383：[POI2015]Pustynia</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2015]Pustynia</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2015]Pustynia</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [POI2015]Pustynia                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>给定一个长度为n的正整数序列a，每个数都在1到10^9范围内，告诉你其中s个数，并给出m条信息，每条信息包含三个数l,r,k以及接下来k个正整数，表示a[l],a[l+1],...,a[r-1],a[r]里这k个数中的任意一个都比任意一个剩下的r-l+1-k个数大（严格大于，即没有等号）。<br />
+请任意构造出一组满足条件的方案，或者判断无解。</p></p><hr/><h3>输入格式</h3><p><p>第一行包含三个正整数n,s,m(1&lt;=s&lt;=n&lt;=100000，1&lt;=m&lt;=200000)。<br />
+接下来s行，每行包含两个正整数p[i],d[i](1&lt;=p[i]&lt;=n，1&lt;=d[i]&lt;=10^9)，表示已知a[p[i]]=d[i]，保证p[i]递增。<br />
+接下来m行，每行一开始为三个正整数l[i],r[i],k[i](1&lt;=l[i]&lt;r[i]&lt;=n，1&lt;=k[i]&lt;=r[i]-l[i])，接下来k[i]个正整数x[1],x[2],...,x[k[i]](l[i]&lt;=x[1]&lt;x[2]&lt;...&lt;x[k[i]]&lt;=r[i])，表示这k[i]个数中的任意一个都比任意一个剩下的r[i]-l[i]+1-k[i]个数大。<span style="font-family: Arial; font-size: 14px; line-height: 15.8666658401489px;">&Sigma;k &lt;= 300,000</span></p></p><hr/><h3>输出格式</h3><p><p>若无解，则输出NIE。<br />
+否则第一行输出TAK，第二行输出n个正整数，依次输出序列a中每个数。</p></p><hr/><h3>样例输入</h3><pre>5 2 2
+2 7
+5 3
+1 4 2 2 3
+4 5 1 4</pre><hr/><h3>样例输出</h3><pre>TAK
+6 7 1000000000 6 3</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Claris</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4383" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4383" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

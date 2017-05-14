@@ -1,0 +1,615 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2905：背单词</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">背单词</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">背单词</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                背单词                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">给定一张包含N个单词的表，每个单词有个价值W。要求从中选出一个子序列使得其<br />
+中的每个单词是后一个单词的子串，最大化子序列中W的和。&nbsp;<br />
+&nbsp;<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">第一行一个整数TEST，表示数据组数。 <br />
+接下来TEST组数据，每组数据第一行为一个整数N。 <br />
+接下来N行，每行为一个字符串和一个整数W。&nbsp;<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">TEST行，每行一个整数，表示W的和的最大值。 <br />
+&nbsp;<br />
+&nbsp;<br />
+数据规模 <br />
+设字符串的总长度为Len <br />
+30.的数据满足，TEST&le;5，N&le;500，Len&le;10^4 <br />
+100.的数据满足，TEST&le;10，N&le;20000，Len&le;3*10^5 </font></p></p><hr/><h3>样例输入</h3><pre>1
+500
+baababaaabbbabbbaaaabbbbaaabbbbabaabbababbabaabbbbabbaabbabbbabbabbabbaaaaabbbbabaaabaabaaaaabbbabaaabbaaaabbbaabbbaabbbaabbbbbabaaaabbabbbaaaabbaaaaaaababbbaaaaaabbbabbbbbbaabaababbabbbbaaabababbbbbabbabaaaaabbabababaabbbbabbabaabbbaaababbbabbaaabbbbaabbabbbaaabbbaababbbbbaababbaaaabbbbbabaababbbaabbbaaabaabbbbaaaaabbbbabaabbbaaaaaabaaababaaabbabbabaaaabbbaabaabbbbbbaababaababaaaaabaabaabaaaaaabaaabbaabababbabaaabbababaaabbbaabbbabbbababbbbbbaaabbbaababbbbbbababbaabbbbbaaaabbaabaabbbabbabaababbababaaabaaaababaaabbbbaaabbabbbabaabbabababbaaabaabaaaaabbbabbaaabbaababbaaaaaabaabbaababbbbabbaabaabaaaaabaabaabbbaabbbabaabbabbaaaabababbaaabbbaabababaabbababaaabaabaaaabbbabababbbbbabaaaabbabbbbaaaabbbaaaaaaababaaaabababaababbaaabababaabbabbbbaaabaabababbaaaaabbbaabbababaaaabbababaaaababbaabbbbabbbbaababbbbaaabaaabbbbaabaaabaabaabbbbaaaabaaabbbbbbbaabbabbaaaabbbbabbaabaaaaaabbabbbabaabbaabaaababbbaababaaaabbabbbbbbabbaaababbaaabaaabbaaaabbbabaabaaababaabababbbbbaaabbaaababbaaaaabbbbaabbabaabbbbbbbabbbababaabaabbbabaabaabbabaabbaaaaaaaabaaaaabbabaaababbabaabbaababbbbbbbbaaabbaaaababbabaabaabbbabbabaabbabbabbabbbabbbbbababbbabbbbaaaaaaaaabbbaaababbbbababaaaabbabbbbbbbaabababbaaaababbababaaaaaaabababbaabbababbaabbaaabaaabbaaaaabababbbabbbaaaaaabbbbaabaaabaababbaababbbaaaaaababbabaaaabbbababbaababaaaaabbabbbabbababbabaaaaaaaabbbbbabbaaaababbbaabaaabaaabbabbaaaaabaabbbbbbbabaabbbaabaaaabaabbabbababaabbaabbbbbaaaaaaabbbabaaaaaaaabaabbabaabbabbabbbbbaabaabaaabaabbaabaaaaabbbbbbbaabbbbaaaabbbababaababbbabaaababaabaabaababaaababbbbababaabbababbaabbbaabbbaaabbabababaabbabaabbbbaaaababbaabbabaaaaabbabbbbabbabaaaabaabbabbbabbbbabbababaabbabaabbbbbbbbabbbabbbabaabbaabaabaababbbbabaaababaaababbabbabaaaabaaabaaaababbabbbbbabaaabbaabababbbbaaabbbbbaaabaabaaaabbbaabbbabbaaaaabbaabbaabbbababbaabbbbbabaabaabbaaababababaaabababbbbabaaaababbabbbabbabbbbbbabbaabbbaabaabbabbbbaaaaaababaababbbabbabababbababababbaabbaababbabbaabaaabbbbbbbbaaabaabbbbbbbabbabaaabaaaabbabbbbbbbbbabbbaabbbabbbbaabbaababbbbbbbbaaababbaaaaaababababbbabaaabbbaaaabababbbabbbabaababaabaababbbabbaaaaabbabaaabaaabbabaababbaaabbaaabbaaababbbaabbaaaaaababaaaabbbbbaaababbabbbabbbababababaabbbbabaaaaababbabbaaabbabbabbabbaaaaaaabbbbabbaababbbbabbbaabaabbababbbabbbbbbbbbbaabbabbbbaabaaababbbbbbababaababaabababaabaabbaaabbabaaabbbabbabbaabbbaaabaaababbabaabaaaabaaababbbbbaaaaabbaabbaababababbbabaabbabbabbbaabbbbbaabaabbabaabbaabbabbabbaaababbaabbbabaabbaabaaaaabbabbababaabbbabaaabababbbbaaaabaaababbbabaaaabbbbaaaaaaaaaaaaaaabbbaaaabbaabbaabaabbabbabbbbaabaabbaaabbbabbababbbbbbbbbbabaaabaababbabbbbaaaaabababbbaaabbbbababbbbbaabbaaabbbabbaaabbabbbbbabbabbbaaaaabbaababbbaaababaababbbababaaabbbabbaaaabbaaaaaaaaabaaaabbaaabaaaabbbaaababbbbbababbababaabaaabaabbbbbbbaaabbaabaababaabbbaabbaabbaaabaaababbbaababbaabaababbaaababaabaabbabbaababbbabaabaaabbbaabbaaabbbbaababbbbaabbabaabbbbababbbbbaaaabbbbbbabbbababbaabbbaabaabbaaaaababbbbbbbabbbabaababaabababbabbbbabbababbaabbabaababbbbbabbbbbaabbabbaaaaabababbbbabbbbaabbaaabbaaaabababaabbbababaababaabbaaaaabaaabbbbbbbabaabbbbaaabababaabbababbabaabbababbbbbbbbbbbaaaabbabbababbaabbbababbbbaaabbaababbabbbaabbbbaaabbaaaaabaababaaaabbaabaaabaababbabbababbbbaabababaabaabababbbababbbbabababbabbbbbbbbaabaaabbbabbbbabaabbabbbabbaaabaabbbbabaaaaabbbaabbbbbaaaabaababbbaabaaabbbbaabaaaaaabbbbabbbbbbbabaaabbabaaaabbaabbbbabbaaaaaababbbbbbbbaaaabababbbaabaabbabaababbbabaaaaaababaaababbbaababbabbaabbaabababbbbbaaaaaaabbaaababaaaaaabbabbbbbbaabaabaabbaaabbbbabbbbbabbbaaabbababaabbabbbaaaaaaababababbbaabbaaabaabaaaaabbbbbbababbbabaaabaaabaaabbabaabbbbbababbaaabbbababaabaabaabbaaaabaabbabbbbabbababaaabababbbbbabaaabaabbaaabaabaabaaabbbabaabababbabababbabbaabbbbbbbbaabbbaaaaaaabababaabaaaabbbaabaaababbababaaabbbbbabababaaabbaababababbbbaababbbabbbbbaaaabbbbaaabaaaabababbbababbabbbabbbabbababaaaaabababbbaaabbbbbaababbabaabaaabaabbababaaabaaabbaaabaaaababababbabbbaababaabbbaaaaaaabaabbbabbaaababbbabbababbaaaaaaababbabbaabaababaaaaaaabaabbaaabbbaabbbbabbabaaaabbbbbaababaaaaaabbabaababaababbababbabbbabbbbaababbbbbbbaabaabbabaababbaaaabbbababbaaabaabbbbaabbbaaabbbaabaaabbbbbabbabbabbbbbabbaaabaaabbbabbbbbbababababaaabbbabbaaaaababbabbaaababaaaaababbbbbbabaababbabbbaaababbbaabbbbbabaaaabbbaabababababbbbbbbbaaaaabbbbbbaaaabbaabaaaabbaababaaabaabaabaaababbaaabaaabbababbababbbaabaaaababaabbaaabaaabaaabaabaaaababbabbaaaaaaabbbababbbabbbbbabbbbbabaabbabbababbbababbbabaabaabbbababbbbabbaabababbbbbababbbbbaababababaaaaaaabababaabbbaaaaaabbaaaabbabbaabbaaabaababaababbbbabaababaabaababbbabbaabbababbaabbabbababbbbaaabaabbbbbabaaabaababbbababaaabbaaaaaaabbbababaabbbbbaabbaabbabaababaaabbaababaaababbaaaaaaaaabbbaaaaabbbabbabbbbbaabbbbababbbaaabbaabbbbbbaabbbbaaababaaaabbababbbaabbaaaaabbaaabaabaaaabbaabaaaabbbbbababaaaaaabbbabbaabbaaaaabaabaabbaabbbaaaaaabbabababbababbaabbbaabbaaaaaaaabbabbbbbabbaababbbabbbabbaaaabaabbbbbbbaabbaaabbabbbaababbbabababbaaaabaaaabbabaabaaababaabaaaabababaabaaabaabbbabaaaabaaabababaababbbaabaababbabbaaaaaaabbbaaaabbabbaabaabaabbabbabbabababbabbaabaabbabbabaabbbabaaaaabababbaaaaaaabbabbaaaaabbbabbbbaaaabbbbbbaababbabbaaabbbbbabaababbaaaababaabaabbabaaaaabaaaabaaabbbbababaabaabbbbbaabbbbabbbaaaaabaabbaababbbababbbbbbabbbbaabbbbabbaaabbaabaabbbabbbbbaaaaababbaabbbaabaabaaaaababaabbbbbbbabbaaaabbbbbabbaaabbababbbabbbbbaabbababaabbaaaaaaabbaaabababaabaaaaabbbbbbbbabaababbabbaaaaabbbbabbbbbaaababbaaaabbababbbaabaabaaabbabababababababbabaaabbaaabaabbabaabaabbbbabbaabbbbaabbaaaaabaabbaaababbbbbaaaabbbaabbbbbabbabbaababbaabbbabaaaabbbbaabaabaabbbbbbaabbbabbbaababbbabababbbaabaabbaaabbaaaabbaabaaabaabbbbbbbabaabbaaaaabaaaabbabababbaabbaababbabbabaabbaababbbbbababaaaabaababaabaababbbbbabbaaabbbbbaababaabababbabbaabbaaabbaaaaabbbaabbbbbaaaabaabaaabaabaaabababaaaababaabaabbbbbabaaabbbabbbbbabbaababbababaaaaaabbababaaabbabbbbbbaaabbbbaaabaabaaabaaaabbbabababaaabbababbbaaaabbbbbaabaaababbaaaaaaabaabaabaabbbbbbaabbbabababbabbbbabbabababaaaabaaaaabbbbaababbbbaaabbbbbaabaabbaababbaaabaabaaabbbbaabababaaabbbbabaababababbbaababbabbbbbbabbbbaaabbaaabbbabbabaabbaaabaaaabbbbbbbaabaabbbbbbabbbbabbbabbabaabaabbaababbbbaababbaaaababbbbbbbaaaabaababbabbbbbabaabaabbaabbaaabbabbbbabbbbbbbbbaabaaaabababaabaabbbabbbaababbaaaabbaababbababbbabbbabbaaabbbbabaaaabbbbbbbabaaaaabbabbaaaaaabbaabaaababbbbaaaaabaabaaabbabbabaabaababbbbbbbabbbaaaabbaaababababbaaaaabbaabaabababaababbabaaaabbbbbababbbbaaabbbbaabbbbaabbabbababaaaaabaababbababbbbbaababaabbaaababbaabaaabbbaaabbabbbbaaabaaabaaabbabaabaabaaaaaabbabbaaababbabaabbbababababbbabaaaababbbaaaabbabaabbbbbabaaaabababbabbbbabbbbaaababababbaabbaaabbbaababbaababababbbabbababaaabbbaabbbabbaaabaabbbabaaaaaaaaaaaabbaaaabbbabbbbbaaaaabaabaabbababbbaababbaabbbbaabbaaabababababaaabbbaaababbabbbbaaaaabbaaabaaaabbbaabaabbbaabaabaaaaaaaaaaaaabbaabbbbabbababbaaabaabbbbbbabbabbabaababbaabbbaaaabbabaaabababbabbbabaaaabbaabbbaaaaaabaabbabbabaaaaaaabaabbbbaababaaaaaabababbaababbabaaaabaabaabbaabbaabababaaabbaabbabbabbaaaaaaaaababbbaabbbbaaabbababaababbbbabaabaabbabbbaaaaaabbababbbabbbaababbabbabbbbababbabababbababbbaaaaabbbbbbabbaaabaaabaaaaaabbbababbbbababbbbbbababbabaaababbbbbabbaaabbaaabbbbabbbbbaaabababaaabbabbbbbbabaaababaaabaababaaaababaababaaababaabbbbabbaaabbabababababbbabbaabbbbabbbbbabbaaaabab 542
+aabbabbaaaabaabbbbbbbbbbaaabbbabbbaabbbbbbbaabbbbbbabbbaabbabababaabbbbbbababbbababaaababbaaababbaabbbbaaaabbbbaabbbbbabaaabaabbbababaabbababbaaaabbabbbabbaabbbbbbabbbaaabbbbaabababbababbbaabbaababaaabbaabaabbabababbbabaabbaabababaabaaababbbbbbaabbaaabbbabbbabbbaaaaabaabaaabaaabbaababbbbbaababaababbbbbbaaababaababbababbaabbbbbabaabbbabababaaabbaabaabbabbababbaabbaaababbbaabababbaaabbabaabbbabaabbbbbaaaababaababaabbbbaaabaabababaaaababbbbbbaaaabbabbbaaababbbaabbaaabbbaabbbbabbabbbabaaabaabaaababbbbbbaabbbbaababbaabbbaaababbbbaaabaabaaabaaababaaaabbaaababaaabaababaaaaabababbabbbbaabbaaaabbabbaaabaaaaaababbaaaababbbaabbbbbbbbbaabbabaabaabbbbaaaabbbbbaaaaabbbbaabbabbbaabaaaabbbbbabbbaabaabbbaabbbbaaaababaaabbaaabbbaaaaabaaaabbaabbbbbbbabbabbabbbaabbbbbbaaaababbbbbaabbaaaaaaabaaaaabababbbbbaabbbbbababbbbaaaababaabbabbbbabbabbbbbbbbbbabababbabbababbaabababaabbaababbababaabbabbbabbbabbaaabbaabbaabbbaabbbbbbabbbbbaaaaaaaaaabaabbaabbabbbbbbbabbbaabbaabababaaabaaaaaaaaaabaabbbbbabbababbbaaabbaab 275
+aabbbbabbbbaaaababbbbbabaaaabbaaababaababaaaaaabaaabaabbbbbbbabbabbbabbabaaaabaabbbbabbbbbbbbaaaaabababbbabbaaababbaaaaababbbabbababaaaab 535
+abbabaaaabaabaabbaabbaaabababbbbaabbbbbaabaababbbbbbaaaaababbbaaabaaaaaabbabaabbaaaabbbabababbbabaabbabbabababbababaaaabbabbabbbbababbabaaaaababbaabaabbbabab 565
+bbabb -685
+ba 279
+aa 214
+a -912
+aaaaba 356
+a 277
+b 888
+b 272
+a -347
+b 116
+a 550
+a -903
+a -879
+b 90
+b -311
+b -441
+a 709
+b -774
+b 702
+b -648
+b 876
+b -258
+a 266
+a 571
+a -388
+b -999
+b 923
+a 989
+b -770
+b -66
+b -77
+b -912
+b 669
+b -944
+a 145
+a 285
+a 947
+a 764
+a 642
+b -133
+a -209
+a 707
+b 264
+a 688
+a -886
+b -755
+b 40
+b -248
+a 124
+a -533
+a 410
+a -715
+b -598
+a 12
+a 652
+b -666
+a -910
+a 259
+a 471
+a 891
+a 490
+a -506
+a -154
+a -360
+a 212
+b -518
+b 483
+b -361
+a 213
+b -882
+b 531
+a 756
+a -424
+b 118
+a 36
+a -429
+b 190
+b -167
+a -731
+b 245
+a 617
+a -483
+a 167
+b -820
+b -616
+a -191
+b -366
+a 122
+b -460
+b -837
+a 954
+b -111
+a 923
+a 692
+a 819
+a -697
+a -307
+a -879
+b 65
+b 792
+b -139
+b 116
+b -812
+a 1
+b 553
+a -941
+b 83
+a 90
+a 484
+a -9
+a 472
+a 532
+b -317
+b 583
+a 172
+a 20
+a -338
+a 438
+b -652
+b -257
+a -551
+a 459
+b -100
+a 183
+b -884
+a 735
+b -175
+b 469
+a -530
+a 365
+a 324
+b 199
+a 328
+b 517
+a -515
+b 620
+b 153
+b -158
+b 781
+b 766
+a -203
+a -466
+b 521
+b -865
+b -62
+b -526
+a 323
+a -569
+a -491
+b -654
+b -294
+b 494
+a -806
+a -744
+a 532
+a 309
+a -78
+a -416
+b -838
+a -982
+a -47
+b -331
+b 388
+b -580
+a -744
+b 763
+b -90
+b 188
+a -768
+b -388
+a 202
+a -779
+a 967
+b -506
+b -865
+a 365
+a -113
+a -171
+b 978
+a -324
+a -764
+b -802
+b 236
+b -307
+a -963
+b 732
+b -229
+b 516
+b 167
+a -657
+b -332
+a 158
+b 206
+b -910
+a -455
+a 655
+b 92
+b -725
+a -809
+b -696
+b -842
+a 345
+a 578
+b 488
+b -428
+b 121
+b -956
+a -746
+a -847
+b -647
+a -877
+a 427
+b -109
+b 177
+b -831
+b -779
+a 60
+b 895
+a -534
+b -614
+b 642
+b -365
+a -39
+b -182
+b 875
+a 283
+a 779
+b -184
+a -515
+a 159
+b 439
+a 826
+a 260
+a 848
+b -627
+b -224
+a -77
+a 877
+a 286
+a 929
+b 176
+b -650
+b 204
+b -467
+a 491
+b 612
+b 659
+a 446
+b 767
+b 889
+b 855
+b -784
+a -821
+b -235
+a -961
+a -748
+a -734
+a -567
+b -767
+a 383
+b -415
+a 271
+a 239
+b -599
+b -319
+a 297
+b -94
+a 931
+a -163
+b 442
+a 982
+a -760
+a -411
+b 723
+a -171
+a -824
+a -445
+b -417
+b -440
+b 529
+b -292
+b 385
+a 410
+a -593
+b -421
+a -980
+a 142
+b -795
+b -966
+b 627
+b 980
+a 317
+b 50
+b 915
+b 791
+a -67
+a 453
+a 398
+a 730
+b 907
+b -903
+b -55
+a -205
+a -174
+b 71
+b 440
+b 72
+b -747
+a -125
+a 617
+b -887
+b 116
+a -371
+b 655
+b -771
+a 765
+b 377
+a -863
+a -944
+b -554
+b 188
+a -750
+b 556
+b -856
+a 504
+a -926
+b -697
+a -882
+a -39
+b -12
+a -211
+b -402
+a 991
+a 962
+a -833
+b 583
+b -274
+b -929
+a 396
+b -4
+b 676
+a -309
+a 29
+a -815
+b 90
+a -660
+a 870
+a 740
+b -386
+a 299
+a -53
+b 765
+b 623
+a 285
+b -111
+a -663
+b 74
+b -284
+a -169
+b 676
+b -524
+b 742
+b 259
+a 310
+b 312
+a 284
+a 384
+a -33
+a 242
+b 781
+a -40
+a -650
+b 221
+b 764
+a 174
+a -802
+b -695
+b -624
+a 591
+b 955
+a 64
+b 675
+a -311
+b -252
+a 587
+b 317
+a -629
+a -455
+b -608
+a -206
+b 974
+a -185
+a 622
+a -374
+b -60
+b 217
+a 587
+b 223
+a 512
+a 690
+b 428
+a 269
+b 85
+b -871
+b -490
+b 245
+a 882
+a 645
+b 308
+b 66
+b -962
+b -327
+a 777
+b 880
+a -464
+a 2
+a 216
+b -774
+a 785
+b -18
+a -942
+a -60
+b 341
+a 303
+b -625
+b -24
+b -905
+b 369
+a 80
+a -299
+b 692
+a -279
+a 211
+b 132
+a -677
+b -977
+a -489
+b 989
+b 338
+b -195
+a 786
+b 11
+b 555
+b 264
+a -767
+a 747
+a -247
+b -146
+a 463
+b 491
+a -387
+a -654
+b -55
+b -767
+a -76
+b 933
+b -864
+a 729
+b 149
+a 293
+a -209
+a 691
+b -921
+a -950
+b 640
+a 269
+b 849
+a 894
+b 697
+a 605
+b -730
+a -786
+a 780
+a 178
+b -816
+b 575
+b -818
+a 556
+b 683
+a -270
+b 471
+b -39
+a -971
+a 667
+a 123
+a 274
+a -45
+a 751
+b -648
+a 885
+b -10
+a -915
+a 225
+b -684
+b -560
+a -770
+</pre><hr/><h3>样例输出</h3><pre>63212
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2905" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2905" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

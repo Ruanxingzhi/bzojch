@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3425：Poi2013 Polarization</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Polarization</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Polarization</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Poi2013 Polarization                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><h1 style="margin-top:0cm;margin-right:0cm;margin-bottom:15.0pt;margin-left:
+0cm;mso-line-height-alt:13.5pt;background:white"></h1>
+<p style="line-height: 13.5pt; background-color: white; background-position: initial initial; background-repeat: initial initial; "><span style="font-size: medium; "><span lang="EN-US" style="font-family: Tahoma; color: rgb(68, 68, 68); ">Everyone knew it would only be a matter of time. So what? Faced for years on, a peril becomes the every-day reality. It loses its meaning...</span></span><span lang="EN-US" style="font-size:10.0pt;font-family:Tahoma;
+color:#444444"><o:p></o:p></span></p>
+<p style="line-height: 13.5pt; background-color: white; background-position: initial initial; background-repeat: initial initial; "><span style="font-size: medium; "><span lang="EN-US" style="font-family: Tahoma; color: rgb(68, 68, 68); ">Today the letter of the Bitotian char Bittard to the Byteotian king Byteasar was released to the public. Bitotia requested annexation of the whole Byteotia on pain of using the Bit Polarizing Magnet (BPM). If used, the BPM would make each and every road in Byteotia unidirectional. The enemy knows only too well that this could be a fatal blow to the minimalist Byteotian infrastructure - there is a unique way between each pair of towns.</span></span><span lang="EN-US" style="font-size:10.0pt;font-family:Tahoma;
+color:#444444"><o:p></o:p></span></p>
+<p style="line-height: 13.5pt; background-color: white; background-position: initial initial; background-repeat: initial initial; "><span style="font-size: medium; "><span lang="EN-US" style="font-family: Tahoma; color: rgb(68, 68, 68); ">How badly can the BPM damage the Byteotian infrastructure? Determine the minimum and the maximum number of such pairs of towns that it will still be possible to travel from one of them to the other while observing the new roads orientation.</span></span></p>
+<p style="line-height: 13.5pt; background-color: white; background-position: initial initial; background-repeat: initial initial; "><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">给定一棵树，可以对每条边定向成一个有向图，这张有向图的可达点对数为树上有路径从</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">u</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">到达</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">v</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">的点对</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">(u,v)</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">个数。求最小可达点对数和最大可达点对数</span></p>
+<p style="line-height: 13.5pt; background-color: white; background-position: initial initial; background-repeat: initial initial; "><span lang="EN-US" style="font-size:10.0pt;font-family:Tahoma;
+color:#444444"><o:p></o:p></span></p>
+<h2 style="background-color: white; background-position: initial initial; background-repeat: initial initial; "></h2>
+<p></p></p><hr/><h3>输入格式</h3><p><h2 style="background-color: white; "><span lang="EN-US" style="font-size: medium; background-color: white; line-height: 13.5pt; font-family: Tahoma; color: rgb(68, 68, 68); ">The first line of the standard input gives a single integer<span class="apple-converted-space">&nbsp;</span>N&nbsp;</span><span style="font-size: medium; background-color: white; line-height: 13.5pt; color: rgb(68, 68, 68); ">（</span><span lang="EN-US" style="font-size: medium; background-color: white; line-height: 13.5pt; font-family: Tahoma; color: rgb(68, 68, 68); ">1&lt;=N&lt;=250000</span><span style="font-size: medium; background-color: white; line-height: 13.5pt; color: rgb(68, 68, 68); ">）</span><span lang="EN-US" style="font-size: medium; background-color: white; line-height: 13.5pt; font-family: Tahoma; color: rgb(68, 68, 68); ">, the number of towns in Byteotia. The<span class="apple-converted-space">&nbsp;</span>N-1<span class="apple-converted-space">&nbsp;</span>lines that follow describe these roads. Each such line holds two integers,<span class="apple-converted-space">&nbsp;</span>U&nbsp;<span class="apple-converted-space">&nbsp;</span>and<span class="apple-converted-space">&nbsp;</span>V (1&lt;=U&lt;=V&lt;=N)<span class="apple-converted-space">&nbsp;</span>, which indicate that there is a direct road (still bidirectional at the moment) linking the towns no.<span class="apple-converted-space">&nbsp;</span><img width="8" height="7" src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msohtml1/01/clip_image001.gif" v:shapes="_x0000_i1025" alt="" /><span class="apple-converted-space">&nbsp;</span>and<span class="apple-converted-space">&nbsp;</span><img width="6" height="7" src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msohtml1/01/clip_image002.gif" v:shapes="_x0000_i1026" alt="" />.</span></h2>
+<h2 style="background-color: white; "></h2>
+<pre style="background-color: white; line-height: 13.5pt; "></pre>
+<p></p></p><hr/><h3>输出格式</h3><p><div></div>
+<div>
+<p style="background-color: white; line-height: 13.5pt; "><span style="font-size: medium; "><span lang="EN-US" style="font-family: Tahoma; color: rgb(68, 68, 68); ">Two integers should be printed to the first and only line of the standard output. The first number should be the minimum and the second - the maximum number of pairs of towns which could remain connected (though in one direction only) after the roads are polarized.</span></span><span lang="EN-US" style="font-size: 10pt; font-family: Tahoma; color: rgb(68, 68, 68); "><o:p></o:p></span></p>
+<h2 style="background-color: white; "></h2>
+<pre style="background-color: white; line-height: 13.5pt; "></pre>
+</div>
+<div>
+<p></p>
+</div></p><hr/><h3>样例输入</h3><pre>4
+1 2
+1 3
+1 4
+</pre><hr/><h3>样例输出</h3><pre>
+3 5</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢HJWJBSR提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3425" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3425" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

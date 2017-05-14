@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4234：带Link、Cut树上路径k小值</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">带Link、Cut树上路径k小值</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">带Link、Cut树上路径k小值</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                带Link、Cut树上路径k小值                </h1>
+                <p>时间限制：130s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>FUS公司是一家大型网络公司，总共拥有n台服务器。每一台服务器都有一个limit值，表示这台服务器的最大连接限制。在这n台服务器中，只有n-1条光纤线路连接，保证任意两台服务器可以互相通信。随着公司的发展、用户的增加，服务器的负担越来越重，一些服务器无法胜任任务，一些光纤也趋于老化。因此FUS常常对服务器进行一些调整：</div>
+<div>更新操作：选中两个服务器x、y，用一条新的光纤连接它们，形成一个环。这时环上&ldquo;加入时间&rdquo;最早的光纤会被断开废弃。</div>
+<div>修改操作：修改一个服务器的limit值，可以增大或减小，以胜任业务。</div>
+<div>在用户访问时，FUS会智能选择服务器的处理。如果用户访问的内容在x到y服务器的路径上，FUS会自动分配一个k值，令x到y路径上limit值第k小的服务器服务用户。</div>
+<div>FUS希望你能帮他实现这些功能。</div>
+<div>（简化版：动态维护关于加入时间的最大生成树，带点权修改，多次询问树上给定两点间路径k小值）</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第1行2个整数，n、m，表示服务器的数量和边的数量。</div>
+<div>第2行n个整数，limit[1]到limit[n]，0&lt;=limit[i]&lt;=10^6，表示n个服务器的初始连接限制。</div>
+<div>接下来n-1行，表示初始的n-1条光纤。这些光纤的输入顺序就是它们的加入时间顺序。</div>
+<div>接下来m行，每行3个整数k、x、y，表示一个操作，总共有3种：</div>
+<div>（1）k=-1，1&lt;=x,y&lt;=n，x不等于y，表示更新操作，连接x、y光纤，并断开环上最早加入的光纤；</div>
+<div>（2）k=0，1&lt;=x&lt;=n，0&lt;=y&lt;=10^6，表示修改操作，将x服务器的limit值修改为y；</div>
+<div>（3）1&lt;=k&lt;=n，1&lt;=x,y&lt;=n，x不等于y，表示一个用户访问的内容在x到y服务器的路径上，要求取limit值第k小的服务器服务用户。</div>
+<div>对于第3种操作，保证k不超过x到y路径上的服务器数，也就是保证存在limit值第k小的服务器。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每一个第3种操作，输出一个数，表示x到y路径上limit值第k小的服务器的limit值。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>10 4
+1 2 3 4 5 6 7 8 9 10
+1 2
+2 3
+2 4
+2 5
+3 6
+3 7
+1 8
+8 9
+9 10
+-1 1 10
+0 2 100002
+2 2 8
+3 6 5</pre><hr/><h3>样例输出</h3><pre>8
+6</pre><hr/><h3>提示</h3><p><div>样例解释：</div>
+<div>第1个操作，更新操作，用光纤连接了1、10服务器，断开了1、8服务器之间的光纤。</div>
+<div>第2个操作，修改操作，将2的limit值从2修改成了100002。</div>
+<div>第3个操作，2到8之间的路径为2-1-10-9-8，limit值分别为100002、1、10、9、8，因此第2小的limit值为8。</div>
+<div>第4个操作，6到5之间的路径为6-3-2-5，limit值分别为6、3、100002、5，因此第3小的limit值为6。</div>
+<div>数据范围：</div>
+<div>本题有4种类型的数据。</div>
+<div>类型一（10%）：n=m=1000</div>
+<div>类型二（20%）：n=m=50000，0&lt;=k&lt;=n（即不存在更新操作）</div>
+<div>类型三（30%）：n=m=50000，保证询问的路径长度之和小于10^8。</div>
+<div>类型四（40%）：n=m=100000</div>
+<div>对于100%的数据，满足2&lt;=n,m&lt;=100000、每时每刻的limit值&lt;=10^6。</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>By immortalCO</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4234" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4234" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

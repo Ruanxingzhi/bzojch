@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2950：[Poi2001]跳舞蝇的教练</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]跳舞蝇的教练</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2001]跳舞蝇的教练</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2001]跳舞蝇的教练                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="center">
+<div style="text-indent: 21pt; text-align: left"></div>
+<span style="font-size: medium">Byteland一直以奇妙的跳舞蝇而闻名于世。驯养的苍蝇能和着音乐的节奏精确地做每一次飞跃。通常，训练者会在桌上放一排硬币，这些硬币的排列并不按照特定的顺序。每枚硬币上都有一行题字：i&rarr;j，i是这枚硬币的编号，j是站在硬币i上的苍蝇下一步应该飞往的硬币编号。训练者在每个硬币上放一只苍蝇，然后开始放音乐。那些苍蝇就跟着音乐的节拍开始跳舞，在每一拍中苍蝇都会直接跳到编号为j的硬币上。在舞蹈中，可能会出现多只苍蝇在同一硬币上的情况。这样，跳舞蝇就会一起继续表演。假定有n只苍蝇，n枚硬币。则一旦确定了n枚硬币上的题字，那么这场表演也就确定了。然而，对硬币不同的设置也可能导致相同的表演，只要我们把硬币按适当的顺序排列。</span></div>
+<div style="text-indent: 21pt; text-align: left"><span style="font-size: medium">让我们先来看3枚硬币上的表演。如果表演是这样进行：从第一个硬币到第二个，第二个到第三个，第三个又回到第一个硬币（表示为1&rarr;2，2&rarr;3，3&rarr;1）。具体表演是3只苍蝇绕圈跳跃，从不相遇。那么表演1&rarr;2，2&rarr;3，3&rarr;3，则是与其不同的。因为该表演为：两拍后，所有的苍蝇在第3枚硬币上相遇，然后一直在原地跳跃。</span></div>
+<div style="text-indent: 21pt; text-align: left"><span style="font-size: medium">但是，设置1&rarr;2，2&rarr;3，3&rarr;2，4&rarr;4和1&rarr;1、2&rarr;3、3&rarr;2、4&rarr;3就是同样的类型。如果你把前者的硬币从左到右排列，而把后者从右到左排列，就会看到相同的表演。</span></div>
+<div style="text-align: left"><span style="font-size: medium">任务：</span></div>
+<div style="text-indent: 21pt; text-align: left"><span style="font-size: medium">如果跳舞蝇的两次表演是相同的，就会使观众不满，请编写一个程序：</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt; text-align: left"><span style="font-size: medium">●<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>读入测试任务的个数；</span></div>
+<div style="text-indent: 21pt; text-align: left"><span style="font-size: medium">●<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>对每一个测试任务，从PCH.IN中读入两组硬币设置，验证是否能把硬币按一定顺序排列，使跳舞蝇给出相同的表演；</span></div></p><hr/><h3>输入格式</h3><p><div style="text-align: left"><span style="font-size: medium">第一行是测试任务的个数d(1&le;d&le;100)，以下3*d行，每三行描述一个任务。三行中的第一行是一个整数n(1&le;n&le;2000)，表示硬币的个数。后两行每行均为一套硬币的描述。格式为n个用空格分开的1&hellip;n范围内的整数，第i个整数表示硬币i上的苍蝇应该飞向的硬币的编号。</span></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21pt; text-align: left"><span style="font-size: medium">对每个任务，输出一行，仅包含一个字母。如果可以按一定顺序排硬币使表演相同则输出&ldquo;T&rdquo;，否则输出&ldquo;N&rdquo;。</span></div></p><hr/><h3>样例输入</h3><pre>
+2
+3
+2 3 1
+2 3 3
+4
+2 3 2 4
+1 3 2 3
+</pre><hr/><h3>样例输出</h3><pre>N
+T</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2950" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2950" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3242：[Noi2013]快餐店</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2013]快餐店</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2013]快餐店</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi2013]快餐店                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="display: inline! important; float: none; word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">小T打算在城市C开设一家外送快餐店。送餐到某一个地点的时间与外卖店到该地点之间最短路径长度是成正比的，小T希望快餐店的地址选在离最远的顾客距离最近的地方。 快餐店的顾客分布在城市C的N 个建筑中，这N 个建筑通过恰好N 条双向道路连接起来，不存在任何两条道路连接了相同的两个建筑。任意两个建筑之间至少存在一条由双向道路连接而成的路径。小T的快餐店可以开设在任一建筑中，也可以开设在任意一条道路的某个位置上（该位置与道路两端的建筑的距离不一定是整数）。 现给定城市C的地图（道路分布及其长度），请找出最佳的快餐店选址，输出其与最远的顾客之间的距离。<span class="Apple-converted-space">&nbsp;</span></span><br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+</p></p><hr/><h3>输入格式</h3><p><p><span style="display: inline! important; float: none; word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">第一行包含一个整数N，表示城市C中的建筑和道路数目。</span><br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<span style="display: inline! important; float: none; word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">接下来N行，每行3个整数，Ai，Bi，Li（1&le;i&le;N；Li&gt;0），表示一条道路连接了建筑Ai与Bi，其长度为Li 。</span><br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+</p></p><hr/><h3>输出格式</h3><p><p><span style="display: inline! important; float: none; word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">仅包含一个实数，四舍五入保留恰好一位小数，表示最佳快餐店选址距离最远用户的距离。</span><br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+<span style="display: inline! important; float: none; word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">注意：你的结果必须恰好有一位小数，小数位数不正确不得分。</span><br style="word-spacing: 0px; font: 14px/24px 宋体; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; widows: 2; orphans: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px" />
+</p></p><hr/><h3>样例输入</h3><pre>1 2 1
+1 4 2
+1 3 2
+2 4 1</pre><hr/><h3>样例输出</h3><pre>2.0</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium"><img height="285" width="277" alt="" src="../file/3242_0.png" /></span></p>
+<p><span style="font-size: medium">数据范围<br />
+对于 10%的数据，N&lt;=80,Li=1； <br />
+对于 30%的数据，N&lt;=600，Li&lt;=100； <br />
+对于 60% 的数据，N&lt;=2000，Li&lt;=10^9； <br />
+对于 100% 的数据，N&lt;=10^5，Li&lt;=10^9 </span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3242" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3242" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3327：[Scoi2013]泡泡鱼 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2013]泡泡鱼 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Scoi2013]泡泡鱼 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Scoi2013]泡泡鱼                 </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="left"><span style="font-size: 12pt">Fish </span><span style="font-size: 12pt">是一条生活在海里的鱼，有一天他很无聊，想起了一个人类玩的游戏泡泡龙，于是他打算玩一把泡泡鱼。</span></div>
+<div align="left"><span style="font-size: 12pt">Fish </span><span style="font-size: 12pt">并不是特别清楚泡泡龙的规则（我们也是），于是他采用自己定的近似规则。</span></div>
+<div align="left"><span style="font-size: 12pt">这里我们把海底想象成一个平面区域，它的上边界离发射点距离为H，左右边界离发射点的距离均为W。起初时在这个区域的某些位置上有一些各种颜色的泡泡，且每个泡泡的直径为2（这里视泡泡为圆形）。如果两个相同颜色的泡泡相切，我们就说这两个泡泡相邻。如果两个相同颜色的泡泡相邻或者可以通过第三个相同颜色的泡泡相连，我们就说这两个泡泡相连。</span></div>
+<div align="left"><span style="font-size: 12pt">为了方便描述，我们定义发射点的坐标为(0, 0)，每次Fish 会在发射点以某个给定角度发射某种颜色的泡泡。如果泡泡撞到墙壁或者其他泡泡（即在某个时间第一次与墙壁或者其他泡泡相切），这个泡泡就会停住。如果这个泡泡与超过一个泡泡相连，那么这些泡泡就会消失，而Fish 就会得到消失泡泡数量的平方的分数值。请注意，初始时如果有超过两个泡泡相连，这些泡泡并不会消失。现在已知初始泡泡的情况和每次发射泡泡的颜色和角度（相对于+x 轴逆时针方向），请你给出最终的总得分。注意，在上一次发射出去的泡泡停止之前，Fish 不能够继续发射泡泡。</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输入的第一行有两个实数<span lang="EN-US">W</span>，<span lang="EN-US">H</span>，表示游戏区域的边界坐标，精确到小数点后六位。<span lang="EN-US"><br />
+</span>接下来一行有一个整数<span lang="EN-US">n</span>，表示初始泡泡的个数。<span lang="EN-US"><br />
+</span>接下来<span lang="EN-US">n </span>行，第<span lang="EN-US">i </span>行首先是两个浮点数<span lang="EN-US">xi </span>和<span lang="EN-US">yi</span>，表示第<span lang="EN-US">i </span>个泡泡的圆心坐标，精确到小数点后八位，然后是一个整数<span lang="EN-US">ci</span>，表示第<span lang="EN-US">i </span>个泡泡的颜色。<span lang="EN-US"><br />
+</span>接下来一行有一个整数<span lang="EN-US">q</span>，表示发射的泡泡的个数。<span lang="EN-US"><br />
+</span>最后<span lang="EN-US">q </span>行，第<span lang="EN-US">i </span>行首先是一个浮点数<span lang="EN-US">ai</span>，精确到小数点后两位，表示第<span lang="EN-US">i </span>次发射的泡泡的角度，然后是一个整数<span lang="EN-US">ci</span>，表示第<span lang="EN-US">i </span>次发射的泡泡的颜色。<span lang="EN-US"><br />
+<br />
+</span><b>数据保证刚开始所有的泡泡均在区域内！<span lang="EN-US"><br />
+</span>数据保证泡泡刚发射的位置永远不会停放有泡泡！<span lang="EN-US"><br />
+</span>由于泡泡会在海水中浮动（以及计算机浮点的精度误差），我们认为当<span lang="EN-US">(xa-xb)^2 + (ya-yb)^2  &lt;= (2 <span style="mso-special-character: footnote"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">[1]</span></b></span>* 1)^2 + 10^-6<br />
+</span>成立时，泡泡<span lang="EN-US">a </span>和泡泡<span lang="EN-US">b </span>相切！<span lang="EN-US"><br />
+</span>数据保证初始时不存在相交的泡泡</b><span lang="EN-US"><br />
+<br />
+</span>对于<span lang="EN-US">30% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 10</span>，<span lang="EN-US">1 &lt;= q &lt;= 10</span>。<span lang="EN-US"><br />
+</span>另有<span lang="EN-US">50% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 1000</span>，<span lang="EN-US">1 &lt;= q &lt;= 1000</span>。<span lang="EN-US"><br />
+</span>剩下<span lang="EN-US">20% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 10^5</span>，<span lang="EN-US">1 &lt;= q &lt;= 10</span>。<span lang="EN-US"><br />
+</span>对于所有的数据，有<span lang="EN-US">0 &lt; a &lt; 180</span>，<span lang="EN-US">0 &lt; W, H &lt;= 1000</span>，<span lang="EN-US">1 &lt;= ci &lt;= 100</span>。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输出只有一行，这一行只有一个整数，代表<span lang="EN-US">Fish </span>最后的总得分。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>4.000000 10.000000
+5
+-2.00000000 9.00000000 3
+1.00000000 7.26794919 10
+-3.00000000 7.26794919 3
+2.00000000 9.00000000 10
+0.00000000 9.00000000 10
+5
+66.60 10
+106.20 3
+88.20 5
+91.80 5
+84.60 5 
+
+</pre><hr/><h3>样例输出</h3><pre>34
+</pre><hr/><h3>提示</h3><p><p>应上传者要求，此系列试题不公开,如有异议，本站将删除之。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3327" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3327" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

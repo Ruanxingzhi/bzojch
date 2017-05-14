@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1681：[Usaco2005 Mar]Checking an Alibi 不在场的证明</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Mar]Checking an Alibi 不在场的证明</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Mar]Checking an Alibi 不在场的证明</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 Mar]Checking an Alibi 不在场的证明                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">A crime has been comitted: a load of grain has been taken from the barn by one of FJ's cows. FJ is trying to determine which of his C (1 &lt;= C &lt;= 100) cows is the culprit. Fortunately, a passing satellite took an image of his farm M (1 &lt;= M &lt;= 70000) seconds before the crime took place, giving the location of all of the cows. He wants to know which cows had time to get to the barn to steal the grain. Farmer John's farm comprises F (1 &lt;= F &lt;= 500) fields numbered 1..F and connected by P (1 &lt;= P &lt;= 1,000) bidirectional paths whose traversal time is in the range 1..70000 seconds (cows walk very slowly). Field 1 contains the barn. It takes no time to travel within a field (switch paths). Given the layout of Farmer John's farm and the location of each cow when the satellite flew over, determine set of cows who could be guilty. NOTE: Do not declare a variable named exactly 'time'. This will reference the system call and never give you the results you really want. </span></p>
+<div>
+<div>谷仓里发现谷物被盗！约翰正试图从C(1&le;C&le;100)只奶牛里找出那个偷谷物的罪犯．幸运的是，一个恰好路过的卫</div>
+<div>星拍下谷物被盗前M(1&le;M&le;70000)秒的农场的图片．这样约翰就能通过牛们的位置来判断谁有足够的时间来盗窃谷</div>
+<div>物．约翰农场有F(1&le;F&le;500)草地，标号1到F，还有P(1&le;P&le;1000)条双向路连接着它们．通过这些路需要的时间</div>
+<div>在1到70000秒的范围内．田地1上建有那个被盗的谷仓． 给出农场地图，以及卫星照片里每只牛所在的位置．请判</div>
+<div>断哪些牛有可能犯罪．</div>
+</div></p><hr/><h3>输入格式</h3><p><div>* Line 1: Four space-separated integers: F, P, C, and M&nbsp;</div>
+<div>* Lines 2..P+1: Three space-separated integers describing a path: F1, F2, and T. The path connects F</div>
+<div>1 and F2 and requires T seconds to traverse.&nbsp;</div>
+<div>* Lines P+2..P+C+1: One integer per line, the location of a cow. The first line gives the field numb</div>
+<div>er of cow 1, the second of cow 2, etc.</div>
+<div></div>
+<div>第1行输入四个整数F，只C，和M;</div>
+<div>接下来P行每行三个整数描述一条路，起点终点和通过时间．</div>
+<div>接下来C行每行一个整数，表示一头牛所在的地点．</div></p><hr/><h3>输出格式</h3><p><div>* Line 1: A single integer N, the number of cows that could be guilty of the crime.</div>
+<div>* Lines 2..N+1: A single cow number on each line that is one of the cows that could be guilty of the</div>
+<div>&nbsp;crime. The list must be in ascending order.</div>
+<div>第1行输出嫌疑犯的数目，接下来一行输出一只嫌疑犯的编号．</div></p><hr/><h3>样例输入</h3><pre>7 6 5 8
+1 4 2
+1 2 1
+2 3 6
+3 5 5
+5 4 6
+1 7 9
+1
+4
+5
+3
+7
+</pre><hr/><h3>样例输出</h3><pre>4
+1
+2
+3
+4
+</pre><hr/><h3>提示</h3><p><p><img height="256" alt="" width="622" src="../file/1681_0.jpg" /></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1681" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1681" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2360：唯美村落</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">唯美村落</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">唯美村落</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                唯美村落                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; line-height: 200%; mso-layout-grid-align: none"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">很久以前，有一个美丽的村落，村落由</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">n</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">间房屋和</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">m</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">条道路构成，每个房子连出的边都不会指向它自身。道路可能是单向的，也可能是双向的，两个房子之间不会有多条道路。如果从房屋</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">a</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">仅走一条道路可以到达房屋</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">b</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，则称</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">a--&gt;b.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; line-height: 200%; mso-layout-grid-align: none"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">这个村落的道路遵循着如下&ldquo;唯美&rdquo;的规律：</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; line-height: 200%; mso-layout-grid-align: none"><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">若</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">a--&gt;b</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">且</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">a--&gt;c</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，则</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">b</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">、</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">c</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">之间一定无道路，且如果</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">d--&gt;b</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，那么，一定有</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">d--&gt;c.<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; line-height: 200%; mso-layout-grid-align: none"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">由此，这个村落就有了&ldquo;唯美村落&rdquo;之称，某一天，小</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">P</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">想从某个房屋出发，沿着道路拜访每个房屋恰一次，最后回到开始的房屋。小</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">P</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">知道这是经典的</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN">Hamilton</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">回路问题，一般人在多项式时间内是解决不了的，但他相信你能解决。另外，</span><span style="font-size: 12pt; line-height: 200%; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小鹏提出了更高的要求，他给每个房屋定了一个重要值，各房屋的重要程度互不相同，他将把起点选在最重要的房屋上，然后尽量先访问重要值大的房屋，即要求依次访问的房屋的重要值组成的序列的<b style="mso-bidi-font-weight: normal">字典序</b>尽量大。</span><span style="font-size: 12pt; line-height: 200%; font-family: &quot;Courier New&quot;; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; mso-layout-grid-align: none"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">第一行包含两个正整数</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">。</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; mso-layout-grid-align: none"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">第二行包含</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">个用空格隔开整数，分别表示每个房屋的重要值。</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; mso-layout-grid-align: none"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">接下来</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">行，每行三个正整数</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">a,b,c</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，表示一条边，</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">c=1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">代表</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">a</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">连向</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">b</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">，</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">c=2</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">代表这是一条双向边。</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 12pt; font-family: 'Courier New'"><span style="mso-bidi-font-style: italic"><o:p></o:p></span></span></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24.1pt; mso-layout-grid-align: none"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">如果原图不存在</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">Hamilton</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">回路，则输出</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">-1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">；否则输出</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">行，为</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">1~n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">的一个排列，即最佳的</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN">Hamilton</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-family: 'Courier New'; mso-ansi-language: ZH-CN">回路，排列的第一个数为起点，最后一个数实际上是连向起点的。</span><span style="font-size: 12pt; font-family: 'Courier New'; mso-ansi-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-layout-grid-align: none; mso-char-indent-count: 2.0"><span lang="EN-US" style="font-size: 12pt; font-family: 'Courier New'"><span style="mso-bidi-font-style: italic"><o:p></o:p></span></span></p></p><hr/><h3>样例输入</h3><pre>5 7
+
+50 40 30 20 10
+
+1 3 2
+
+1 4 2
+
+2 3 1
+
+2 4 1
+
+3 5 1
+
+4 5 1
+
+5 2 1
+
+</pre><hr/><h3>样例输出</h3><pre>1
+
+3
+
+5
+
+2
+
+4
+
+</pre><hr/><h3>提示</h3><p><p>【数据规模】</p>
+<p>30%的数据满足，n&lt;=100，m&lt;=1000；</p>
+<p>100%的数据满足，3&lt;=n&lt;=20000，m&lt;=500000；题给的都是&ldquo;唯美村落&rdquo;.<br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2360" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2360" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

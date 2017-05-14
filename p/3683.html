@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3683：Falsita</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Falsita</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Falsita</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Falsita                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">描述<br />
+到海边了呢......<br />
+如果没有那次选择,现在是不是会好些呢......<br />
+都过去了。<br />
+仰望着星空,迎面吹过一阵阵海风,倚靠着护栏,Fine 在海边静静地伫立着,在一个个无际的长夜后,Fine 终于放下了往事的痛楚,得到了治愈。<br />
+但是作为 Fine 的另一重人格的 Falsita 就没那么幸运了。她仍然被各种繁忙的事务困扰着。<br />
+虽然同在一副躯体中,Fine 与 Falsita 的精神世界却相差甚远,Fine 可以轻易地构造出幻梦时,Falsita 却只能停留在现实的痛楚中。<br />
+但是为了生活需要,她们还是需要经常达成共识。<br />
+让我们形式化的描述一下吧。<br />
+她们所在的精神世界是一棵以 1 号节点为根的树,每个树上的节点 u 都有一个权值Wu,她们每个人分别都在一个节点上,达成共识的方法就是两个人都到达一个共识节点(即到达它们的最近公共祖先)。<br />
+一个点 u 与另外一个点 v 之间想要达到共识需要花费的代价为Wu+Wv。<br />
+有时两人的精神有所触动时,有时点的权值会改变成某个数,有时以某个点的子树中的所有点的权值会加上某个数。<br />
+Falsita 和 Fine 经常需要达成共识,每一次询问,已知达成的共识节点,求她们花费的期望代价。</span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">输入共 m + 3 行。<br />
+第一行两个整数 n, m ,表示节点个数和操作数。<br />
+第二行 n - 1 个整数Pi,表示节点 i ( i = 2 . . . n ) 的父亲节点的编号。<br />
+第三行 n 个整数Wi。<br />
+接下来 m 行,每行表示一个操作。<br />
+1.&nbsp;S u delta 表示将节点 u 的权值加上 delta 。<br />
+2.&nbsp;M u delta 表示将以节点 u 为根的子树中的所有节点的权值加上 delta。<br />
+3.&nbsp;Q u 表示询问共识节点为 u 时的答案。<br />
+询问保证 u 不是叶子节点。</span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">对于每组询问,输出答案,答案精确到小数点后 6 位。<br />
+你的程序输出的答案需要与标准答案之差不超过10^(-5)。</span></p></p><hr/><h3>样例输入</h3><pre>4 6
+1 2 2 
+0 -6 3 0 
+S 2 -5
+M 3 8
+S 1 -1
+M 4 7
+M 3 2
+Q 1
+</pre><hr/><h3>样例输出</h3><pre>2.000000
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">前5个操作后，四个节点的权值分别为-1,-11,13,7。最近公共祖先为1的点对有(1,2),(1,3),(1,4)，权值和分别为-12,12,6，故答案为(-12+12+6)/3=2。<br />
+<br />
+<br />
+对于 100% 的数据,1 &le; n, m &le; 300000, 0&le; |delta|, |Wi|&le; 20000。</span></p>
+<p></p></p><hr/><h3>题目来源</h3><p>Shinrein祭 #1</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3683" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3683" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

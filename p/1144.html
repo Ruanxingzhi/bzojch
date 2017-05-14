@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1144：[CTSC2008]奥运抽奖volunteer</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]奥运抽奖volunteer</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CTSC2008]奥运抽奖volunteer</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CTSC2008]奥运抽奖volunteer                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>　　距2008年北京奥运会开幕还有90天时，CTSC准备为志愿者们举行一次抽奖活动。作为志愿者的一员，你对这次</div>
+<div>抽奖活动自然是万分期待。 CTSC委员会介绍了抽奖活动的规则。设总共有p个参加抽奖的志愿者，开始时每一个志</div>
+<div>愿者领取一个0到p-1的 号码。任意两个志愿者领取的号码不同。屏幕的正中央是五福娃的头像，他们不停的眨眼</div>
+<div>欢迎大家。开始抽奖时，工作人员按下屏幕旁边的按钮，等待屏幕上的画面静止下来。这时，福娃们都停止眨眼了</div>
+<div>。当然，画面静止时，有的福娃的眼睛可能是睁开的，有的是闭上的。如果所有福娃的眼睛都闭上了，工作人员需</div>
+<div>要重新按一 下按钮。这样，直到至少有一个福娃的眼睛是睁开的。接着，工作人员开始观察有哪些福娃的眼睛是</div>
+<div>睁开的。工作人员对五个福娃都标了号。贝贝、晶晶、欢欢、迎迎、妮妮的标号分别是2、3、4、5、6（工作人员</div>
+<div>认为0和1都不是好数字）。定义幸运数字如下： 1、如果一个福娃的眼睛是睁开的，那么他（她）对应的标号就是</div>
+<div>幸运数字； 2、如果数字l1和l2(可能相等)都是幸运数字，那么他们的乘积 也是幸运数字； 3、其他的数字都不</div>
+<div>是幸运数字。 用L表示所有数字的集合，例如，如果贝贝、晶晶的眼睛是睁开的，欢欢、迎迎、妮妮的眼睛是闭上</div>
+<div>的，则L={2,3,4,6,8,9,12,&hellip;}。令l(x)表示第x大的幸运数字。例如，上面的例子中，l(1)=2，l(4)=6等等。 接</div>
+<div>着，工作人员开始随机产生两个数，小的数是a，大的数字是b。定义集合T(a,b)为：</div>
+<p>&nbsp;<img border="0" alt="" src="../file/1144_0.jpg" /></p>
+<div>　　（其中 表示x整除y） 定义一个自然数的有限子集的特征值f 如下： 1、空集的特征值为0，即 ； 2、对于非</div>
+<div>空集合S，令d为S中的最小元素，则</div>
+<p><img border="0" alt="" src="../file/1144_1.jpg" />&nbsp;</p>
+<div>　　其中， 表示把S删除元素d后的集合，q是一个给定的非负整数。在a和b产生以后，中奖的志愿者就确定了，他</div>
+<div>的号码是 除以p的余数。工作人员会产生多次a，b，这样就能形成多个中奖者。但是，抽奖现场的程序需要很长的</div>
+<div>时间才能算出中奖的志愿者。出于对中奖结果的热切期待，你便想要重新写一下计算程序，于是，你的目光移向了</div>
+<div>前面的键盘&hellip;&hellip;。</div></p><hr/><h3>输入格式</h3><p><div>　　输入的第一行给出用空格隔开的5个数，每个数不是0就是1，分别表示贝贝、晶晶、欢欢、迎迎、妮妮的眼睛</div>
+<div>是否睁开。0对应眼睛闭上，1对应眼睛睁开。5个数不可能都是0。第二行给出了用空格隔开的两个数，p和q。 其</div>
+<div>中p表示参加抽奖的志愿者的人数，q如前所述，用来计算集合的特征值。第三行给出了数n，表示抽取的a和b的次</div>
+<div>数。接下来的n行，每一行有两个数a、b，中间用空格隔开，表示一次抽奖产生的两个数。</div></p><hr/><h3>输出格式</h3><p><div>　　输出共n行，每一行一个整数，表示一次抽奖中中奖者的号码。顺序与输入的n对a、b一一对应。当然，一个人</div>
+<div>可能中奖多次。</div></p><hr/><h3>样例输入</h3><pre>1 0 0 1 0
+10001 2
+3
+1 10
+2 12
+4 15</pre><hr/><h3>样例输出</h3><pre>3265
+5816
+0</pre><hr/><h3>提示</h3><p><p><img border="0" alt="" src="../file/1144_0.jpg" /></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1144" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1144" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

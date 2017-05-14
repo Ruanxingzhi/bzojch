@@ -1,0 +1,398 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4775：网管</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">网管</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">网管</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                网管                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>经过推选，黎瑟莫名其妙的当上了计算机系的网管。上任后的黎瑟才发现，这里的网络经常断掉。给定一棵边权均</div>
+<div>为1的无根树，点可能是黑色或白色，支持两种操作。</div>
+<div>1 xi pi表示目前点xi的颜色可能发生了翻转(黑变白，白变黑)，发生概率为pi%。</div>
+<div>2 si表示求E((&sum;x&isin;B dist(x,si))^2)，其中B为当前黑点的集合，dist(x,y)表示x号节点和y号节点在树上的最短</div>
+<div>距离。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行三个整数id,n,m，表示数据编号，树的点数和操作个数。</div>
+<div>第二行n个整数ci，若ci=1表示点i为黑色，否则表示点i为白色。</div>
+<div>接下来的n-1行，每行两个整数ui,vi，表示树上有一条ui节点到vi节点的边。</div>
+<div>接下来的m行，每行表示一个操作，格式如题</div>
+<div>
+<div>1 &lt;=id &lt;=20</div>
+<div>1 &lt;=n &lt;=Nid</div>
+<div>0 &lt;=m &lt;=Nid</div>
+<div>1 &lt;=ui, vi, xi, si &lt;=n</div>
+<div>0 &lt;=ci &lt;=1</div>
+<div>0 &lt;=pi &lt;=100</div>
+</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每个询问输出一行一个浮点数表示答案，输出与答案绝对误</div>
+<div>差不超过 10^-6 就算正确。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>1 100 100
+1 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 1 1 0 0 0 0 0 1 1 1 1 0 1 0 1 0 0 0 0 1 0
+22 38
+29 28
+11 12
+21 20
+89 9
+50 78
+100 11
+94 70
+98 83
+21 91
+88 28
+8 7
+7 37
+37 72
+2 1
+80 53
+56 15
+84 46
+23 24
+3 2
+90 73
+37 45
+47 41
+44 27
+25 69
+73 15
+31 30
+93 37
+1 39
+57 65
+83 45
+78 81
+85 21
+50 60
+8 40
+51 79
+18 19
+61 37
+46 39
+19 20
+29 30
+55 12
+4 5
+14 13
+26 67
+43 16
+35 99
+16 52
+21 22
+66 14
+35 9
+59 15
+34 97
+33 34
+6 7
+20 74
+27 26
+13 12
+8 51
+24 36
+58 57
+20 41
+24 25
+28 49
+5 6
+54 17
+4 92
+18 17
+9 10
+48 6
+73 75
+31 32
+27 28
+16 15
+50 47
+63 2
+62 44
+16 17
+4 3
+30 77
+11 10
+9 8
+26 25
+33 32
+95 54
+15 53
+11 71
+1 57
+88 96
+42 34
+82 54
+76 39
+9 87
+62 64
+70 8
+86 37
+14 15
+22 23
+55 68
+2 52
+2 85
+1 46 92
+1 31 31
+1 33 17
+2 29
+2 49
+2 76
+2 63
+2 64
+2 6
+2 70
+2 15
+1 10 81
+2 57
+2 18
+1 66 67
+2 12
+1 19 62
+1 13 33
+2 77
+2 27
+2 94
+2 50
+1 82 49
+2 77
+2 6
+2 59
+2 31
+1 49 5
+2 60
+2 3
+1 62 16
+2 45
+2 21
+2 82
+2 85
+2 59
+2 85
+2 2
+2 47
+2 69
+2 79
+2 32
+2 92
+2 97
+2 43
+2 27
+1 12 100
+2 6
+2 62
+2 8
+2 38
+2 97
+2 72
+2 31
+2 24
+2 29
+1 93 26
+2 9
+2 13
+2 81
+1 18 85
+2 30
+2 57
+1 8 88
+2 41
+1 60 65
+2 28
+1 49 26
+2 42
+2 14
+1 4 60
+2 64
+1 54 14
+1 15 49
+2 85
+1 57 100
+2 9
+1 51 39
+2 33
+2 98
+2 84
+2 86
+2 72
+1 56 75
+2 74
+1 5 95
+2 5
+2 61
+1 97 72
+2 25
+2 43
+2 40
+2 9
+2 84
+1 67 23
+2 30
+1 28 45
+1 11 98
+</pre><hr/><h3>样例输出</h3><pre>285156.0000000000000
+356409.0000000000000
+633144.1888000000000
+645494.1663999999900
+795511.3296000000600
+652911.3264000000200
+744654.5341999999900
+387472.5542000000100
+379903.7423999999900
+241023.5888000000000
+722637.2878000000500
+280453.3862000000100
+262575.0398000000300
+868854.3512000000300
+560120.4240000000000
+470363.8367999999900
+500708.2392000000100
+883592.7672000000000
+420633.3348000000100
+307082.7624000000100
+876612.0191999999800
+583093.3689999999500
+571399.7776000000300
+523911.4600000000200
+344890.9564000000200
+399381.5980000000000
+412288.3829999999700
+308954.6453999999800
+412288.3829999999700
+638584.7225999999800
+440964.3962000000200
+549969.2981999999600
+482785.1850000000000
+975195.7277999999900
+599016.6239999999500
+1317090.1503999999000
+318628.1340000000200
+569323.2412000000500
+416242.4682000000000
+706513.1548000000200
+342447.8570000000200
+427679.4048000000200
+1264839.2104000000000
+513831.8800000000000
+842802.4816000000600
+419775.2777999999800
+678712.3175999999500
+318367.8032000000200
+266443.8376000000300
+657353.4976000000000
+786264.5753999999700
+800298.0938000000300
+361871.2289999999900
+591276.2617999999800
+1225657.3586800001000
+246925.7472000000100
+746625.2759999999500
+378500.7612400000200
+301318.1878000000100
+952459.7794800000300
+655201.7177999999800
+956291.0853999999800
+495966.3180399999800
+495966.3180399999800
+330354.1699999999800
+442598.8577599999800
+486953.4574400000300
+434321.8692000000200
+305110.6744799999900
+414809.1759999999800
+321591.6599999999700
+995697.2360799999400
+713643.6037599999700
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Claris提供Spj</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4775" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4775" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

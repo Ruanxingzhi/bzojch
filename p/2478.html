@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2478：数据挖掘</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数据挖掘</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数据挖掘</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                数据挖掘                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Tuple博士正在为<span>ACM（Advanced Commercial Merchandise）公司开发一个数据挖掘的软件。其中一个子程序是用来处理两个数组的，设两个数组分别为P和Q，均含N个元素，编号为0到N-1。数组P是一个带关键字的hash表，用来存放需要处理的元素，这些元素对应的数据可以通过数组Q找到。</span></div>
+<div style="text-indent: 21pt">数组<span>P中每个元素的大小为Sp字节，数组Q中每个元素的大小为Sq字节。Tuple博士希望这个子程序的效率越高越好，因为它是整个软件的关键。但是Sp和Sq只有等到程序运行的时候才能知道，因此是不可能在编译时优化的。</span></div>
+<div style="text-indent: 21pt">我们都知道最直接的寻址方式：</div>
+<div style="text-indent: 21pt">&middot;数组<span>P的第i个元素的地址Pofs(i)=Sp&times;i&mdash;&mdash;(1)；</span></div>
+<div style="text-indent: 21pt">&middot;数组<span>Q的第i个元素的地址Qofs(i)=Sq&times;i&mdash;&mdash;(2)。</span></div>
+<div style="text-indent: 21pt">但是，乘法运算要比加减法慢得多。可喜的是，<span>Tuple博士成功地避免了使用乘法运算。在整个软件中，他总是用每个元素的地址Pofs(i)代替该元素的序号i。在计算与第i个元素相邻的元素地址时，只要用下面这两个简单的公式即可：</span></div>
+<div style="text-indent: 21pt">Pofs(i+1)=Pofs(i)+Sp；</div>
+<div style="text-indent: 21pt">Pofs(i-1)=Pofs(i)-Sp。</div>
+<div style="text-indent: 21pt">因为<span>P和Q是一个整体，每当数组P中的元素被修改时，Q中元素也要作相应的变动。Qofs(i)可以用Pofs(i)直接求得：Qofs(i)=Pofs(i)/Sp&times;Sq&mdash;&mdash;(3)。</span></div>
+<div style="text-indent: 21pt">然而这个公式不仅要用到乘法，而且要用到除法。虽然仅仅是整数除法，但是速度还是很慢。经过研究，<span>Tuple博士发现可以用一个更快的公式代替上述公式：Qofs'(i)=(Pofs(i)+Pofs(i)&lt;&lt;A)&gt;&gt;B&mdash;&mdash;(4)。</span></div>
+<div style="text-indent: 21pt">其中：<span>A和B是非负整数，&ldquo;&lt;&lt;A&rdquo;表示左移A位（相当于乘以2^A），&ldquo;&gt;&gt;B&rdquo;表示右移B位（相当于除以2^B）。</span></div>
+<div style="text-indent: 21pt">这个公式的效率显然比公式<span>(3)高多了，不过不是总能找到A和B使之能和公式(3)产生一样的结果的。而且，这个公式可能会牺牲更多的内存。</span></div>
+<div style="text-indent: 21pt">如果使用公式<span>(2)的话，存放数组Q只需要N&times;Sq就够了。Tuple博士发现，如果使用公式(4)的话，总能够找到一个K（K&gt;=N&times;Sq），用K字节存放数组Q并恰当地选择A和B，使得所有的元素都不重叠。</span></div>
+<div style="text-indent: 21pt"><span style="color: blue">任务</span>：请你编写一个程序，找到所有可行的解当中<span>K最小的。如果有多组解的话，输出A最小的；如果还有多组解，输出B最小的。公式的运算过程中可能出现非常大的整数，请你<span style="color: red">注意</span>不要溢出，不过你不用担心Tuple博士的电脑会溢出。</span></div>
+<div>&nbsp;</div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 21pt">输入文件中仅一行为三个整数<span>N，Sp，Sq（1&lt;=N&lt;=2^20，1&lt;=Sp&lt;=2^10，1&lt;=Sq&lt;=2^10）。</span></div>
+<div>&nbsp;</div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21pt">输出文件中仅一行为三个整数<span>K，A，B，相邻两个整数之间用一个空格隔开。</span></div>
+<div>&nbsp;</div></p><hr/><h3>样例输入</h3><pre>
+20 3 5
+ 
+</pre><hr/><h3>样例输出</h3><pre>119 0 0
+ </pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2478" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2478" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2497：Winmine.exe</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Winmine.exe</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Winmine.exe</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Winmine.exe                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="panel_content">
+<p><span style="font-size: medium">&nbsp;&nbsp;The Windows Minesweeper (WinMine) is one of the most well-known games on the Windows system. The rule is quite easy and it takes only a few minutes to play a set. First of all, let&rsquo;s briefly introduce this game (if you believe that you are familiar enough with this game, you can skip the next paragraph):<br />
+<br />
+&nbsp;&nbsp;<i>The goal of the game is to uncover all the squares that do not contain mines (with the left mouse button) without being &quot;destroyed&quot; by clicking on a mine. The location of the mines is discovered by a process of logic. Clicking on the game board will reveal what is hidden underneath the chosen square or squares (a large number of blank squares may be revealed in one go if they are adjacent to each other). Some squares are blank but some contain numbers (1 to 8), each number being the number of mines adjacent to the uncovered square. The game is won once all blank squares have been uncovered without hitting a mine, any remaining mines not identified by flags being automatically flagged by the computer. The distinctive feature of minesweeper is the randomness at the initial stage and at some intermediate stages.<br />
+----Wikipedia<br />
+</i><br />
+&nbsp;&nbsp;Jaddy loves playing WinMine at free time very much due to its simplicity and ingenuity. However, sometimes it makes him frustrated when he reaches some undeterminable states during the game. See the following state as an example:<br />
+</span></p>
+<center></center>
+<p></p>
+<p></p>
+<p><span style="font-size: medium"><br />
+In the red circle of this example, the rest two squares are absolutely undeterminable and there are apparently two possible distributions of the rest ONE mine.<br />
+<br />
+&nbsp;&nbsp;When Jaddy gets into this kind of trouble, he has no choice but to guess. Sometimes there are only two possible choices (as what the example says) but sometimes there are many. This way, he needs an assistant of this game to calculate the number of different possible distributions of mines depending on the current state of game board.<br />
+<br />
+&nbsp;&nbsp;This assistant of game is pretty useful and interesting, at least for him, so that he immediately starts coding. Unfortunately, Jaddy spent all the time to play WinMine in the class of Programming and Algorithm, so he feels such a complex task is a mission impossible. Jaddy loves WinMine very much so that he asks you, an excellent programmer, for help. In addition, in order to reduce the difficulty, he added three constraints:<br />
+1. It is guaranteed that the input state of game can always be created by making only ONE click on the initial board.<br />
+2. In the given state, if two unrevealed squares are connected directly or by any other unrevealed squares, they are also bi-connected. That is to say, even after any one of the other unrevealed squares is removed, these two squares are still connected. Here we say two squares are connected if and only if they share an edge. That means a square has at most four squares connected.<br />
+3. In the given state, if two numbers are connected by sharing an edge directly or by other numbers, all the unrevealed cells adjacent to the connected set of numbers must be connected.<br />
+<br />
+Help Jaddy please!</span></p>
+</div></p><hr/><h3>输入格式</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases, the first line of input is a positive integer T (T &lt;= 50) indicating the number of test cases. Then T cases follow. For each test case, the first line contains three positive integers n, m and M where 1 &lt;= n, m &lt;= 100 and 1 &lt;= M &lt;= 1000 denoting the number of rows and columns in the given board and the total number of mines on the board. Then an n*m matrix of chars describing the current state of board will be given. In this matrix, there are 2 styles of symbols:<br />
+1. digits from 0 to 8: that means the number of mines around this square (&lsquo;0&rsquo; implies a blank square).<br />
+2. &lsquo;.&rsquo; (quotes for clarifying): that means this square is unrevealed.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium"><br />
+</span>&nbsp;</p></p><hr/><h3>输出格式</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;For each test case, output an integer leading by the case number, denoting the number of possible distribution of mine in the given state, module by 1000003. See the sample output for further details.<br />
+</span></div>
+<div class="panel_content"></div></p><hr/><h3>样例输入</h3><pre>2
+4 5 2
+…..
+.....
+11111
+00000
+4 5 4
+…..
+.....
+22222
+00000
+ 
+
+</pre><hr/><h3>样例输出</h3><pre>Case #1: 2
+Case #2: 1
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">Notice</span></p>
+<p><span style="font-size: medium">(a) The upper bound of w (the number of mines) should be 1500, rather than<br />
+1000 in the problem statement.<br />
+(b) There is another (the third) constraint about the initial state of board: for any<br />
+pair of unrevealed squares A and B, if A and B are both adjacent to a connected<br />
+component S, where S is a connected area consisting of only squares with positive positive positive positive<br />
+numbers, then A and B can always be connected by unrevealed squares. For example,<br />
+the following board contradicts this constraint due to the disconnection of squares on<br />
+row 7 column 3 and row 8 column 4:</span></p>
+<p><span style="font-size: medium">00000001 1 .<br />
+11000001..<br />
+.1000002..<br />
+11000001..<br />
+0000000111<br />
+0111000000<br />
+01.3221100<br />
+012....100<br />
+0012221100<br />
+1100001110<br />
+.100001.10<br />
+, whereas the following one is acceptable:<br />
+..10000000<br />
+2210011100<br />
+000001.100<br />
+000001.100<br />
+000011.221<br />
+00001.....<br />
+01122.....<br />
+12........<br />
+..........</span></p></p><hr/><h3>题目来源</h3><p>Acm 2011 上海</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2497" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2497" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

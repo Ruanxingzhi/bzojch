@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4030：[HEOI2015]小L的白日梦</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HEOI2015]小L的白日梦</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HEOI2015]小L的白日梦</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HEOI2015]小L的白日梦                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;在某一天，你有了一个女性朋友。</p>
+<div>你打算利用k天时间陪她，每天有很多种娱乐方式可供选择，你需要从中选择一种进行（一天只能进行一个项目），比如说一起去看电影、一起去主题公园，一起去逛街等等，一共n种项目。当然每个项目重复太多次你都会觉得无聊，因此第i个项目最多进行c[i]次。你虽然智商很高，但是情商堪忧，即使这些你准备的活动都是希望让她开心的，不过由于你笨拙的语言表达和过于理智的行动，可能使这些活动出现意外。经过你悉心的计算，你发现如果某一天进行了第i个项目，如果一切顺利的话她应该是很高兴的，但她会有a[i]的概率不高兴。如果她本来是很高兴的，但突然今天你让她不高兴了，她就会觉得很失落，并且对你的好感度大大下降。你希望尽可能避免这种情况发生，因此你要安排这k天之内每天进行的项目，最小化她感到失落的期望次数。</div>
+<div>你的女性朋友十分在意你，所以她的心情只会因为你发生改变。第一天之前，因为你没有邀请她进行任何活动，所以她是不高兴的。</div></p><hr/><h3>输入格式</h3><p><p>&nbsp;第一行有一个非负整数t，表示一共有t组数据。</p>
+<div>对于每组数据，第一行有两个非负整数n,k，分别表示你准备的项目个数和你用来陪她的天数。（n&lt;=10^5, k&lt;=10^9）</div>
+<div>接下来n行，每一行描述一个项目，形如&ldquo;x[i]/y[i] c[i]&rdquo;且三个数均为非负整数，表示进行完这个项目之后她有x[i]/y[i]的概率不高兴，并且这个项目只能进行不超过c[i]次。（x[i],y[i] &lt;= 104,c[i] &lt;= 10^9）</div></p><hr/><h3>输出格式</h3><p><p>一共t行，对于每组数据输出使她感到失落的最小期望次数，四舍五入保留6位小数。</p></p><hr/><h3>样例输入</h3><pre>3
+1 2
+0/1 3
+1 2
+1/1 3
+1 2
+1/2 3</pre><hr/><h3>样例输出</h3><pre>0.000000
+0.000000
+0.250000
+
+【样例说明】
+考虑第三组数据，因为只有一个项目所以只好每天都安排这个。
+在第一天之前她总是不高兴的，一共有：
+第一天不高兴，第二天也不高兴、
+第一天高兴，第二天不高兴、
+第一天不高兴，第二天高兴、
+第一天不高兴，第二天也不高兴，
+这四种情况，又因为每天的项目让她高兴或者是不高兴的概率都是0.5，因此这四种情况是等概率发生的。
+只有在第二种情况下，她会感到失落一次。
+因此答案是(1*1+0*3)/4=0.25.</pre><hr/><h3>提示</h3><p><p>&nbsp;对于100%的数据，n&lt;=105，k&lt;=109，数据组数不会太多，大概不超过10组，数据保证分数有意义并且&sum;c[i]&gt;=k。</p>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4030" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4030" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4795：[CERC2016]Jazz Journey</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CERC2016]Jazz Journey</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[CERC2016]Jazz Journey</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [CERC2016]Jazz Journey                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Ivan正在为他的爵士乐队计划一场规模盛大的欧洲巡演。在欧洲一共有n个城市，编号依次为1到n。Ivan计划举办d</div>
+<div>场演出，分别在城市a_1,a_2,...,a_d，并且严格遵循这个顺序，而且不会在同一个城市连续巡演两次（即a_i!=a_</div>
+<div>{i+1}），但在整个过程中，他可能在一个城市巡演多次。最终，他一定会回到开始的城市进行巡演（即a_1=a_d）</div>
+<div>。Ivan每次总是选择搭乘一趟从a_i到a_{i+1}的直达航班。然而，他希望变得聪明一些，尽量节省机票的开支。你</div>
+<div>也知道，机票的价格取决于供给和需求，比如一张单程票可能会比相同目的地的双程票还要贵。</div>
+<div></div>
+<div>一共有两种可以购买的机票：</div>
+<div></div>
+<div>1.从a到b的单程票，每张只能从a飞到b一次，但不能从b飞到a。</div>
+<div></div>
+<div>2.从a到b的双程票，只需购买一张，就能从a飞到b一次，然后从b飞回a一次，但先从b飞回a是不允许的。</div>
+<div>当然，你也可以选择从a飞到b之后就再也不返回a。</div>
+<div></div>
+<div>给定可以购买的机票集合，每种机票都是无限量供应的。请帮助Ivan找到一种最省钱的方案。你可以认为合法方案必然存在。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行包含两个正整数n,d(2&lt;=n,d&lt;=300000)，分别表示城市的个数和巡演的次数。</div>
+<div>第二行包含d个正整数a_1,a_2,...,a_d(1&lt;=a_i&lt;=n,a_i!=a_{i+1},a_1=a_d)，依次表示巡演计划中每一场所在的城市。</div>
+<div>接下来一行包含一个正整数m(3&lt;=m&lt;=300000)，表示机票的种类数。</div>
+<div>接下来m行，每行首先是两个正整数s_i,d_i(1&lt;=s_i,d_i&lt;=n,s_i!=d_i)，分别表示起点与终点；</div>
+<div>接下来一个字符t_i，表示机票的类型，其中&ldquo;O&rdquo;表示单程票，&ldquo;R&rdquo;表示双程票；</div>
+<div>最后是一个正整数p_i(1&lt;=p_i&lt;=10^9)，表示票价。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>输出一行一个整数，即完成巡演所需支付的最小机票总费用。</div>
+<div></div></p><hr/><h3>样例输入</h3><pre>2 5
+1 2 1 2 1
+4
+1 2 R 6
+1 2 O 3
+2 1 O 3
+1 2 R 5</pre><hr/><h3>样例输出</h3><pre>10</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4795" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4795" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

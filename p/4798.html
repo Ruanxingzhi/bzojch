@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4798：[Ceoi2015]Calvinball championship</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2015]Calvinball championship</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2015]Calvinball championship</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2015]Calvinball championship                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>有n个人参加一场比赛，需要把他们分成若干组，然后就会给他们每人一个编号。</div>
+<div>编号发放的规则：</div>
+<div>1：每个组的队长为组员中名字字典序最小的那个人</div>
+<div>2：每个组的编号为这个组的队长名字的排名（按字典序，且只有队长参与排名）</div>
+<div>3：每个人的编号即为他所在组的编号</div>
+<div>然后将所有人按字典序排好，根据他们的编号就可以产生一个序列。</div>
+<div></div>
+<div>例如：</div>
+<div>有6个人，分为3组</div>
+<div>（Calvin，Hobbes，Susie），（Batman），（Jerry ，Tom） &nbsp;下划线的是队长</div>
+<div>（Batman）为第一组，（Calvin，Hobbes，Susie）为第二组，（Jerry ，Tom）为第三组</div>
+<div>所以6人编号分别为Batman 1 ，Calvin 2，Hobbes 2，Susie 2，Jerry 3，Tom 3。</div>
+<div>再将6人名字排序，有</div>
+<div>Batman 1</div>
+<div>Calvin 2</div>
+<div>Hobbes 2</div>
+<div>Jerry 3</div>
+<div>Susie 2</div>
+<div>Tom 3</div>
+<div>所以序列为1 2 2 3 2 3。</div>
+<div>现在给出一个序列，求它按照字典序是第多少大的，答案mod &nbsp;1000007。（具体意思见样例解释）</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行一个n代表有多少个人参赛</div>
+<div>接下来一行n个数，代表序列</div>
+<div>n&lt;=10000，保证给出的序列是存在的</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出这个序列是第几大的，mod 1000007。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3
+1 2 2</pre><hr/><h3>样例输出</h3><pre>4
+样例解释
+有三个人，假设他们叫A、B、C
+当为（A，B，C）时，序列为 1 1 1
+当为（A，B），（C）时，序列为1 1 2
+当为（A，C），（B）时，序列为1 2 1
+当为（A），（B，C）时，序列为1 2 2
+当为（A），（B），（C）时，序列为1 2 3.
+所以，1 2 2是第4大的
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4798" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4798" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

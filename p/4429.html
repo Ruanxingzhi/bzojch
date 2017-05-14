@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4429：[Nwerc2015] Elementary Math小学数学</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015] Elementary Math小学数学</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Nwerc2015] Elementary Math小学数学</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Nwerc2015] Elementary Math小学数学                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Ellen is teaching elementary math to her students and the time for the final exam has come. The exam consists of n questions. In each question the students have to add (+), subtract (&minus;) or multiply (&lowast;) a pair of numbers.</div>
+<div>Ellen has already chosen the n pairs of numbers. All that remains is to decide for each pair which of the three possible operations the students should perform. To avoid students getting bored, Ellen wants to make sure that the n correct answers to her exam are all different.</div>
+<div>Please help Ellen finish constructing the exam by automating this task.</div>
+<div>Ellen给她的学生教小学数学。期末考试已经来临了。考试有n个题目，每一个题目学生们都要对一对数字进行加（+），减（-），乘（*）运算。</div>
+<div>Ellen已经选好了n对数。剩下的是决定学生们应该对每对数执行什么运算。为了不让学生们感到厌烦，Ellen想确保n个正确答案都不一样。</div>
+<div>请帮助Ellen自动化地构建考试。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The input consists of:</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>one line with one integer n (1&le;n&le;2500), the number of pairs of numbers;</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>n lines each with two integers a and b (&minus;10^6&le;a,b&le;10^6), a pair of numbers used.</div>
+<div>输入包括：</div>
+<div>第一行是一个整数n（1&lt;=n&lt;=2500），表示共有n道题目。</div>
+<div>接下来n行每行有2个整数a和b（-10^6&lt;=a,b&lt;=10^6）,表示每一题使用的整数。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>For each pair of numbers (a,b) in the same order as in the input, output a line containing a valid equation. Each equation should consist of five parts: a, one of the three operators, b, an equals sign (=), and the result of the expression. All the n expression results must be different.</div>
+<div>If there are multiple valid answers you may output any of them. If there is no valid answer, output a single line with the string &ldquo;impossible&rdquo; instead.</div>
+<div>对于输入中的每一对(a,b)，输出一行有效的方程。每一个方程应该包含5部分：a，+、-、*中的一个运算符，b，=，答案。N个答案必须不同。</div>
+<div>如果有多个有效答案，你可以输出任意一个。如果没有答案，输出&ldquo;impossible&rdquo;。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>Sample input 1
+4
+1 5
+3 3
+4 5
+-1 -6
+Sample input 2
+4
+-4 2
+-4 2
+-4 2
+-4 2</pre><hr/><h3>样例输出</h3><pre>Sample output 1
+1 + 5 = 6
+3 * 3 = 9
+4 - 5 = -1
+-1 - -6 = 5
+
+Sample output 2
+impossible
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4429" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4429" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

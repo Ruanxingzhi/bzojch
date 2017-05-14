@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4575：[Zjoi2016]电阻网络</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Zjoi2016]电阻网络</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Zjoi2016]电阻网络</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Zjoi2016]电阻网络                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>小Y是一个充满智慧的女孩子，但是她只会使用串并联的方法计算两个节点之间的电阻。现在小Y有一个电阻网络问</div>
+<div>有多少点对u,v(u&ne;v)之间的电阻可以用串并联的方法计算出来。我们来形式化地定义一下点对u,v(u&ne;v)之间的电</div>
+<div>阻能否用串并联的方法计算出来。首先我们把电阻网络看成一个n个点m条边的图（每个电阻对应一条边）。令S表</div>
+<div>示从u到v的所有简单路径(不经过重复的点的路径)上点的并集，也就是对于一个点x，如果存在一条从u到v的简单</div>
+<div>路径经过这个点，那么它就在集合S中。如果S非空且S的导出子图是u,v为端点的二端串并联图，那么u,v之间的电</div>
+<div>阻就能用串并联方法计算。一个有两个不同端点s,t的图被称为二端图，其中一个称为源点，另一个称为汇点。两</div>
+<div>个二端图X,Y并联(parallelcomposition)是指建一个新图，把X和Y的源点和汇点分别合并起来。两个二端图X,Y串</div>
+<div>联(seriescomposition)是指建一个新图，把X的汇点和Y的源点合并起来。由若干个两个点一条边的二端图经过一</div>
+<div>系列串并联变化之后形成的图称为二端串并联图。集合S的导出子图点集为S，边集由原图中两个端点都在S中的边</div>
+<div>构成</div>
+</div></p><hr/><h3>输入格式</h3><p><div>第一行包含2个正整数n,m，表示电阻网络中的节点数和电阻数。接下来m行，每行包含2个正整数u,v(1&le;u,v&le;n,u</div>
+<div>&ne;v)，表示有一个电阻在节点u和v之间</div></p><hr/><h3>输出格式</h3><p><p>输出共1行，表示答案，即有多少点对之间的电阻可以使用串并联的方法计算出来。</p></p><hr/><h3>样例输入</h3><pre>6 6
+1 2
+1 3
+1 4
+2 3
+2 4
+5 6
+</pre><hr/><h3>样例输出</h3><pre>6
+//可行的点对有(1,2),(1,3),(1,4),(2,3),(2,4),(5,6)。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4575" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4575" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1788：[Ahoi2008]Calculator 计算器
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2008]Calculator 计算器
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ahoi2008]Calculator 计算器
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ahoi2008]Calculator 计算器
+                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>小可可在欢乐岛的快乐旅程还在继续，他想买一些纪念品带回去给同学们，于是来到了礼品部，在这里他发现了一个有趣的计算器，这个计算器是一种特殊的、支持变进制整数加减运算的计算器(所谓变进制，就是每一位的进制可以不同．例如，如果最低位是3进制，次低位是5进制，那么这种情况的42转化成十进制就是4*3+2=14)。店主看小可可对这个计算器非常感兴趣，于是他问小可可：“小朋友，如果我告诉你这个计算器最多可以支持N位的变进制整数，且每一位的进制分别是x1…xn，那么你知道它能表示的最大整数M是多少吗?”，小可可想了想说到：“它所能表示的最大的整数M是(x1×x2…×xn)-l。”店主非常
+高兴，说到：“你真是个聪明的孩子，如果我告诉你两个长度为N的变进制整数A，B，你按照我的要求来计算(A＋B)mod(M+1)或(A-B)mod(M+1)，答案还是用相同的变进制来表示，如果你算对了，那么我就把这个计算器送给你。”这下把小可可难住了，但是他非常想要这个计算器，聪明的你能够帮助小可可吗?
+</p><hr/><h3>输入格式</h3><p>第一行包含一个整数N(N<=100000)，表示计算器所支持的变进制数的长度；第二行包含N个整数x1…xn(1<x1…xn<100)，表示第l～n位的进制(从最高位到最低位)；第三行包含N个整数A1…An，表示第一个运算数；第四行包含一个字符op，表示需要实现的运算类型；第五行包含N个整数B1…Bn，表示第二个运算数．
+</p><hr/><h3>输出格式</h3><p>若op为'＋'，则输出(A+B)mod(M+1)的值，否则输出(A-B)mod(M+1)的值，每一位之间用一个空格隔开，注意高位补零，最高位之前和最低位之后不要有空格。
+</p><hr/><h3>样例输入</h3><pre>3
+3 2 5
+1 1 2
++
+0 0 3
+</pre><hr/><h3>样例输出</h3><pre>2 0 0
+
+</pre><hr/><h3>提示</h3><p>100％的数据中，N < = 100000，1 < (X1,x2…，XN )<100
+30％的数据中，N < = 9，x1 = x2 =… = xN =l0
+</p><hr/><h3>题目来源</h3><p>Day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1788" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1788" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

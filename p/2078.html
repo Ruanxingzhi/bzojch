@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2078：[POI2004]WYS</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2004]WYS</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[POI2004]WYS</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [POI2004]WYS                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>Byteotia 是一个被海洋环绕的岛屿. 岛屿上有很多湖泊. 在这些湖泊上又有一些小岛,小岛上可能又有湖泊和更小的岛. 海洋的级别为0. Byteotia 级别为1. 在Byteotian 上的湖泊的级别为2 ., 如果一个湖泊在一个级别为w的岛屿上,那么这个湖泊的级别为w+1,类似的如果一个岛屿被一个级别为j的湖泊环绕上,那么这个岛屿的级别为j+1. 所有湖泊和岛屿的海岸线都是平行或垂直于坐标轴的. 没有两条海岸线重合或相交. 我们想求出级别最高的那个湖泊或者岛屿的级别. 
+</p><hr/><h3>输入格式</h3><p>第一行一个整数n, 表示岛屿和湖泊的总数, 1 <= n <= 40000. 接下来每行描述一个岛屿或者湖泊. 每行首先一个偶数, k, 表示该海岸线包含有多少个顶点, 4 <= k <= 10000. 接下来k 个整数: x1, x2, ..., xk, 0 <= xi <= 108. 这些点的坐标分别为(x1, x2), (x3, x2), (x3, x4), (x5, x4), ... (xk-1, xk), (x1, xk). 他们按照逆时针顺序构成多边形: 
+&#8226;	一个湖泊的海岸线在它所在的岛屿的海岸线给出后再给出, 
+&#8226;	一个岛屿的海岸线在它被环绕的湖泊的海岸线给出后再给出. 
+地图上不会超过有200,000 个点. 
+</p><hr/><h3>输出格式</h3><p>一个整数表示最高级别. 
+</p><hr/><h3>样例输入</h3><pre>6
+4 1 0 17 12
+16 10 4 16 11 2 4 8 2 3 3 2 1 16 3 15 2
+8 8 10 3 5 12 8 11 6
+6 10 9 15 10 9 7
+4 4 6 7 9
+4 6 8 5 7
+
+</pre><hr/><h3>样例输出</h3><pre>5
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>STAGE 3</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2078" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2078" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

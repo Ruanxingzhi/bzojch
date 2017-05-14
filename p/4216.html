@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4216：Pig</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Pig</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Pig</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Pig                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：3MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>红学姐和黄学长是好朋友。</div>
+<div>有一天，黄学长想吃猪肉丸，于是他去找红学姐买猪。红学姐到她的猪圈中赶猪的</div>
+<div>时候发现有许多猪逃离了她的猪圈。同时红学姐发现，一个名叫wwf的魔法猪藏在某</div>
+<div>个猪圈中施法。然而wwf实在太巨了，红学姐并没有办法捉住它，只好向方老师求救。</div>
+<div>为了确定wwf的位置，方老师向红学姐提出了m组询问，每次询问标号在区间[l,r]内</div>
+<div>的猪圈剩余的猪的数量和，但红学姐不屑于做这些简单的问题，就把它们交给了你，同</div>
+<div>时给了你一台内存较小的电脑。</div>
+<div>由于wwf施展了一些奇怪的魔法，所以猪圈中猪的数量可能是负数。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个正整数n,m,t。n表示猪圈数，m表示询问数，t=0表示方老师没有对询问进行加密，t=1表示方老师对询问进行了加密，解密方法如下：</div>
+<div><img src="../file/4216_0.jpg" width="246" height="117" alt="" />&nbsp;</div>
+<div>其中^表示异或操作，last_ans表示上一次询问的答案，对于第一次询问，last_ans=0。</div>
+<div>第二行n个整数，第i个整数x[i]表示标号为i的猪圈中剩余猪的数量。</div>
+<div>接下来m行每行两个正整数l,r表示一组询问。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出m行，第i行表示第i个询问的答案</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 5 1
+1 3 -4 5 -3
+3 4
+1 1
+2 3
+2 4
+3 5</pre><hr/><h3>样例输出</h3><pre>2
+5
+-1
+5
+4
+</pre><hr/><h3>提示</h3><p><p>N,M&lt;=500000,|x[i]|&lt;=8000000</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4216" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4216" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4751：邋遢大王</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">邋遢大王</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">邋遢大王</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                邋遢大王                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>给出一个 n 行 m 列的点阵，每个点的半径忽略不计，问最少需要多少条有向直线段，使得它们首尾相连不间断组</div>
+<div>成的有向折线能够将点阵中所有的点都至少穿过一次，且每条有向直线段至少经过点阵中的两个点。为了确保你给</div>
+<div>出的答案是正确的，请给出任意一组解。假设点阵左上角点的坐标为 (1,1) ，点阵右下角点的坐标为 (n,m) ，点</div>
+<div>阵第 i 行第 j 列点的坐标为 (i,j) ，你需要依次给出有向折线上每一条有向直线段经过的点集（详细的说明参</div>
+<div>见输出格式）。下图给出了样例对应的一组解：</div>
+<div><img src="../file/4751_0.jpg" width="580" height="242" alt="" /></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div style="font-size: 11.8181819915771px;"><span style="font-size: 12px;">第一行包含一个正整数 T ，表示有 T 组测试数据。</span></div>
+<div style="font-size: 11.8181819915771px;">接下来依次给出每组测试数据。对于每组测试数据：</div>
+<div style="font-size: 11.8181819915771px;">仅一行，包含两个正整数 n 和 m 。</div>
+<div style="font-size: 11.8181819915771px;">保证在一行中的每个整数之间有恰好一个空格，没有其他额外的空格。</div>
+<div style="font-size: 11.8181819915771px;">保证不超过 10 组数据满足 n&gt;10 或 m&gt;10 。</div>
+<div style="font-size: 11.8181819915771px;">100% 的数据满足：1&le;T&le;100,1&le;n,m&le;1000,nm&gt;1</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div style="font-size: 11.8181819915771px;">对于每组数据输出 L+1 行，第一行包含一个正整数 L ，表示折线的最少条数，随后的 L 行按照连线顺序依次给</div>
+<div style="font-size: 11.8181819915771px;">出折线的每一部分，其中第 i 行输出四个正整数 ax_i,ay_i,bx_i,by_i ，满足 1&le;ax_i,bx_i&le;n,1&le;ay_i,by_i</div>
+<div style="font-size: 11.8181819915771px;">&le;m ，表示折线的第 i 条有向直线段最先经过的点是 (ax_i,ay_i) ，最后一个经过的点是 (bx_i,by_i ) 。</div>
+<div style="font-size: 11.8181819915771px;">对于本题，输出中在一行的每个整数之间用恰好一个空格隔开，不能有其他额外空格。</div>
+<div style="font-size: 11.8181819915771px;">注意：折线的起点可以不是 (1,1) ，而且对于 i=1,2,?,L-1 ，若折线的第 i 个拐点在给出的点上</div>
+<div style="font-size: 11.8181819915771px;">则需要满足 bx_i=ax_(i+1) 且 by_i=ay_(i+1) ，否则不需要满足。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3
+1 2
+2 3
+3 3</pre><hr/><h3>样例输出</h3><pre>1
+1 2 1 1
+3
+2 3 1 2
+1 1 2 1
+2 2 1 3
+4
+1 1 3 3
+3 3 3 1
+2 1 1 2
+1 3 2 3</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Tangjz提供试题</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4751" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4751" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

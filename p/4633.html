@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4633：道路魔法</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">道路魔法</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">道路魔法</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                道路魔法                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>SHUXK 位于一个王国之中。这个王国由N个城市构成，城市之间连有双向的道路，通过每条道路都需要一定的时间</div>
+<div>。SHUXK 发现这个王国有两个主要城市 A 和 B，这两个城市之间人员来往非常频繁，以致于经常会发生交通堵塞</div>
+<div>。他想使用魔法来改善这个情况。他拥有一种&ldquo;路径魔法&rdquo;：一次选择一条从 A 城到 B 城的路径（可以经过一条</div>
+<div>边多次，也可以经过自环），将这条路径上每条道路的通过时间减少T（ T可以取任意非负实数）。SHUXK 可以使</div>
+<div>用这种魔法任意多次，但是仍然有一些限制：</div>
+<div>1. 不能使得某一条道路的通过时间T &le; 0，否则会违反时间法；</div>
+<div>2. 由于使用一次魔法所需要的魔力与路径上的道路数量呈指数关系，所以</div>
+<div>一次选择的路径上不能有超过??条道路。</div>
+<div>想着自己是在为民造福， SHUXK 很高兴。他的愉悦度定义为每一次路径魔法的T值之和再除以 7。（为什么要除以</div>
+<div>&nbsp;7？因为 SHUXK 很喜欢 142857 这个数）SHUXK 想知道他最多可以获得多少愉悦度。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包含五个正整数N,M,A,B,L分别表示城市的数量、道路的数量、 A 城和 B 城的编号以及 SHUXK 的路径魔法</div>
+<div>限制的道路数量。</div>
+<div>以下M行每行含三个正整数x,y,t表示城市x和城市t间连有一条道路，通过所需的时间为t（ 1 &le; t&le; 10000）。</div>
+<div>N&lt;=100,M&lt;=500,L&lt;=6</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>只有一行一个实数，表示 SHUXK 可以获得的最大的愉悦度。 当你</div>
+<div>的答案与标准答案的绝对误差不超过10^-6时即视为正确。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 5 1 5 3
+1 2 2
+1 3 2
+2 4 2
+3 4 2
+4 5 3</pre><hr/><h3>样例输出</h3><pre>0.428571
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4633" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4633" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

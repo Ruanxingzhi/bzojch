@@ -1,0 +1,151 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4252：mx的仙人掌</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">mx的仙人掌</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">mx的仙人掌</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                mx的仙人掌                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>如果一个无向连通图的任意一条边最多属于一个简单环，我们就称之为仙人掌。所谓简单环即不经过重复的结点的环。</div>
+<div>什么是仙人掌</div>
+<div><img src="../file/4252_0.png" width="547" height="243" alt="" /></div>
+<div></div>
+<div>现给定一棵仙人掌，每条边有一个正整数权值，每次给 k 个点（可以存在相同点），问从它们中选出两个点（可以相同），它们之间最短路的最大值是多少。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个非负整数 n,m，表示仙人掌的点数和边数。</div>
+<div>接下来 m 行，每行三个正整数 v,u,w (1&le;v,u&le;n)，表示 v 与 u 之间有一条边权为 w 的无向边。点从 1 开始编号。</div>
+<div>保证输入的图是一棵仙人掌，保证没有自环，但可能有重边。</div>
+<div>接下来一行一个非负整数 Q，表示询问个数。</div>
+<div>接下来 Q 行每行第一个数是正整数 cnt 表示点数，接下来 cnt 个数表示给定的点。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对每个询问输出一个数，表示该询问对应的最大值。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>10 14
+10 7 1
+3 8 7
+1 6 9
+7 2 10
+8 9 9
+1 7 1
+8 5 2
+4 5 4
+1 7 4
+2 9 8
+9 3 3
+8 4 2
+1 6 5
+7 9 10
+6
+2 9 5
+2 8 10
+3 8 7 6
+2 6 4
+3 3 4 2
+1 10</pre><hr/><h3>样例输出</h3><pre>11
+20
+25
+27
+19
+0</pre><hr/><h3>提示</h3><p><div>前五个询问的答案路径分别为(如果有重边则显然走较短的边):</div>
+<div></div>
+<div>9&rarr;8&rarr;5</div>
+<div>8&rarr;9&rarr;7&rarr;10</div>
+<div>8&rarr;9&rarr;7&rarr;1&rarr;6</div>
+<div>4&rarr;8&rarr;9&rarr;7&rarr;1&rarr;6</div>
+<div>2&rarr;9&rarr;8&rarr;4</div>
+<div>最后一个询问的答案显然是0。</div>
+<div></div>
+<div>边权不超过 2^31&minus;1。</div>
+<div>对于 100% 的数据，n,tot&le;300000。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>By matthew99</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4252" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4252" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

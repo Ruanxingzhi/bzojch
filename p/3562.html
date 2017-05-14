@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3562：[SHOI2014]神奇化合物</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SHOI2014]神奇化合物</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SHOI2014]神奇化合物</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SHOI2014]神奇化合物                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">科学家最近发现了一种高分子有机化合物 SHTSC。这种物质的分子由单个或多个原子组成,原子之间通过化学键相互连接。SHTSC 十分不稳定,其原子之间的化学键经常会伴随着炫酷的声音特效和光影效果发生断裂或者重新连接。<br />
+然而,令科学家们大为惊异的是,SHTSC 在变化过程中始终保持着一种特殊的性质:即不存在这样的原子序列 a1,a2,...,an(n&gt;3)满足 a1 与 a2、a2 与<br />
+a3、......、an-1 与 an 以及 an 与 a1 都通过化学键相连,但它们之间却没有其他化学键相连的情况。现在科学家将 SHTSC 的原子由 1 到 n 标号,并告诉你<br />
+SHTSC 的初始形态以及原子之间的化学键变化情况,他们想知道在实验过程中的某些时刻 SHTSC 分裂成了多少个分子?<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">第一行两个整数:n, m。表示 SHTSC 的总原子个数以及初始的化学键数。<br />
+从第二行开始的 m 行,每行两个整数 a, b (1&le;a,b&le;n)。表示编号为 a, b 的两<br />
+个原子在初始状态中有化学键相连。数据保证每对 a, b 只出现一次。<br />
+第 m+2 行有一个整数:q。表示实验的总操作数。<br />
+之后 q 行中的每一行为以下三种操作当中的一种:<br />
+1、A i j 表示 i 号原子与 j 号原子之间形成了一条新的化学键;<br />
+2、D i j 表示 i 号原子与 j 号原子之间原有的化学键断裂了;<br />
+3、Q 询问当前 SHTSC 分裂成了多少个不同的分子。<br />
+数据保证所有的实验操作都是合法的。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">对于每个 Q 操作,输出一行一个整数,为相应时刻的分子个数。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>7 10 
+1 2 
+2 3 
+3 4 
+4 1 
+1 3 
+2 4 
+5 6 
+6 7 
+7 5 
+2 5 
+1 0 
+Q 
+D 2 5 
+Q 
+D 5 6 
+D 5 7 
+Q 
+A 2 5 
+Q 
+A 5 6 
+Q 
+</pre><hr/><h3>样例输出</h3><pre>1
+2
+3
+2
+1
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">对于 100%的数据, n&le;5000,m&le;200000,q&le;10000。</span></p></p><hr/><h3>题目来源</h3><p>By 佚名提供</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3562" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3562" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3148：[Ctsc2013]没头脑和不高兴</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2013]没头脑和不高兴</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ctsc2013]没头脑和不高兴</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ctsc2013]没头脑和不高兴                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">没头脑 和不高兴 是一对形影不离的好朋友，他们一起上学也一起玩耍。<br />
+这天，这对好朋友聚在一起玩纸牌游戏。他们所玩的纸牌总共有N张，每一张上面都有一个1N&nbsp;的数组，任意两张纸牌上的数字都不相同。根据他们制定的游戏规则，在每局游戏的开始，所有的牌需要按照从1N&nbsp;的顺序排好。在开心地完了一局牌之后，他们发现牌的顺序被弄得乱七八遭，将它们排好序是 一件挺麻烦的事情。他们讲凌乱的纸牌在桌面上排成一排，然后开始了排序工作。不高兴 由于在上一局游戏中输了牌，非常不高兴。他只将其中((奇数位置))&nbsp;的牌排成了升序，然后把剩下的任务推给了没头脑。没头脑 非常没头脑，他采取了一个有些 笨的排序方式。每次，他找到两张相邻并且顺序不对的牌交换他们，直到整个 序列被排好序为止。乐于探究的你，想要研究在初始排列随机的情况下没头脑 花在交换纸牌上的时间。假设没头脑 每交换一对纸牌花费的时间为&nbsp;1，你希望求出他排序时间的期望。此外，为了更好地分析这个问题，你还希望能够计算出所花时间的方差。更进一步地，如果((被不高兴排好序的位置发生了变化))，你是否还能求出没头脑 用来排序的时间期望呢？<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">输入文件共&nbsp;M+1&nbsp;行。<br />
+第一行包含两个正整数&nbsp;N,M。<br />
+接下来M行，每行包含三个整数l,r,v。其中 1&nbsp;&lt;=_l&lt;= r&lt;= N,�v属于{1,N}<br />
+若v=0则表示不高兴不再对l&nbsp;到r之间的位置排序；反之若v=1则表示被不高兴 排序的位置将涵盖&nbsp;l到r。<br />
+输出文件共M+2行。每行输出一个形如p/q的有理数，其中gcd(p;q&nbsp;)=1, �q&gt;=1,�<br />
+p,q为整数。<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">第一行输出在初始条件下没头脑 排序时间的期望。 <br />
+第二行输出在初始条件下没头脑 排序时间的方差。<br />
+接下来Ｍ行，每行分别输出在对不高兴 排序的位置进行了前若干次修改之 后没头脑 排序时间的期望。</font></p></p><hr/><h3>样例输入</h3><pre>33
+230 221 131
+2.5 
+</pre><hr/><h3>样例输出</h3><pre>
+
+2/3
+2/9
+3/2
+1/1
+0/1
+
+</pre><hr/><h3>提示</h3><p><p><img width="668" height="215" alt="" src="../file/3148_0.jpg" /></p>
+<p>N&lt;=100000, M=10^5</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3148" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3148" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3280：小R的烦恼</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小R的烦恼</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小R的烦恼</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                小R的烦恼                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt"><span style="font-size: medium">小R最近遇上了大麻烦，他的程序设计挂科了。于是他只好找程设老师求情。善良的程设老师答应不挂他，但是要求小R帮助他一起解决一个难题。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">问题是这样的，程设老师最近要进行一项邪恶的实验来证明P=NP，这个实验一共持续n天，第i天需要a[i]个研究生来给他搬砖。研究生毕竟也是人，所以雇佣研究生是需要钱的，机智的程设老师已经联系好了m所大学，第j所大学共有l[j]个研究生，同时雇佣这所大学的一个研究生需要p[j]元钱。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">本来程设老师满心欢喜的以为，这样捡最便宜的max{a[i]}个研究生雇来，就可以完成实验；结果没想到，由于他要求硕士生们每天工作25个小时不许吃饭睡觉上厕所喝水说话咳嗽打喷嚏呼吸空气，因此一天下来给他搬砖的所有研究生都会进入濒死状态。濒死状态的研究生，毫无疑问，就不能再进行工作了。但是机智的老师早早联系好了k家医院，第i家医院医治一个濒死的研究生需要d[i]天,并且需要q[i]元钱。</span></div>
+<p>
+<divre style="text-indent: 24pt"></divre>
+<span style="font-size: medium">现在，程设老师想要知道，最少花多少钱，能够在这n天中满足每天的需要呢？若无法满足，则请输出&rdquo;impossible&rdquo;。注意，由于程设老师良心大大的坏，所以他是可以不把濒死的研究生送去医院的！</span></p>
+<pre></pre>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本题包含多组数据；第一行是一个数T(T&lt;=11)，表示数据组数，以下T组数据。<br />
+对于每一组数据，第一行三个数，n,m,k;<br />
+以下一行n个数，表示a[1]&hellip;a[n]<br />
+接着一行2m个数，表示l[1],p[1]&hellip;l[n],p[n]<br />
+接着一行2k个数，表示d[1],q[1]&hellip;d[n],q[n]<br />
+</span></p></p><hr/><h3>输出格式</h3><p><p><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每组数据以样例的格式输出一行，两个数分别表示第几组数据和最少钱数。<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>2
+3 2 1
+10 20 30
+40 90 15 100
+1 5
+3 2 1
+10 20 30
+40 90 15 100
+2 5
+</pre><hr/><h3>样例输出</h3><pre>Case 1: 4650
+Case 2: impossible
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">样例解释：买下90块钱的那40个研究生，另外再买10个100块钱的。这样，第一天用完的10个人全部送到医院，那么他们在第三天可以继续使用；同时，第二天和第三天都用新的研究生来弥补，这样一共需要花费40*90 + 10*100 + 5*10 = 4650元。<br />
+数据规模：<br />
+对于30%的数据中的每组数据,<br />
+满足n&lt;=5,m,k&lt;=2,其余数均小于等于100或者 <br />
+n&lt;=10,m,k&lt;=10,其余数均小于等于20.<br />
+对于100%的数据<br />
+n,m,k&lt;=50,其余数均小于等于100.<br />
+</span></p></p><hr/><h3>题目来源</h3><p>网络流</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3280" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3280" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

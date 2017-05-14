@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3731：Gty的超级妹子树</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Gty的超级妹子树</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Gty的超级妹子树</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Gty的超级妹子树                </h1>
+                <p>时间限制：7s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：32MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>我曾在青山之中遇过你，</p>
+<p>新竹做杖，鬓插紫茱萸。</p>
+<p>跣足踏过无边丝雨，</p>
+<p>又拾起燕川雪片片落如席&hellip;&hellip;</p>
+<p><br />
+Gty神(xian)犇(chong)从来不缺妹子&hellip;&hellip;</p>
+<p>他又来到了一棵妹子树下，发现每个妹子有一个美丽度&hellip;&hellip;</p>
+<p>由于Gty很 哲♂学 也很 机♂智，他只对美丽度大于某个值的妹子感兴趣。</p>
+<p>他想知道某个子树中美丽度大于x的妹子个数。</p>
+<p>某个妹子的美丽度可能发生变化&hellip;&hellip;</p>
+<p>树上可能会出现一只新的妹子&hellip;&hellip;</p>
+<p><br />
+但是&hellip;&hellip;树枝可能会断裂，于是，Gty惊讶地发现，他的面前变成了一片妹子树组成的森林&hellip;&hellip;</p>
+<p><br />
+维护一棵初始有n个节点的有根树(根节点为1)，树上节点编号为1-n，每个点有一个权值wi。它可能会变成森林。</p>
+<p>支持以下操作：</p>
+<p>0 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 询问以u为根的子树中，严格大于x的值的个数。(u^=lastans,x^=lastans)</p>
+<p>1 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 把u节点的权值改成x。(u^=lastans,x^=lastans)</p>
+<p>2 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 添加一个编号为&quot;当前树中节点数+1&quot;的节点，其父节点为u，其权值为x。(u^=lastans,x^=lastans)</p>
+<p>3 u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 删除节点u与其父节点之间的路径。此时u的父节点变成叶子节点，u变成分裂出的树的根。(u^=lastans)</p>
+<p>最开始时lastans=0。<br />
+</p></p><hr/><h3>输入格式</h3><p><p>输入第一行包括一个正整数n(1&lt;=n&lt;=100000)，代表树上的初始节点数。</p>
+<p>接下来n-1行，每行2个整数u,v，为树上的一条无向边。</p>
+<p>任何时刻，树上的任何权值大于等于0，且两两不同。</p>
+<p>接下来1行，包括n个整数wi，表示初始时每个节点的权值。</p>
+<p>接下来1行，包括1个整数m(1&lt;=m&lt;=100000)，表示操作总数。</p>
+<p>接下来m行，每行最开始包括一个整数op,</p>
+<p>若op=3，该行还会有一个整数u；</p>
+<p>若op不等于3，该行还会有两个整数u,x；</p>
+<p>op,u,x的范围见题目描述。</p>
+<p>保证题目涉及的所有数在int内。<br />
+</p></p><hr/><h3>输出格式</h3><p><p>对每个op=0，输出一行，包括一个整数，意义见题目描述。</p></p><hr/><h3>样例输入</h3><pre>2
+1 2
+10 20
+1
+0 1 5
+</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p><p>数据范围见描述。</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3731" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3731" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

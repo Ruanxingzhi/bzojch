@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3290：Theresa与数据结构</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Theresa与数据结构</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Theresa与数据结构</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Theresa与数据结构                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 13pt 0cm; line-height: normal"><span style="font-size: medium"><b><span style="font-weight: normal">【题目背景】</span></b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Theresa是个爱思考的女孩&hellip;&hellip;</span></div>
+<div style="margin: 13pt 0cm; line-height: normal"><span style="font-size: medium"><b><span style="font-weight: normal">【问题描述】</span></b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这是个复杂的世界。人类社会，自然界，还有地球之外的银河&hellip;&hellip;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">每一天日出日落，人来人往，步履匆匆。究竟是为什么呢？那支配着一切的至高无上的法则又是否存在呢？Theresa知道，这个问题并不是一朝一夕就可以解答的，只有在仔细、深入的观察和思考以后，才有可能将所有支离破碎的线索联系起来，从而隐约窥见真实的答案。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">于是，Theresa经常思考生活中遇到的大大小小的问题。为什么港台出版的书籍里印刷的汉字她一个也不认识呢？为什么隔夜的白开水中富含一氧化二氢呢？为什么每年都有一段时间<i>Gmail</i>邮箱上不去呢？&hellip;&hellip;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">为了更加系统、科学地分析这些问题，Theresa决定向你求助。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">长话短说，Theresa想请你帮助她实现一个数据结构。这个数据结构的功能是在<b><u>空间直角坐标系</u></b>中维护一个<b><u>点的集合</u></b>，并支持以下三类操作：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium"><i>1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>ADD x y z</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加入一个新的点，点的坐标为(<i>x, y, z</i>)。</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium"><i>2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>QUERY x y z r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i>查询在正方体(<i>x, y, z</i>) - (<i>x+r, y+r, z+r</i>)内部的点的数目。</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium"><i>3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>CANCEL</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 撤销最近的一次<i>ADD</i>操作。</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">其中<i>x, y, z, r</i>均为给出的整数。<i>QUERY</i>操作中，(<i>x, y, z</i>)为正方体的一个顶点的坐标，<i>r</i>为正方体的边长。在正方体<b><u>边界上的点也算在正方体内部</u></b>。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">这个问题可能过于困难，所以Theresa并不强迫你实现一个高效的数据结构。然而，你必须对每一次<i>QUERY</i>操作给出正确的答案。</span></div></p><hr/><h3>输入格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第一行包含一个整数<i>N</i>，表示最初的点集有<i>N</i>个点。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来<i>N</i>行，每行包含三个整数<i>x<sub>i</sub></i>、<i>y<sub>i</sub></i>、<i>z<sub>i</sub></i>，依次表示每个点的坐标。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第<i>N+2</i>行包含一个整数<i>Q</i>，表示将有<i>Q</i>次操作。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来<i>Q</i>行，每行表示一次操作，格式如题目描述。</span></div></p><hr/><h3>输出格式</h3><p><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出若干行，每行一个整数，依次表示每次查询操作的答案。</span></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+1 2 3
+1 1 3
+7
+ADD 0 4 3
+QUERY 0 0 0 4
+ADD 1 1 5
+QUERY 1 1 2 3
+QUERY 0 2 2 1
+CANCEL
+QUERY 1 1 2 3
+
+</pre><hr/><h3>样例输出</h3><pre>3
+3
+1
+2
+
+样例说明
+　　第1次查询正方体(0, 0, 0) - (4, 4, 4)，内部包含点(1, 2, 3)，(1, 1, 3)，(0, 4, 3)。
+　　第2次查询正方体(1, 1, 2) - (4, 4, 5)，内部包含点(1, 2, 3)，(1, 1, 3)，(1, 1, 5)。
+　　第3次查询正方体(0, 2, 2) - (1, 3, 3)，内部包含点(1, 2, 3)。
+　　第4次查询正方体(1, 1, 2) - (4, 4, 5)，内部包含点(1, 2, 3)，(1, 1, 3)。
+
+
+</pre><hr/><h3>提示</h3><p><p>　　对于100%的数据：1 &le; N + Q &le; 100 000， 0 &le; x, y, z, r &le; 107。r 为正整数。所有的CANCEL操作均为有效操作。不同的点的坐标可能重合。<br />
+</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3290" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3290" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

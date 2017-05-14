@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2840：小强的逃跑</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小强的逃跑</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">小强的逃跑</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                小强的逃跑                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>小强建立了一个洞穴，洞穴由N个点、M条有向边组成，可能有自环、重边。每个边有一个体力消耗值。当小强感觉</div>
+<div>到危险的时候，它会进行低智商的逃跑行为，具体说，是从一个点开始跑，每一步：它有P的概率从这个点钻出洞</div>
+<div>穴终止逃跑；1-P的概率沿着从当前点连出的体力消耗值最小的边移动到另一个点（此时，如果有多个连出的边的</div>
+<div>消耗值一样且都是最小的，小强会选择到达的点的编号比较小的边。如果当前点没有连出的边，它会以相等的概率</div>
+<div>穿越到一个随机的点，穿越不用体力，具体请见样例解释）。小强想知道，从一个点开始逃跑直到终止，它消耗的</div>
+<div>体力的期望是多少？还有，洞穴是在动态变化的。每次，某条边的权值可能由原来的数变成另一个数。你要不停地</div>
+<div>接受修改，同时回答小强的询问。</div>
+</div></p><hr/><h3>输入格式</h3><p><div>
+<div>第一行有三个数：两个正整数N，M，表示点的个数和边的个数，还有一个实数P，表示小强终止逃跑的概率。接下</div>
+<div>来M行，每行三个正整数a,b,c，表示从点a到点b有一条权值为c的有向边。点从1编号到N。接下来一个非负整数Q，</div>
+<div>表示操作的个数。接下来Q行，每行一个操作，是下面的格式之一：0 x y 表示把输入文件中输入的第x条边的权值</div>
+<div>变成y1 x 表示查询当前状态下，从点x开始逃跑，小强消耗的体力的期望是多少。</div>
+</div></p><hr/><h3>输出格式</h3><p><div>对于输入的每个询问操作，输出一行一个数表示小强从某个点开始逃跑的体力消耗的期望。四舍五入到整数。</div></p><hr/><h3>样例输入</h3><pre>3 3 0.1
+1 2 1
+1 3 1
+3 1 1
+4
+1 1
+0 1 2
+1 1
+1 2
+</pre><hr/><h3>样例输出</h3><pre>5
+9
+8
+</pre><hr/><h3>提示</h3><p><div>【样例解释】</div>
+<div>这张图开始的时候有3个点，3条边。</div>
+<div>在开始状态下：</div>
+<div>如果小强在点1，它会以0.9的概率跑向点2（消耗体力值1），0.1的概率停止；</div>
+<div>如果小强在点2，这个点没有连出的边，所以它会以0.3的概率穿越到点1，0.3的概率穿越到点2（也就是不动），0.3的概率穿越到点3，0.1的概率停止；</div>
+<div>如果小强在点3，它会以0.9的概率跑向点1（消耗体力值1），0.1的概率停止。 &nbsp;&nbsp;</div>
+<div>为了计算这种情况下小强从点1出发的体力消耗期望，我们设x、y、z 分别表示小强从点1、2、3出发的体力消耗值，那么有：</div>
+<div>x=0.9*(y+1)</div>
+<div>y=0.3x+0.3y+0.3z</div>
+<div>z=0.9*(x+1)</div>
+<div>解这个方程得到x=873/187，y=783/187，z=954/187。所以，从点1 出发的体力消耗的期望是4.6684492，四舍五入之后就是5。</div>
+<div>后来，从点1到点2的边的体力值变成了2。这样，小强从点1出发，它就会以0.9的概率跑向点3，0.1的概率停止。此时方程变成：</div>
+<div>x=0.9*(z+1)</div>
+<div>y=0.3x+0.3y+0.3z</div>
+<div>z=0.9*(x+1)&nbsp;</div>
+<div>这个方程的解是x=z=9，y=54/7。所以，从点1 出发的体力消耗的期望是9，从点2出发的体力消耗的期望是7.7142857142，四舍五入之后就是8。</div>
+<div>【数据说明】</div>
+<div>&nbsp;对于100%的数据，N&lt;=50000，Q&lt;=100000，1&lt;=M&lt;=1000000，每条边的体</div>
+<div>力消耗值为介于1到1000的一个正整数。</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2840" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2840" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

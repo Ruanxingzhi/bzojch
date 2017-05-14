@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2662：[BeiJing wc2012]冻结 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing wc2012]冻结 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[BeiJing wc2012]冻结 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [BeiJing wc2012]冻结                 </h1>
+                <p>时间限制：3s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">&nbsp; &ldquo;我要成为魔法少女！&rdquo;&nbsp;&nbsp; <br />
+&nbsp; &ldquo;那么，以灵魂为代价，你希望得到什么？&rdquo; <br />
+&ldquo;我要将有关魔法和奇迹的一切，封印于卡片之中&bdquo;&bdquo;&rdquo;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; <br />
+&nbsp; 在这个愿望被实现以后的世界里，人们享受着魔法卡片（SpellCard，又名符<br />
+卡）带来的便捷。 <br />
+&nbsp;<br />
+现在，不需要立下契约也可以使用魔法了！你还不来试一试？ <br />
+&nbsp; 比如，我们在魔法百科全书（Encyclopedia&nbsp; of&nbsp; Spells）里用&ldquo;freeze&rdquo;作为关<br />
+键字来查询，会有很多有趣的结果。 <br />
+例如，我们熟知的Cirno，她的冰冻魔法当然会有对应的 SpellCard 了。 当然，<br />
+更加令人惊讶的是，居然有冻结时间的魔法，Cirno 的冻青蛙比起这些来真是小<br />
+巫见大巫了。 <br />
+这说明之前的世界中有很多魔法少女曾许下控制时间的愿望，比如 Akemi <br />
+Homura、Sakuya Izayoi、&bdquo;&bdquo; <br />
+当然，在本题中我们并不是要来研究历史的，而是研究魔法的应用。 <br />
+&nbsp;<br />
+我们考虑最简单的旅行问题吧：&nbsp; 现在这个大陆上有 N 个城市，M 条双向的<br />
+道路。城市编号为 1~N，我们在 1 号城市，需要到 N 号城市，怎样才能最快地<br />
+到达呢？ <br />
+&nbsp; 这不就是最短路问题吗？我们都知道可以用 Dijkstra、Bellman-Ford、<br />
+Floyd-Warshall等算法来解决。 <br />
+&nbsp; 现在，我们一共有 K 张可以使时间变慢 50%的 SpellCard，也就是说，在通<br />
+过某条路径时，我们可以选择使用一张卡片，这样，我们通过这一条道路的时间<br />
+就可以减少到原先的一半。需要注意的是： <br />
+&nbsp; 1. 在一条道路上最多只能使用一张 SpellCard。 <br />
+&nbsp; 2. 使用一张SpellCard 只在一条道路上起作用。 <br />
+&nbsp; 3. 你不必使用完所有的 SpellCard。 <br />
+&nbsp;&nbsp; <br />
+&nbsp; 给定以上的信息，你的任务是：求出在可以使用这不超过 K 张时间减速的<br />
+SpellCard 之情形下，从城市1 到城市N最少需要多长时间。 </span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium"><br />
+第一行包含三个整数：N、M、K。 <br />
+接下来 M 行，每行包含三个整数：Ai、Bi、Timei，表示存在一条 Ai与 Bi之<br />
+间的双向道路，在不使用 SpellCard 之前提下，通过它需要 Timei的时间。 </span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出一个整数，表示从1 号城市到 N号城市的最小用时。 </span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>4 4 1 
+1 2 4 
+4 2 6 
+1 3 8 
+3 4 8 
+</pre><hr/><h3>样例输出</h3><pre>7 
+【样例1 解释】 
+  在不使用 SpellCard 时，最短路为 1à2à4，总时间为 10。现在我们可
+以使用 1 次 SpellCard，那么我们将通过 2à4 这条道路的时间减半，此时总
+时间为7。 
+</pre><hr/><h3>提示</h3><p><p>对于100%的数据：1&nbsp; &le;&nbsp; K&nbsp; &le;&nbsp; N &le;&nbsp; 50，M&nbsp; &le;&nbsp; 1000。 <br />
+&nbsp; 1&le;&nbsp; Ai，Bi &le;&nbsp; N，2 &le;&nbsp; Timei&nbsp; &le;&nbsp; 2000。 <br />
+为保证答案为整数，保证所有的 Timei均为偶数。 <br />
+所有数据中的无向图保证无自环、重边，且是连通的。&nbsp;&nbsp;&nbsp;<br />
+&nbsp;</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2662" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2662" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

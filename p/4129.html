@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4129：Haruna’s Breakfast</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Haruna’s Breakfast</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Haruna’s Breakfast</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Haruna’s Breakfast                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>&nbsp;Haruna每天都会给提督做早餐！ 这天她发现早饭的食材被调皮的 Shimakaze放到了一棵</p>
+<div>树上，每个结点都有一样食材，Shimakaze要考验一下她。</div>
+<div>每个食材都有一个美味度，Shimakaze会进行两种操作：</div>
+<div>1、修改某个结点的食材的美味度。</div>
+<div>2、对于某条链，询问这条链的美味度集合中，最小的未出现的自然数是多少。即mex值。</div>
+<div>请你帮帮Haruna吧。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>第一行包括两个整数n，m，代表树上的结点数(标号为1~n)和操作数。</p>
+<div>第二行包括n个整数a1...an，代表每个结点的食材初始的美味度。</div>
+<div>接下来n-1行，每行包括两个整数u，v，代表树上的一条边。</div>
+<div>接下来m 行，每行包括三个整数</div>
+<div>0 u x 代表将结点u的食材的美味度修改为 x。</div>
+<div>1 u v 代表询问以u，v 为端点的链的mex值。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>对于每次询问，输出该链的mex值。</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>10 10
+1 0 1 0 2 4 4 0 1 0
+1 2
+2 3
+2 4
+2 5
+1 6
+6 7
+2 8
+3 9
+9 10
+0 7 14
+1 6 6
+0 4 9
+1 2 2
+1 1 8
+1 8 3
+0 10 9
+1 3 5
+0 10 0
+0 7 7</pre><hr/><h3>样例输出</h3><pre>0
+1
+2
+2
+3</pre><hr/><h3>提示</h3><p><p>1&lt;=n&lt;=5*10^4</p>
+<div>1&lt;=m&lt;=5*10^4</div>
+<div>0&lt;=ai&lt;=10^9</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4129" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4129" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

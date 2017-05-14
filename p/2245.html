@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2245：[SDOI2011]工作安排</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2011]工作安排</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[SDOI2011]工作安排</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [SDOI2011]工作安排                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你的公司接到了一批订单。订单要求你的公司提供</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">类产品，产品被编号为</span><span lang="EN-US"><font face="Times New Roman">1~n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，其中第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">类产品共需要</span><span lang="EN-US"><font face="Times New Roman">C<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">件。公司共有</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">名员工，员工被编号为</span><span lang="EN-US"><font face="Times New Roman">1~m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">员工能够制造的产品种类有所区别。一件产品必须完整地由一名员工制造，不可以由某名员工制造一部分配件后，再转交给另外一名员工继续进行制造。</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">我们用一个由</span><span lang="EN-US"><font face="Times New Roman">0</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">组成的</span><span lang="EN-US"><font face="Times New Roman">m*n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的矩阵</span><span lang="EN-US"><font face="Times New Roman">A</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">来描述每名员工能够制造哪些产品。矩阵的行和列分别被编号为</span><span lang="EN-US"><font face="Times New Roman">1~m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">1~n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><font face="Times New Roman"><span lang="EN-US">A</span><span lang="EN-US"><sub>i,j</sub></span></font><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">表示员工</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">能够制造产品</span><span lang="EN-US"><span style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><font face="Times New Roman">j</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，为</span><span lang="EN-US"><font face="Times New Roman">0</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">表示员工</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">不能制造产品</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">如果公司分配了过多工作给一名员工，这名员工会变得不高兴。我们用愤怒值来描述某名员工的心情状态。愤怒值越高，表示这名员工心情越不爽，愤怒值越低，表示这名员工心情越愉快。员工的愤怒值与他被安排制造的产品数量存在某函数关系，鉴于员工们的承受能力不同，不同员工之间的函数关系也是有所区别的。</font></span></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于员工</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，他的愤怒值与产品数量之间的函数是一个</span><span lang="EN-US"><font face="Times New Roman">S<sub>i</sub>+1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">段的分段函数。当他制造第</span><span lang="EN-US"><font face="Times New Roman">1~T<sub>i,1</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">件产品时，每件产品会使他的愤怒值增加</span><span lang="EN-US"><font face="Times New Roman">W<sub>i,1</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，当他制造第</span><span lang="EN-US"><font face="Times New Roman">T<sub>i,1</sub>+1~T<sub>i,2</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">件产品时，每件产品会使他的愤怒值增加</span><span lang="EN-US"><font face="Times New Roman">W<sub>i,2</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&hellip;&hellip;为描述方便，设</span><span lang="EN-US"><font face="Times New Roman">T<sub>i,0</sub>=0,T<sub>i,s<span style="position: relative; top: 2pt; mso-text-raise: -2.0pt">i+1</span></sub><span style="position: relative; top: 2pt; mso-text-raise: -2.0pt">=</span></font></span><span lang="EN-US" style="font-family: 宋体; position: relative; top: 2pt; mso-text-raise: -2.0pt">+</span><span style="font-family: 宋体; position: relative; top: 2pt; mso-text-raise: -2.0pt">&infin;</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，那么当他制造第</span><span lang="EN-US"><font face="Times New Roman">T<sub>i,j-1</sub>+1~T<sub>i,j</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">件产品时，每件产品会使他的愤怒值增加</span><span lang="EN-US"><font face="Times New Roman">W<sub>i,j</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman"> 1</font></span><span style="font-family: 宋体">&le;</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体">&le;<span lang="EN-US">S<sub>i</sub>+1</span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你的任务是制定出一个产品的分配方案，使得订单条件被满足，并且所有员工的愤怒值之和最小。由于我们并不想使用</span><span lang="EN-US"><font face="Times New Roman">Special Judge</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，也为了使选手有更多的时间研究其他两道题目，你只需要输出最小的愤怒值之和就可以了。</span></font></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行包含两个正整数</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，分别表示员工数量和产品的种类数；</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第二行包含</span><span lang="EN-US"><font face="Times New Roman">n </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数，第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数为</span><span lang="EN-US"><font face="Times New Roman">C<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">；</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">以下</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行每行</span><span lang="EN-US"><font face="Times New Roman">n </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数描述矩阵</span><span lang="EN-US"><font face="Times New Roman">A</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">；</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下面</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个部分，第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">部分描述员工</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的愤怒值与产品数量的函数关系。每一部分由三行组成：第一行为一个非负整数</span><span lang="EN-US"><font face="Times New Roman">S<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，第二行包含</span><span lang="EN-US"><font face="Times New Roman">S<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数，其中第</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数为</span><span lang="EN-US"><font face="Times New Roman">T<sub>i,j</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，如果</span><span lang="EN-US"><font face="Times New Roman">S<sub>i</sub>=0</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">那么输入将不会留空行（即这一部分只由两行组成）。第三行包含</span><span lang="EN-US"><font face="Times New Roman">S<sub>i</sub>+1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数，其中第</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个正整数为</span><span lang="EN-US"><font face="Times New Roman">W<sub>i,j</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI0" style="margin: 0cm 0cm 0pt"></p></p><hr/><h3>输出格式</h3><p><p class="NOI0" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">仅输出一个整数，表示最小的愤怒值之和。</font></span></p>
+<p class="NOI" style="margin: 13pt 0cm"></p></p><hr/><h3>样例输入</h3><pre>
+2 3
+
+2 2 2
+
+1 1 0
+
+0 0 1
+
+1
+
+2
+
+1 10
+
+1
+
+2
+
+1 6
+
+</pre><hr/><h3>样例输出</h3><pre>24
+
+</pre><hr/><h3>提示</h3><p><p><img height="111" width="797" alt="" src="../file/2245_0.jpg" /></p></p><hr/><h3>题目来源</h3><p>第一轮day2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2245" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2245" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

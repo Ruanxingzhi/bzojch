@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2913：[Poi1997]XOR Gates</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1997]XOR Gates</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi1997]XOR Gates</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi1997]XOR Gates                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium"><br />
+一个异或门有两组输入并产生一组输出：</span></p>
+<p><span style="font-size: medium">input 1&nbsp;&nbsp; input 2&nbsp;&nbsp;&nbsp; output<br />
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br />
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br />
+&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br />
+&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span></p>
+<p><span style="font-size: medium">如果一个有n个输入1个输出的 由异或门构成的系统 满足下列条件，那么称它为异或网络：</span></p>
+<p><span style="font-size: medium">1. 网络的每个输入端和至少一个异或门的输入端相连接<br />
+2. 每个异或门的输入端和网络的输入端或者某个异或门的输出端相连<br />
+3. 只有一个异或门的输出端和网络的输出端相连<br />
+4. 每个异或门的输出端要么和至少一个异或门的输入端相连，要么和网络的输出端相连<br />
+5. 存在一个对异或门的编号方式，使得对每个异或门的每个输入端都连接到网络的输入端 或者 一个编号更小的异或门的输出端</span></p>
+<p><span style="font-size: medium">例如：</span></p>
+<p><span style="font-size: medium">&lt;img src=&quot;</span><a href="http://main.edu.pl/images/OI4/xor1.gif"><span style="font-size: medium">http://main.edu.pl/images/OI4/xor1.gif</span></a><span style="font-size: medium">&quot; alt=&quot;example /&gt;</span></p>
+<p><span style="font-size: medium">这是个由6个异或门组成的网络，它有5个输入端和1个输出端，并且满足上述所有条件，所以它是个异或网络。注意：上图中的编号并不符合第五个要求，但是确实存在一种编号方法使它满足第五个要求。</span></p>
+<p><span style="font-size: medium">一个网络的输入端从1到n编号。每个引脚的高低电位由一个长度为n的01字符串给定。我们假设第i个字符代表着第i个输入引脚的电位。对于每一组输入电位，网络产生一个输出电位，用01表示。注意到每组输入的字符串都是一个代表自然数的二进制串，所以我们可以把输入的字符串按照它们代表的自然数的大小排序。我们会发送固定范围内的自然数到输入端，然后记下有多少次返回了1。</span></p>
+<p><span style="font-size: medium">你的任务：</span></p>
+<p><span style="font-size: medium">写一个程序：</span></p>
+<p><span style="font-size: medium">* 读入关于异或网络的描述：输入引脚数量n，异或门数量m，连接到网络的输出引脚的异或门编号，以及异或门的连接方式<br />
+* 读入两个长度为n的二进制串，代表上下区间<br />
+* 计算区间内有多少组输入会使网络返回1<br />
+* 输出答案</span></p>
+<p><span style="font-size: medium">假设 3 &lt;= n &lt;= 100，3 &lt;= m &lt;= 3000，输入门从1到m任意编号。</span></p>
+<p></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">第一行，3个整数：输入引脚数量n，异或门数量m，连接到网络的输出引脚的异或门编号</span></p>
+<p><span style="font-size: medium">接下来m行代表异或门的连接方式，在这里的第i行代表第i个异或门的两个输入端，输入在[-n, m]的两个数：如果是-k那么连接到第k个异或门的输入脚，否则连接到输出脚。</span></p>
+<p><span style="font-size: medium">最后有两行n位的字符串，代表着上下区间。假设给定的字符串长度不超过 100000</span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">一个数：对于给定区间内的输入，有多少个会得到1</span></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 6 5
+-1 -2
+1 3
+1 -2
+2 -3
+4 6
+-4 -5
+00111
+01110
+
+
+</pre><hr/><h3>样例输出</h3><pre>
+5
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2913" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2913" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

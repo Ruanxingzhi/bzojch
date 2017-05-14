@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2978：[Poi2002]协议</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2002]协议</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2002]协议</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2002]协议                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Mr ZHU 在一个通讯公司工作，他承担了公司的网络协议设计任务。目前他致力于通过一条电缆从一台电脑发送数据到另一台电脑。在电缆中有<i>k</i> 种不同的电平，而每秒电平有1/<i>n</i> 种变化 (1/<i>n</i> 秒这个常数，我们称之为一个<b>脉冲</b>).数据打包发送时，包含了<i>m</i>个连续的脉冲。(即每 <i>m</i>/<i>n</i> 秒发送一个包).</div>
+<div>由于技术原因, 在每个包里的电平并稳定为一个常数, 而是不得不一次次改变. 严格地讲,包含连续<i>l</i>个脉冲电平相同的数据包将不能发送.</div>
+<div>如果某种协议允许发送<i>x</i> 个不同的包，那么能对一个包进行log<sub>2</sub><i>x</i>二进制位的编码. Mr ZHU 想知道在1秒内最多能发送多少位信息.</div>
+<div style="margin: auto 0cm"><b><font size="4">例如</font></b></div>
+<div>假设电缆允许我门发送2种不同的电平的信息(<i>k</i>=2), 我们用0 和 1表示. 如果电平每秒有20次变化 (<i>n</i>=20), 包含有4 个脉冲(<i>m</i>=4), 在每个包内有3 个连续的脉冲具有同一种电平(<i>l</i>=3), 这时我们不能发送这些包: 0000, 0001, 1000, 1111, 1110, 0111. 但是可以发送这些包: 0010, 0011, 0100, 0110, 0101, 1101, 1100, 1011, 1001 and 1010. 当一个要发送10个不同种类的包，我们对每个包进行log<sub>2</sub>10 位信息编码. 在一秒内可以发送20/4 = 5 个包, 也就是5*log<sub>2</sub>10 ~ 16.6096 位信息.</div></p><hr/><h3>输入格式</h3><p><div style="text-indent: 18pt">&nbsp;有四个整数：</div>
+<ul type="disc">
+    <li>电平种类 <i>k</i> (2 &lt;= k &lt;= 10),</li>
+    <li>脉冲的频率 <i>n</i> (1 &lt;= <i>n</i> &lt;= 1000),</li>
+    <li>数据包的大小 <i>m</i> (1 &lt;= <i>m</i> &lt;= 100),</li>
+    <li>在一个包中连续脉冲的数目<i>l</i>, 也就是说在这个范围内必须改变电平 (2 &lt;= <i>l</i> &lt;= <i>m</i>),</li>
+</ul>
+<div style="text-indent: 18pt">我们假设 <i>n</i>/<i>m</i> 是一个不超过10的整数.</div>
+<div style="text-indent: 21pt"></div></p><hr/><h3>输出格式</h3><p><div style="text-indent: 21pt">写入一个整数，为一秒内最大能发送数据包的位数，答案四舍五入取整</div>
+<p>
+<divre></divre>
+</p></p><hr/><h3>样例输入</h3><pre>2 20 4 3
+
+
+
+
+ 
+</pre><hr/><h3>样例输出</h3><pre>16
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2978" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2978" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

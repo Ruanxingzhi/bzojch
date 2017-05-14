@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4333：JSOI2012 智者的考验</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JSOI2012 智者的考验</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">JSOI2012 智者的考验</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                JSOI2012 智者的考验                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>公元1371年，太祖下令在北极阁上大建庙宇，短短几年，鸡笼山上便建成了帝王庙、关公庙、真武庙、功臣庙、蒋王庙、都城隍庙、卞壶庙、忠烈庙、刘越王庙、曹武惠王庙共十座庙宇，统称为&ldquo;十庙&rdquo;。&nbsp;</div>
+<div>后来，为了方便人们来鸡笼山进香礼佛，太祖下令疏通了鸡笼山下已淤塞多年的潮沟。于是，便有了&ldquo;进香河&rdquo;。&nbsp;</div>
+<div>然而并不是所有人都可以来鸡笼山的，太祖在进香河上修建了一座石桥，中间悬挂了一块高Rx宽Ry的机关格图（如下图所示）。所有格子都是活动可翻转的，一面是白色，一面是黑色，这里我们用0表示白色，用1表示黑色。初始情况下，所有格子都是白色面朝前的。有Rx+Ry个机关按钮，对应Rx行和Ry列。一个按钮一旦触发，就会引发对应的一行或一列的格子同时翻转。&nbsp;</div>
+<div></div>
+<div>同时，善于识天象的谋臣刘基给出了一种黑白状态，称之为&ldquo;厄运星&rdquo;。每一位过往前去鸡笼山的人都需要触发且只触发一个按钮，触发后，如果来访者呈&ldquo;厄运星&rdquo;形状，则不允许通过。&nbsp;</div>
+<div>每一天要来鸡笼山的人数N是事先就知道的，同时天朝神威浩荡，每一位来者一开始总是有很大概率触发编号为1的按钮，我们不妨用数列A1,A2,&hellip;,AN来表示，问题保证了初始时候的A数列全为1。同时在整个问题中，Ai满足1&lt;=Ai&lt;=Rx+Ry。太祖很关心那些不允许去鸡笼山的人数。于是他时不时就会询问关于&ldquo;某一段时间内会有多少人不能通过&ldquo;厄运星&rdquo;的考验&rdquo;。然而那些前来鸡笼山的文人墨客并不愿意如此单一的操作。来访者有可能会突然决定修改自己的触发按钮。更麻烦的情况，结伴而来的连续若干人会突然决定修改触发按钮并且都去触发同一个按钮。&nbsp;</div>
+<div>现在这麻烦的问题交给了你。&nbsp;</div>
+<div></div>
+<div>后记：&nbsp;</div>
+<div>等到了乾隆时期，一位人称纪昀的才子来访此地，告诉了人们一套方法，从此再也没有人会不被允许通过了。久而久之，鸡笼山烟火依旧，然这机关格图的故事便渐渐失传了。直到今天才再一次被世人所了解。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入文件第一行有2个数字Rx和Ry表示机关格图的高和宽（如图所示）。之后Rx行每一行Ry个数字，描述了&ldquo;厄运星&rdquo;形状，每一个数字都满足非0即1.&nbsp;</div>
+<div>之后一行有两个数字，分别为N和M，表示人数和询问修改的次数。&nbsp;</div>
+<div>之后M行，对应M次询问或修改。每一行先有一个数字t：&nbsp;</div>
+<div>若t为0：之后有2个数字d和x，表明将Ad修改为x。&nbsp;</div>
+<div>若t为1：之后有2个数字l和r，表明询问第l个人到第r个人中有多少人触发按钮后会出现&ldquo;厄运星&rdquo;形状，从而无法通过。</div>
+<div>若t为2：之后有3个数字l,r和x，表面将Al,Al+1,&hellip;,Ar-1,Ar都修改为x。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每一次询问(即t为1的情况)，输出单独一行，一个整数描述了在区间[l,r]中满足要求的人数。&nbsp;</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2 3 
+0 0 1 
+1 1 0 
+7 4 
+1 1 7 
+0 2 3 
+0 3 4	
+1 1 7 </pre><hr/><h3>样例输出</h3><pre>0 
+3 </pre><hr/><h3>提示</h3><p><p>对于100%的数据，N&lt;=1000000，M&lt;=120000，Rx&lt;=2，Ry&lt;=3。</p>
+<p>应上传者要求，此题不公开，如有异议，请提出.</p>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4333" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4333" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

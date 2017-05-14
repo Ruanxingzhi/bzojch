@@ -1,0 +1,151 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2495：Universal Question Answering System</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Universal Question Answering System</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Universal Question Answering System</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Universal Question Answering System                </h1>
+                <p>时间限制：2s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;Every student needs help from getting new knowledge by asking questions. Surveys are suggesting that some similar questions are repeated frequently. So it will be nice to develop an automatic question-answering system to answer these questions. Your algorithm should not have any prior knowledge, but it must be able to read sentences and remember the mentioned facts. Whenever the question is asked about such a fact, the system has to answer it properly.</span></div>
+<div class="panel_bottom"></div>
+<p><span style="font-size: medium"><br />
+给你两种陈述句的格式，通过其给定的关系建立一张关系网，然后在给定的疑问句中确认两个东西在关系网中是否存在关系。</span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">&nbsp;The input consists of many dialogues.<br />
+&nbsp;&nbsp;There is a single positive integer T on the first line of input. (T &lt;= 500, but note that 95% of them are relatively small) It denotes the number of following dialogues. Each dialogue includes one or more lines. Each line contains one sentence: either a statement or a question. Statements end with a dot character (.) while questions end with a question mark (?). There is one extra line after each dialogue. That line ends with an exclamation mark (!). The definitions of the statements and questions will be discussed later.<br />
+<br />
+Sentences can contain words, spaces and punctuation characters. All words contain only Latin letters and are case-sensitive. Unlike the normal English writing rules, the first letter of a sentence should keep lowercase unless the first word itself should begin with a capital letter. There are no extra spaces between words. No word will have more than 10 characters. There will be at most 1000 lines per dialogue.<br />
+<b>Statements</b><br />
+Each statement has one of the following forms:<br />
+<i><br />
+noun_phrase are noun_phrase.<br />
+noun_phrase can verb_phrase.<br />
+everything which can verb_phrase can verb_phrase.<br />
+everything which can verb_phrase are noun_phrase.<br />
+</i><br />
+noun_phrase and verb_phrase are both single word. The meanings of the four forms are:<br />
+<br />
+A are B: If X is A, then X is B.<br />
+A can B: If X is A, then X has the ability to B.<br />
+everything which can A can B: If X has the ability to A, X has the ability to B.<br />
+everything which can A are B: If X has the ability to A, X is B.<br />
+<br />
+<b>Questions</b><br />
+Each question has one of the following forms:<br />
+<i><br />
+are noun_phrase noun_phrase?<br />
+can noun_phrase verb_phrase?<br />
+can everything which can verb_phrase verb_phrase?<br />
+are everything which can verb_phrase noun_phrase?<br />
+</i><br />
+<br />
+They are the question form of the statements.<br />
+<br />
+In each test case, the number of different noun phrases will not exceed 100; the number of different verb phrases will not exceed 100.<br />
+</span></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">&nbsp;&nbsp;For each test case, output two lines. The first line describes the test case number counting from 1, while the second line contains the same number of characters as the number of questions in this test case. Each character is either &lsquo;Y&rsquo;(denoting you can get that fact logically) or &lsquo;M&rsquo;(otherwise), without quotes.</span></p>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div></p><hr/><h3>样例输入</h3><pre>1
+flies can fly.
+flies are insects.
+everything which can fly are animals.
+are everything which can fly insects?
+are flies animals?
+can flies eat?
+everything which can fly can eat.
+can flies eat?
+Bye!
+ 
+
+ 
+
+</pre><hr/><h3>样例输出</h3><pre>Case #1:
+MYMY
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Acm 2011 上海</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2495" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2495" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2530：[Poi2011]Party</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Party</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Poi2011]Party</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Poi2011]Party                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="line-height: 140%" align="left"><span style="font-size: medium"><span style="color: rgb(68,68,68); line-height: 140%">Byteasar intends to throw up a party. Naturally, he would like it to be a success. Furthermore, Byteasar is quite certain that to make it so it suffices if all invited guests know each other. He is currently trying to come up with a list of his friends he would like to invite. Byteasar has friends, where is divisible by 3. Fortunately, most of Byteasar's friends know one another. Furthermore, Byteasar recalls that he once attended a party where there were2/3 n of his friends, and where everyone knew everyone else. Unfortunately, Byteasar does not quite remember anything else from that party... In particular, he has no idea which of his friends attended it. Byteasar does not feel obliged to throw a huge party, but he would like to invite at least n/3of his friends. He has no idea how to choose them, so he asks you for help. </span></span></div>
+<div style="line-height: 140%" align="left"><span style="font-size: medium">给定一张N（保证N是3的倍数）个节点M条边的图，并且保证该图存在一个大小至少为2N/3的团。</span></div>
+<p></p>
+<pre style="font-family: arial, verdana, helvetica, sans-serif! important"><span style="font-size: medium">请输出该图的任意一个大小为N/3的团。 一个团的定义为节点的一个子集，该子集中的点两两有直接连边。 输入： 第一行是两个整数N,M。 接下来有M行，每行两个整数A,B，表示A和B有连边。保证无重边。 输出： N/3个整数，表示你找到的团。 数据范围：&nbsp;</span></pre>
+<p></p>
+<div style="line-height: 140%" align="left"></div>
+<p><span style="font-size: medium">3&lt;=N&lt;=3000,[3/2 n(2/3 n -1)]/2&lt;=M&lt;=[n(n-1)/2]</span></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 12pt; color: #444444; line-height: 140%; font-family: Tahoma; mso-font-kerning: 0pt">In the first line of the standard input two integers, n and M(3&lt;=N&lt;=3000,[3/2 n(2/3 n -1)]/2&lt;=M&lt;=[n(n-1)/2]), are given, separated by a single space. These denote the number of Byteasar's friends and the number of pairs of his friends who know each other, respectively. Byteasar's friends are numbered from 1 to <v:shapetype id="_x0000_t75" stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width: 6.75pt; height: 5.25pt; mso-wrap-style: square; mso-position-horizontal-relative: page; mso-position-vertical-relative: page"><v:imagedata o:href="http://main.edu.pl/en/images/OI18/imp-en-tex.9.png" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image001.gif"></v:imagedata></v:shape>. Each of the following <v:shape id="_x0000_i1026" type="#_x0000_t75" style="width: 10.5pt; height: 5.25pt; mso-wrap-style: square; mso-position-horizontal-relative: page; mso-position-vertical-relative: page"><v:imagedata o:href="http://main.edu.pl/en/images/OI18/imp-en-tex.10.png" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image002.gif"></v:imagedata></v:shape>lines holds two integers separated by a single space. The numbers in line no.i+1(for i=1,2,...,m) are Ai and Bi(1&lt;=Ai&lt;Bi&lt;=N), separated by a single space, which denote that the persons Ai and Bi now each other. Every pair of numbers appears at most once on the input. <o:p></o:p></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><div style="line-height: 140%" align="left"><span style="font-size: 12pt; color: #444444; line-height: 140%">In the first and only line of the standard output your program should print N/3numbers, separated by single spaces, in increasing order. These number should specify the numbers of Byteasar's friends whom he should invite to the party. As there are multiple solutions, pick one arbitrarily. </span></div></p><hr/><h3>样例输入</h3><pre>6 10
+2 5
+1 4
+1 5
+2 4
+1 3
+4 5
+4 6
+3 5
+3 4
+3 6</pre><hr/><h3>样例输出</h3><pre>2 4</pre><hr/><h3>提示</h3><p><p><br />
+Explanation of the example: Byteasar's friends numbered 1, 3, 4, 5 know one another. However, any pair of Byteasar's friends who know each other, like 2 and 4 for instance, constitutes a correct solution, i.e., such a pair needs not be part of aforementioned quadruple.</p>
+<p>请不要提交！</p>
+<p></p></p><hr/><h3>题目来源</h3><p>鸣谢 Object022&suhang</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2530" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2530" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

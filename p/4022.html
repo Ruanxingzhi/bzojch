@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4022：新试题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">新试题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">新试题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                新试题                </h1>
+                <p>时间限制：80s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>有一天，ydc在网上乱逛的时候，发现了一场比赛。这场比赛要求正好n个人参加，且如果你能在这场比赛中获得第i名，那么你可以得到pi的软妹币。</div>
+<div>有奖金可以拿，ydc是自然不会放过这个便宜的，而且软妹币肯定是拿得越多越好。所以ydc制定了一系列的策略，并且提前了解了其他n-1名选手的各项能力，根据他们的能力值分别计算出了他们得分的概率。</div>
+<div>这场考试的满分为1分，最低为0分，分数可以为任意小数。对于第i个人，他得x分的概率，与函数fi(x)成正比。</div>
+<div>如果一个人的函数为f(x)=2，那么他获得任意分数的概率都是相等的；如果一个人的函数为f(x)=2-x，那么他获得越高的分的概率就越低，且他获得0分的概率是获得1分的概率两倍。</div>
+<div>现在你需要计算的是如果ydc在这场比赛中使用当前的策略，他期望能得到多少的奖金，从而决定是否采用当前的策略。由于分数可以为小数，所以无需考虑排名相等的情况。</div>
+<div>ydc当然早就算出来啦！但是他为了考考你，特地要你把答案对于998244353（7*17*2^23+1，一个质数）取模之后再输出来。</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入共n+2行。</div>
+<div>第一行包含一个整数n。</div>
+<div>在第二行有n个整数，第i个数代表pi。</div>
+<div>接下来n-1行，每行第一个数为ti，代表第i个人所对应的函数是一个ti-1次函数，接下来ti个实数，第j个数代表该函数中xj-1项的系数。</div>
+<div>最后一行，第一个数为tn，代表ydc所对应的函数是一个tn-1次函数，接下来tn个实数，第j个数代表该函数中xj-1项的系数。</div>
+<div>保证所有人的函数在[0,1]的范围以内大于等于0，且函数在[0,1]的范围内与x轴所成的面积在模意义下不等于0。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出1行，包含一个整数，表示ydc期望能获得的软妹币。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2
+2 1
+1 1.00
+2 0.00 1.00</pre><hr/><h3>样例输出</h3><pre>665496237</pre><hr/><h3>提示</h3><p><div>N&lt;=500</div>
+<div>S&lt;=4000</div>
+<div>S=Sigma(T_i)</div>
+<div>输入的所有实数仅有2位小数，且除了常数项以外的系数绝对值均小于5，常数项的绝对值小于30。</div>
+<div>由于出题人太懒了，所有数据均为随机生成。</div>
+<div>pi的范围在0到10000之间，且对于1&le;i&lt;n，有pi&ge;pi+1。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年集训队互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4022" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4022" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

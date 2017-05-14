@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4239：巴士走读</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">巴士走读</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">巴士走读</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                巴士走读                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>大学生的JOI君每天乘坐巴士走读。</div>
+<div>JOI君的家和学校都在IOI市内。IOI市内共有N个巴士停靠点，编号为1~N，离JOI家最近的停靠点为1号停靠点，离大学最近的停靠点为N号停靠点。</div>
+<div>IOI市内共有M辆巴士，每辆巴士一天只跑一次，从某一时刻某一停靠点出发，在某一时刻到达另一个站点。运行途中不可以下车。</div>
+<div>JOI君每天要乘坐一次以上的巴士到达学校。我们可以无视JOI君换车的时间，换言之，为了换乘某个时刻从某个停靠点出发的巴士，只需要在该巴士的出发时间或之前到达停靠点就可以了。此外，多次在某个停靠点换乘也是可以的。</div>
+<div>在这样的条件下，JOI君想知道自己应该何时从家中出发才能按时赶到学校。然而，学校每天开始上课的时间都不同。在某Q天里，每天到达N号站点的最晚时间都是已知的，JOI君想知道，他最晚何时到达1号站点才能赶上学校的授课。</div>
+<div>现在给你巴士的运营信息，以及这Q天里每天到达N号站点的最晚时间，请你求出每天JOI君最晚何时到达1号站点。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个空格分隔的正整数N和M，表示IOI市内有N个巴士站点和M辆巴士。</div>
+<div>接下来M行，第i行(1&lt;=i&lt;=M)有四个空格分隔的整数Ai,Bi,Xi,Yi(1&lt;=Ai&lt;=N,1&lt;=Bi&lt;=N,Ai&ne;Bi)，表示第i辆巴士在时刻Xi从停靠点Ai出发，在时刻Yi到达停靠点Bi。时刻从半夜12点开始计算，单位为毫秒。</div>
+<div>接下来一行一个整数Q，含义如题目中所示</div>
+<div>接下来Q行，第i行(1&lt;=i&lt;=Q)有一个整数Li，表示第i天最迟Li时刻到达站点N</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出Q行，第i行(1&lt;=i&lt;=Q)一个整数，表示JOI君第i天最迟到达1号站点的时刻。</div>
+<div>如果无法在时限内到达，输出-1。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 6
+1 2 10 25
+1 2 12 30
+2 5 26 50
+1 5 5 20
+1 4 30 40
+4 5 50 70
+4
+10
+30
+60
+100</pre><hr/><h3>样例输出</h3><pre>-1
+5
+10
+30</pre><hr/><h3>提示</h3><p><div>2&lt;=N&lt;=100000</div>
+<div>1&lt;=M&lt;=300000</div>
+<div>0&lt;=Xi&lt;Yi&lt;86400000(=24*60*60*1000)(1&lt;=i&lt;=M)</div>
+<div>1&lt;=Q&lt;=100000</div>
+<div>0&lt;=Li&lt;86400000(1&lt;=i&lt;=Q)</div>
+<p></p></p><hr/><h3>题目来源</h3><p>JOI 2013~2014 春季training合宿 竞技1 By PoPoQQQ</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4239" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4239" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

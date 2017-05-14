@@ -1,0 +1,138 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3846：ZCC loves words</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">ZCC loves words</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">ZCC loves words</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                ZCC loves words                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：32MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>ZCC&rsquo;s English is so poor that his teacher GPS forced him to memorize words. In order to examine ZCC, GPS created a software. This software works as follow. A user inputs a string S which only consists of uppercase into this software, then the software calculates the score which string S has by using its strange methods.Initially the software stores n different words and the initial score is 1. The length of S is L. The chars of string S is labeled from 1 to L(left to right), and S[i] represent the i-th char of S.&nbsp;</div>
+<div></div>
+<div>// Prime[k] means the k-th prime number, such as Prime[1]=2, Prime[2]=3 ,Prime[8]=19.</div>
+<div>Input &gt;&gt; S</div>
+<div>Score = 1</div>
+<div>For i = 1 to L do</div>
+<div>For k=1 to n do</div>
+<div>If S[j..i] equals to Word[k]</div>
+<div>Score = Score * Prime[k] * ( i * 2 - j + 1 )</div>
+<div>Output &lt;&lt; Score</div>
+<div></div>
+<div>The pseudocode above shows when input S what score we can get.</div>
+<div>If n=2,L=3,Word[1]=&rdquo;AB&rdquo;,Word[2]=&rdquo;BB&rdquo; then&nbsp;</div>
+<div>Score[ABB] = 1 * ( 2 * 2 - 1 + 1 ) * Prime[1] * ( 3 * 2 - 2 + 1 ) * Prime[2],</div>
+<div>Score[CBA] = 1,</div>
+<div>Score[CAB] = 1 * ( 3 * 2 - 2 + 1 ) * Prime[1];</div>
+<div>ZCC has found a BUG which can help him to input strings into the software as much as he can. And the score he gets in the end is the sum of the score he gets in each input.ZCC wants to know the score he will get in the end, if he input all the different strings into the software. That is to say if the length of string is L, he can input 26^L strings in all. The answer can be very large, so what ZCC actually want is the ans Mod 5047621.</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>The input contains several test cases.Two integers N(1&le;N&le;40),L(1&le;L&le;10^17) will exist in the first line of each input, indicating the number of words and the length of each S you can input to the software. Next n line contains n words, the i-th line means Word[i].Let Len[i] be the length of Word[i], and Len[1]+Len[2]&hellip;+Len[n]&lt;=40.</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>For each test case, output the score Mod 5047621.</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>2 3
+AB
+BB
+4 1
+A
+B
+C
+D
+1 2
+A
+3 3
+ZZ
+ZZA
+ZZZ</pre><hr/><h3>样例输出</h3><pre>Case #1: 18894
+Case #2: 56
+Case #3: 899
+Case #4: 20511</pre><hr/><h3>提示</h3><p><div>For the second test case, all the 4 words can be got. So score is (1*2-1+1)*(2+3+5+7)+22.</div>
+<div>5047621=179*173*163</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>By 镇海中学</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3846" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3846" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3815：卡常数</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">卡常数</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">卡常数</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                卡常数                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在某个诡异的地方，有一座智慧之城，那里的人民平均智商为 192，智商低于 150 的人都被称为弱智。智慧之城的市长名叫卡常（Karp-de-Chant），他 12 岁时在智慧之城中心大学 Cross Institute 获得博士学位，两年后发明了一种数列 &mdash;&mdash; 卡常数（Karp-de-Chant Number），该数列可用来解决或优化数论、图论等领域的多种经典难题。后来，卡常数被 Trajan（智慧之城的副市长）用 spaly 树进行扩展后，威力大大增加，可以在线性时间内解决各种网络流问题和其它一些难题。卡常和 Trajan 因此分别被选为正、副市长，他们和智慧之城内的另一些智者一起，领导人民共同建设人类智慧，发挥创造和改进的能力。</div>
+<div></div>
+<div>然而某一天，智慧之城突然受到了反人类智慧者的袭击，反人类智慧者在城内设置了 N 个摄像头（由于他们的智商很低，只会用摄像头这种垃圾玩意），企图监视城内的人们。卡常、Trajan 决定找到这些摄像头并摧毁它们。</div>
+<div></div>
+<div>智慧之城里有一个用扩展卡常数原理设计的发射器，将其放在合适位置并设置半径以后，所有位于球心为这个发射器的位置、半径为指定值的球面上的目标都能被发现。在卡常、Trajan 的带领下，智慧之城的人们用这个发射器进行了若干次实验，并发现了一些摄像头的位置。比较囧的是，每次发射都能且仅能发现一个摄像头，但是，反馈回来的结果貌似有些不对劲&hellip;&hellip;</div>
+<div></div>
+<div>后来人们终于找到了这 N 个摄像头的位置，并发现在他们用发射器进行实验的过程中，某些摄像头被移位&mdash;&mdash;这就是导致反馈结果不对劲的原因。但是，在对实验结果进行分析的时候，人们却肿么也回忆不起每次实验发现的摄像头是哪个了（可能是遭遇了灵异事件导致脑抽），只知道每次实验时发射器的位置和半径。你的任务就是，根据实验数据（为了防止被反人类智慧者窃取，已经进行了加密）找出每次实验时被发射器找到的摄像头的编号。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行两个正整数 N、M，表示摄像头数量（摄像头以 1 到 N 编号）和事件数量。</div>
+<div></div>
+<div>第二行两个实数 a、b，表示加密参数。</div>
+<div></div>
+<div>接下来 N 行，每行三个实数 (x,y,z)，表示 1 到 N 号摄像头的初始位置坐标。</div>
+<div></div>
+<div>接下来 M 行，每行描述一个事件，有两种可能的事件（保证其中实数的精度充分高）：</div>
+<div></div>
+<div>0 i x y z，表示将编号为 i 的摄像头的坐标改为 (x,y,z)；</div>
+<div>1 x y z r，表示进行一次实验，将发射器放在 (x,y,z) 处并设置半径为r，数据保证每次实验能且仅能发现一个摄像头；</div>
+<div>加密方式：设函数 f(x)=ax&minus;bsinx，对于所有事件中的参数（i、x、y、z、r），均加密成 f(last_res&times;原值+1)，其中 last_res 为上一个实验事件的返回值（即发现的摄像头编号），若之前未进行过实验则 last_res=0.1。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每个实验事件，输出发现的摄像头编号，一个一行。</div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>
+6 10
+1 0
+-3.6 7.2 3.6
+9.7 0.4 0.5
+8.8 -4.7 0.5
+9.6 8.2 -5.7
+0.3 -9.9 1.5
+0.5 -5.7 -1.0
+0 1.3 1.92 0.13 1.85
+1 1.98 1.55 1.2 2.360183811
+1 8.2 0.9 2.1 9.981091248
+1 -7.4 -44.0 11.2 83.061927835
+1 20.8 -9.6 -11.8 31.598039153
+0 10.0 11.2 -19.73 -19.1
+0 13.0 7.3 28.6 22.6
+0 4.0 22.3 -17.6 1.3
+1 -3.2 -14.0 16.6 30.9549661993
+0 7.0 -3.1 5.8 -0.9</pre><hr/><h3>样例输出</h3><pre>1
+6
+2
+3
+1</pre><hr/><h3>提示</h3><p><div>N&lt;=65536</div>
+<div>M&lt;=65536</div>
+<div>所有的测试点满足 0&le;b&lt;a&lt;5，坐标的绝对值均不超过 100，所有坐标均为随机生成且至少精确到 10^&minus;5。</div>
+<div></div>
+<div>为尽可能减小精度误差，建议 C/C++ 使用long double类型、Pascal 使用 EXTENDED 类型存储实数。</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年国家集训队测试</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3815" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3815" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

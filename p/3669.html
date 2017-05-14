@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3669：[Noi2014]魔法森林</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2014]魔法森林</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Noi2014]魔法森林</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Noi2014]魔法森林                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p class="p18" style="margin-top: 3.1pt; margin-bottom: 3.1pt; text-indent: 24pt"><span style="font-size: medium"><span style="font-family: '宋体'">为了</span><span style="font-family: 'Times New Roman'">得到书法大家的真传，</span><span style="font-family: '宋体'">小</span><span style="font-family: 'Times New Roman'">E<span style="font-family: 宋体">同学</span></span><span style="font-family: '宋体'">下定决心去</span><span style="font-family: 'Times New Roman'">拜访</span><span style="font-family: '宋体'">住在</span><span style="font-family: 'Times New Roman'">魔法森林中的</span><span style="font-family: '宋体'">隐士。</span><span style="font-family: 'Times New Roman'">魔法森林</span><span style="font-family: '宋体'">可以被</span><span style="font-family: 'Times New Roman'">看</span><span style="font-family: '宋体'">成</span><span style="font-family: 'Times New Roman'">一个</span><span style="font-family: '宋体'">包含</span><span style="font-family: 'Times New Roman'">个N节点M条边的无向图</span><span style="font-family: '宋体'">，</span><span style="font-family: 'Times New Roman'">节点标号为1..N</span><span style="font-family: '宋体'">，</span><span style="font-family: 'Times New Roman'">边标号为1..M</span><span style="font-family: '宋体'">。初始时</span><span style="font-family: 'Times New Roman'">小<span style="font-family: 'Times New Roman'">E</span><span style="font-family: 宋体">同学在</span></span><span style="font-family: '宋体'">号节</span><span style="font-family: 'Times New Roman'">点1</span><span style="font-family: '宋体'">，隐士则</span><span style="font-family: 'Times New Roman'">住在号节点N</span><span style="font-family: '宋体'">。小</span><span style="font-family: 'Times New Roman'">E<span style="font-family: 宋体">需要通过这一片魔法森林，才能够拜访到隐士。</span></span></span></p>
+<p class="p18" style="margin-top: 3.1pt; margin-bottom: 3.1pt; text-indent: 24pt"><span style="font-size: medium"><span style="font-family: '宋体'">魔法森林</span><span style="font-family: 'Times New Roman'">中居住了</span><span style="font-family: '宋体'">一些妖怪。每当有人</span><span style="font-family: 'Times New Roman'">经过一条边</span><span style="font-family: '宋体'">的</span><span style="font-family: 'Times New Roman'">时候，这</span><span style="font-family: '宋体'">条边</span><span style="font-family: 'Times New Roman'">上的妖怪就会</span><span style="font-family: '宋体'">对其发起</span><span style="font-family: 'Times New Roman'">攻击。</span><span style="font-family: '宋体'">幸运</span><span style="font-family: 'Times New Roman'">的是，</span><span style="font-family: '宋体'">在号</span><span style="font-family: 'Times New Roman'">节点住着两种守护精灵</span><span style="font-family: '宋体'">：</span><span style="font-family: 'Times New Roman'">A<span style="font-family: 宋体">型守护精灵与</span><span style="font-family: 'Times New Roman'">B</span><span style="font-family: 宋体">型守护精灵</span></span><span style="font-family: '宋体'">。</span><span style="font-family: 'Times New Roman'">小<span style="font-family: 'Times New Roman'">E</span><span style="font-family: 宋体">可以借助</span></span><span style="font-family: '宋体'">它们</span><span style="font-family: 'Times New Roman'">的力量</span><span style="font-family: '宋体'">，达到</span><span style="font-family: 'Times New Roman'">自己的目的</span><span style="font-family: '宋体'">。</span></span></p>
+<p class="p18" style="margin-top: 3.1pt; margin-bottom: 3.1pt; text-indent: 24pt"><span style="font-size: medium"><span style="font-family: '宋体'">只要</span><span style="font-family: 'Times New Roman'">小<span style="font-family: 'Times New Roman'">E</span><span style="font-family: 宋体">带上足够多的守护精灵，</span></span><span style="font-family: '宋体'">妖怪</span><span style="font-family: 'Times New Roman'">们就不会发起攻击</span><span style="font-family: '宋体'">了。具体来说</span><span style="font-family: 'Times New Roman'">，</span><span style="font-family: '宋体'">无向图中的</span><span style="font-family: 'Times New Roman'">每一条边</span><span style="font-family: '宋体'">Ei包含</span><span style="font-family: 'Times New Roman'">两个</span><span style="font-family: '宋体'">权值Ai</span><span style="font-family: 'Times New Roman'">与Bi</span><span style="font-family: '宋体'">。</span><span style="font-family: 'Times New Roman'">若</span><span style="font-family: '宋体'">身上</span><span style="font-family: 'Times New Roman'">携带的</span><span style="font-family: '宋体'">A</span><span style="font-family: 'Times New Roman'">型守护精灵</span><span style="font-family: '宋体'">个数</span><span class="15" style="font-weight: bold; font-family: '宋体'; text-decoration: underline">不少于Ai</span><span style="font-family: '宋体'">，</span><span style="font-family: 'Times New Roman'">且<span style="font-family: 'Times New Roman'">B</span><span style="font-family: 宋体">型守护精灵个数</span></span><span class="15" style="font-weight: bold; font-family: '宋体'; text-decoration: underline">不少于Bi</span><span style="font-family: '宋体'">，</span><span style="font-family: 'Times New Roman'">这条边上的妖怪</span><span style="font-family: '宋体'">就</span><span style="font-family: 'Times New Roman'">不会对</span><span style="font-family: '宋体'">通过</span><span style="font-family: 'Times New Roman'">这条边</span><span style="font-family: '宋体'">的</span><span style="font-family: 'Times New Roman'">人发起攻击</span><span style="font-family: '宋体'">。</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">当且仅当</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">通过</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">这</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">片</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">魔法森林</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">的过程中没有</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">任意一条边</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">的</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">妖怪</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">向</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">小<span style="font-family: 'Times New Roman'">E</span><span style="font-family: 宋体">发起攻击</span></span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">，</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">他才能成功</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">找到</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">隐士。</span></span></p>
+<p class="p17" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '宋体'">由于</span><span style="font-family: 'Times New Roman'">携带守护精灵是一件非常</span><span style="font-family: '宋体'">麻烦</span><span style="font-family: 'Times New Roman'">的事，小<span style="font-family: 'Times New Roman'">E</span><span style="font-family: 宋体">想要知道，</span></span><span style="font-family: '宋体'">要能够</span><span style="font-family: 'Times New Roman'">成功拜访到隐士，最少</span><span style="font-family: '宋体'">需要</span><span style="font-family: 'Times New Roman'">携带守护精灵</span><span style="font-family: '宋体'">的总个数</span><span style="font-family: 'Times New Roman'">。</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">守护精灵</span><span style="font-weight: bold; font-family: 'Times New Roman'; text-decoration: underline">的</span><span style="font-weight: bold; font-family: '宋体'; text-decoration: underline">总个数</span><span style="font-family: '宋体'">为</span><span style="font-family: 'Times New Roman'">A<span style="font-family: 宋体">型守护精灵的个数与</span><span style="font-family: 'Times New Roman'">B</span><span style="font-family: 宋体">型守护精灵的个数之和。</span></span><span style="font-weight: normal; font-family: '黑体'; mso-spacerun: 'yes'"><br />
+</span></span></p></p><hr/><h3>输入格式</h3><p><p><span style="font-size: medium">第1行包含两个整数N,M，表示无向图共有N个节点，M条边。 接下来M行，第行包含4个正整数Xi,Yi,Ai,Bi，描述第i条无向边。其中Xi与Yi为该边两个端点的标号，Ai与Bi的含义如题所述。 注意数据中可能包含重边与自环。 </span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">输出一行一个整数：如果小E可以成功拜访到隐士，输出小E最少需要携带的守护精灵的总个数；如果无论如何小E都无法拜访到隐士，输出&ldquo;-1&rdquo;（不含引号）。</span></p>
+<p></p>
+<p></p></p><hr/><h3>样例输入</h3><pre>【输入样例1】
+4 5
+1 2 19 1
+2 3 8 12
+2 4 12 15
+1 3 17 8
+3 4 1 17
+
+ 
+
+ 
+
+【输入样例2】
+
+ 
+3 1
+1 2 1 1
+
+ 
+
+</pre><hr/><h3>样例输出</h3><pre>【输出样例1】
+ 
+32
+【样例说明1】
+如果小E走路径1→2→4，需要携带19+15=34个守护精灵；
+如果小E走路径1→3→4，需要携带17+17=34个守护精灵；
+如果小E走路径1→2→3→4，需要携带19+17=36个守护精灵；
+如果小E走路径1→3→2→4，需要携带17+15=32个守护精灵。
+综上所述，小E最少需要携带32个守护精灵。
+
+
+
+【输出样例2】
+
+ 
+-1
+【样例说明2】
+小E无法从1号节点到达3号节点，故输出-1。 
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">2&lt;=n&lt;=50,000</span></p>
+<p><span style="font-size: medium">0&lt;=m&lt;=100,000</span></p>
+<p><span style="font-size: medium"><br />
+1&lt;=ai ,bi&lt;=50,000<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3669" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3669" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

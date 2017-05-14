@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4042：[Cerc2014] parades</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] parades</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Cerc2014] parades</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Cerc2014] parades                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>In The City of Eternal Festivities, there are n street junctions and n - I bidirectional streets,eac</div>
+<div>h street connecting two of the junctions. Between every two junctions, there is exactly one(direct o</div>
+<div>r indirect) path connecting them. No junction is an endpoint for more than 10 streets.Every 13th of&nbsp;</div>
+<div>September (the 256th day of the year), there are many festivities going on inThe City. In particular</div>
+<div>, the citizens want to organize m parades. The parade number 7; starts atjunction ui and ends at vi,</div>
+<div>&nbsp;following the unique path between the endpoints.As the mayor of The City, you are responsible for c</div>
+<div>itizens' safety. Therefore you decreed thatno two parades are ever allowed to use the same street, t</div>
+<div>hough they can have common junctions,or even common endpoints.To appease your citizens, try to organ</div>
+<div>ize as many parades as possible, without breaking thesafety regulations.</div>
+<div>一个树，d(v)&lt;=10，给定m条path，找出最多不共边的path，不需要方案。&nbsp;</div>
+<div>n&lt;=1000,m&lt;=总路径数</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div style="font-size: 11.8181819915771px;">The first line of input contains the number of test cases T. The descriptions of the test cases&nbsp;</div>
+<div style="font-size: 11.8181819915771px;">follow:&nbsp;</div>
+<div style="font-size: 11.8181819915771px;">The first line of each test case contains a single integer: the number of junctions n (2《 n&le;1000).</div>
+<div style="font-size: 11.8181819915771px;">&nbsp;Each of the next n - I lines contains two integers a, b (1《 a&ne; b&le; n), denoting thatjunctions a a</div>
+<div style="font-size: 11.8181819915771px;">nd b are connected by a street. Each junction has at most 10 streets leaving it.The next line contai</div>
+<div style="font-size: 11.8181819915771px;">ns a single integer: the number of planned parades m, 0&le; m &lt;(彩.Each of the next m lines contains t</div>
+<div style="font-size: 11.8181819915771px;">wo integers ui, vi (1&le; ui&ne; vi&le;n), meaning that a parade isplanned to start at junction ui, and fi</div>
+<div style="font-size: 11.8181819915771px;">nish at junction vi. No two parades share both endpoints.</div>
+<div style="font-size: 11.8181819915771px;"></div>
+<div></div>
+<div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div style="font-size: 11.8181819915771px;">For each test case, output one line containing the largest number of parades that can beorganized wi</div>
+<div style="font-size: 11.8181819915771px;">th no street used bv more than one parade.</div>
+<div style="font-size: 11.8181819915771px;"></div>
+<div></div>
+<div>
+<div></div>
+</div>
+<div>
+<p></p>
+</div></p><hr/><h3>样例输入</h3><pre>1
+6
+1 2
+2 3
+3 4
+3 5
+3 6
+4
+1 3
+4 5
+5 6
+6 4</pre><hr/><h3>样例输出</h3><pre>2</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4042" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4042" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

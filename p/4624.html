@@ -1,0 +1,158 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4624：农场种植</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">农场种植</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">农场种植</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                农场种植                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>农夫约翰想要在一片巨大的土地上建造一个新的农场。 这块土地被抽象为个 R*C 的矩阵。土地中的每个方格都可</div>
+<div>以用来生产一种食物：谷物(G)或者是牲畜(L)。下面是一个 R 为 5，C 为 8 的土地的样例：</div>
+<div>&nbsp; 12345678</div>
+<div>1 GLGGLGLG</div>
+<div>2 GGLGGLGL</div>
+<div>3 GGLLLGGG</div>
+<div>4 LLGLLGLG</div>
+<div>5 LGGGLGLL</div>
+<div>农夫约翰已经有一套设计好的他想要建造的农场的蓝图。 每一个蓝图被抽象为一个 H*W 的矩阵，其中 H&le;R，W&le;</div>
+<div>C。蓝图中的每个方格表示着农夫约翰想要生产的食物，谷物(G)或是牲畜(L)。下面是一个 H=2，W=3 的蓝图的样</div>
+<div>例。</div>
+<div>&nbsp; 123</div>
+<div>1 GLL</div>
+<div>2 LGG</div>
+<div>使用这个蓝图，农夫约翰可以在土地上的某个位置建立起实际的农场。这个农场的位置可以用它的左上角的位置来</div>
+<div>代表， 比如这个农场被建立在土地上的(r,c)这个位置，这个农场必须整个都建立在这块土地中（也就是说 r + H</div>
+<div>&nbsp;&le; R 并且 c + W &le; C） 。如果在土地上的位置(r + i, c + j)的食物种类和蓝图里的位置(i + 1, j + 1)的食</div>
+<div>物种类相同（其中 0 &le; i&lt;H，0 &le; j&lt;W） ，那么就能出产食物。农夫约翰想要找到这样的农场位置，使得他可以</div>
+<div>出产最多的食物（即谷物的格数+牲畜的格数） 。如果有多于一个可能的解，输出最上方的一个，如果仍然有多于</div>
+<div>一个可能的解，就输出最作坊的一个。比如对于上面给出的土地和蓝图的样例，最佳的农场位置是(1, 3)，这是最</div>
+<div>左上方的一个可行的农场，如下图所示：</div>
+<div>&nbsp; 12345678</div>
+<div>1 GLGGLGLG</div>
+<div>2 GGLGGLGL</div>
+<div>3 GGLLLGGG</div>
+<div>4 LLGLLGLG</div>
+<div>5 LGGGLGLL</div>
+<div>通过在(1, 3)位置建立农场，农夫约翰可以生产出 5 格的粮食，3 格谷物和2 格牲畜，具体来说，是第一行的一</div>
+<div>格谷物和一个牲畜，第二行的一格牲畜和两格谷物。注意位置(2, 5)和位置(3, 2)同样能生产出 5 格谷物，但是</div>
+<div>农夫约翰需要的是最靠上中的最靠左的。 在除此以外的任何位置放置农场都只能生产出少于5 格的食物。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入数据中只有一组土地，第一行包含了两个整数 R 和 C，其中 0 &lt;R,C &le;500，紧接着是 R 行每行包含 C 个字</div>
+<div>符来描述这片土地，接下来有一个整数 B，满足 0 &lt;B &le; 5，表示农夫约翰拥有的蓝图的数量，接下来是 B 个蓝</div>
+<div>图，每个蓝图都以包含两个整数 H 和 W 的一行开头，其中 0 &lt;H &le; R 并且 0 &lt;W &le; C，紧接着是 H 行，每行 W</div>
+<div>&nbsp;个字母来描述这个蓝图。对于每个蓝图，在一行中输出&quot;Case #X: Y&quot;（没有引号） ，X 是蓝图编号，从 1 开始</div>
+<div>，Y 是一组用空格隔开的四个整数组成的输出，前两个整数表示最好的建造农场的位置，接下来两个整数分别表示</div>
+<div>可以生产的谷物和牲畜的格数。</div>
+<div>R,C &le; 500，B&le;5，H&le;R，W&le;C</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每个蓝图，在一行中输出&quot;Case #X: Y&quot;（没有引号） ，X 是蓝图编号，从 1 开始，Y 是一组用空格隔开的四</div>
+<div>个整数组成的输出，前两个整数表示最好的建造农场的位置，接下来两个整数分别表示可以生产的谷物和牲畜的格</div>
+<div>数。</div>
+<div></div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 8
+GLGGLGLG
+GGLGGLGL
+GGLLLGGG
+LLGLLGLG
+LGGGLGLL
+3 2
+3
+GLL
+LGG
+3 1
+L G G 1
+4
+GGLL</pre><hr/><h3>样例输出</h3><pre>Case #1: 1 3 3 2
+Case #2: 1 2 2 1
+Case #3: 3 1 2 2</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4624" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4624" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

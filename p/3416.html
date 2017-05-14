@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3416：Poi2013 Take-out</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Take-out</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Poi2013 Take-out</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Poi2013 Take-out                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium; ">Little Edna has received the take-out game as a present. Take-out is a single player game, in which the player is given a sequence of&nbsp; adjacent blocks, numbered from 1 to n. Each block is either black or white, and there are k times as many white blocks as there are black ones.<br />
+The player's goal is to remove all the blocks by certain permissible moves.<br />
+A single move consists in removing exactly k white blocks and a single black block without changing the positions of other blocks. The move is permissible if there is no &quot;gap&quot; (a space left by a previously taken out block) between any two blocks being removed.<br />
+Help poor little Edna in finding any sequence of permissible moves that remove all the blocks.<br />
+</span></p>
+<p><span style="font-size: medium; "> </span></p>
+<p><span style="font-size: medium; "><span style="white-space: pre-wrap; ">小F喜欢玩一个消除游戏&mdash;&mdash;take-out</span></span></p>
+<pre style="white-space: pre-wrap; "><span style="font-size: medium; ">保证k+1|n，保证输入数据有解<br />这是一个单人游戏 游戏者的目标是消除初始时给定的一列砖块，从左往右标号为1到n，若两个砖块标号相差1，则它们相邻 每一块砖块要么是黑的，要么是白的，这列砖块里面白砖块的数量是黑砖块的数量的k倍 游戏者可以通过执行移除操作来消除砖块 一步移除操作会将k个白砖块和1个黑砖块从序列中移除，而这些被移除的砖块原来所在的位置用透明砖块所代替，其它砖块的位置不变 一个移除操作是合法的当且仅当： 在这次移除中，任意两个被移除的砖块之间，没有透明砖块，且恰好移走k个白砖块和1个黑砖块 显然一个砖块不能被移除两次 小F的智商不够&hellip;&hellip;他对着面前密密麻麻的砖块看傻了眼&hellip;&hellip; 你能帮他玩通关么? Input 第一行两个数:n,k，意义同题目描述 接下来一行一个由'b'和'c'组成的字符串，长度为n，描述这列砖块 第i个砖块如果是黑色的，那么第i个字符为'c' 否则是白色的，第i个字符为'b' (注:波兰文中b是bialy的首字母,c是czarny的首字母) Output 输出n/(k+1)行，每行k+1个数，用空格分开，要求递增 第i行表示第i次移除操作移除砖块的位置集合 Sample Input 12 2 ccbcbbbbbbcb Sample Output 10 11 12  1 8 9  2 6 7  3 4 5  HINT 2&lt;=n&lt;=1000000,1&lt;=k&lt;n </span></pre>
+<p></p></p><hr/><h3>输入格式</h3><p><p><font size="4">In the first line of the standard input there are two integers, n and k (2&lt;=N&lt;=1000000,1&lt;=K&lt;=N-1), separated by a single space, that denote the total number of blocks used in the game, and the number of white blocks per black node (to be removed in every move). In all the tests the condition k+1|N holds.<br />
+In the second line there is a string of n letters b or c. These tell the colours of successive blocks (in Polish): b (for biały) - white, c(for czarny) - black. You may assume that in all the tests there exists a sequence of permissible moves that takes out all the blocks.<br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">Your program should print n/(k+1) lines to the standard output. Successive lines should describe successive moves. Each line should contain K+1 integers, in increasing order, separated by single spaces, that denote the numbers of blocks to be removed in the move.<br />
+</font></p></p><hr/><h3>样例输入</h3><pre>12 2
+ccbcbbbbbbcb
+</pre><hr/><h3>样例输出</h3><pre>10 11 12 
+1 8 9 
+2 6 7 
+3 4 5 
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Wcmg提供SPJ 译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3416" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3416" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

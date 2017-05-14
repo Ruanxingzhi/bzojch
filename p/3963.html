@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3963：[WF2011]MachineWorks</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]MachineWorks</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[WF2011]MachineWorks</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [WF2011]MachineWorks                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>你是任意性复杂机器公司(Arbitrarily Complex Machines, ACM)的经理，公司使用更加先进的机械设备生产先进的机器。原来的那一台生产机器已经坏了，所以你要去为公司买一台新的生产机器。你的任务是在转型期内尽可能得到更大的收益。在这段时间内，你要买卖机器，并且当机器被ACM公司拥有的时候，操控这些机器以获取利润。因为空间的限制，ACM公司在任何时候都只能最多拥有一台机器。</div>
+<div>在转型期内，有若干台可能卖出的机器。作为先进机器的专家，对于每台机器Mi，你已经知道了其价格Pi和可以买入的日期Di。注意，如果不在第Di天买入机器Mi，那么别的人也会买走这一台机器，也就是说，以后你将没有机会购买这台机器了。如果ACM的钱低于一台机器的价格，那么你显然不可能买到这一台机器。</div>
+<div>如果你在第Di天买入了机器Mi,那么ACM公司可以从第(Di)+1天开始使用这一台机器。每使用这台机器一天，就可以为公司创造出Gi美元的收益。</div>
+<div>你可以决定要在买入之后的某一天，以一定的折扣价卖出这一台机器。收购市场对于每一台机器，都有一个折扣价Ri。你不能在卖出的那一天使用机器，但是你可以在卖出的那一天再买入一台新的。</div>
+<div>在转型期结束后，ACM公司会卖掉当前所拥有的机器。你的任务就是最大化转型期间ACM公司可以得到的收入。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入包含若干组测试用例。每一组测试用例的第一行有3个正整数N，C和D。N是将会卖出的机器的台数(N&lt;=10^5)，C是在转型期开始时公司拥有的美元数量(C&lt;=10^9)，D是转型期持续的天数(D&lt;=10^9)。</div>
+<div>之后的N行每一行描述了一台机器的情况。每一行有4个正整数Di,Pi,Ri和Gi,分别表示这台机器卖出的时间，购买这台机器需要的美元数量，卖出这台机器的折扣价和使用这台机器可以得到的利润。这些数字满足1&lt;=Di&lt;=D,1&lt;=Ri&lt;Pi&lt;=10^9且1&lt;=Gi&lt;=10^9.</div>
+<div>最后一组测试用例后面的一行由3个0组成，表示输入数据。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每一组测试用例，输出测试用例的编号，之后给出ACM公司在第D+1天结束后可以得到的最大数量的美元。</div>
+<div>
+<div>请依照下面给出的样例输出。</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6 10 20
+6 12 1 3
+1 9 1 2
+3 2 1 2
+8 20 5 4
+4 11 7 4
+2 10 9 1
+0 0 0</pre><hr/><h3>样例输出</h3><pre>Case 1: 44</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3963" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3963" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

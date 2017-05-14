@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3299：[USACO2011 Open]Corn Maze玉米迷宫</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[USACO2011 Open]Corn Maze玉米迷宫</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[USACO2011 Open]Corn Maze玉米迷宫</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [USACO2011 Open]Corn Maze玉米迷宫                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><font size="3" face="Times New Roman">今年秋天，约翰带着奶牛们去玩玉米迷宫。迷宫可分成NxM个格子，有些格子种了玉 米，种宥玉米的格子无法通行。 <br />
+迷宫的四条边界上都是种了玉米的格子，其屮只有一个格子 没种，那就是出口。 <br />
+在这个迷宫里，有一些神奇的传送点6每个传送点由一对点组成，一旦 走入传送点的某个结点， <br />
+机器就会强制把你送到传送点的另一头去。所有的传送点都是双向 的，如果你定到了另一头，机器也会把你送回来。 <br />
+<br />
+奶牛在一个单位的时间内只能向相邻的四个方向移动一格，不过传送机传送是瞬间完成 的。 <br />
+现在W西在迷宫里迷路了，她只知道目前的位罝在哪里，请你帮助她用最短的时间走出 迷宫吧。</font></p></p><hr/><h3>输入格式</h3><p><p><font size="3" face="Times New Roman">第一行：两个用空格分开的整数：N和M,2 <br />
+第二行到N+1行：第i+1行有M个连续的字符，描述了迷宫第i行的信息。其中&quot;#&quot;代 表不能通行的玉米地， <br />
+&quot;.&quot;代表可以通行的草地，&quot;@&quot;代表贝西的起始位罝，&quot;=&quot;代表迷宫出口， <br />
+大写字母&ldquo;A&rdquo;到&ldquo;Z&rdquo;总是成对出现的，代表一对传送点 <br />
+</font></p></p><hr/><h3>输出格式</h3><p><p align="left">&nbsp;</p>
+<p><font size="3" face="Times New Roman">第一行：一个整数，表示贝西走出迷宫的最短时间，保证逃离迷宮的路线一定存在</font></p></p><hr/><h3>样例输入</h3><pre>
+5 6
+###=##
+#.W.##
+#.####
+#.@W##
+######
+
+</pre><hr/><h3>样例输出</h3><pre>3
+</pre><hr/><h3>提示</h3><p><p>从起点向右走，通过w传送，再从另一端 走出迷宫</p></p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3299" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3299" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

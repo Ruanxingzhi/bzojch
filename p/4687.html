@@ -1,0 +1,185 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4687：Stylish</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Stylish</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Stylish</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Stylish                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Stylish 是一种编程语言，其语法包括名称（拉丁字母组成的序列）、三种分组符号、句号(&lsquo;.&rsquo;)和换行符。分</div>
+<div>组符号即圆括号(&lsquo;(&rsquo;和&lsquo;)&rsquo;)、大括号(&lsquo;{&rsquo;和&lsquo;}&rsquo;)和方括号(&lsquo;[&rsquo;和&lsquo;]&rsquo;)，它们必须正确地匹配和嵌套。</div>
+<div>不同于大多数编程语言，Stylish 使用句号来分隔每个词，而不是使用空格，下图就是一个使用 Stylish 编程的</div>
+<div>例子。</div>
+<div><img src="../file/4687_0.png" width="566" height="200" alt="" /></div>
+<div>正如你从上面的例子所看到的那样， Stylish 代码通过句号来缩进，每行的缩进量就是前导句号的数量。</div>
+<div>你的任务是向一位 Stylish 编程大师学习他的缩进风格，并成为最年轻的 Stylish 编程大师。一种良好的 Styli</div>
+<div>sh 缩进风格被定义为整数组成的三元组 (R,C,S) &nbsp;，其中 1&le;R,C,S&le;20 ，而 R,C,S 分别表示一个左圆括号、左</div>
+<div>大括号、左方括号所带来的缩进量。在一个具有良好缩进风格的 Stylish 代码里，每一行的缩进量都应该是 R(r_</div>
+<div>o-r_c )+C(c_o-c_c )+S(s_o-s_c ) &nbsp;，其中 r_o,c_o,s_o &nbsp;分别表示这一行之前的左圆括号、左大括号、左方括</div>
+<div>号数量，r_c,c_c,s_c &nbsp;分别表示这一行之前的右圆括号、右大括号、右方括号数量。因此第一行没有任何缩进量</div>
+<div>。上面的例子可以被格式化为缩进风格 (R,C,S)=(9,5,2) &nbsp;。由于第一行只有一个左圆括号，所以第二行的缩进量</div>
+<div>是 9 ，同理第五行的缩进量是 7 。每个 Stylish 编程大师都有自己独特的缩进风格，并且写出的程序都是具有</div>
+<div>良好缩进风格的，你需要写一个程序来模仿 Stylish 编程大师的缩进风格。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>输入包含多组测试数据。每组数据的第一行包含两个整数 p(1&le;p&le;10) &nbsp;和 q(1&le;q&le;10) &nbsp;。接下来 p 行是一位</div>
+<div>编程大师具有良好缩进风格的代码，再接下来 q 行是一份完全没有缩进的代码。输入以两个零作为结束。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>对于每组数据，则输出 q 行，表示模仿编程大师的代码风格后改写的那份完全没有缩进的代码每一行应该有的缩</div>
+<div>进量，如果缩进量有多种可能则输出-1。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5 4
+(Follow.my.style
+.........starting.from.round.brackets)
+{then.curly.brackets
+.....[.and.finally
+.......square.brackets.]}
+(Thank.you
+{for.showing.me
+[all
+the.secrets]})
+4 2
+(This.time.I.will.show.you
+.........(how.to.use.round.brackets)
+.........[but.not.about.square.brackets]
+.........{nor.curly.brackets})
+(I.learned
+how.to.use.round.brackets)
+4 2
+(This.time.I.will.show.you
+.........(how.to.use.round.brackets)
+.........[but.not.about.square.brackets]
+.........{nor.curly.brackets})
+[I.have.not.learned
+how.to.use.square.brackets]
+2 2
+(Be.smart.and.let.fear.of
+..(closed.brackets).go)
+(A.pair.of.round.brackets.enclosing
+[A.line.enclosed.in.square.brackets])
+1 2
+Telling.you.nothing.but.you.can.make.it
+[One.liner.(is).(never.indented)]
+[One.liner.(is).(never.indented)]
+2 4
+([{Learn.from.my.KungFu
+...}])
+((
+{{
+[[
+]]}}))
+1 2
+Do.not.waste.your.time.trying.to.read.from.emptiness
+(
+)
+2 3
+({Quite.interesting.art.of.ambiguity
+....})
+{
+(
+)}
+2 4
+({[
+............................................................]})
+(
+{
+[
+]})
+0 0</pre><hr/><h3>样例输出</h3><pre>0 9 14 16
+0 9
+0 -1
+0 2
+0 0
+0 2 4 6
+0 -1
+0 -1 4
+0 20 40 60
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>鸣谢Tangjz提供试题</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4687" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4687" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

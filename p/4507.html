@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4507：[Usaco2016 Jan]Mowing the Field</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2016 Jan]Mowing the Field</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2016 Jan]Mowing the Field</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2016 Jan]Mowing the Field                </h1>
+                <p>时间限制：50s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>农夫约翰在管理他的农场的各个方面都相当可靠，除了一条：他总是不能及时地割草。在第1天，他从位置（x1，y</div>
+<div>1）开始，在第d天时，他沿着直线行走到位置（xd，yd），约翰总是在他农场的2D地图上水平或垂直移动;即xd =&nbsp;</div>
+<div>xd-1或yd = yd-1。在这连续的几天里，FJ会交替着走水平线和竖直线。可是FJ的割草的进度太慢了，一些草可能</div>
+<div>会在他完成所有割草之前重新长出来。在第d天切割的草的任何部分将在第d + T天的时候重新出现，因此如果FJ割</div>
+<div>草的路径穿过他至少T天以前割过草的路径，他将再次在同一地点割草。 为了努力改革他的可怜的割草战略，FJ想</div>
+<div>计算这种情况发生的次数。请计算FJ的割草路径穿过草已经生长的早期区段的次数。你应该只计算&ldquo;垂直&rdquo;交叉，</div>
+<div>定义为水平线段和垂直线段之间的公共点，包括两者的端点。</div>
+<div></div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行输入包含N（2&le;N&le;100,000）和T（1&le;T&le;N，T是偶数）。</div>
+<div>接下来的N行描述了在1...N天的割草机的位置。每行包含两个整数xi和yi（非负整数，每个最多1,000,000,000）。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>请输出FJ重新切割在较早切割之后已经生长的草的点的数量。</p>
+<div></div></p><hr/><h3>样例输入</h3><pre>7 4
+0 10
+10 10
+10 5
+3 5
+3 12
+6 12
+6 3</pre><hr/><h3>样例输出</h3><pre>1
+//FJ在第7天穿过了在第2天他曾经切割过的一段草地。其他交叉点不计数</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Platinum 鸣谢g1n0st提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4507" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4507" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

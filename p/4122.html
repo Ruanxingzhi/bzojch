@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4122：[Baltic2015]File paths</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2015]File paths</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Baltic2015]File paths</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Baltic2015]File paths                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>Byteasar likes to live risky. He runs with scissors, submits solutions to contest problems without testing on example inputs, and wants all his files to have path names that are exactly as long as the operating system allows (on Linux, for instance, this is 4095 characters).</p>
+<div>When Byteasar is working on someone else's computer, it might turn out that not all of the files meet his criterion. In this case he tries to introduce symbolic links (symlinks) and use them for creating file paths. You are asked to figure out, for each file in the file system, whether Byteasar can introduce a single symbolic link (of length chosen by him in advance), so that this file can be referred to by a path name of length exactly k characters.</div>
+<div>If a file of name file is contained in the chain of directories dir1, dir2, ..., dirj, then itsabsolute file path is /dir1/dir2/.../dirj/file. The root directory can be referred to as / and each file contained directly in this directory has the absolute path of the form /file. A symbolic link is a named shortcut to a directory, which can be placed in any directory in the file system. In this task symlinks to files are not allowed. Using a symlink, we can obtain alternative file paths. For example, if we introduced a symlink to / with name hello in /, then /dir/file,/hello/dir/file and /hello/hello/dir/file would all refer to the same file, but have different path name length. As another example, with a symlink to / with name hi in /dir, one could obtain file paths: /dir/file, /dir/hi/dir/file, /dir/hi/dir/hi/dir/file. Note that it is perfectly legal for symlinks to point upwards, downwards or sidewards in the file system hierarchy, and even back to the directory they are placed in. For the purpose of this problem, ./ or../ or // path components are not considered allowed in path names.</div></p><hr/><h3>输入格式</h3><p><p>The first line of input contains three positive integers: n (the number of directories other than the root directory), m (the number of files), and k (the desired path name length). The root directory has number 0, and all the remaining directories are numbered 1 through n. Files are numbered 1 through m. The second line contains the length s of the introduced symlink name (we don't care about the name itself, and assume it will not collide with anything else in the file system).</p>
+<div>After that follow n lines describing the directories (other than the root directory) that exist in the file system. The i-th of those lines describes the directory number i and consists of two integers: Pi and Li. They specify that the directory number i has a name of length Li and its parent directory (i.e. the directory in which the i-th directory is directly contained) has number Pi. It is guaranteed that Pi&lt;i.</div>
+<div>Finally m lines follow with a description of the files in the file system. The j-th of those lines describes the file number j and consists of two integers: Pj and Lj. They specify that the file numberj has a name of length Lj and its parent directory has number Pj.</div>
+<div>All files and directories will have names with positive length, and their absolute file paths will be at most k characters long.</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>Your program should output m lines, one for each file. The J-th line should contain one word, YESor NO, answering the question: is it possible, by introducing a symlink of length s, to create a path name of length exactly k which refers to the file number j?</p></p><hr/><h3>样例输入</h3><pre>2 4 22
+2
+0 1
+1 5
+2 13
+2 10
+1 4
+0 7
+</pre><hr/><h3>样例输出</h3><pre>YES
+YES
+YES
+NO
+</pre><hr/><h3>提示</h3><p><div>Explanation to the example: Let us refer to the symlink as LL, the directory names as a andbbbbb, and the file names as ccccccccccccc, dddddddddd, eeee and fffffff, respectively. The root directory contains the directory a and the file fffffff; the directory a contains the directory bbbbb and the file eeee; and finally the directory bbbbb contains the filesccccccccccccc and dddddddddd.</div>
+<div>/</div>
+<div>&nbsp; |- a</div>
+<div>&nbsp; | &nbsp; |- bbbbb</div>
+<div>&nbsp; | &nbsp; | &nbsp; |- ccccccccccccc</div>
+<div>&nbsp; | &nbsp; | &nbsp; +- dddddddddd</div>
+<div>&nbsp; | &nbsp; +- eeee</div>
+<div>&nbsp; +- fffffff</div>
+<div>&nbsp;&nbsp;</div>
+<div>In the first case, the absolute file path /a/bbbbb/ccccccccccccc already has the desired length, so we don't even have to use the symlink. In the second case we can introduce the symlink /a/LL -&gt; /a, and refer to /a/LL/bbbbb/dddddddddd. In the third case, we should introduce the symlink /a/LL -&gt; /, and refer to /a/LL/a/LL/a/LL/a/eeee. In the fourth case we cannot reach the goal regardless of where we introduce the symlink.</div>
+<div>
+<div>1&lt;=K,S&lt;=1 000 000</div>
+<div>N,M&lt;=3000</div>
+<div>求译文!请发至lydsy2012@163.com</div>
+</div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4122" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4122" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

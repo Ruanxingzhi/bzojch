@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3573：[Hnoi2014]米特运输</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2014]米特运输</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Hnoi2014]米特运输</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Hnoi2014]米特运输                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>米特是D星球上一种非常神秘的物质，蕴含着巨大的能量。在以米特为主要能源的D星上，这种米特能源的运输和储</div>
+<div>存一直是一个大问题。D星上有N个城市，我们将其顺序编号为1到N，1号城市为首都。这N个城市由N-1条单向高速</div>
+<div>通道连接起来，构成一棵以1号城市（首部）为根的树，高速通道的方向由树中的儿子指向父亲。树按深度分层：</div>
+<div>根结点深度为0，属于第1层；根结点的子节点深度为1，属于第2层；依此类推，深度为i的结点属于第i+l层。建好</div>
+<div>高速通道之后，D星人开始考虑如何具体地储存和传输米特资源。由于发展程度不同，每个城市储存米特的能力不</div>
+<div>尽相同，其中第i个城市建有一个容量为A[i]的米特储存器。这个米特储存器除了具有储存的功能，还具有自动收</div>
+<div>集米特的能力。如果到了晚上六点，有某个储存器处于未满的状态，它就会自动收集大气中蕴含的米特能源，在早</div>
+<div>上六点之前就能收集满；但是，只有在储存器完全空的状态下启动自动收集程序才是安全的，未满而又非空时启动</div>
+<div>可能有安全隐患。早上六点到七点间，根节点城市（1号城市）会将其储存器里的米特消耗殆尽。根节点不会自动</div>
+<div>搜集米特，它只接受子节点传输来的米特。早上七点，城市之间启动米特传输过程，传输过程逐层递进：先是第2</div>
+<div>层节点城市向第1层（根节点城市，即1号城市）传输，直到第1层的储存器满或第2层的储存器全为空；然后是第3</div>
+<div>层向第2层传输，直到对于第2层的每个节点，其储存器满或其予节点（位于第3层）的储存器全为空；依此类推，</div>
+<div>直到最后一层传输完成。传输过程一定会在晚上六点前完成。</div>
+<div>由于技术原因，运输方案需要满足以下条件：</div>
+<div></div>
+<div>(1)不能让某个储存器到了晚上六点传输结束时还处于非空但又未满的状态，这个时候储存器仍然会启动自动收集</div>
+<div>米特的程序，而给已经储存有米特的储存器启动收集程序可能导致危险，也就是说要让储存器到了晚上六点时要么</div>
+<div>空要么满；</div>
+<div></div>
+<div>(2)关于首都&mdash;&mdash;即1号城市的特殊情况， &nbsp;每天早上六点到七点间1号城市中的米特储存器里的米特会自动被消耗</div>
+<div>殆尽，即运输方案不需要考虑首都的米特怎么运走；</div>
+<div></div>
+<div>(3)除了1号城市，每个节点必须在其子节点城市向它运输米特之前将这座城市的米特储存器中原本存有的米特全部</div>
+<div>运出去给父节点，不允许储存器中残存的米特与外来的米特发生混合；</div>
+<div></div>
+<div>(4)运向某一个城市的若干个来源的米特数量必须完全相同，不然，这些来源不同的米特按不同比例混合之后可能</div>
+<div>发生危险。</div>
+<div>现在D星人已经建立好高速通道，每个城市也有了一定储存容量的米特储存器。为了满足上面的限制条件，可能需</div>
+<div>要重建一些城市中的米特储存器。你可以，也只能，将某一座城市（包括首都）中屎来存在的米特储存器摧毁，再</div>
+<div>新建一座任意容量的新的米特储存器，其容量可以是小数（在输入数据中，储存器原始容量是正整数，但重建后可</div>
+<div>以是小数），不能是负数或零，使得需要被重建的米特储存器的数目尽量少。</div></p><hr/><h3>输入格式</h3><p><div>第一行是一个正整数N，表示城市的数目。接下来N行，每行一个正整数，其中的第i行表示第i个城市原来存在的米</div>
+<div>特储存器的容量。再接下来是N-I行，每行两个正整数a，b表示城市b到城市a有一条高速通道(a&ne;b)。</div>
+<div>N&lt;500000，A[j]&lt;10^8</div>
+<p></p></p><hr/><h3>输出格式</h3><p><p>输出文件仅包含一行，一个整数，表示最少的被重建（即修改储存器容量）的米特储存器的数目。</p></p><hr/><h3>样例输入</h3><pre>5
+5
+4
+3
+2
+1
+1 2
+1 3
+2 4
+2 5</pre><hr/><h3>样例输出</h3><pre>3</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">【样例解释】<br />
+&nbsp; 一个最优解是将A[1]改成8，A[3]改成4，A[5]改成2。这样，2和3运给1的量相等，4和5运给2的量相等，且每天晚上六点的时候，1，2满，3，4，5空，满足所有限制条件。</span><span style="font-size: medium"><br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3573" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3573" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

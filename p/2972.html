@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2972：排序网络</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">排序网络</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">排序网络</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                排序网络                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div align="center"></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">最近</span><span style="font-size: 12pt">HH</span><span style="font-size: 12pt">公司推出了新型的排序网络。简单的来说，这种排序网络是由一系列的的排序器按顺序组成。某个排序器可以将排序网络</span><span style="font-size: 12pt">中</span><span style="font-size: 12pt">[L,R]</span><span style="font-size: 12pt">之</span><span style="font-size: 12pt">间的输入端进行排序。经过排序器处理</span><span style="font-size: 12pt">后</span><span style="font-size: 12pt">[L,R]</span><span style="font-size: 12pt">之间</span><span style="font-size: 12pt">排成非递减顺序。不同排序器</span><span style="font-size: 12pt">的</span><span style="font-size: 12pt">L</span><span style="font-size: 12pt">、</span><span style="font-size: 12pt">R</span><span style="font-size: 12pt">值不同。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">虽然排序网络很有用，但是很多情况下面我们可能只要排序网络中的最大值，所以</span><span style="font-size: 12pt">Henryy</span><span style="font-size: 12pt">公司决定利用已有的排序网络再开发一个只求最大值的网络。改造方法很简单，只需要隐蔽原有网络中的某些排序器，使得最后一个输入端的值是最大值。这样一来既可以减少开发成本，又可以降低网络的功耗。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">现在的任务是，给</span><span style="font-size: 12pt">定</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个不同的排序器，要求你改造这个网络，使得网络最后一个输入端经过操作后是这个网络的最大值。要求使用的排序器要尽可能少。（也就是说，不能改变原来排序网络的结构，你可以选择某个排序器是否隐蔽）</span></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div style="margin: 13pt 0cm">&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">第一行是两个数</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">M</span><span style="font-size: 12pt">。</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">表示排序网络有</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个输入端。接下来将会有</span><span style="font-size: 12pt">M</span><span style="font-size: 12pt">行，每行</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">个数</span><span style="font-size: 12pt">Li</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">Ri</span><span style="font-size: 12pt">，分别表示排序器</span><span style="font-size: 12pt">I</span><span style="font-size: 12pt">排序的范围</span><span style="font-size: 12pt">[Li</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">Ri]</span><span style="font-size: 12pt">。（，</span><span style="font-size: 12pt">1&lt;=Li&lt;=Ri&lt;=N</span><span style="font-size: 12pt">）</span></div>
+<div style="text-indent: 21pt">&nbsp;</div></p><hr/><h3>输出格式</h3><p><div style="margin: 13pt 0cm">&nbsp;</div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">输出一个数</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">，表示使用的最少排序器。</span><span style="font-size: 12pt">-1</span><span style="font-size: 12pt">表示无解（由于设计缺陷）。</span></div>
+<div>&nbsp;</div></p><hr/><h3>样例输入</h3><pre>
+40 6
+20 30
+1 10
+10 20
+20 30
+15 25
+30 40
+</pre><hr/><h3>样例输出</h3><pre>
+4
+【数据约定】
+0≤N≤50000，0≤M≤500000。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2972" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2972" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

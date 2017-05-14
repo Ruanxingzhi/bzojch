@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2409：地下车会 </title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">地下车会 </a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">地下车会 </span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                地下车会                 </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>小Y喜欢速度与激情，于是他参加了地下车会。&nbsp; 地下车会设有N 个<br />
+分赛区，M种赛事。每个分赛区有C[i]场比赛。由于地下车会经营者<br />
+想要赚到更多的钱，规定小 Y 必须参加某一些赛区的一些赛事。且<br />
+每个赛区至少参加L[i]场比赛。小Y不想在一个地区逗留太久惹上麻<br />
+烦，所以每个赛区他最多参加P[i]场比赛。可能是因为经营者对新手<br />
+有歧视心理，规定了小 Y 每种赛事最多只能进行 A[i]场比赛。小 Y<br />
+这个月资金有点紧张，他算了算自己最多只能够维护车子跑 K 场比<br />
+赛。由于小 Y 是新手，所以他希望积累更多的经验，也就是跑尽可<br />
+能多的赛事。</p></p><hr/><h3>输入格式</h3><p><p>第一行三个数N,M,K，用空格隔开。 <br />
+接下来N行，每行第一个数C[i]，接下来 C[i]个数，代表每场比赛的<br />
+种类，种类可能重复。 <br />
+接下来一行一个数F，代表规定条数。 <br />
+接下来 F 行，每行两个数 A，B，代表小 Y 必须参加 A 赛区的 B 种<br />
+赛事一次及以上。一种规定只会出现一次。 <br />
+接下来一行M个数，代表A[i]。 <br />
+接下来N行，每行两个数P[i],L[i]。</p></p><hr/><h3>输出格式</h3><p><p>第一行一个数ans，表示小Y最多能跑几场赛事。</p></p><hr/><h3>样例输入</h3><pre>5 5 15 
+5 1 1 2 2 3 
+6 2 2 3 4 5 5 
+3 1 2 3 
+6 1 2 3 4 5 5 
+4 3 3 4 4 
+3 
+1 2 
+2 5 
+5 3 
+2 2 3 2 3 
+4 2 
+4 2 
+2 1 
+5 3 
+3 1 </pre><hr/><h3>样例输出</h3><pre>12</pre><hr/><h3>提示</h3><p><p>前 100% 的数据， 1&lt;=N&lt;=500 ， 1&lt;=M&lt;=500 ， 1&lt;=C[i]&lt;=500 ，<br />
+1&lt;=F&lt;=100000 <br />
+【友情提示】 <br />
+对于所有的数据， 1&lt;=L[i]&lt;=P[i]&lt;=C[i]， 1&lt;=A[i]&lt;=10^4， K&lt;= 200000，<br />
+数据保证合法。&nbsp;<br />
+&nbsp;</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2409" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2409" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1202：[HNOI2005]狡猾的商人</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]狡猾的商人</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[HNOI2005]狡猾的商人</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [HNOI2005]狡猾的商人                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>刁姹接到一个任务，为税务部门调查一位商人的账本，看看账本是不是伪造的。账本上记录了n个月以来的收入情况，其中第i 个月的收入额为Ai(i=1,2,3...n-1,n)， 。当 Ai大于0时表示这个月盈利Ai 元，当 Ai小于0时表示这个月亏损Ai 元。所谓一段时间内的总收入，就是这段时间内每个月的收入额的总和。 刁姹的任务是秘密进行的，为了调查商人的账本，她只好跑到商人那里打工。她趁商人不在时去偷看账本，可是她无法将账本偷出来，每次偷看账本时她都只能看某段时间内账本上记录的收入情况，并且她只能记住这段时间内的总收入。 现在，刁姹总共偷看了m次账本，当然也就记住了m段时间内的总收入，你的任务是根据记住的这些信息来判断账本是不是假的。</p></p><hr/><h3>输入格式</h3><p><p>第一行为一个正整数w，其中w &lt; 100，表示有w组数据，即w个账本，需要你判断。每组数据的第一行为两个正整数n和m，其中n &lt; 100，m &lt; 1000，分别表示对应的账本记录了多少个月的收入情况以及偷看了多少次账本。接下来的m行表示刁姹偷看m次账本后记住的m条信息，每条信息占一行，有三个整数s，t和v，表示从第s个月到第t个月（包含第t个月）的总收入为v，这里假设s总是小于等于t。</p></p><hr/><h3>输出格式</h3><p><p>包含w行,每行是true或false,其中第i行为true当且仅当第i组数据，即第i个账本不是假的；第i行为false当且仅当第i组数据，即第i个账本是假的。</p></p><hr/><h3>样例输入</h3><pre>2                                        
+3 3                                      
+1 2 10
+1 3 -5
+3 3 -15
+5 3
+1 5 100
+3 5 50
+1 2 51
+</pre><hr/><h3>样例输出</h3><pre>true 
+false</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1202" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1202" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1058：[ZJOI2007]报表统计</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[ZJOI2007]报表统计</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[ZJOI2007]报表统计</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [ZJOI2007]报表统计                </h1>
+                <p>时间限制：15s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：162MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>　　小Q的妈妈是一个出纳，经常需要做一些统计报表的工作。今天是妈妈的生日，小Q希望可以帮妈妈分担一些工</div>
+<div>作，作为她的生日礼物之一。经过仔细观察，小Q发现统计一张报表实际上是维护一个可能为负数的整数数列，并</div>
+<div>且进行一些查询操作。在最开始的时候，有一个长度为N的整数序列，并且有以下三种操作： INSERT i k 在原数</div>
+<div>列的第i个元素后面添加一个新元素k； 如果原数列的第i个元素已经添加了若干元素，则添加在这些元素的最后（</div>
+<div>见下面的例子） MIN_GAP 查询相邻两个元素的之间差值（绝对值）的最小值 MIN_SORT_GAP 查询所有元素中最接</div>
+<div>近的两个元素的差值（绝对值） 例如一开始的序列为 5 3 1 执行操作INSERT 2 9将得到： 5 3 9 1 此时MIN_GAP</div>
+<div>为2，MIN_SORT_GAP为2。 再执行操作INSERT 2 6将得到： 5 3 9 6 1 注意这个时候原序列的第2个元素后面已经</div>
+<div>添加了一个9，此时添加的6应加在9的后面。这个时候MIN_GAP为2，MIN_SORT_GAP为1。于是小Q写了一个程序，使</div>
+<div>得程序可以自动完成这些操作，但是他发现对于一些大的报表他的程序运行得很慢，你能帮助他改进程序么？</div></p><hr/><h3>输入格式</h3><p><div>　　第一行包含两个整数N，M，分别表示原数列的长度以及操作的次数。第二行为N个整数，为初始序列。接下来</div>
+<div>的M行每行一个操作，即&ldquo;INSERT i k&rdquo;，&ldquo;MIN_GAP&rdquo;，&ldquo;MIN_SORT_GAP&rdquo;中的一种（无多余空格或者空行）。</div></p><hr/><h3>输出格式</h3><p><p>　　对于每一个&ldquo;MIN_GAP&rdquo;和&ldquo;MIN_SORT_GAP&rdquo;命令，输出一行答案即可。</p></p><hr/><h3>样例输入</h3><pre>3 5
+5 3 1
+INSERT 2 9
+MIN_SORT_GAP
+INSERT 2 6
+MIN_GAP
+MIN_SORT_GAP</pre><hr/><h3>样例输出</h3><pre>2
+2
+1</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">N , M &le;500000 对于所有的数据，序列内的整数不超过5*10^8。</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1058" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1058" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

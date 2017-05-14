@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3755：Pty爬山</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Pty爬山</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Pty爬山</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                Pty爬山                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在Pty学校附近，有一座名之为岳之麓的高山。Pty很喜欢和（哔&mdash;&mdash;）一起爬山。</div>
+<div>山的平面模型如下：</div>
+<div>山由一个顶点集：A1,A2&hellip;An给定，保证Ai的x单调递增。我们将Ai和Ai+1之间连上线段，表示山的某一段。如下图所示：</div>
+<div><img src="../file/3755_0.gif" width="471" height="344" alt="" /></div>
+<div>&nbsp;</div>
+<div>Pty想要爬到这座山的最高的顶点，当两个顶点的高度相同时，我们认为x比较大的顶点要高一些。Pty不是盲人，所以他将会在爬山时采取一些策略，使得他能够尽量快的到达最高的顶点。</div>
+<div>Pty从初始的顶点出发，往左右看去，他将朝他能够看到的最高的顶点方向走去。当走到每一个顶点时，他都会重新观察，如果这时看到的顶点比之前看到的顶点还要高，那么他将选择此时看到的顶点走去，直到他到达最高点为止。</div>
+<div>例如上图中：Pty从A4点出发。他能够看到的最高点是A6，所以他将会向右侧走去。当他到达A5号点时，能够看到A1点比A6点更高，所以他会调转方向，向左侧走去。由于A1是最高的顶点，所以他将一直往左侧走，直到到达A1为止。</div>
+<div>Pty想知道从每一个顶点出发，分别需要走过多少段才能到达最高点。例如上图中从A4出发需要走过5段才能到达最高点。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行输入n，表示n个顶点。</div>
+<div>接下来n行，每行两个整数xi, yi，表示第i个顶点的坐标。</div>
+<div>输入保证xi单调递增。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出共n行：第i行表示从第i个顶点出发走到最高点需要经过多少步。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5
+1 5
+2 4
+3 9
+4 0
+5 2</pre><hr/><h3>样例输出</h3><pre>2
+1
+0
+1
+2
+</pre><hr/><h3>提示</h3><p><div><img src="../file/3755_0.gif" width="412" height="364" alt="" /></div>
+<div>100%的数据满足：n&lt;=200000, xi&lt;=10^6, yi&lt;= 10^6</div>
+<div></div>
+<div><span style="color: rgb(255, 0, 0);">此题存在版权，故不再支持提交，保留在此只供大家参考题面！ 望见谅！</span></div>
+<div></div></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3755" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3755" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

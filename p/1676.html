@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1676：[Usaco2005 Feb]Feed Accounting 饲料计算</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Feb]Feed Accounting 饲料计算</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2005 Feb]Feed Accounting 饲料计算</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2005 Feb]Feed Accounting 饲料计算                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium">Farmer John is trying to figure out when his last shipment of feed arrived. Starting with an empty grain bin, he ordered and received F1 (1 &lt;= F1 &lt;= 1,000,000) kilograms of feed. Regrettably, he is not certain exactly when the feed arrived. Of the F1 kilograms, F2 (1 &lt;= F2 &lt;= F1) kilograms of feed remain on day D (1 &lt;= D &lt;= 2,000). He must determine the most recent day that his shipment could have arrived. Each of his C (1 &lt;= C &lt;= 100) cows eats exactly 1 kilogram of feed each day. For various reasons, cows arrive on a certain day and depart on another, so two days might have very different feed consumption. The input data tells which days each cow was present. Every cow ate feed from Farmer John's bin on the day she arrived and also on the day she left. Given that today is day D, determine the minimum number of days that must have passed since his last shipment. The cows have already eaten today, and the shipment arrived before the cows had eaten. </span></p>
+<div><span style="font-size: medium">约翰想知道上一船饲料是什么时候运到的．在饲料运到之前，他的牛正好把仓库里原来的饲料全吃光了．&nbsp;&nbsp;&nbsp;&nbsp;他收到运来的F1(1&le;Fi&le;1000000)千克饲料．遗憾的是，他已经不记得这是哪一天的事情了．到第D(1&le;D&le;2000)天为止，仓库里还剩下F2（1&le;F2&le;Fi）千克饲料．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰养了C(1&le;C&le;100)头牛，每头牛每天都吃掉恰好1千克饲料．由于不同的原因，牛们从某一天开始在仓库吃饲料，又在某一天离开仓库，所以不同的两天可能会有差距很大的饲料消耗量．每头牛在来的那天和离开的那天都在仓库吃饲料．&nbsp;&nbsp;&nbsp;&nbsp;给出今天的日期D，写一个程序，判断饲料最近一次运到是在什么时候．今天牛们已经吃过饲料了，并且饲料运到的那天牛们还没有吃过饲料．</span></div>
+<div></div></p><hr/><h3>输入格式</h3><p><p>* Line 1: Four space-separated integers: C, F1, F2, and D * Lines 2..C+1: Line i+1 contains two space-separated integers describing the presence of a cow. The first integer tells the first day the cow was on the farm; the second tells the final day of the cow's presence. Each day is in the range 1..2,000.</p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：四个整数C，F1，F2，D，用空格隔开．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到C+1行：每行是用空格隔开的两个数字，分别表示一头牛来仓库吃饲料的时间和离开</span><span style="font-size: medium">的时间．</span></div>
+<div></div></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">The last day that the shipment might have arrived, an integer that will always be positive. </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个正整数，即上一船饲料运到的时间．</span></div></p><hr/><h3>样例输入</h3><pre>3 14 4 10
+1 9
+5 8
+8 12
+
+INPUT DETAILS:
+
+The shipment was 14 kilograms of feed, and Farmer John has 4 kilograms
+left.  He had three cows that ate feed for some amount of time in
+the last 10 days.
+</pre><hr/><h3>样例输出</h3><pre>6
+
+    上一次运来了14千克饲料，现在饲料还剩下4千克．最近10天里．有3头牛来吃过饲料．
+  约翰在第6天收到14千克饲料，当天吃掉2千克，第7天吃掉2千克，第8天吃掉3千克，第9天吃掉2千克，第10天吃掉1千克，正好还剩4千克
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Silver</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1676" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1676" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

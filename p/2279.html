@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2279：[Ncpc2010]Around the track</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ncpc2010]Around the track</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ncpc2010]Around the track</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ncpc2010]Around the track                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p>给你一个图。你找一条欧拉回路出来，使得沿这条路转过的角度最小。<br />
+图很特殊，一个结点出来，要么恰好有2条边，或者恰好有4边<br />
+一个欧拉回路，即它必须遍历每个图形的边恰好一次，并回到起 点。 （输入的跑道保证其欧拉回路的存在）.总的转弯弧度就是在这个回路中， 在每个结点处需要的转弯弧度的总和，在一条直线上继续行进不用转弯。每一段 跑道都是可以双向行驶的。</p>
+<p></p></p><hr/><h3>输入格式</h3><p><p>Oneline with 3 &lt; =&nbsp; N &lt; =&nbsp; 10000{the number of nodes{and N &lt; =&nbsp; M &lt; =&nbsp; 2N {the number<br />
+of edges.<br />
+N lines with the x and y coordinates o feachnode,inorder.0 &lt; =&nbsp; x;y &lt; =&nbsp; 10000.The nodes<br />
+have unique coordinate pairs.<br />
+M lines with two space separated numbers i and j,denoting an edge between nodes i and<br />
+j.The nodes are 0-indexed.</p>
+<p>第一行 两个数,N , M . (3&lt;=N &lt;=10000, 代表结点的个数。N&lt;=M&lt;=2N 边的个数)<br />
+接下来N行，依次组出每个结点的坐标&nbsp; 0&lt;=x,y&lt;=10000 。每个结点的坐标是唯一 的<br />
+接下来M行,每两个数，表示i, j之间存在一条边.(结点从0开始编号)</p>
+<p></p></p><hr/><h3>输出格式</h3><p><p>欧拉回路上最小的所需转弯的弧度和 <br />
+</p></p><hr/><h3>样例输入</h3><pre>12 19
+1077 2677
+7473 4262
+1095 8844
+84 7875
+7241 7320
+9143 4888
+4524 1947
+4652 1260
+3503 7882
+4692 223
+9745 5245
+2037 2387
+0 1
+0 2
+1 4
+1 2
+1 3
+3 4
+4 6
+4 5
+5 8
+5 6
+5 7
+6 8
+6 7
+7 9
+7 8
+8 9
+9 11
+9 10
+10 11
+</pre><hr/><h3>样例输出</h3><pre>37.699111843077446
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2279" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2279" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

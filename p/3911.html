@@ -1,0 +1,134 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3911：SGU383 Caravans</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">SGU383 Caravans</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">SGU383 Caravans</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                SGU383 Caravans                </h1>
+                <p>时间限制：30s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>在这个任务中，你的目标是掠夺商队。</div>
+<div></div>
+<div>在沙漠中有n个绿洲（对于我们而言，它们在平面上的点）。有时商队从一个绿洲到另一个绿洲。为了掠夺它们，你应该预测其路径。但如何做呢？Nomad给出了解决方案。商队的速度是恒定的，他们尽量减少在绿洲外的最长时间。所以，你可以得出结论，即最佳路径是折线。</div>
+<div></div>
+<div>给定绿洲的坐标和m对商队的线路，出发点为编号为si的绿洲，目的地为编号为ti的绿洲，将最佳路径的最大长度输出。保证所有绿洲位置不同。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>
+<div>第一行一个正整数n为绿洲的数量</div>
+<div></div>
+<div>接下来n行，每行两个整数x,y表示绿洲在二维平面上的点坐标</div>
+<div></div>
+<div>接下来一行为一个正整数m为商队数量</div>
+<div></div>
+<div>接下来m行，每行两个正整数si,ti，为第i个商队的起点和终点</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>
+<div>输出m行，每行一个6位小数，为最佳路径上的最大长度</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>3
+0 0
+50 10
+150 0
+3
+1 2
+1 3
+2 3</pre><hr/><h3>样例输出</h3><pre>50.990195
+100.498756
+100.498756</pre><hr/><h3>提示</h3><p><div>n,m&lt;=100000</div>
+<div>0&lt;=x,y&lt;100000</div>
+<div></div>
+<div>三角剖分</div>
+<p></p></p><hr/><h3>题目来源</h3><p>By佚名上传
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3911" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3911" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

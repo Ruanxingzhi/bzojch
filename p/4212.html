@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4212：神牛的养成计划</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">神牛的养成计划</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">神牛的养成计划</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                神牛的养成计划                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：512MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>Hzwer成功培育出神牛细胞，可最终培育出的生物体却让他大失所望......</div>
+<div></div>
+<div>后来，他从某同校女神 牛处知道，原来他培育的细胞发生了基因突变，原先决定神牛特征的基因序列都被破坏了，神牛hzwer很生气，但他知道基因突变的低频性，说不定还有以下优秀基因没有突变，那么他就可以用限制性核酸内切酶把它们切出来，然后再构建基因表达载体什么的，后面你懂的......</div>
+<div></div>
+<div>黄学长现在知道了N个细胞的DNA序列，它们是若干个由小写字母组成的字符串。一个优秀的基因是两个字符串s1和s2,当且仅当s1是某序列的前缀的同时，s2是这个序列的后缀时，hzwer认为这个序列拥有这个优秀基因。</div>
+<div></div>
+<div>现在黄学长知道了M个优秀基因s1和s2，它们想知道对于给定的优秀基因，有多少个细胞的DNA序列拥有它。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行：N，表示序列数</div>
+<div>
+<div>接下来N行，每行一个字符串，代表N个DNA序列，它们的总长为L1</div>
+<div>接下来一个M，表示询问数</div>
+<div>接下来M行，每行两个字符串s1和s2，由一个空格隔开，hzwer希望你能在线回答询问，所以s1等于&ldquo;s1&rdquo;的所有字符按字母表的顺序向后移动ans位（字母表是一个环），ans为上一个询问的答案，s2同理。例如ans=2 &nbsp;&ldquo;s1&rdquo;=qz</div>
+<div>则s1=sb。对于第一个询问，ans=0</div>
+<div>s1和s2的总长度为L2</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出M行，每行一个数，第i行的数表示有多少个序列拥有第i个优秀基因。</div>
+<div>
+<p></p>
+</div></p><hr/><h3>样例输入</h3><pre>10
+emikuqihgokuhsywlmqemihhpgijkxdukjfmlqlwrpzgwrwozkmlixyxniutssasrriafu
+emikuqihgokuookbqaaoyiorpfdetaeduogebnolonaoehthfaypbeiutssasrriafu
+emikuqihgokuorocifwwymkcyqevdtglszfzgycbgnpomvlzppwrigowekufjwiiaxniutssasrriafu
+emikuqihgokuorociysgfkzpgnotajcfjctjqgjeeiheqrepbpakmlixyxniutssasrriafu
+emikuqihgokuorociysgfrhulymdxsqirjrfbngwszuyibuixyxniutssasrriafu
+emikuqihgokuorguowwiozcgjetmyokqdrqxzigohiutssasrriafu
+emikuqihgokuorociysgsczejjmlbwhandxqwknutzgdmxtiutssasrriafu
+emikuqihgokuorociysgvzfcdxdiwdztolopdnboxfvqzfzxtpecxcbrklvtyxniutssasrriafu
+emikuqihgokuorocsbtlyuosppxuzkjafbhsayenxsdmkmlixyxniutssasrriafu
+emikuqihgokuorociysgfjvaikktsixmhaasbvnsvmkntgmoygfxypktjxjdkliixyxniutssasrriafu
+10
+emikuqihgokuorociysg yxniutssasrriafu
+aiegqmedckgqknky eqpoowonnewbq
+xfbdnjbazhdnhkhvb qrqgbnmlltlkkbtyn
+bjfhrnfedlhrlolzfv qppxpoofxcr
+zhdfpldcbjf stsidponnvnmmdvap
+zhdfpldcbjfpjmjxdt gdstsidponnvnmmdvap
+dlhjtphgfnjtnqnbhxr wxwmhtsrrzrqqhzet
+bjfhrnfedlhrlolzfv frqppxpoofxcr
+zhdfpldcbjf dponnvnmmdvap
+ucyakgyxweakehes nondykjiiqihhyqvk
+</pre><hr/><h3>样例输出</h3><pre>4
+7
+3
+5
+5
+1
+3
+5
+10
+4
+</pre><hr/><h3>提示</h3><p><div>N&lt;=2000</div>
+<div>L1&lt;=2000000</div>
+<div>M&lt;=100000</div>
+<div>L2&lt;=2000000</div>
+<p></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4212" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4212" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

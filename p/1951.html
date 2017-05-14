@@ -1,0 +1,126 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1951：[Sdoi2010]古代猪文
+</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]古代猪文
+</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Sdoi2010]古代猪文
+</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Sdoi2010]古代猪文
+                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>“在那山的那边海的那边有一群小肥猪。他们活泼又聪明，他们调皮又灵敏。他们自由自在生活在那绿色的大草坪，他们善良勇敢相互都关心……”
+——选自猪王国民歌
+
+很久很久以前，在山的那边海的那边的某片风水宝地曾经存在过一个猪王国。猪王国地理位置偏僻，实施的是适应当时社会的自给自足的庄园经济，很少与外界联系，商贸活动就更少了。因此也很少有其他动物知道这样一个王国。
+猪王国虽然不大，但是土地肥沃，屋舍俨然。如果一定要拿什么与之相比的话，那就只能是东晋陶渊明笔下的大家想象中的桃花源了。猪王勤政爱民，猪民安居乐业，邻里和睦相处，国家秩序井然，经济欣欣向荣，社会和谐稳定。和谐的社会带给猪民们对工作火红的热情和对未来的粉色的憧憬。
+小猪iPig是猪王国的一个很普通的公民。小猪今年10岁了，在大肥猪学校上小学三年级。和大多数猪一样，他不是很聪明，因此经常遇到很多或者稀奇古怪或者旁人看来轻而易举的事情令他大伤脑筋。小猪后来参加了全猪信息学奥林匹克竞赛(Pig Olympiad in Informatics, POI)，取得了不错的名次，最终保送进入了猪王国大学(Pig Kingdom University, PKU)深造。
+现在的小猪已经能用计算机解决简单的问题了，比如能用P++语言编写程序计算出A + B的值。这个“成就”已经成为了他津津乐道的话题。当然，不明真相的同学们也开始对他刮目相看啦~
+小猪的故事就将从此展开，伴随大家两天时间，希望大家能够喜欢小猪。
+题目描述
+猪王国的文明源远流长，博大精深。
+iPig在大肥猪学校图书馆中查阅资料，得知远古时期猪文文字总个数为N。当然，一种语言如果字数很多，字典也相应会很大。当时的猪王国国王考虑到如果修一本字典，规模有可能远远超过康熙字典，花费的猪力、物力将难以估量。故考虑再三没有进行这一项劳猪伤财之举。当然，猪王国的文字后来随着历史变迁逐渐进行了简化，去掉了一些不常用的字。
+iPig打算研究古时某个朝代的猪文文字。根据相关文献记载，那个朝代流传的猪文文字恰好为远古时期的k分之一，其中k是N的一个正约数（可以是1和N）。不过具体是哪k分之一，以及k是多少，由于历史过于久远，已经无从考证了。
+iPig觉得只要符合文献，每一种能整除N的k都是有可能的。他打算考虑到所有可能的k。显然当k等于某个定值时，该朝的猪文文字个数为N / k。然而从N个文字中保留下N / k个的情况也是相当多的。iPig预计，如果所有可能的k的所有情况数加起来为P的话，那么他研究古代文字的代价将会是G的P次方。
+现在他想知道猪王国研究古代文字的代价是多少。由于iPig觉得这个数字可能是天文数字，所以你只需要告诉他答案除以999911659的余数就可以了。
+</p><hr/><h3>输入格式</h3><p>有且仅有一行：两个数N、G，用一个空格分开。
+</p><hr/><h3>输出格式</h3><p>有且仅有一行：一个数，表示答案除以999911659的余数。
+</p><hr/><h3>样例输入</h3><pre>4 2
+</pre><hr/><h3>样例输出</h3><pre>2048
+</pre><hr/><h3>提示</h3><p>10%的数据中，1 <= N <= 50；
+20%的数据中，1 <= N <= 1000；
+40%的数据中，1 <= N <= 100000；
+100%的数据中，1 <= G <= 1000000000，1 <= N <= 1000000000。
+</p><hr/><h3>题目来源</h3><p>Sdoi2010 Contest2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1951" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1951" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

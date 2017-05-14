@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1990：[Pku1395]Cog-Wheels</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Pku1395]Cog-Wheels</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Pku1395]Cog-Wheels</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Pku1395]Cog-Wheels                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>Yeknom工作努力受到上司的赏识，作为奖赏上司奖励给Yeknom一个装有很多不同尺
+寸的齿轮的工具箱。这样Yeknom就不用天天无所事事而可以尝试用不同的齿轮进行组合去
+拼装不同的齿轮比了。
+但是渐渐地，聪明的Yeknom发现不是所有的比例都是那么容易拼装出来的。有一些比
+例甚至永远都无法拼装出来。于是Yeknom想知道给定一些特定的齿轮种类能否拼出
+Yeknom想要的齿轮比例。
+
+对于给定的一系列齿轮的种类（齿轮的种类仅由其齿的个数唯一确定）
+和一系列给定比例。问是否有拼装方案满足比例。
+</p><hr/><h3>输入格式</h3><p>第一行：k表示数据组数。
+对于每一组数据：
+第一行一个整数n，表示齿轮的种数。
+第二行n个整数，表示每种齿轮的齿数。
+第三行一个整数m，表示比例数。
+接下来m行每行两个数u，v，表示想要的比例为u:v。
+
+</p><hr/><h3>输出格式</h3><p> 对于每一组数据：
+ 第一行输出
+ Scenario #A:   表示为第A组数据，接着对应每一个比例u:v，如果可以拼装成功，输出
+ Gear ratio u:v can be realized.
+
+ 否则
+
+ Gear ratio u:v cannot be realized.
+ 每一组数据之间有一行空行。
+</p><hr/><h3>样例输入</h3><pre>2
+3
+6 12 30
+2
+5 4
+1 6
+1
+42
+2
+13 13
+42 1 </pre><hr/><h3>样例输出</h3><pre></pre><hr/><h3>提示</h3><p>K< =100
+对于每组数据
+N< =100
+M< =100
+对于每组齿轮种类c1,c2,c3... ,ci<=100 你可以假定存在c=min{c1,c2,...,cn} ,使得c1|c,c2|c...cn|c
+对于每个比例u:v,u<=10000,v<=10000
+
+对于一个由两个齿轮组成的单位齿轮组，组成的比例是i:j其中i,j是两种齿轮的齿数。
+对于两个齿轮组相连接而成的齿轮组，组成的比例是两个齿轮组比例的乘积。</p><hr/><h3>题目来源</h3><p>Northwestern Europe 2001</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1990" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1990" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

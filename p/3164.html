@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3164：[Heoi2013]Eden的博弈问题</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2013]Eden的博弈问题</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Heoi2013]Eden的博弈问题</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Heoi2013]Eden的博弈问题                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><p><span style="font-size: medium"><br />
+对于有两个玩家的，状态透明且状态转移确定的博弈游戏，博弈树是常用的分析工具。博弈树是一棵有根树，其中的节点为游戏的状态。若节点B的父亲是A，则说明状态A能通过一次决策转移到状态B。每个状态都有一个唯一的决策方，即这个状态下应该由哪一方做出决策。我们规定双方在任何时候都是轮流做出决策的，即树上相邻节点的决策方总是不相同的。在这个问题中，我们只关心两个玩家的胜负情况，且规定游戏不会出现平局。 我们称两个玩家分别为黑方和白方，其中根节点的决策方为黑方。显然每个节点 只有两个状态：黑方胜和白方胜。若某内节点（即存在后继节点的节点）的决策 方为黑方，则该节点为黑方胜的充要条件为它的儿子中存在黑方胜的节点，反之亦然。求解博弈树即为判明博弈树根节点的状态。如果我们得知了所有叶节点（即无后继节点的节点）的状态，那么博弈树就 很容易求解了。但是现在的情况是所有叶节点的状态均为未知的，需要进一步的计算。对于一个由叶节点构成的集合S，如果S中的节点均被判明为黑方胜，就可以断言根节点为黑方胜的话，则称&nbsp;S为一个黑方胜集合。对于黑方胜集合&nbsp;S，<br />
+如果对于任意的黑方胜集合&nbsp;S&rsquo;均满足|S| &le; |S&rsquo; |（|S|表示集合S中的元素数目），<br />
+&nbsp;则称S为一个最小黑方胜集合。同样地，也可以定义白方胜集合和最小白方胜集合。 <br />
+&nbsp;Eden最近在研究博弈树问题。他发现，如果一个叶节点既属于某一个最小黑方胜集合，又属于一个最小白方胜集合，那么求解这个节点的状态显然最有益 于求解根节点的状态。像这样的叶节点就称之为关键叶节点。对于一棵给定的博弈树，Eden想要知道哪些叶节点是关键叶节点。&nbsp;<br />
+</span></p></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;<br />
+每个测试点包含一组测试数据。 <br />
+测试数据的第一行包含一个正整数n，表示博弈树的节点数目。节点从1到n&nbsp;编号，且&nbsp;1&nbsp;号节点为根节点。 <br />
+之后n&ndash;1&nbsp;行，每行包含一个正整数。第i行的正整数表示节点i的父节点的编号。 <br />
+</font></p></p><hr/><h3>输出格式</h3><p><p><font size="4">在一行内输出三个空格分隔的正整数，分别是编号最小的关键叶节点的编号，<br />
+关键叶节点的数目和所有关键叶节点的编号的异或和。 <br />
+</font></p></p><hr/><h3>样例输入</h3><pre>7 
+1 
+1 
+2 
+2 
+3 
+3 
+ 
+ 
+</pre><hr/><h3>样例输出</h3><pre>  
+4 4 0</pre><hr/><h3>提示</h3><p><p>对于100% 的数据，1 &le; &nbsp;n &le; 200,000&nbsp;，且对于节点&nbsp;i（i &ne; 1&nbsp;），其父节点的编号小于i。&nbsp;<br />
+&nbsp;</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3164" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3164" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

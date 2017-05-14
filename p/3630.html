@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>3630：[JLOI2014]镜面通道</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2014]镜面通道</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[JLOI2014]镜面通道</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [JLOI2014]镜面通道                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">在一个二维平面上，有一个镜面通道，由镜面AC，BD组成，AC，BD长度相等，且都平行于x轴，B位于（0，0）。通道中有n个外表面为镜面的光学元件，光学元件&alpha;为圆形，光学元件&beta;为矩形（这些元件可以与其他元件和通道有交集，具体看下图）。光线可以在AB上任一点以任意角度射入通道，光线不会发生削弱。当出现元件与元件，元件和通道刚好接触的情况视为光线无法透过（比如两圆相切）。现在给出通道中所有元件的信息（&alpha;元件包括圆心坐标和半径xi，yi，ri，&beta;元件包括左下角和右上角坐标x1，y1，x2，y2）</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><img height="320" width="584" alt="" src="../file/3630_0.jpg" /></span></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">如上图，</span><span lang="EN-US">S</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">到</span><span lang="EN-US">T</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">便是一条合法线路。</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><img height="409" width="584" alt="" src="../file/3630_1.jpg" /></span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">当然，显然存在光线无法透过的情况，现在交给你一个艰巨的任务，请求出至少拿走多少个光学元件后，存在一条光线线路可以从</span><span lang="EN-US">CD</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">射出。</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><font face="Tahoma">下面举例说明：</font></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><font face="Tahoma"><img height="409" width="584" alt="" src="../file/3630_2.jpg" /></font></span></span></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">现在假设，取走中间那个矩形，那么就可以构造出一条穿过通道的光路，如图中的</span><span lang="EN-US">S</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">到</span><span lang="EN-US">T</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">。</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"></p></p><hr/><h3>输入格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第一行包含两个整数，</span><span lang="EN-US">x</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">y</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，表示</span><span lang="EN-US">C</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">点坐标</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第二行包含一个数字，</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，表示有</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个光学元件</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">接下来</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">行</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第一个数字如果是</span><span lang="EN-US">1</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，表示元件</span><span lang="EN-US">&alpha;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，后面会有三个整数</span><span lang="EN-US">xi</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">yi</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">ri</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">分别表示圆心坐标和半径</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第一个数字如果是</span><span lang="EN-US">2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，表示元件</span><span lang="EN-US">&beta;</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，后面会有四个整数</span><span lang="EN-US">x1</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">y1</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">x2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">y2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">分别表示左下角和右上角坐标（矩形都平行，垂直于坐标轴）</span></font></span></p>
+<p></p></p><hr/><h3>输出格式</h3><p><p class="MsoNormal" style="margin: 0cm 0cm 10pt">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">输出包含一行，至少需要拿走的光学元件个数</span><span lang="EN-US">m</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><span lang="EN-US"><o:p></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p></p><hr/><h3>样例输入</h3><pre>1000 100
+
+6
+
+1 500 0 50
+
+2 10 10 20 100
+
+2 100 10 200 100
+
+2 300 10 400 100
+
+2 500 10 600 100
+
+2 700 0 800 100
+
+</pre><hr/><h3>样例输出</h3><pre>2
+
+</pre><hr/><h3>提示</h3><p><p><span style="font-size: medium">x&lt;=100000，y&lt;=1000，n&lt;=300</span></p>
+<p><span style="font-size: medium">&nbsp;<br />
+</span></p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=3630" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3630" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

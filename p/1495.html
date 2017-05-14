@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>1495：[NOI2006]网络收费</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI2006]网络收费</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI2006]网络收费</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [NOI2006]网络收费                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：64MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>网络已经成为当今世界不可或缺的一部分。每天都有数以亿计的人使用网络进行学习、科研、娱乐等活动。然而，</div>
+<div>不可忽视的一点就是网络本身有着庞大的运行费用。所以，向使用网络的人进行适当的收费是必须的，也是合理的</div>
+<div>。MY市NS中学就有着这样一个教育网络。网络中的用户一共有2N个，编号依次为1, 2, 3, &hellip;, 2N。这些用户之间</div>
+<div>是用路由点和网线组成的。用户、路由点与网线共同构成一个满二叉树结构。树中的每一个叶子结点都是一个用户</div>
+<div>，每一个非叶子结点（灰色）都是一个路由点，而每一条边都是一条网线（见下图，用户结点中的数字为其编号）</div>
+<p><img border="0" src="../file/1495_0.jpg" alt="" /></p>
+<div>MY网络公司的网络收费方式比较奇特，称为&ldquo;配对收费&rdquo;。即对于每两个用户i, j (1&le;i &lt; j &le;2N ) 进行收费。</div>
+<div>由于用户可以自行选择两种付费方式A、B中的一种，所以网络公司向学校收取的费用与每一位用户的付费方式有关</div>
+<div>。该费用等于每两位不同用户配对产生费用之和。 为了描述方便，首先定义这棵网络树上的一些概念： 祖先：根</div>
+<div>结点没有祖先，非根结点的祖先包括它的父亲以及它的父亲的祖先； 管辖叶结点：叶结点本身不管辖任何叶结点</div>
+<div>，非叶结点管辖它的左儿子所管辖的叶结点与它的右儿子所管辖的叶结点； 距离：在树上连接两个点之间的用边</div>
+<div>最少的路径所含的边数。 对于任两个用户i, j (1&le;i)</div>
+<p><img border="0" src="../file/1495_1.jpg" alt="" /></p>
+<div>由于最终所付费用与付费方式有关，所以NS中学的用户希望能够自行改变自己的付费方式以减少总付费。然而，由</div>
+<div>于网络公司已经将每个用户注册时所选择的付费方式记录在案，所以对于用户i，如果他/她想改变付费方式（由A</div>
+<div>改为B或由B改为A），就必须支付Ci元给网络公司以修改档案（修改付费方式记录）。 现在的问题是，给定每个用</div>
+<div>户注册时所选择的付费方式以及Ci，试求这些用户应该如何选择自己的付费方式以使得NS中学支付给网络公司的总</div>
+<div>费用最少（更改付费方式费用+配对收费的费用）。</div></p><hr/><h3>输入格式</h3><p><div>
+<div>输入文件中第一行有一个正整数N。 第二行有2N个整数，依次表示1号，2号，&hellip;，2N号用户注册时的付费方式，每</div>
+<div>一个数字若为0，则表示对应用户的初始付费方式为A，否则该数字为1，表示付费方式为B。 第三行有2N个整数，</div>
+<div>表示每一个用户修改付费方式需要支付的费用，依次为C1, C2, &hellip;,CM 。( M=2N ) 以下2N-1行描述给定的两两用</div>
+<div>户之间的流量表F，总第(i + 3)行第j列的整数为Fi, j+i 。（1&le;i&lt;2N，1&le;j&le;2N ? i） 所有变量的含义可以参</div>
+<div>见题目描述。N&le;10，0&le;Fi, j&le;500，0&le;Ci&le;500 000</div>
+</div>
+<div></div></p><hr/><h3>输出格式</h3><p><p>你的程序只需要向输出文件输出一个整数，表示NS中学支付给网络公司的最小总费用。（单位：元）</p></p><hr/><h3>样例输入</h3><pre>2
+1 0 1 0
+2 2 10 9
+10 1 2
+2 1
+3
+</pre><hr/><h3>样例输出</h3><pre>8
+</pre><hr/><h3>提示</h3><p><p>【样例说明】 将1号用户的付费方式由B改为A，NS中学支付给网络公司的费用达到最小</p></p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=1495" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1495" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

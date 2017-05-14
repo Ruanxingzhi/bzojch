@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2910：数独</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数独</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">数独</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                数独                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">众所周知，涉及数独的题都不会是很难的题目，所以这道题也很简单。</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">3*3 </span>Sudoku Puzzle<span style="color: black">: </span><span style="color: black">每行,每列,9个3*3的子矩阵中1~9的每个数恰好出现一次.现在给一个正确的</span>Sudoku Puzzle<span style="color: black">和一个</span>Unsolved Puzzle<span style="color: black">,</span><span style="color: black">问是否可以将</span>Unsolved Puzzle<span style="color: black">空的格子填满后通过给定的5种操作得到那个</span>Sudoku Puzzle<span style="color: black">。操作共有5种：</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">1.</span><span style="color: black">顺时针或逆时针旋转整个9*9方格</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">2.</span><span style="color: black">交换任一个column segment中的任意两列</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">3.</span><span style="color: black">交换任意个row segment中的任意两行</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">4.</span><span style="color: black">交换任意两个row segments或column segments</span></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><span style="color: black">5.1~9</span><span style="color: black">的数字作一个置换</span></span></div>
+<p><img height="252" width="315" alt="" src="../file/2910_0.jpg" /></p></p><hr/><h3>输入格式</h3><p><div style="margin: 13pt 0cm"><span style="font-size: medium"><b><span style="font-weight: normal; line-height: 172%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium"><span style="color: black">第一行T为测试组数，对于每组数据会先输出9*9的</span>Sudoku Puzzle，<span style="color: black">再输出9*9的</span>Unsolved&nbsp;Puzzle，<span style="color: black">每组测试数据之间有一空行。</span></span></div></p><hr/><h3>输出格式</h3><p><div style="margin: 13pt 0cm">&nbsp;</div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium"><span style="color: black">如可行输出一行&ldquo;Yes&rdquo;，不可行输出&ldquo;No&rdquo;。引号不用输出。</span></span></div></p><hr/><h3>样例输入</h3><pre>2
+963174258
+178325649
+254689731
+821437596
+496852317
+735961824
+589713462
+317246985
+642598173
+060104050
+200000001
+008305600
+800407006
+006000300
+700901004
+500000002
+040508070
+007206900
+ 
+534678912
+672195348
+198342567
+859761423
+426853791
+713924856
+961537284
+287419635
+345286179
+010900605
+025060070
+870000902
+702050043
+000204000
+490010508
+107000056
+040080210
+208001090
+</pre><hr/><h3>样例输出</h3><pre>Yes
+No
+【数据规模】
+100%：T<=5.</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2910" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2910" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

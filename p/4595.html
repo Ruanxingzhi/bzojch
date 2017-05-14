@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4595：[Shoi2015]激光发生器</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2015]激光发生器</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Shoi2015]激光发生器</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Shoi2015]激光发生器                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>曾经发明了超能粒子炮&middot;改的发明家SHTSC又公开了他的新发明：激光发生器--一种可以产生高能激光的神秘装置</div>
+<div>。激光发生器从正上方看是一个无穷大的平面，里面由一个定向激光发射装置和若干个激光偏转装置组成。一个激</div>
+<div>光发生器的示例如图所示，细箭头表示定向激光发射装置，粗线段表示激光偏转装置。</div>
+<div><img src="../file/4595_0.png" width="279" height="268" alt="" /></div>
+<div>由定向激光发射装置发射出的激光可以看成是一条射线，如果遇到激光偏转装置就会发生偏转。奇特的是，SHTSC</div>
+<div>所使用的激光偏转装置并非像传统的镜子那样遵循反射定律，而是对于每个激光偏转装置，有一个固定的偏转系数</div>
+<div>&lambda;，其出射角&beta;与入射角&alpha;的关系为&beta;=&lambda;&alpha;，并且能在这一过程中增强激光的能量。（入射角是入射光线和反射</div>
+<div>平面法向量的夹角。）注意：1、偏转装置的两面均可偏转。2、如果激光平行射入偏转装置，则认为没有发生偏转</div>
+<div>。3、如果不平行且照射到了端点则认为发生偏转。4、可能会偏转到另一面。</div>
+<div><img src="../file/4595_1.png" width="219" height="159" alt="" /></div>
+<div>现在SHTSC希望你模拟他所设计的激光发生器的工作过程，来帮助他计算激光究竟被哪些激光偏转装置所偏转。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行四个整数x，y，dx，dy。表示定向激光发射装置的位置是(x,y)，方向是(dx,dy)。</div>
+<div>第二行一个整数n，表示一共有n个激光偏转装置。</div>
+<div>以下n行，每行五个整数x1，y1，x2，y2，a，b表示一个激光偏转装置是(x1,y1)到(x2,y2)的一条线段</div>
+<div>其偏转系数&lambda;=a/b。</div>
+<div>n&lt;=100，所有坐标与a和b的绝对值不超过1000，a、b均非0。保证所有的偏转装置没有交点。激光发射起始点不在</div>
+<div>任何偏转装置上。方向向量不为零向量</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>一行由空格隔开的若干个整数，表示激光依次照射到的激光偏转装置的编号（按照输入顺序从1到n编号）。如果激</div>
+<div>光被偏转超过10次，则只需输出前10次所照射到的偏转装置的编号。特别地，如果激光没有被任何一个偏转装置所</div>
+<div>偏转，输出NONE。</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>0 2 1 0
+2
+0 4 3 1 1 1
+4 0 0 -4 1 1
+</pre><hr/><h3>样例输出</h3><pre>1 2</pre><hr/><h3>提示</h3><p><p><img src="../file/4595_0.png" width="217" height="295" alt="" /></p>
+<p></p></p><hr/><h3>题目来源</h3><p>By 佚名上传</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4595" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4595" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

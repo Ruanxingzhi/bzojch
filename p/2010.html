@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2010：[Ceoi2010]bodyguard</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2010]bodyguard</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Ceoi2010]bodyguard</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Ceoi2010]bodyguard                </h1>
+                <p>时间限制：100s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：259MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p>为保证会场安全，专家确定了每一行每一列的保镖数，这个信息以一种压缩的形式给出。确定是否有可能实现这样一种方案，在每行每列安排确定数量的保镖。假设座位最初都是空的，也就是说保安可以被安排在任意一个座位上。 
+题目等价于已知一个01矩阵的每行、每列各有多少个1，问这样的矩阵是否存在。
+输入数据归纳为：
+有R个正整数对 A1、B1，A2 、B2，……， AR、BR 
+表示这个01矩阵一共有 B1+B2+…+BR行，其中有Bi 个行都含有 Ai个1。
+同样的，有C个正整数对 Pi和Qi 来表示列的信息。
+限制条件：按行和按列计算的总保镖数相等</p><hr/><h3>输入格式</h3><p>The input begins with the description of the rows. The first line of the input contains one positive integer R: the
+number of groups of rows. R lines follow. Each of these lines contains 2 positive integers: the required number
+of bodyguards in each row of the group and the number of rows that form the group.
+This is followed by the description of column groups. The next line contains one positive integer C: the number
+of groups of columns. C lines follow. Each of these lines contains 2 positive integers: the required number of
+bodyguards in each column of the group and the number of columns that form the group.
+
+You may assume that the total number of bodyguards required by row constrains is the same as the total
+number of bodyguards required by column constraints. You may assume that this total number of bodyguards
+is at most 10^18.
+You may assume that all numbers are positive integers that do not exceed 10^9 .
+You may assume 1<= R,C <= 200000 that  .
+Several batches of test cases, worth a total of 50 points, satisfy the following criteria:
+the total number of rows in the auditorium will be at most 2000
+the total number of columns in the auditorium will be at most 2000
+the total number of bodyguards will be at most  .
+</p><hr/><h3>输出格式</h3><p>Output a single line with the number "1" if the constraints are satisfiable and the number "0" otherwise (quotes
+for clarity).</p><hr/><h3>样例输入</h3><pre>2
+2 1
+1 2
+1
+2 2</pre><hr/><h3>样例输出</h3><pre>1</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2010" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2010" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

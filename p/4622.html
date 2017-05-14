@@ -1,0 +1,157 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4622：[NOI 2003] 智破连环阵</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI 2003] 智破连环阵</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[NOI 2003] 智破连环阵</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [NOI 2003] 智破连环阵                </h1>
+                <p>时间限制：20s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>
+<div>B国在耗资百亿元之后终于研究出了新式武器&mdash;&mdash;连环阵（Zenith Protected Linked Hybrid Zone）。传说中，连</div>
+<div>环阵是一种永不停滞的自发性智能武器。但经过A国间谍的侦察发现，连环阵其实是由M个编号为1，2，&hellip;，M的独</div>
+<div>立武器组成的。最初，1号武器发挥着攻击作用，其他武器都处在无敌自卫状态。以后，一旦第i（1&lt;=i&lt; M）号武</div>
+<div>器被消灭，1秒种以后第i+1号武器就自动从无敌自卫状态变成攻击状态。当第M号武器被消灭以后，这个造价昂贵</div>
+<div>的连环阵就被摧毁了。为了彻底打击B国科学家，A国军事部长打算用最廉价的武器&mdash;&mdash;炸弹来消灭连环阵。经过长</div>
+<div>时间的精密探测，A国科学家们掌握了连环阵中M个武器的平面坐标，然后确定了n个炸弹的平面坐标并且安放了炸</div>
+<div>弹。每个炸弹持续爆炸时间为5分钟。在引爆时间内，每枚炸弹都可以在瞬间消灭离它平面距离不超过k的、处在攻</div>
+<div>击状态的B国武器。和连环阵类似，最初a1号炸弹持续引爆5分钟时间，然后a2号炸弹持续引爆5分钟时间，接着a3</div>
+<div>号炸弹引爆&hellip;&hellip;以此类推，直到连环阵被摧毁。显然，不同的序列a1、a2、a3...消灭连环阵的效果也不同。好的</div>
+<div>序列可以在仅使用较少炸弹的情况下就将连环阵摧毁；坏的序列可能在使用完所有炸弹后仍无法将连环阵摧毁。现</div>
+<div>在，请你决定一个最优序列a1、a2、a3&hellip;使得在第ax号炸弹引爆的时间内连环阵被摧毁。这里的x应当尽量小</div>
+</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行包含三个整数：M、n和k（1&lt;=M, n&lt;=100，1&lt;=k&lt;=1000），分别表示B国连环阵由M个武器组成，A国有n个炸</div>
+<div>弹可以使用，炸弹攻击范围为k。以下M行，每行由一对整数xi，yi（0&lt;=xi，yi&lt;=10000）组成，表示第i（1&lt;=i&lt;=M</div>
+<div>）号武器的平面坐标。再接下来n行，每行由一对整数ui，vi(0&lt;=ui，vi&lt;=10000)组成，表示第i（1&lt;=i&lt;=n）号炸</div>
+<div>弹的平面坐标。输入数据保证随机、无误、并且必然有解。</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>一行包含一个整数x，表示实际使用的炸弹数.</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>Sample Input 1
+4 3 6 
+0 6 
+6 6 
+6 0 
+0 0 
+1 5 
+0 3 
+1 1  
+
+Sample Input 2
+10 10 45 
+41 67 
+34 0 
+69 24 
+78 58 
+62 64 
+5 45 
+81 27 
+61 91 
+95 42 
+27 36 
+91 4 
+2 53 
+92 82 
+21 16 
+18 95 
+47 26 
+71 38 
+69 12 
+67 99 
+35 94 </pre><hr/><h3>样例输出</h3><pre>Sample Output 1
+2
+
+Sample Output 2
+5
+HINT
+输出数据为NOI原数据
+输出数据由楼教主代码制作
+原题有spj 此题去掉spj 只输出最优解</pre><hr/><h3>提示</h3><p><p>&nbsp;NOI2003 Day2 T3 &nbsp;感谢sxb_201上传</p></p><hr/><h3>题目来源</h3><p>鸣谢刘汝佳先生授权使用</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4622" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4622" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

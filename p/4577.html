@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4577：[Usaco2016 Open]Bull in a China Shop</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2016 Open]Bull in a China Shop</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2016 Open]Bull in a China Shop</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2016 Open]Bull in a China Shop                </h1>
+                <p>时间限制：40s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>农夫约翰决定他的家里需要更多的装饰。通过参观当地的瓷器商店，他决定购买一个精致的玻璃牛雕像，他知道它</div>
+<div>将完全适合放在壁炉上方的壁炉架上。牛雕像的形状由一个N&times;M的字符网格（就像下图）描述（3&le;N，M&le;500），</div>
+<div>其中小写字母描述了雕像的每个部分（表示不同的颜色），'.'字符则不是。</div>
+<div></div>
+<div>...............</div>
+<div>...............</div>
+<div>x..x...........</div>
+<div>xxxx...........</div>
+<div>xxxxaaaaaaa...</div>
+<div>.xx.aaaaaaaaa..</div>
+<div>....aaaaaaa.aa.</div>
+<div>....ll...ll....</div>
+<div>....vv...vv....</div>
+<div>...............</div>
+<div></div>
+<div>不幸的是，在FJ正准备购买之前，一头公牛穿过商店，不仅打破了FJ的雕像，而且还打破了货架上的许多其他玻璃</div>
+<div>制品！ FJ的雕像碎成了3片，很快地散落在总共有K块碎片的地面上（4&le;K&le;100）。每块碎片由一个字符网格描述</div>
+<div>，就像描述原来的雕像那样。请帮助FJ确定多少个3块碎片的集合（落在地板上的K块碎片中的其中3块）可以胶合</div>
+<div>在一起修补成他的破碎的雕像。地面上的碎片可能已经水平或垂直翻转，或者旋转成了90度的几倍。因此，给定原</div>
+<div>始网格以及描述K块碎片的网格，您需要找到3片碎片可以连接在一起以形成原始图像的集合，允许这些碎片被平移</div>
+<div>，翻转或旋转90度的倍数。然后当叠加时，3个碎片应该准确地形成原始图形，原始图形中的每个彩色正方形正好</div>
+<div>表示其中一片。</div>
+<div></div></p><hr/><h3>输入格式</h3><p><div>第一行包含单个整数K,接下来有K+1个描述片段，第一个片段描述了原始的玻璃牛，剩下的K个片段描述了K块碎片。</div>
+<div>对于每个描述片段，第一行包含两个整数R和C（1&le;R，C&le;100），接下来R行每行C个小写字母或者是'.'。</div>
+<div>每个碎片都将被水平/垂直连接并且具有至少一个非空单元（即至少包含一个小写字母）。</div>
+<div></div></p><hr/><h3>输出格式</h3><p><div>
+<div>输出三元组i，j，k的数目（i &lt;j &lt;k），使得碎片i，j，k可以被拼接为原始的玻璃牛。</div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>5
+5 5
+aaaaa
+..a..
+bbabb
+..a..
+aaaaa
+3 5
+..abb
+..a..
+aaaaa
+5 2
+a.
+a.
+aa
+a.
+a.
+1 2
+bb
+1 5
+bbabb
+2 5
+aaaaa
+..a..</pre><hr/><h3>样例输出</h3><pre>3
+//共有三个解决方案，分别使用碎片（1,2,3），（1,3,5），（2,4,5）。</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>Platinum 鸣谢g1n0st提供译文</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4577" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4577" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

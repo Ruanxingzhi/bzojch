@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4240：有趣的家庭菜园</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">有趣的家庭菜园</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">有趣的家庭菜园</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                有趣的家庭菜园                </h1>
+                <p>时间限制：10s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>对家庭菜园有兴趣的JOI君每年在自家的田地中种植一种叫做IOI草的植物。JOI君的田地沿东西方向被划分为N个区域，由西到东标号为1~N。IOI草一共有N株，每个区域种植着一株。在第i个区域种植的IOI草，在春天的时候高度会生长至hi，此后便不再生长。</div>
+<div>为了观察春天的样子而出行的JOI君注意到了IOI草的配置与预定的不太一样。IOI草是一种非常依靠阳光的植物，如果某个区域的IOI草的东侧和西侧都有比它高的IOI草存在，那么这株IOI草就会在夏天之前枯萎。换句话说，为了不让任何一株IOI草枯萎，需要满足以下条件：</div>
+<div>对于任意2&lt;=i&lt;=N-1，以下两个条件至少满足一个：</div>
+<div>1.<span class="Apple-tab-span" style="white-space:pre">	</span>对于任意1&lt;=j&lt;=i-1，hj&lt;=hi</div>
+<div>2.<span class="Apple-tab-span" style="white-space:pre">	</span>对于任意i+1&lt;=j&lt;=N，hk&lt;=hi</div>
+<div>IOI草是非常昂贵的，为了不让IOI草枯萎，JOI君需要调换IOI草的顺序。IOI草非常非常的高大且纤细的植物，因此JOI君每次只能交换相邻两株IOI草。也就是说，JOI君每次需要选择一个整数i(1&lt;=i&lt;=N-1)，然后交换第i株IOI草和第i+1株IOI草。随着夏天临近，IOI草枯萎的可能性越来越大，因此JOI君想知道让所有IOI草都不会枯萎的最少操作次数。</div>
+<div>现在给出田地的区域数，以及每株IOI草的高度，请你求出让所有IOI草的不会枯萎的最少操作次数。</div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>第一行一个正整数N，代表田地被分为了N个区域。</div>
+<div>接下来N行，第i行(1&lt;=i&lt;=N)一个整数hi，表示第i株植物在春天时的高度</div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>输出一行一个整数，表示最少需要的操作次数</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>6
+2
+8
+4
+5
+3
+6</pre><hr/><h3>样例输出</h3><pre>3</pre><hr/><h3>提示</h3><p><div>最终的高度序列为2 4 5 8 6 3，共需要操作三次。</div>
+<div>3&lt;=N&lt;=3*10^5</div>
+<div>1&lt;=hi&lt;=10^9</div>
+<div></div>
+<p></p></p><hr/><h3>题目来源</h3><p>JOI 2013~2014 春季training合宿 竞技1 By PoPoQQQ</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4240" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4240" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

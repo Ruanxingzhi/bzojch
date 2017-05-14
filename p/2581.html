@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>2581：[Usaco2012 Jan]Cow Run</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2012 Jan]Cow Run</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">[Usaco2012 Jan]Cow Run</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                [Usaco2012 Jan]Cow Run                </h1>
+                <p>时间限制：5s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：128MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div class="problem-text" align="left"><span style="font-size: medium"><span class="mono prewrap" id="probtext-text">&nbsp;Farmer John and Bessie have devised a new exercise game for the cows. The cows are running on a circular track of length M (2 &lt;= M &lt;= 1,000,000,000) starting from the same position. The game proceeds in N (1 &lt;= N &lt;= 14) rounds using a deck of 8N cards each with a number X_i (0 &lt;= X_i &lt; M) written on it. Each round FJ moves the top 8 cards into a separate pile and selects either the top 4 or bottom 4 cards for Bessie to play with. Bessie then chooses either the top 2 cards or bottom 2 cards of the 4 cards FJ selected. After this FJ calls out the number on the top card, X_top, and the cows run a distance of R * X_top, where R is the total distance the cows have run so far. Bessie then calls out the number on the bottom card, X_bottom, and the cows run a distance of X_bottom. FJ is concerned that after the exercise the cows will be too tired to get back to the beginning of the track if they end up too far away. He believes if the cows end up more than a distance of K (0 &lt;= K &lt;= floor(M/2)) from their starting position they won't be able to get back home. It is guaranteed that if FJ plays correctly, he will always be able to ensure the cows can come home, irrespective of the moves made by Bessie! For each round, your task is to determine which half of the cards FJ should choose such that no matter what Bessie does from that point on, FJ can always get the cows home. Bessie will then make the move provided in the input and you can then continue onto the next round. Note that even though Bessie's moves are provided to you in the input, you are to specify moves for FJ that would have worked no matter what Bessie chooses (so it is effectively as if FJ does not really know what Bessie will do during her moves).&nbsp;</span></span></div>
+<div class="problem-text" align="left"></div>
+<div class="problem-text" align="left"><span class="Apple-style-span" style="font-family: simsun; font-size: 14px; color: rgb(70, 70, 70); line-height: 21px; ">FJ与Bessie进行n轮决策，每轮开始时FJ依次取出8张牌，选择前4张或后4张给bessie，bessie从中选前2张或后2张，最后得到2张牌a和b，然后其余的奶牛绕长为m的圈跑dis*a+b的距离(dis为累计已跑距离)，要求n轮过后奶牛离起点的距离不能超过k。要求求出FJ的必胜策略（虽已给出bessie的决策方案，但不可用）</span></div></p><hr/><h3>输入格式</h3><p><p><font size="4">&nbsp;* Line 1: Three space-separated integers N, M, K</font></p>
+<p><font size="4">&nbsp;* Line 2: A string N characters. If the ith character is 'T' it means Bessie will select the top 2 cards in the ith round. Otherwise the ith character will be 'B' to indicate Bessie will select the bottom 2 cards in the ith round. </font></p>
+<p><font size="4">* Lines 3..2+N: Each line contains eight integers representing the 8 cards to be used that round from top to bottom.&nbsp;</font></p></p><hr/><h3>输出格式</h3><p><p><span style="font-size: medium">&nbsp;Line 1: A string of N characters where the ith character is 'T' if FJ should choose the top 4 cards or 'B' if FJ should choose the bottom 4 cards in the ith round. If there are multiple ways to get the cows home, choose the lexicographically first (that is, the string that is alphabetically smallest).</span></p></p><hr/><h3>样例输入</h3><pre>2 2 0
+TT
+1 0 0 0 0 0 0 1
+0 1 1 1 0 0 1 0
+</pre><hr/><h3>样例输出</h3><pre>TB
+</pre><hr/><h3>提示</h3><p>没有写明提示</p><hr/><h3>题目来源</h3><p>没有写明来源</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=2581" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2581" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>

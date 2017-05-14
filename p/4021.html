@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>4021：最优决策</title>
+	<!-- css -->
+	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/project.min.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">最优决策</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">最优决策</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="../index.html">BZOJ离线题库</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#problems">题目</a>
+						<ul class="menu-collapse collapse in" id="problems">
+							<li>
+								<a class="waves-attach" href="../index.html">主页</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="../list.html">题目列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#about">关于</a>
+						<ul class="menu-collapse collapse" id="about">
+							<li>
+								<a class="waves-attach" href="../about.html">关于此项目</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<h1 class="content-heading">
+                最优决策                </h1>
+                <p>时间限制：1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  空间限制：256MB</p>			</div>
+		</div>
+		<div class="container">
+			<section class="content-inner margin-top-no">
+				<div class="row">
+					<div class="col-lg-13 col-md-13">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+                                <h3>题目描述</h3><p><div>决策和计策是神犇。</div>
+<div>又到了吔饭的时间，可是决策和计策没有时间去吔饭，于是他们决定选出一个人去带饭。</div>
+<div>计策提议使用石头剪刀布决出胜负，但是决策觉得这样太没有技术含量，不能做出很有趣的决策，他提出了用这样一种小游戏决定胜负：</div>
+<div>____1.双方各有一个能量槽，可以存储0~n的能量值，当能量槽满了的时候可以释放大招，消耗所有能量并秒杀一切技能。（假如两个人都放大招则游戏继续）</div>
+<div>____2.除了大招之外有m个小技能，小技能有3类：</div>
+<div>________(1):消耗型，消耗x个能量，只有能量不小于x时才能使用。</div>
+<div>________(2):免费型，不消耗能量，任何时候都可以使用。</div>
+<div>________(3):补给型，使用后能获得x个能量，但是获得后最多只能有n个能量（多出来部分的会浪费掉），任何时候都可以使用。</div>
+<div>____3.小技能之间有相克的关系，当然也有不相互影响的小技能对。</div>
+<div>____4.每回合每个人必须选择一种可行技能，然后同时亮出。假如这两个技能相克，则某一方立即获得胜利。否则双方更新自己的能量然后继续游戏。</div>
+<div>____注意：假如游戏永远都不会结束算作平局，即双方各加0.5胜场，所以双方胜率之和一定为1。</div>
+<div>决策发现自己可以用AI跟计策打一局，这样就不用每次自己去花力气打了。</div>
+<div>决策还发现每个状态的最优策略是固定的，所以自己只需要给程序一张决策表，告诉它在每个状态有多少概率出某个决策就行了。</div>
+<div>但是计策很有计策，决策知道计策会偷偷潜入他的电脑偷看他的程序和决策表。但是由于决策使用了time作为随机种子，所以计策并不能知道这一次到底会出什么，只知道每种决策的出现概率。</div>
+<div>现在决策找到了你，请你找出一种方案使得自己的胜率不低于50%。</div>
+<div>但同时计策也找到了你，他给了你决策的决策表，请你找出一种方案使得胜率最大。</div>
+<div>与此同时鏼也找到了你，他给出了两个人的决策表，想请你算出每个人有多少的胜率。</div>
+<div>注意：很明显假如有人能量槽满了的话他一定会放大招，所以决策表只有n*n种局面。</div>
+<div>决策表输入输出格式</div>
+<div>共n*n行，第i行（从0开始计数）表示己方能量为i/n，对方能量为i%n时的决策。</div>
+<div>每个决策占一行，首先第一个数x表示该状态可行的决策数，接下来x个自然数分别表示将可行决策按编号从小到大排序后每个决策的出招概率*10^9，并且这x个数之和为10^9。</div>
+<div>输入格式</div>
+<div>多组数据。第一行为测试点编号，数据组数Case和数据类型type。</div>
+<div>对于每一组数据：</div>
+<div>____第一行两个整数分别表示大招的能量消耗n和小招的种类数m。</div>
+<div>____若type=1则你需要解决鏼的询问，若type=2则你需要解决计策的询问，若type=3则你需要解决决策的询问。</div>
+<div>____接下来一行m个数v_i分别表示小招的损耗。v_i&lt;0表示消耗型，v_i=0表示免费型，v_i&gt;0表示补给型（即使用后能量会加上v_i）。</div>
+<div>____接下来m行每行m个数，如果为1表示所在行的技能克制所在列的技能，如果为-1表示所在列的技能克制所在行的技能，如果为0表示没有克制关系。保证该矩阵对称且对角线上是0。</div>
+<div>____假如type!=3，接下来n*n行为决策的决策表</div>
+<div>____假如type==1，接下来n*n行为计策的决策表。</div>
+<div>输出格式</div>
+<div>如果type=1，输出一行一个浮点数表示决策的胜率。（和标准答案误差在1e-6之内均算作正确）</div>
+<div>如果type=2，输出一个决策表，设该决策表对决策的决策的胜率为x，我们提供的参考解胜率为y，那么当x&gt;y-1e-6时算作正确。</div>
+<div>如果type=3，输出一个决策表，我们会生成一个决策表，设你的决策表对我们的决策表的胜率为x，那么当x&gt;0.5-1e-6时算作正确。</div>
+<div>注：spj为了防止精度误差，在假如某个状态只有低于1e-8的概率转移出死循环时直接将该状态胜率置为0.5。</div>
+<div></div>
+<p></p></p><hr/><h3>输入格式</h3><p><div>多组数据。第一行为测试点编号，数据组数Case和数据类型type。</div>
+<div>对于每一组数据：</div>
+<div>____第一行两个整数分别表示大招的能量消耗n和小招的种类数m。</div>
+<div>____若type=1则你需要解决鏼的询问，若type=2则你需要解决计策的询问，若type=3则你需要解决决策的询问。</div>
+<div>____接下来一行m个数v_i分别表示小招的损耗。v_i&lt;0表示消耗型，v_i=0表示免费型，v_i&gt;0表示补给型（即使用后能量会加上v_i）。</div>
+<div>____接下来m行每行m个数，如果为1表示所在行的技能克制所在列的技能，如果为-1表示所在列的技能克制所在行的技能，如果为0表示没有克制关系。保证该矩阵对称且对角线上是0。</div>
+<div>____假如type!=3，接下来n*n行为决策的决策表</div>
+<div>____假如type==1，接下来n*n行为计策的决策表。</div>
+<div></div>
+<p></p></p><hr/><h3>输出格式</h3><p><div>如果type=1，输出一行一个浮点数表示决策的胜率。（和标准答案误差在1e-6之内均算作正确）</div>
+<div>
+<div>如果type=2，输出一个决策表，设该决策表对决策的决策的胜率为x，我们提供的参考解胜率为y，那么当x&gt;y-1e-6时算作正确。</div>
+<div>如果type=3，输出一个决策表，我们会生成一个决策表，设你的决策表对我们的决策表的胜率为x，那么当x&gt;0.5-1e-6时算作正确。</div>
+<div>注：spj为了防止精度误差，在假如某个状态只有低于1e-8的概率转移出死循环时直接将该状态胜率置为0.5。</div>
+<div></div>
+</div>
+<p></p></p><hr/><h3>样例输入</h3><pre>0 1 1
+2 3
+-1 0 1
+0 0 1
+0 0 0
+-1 0 0
+2 0 1000000000
+2 1000000000 0
+3 0 0 1000000000
+3 333333334 333333333 333333333
+2 0 1000000000
+2 1000000000 0
+3 0 0 1000000000
+3 333333334 333333333 333333333
+</pre><hr/><h3>样例输出</h3><pre>0.5000000000</pre><hr/><h3>提示</h3><p><div>数据生成</div>
+<div>除了第5,6两个点，其他点数据均为随机生成。</div>
+<div>游戏生成方式：</div>
+<div>____对于每个技能，有1/3的概率是免费型，1/3是消耗型，1/3是补给型，且消耗型和补给型的x的绝对值不超过3。</div>
+<div>____保证三种技能至少都有一个。</div>
+<div>____克制矩阵生成方式：对于每一对技能，有80%的概率没有关系，否则：</div>
+<div>________假如使用后能量损失相同则各有50%概率克制对方。</div>
+<div>________假如使用后不同则收益大的一方有20%的概率克制对方，收益小的一方有80%的概率克制对方。</div>
+<div>____保证每个补给型技能至少被一个技能克制。</div>
+<div>____保证至少存在一个补给型技能使得只有消耗型技能才能克制它。</div>
+<div>决策表生成方式：</div>
+<div>____首先将每个状态可行决策使用概率置为相等（任意两个之差不超过1）。</div>
+<div>____然后进行100次操作，每次操作选择两个不同的技能，将A技能减少为(1~A技能原来概率)之间的随机数，B技能加上相应概率。</div>
+<div></div>
+<div>N&lt;=5,M&lt;=30,Type&lt;=3</div>
+<div></div>
+<div>尚无SPJ，请不要提交</div>
+<p></p></p><hr/><h3>题目来源</h3><p>2015年集训队互测</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+	</main>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light waves-effect" data-toggle="dropdown" aria-expanded="true"><span class="fbtn-text fbtn-text-left">Menu</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropup">
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light waves-effect" href="../list.html" target="_self"><span class="fbtn-text fbtn-text-left">题目列表</span><span class="icon">menu</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle waves-effect" href="../index.html" target="_self"><span class="fbtn-text fbtn-text-left">返回主页</span><span class="icon">home</span></a>
+				<a class="fbtn waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/submitpage.php?id=4021" target="_blank"><span class="fbtn-text fbtn-text-left">提交代码</span><span class="icon">send</span></a>
+				<a class="fbtn fbtn-orange waves-attach waves-circle waves-effect" href="http://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4021" target="_blank"><span class="fbtn-text fbtn-text-left">试题讨论</span><span class="icon">chat</span></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+	<script src="../js/project.min.js"></script>
+</body>
+</html>
